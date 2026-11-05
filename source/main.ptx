@@ -30,6 +30,7 @@
     </part>
 
     <part xml:id="part-algebra"><title>Algebra</title>
+      <xi:include href="./algebra-language.ptx" />
       <chapter xml:id="chapter-expanding"><title>Expanding Brackets</title>
         <section xml:id="expanding-binomial"><title>Every term matters</title>
           <p>Before expanding <m>(x+2)(x+3)</m>, predict the number of products.</p>
