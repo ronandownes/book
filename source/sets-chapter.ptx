@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-sets">
+<title>Sets</title>
+<section xml:id="sets-first-look">
+<title>A circle and a collection</title>
+<introduction><p>We begin by looking. We will only introduce new notation when it helps us say something useful.</p></introduction>
+<p>Imagine a large oval labelled <m>A</m> near its upper-left edge. Inside it are four separate solid dots labelled Spring, Summer, Autumn and Winter. Each dot represents one element. The oval is a picture of the collection, called a <term>set</term>.</p>
+<p>Draw that oval now. Put a solid dot beside each season. Do not draw a box around it yet: one set is enough.</p>
+<activity xml:id="activity-season-picture">
+<title>Look, count, explain</title>
+<task><p>How many elements can you count? What exactly are you counting?</p><answer><p>Four elements, represented by four solid dots.</p></answer></task>
+<task><p>Suppose someone writes Spring twice inside the oval. Does that create a new season?</p><answer><p>No. A repeated name does not create a new element.</p></answer></task>
+</activity>
+<p>The <term>cardinality</term> of a set is the number of distinct elements it contains. For this set, <m>\#A=4</m>. The number 4 is a count, not another element: it has no dot in the oval.</p>
+<exercise xml:id="exercise-seasons-count"><statement><p>How many elements are in the set of the four seasons?</p></statement><choices>
+<choice><statement><p>3</p></statement><feedback><p>Count each season's dot carefully.</p></feedback></choice>
+<choice correct="yes"><statement><p>4</p></statement><feedback><p>Exactly: one element for each distinct season.</p></feedback></choice>
+<choice><statement><p>5</p></statement><feedback><p>The letter naming the set is not an element inside it.</p></feedback></choice>
+</choices></exercise>
+<p>We can also say that Spring is <term>an element of</term> <m>A</m>. Later we abbreviate that statement to <m>\text{Spring}\in A</m>.</p>
+</section>
+<section xml:id="sets-universe">
+<title>Why do we need a universal set?</title>
+<p>Here is a question with a problem hidden inside it: if <m>A</m> is the set of red playing cards, what are the cards that are <em>not</em> in <m>A</m>?</p>
+<p>Black playing cards are a sensible answer, but only if we are talking about a standard pack of playing cards. Without agreeing on what objects are under consideration, 'not red cards' might include a pencil, a bicycle or the Moon. So we must establish the boundary of our discussion.</p>
+<p>That agreed collection is called the <term>universal set</term>, written <m>U</m>. On a Venn diagram we draw a rectangle for it and place the label <m>U</m> <em>outside</em> the rectangle, near its top-left corner.</p>
+<p>For our card example, let <m>U</m> be the 52 cards in a standard pack without jokers, and let <m>A</m> be its 26 red cards.</p>
+<activity xml:id="activity-why-universe"><title>Think before naming</title>
+<task><p>What would the words 'not red' mean if the objects under discussion were instead traffic lights?</p><answer><p>They would refer to the non-red lights within that agreed collection, not black playing cards. The answer depends on the universal set.</p></answer></task>
+</activity>
+</section>
+<section xml:id="sets-complement">
+<title>Everything in the universe outside A</title>
+<p>Draw the rectangle <m>U</m>, then one oval <m>A</m> inside it. Leave plenty of room outside the oval but still inside the rectangle.</p>
+<p>Shade the region <em>inside the rectangle but outside the oval</em>. This is the <term>complement</term> of <m>A</m>. Our first notation is <m>A'</m>, read as 'A complement'. Other books may write <m>A^c</m>.</p>
+<p>The complement does <em>not</em> mean 'everything in the entire world outside A'. It means everything in the specified universal set that is not in A.</p>
+<p>In the playing-card example the complement of the red cards is the 26 black cards. Thus <m>\#A=26</m>, <m>\#A'=26</m>, and <m>\#U=52</m>.</p>
+<p>Every element of <m>U</m> is either in <m>A</m> or in <m>A'</m>, and no element can be in both. This makes them <term>mutually exclusive</term> within <m>U</m>. Nothing is left out.</p>
+<exercise xml:id="exercise-complement-card"><statement><p>The universal set is the 52 cards in a standard pack, and <m>A</m> is the red cards. Which set is <m>A'</m>?</p></statement><choices>
+<choice correct="yes"><statement><p>All 26 black cards.</p></statement><feedback><p>Yes: those are precisely the cards in the specified universe that are not red.</p></feedback></choice>
+<choice><statement><p>All objects that are not red.</p></statement><feedback><p>That ignores the boundary of our universal set, which includes only the 52 cards.</p></feedback></choice>
+<choice><statement><p>All 52 cards.</p></statement><feedback><p>That is the universal set, not the complement.</p></feedback></choice>
+</choices></exercise>
+<exercise xml:id="exercise-complement-ten"><statement><p>The universal set contains 10 distinct elements. Set <m>B</m> has 3 of those elements. What is <m>\#B'</m>?</p></statement><choices>
+<choice><statement><p>3</p></statement><feedback><p>That is the number inside B, not the number outside B.</p></feedback></choice>
+<choice correct="yes"><statement><p>7</p></statement><feedback><p>Correct: 10 elements altogether, with 3 in B, leave 7 in its complement.</p></feedback></choice>
+<choice><statement><p>13</p></statement><feedback><p>Complement means the rest within U, not an additional set of elements beyond U.</p></feedback></choice>
+</choices></exercise>
+</section>
+<section xml:id="sets-disjoint">
+<title>Two sets that cannot overlap</title>
+<p>Keep the same universal set of 52 playing cards. Draw two separate ovals: <m>R</m> for red cards and <m>B</m> for black cards. Neither oval overlaps the other, because one card cannot be both red and black in this classification.</p>
+<p>These sets are <term>disjoint</term> (mutually exclusive). Because every card is red or black, these two particular sets are also complements of each other.</p>
+<p>Be careful: <em>disjoint</em> is not the same as <em>complementary</em>. Two sets could have nothing in common without together including every element of the universal set.</p>
+<exercise xml:id="exercise-disjoint"><statement><p>Within the universal set of all 52 playing cards, consider the set of spades and the set of hearts. Are these two sets complements of each other?</p></statement><choices>
+<choice><statement><p>Yes, because they have no cards in common.</p></statement><feedback><p>Disjointness is not enough: clubs and diamonds are outside both sets.</p></feedback></choice>
+<choice correct="yes"><statement><p>No. They are disjoint, but not complements.</p></statement><feedback><p>Exactly: neither overlaps the other, but together they do not make up the whole universal set.</p></feedback></choice>
+</choices></exercise>
+<p>Only after these ideas are secure will we introduce two overlapping sets, intersection, union, subset notation, and formal listing with braces.</p>
+</section>
+</chapter>
