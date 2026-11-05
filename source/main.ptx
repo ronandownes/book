@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-GB">
+  <book xml:id="mathematics-book">
+    <title>Mathematics</title>
+    <subtitle>Explore, understand, practise</subtitle>
+    <frontmatter>
+      <preface xml:id="welcome">
+        <title>Welcome</title>
+        <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers.</p>
+      </preface>
+    </frontmatter>
+
+    <part xml:id="part-number">
+      <title>Number</title>
+      <chapter xml:id="chapter-sets">
+        <title>Sets</title>
+        <section xml:id="sets-first-look">
+          <title>What is a set?</title>
+          <p>A set is a collection of objects. We call the objects its elements.</p>
+          <p>Consider the set of seasons, <m>A=\{\text{spring},\text{summer},\text{autumn},\text{winter}\}</m>.</p>
+          <p>There are four elements, so <m>\#A=4</m>.</p>
+          <exercise xml:id="exercise-seasons">
+            <statement><p>How many elements are in the set of seasons?</p></statement>
+            <answer><p>Four.</p></answer>
+          </exercise>
+          <exercise xml:id="exercise-membership">
+            <statement><p>Is summer an element of the set <m>A</m>?</p></statement>
+            <answer><p>Yes.</p></answer>
+          </exercise>
+        </section>
+      </chapter>
+      <chapter xml:id="chapter-sequences"><title>Sequences and Series</title>
+        <section xml:id="sequences-intro"><title>Recognising patterns</title>
+          <p>Consider <m>2,5,8,11,\ldots</m>. Each term is three more than the previous term.</p>
+          <exercise xml:id="exercise-sequences-next">
+            <statement><p>Write the next two terms.</p></statement>
+            <answer><p>14 and 17.</p></answer>
+          </exercise>
+        </section>
+      </chapter>
+      <chapter xml:id="chapter-complex"><title>Complex Numbers</title>
+        <section xml:id="complex-intro"><title>Beyond the real numbers</title>
+          <p>We define <m>i</m> by <m>i^2=-1</m>. A complex number has the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real.</p>
+        </section>
+      </chapter>
+    </part>
+
+    <part xml:id="part-algebra"><title>Algebra</title>
+      <chapter xml:id="chapter-expanding"><title>Expanding Brackets</title>
+        <section xml:id="expanding-binomial"><title>Every term matters</title>
+          <p>Before expanding <m>(x+2)(x+3)</m>, predict the number of products.</p>
+          <p>Each term in the first bracket multiplies each term in the second bracket.</p>
+          <example xml:id="example-two-brackets"><title>Two binomials</title>
+            <p><me>(x+2)(x+3)=x^2+3x+2x+6=x^2+5x+6.</me></p>
+          </example>
+          <exercise xml:id="exercise-expand-one">
+            <statement><p>Expand and simplify <m>(x+1)(x+4)</m>.</p></statement>
+            <answer><p><m>x^2+5x+4</m>.</p></answer>
+          </exercise>
+          <p>The FOIL mnemonic describes the four products for two binomials. The distributive law is more general and also works with trinomials and cubic expansions.</p>
+        </section>
+      </chapter>
+      <chapter xml:id="chapter-factorisation"><title>Factorisation</title>
+        <section xml:id="factorisation-intro"><title>Reversing expansion</title>
+          <p>Factorisation writes an expression as a product. For example, <m>6x+9=3(2x+3)</m>.</p>
+        </section>
+      </chapter>
+    </part>
+
+    <part xml:id="part-functions"><title>Functions</title>
+      <chapter xml:id="chapter-functions"><title>Functions and Graphs</title>
+        <section xml:id="functions-intro"><title>Inputs and outputs</title>
+          <p>A function assigns exactly one output to each input in its domain.</p>
+        </section>
+      </chapter>
+      <chapter xml:id="chapter-calculus"><title>Calculus</title>
+        <section xml:id="calculus-intro"><title>Change and accumulation</title>
+          <p>Calculus develops ways to study rates of change and accumulated quantities.</p>
+        </section>
+      </chapter>
+    </part>
+
+    <part xml:id="part-geometry"><title>Geometry</title>
+      <chapter xml:id="chapter-geometry"><title>Shapes and Reasoning</title>
+        <section xml:id="geometry-intro"><title>Seeing mathematical structure</title>
+          <p>We describe geometric objects using definitions, diagrams and carefully justified reasoning.</p>
+        </section>
+      </chapter>
+    </part>
+
+    <part xml:id="part-trigonometry"><title>Trigonometry</title>
+      <chapter xml:id="chapter-trigonometry"><title>Ratios and Triangles</title>
+        <section xml:id="trig-intro"><title>Right-angled triangles</title>
+          <p>Trigonometric ratios connect side lengths and angles in right-angled triangles.</p>
+        </section>
+        <section xml:id="trig-cosine-rule"><title>The Cosine Rule</title>
+          <p>The cosine rule extends Pythagoras' theorem to triangles that need not be right-angled.</p>
+          <p><me>c^2=a^2+b^2-2ab\cos C.</me></p>
+        </section>
+      </chapter>
+    </part>
+
+    <part xml:id="part-probability"><title>Probability</title>
+      <chapter xml:id="chapter-probability"><title>Events and Counting</title>
+        <section xml:id="probability-fcp"><title>The Fundamental Counting Principle</title>
+          <p>When the first choice has <m>m</m> possibilities and the second has <m>n</m> possibilities, every combination of choices gives <m>mn</m> possibilities.</p>
+          <exercise xml:id="exercise-fcp">
+            <statement><p>How many two-character codes can be formed from three choices for the first character and four for the second, if every pair is allowed?</p></statement>
+            <answer><p><m>3\cdot4=12</m>.</p></answer>
+          </exercise>
+        </section>
+      </chapter>
+    </part>
+
+    <part xml:id="part-statistics"><title>Statistics</title>
+      <chapter xml:id="chapter-statistics"><title>Understanding Data</title>
+        <section xml:id="statistics-intro"><title>Data and variation</title>
+          <p>Statistics helps us collect, summarise and draw justified conclusions from data.</p>
+        </section>
+      </chapter>
+    </part>
+
+    <part xml:id="part-combinatorics"><title>Combinatorics</title>
+      <chapter xml:id="chapter-counting"><title>Systematic Counting</title>
+        <section xml:id="combinatorics-intro"><title>Arrangements and selections</title>
+          <p>Combinatorics studies how to count possible arrangements and selections.</p>
+        </section>
+      </chapter>
+    </part>
+
+    <part xml:id="part-vectors"><title>Vectors and Matrices</title>
+      <chapter xml:id="chapter-vectors"><title>Vectors</title>
+        <section xml:id="vectors-intro"><title>Magnitude and direction</title>
+          <p>A vector is a quantity with magnitude and direction.</p>
+        </section>
+      </chapter>
+    </part>
+  </book>
+</pretext>
