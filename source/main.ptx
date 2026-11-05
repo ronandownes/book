@@ -12,23 +12,7 @@
 
     <part xml:id="part-number">
       <title>Number</title>
-      <chapter xml:id="chapter-sets">
-        <title>Sets</title>
-        <section xml:id="sets-first-look">
-          <title>What is a set?</title>
-          <p>A set is a collection of objects. We call the objects its elements.</p>
-          <p>Consider the set of seasons, <m>A=\{\text{spring},\text{summer},\text{autumn},\text{winter}\}</m>.</p>
-          <p>There are four elements, so <m>\#A=4</m>.</p>
-          <exercise xml:id="exercise-seasons">
-            <statement><p>How many elements are in the set of seasons?</p></statement>
-            <answer><p>Four.</p></answer>
-          </exercise>
-          <exercise xml:id="exercise-membership">
-            <statement><p>Is summer an element of the set <m>A</m>?</p></statement>
-            <answer><p>Yes.</p></answer>
-          </exercise>
-        </section>
-      </chapter>
+      <xi:include href="./sets-chapter.ptx" />
       <chapter xml:id="chapter-sequences"><title>Sequences and Series</title>
         <section xml:id="sequences-intro"><title>Recognising patterns</title>
           <p>Consider <m>2,5,8,11,\ldots</m>. Each term is three more than the previous term.</p>
