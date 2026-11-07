@@ -76,6 +76,14 @@
       </chapter>
     </part>
 
+    <part xml:id="part-statistics"><title>Statistics</title>
+      <chapter xml:id="chapter-statistics"><title>Understanding Data</title>
+        <section xml:id="statistics-intro"><title>Data and variation</title>
+          <p>Statistics helps us collect, summarise and draw justified conclusions from data.</p>
+        </section>
+      </chapter>
+    </part>
+
     <part xml:id="part-probability"><title>Probability</title>
       <chapter xml:id="chapter-probability"><title>Events and Counting</title>
         <section xml:id="probability-fcp"><title>The Fundamental Counting Principle</title>
@@ -86,30 +94,11 @@
           </exercise>
         </section>
       </chapter>
-    </part>
-
-    <part xml:id="part-statistics"><title>Statistics</title>
-      <chapter xml:id="chapter-statistics"><title>Understanding Data</title>
-        <section xml:id="statistics-intro"><title>Data and variation</title>
-          <p>Statistics helps us collect, summarise and draw justified conclusions from data.</p>
-        </section>
-      </chapter>
-    </part>
-
-    <part xml:id="part-combinatorics"><title>Combinatorics</title>
       <chapter xml:id="chapter-counting"><title>Systematic Counting</title>
-        <section xml:id="combinatorics-intro"><title>Arrangements and selections</title>
-          <p>Combinatorics studies how to count possible arrangements and selections.</p>
-        </section>
-      </chapter>
-    </part>
-
-    <part xml:id="part-vectors"><title>Vectors and Matrices</title>
-      <chapter xml:id="chapter-vectors"><title>Vectors</title>
-        <section xml:id="vectors-intro"><title>Magnitude and direction</title>
-          <p>A vector is a quantity with magnitude and direction.</p>
-        </section>
-      </chapter>
+              <section xml:id="combinatorics-intro"><title>Arrangements and selections</title>
+                <p>Combinatorics studies how to count possible arrangements and selections.</p>
+              </section>
+            </chapter>
     </part>
   </book>
 </pretext>
