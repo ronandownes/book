@@ -153,4 +153,28 @@
 </paragraphs>
 </section>
 
+<section xml:id="expanding-hidden-maths">
+<title>Hidden Maths: patterns worth discovering</title>
+<p>A good investigation begins with a prediction. Look for a pattern in the structure before carrying out all the arithmetic.</p>
+<exercise xml:id="expanding-hidden-x-plus-one">
+<statement>
+<p>Multiply each expression by <m>x+1</m>, but first predict what the coefficients of the answer might be:</p>
+<ol>
+<li><p><m>(2x+3)(x+1)</m></p></li>
+<li><p><m>(2x^2+3x+4)(x+1)</m></p></li>
+<li><p><m>(3x^2+5x+2)(x+1)</m></p></li>
+</ol>
+<p>Investigate: Which coefficients are unchanged? Which come from adding two neighbouring coefficients? How would the pattern change for <m>x-1</m>? Can you describe a rule that works for any polynomial?</p>
+</statement>
+<answer>
+<p>The answers are <m>2x^2+5x+3</m>, <m>2x^3+5x^2+7x+4</m>, and <m>3x^3+8x^2+7x+2</m>.</p>
+<p>Write the coefficients of <m>P(x)</m> in descending powers and imagine a zero at either end. Multiplication by <m>x+1</m> adds each coefficient to the neighbouring coefficient one place to its right. The leading and constant coefficients remain unchanged. Multiplication by <m>x-1</m> instead gives adjacent differences, with the constant term changing sign.</p>
+</answer>
+</exercise>
+<paragraphs xml:id="expanding-hidden-reflect">
+<title>Reflect</title>
+<p>Could you multiply by <m>x+1</m> by working with the coefficients alone, without repeatedly writing powers of <m>x</m>? Why does the place-value method make this pattern so visible?</p>
+</paragraphs>
+</section>
+
 </chapter>
