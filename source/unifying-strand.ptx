@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-unifying">
+  <title>How We Think, Explain and Solve Problems</title>
+  <introduction>
+    <p>Mathematics is not a collection of tricks. The same six ways of thinking appear in Number, Algebra, Functions, Geometry, Trigonometry, Statistics and Probability. We shall name them explicitly, practise them, and return to them throughout this book.</p>
+    <p>These six elements form the <term>Unifying Strand</term>: <term>building blocks</term>, <term>representation</term>, <term>connections</term>, <term>problem solving</term>, <term>generalisation and proof</term>, and <term>communication</term>. They are not six isolated lessons. A single mathematical investigation can involve all six.</p>
+    <p>When we say what kind of thinking we are doing, we become better at choosing a method, explaining it, and checking whether it makes sense.</p>
+  </introduction>
+
+  <section xml:id="unifying-overview">
+    <title>Six elements, one piece of mathematics</title>
+    <figure xml:id="unifying-six-map">
+      <caption>Six lenses through which to examine the same mathematical idea. No element is more important than the others.</caption>
+      <image width="100%">
+        <description>Six labelled cards in two rows of three: Building blocks, Representation, Connections, Problem solving, Generalisation and proof, Communication. All are linked to one central mathematical idea.</description>
+        <latex-image-code><![CDATA[
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily]
+\foreach \x/\y/\name in {0/2.4/{Building blocks},4.2/2.4/{Representation},8.4/2.4/{Connections},0/0/{Problem solving},4.2/0/{Generalisation\\and proof},8.4/0/{Communication}} {
+ \draw[very thick,blue!65!black,fill=blue!6,rounded corners=3pt] (\x,\y) rectangle ++(3.8,1.65);
+ \node[align=center,font=\bfseries] at (\x+1.9,\y+0.85) {\name};
+}
+\end{tikzpicture}
+]]></latex-image-code>
+      </image>
+    </figure>
+    <p>We begin with a familiar example: expanding <m>(x+5)(x+2)</m>. Our purpose is not simply to obtain an answer; it is to find out what the calculation means and how its different forms connect.</p>
+  </section>
+
+  <section xml:id="unifying-building-blocks">
+    <title>1. Building blocks</title>
+    <p><term>Building blocks</term> are the concepts and procedures on which further mathematics depends. Here we need to know what a term and a factor are, how multiplication distributes over addition, and why powers name place values.</p>
+    <me>(x+5)(x+2)=x(x+2)+5(x+2).</me>
+    <p>Multiplication acts on <em>every term</em> of the second bracket. The four <term>partial products</term> are <m>x^2</m>, <m>2x</m>, <m>5x</m> and <m>10</m>. Before combining like terms, check that none is missing.</p>
+    <p>For place-value expansion, the degree of a product gives its highest-power column. A quadratic factor supplies an <m>x^2</m> starting point; multiplying by another quadratic extends the highest-power column two further places, to <m>x^4</m>. The same visual idea works for tens, hundreds and thousands in number multiplication.</p>
+    <exercise xml:id="unifying-block-check">
+      <statement><p>Without expanding fully, name the highest power in <m>(x^2+5x+3)(x^2+2)</m>. Explain by counting the additional power places.</p></statement>
+      <answer><p>Start at <m>x^2</m> in the first factor; the other factor reaches <m>x^2</m>, two further places. The product therefore has highest term <m>x^4</m>.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="unifying-representation">
+    <title>2. Representation</title>
+    <p>A <term>representation</term> is a way of showing the same mathematical object or situation. Words, algebra, a table, a geometric diagram and a vertical multiplication layout can express one underlying relationship.</p>
+    <figure xml:id="unifying-area-model">
+      <caption>An area model for the product. The four regions correspond to the four partial products. The drawing is schematic, not to scale.</caption>
+      <image width="78%">
+        <description>A rectangle partitioned into a two-by-two area grid with column widths labelled x and 5, row heights labelled x and 2, and cells x squared, 5x, 2x and 10.</description>
+        <latex-image-code><![CDATA[
+\begin{tikzpicture}[x=1.05cm,y=1.05cm,font=\sffamily\Large]
+\fill[blue!9] (0,0) rectangle (3.4,3.1);
+\fill[green!12] (3.4,0) rectangle (5.9,3.1);
+\draw[line width=1.2pt] (0,0) rectangle (5.9,3.1);
+\draw[thick] (3.4,0)--(3.4,3.1);
+\draw[thick] (0,1.15)--(5.9,1.15);
+\node at (1.7,2.15) {$x^2$};
+\node at (4.65,2.15) {$5x$};
+\node at (1.7,.57) {$2x$};
+\node at (4.65,.57) {$10$};
+\node[above] at (1.7,3.1) {$x$};
+\node[above] at (4.65,3.1) {$5$};
+\node[left] at (0,2.15) {$x$};
+\node[left] at (0,.57) {$2$};
+\end{tikzpicture}
+]]></latex-image-code>
+      </image>
+    </figure>
+    <me>(x+5)(x+2)=x^2+2x+5x+10=x^2+7x+10.</me>
+    <p>The factored form tells us the two side lengths. The expanded form makes the individual areas visible. The vertical place-value layout helps us organise powers in columns. A good representation helps us see what matters for the question being asked.</p>
+    <exercise xml:id="unifying-representation-check">
+      <statement><p>Draw a two-by-two area model for <m>(x+3)(x+4)</m>. Label its four areas before writing the expanded expression.</p></statement>
+      <answer><p>The areas are <m>x^2</m>, <m>3x</m>, <m>4x</m> and <m>12</m>. Together they give <m>x^2+7x+12</m>.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="unifying-connections">
+    <title>3. Connections</title>
+    <p><term>Connections</term> help us see that a new method is not a new rule invented from nowhere. The area model, repeated distribution, four partial products and vertical multiplication all describe the same multiplication.</p>
+    <p>For ordinary numbers we may calculate</p>
+    <me>12\cdot13=(10+2)(10+3)=100+30+20+6=156.</me>
+    <p>For algebra we replace the place value <m>10</m> by the variable <m>x</m>. Then the four products become <m>x^2</m>, <m>3x</m>, <m>2x</m> and <m>6</m>. This is a structural connection, not a coincidence.</p>
+    <p>Later, polynomial division will reverse some of this organisation. We will meet methods such as <term>synthetic division</term> in an appropriate later section, but there is no need to learn them now. Knowing where a mathematical idea leads can help us understand why we are learning it.</p>
+    <p><url href="https://ronandownes.github.io/maths/apps/polynomial-place-value/index.html">Open the Place-Value Multiplication app</url>. Compare its column layout with the area model and with repeated distribution.</p>
+  </section>
+
+  <section xml:id="unifying-problem-solving">
+    <title>4. Problem solving</title>
+    <p><term>Problem solving</term> begins when the method is not immediately supplied. Understand the situation, decide what matters, try a strategy, interpret the answer, and check whether it is reasonable.</p>
+    <example xml:id="unifying-garden-problem">
+      <title>Work backwards from a rectangle</title>
+      <p>A rectangular garden has length <m>x+5</m> metres and width <m>x+2</m> metres. Its area is <m>70</m> square metres. Find its dimensions.</p>
+      <p>We can draw the rectangle, form the equation <m>(x+5)(x+2)=70</m>, and test or solve for a suitable value of <m>x</m>. Since <m>x=5</m> gives <m>10\cdot7=70</m>, the dimensions are <m>10</m> metres and <m>7</m> metres. A negative value would not suit the stated lengths.</p>
+      <p>Check the answer in the original question: the dimensions are positive, and their product is <m>70</m> square metres. The equation was a tool; the final answer is a pair of measurements.</p>
+    </example>
+    <exercise xml:id="unifying-problem-check">
+      <statement><p>Design a different rectangular garden with area <m>70</m> square metres. Does area alone determine its dimensions? Explain.</p></statement>
+      <answer><p>No. For example, <m>14</m> metres by <m>5</m> metres also has area <m>70</m> square metres. Additional information, such as a relationship between the side lengths, is needed for a unique answer.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="unifying-generalisation-proof">
+    <title>5. Generalisation and proof</title>
+    <p>A <term>generalisation</term> states a relationship that extends beyond the example in front of us. A <term>proof</term> explains why a claim must be true in every case covered by the assumptions.</p>
+    <me>(a+b)(c+d)=ac+ad+bc+bd.</me>
+    <p>This follows from the distributive law: first multiply <m>(a+b)</m> by <m>c</m> and <m>d</m>, then distribute each product. The letters can stand for any real numbers, not just positive lengths in an area diagram.</p>
+    <p>One example can suggest a general rule, but it cannot normally prove it. A single <term>counterexample</term> can disprove a universal claim.</p>
+    <exercise xml:id="unifying-proof-check">
+      <statement><p>A student claims that <m>(a+b)^2=a^2+b^2</m> for all real numbers. Find a counterexample and explain the missing terms.</p></statement>
+      <answer><p>With <m>a=2</m> and <m>b=3</m>, the left side is <m>25</m> and the proposed right side is <m>13</m>. In fact <m>(a+b)^2=a^2+2ab+b^2</m>, by multiplying both factors fully.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="unifying-communication">
+    <title>6. Communication</title>
+    <p><term>Communication</term> means expressing a mathematical idea precisely enough for someone else to understand, question or build on it. We communicate through carefully labelled diagrams, spoken explanations, written reasoning, mathematical symbols and collaborative discussion.</p>
+    <activity xml:id="unifying-pair-talk">
+      <title>Pair investigation: which representation helps?</title>
+      <p>Working in pairs, expand <m>(x+4)(x+3)</m>. One student begins with an area diagram; the other begins with a vertical place-value layout. Each explains their method while their partner listens and checks that all four partial products appear.</p>
+      <task><p>Compare the two methods. Which makes the four products easiest to see? Which makes combining like terms easiest?</p></task>
+      <task><p>Swap roles. Explain the reasoning without pointing to an answer key. Ask, <q>Why does that step work?</q></p></task>
+      <task><p>Write a joint explanation using the words <term>factor</term>, <term>partial product</term>, <term>representation</term> and <term>distributive law</term>.</p></task>
+      <p>A convincing answer is not just the result <m>x^2+7x+12</m>. It includes a clear explanation of why that is the product. Speaking is one way of communicating; students may also show or write their reasoning.</p>
+    </activity>
+  </section>
+
+  <section xml:id="unifying-learning-habits">
+    <title>Our habits in every chapter</title>
+    <p>At the start of an idea, ask: <em>What do I already know?</em> When we see a new picture or method, ask: <em>What does it represent?</em> As we practise, ask: <em>What does this connect to?</em> When the problem changes, ask: <em>Which strategy might work?</em> After finding an answer, ask: <em>Can I justify it, check it, and explain it to somebody else?</em></p>
+    <p>These are habits to revisit, not boxes to tick. A simpler question can still demand deep thinking, and a challenging question should remain accessible through multiple representations and carefully chosen first steps.</p>
+    <exercise xml:id="unifying-exit-ticket">
+      <statement><p>Choose one example from this chapter. Explain how you used at least three elements of the Unifying Strand. Include one diagram or mathematical expression in your answer.</p></statement>
+      <answer><p>Answers vary. For example: I used building blocks (distribution), representation (area model and algebra), and communication (labelled partial products and a spoken explanation). A strong answer states what happened, not just the names of the elements.</p></answer>
+    </exercise>
+    <p><url href="https://www.curriculumonline.ie/junior-cycle/junior-cycle-subjects/mathematics/expectations-for-students/">Official Junior Cycle Unifying Strand learning outcomes U.1–U.13</url>. The six elements apply throughout the curriculum. Our book keeps its seven subject headings separate for easier teaching and navigation.</p>
+  </section>
+</chapter>
