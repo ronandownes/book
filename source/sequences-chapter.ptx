@@ -7,9 +7,17 @@
 </introduction>
 <section xml:id="sequences-cicadas">
 <title>Two clocks in nature: 13 years and 17 years</title>
-<p>These are two different species of <term>periodical cicada</term>, insects that spend most of their lives underground. Certain populations emerge as adults together every 13 years, while others emerge every 17 years. Their life cycles create a surprising mathematical puzzle.</p>
+<p>Imagine walking into a forest where the trunks, branches and ground are suddenly covered with periodical cicadas. These insects spend most of their lives underground, then emerge in very large numbers during a few weeks. The timing creates a surprising mathematical puzzle: some populations emerge every 13 years and others every 17 years. This is a <term>mass emergence</term>, not a crop-destroying swarm.</p>
+<figure xml:id="cicada-mass-emergence">
+<caption>A branch covered by periodical cicadas during the emergence of May 2024, in Illinois. This photograph shows a small visible part of the population: across the two broods, the total was on the scale of billions, not the few individuals that fit in a photograph.</caption>
+<image source="cicadas/periodical-cicadas-tree-2024.jpg" width="100%">
+<description>Dozens of orange-winged cicadas are resting together on a long sloping tree branch with green foliage behind. A real group photographed in Illinois on 25 May 2024.</description>
+</image>
+</figure>
+<p><em>Group photograph:</em> Jbjensen1, <url href="https://commons.wikimedia.org/wiki/File:Periodical_cicadas_in_a_tree.jpg" visual="Wikimedia Commons">Periodical cicadas in a tree (2024)</url>, <url href="https://creativecommons.org/licenses/by/4.0/" visual="CC BY 4.0">CC BY 4.0</url>, reproduced without alteration.</p>
+<p><em>Two broods, two clocks.</em> Brood XIX has a 13-year cycle; Brood XIII has a 17-year cycle. A <term>brood</term> is a population group defined by when and where its members emerge, and a brood may contain several species. The two close-up photographs below show one species associated with each brood. You cannot reliably identify the period of an individual cicada simply by looking at its colour.</p>
 <figure xml:id="cicada-two-species">
-<caption>Two periodical cicadas photographed in 2024: a 13-year cicada (<em>Magicicada tredecim</em>, left), and a mating pair of 17-year cicadas (<em>Magicicada septendecim</em>, right). The photos show representative insects from the two different broods, not a shared location.</caption>
+<caption>Two representative cicada species photographed in 2024: left, <em>Magicicada tredecim</em>, a 13-year species from Brood XIX in Georgia; right, <em>Magicicada septendecim</em>, a 17-year species from Brood XIII in Illinois. These are distinct photographs from different locations, not an encounter between the broods.</caption>
 <sidebyside widths="46% 46%" margins="2%">
 <image source="cicadas/magicicada-tredecim-2024.jpg">
 <description>Side view of a 13-year cicada with red eyes, dark body and transparent orange-veined wings on a branch against a soft green background. Photograph taken in Macon, Georgia in May 2024.</description>
@@ -20,6 +28,16 @@
 </sidebyside>
 </figure>
 <p><em>Photograph credits:</em> left, Jeffrey Gammon, <url href="https://commons.wikimedia.org/wiki/File:Riley%27s_13-Year_Cicada_Magicicada_tredecim_JG.jpg" visual="Wikimedia Commons">13-year cicada photograph</url>, licensed <url href="https://creativecommons.org/licenses/by/4.0/" visual="CC BY 4.0">CC BY 4.0</url>; right, peterwchen, <url href="https://commons.wikimedia.org/wiki/File:Magicicada_septendecim-mating.jpg" visual="Wikimedia Commons">17-year cicada photograph</url>, also CC BY 4.0. Both photographs are reproduced without alteration.</p>
+<paragraphs xml:id="cicadas-plague-or-emergence">
+<title>Is this a biblical plague?</title>
+<p>Mass emergence can look like a plague, but the biblical crop-destroying insects were <term>locusts</term>, which are swarming grasshoppers. Cicadas do not travel in crop-eating swarms and do not cause famine. Adult cicadas and their young feed by drinking fluid from trees; the feeding damage is generally minor. Females may damage thin branches when laying eggs, so vulnerable young trees can need protection. Read the <url href="https://www.epa.gov/safepestcontrol/cicadas" visual="US Environmental Protection Agency's explanation of cicadas"/>.</p>
+<p>The remarkable survival mechanism is <term>predator satiation</term>. Birds, mammals and other animals eat many cicadas, but when so many emerge at once the predators cannot eat every insect. Enough survive to reproduce. See the <url href="https://guides.loc.gov/periodical-cicadas" visual="Library of Congress periodical cicadas guide"/>. This is a temporary surplus of prey, not a shortage of food caused by cicadas.</p>
+</paragraphs>
+<activity xml:id="cicada-ecology-check">
+<title>Look at the photograph, then decide</title>
+<task><p>A thousand cicadas emerge around one group of trees. Is it necessarily true that those cicadas will consume a thousand insects' worth of leaves and cause a famine?</p><answer><p>No. Cicadas drink fluid from trees; they do not strip crops like locusts. The enormous number of cicadas makes it difficult for their predators to eat them all.</p></answer></task>
+<task><p>Would the simultaneous emergence of two broods necessarily double the number of cicadas in every forest?</p><answer><p>No. Brood XIX and Brood XIII mostly occupy different regions. They emerged in the same <em>year</em>, but only a limited area in Illinois experienced geographical overlap. Their 221-year coincidence is primarily a question about timing, not double density at every location.</p></answer></task>
+</activity>
 <activity xml:id="cicada-cycle-investigation">
 <title>Will their calendars coincide again?</title>
 <task><p>In 2024, Brood XIX (13-year) and Brood XIII (17-year) emerged in the same year. The broods live in mostly different areas, with only limited geographical overlap in Illinois. If each emerges at its usual interval, when will these <em>same two broods</em> next emerge in the same year? Predict before calculating.</p>
