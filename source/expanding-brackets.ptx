@@ -117,6 +117,10 @@
 <p>You have the whole weekend for these eight questions. Use <em>Step by step</em> to understand and check your working: that support is there to be used. Read the reflection after each question. Then assess your own understanding with quizzes, which give feedback along the way, and tests, which report results at the end after submission.</p>
 <p>Practise to develop confidence, enjoyment, accuracy and fluency. A screenshot of a quiz or test result may be shared privately with your teacher if you wish; it is not a substitute for the eight fully worked questions.</p>
 <p>You may try extra questions or investigations if you want further challenge. Make a note of any misconception you identify and how you corrected it.</p>
+<paragraphs xml:id="expanding-revisit-plan"><title>Assess yourself and plan to revisit</title>
+<p>After an exercise, rate how much help you used from <m>1</m> (very little) to <m>5</m> (a lot). Rate again how much help you expect to need next time. These are reflections, not marks. Aim to reduce the support you need as your confidence grows.</p>
+<p>Revisit a similar problem tomorrow, quiz yourself a week later, and take a short test after a month. Attempt each question from memory before checking with the app. If you find a mistake, correct it, identify the cause, and practise that skill again sooner.</p>
+</paragraphs>
 <exercise xml:id="expanding-investigate-common">
 <statement><p>Investigate whether expanding <m>(10x+15)(2x^2+3x+4)</m> becomes easier if you first write <m>10x+15=5(2x+3)</m>. Where must the factor <m>5</m> go at the end?</p></statement>
 <answer><p>Expand <m>(2x+3)(2x^2+3x+4)=4x^3+12x^2+17x+12</m>, then multiply every coefficient by <m>5</m>, giving <m>20x^3+60x^2+85x+60</m>.</p></answer>
