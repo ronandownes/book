@@ -30,6 +30,7 @@
     </part>
 
     <part xml:id="part-algebra"><title>Algebra</title>
+      <xi:include href="./algebra-introduction.ptx" />
       <xi:include href="./algebra-language.ptx" />
       <xi:include href="./expanding-brackets.ptx" />
       <chapter xml:id="chapter-factorisation"><title>Factorisation</title>
