@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Three regions in a two-set Venn diagram</title>
+  <desc id="desc">Set F has 15 students and set M has 12. Five are in both, ten are in F only, and seven are in M only. The union contains 22 students.</desc>
+  <rect width="900" height="520" fill="#fff"/>
+  <ellipse cx="370" cy="255" rx="250" ry="175" fill="#dcebf7" fill-opacity=".88" stroke="#225c86" stroke-width="6"/>
+  <ellipse cx="530" cy="255" rx="250" ry="175" fill="#e4f1e8" fill-opacity=".82" stroke="#38865f" stroke-width="6"/>
+  <g font-family="Arial,sans-serif" font-size="38" font-weight="700">
+    <text x="218" y="120" fill="#225c86">F</text>
+    <text x="660" y="120" fill="#38865f">M</text>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="30" text-anchor="middle" fill="#173c57">
+    <text x="265" y="252">F only</text>
+    <text x="265" y="300" font-size="38" font-weight="700">10</text>
+    <text x="450" y="252">F ∩ M</text>
+    <text x="450" y="300" font-size="38" font-weight="700">5</text>
+    <text x="635" y="252">M only</text>
+    <text x="635" y="300" font-size="38" font-weight="700">7</text>
+  </g>
+  <text x="450" y="490" font-family="Arial,sans-serif" font-size="27" font-weight="700" text-anchor="middle" fill="#294b65">#F = 15 · #M = 12 · #(F ∪ M) = 22</text>
+</svg>

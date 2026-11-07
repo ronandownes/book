@@ -1,61 +1,265 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-sets">
-<title>Sets</title>
-<section xml:id="sets-first-look">
-<title>A circle and a collection</title>
-<introduction><p>We begin by looking. We will only introduce new notation when it helps us say something useful.</p></introduction>
-<p>Imagine a large oval labelled <m>A</m> near its upper-left edge. Inside it are four separate solid dots labelled Spring, Summer, Autumn and Winter. Each dot represents one element. The oval is a picture of the collection, called a <term>set</term>.</p>
-<p>Draw that oval now. Put a solid dot beside each season. Do not draw a box around it yet: one set is enough.</p>
-<activity xml:id="activity-season-picture">
-<title>Look, count, explain</title>
-<task><p>How many elements can you count? What exactly are you counting?</p><answer><p>Four elements, represented by four solid dots.</p></answer></task>
-<task><p>Suppose someone writes Spring twice inside the oval. Does that create a new season?</p><answer><p>No. A repeated name does not create a new element.</p></answer></task>
-</activity>
-<p>The <term>cardinality</term> of a set is the number of distinct elements it contains. For this set, <m>\#A=4</m>. The number 4 is a count, not another element: it has no dot in the oval.</p>
-<exercise xml:id="exercise-seasons-count"><statement><p>How many elements are in the set of the four seasons?</p></statement><choices>
-<choice><statement><p>3</p></statement><feedback><p>Count each season's dot carefully.</p></feedback></choice>
-<choice correct="yes"><statement><p>4</p></statement><feedback><p>Exactly: one element for each distinct season.</p></feedback></choice>
-<choice><statement><p>5</p></statement><feedback><p>The letter naming the set is not an element inside it.</p></feedback></choice>
-</choices></exercise>
-<p>We can also say that Spring is <term>an element of</term> <m>A</m>. Later we abbreviate that statement to <m>\text{Spring}\in A</m>.</p>
-</section>
+  <title>Sets</title>
+
+  <section xml:id="sets-first-look">
+    <title>A circle and a collection</title>
+    <introduction>
+      <p>We begin by looking. We will introduce notation when it helps us say something useful.</p>
+    </introduction>
+    <p>A <term>set</term> is a collection of distinct objects, called its <term>elements</term>. Imagine an oval labelled <m>A</m> with four separate solid dots labelled Spring, Summer, Autumn and Winter. Each dot represents one season.</p>
+    <figure xml:id="figure-seasons-set">
+      <caption>A set of four seasons.</caption>
+      <image source="sets/seasons.svg" width="95%">
+        <shortdescription>An oval labelled A contains four dotted elements: Spring, Summer, Autumn and Winter.</shortdescription>
+        <description><p>The oval is labelled <m>A</m>. Four separate solid dots inside it are labelled Spring, Summer, Autumn and Winter. Each dot represents one distinct element.</p></description>
+      </image>
+    </figure>
+    <p>Draw that oval now and put a solid dot beside each season. Do not draw a box around it yet: one set is enough.</p>
+    <activity xml:id="activity-season-picture">
+      <title>Look, count, explain</title>
+      <task><p>How many elements can you count? What exactly are you counting?</p><answer><p>Four distinct elements, represented by four solid dots.</p></answer></task>
+      <task><p>Suppose someone writes Spring twice inside the oval. Does that create a new season?</p><answer><p>No. A repeated name does not create a new element.</p></answer></task>
+    </activity>
+    <p>The <term>cardinality</term> of a set is the number of distinct elements it contains. For this set, <m>\#A=4</m>. The number 4 is a count, not another element: it has no dot in the oval.</p>
+    <exercise xml:id="exercise-seasons-count">
+      <statement><p>How many elements are in the set of the four seasons?</p></statement>
+      <choices>
+        <choice><statement><p>3</p></statement><feedback><p>Count each season's dot carefully.</p></feedback></choice>
+        <choice correct="yes"><statement><p>4</p></statement><feedback><p>Exactly: one element for each distinct season.</p></feedback></choice>
+        <choice><statement><p>5</p></statement><feedback><p>The letter naming the set is not an element inside it.</p></feedback></choice>
+      </choices>
+    </exercise>
+    <p>We can say that Spring is an element of <m>A</m>. We write <m>\text{Spring}\in A</m>. Since Monday is not one of the four seasons, <m>\text{Monday}\notin A</m>.</p>
+  </section>
+
+<section xml:id="sets-properties">
+    <title>Properties of sets</title>
+    <p>A set must be <term>well-defined</term>: for any object under discussion, we can decide clearly whether it belongs. “The even numbers from 1 to 8” is clear. “The nicest numbers” is not, because people may disagree about what “nicest” means.</p>
+    <p>Let <m>A=\{2,4,6,8\}</m> and <m>B=\{8,6,4,2,2\}</m>. These are the same set. The order of the elements does not matter, and repeating an element does not add a new element. Two sets are equal exactly when they have the same distinct elements.</p>
+    <div>
+      <title>Three facts to keep in mind</title>
+      <ul>
+        <li><p>Order is unimportant: <m>\{2,4,6\}=\{6,4,2\}</m>.</p></li>
+        <li><p>Repeats do not count twice: <m>\{2,4,4,6\}=\{2,4,6\}</m>.</p></li>
+        <li><p>Cardinality counts distinct elements: <m>\#\{2,4,4,6\}=3</m>.</p></li>
+      </ul>
+    </div>
+    <p>If every element of <m>C</m> is also an element of <m>A</m>, then <m>C</m> is a <term>subset</term> of <m>A</m>, written <m>C\subseteq A</m>. For example, <m>\{2,4\}\subseteq\{2,4,6,8\}</m>. The empty set, written <m>\varnothing</m>, has no elements and is a subset of every set.</p>
+    <activity xml:id="activity-set-properties">
+      <title>Explain the difference</title>
+      <task><p>Is <m>4\in A</m> or <m>\{4\}\subseteq A</m> the better way to say that 4 is in <m>A</m>? What is the difference between the two statements?</p><answer><p><m>4\in A</m> says that the number 4 is an element. <m>\{4\}\subseteq A</m> says that the set whose only element is 4 is a subset of <m>A</m>. Both statements are true here, but they describe different objects.</p></answer></task>
+    </activity>
+    <exercise xml:id="exercise-set-equality">
+      <statement><p>Let <m>P=\{1,3,5\}</m> and <m>Q=\{5,3,1,1\}</m>. Are <m>P</m> and <m>Q</m> equal? Explain.</p></statement>
+      <answer><p>Yes. Both sets contain exactly the distinct elements 1, 3 and 5. Order and repetition do not change a set.</p></answer>
+    </exercise>
+    <p>For another example, <m>\#\varnothing=0</m>. An empty set is still a set; it simply has no elements.</p>
+  </section>
+
+<section xml:id="sets-representations">
+    <title>Representing a set: rule, list and diagram</title>
+    <p>The same set can be described in words, listed inside braces, or shown with an oval. These representations should agree: they must identify the same elements.</p>
+    <p>For this example, the candidate collection is <m>D=\{1,2,3,4,5,6,7,8\}</m>. Let <m>E</m> contain the even numbers in <m>D</m>.</p>
+    <ul>
+      <li><p><strong>Rule in words:</strong> <m>E</m> is the even numbers in <m>D</m>.</p></li>
+      <li><p><strong>Set-builder notation:</strong> <m>E=\{x\in D:x\text{ is even}\}</m>. Read the colon as “such that”: “<m>E</m> is the set of <m>x</m> in <m>D</m> such that <m>x</m> is even.”</p></li>
+      <li><p><strong>List:</strong> <m>E=\{2,4,6,8\}</m>.</p></li>
+      <li><p><strong>Diagram:</strong> draw one oval labelled <m>E</m> and place the elements that satisfy the rule inside it. We do not need a universal-set rectangle to show this one set.</p></li>
+    </ul>
+    <figure xml:id="figure-even-set-representations">
+      <caption>The rule, list and single oval describe the same set.</caption>
+      <image source="sets/even-set-representations.svg" width="95%">
+        <shortdescription>An oval E contains 2, 4, 6 and 8. The nearby rule and list describe these same even numbers.</shortdescription>
+        <description><p>The diagram uses one oval labelled <m>E</m> and contains 2, 4, 6 and 8. No rectangle is drawn. The rule says that these are the even numbers in the candidate collection <m>D=\{1,2,3,4,5,6,7,8\}</m>, and the list gives <m>E=\{2,4,6,8\}</m>.</p></description>
+      </image>
+    </figure>
+    <activity xml:id="activity-rule-list-diagram">
+      <title>Translate between representations</title>
+      <task><p>Using <m>D=\{1,2,3,4,5,6,7,8\}</m>, write a rule in words for <m>O=\{1,3,5,7\}</m>. Then write the set-builder rule using “such that”.</p><answer><p><m>O</m> is the odd numbers in <m>D</m>; <m>O=\{x\in D:x\text{ is odd}\}</m>.</p></answer></task>
+    </activity>
+    <p><url href="https://ronandownes.github.io/maths/apps/sets/list-and-notation.html">Open App 1: Set list and notation.</url> Then <url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">open App 2: Build a set from a rule.</url></p>
+  </section>
+
+<section xml:id="sets-two-sets">
+    <title>Two sets can overlap: intersection and union</title>
+    <p>Now compare two collections, <m>F</m> (students who play football) and <m>M</m> (students who play a musical instrument). A survey records 15 students in <m>F</m>, 12 in <m>M</m>, and 5 in both.</p>
+    <p>The <term>intersection</term> <m>F\cap M</m> contains the elements that are in both sets. The <term>union</term> <m>F\cup M</m> contains the elements in <m>F</m>, in <m>M</m>, or in both. In mathematics, “or” in a union includes the elements that belong to both sets.</p>
+    <p>Place the 5 shared students first. Then <m>15-5=10</m> play football only, and <m>12-5=7</m> play an instrument only. These are the three regions inside the two ovals.</p>
+    <figure xml:id="figure-two-set-regions">
+      <caption>Two overlapping ovals show three regions.</caption>
+      <image source="sets/two-set-regions.svg" width="95%">
+        <shortdescription>Ten students are in F only, five are in both sets, and seven are in M only; the union has 22 students.</shortdescription>
+        <description><p>Two overlapping ovals are labelled <m>F</m> and <m>M</m>. The regions contain 10 in <m>F</m> only, 5 in <m>F\cap M</m>, and 7 in <m>M</m> only. The union contains <m>10+5+7=22</m> students. There is no universal-set rectangle.</p></description>
+      </image>
+    </figure>
+    <ul>
+      <li><p><m>F\cap M</m>: in both sets, 5 students.</p></li>
+      <li><p><m>F\cup M</m>: in at least one set, 22 students.</p></li>
+      <li><p><m>F\setminus M</m>: in <m>F</m> but not in <m>M</m>, 10 students.</p></li>
+      <li><p><m>M\setminus F</m>: in <m>M</m> but not in <m>F</m>, 7 students.</p></li>
+    </ul>
+    <p>With technology, we mark a region using clear digital shading. When drawing by hand, leave the other regions blank and use only three or four short hatch strokes in the chosen region. On paper, do not shade the region or fill it with many hatch strokes.</p>
+    <p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html#explore">Open App 3: Explore and shade the two-set regions.</url></p>
+    <figure xml:id="figure-venn-app">
+      <caption>Explore the two-set regions in the Venn app.</caption>
+      <interactive xml:id="interactive-venn-explore" iframe="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html?embed=1#explore" width="100%" aspect="16:10"/>
+    </figure>
+    <exercise xml:id="exercise-intersection-union">
+      <statement><p>Let <m>A=\{1,2,3\}</m> and <m>B=\{3,4\}</m>. Write <m>A\cap B</m> and <m>A\cup B</m> as lists.</p></statement>
+      <answer><p><m>A\cap B=\{3\}</m> and <m>A\cup B=\{1,2,3,4\}</m>. The shared element appears once in the union.</p></answer>
+    </exercise>
+  </section>
+
+<section xml:id="sets-difference">
+    <title>Only in one set: set difference</title>
+    <p>The <term>difference</term> <m>F\setminus M</m> means the students who are in <m>F</m> but not in <m>M</m>. The backslash means “remove the elements in <m>M</m> from <m>F</m>”; it is not ordinary subtraction of numbers.</p>
+    <p>In our example, <m>F\setminus M</m> is the football-only region, so <m>\#(F\setminus M)=10</m>. In general, <m>A\setminus B</m> need not equal <m>B\setminus A</m>. The order matters.</p>
+    <activity xml:id="activity-difference-language">
+      <title>Say what the region means</title>
+      <task><p>Explain <m>M\setminus F</m> in words. How many students are in this region?</p><answer><p>They play an instrument but do not play football. There are 7 students.</p></answer></task>
+    </activity>
+    <exercise xml:id="exercise-set-difference">
+      <statement><p>Let <m>A=\{1,2,3,4\}</m> and <m>B=\{2,4\}</m>. Find <m>A\setminus B</m> and <m>B\setminus A</m>.</p></statement>
+      <answer><p><m>A\setminus B=\{1,3\}</m> and <m>B\setminus A=\varnothing</m>.</p></answer>
+    </exercise>
+  </section>
+
+<section xml:id="sets-cardinality">
+    <title>Cardinality and counting without double-counting</title>
+    <p>Cardinality counts distinct elements. The symbol <m>\#A</m> means the number of elements in <m>A</m>. In the diagram, adding <m>\#F+\#M</m> counts the five shared students twice.</p>
+    <p>To count the union, add the two set totals and subtract the intersection once:</p>
+    <me>\#(F\cup M)=\#F+\#M-\#(F\cap M)=15+12-5=22.</me>
+    <p>We can also add the three disjoint regions directly: <m>10+5+7=22</m>. Both methods count each student in the union exactly once.</p>
+    <exercise xml:id="exercise-cardinality-union">
+      <statement><p><m>\#A=17</m>, <m>\#B=14</m> and <m>\#(A\cap B)=6</m>. Find <m>\#(A\cup B)</m>.</p></statement>
+      <answer><p><m>17+14-6=25</m>.</p></answer>
+    </exercise>
+    <exercise xml:id="exercise-cardinality-neither">
+      <statement><p><m>\#A=20</m>, <m>\#B=14</m> and <m>\#(A\cup B)=27</m>. Find <m>\#(A\cap B)</m>.</p></statement>
+      <answer><p>Rearranging the union formula gives <m>\#(A\cap B)=20+14-27=7</m>.</p></answer>
+    </exercise>
+  </section>
+
+<section xml:id="sets-problem-solving">
+    <title>Solve a two-set problem</title>
+    <p>Use the diagram to organise the information before calculating. Start with the overlap, then work outwards.</p>
+    <ol>
+      <li><p>Name the two sets and record what each total means.</p></li>
+      <li><p>Put the number in both sets into the intersection first.</p></li>
+      <li><p>Subtract the intersection from each set total to find the two “only” regions.</p></li>
+      <li><p>Add the three regions to find the union, or check it with the cardinality formula.</p></li>
+      <li><p>Check that each set total is the sum of its two regions.</p></li>
+    </ol>
+    <p>For the football and music example, both is 5; football only is <m>15-5=10</m>; music only is <m>12-5=7</m>; and the union is <m>10+5+7=22</m>. The diagram gives a reason for every calculation.</p>
+    <activity xml:id="activity-two-set-reasoning">
+      <title>Work through the regions</title>
+      <task><p>In an activity survey, 20 students play basketball, 18 play music and 8 do both. How many play only basketball, only music, and at least one of the two activities?</p><answer><p>Basketball only: <m>20-8=12</m>. Music only: <m>18-8=10</m>. At least one: <m>12+8+10=30</m>.</p></answer></task>
+      <task><p>Explain why <m>20+18</m> is not the number who play basketball or music.</p><answer><p>The 8 students who do both appear in both totals, so they would be counted twice. Subtract the overlap once.</p></answer></task>
+    </activity>
+    <p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html#practice">Practise two-set problems with hints and worked reasoning.</url></p>
+  </section>
+
 <section xml:id="sets-universe">
-<title>Why do we need a universal set?</title>
-<p>Here is a question with a problem hidden inside it: if <m>A</m> is the set of red playing cards, what are the cards that are <em>not</em> in <m>A</m>?</p>
-<p>Black playing cards are a sensible answer, but only if we are talking about a standard pack of playing cards. Without agreeing on what objects are under consideration, 'not red cards' might include a pencil, a bicycle or the Moon. So we must establish the boundary of our discussion.</p>
-<p>That agreed collection is called the <term>universal set</term>, written <m>U</m>. On a Venn diagram we draw a rectangle for it and place the label <m>U</m> <em>outside</em> the rectangle, near its top-left corner.</p>
-<p>For our card example, let <m>U</m> be the 52 cards in a standard pack without jokers, and let <m>A</m> be its 26 red cards.</p>
-<activity xml:id="activity-why-universe"><title>Think before naming</title>
-<task><p>What would the words 'not red' mean if the objects under discussion were instead traffic lights?</p><answer><p>They would refer to the non-red lights within that agreed collection, not black playing cards. The answer depends on the universal set.</p></answer></task>
-</activity>
-</section>
+    <title>Why do we need a universal set?</title>
+    <p>Now we ask a different question: if <m>A</m> is the set of red playing cards, what are the cards that are <em>not</em> in <m>A</m>?</p>
+    <p>“Not red” only has a clear answer after we agree what objects we are considering. If we mean the cards in a standard pack, then “not red” means the black cards. It does not include a pencil, a bicycle or the Moon.</p>
+    <p>The agreed collection of objects under discussion is called the <term>universal set</term>, written <m>U</m>. On a Venn diagram, a rectangle represents <m>U</m>. The set or sets being studied are drawn inside it.</p>
+    <p>For the card example, let <m>U</m> be the 52 cards in a standard pack without jokers, and let <m>A</m> be its 26 red cards. The meaning of “outside <m>A</m>” now has a precise boundary.</p>
+    <activity xml:id="activity-why-universe">
+      <title>Think before naming</title>
+      <task><p>What would “not red” mean if <m>U</m> were a collection of traffic lights?</p><answer><p>It would mean the non-red lights in the agreed collection of traffic lights. The answer depends on the universal set.</p></answer></task>
+    </activity>
+    <p><url href="https://ronandownes.github.io/maths/apps/sets/universal-complement.html">Open App 4: Agree a universal set and explore what lies outside <m>A</m>.</url></p>
+  </section>
+
 <section xml:id="sets-complement">
-<title>Everything in the universe outside A</title>
-<p>Draw the rectangle <m>U</m>, then one oval <m>A</m> inside it. Leave plenty of room outside the oval but still inside the rectangle.</p>
-<p>Shade the region <em>inside the rectangle but outside the oval</em>. This is the <term>complement</term> of <m>A</m>. Our first notation is <m>A'</m>, read as 'A complement'. Other books may write <m>A^c</m>.</p>
-<p>The complement does <em>not</em> mean 'everything in the entire world outside A'. It means everything in the specified universal set that is not in A.</p>
-<p>In the playing-card example the complement of the red cards is the 26 black cards. Thus <m>\#A=26</m>, <m>\#A'=26</m>, and <m>\#U=52</m>.</p>
-<p>Every element of <m>U</m> is either in <m>A</m> or in <m>A'</m>, and no element can be in both. This makes them <term>mutually exclusive</term> within <m>U</m>. Nothing is left out.</p>
-<exercise xml:id="exercise-complement-card"><statement><p>The universal set is the 52 cards in a standard pack, and <m>A</m> is the red cards. Which set is <m>A'</m>?</p></statement><choices>
-<choice correct="yes"><statement><p>All 26 black cards.</p></statement><feedback><p>Yes: those are precisely the cards in the specified universe that are not red.</p></feedback></choice>
-<choice><statement><p>All objects that are not red.</p></statement><feedback><p>That ignores the boundary of our universal set, which includes only the 52 cards.</p></feedback></choice>
-<choice><statement><p>All 52 cards.</p></statement><feedback><p>That is the universal set, not the complement.</p></feedback></choice>
-</choices></exercise>
-<exercise xml:id="exercise-complement-ten"><statement><p>The universal set contains 10 distinct elements. Set <m>B</m> has 3 of those elements. What is <m>\#B'</m>?</p></statement><choices>
-<choice><statement><p>3</p></statement><feedback><p>That is the number inside B, not the number outside B.</p></feedback></choice>
-<choice correct="yes"><statement><p>7</p></statement><feedback><p>Correct: 10 elements altogether, with 3 in B, leave 7 in its complement.</p></feedback></choice>
-<choice><statement><p>13</p></statement><feedback><p>Complement means the rest within U, not an additional set of elements beyond U.</p></feedback></choice>
-</choices></exercise>
-</section>
+    <title>Everything in the universal set outside A</title>
+    <p>Draw the rectangle <m>U</m>, then one oval <m>A</m> inside it. Leave a visible region between the oval and the rectangle.</p>
+    <p>The <term>complement</term> of <m>A</m> is the part of <m>U</m> outside <m>A</m>. We write <m>A^c</m>, read “A complement”. It contains the elements in the specified universal set that are not in <m>A</m>.</p>
+    <figure xml:id="figure-universe-complement">
+      <caption>The complement is inside <m>U</m> and outside <m>A</m>.</caption>
+      <image source="sets/universe-complement.svg" width="95%">
+        <shortdescription>Digital shading marks the part of rectangle U outside oval A as A complement.</shortdescription>
+        <description><p>The rectangle represents <m>U</m>, and the oval represents <m>A</m>. Digital shading marks the part within <m>U</m> but outside <m>A</m>, labelled <m>A^c</m>. On paper, leave the other region blank and use only a few clear hatch strokes in the complement.</p></description>
+      </image>
+    </figure>
+    <p>For the playing-card example, the complement of the red cards is the 26 black cards. Thus <m>\#A=26</m>, <m>\#A^c=26</m>, and <m>\#U=52</m>. Every element belongs to exactly one of <m>A</m> and <m>A^c</m>, so <m>\#A+\#A^c=\#U</m>.</p>
+    <exercise xml:id="exercise-complement-card">
+      <statement><p>The universal set is the 52 cards in a standard pack, and <m>A</m> is the red cards. Which set is <m>A^c</m>?</p></statement>
+      <choices>
+        <choice correct="yes"><statement><p>All 26 black cards.</p></statement><feedback><p>These are precisely the cards in the specified universe that are not red.</p></feedback></choice>
+        <choice><statement><p>All objects that are not red.</p></statement><feedback><p>That ignores the boundary of the universal set, which contains only the 52 cards.</p></feedback></choice>
+        <choice><statement><p>All 52 cards.</p></statement><feedback><p>That is the universal set, not the complement.</p></feedback></choice>
+      </choices>
+    </exercise>
+    <exercise xml:id="exercise-complement-ten">
+      <statement><p>The universal set has 10 distinct elements. Set <m>B</m> has 3 of them. Find <m>\#B^c</m>.</p></statement>
+      <choices>
+        <choice><statement><p>3</p></statement><feedback><p>That is the number in <m>B</m>, not the number outside it.</p></feedback></choice>
+        <choice correct="yes"><statement><p>7</p></statement><feedback><p>There are 10 elements altogether; 10-3=7 are in the complement.</p></feedback></choice>
+        <choice><statement><p>13</p></statement><feedback><p>The complement is the rest within <m>U</m>, not an extra set beyond it.</p></feedback></choice>
+      </choices>
+    </exercise>
+    <p><url href="https://ronandownes.github.io/maths/apps/sets/universal-complement.html#explore">Explore digital shading, paper hatching and complement cardinality.</url></p>
+    <figure xml:id="figure-universal-complement-app">
+      <caption>Explore a universal set and complement.</caption>
+      <interactive xml:id="interactive-universal-complement" iframe="https://ronandownes.github.io/maths/apps/sets/universal-complement.html?embed=1#watch" width="100%" aspect="16:10"/>
+    </figure>
+  </section>
+
 <section xml:id="sets-disjoint">
-<title>Two sets that cannot overlap</title>
-<p>Keep the same universal set of 52 playing cards. Draw two separate ovals: <m>R</m> for red cards and <m>B</m> for black cards. Neither oval overlaps the other, because one card cannot be both red and black in this classification.</p>
-<p>These sets are <term>disjoint</term> (mutually exclusive). Because every card is red or black, these two particular sets are also complements of each other.</p>
-<p>Be careful: <em>disjoint</em> is not the same as <em>complementary</em>. Two sets could have nothing in common without together including every element of the universal set.</p>
-<exercise xml:id="exercise-disjoint"><statement><p>Within the universal set of all 52 playing cards, consider the set of spades and the set of hearts. Are these two sets complements of each other?</p></statement><choices>
-<choice><statement><p>Yes, because they have no cards in common.</p></statement><feedback><p>Disjointness is not enough: clubs and diamonds are outside both sets.</p></feedback></choice>
-<choice correct="yes"><statement><p>No. They are disjoint, but not complements.</p></statement><feedback><p>Exactly: neither overlaps the other, but together they do not make up the whole universal set.</p></feedback></choice>
-</choices></exercise>
-<p>Only after these ideas are secure will we introduce two overlapping sets, intersection, union, subset notation, and formal listing with braces.</p>
-</section>
+    <title>Two sets that cannot overlap</title>
+    <p>Keep the universal set of 52 playing cards. Let <m>R</m> be the red cards and <m>B</m> the black cards. The two sets do not overlap, because a card cannot be both red and black.</p>
+    <figure xml:id="figure-card-suits-disjoint">
+      <caption>Spades and hearts are disjoint within a pack of cards.</caption>
+      <image source="sets/cards-disjoint.svg" width="95%">
+        <shortdescription>Separate ovals for spades and hearts sit inside U; clubs and diamonds lie outside both.</shortdescription>
+        <description><p>The universal set is a standard pack of cards. Separate ovals show spades and hearts. Clubs and diamonds lie inside the rectangle but outside both ovals. Spades and hearts are disjoint, but they are not complements of one another.</p></description>
+      </image>
+    </figure>
+    <p>Sets with no elements in common are called <term>disjoint</term>. The red cards and black cards are also complements of each other, because together they contain every card in <m>U</m>.</p>
+    <p>Be careful: disjoint does not mean complementary. Two sets can have nothing in common without together containing every element of <m>U</m>.</p>
+    <exercise xml:id="exercise-disjoint">
+      <statement><p>Within a standard pack of 52 cards, consider the set of spades and the set of hearts. Are these sets complements of each other?</p></statement>
+      <choices>
+        <choice><statement><p>Yes, because they have no cards in common.</p></statement><feedback><p>Disjointness is not enough: clubs and diamonds are outside both sets.</p></feedback></choice>
+        <choice correct="yes"><statement><p>No. They are disjoint, but not complements.</p></statement><feedback><p>Exactly: neither overlaps the other, but together they do not make up the whole universal set.</p></feedback></choice>
+      </choices>
+    </exercise>
+  </section>
+
+<section xml:id="sets-three-set-extension">
+    <title>Three sets: a challenge to explain together</title>
+    <p>Begin with two sets until the three regions and the double-counting idea are secure. Then try three sets with a partner. Three circles create eight regions, so agree what each region means before calculating.</p>
+    <p>A survey records set totals <m>\#A=20</m>, <m>\#B=18</m> and <m>\#C=15</m>. There are 5 in <m>A</m> and <m>B</m> only, 4 in <m>A</m> and <m>C</m> only, 3 in <m>B</m> and <m>C</m> only, and 2 in all three.</p>
+    <figure xml:id="figure-three-set-regions">
+      <caption>Three overlapping sets create seven regions in the union.</caption>
+      <image source="sets/three-set-regions.svg" width="95%">
+        <shortdescription>Three overlapping circles show seven inside regions: 9, 8, 6, 5, 4, 3 and 2.</shortdescription>
+        <description><p>Three overlapping circles labelled <m>A</m>, <m>B</m> and <m>C</m> create seven regions in the union: 9 in <m>A</m> only; 8 in <m>B</m> only; 6 in <m>C</m> only; 5 in <m>A</m> and <m>B</m> only; 4 in <m>A</m> and <m>C</m> only; 3 in <m>B</m> and <m>C</m> only; and 2 in all three. Together these regions contain 37 elements.</p></description>
+      </image>
+    </figure>
+    <p>For example, <m>A</m> only is <m>20-5-4-2=9</m>. Add the seven regions to find <m>\#(A\cup B\cup C)=37</m>.</p>
+    <activity xml:id="activity-three-set-pair-work">
+      <title>Pair work: explain, then swap</title>
+      <task><p><strong>Partner A</strong> draws and labels the three circles. <strong>Partner B</strong> asks where the 2 elements in all three sets must go and why. Together, fill the three “only” regions by subtracting the known overlaps from each set total.</p><answer><p>The 2 elements in the centre belong to every set. Then <m>A</m> only is 9, <m>B</m> only is <m>18-5-3-2=8</m>, and <m>C</m> only is <m>15-4-3-2=6</m>. Swap roles and explain why the centre must be counted only once when finding the union.</p></answer></task>
+      <task><p>How many elements are in exactly two sets? How many are in at least two sets?</p><answer><p>Exactly two: <m>5+4+3=12</m>. At least two: include the centre, giving <m>12+2=14</m>.</p></answer></task>
+      <task><p>A student adds <m>20+18+15</m> to find the number in the union. What has been counted more than once?</p><answer><p>Elements in more than one set are counted multiple times. The labelled regions help us count each element exactly once.</p></answer></task>
+    </activity>
+    <p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html#pair-work">Open the three-set pair challenge and compare explanations.</url></p>
+  </section>
+
+<section xml:id="sets-lab">
+    <title>Sets apps: watch, explore, practise and play</title>
+    <p>The first examples are demonstrations: students can watch and discuss before choosing, dragging or creating anything. The four focused apps then provide guided exploration, many online exercises, quizzes, a region game, tests and challenge levels. The Venn app begins with two sets and adds three-set pair work at Challenge level.</p>
+    <ul>
+      <li><p><url href="https://ronandownes.github.io/maths/apps/sets/list-and-notation.html">App 1: Set list and notation</url> — elements, braces, equality, membership and cardinality.</p></li>
+      <li><p><url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">App 2: Build a set from a rule</url> — rule notation, “such that”, list and diagram.</p></li>
+      <li><p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html">App 3: Venn operations and problem solving</url> — two-set regions, cardinality, practice, quiz, game, test and pair work.</p></li>
+      <li><p><url href="https://ronandownes.github.io/maths/apps/sets/universal-complement.html">App 4: Universal set and complement</url> — the boundary <m>U</m>, <m>A^c</m> and complementary cardinalities.</p></li>
+    </ul>
+    <p><url href="https://ronandownes.github.io/maths/apps/sets/index.html">Open the Sets app menu.</url></p>
+    <p><strong>Check your learning.</strong> Can you describe a set using a rule, a list and an oval? Can you explain intersection, union, difference and cardinality? Can you place the shared region first, find the “only” regions and justify the union? After that, can you explain why a complement depends on <m>U</m>?</p>
+  </section>
 </chapter>
