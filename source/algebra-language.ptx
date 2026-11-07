@@ -3,6 +3,51 @@
 <title>The Language of Algebra</title>
 <section xml:id="algebra-words">
 <title>Variables, coefficients, constants and terms</title>
+<p>Begin with what the letters describe. Look at the diagrams, make a prediction, and then use the Rectangle Explorer to change the measurements. The definitions will make more sense after the quantities have a meaning.</p>
+<figure xml:id="square-rectangle-measures">
+<caption>A square needs one side measurement; a rectangle needs a width and a height. Each pair of opposite sides is equal.</caption>
+<image width="100%">
+<description>A square has all four sides labelled s. Beside it, a rectangle has its two horizontal sides labelled w and its two vertical sides labelled h.</description>
+<latex-image-code><![CDATA[
+\begin{tikzpicture}[x=0.7cm,y=0.7cm,font=\sffamily\large]
+\fill[blue!8] (0,0) rectangle (4,4);
+\draw[very thick,blue!65!black] (0,0) rectangle (4,4);
+\node[above] at (2,4) {$s$};
+\node[right] at (4,2) {$s$};
+\node[below] at (2,0) {$s$};
+\node[left] at (0,2) {$s$};
+\node[font=\bfseries] at (2,-1.1) {Square};
+\fill[green!9] (8,0) rectangle (14,4);
+\draw[very thick,green!45!black] (8,0) rectangle (14,4);
+\node[above] at (11,4) {$w$};
+\node[below] at (11,0) {$w$};
+\node[left] at (8,2) {$h$};
+\node[right] at (14,2) {$h$};
+\node[font=\bfseries] at (11,-1.1) {Rectangle};
+\end{tikzpicture}
+]]></latex-image-code>
+</image>
+</figure>
+<p>Before using a formula, predict the perimeter of a square with side length <m>5</m> centimetres. Then open the app, check your prediction, and move to a rectangle. Each grid square in the app represents <m>1\text{ cm}^2</m>; the drawing keeps its correct proportions as the side lengths change.</p>
+<figure xml:id="rectangle-explorer-figure">
+<caption>Change a square or rectangle and observe its perimeter and area in centimetres and square centimetres.</caption>
+<interactive xml:id="rectangle-explorer" iframe="https://ronandownes.github.io/maths/geometry/rectangle-variables/app.html" width="100%" aspect="4:5"/>
+</figure>
+<p><url href="https://ronandownes.github.io/maths/geometry/rectangle-variables/app.html">Open the Rectangle Explorer in a separate tab.</url> It is in Geometry on the Maths site and links back to this section.</p>
+
+<subsection xml:id="variables-geometric-models">
+<title>Variables represent measurements</title>
+<p>Let <m>s</m> centimetres be the side length of a square. A square has four equal sides, so its perimeter is <m>s+s+s+s=4s</m>. The expression <m>4s</m> describes the perimeter for every possible side length. If <m>s=5</m>, the perimeter is <m>4(5)=20</m> centimetres.</p>
+<p>The area of the same square is <m>s^2</m>. If <m>s=5</m>, its area is <m>25</m> square centimetres. The same measurement <m>s</m> appears in both expressions, but perimeter measures a boundary and area measures a surface.</p>
+<p>Now let <m>w</m> be the width and <m>h</m> the height of a rectangle. Its opposite sides are equal:</p>
+<me>P=w+h+w+h=2w+2h=2(w+h).</me>
+<p>If <m>w=8</m> centimetres and <m>h=5</m> centimetres, then <m>P=2(8+5)=26</m> centimetres. The half-perimeter is <m>w+h=13</m> centimetres. The area is <m>A=wh=8\cdot5=40</m> square centimetres.</p>
+<p>In the expression <m>2(w+h)</m>, one width and one height form a pair. The rectangle has two such pairs because opposite sides are equal. This symmetry is why the half-perimeter <m>w+h</m> is convenient.</p>
+<p>If <m>h</m> stays fixed and <m>w</m> increases, the area increases. If a positive side length decreases, the area diminishes. The app makes the changing quantities visible before you have to reason from the symbols alone.</p>
+</subsection>
+
+<subsection xml:id="algebra-vocabulary-definitions">
+<title>Name the parts of an expression</title>
 <p>A <term>variable</term> is a letter or symbol representing a number which may vary or is unknown. In <m>3x+5</m>, <m>x</m> is the variable.</p>
 <p>A <term>coefficient</term> is the numerical factor multiplying a variable or its power. In <m>7x^2</m>, the coefficient is <m>7</m>; in <m>-x</m>, it is <m>-1</m>.</p>
 <p>A <term>constant</term> is a fixed value. In <m>3x+5</m>, the constant term is <m>5</m>.</p>
@@ -10,23 +55,93 @@
 <example xml:id="algebra-vocabulary-example"><title>Read an expression</title>
 <p>In <m>4x^2-3x+7</m>, the terms are <m>4x^2</m>, <m>-3x</m>, and <m>7</m>. The coefficients are <m>4</m> and <m>-3</m>, and the constant term is <m>7</m>.</p>
 </example>
+</subsection>
+
+<subsection xml:id="algebra-context-and-assessment">
+<title>Use the model in a practical situation</title>
+<example xml:id="wall-paint-area-example">
+<title>Estimate paint for a room</title>
+<p>Let <m>L</m> and <m>W</m> be the length and width of a rectangular room, and let <m>H</m> be its height, all in metres. The total area of the four walls, before allowing for doors and windows, is</p>
+<me>A_{\text{walls}}=H(L+W+L+W)=2H(L+W).</me>
+<p>For one long wall, suppose the total length is <m>x+5</m> metres and the height is <m>y+2</m> metres. Its area is a product of two brackets:</p>
+<me>A_{\text{wall}}=(x+5)(y+2)=xy+2x+5y+10\text{ m}^2.</me>
+<p>Here <m>x</m> and <m>y</m> are measured lengths in metres. Each bracket gives one complete side of the wall. This shows why multiplying two brackets can be useful when estimating a real area. The areas of doors and windows are then subtracted separately.</p>
+</example>
+<exercise xml:id="trapezoidal-prism-depth">
+<statement><p>The depth of a trapezoidal prism must be at least <m>5</m> centimetres. Let <m>x</m> centimetres be the extra depth beyond that minimum. Write an expression for the depth and state what values <m>x</m> can take.</p></statement>
+<answer><p><m>d=x+5</m> centimetres, where <m>x\geq0</m>. Here <m>x</m> is the extra amount, not the whole depth.</p></answer>
+</exercise>
+</subsection>
+
+<subsection xml:id="algebra-vocabulary-reflection">
+<title>Predict, explore, and check what you can do</title>
+<p><term>Assessment for learning:</term> write your first perimeter prediction before exploring. Your reasoning helps a teacher see what you already understand and what needs attention.</p>
+<p><term>Assessment as learning:</term> change one side at a time, record how <m>P</m> and <m>A</m> change, and decide whether you can explain the pattern independently or with a hint.</p>
+<p><term>Assessment of learning:</term> close the app and solve this independently: a rectangle is <m>9</m> centimetres wide and <m>4</m> centimetres high. Find its perimeter, half-perimeter, and area.</p>
+<exercise xml:id="algebra-variables-exit-check">
+<statement><p>Complete the exit check above before revealing the solution.</p></statement>
+<answer><p><m>P=2(9+4)=26</m> centimetres; half-perimeter <m>9+4=13</m> centimetres; <m>A=9\cdot4=36</m> square centimetres.</p></answer>
+</exercise>
+</subsection>
 </section>
+
 <section xml:id="algebra-operation-words">
 <title>Sum, difference, product, fraction and quotient</title>
-<p>A <term>sum</term> is the result of adding two or more terms or quantities. <m>3x+5</m> is the sum of two terms.</p>
-<p>A <term>difference</term> is the result of subtracting one quantity from another. In <m>7x-4</m>, <m>7x</m> is the minuend and <m>4</m> is the subtrahend.</p>
-<p>A <term>product</term> is the result of multiplying two or more <term>factors</term>. <m>3x</m> is the product of the factors <m>3</m> and <m>x</m>.</p>
-<p>A <term>quotient</term> is the result of dividing a <term>dividend</term> by a non-zero <term>divisor</term>. In <m>12\div 3=4</m>, the dividend is <m>12</m>, divisor is <m>3</m>, and quotient is <m>4</m>. The dividend and divisor are not called "two factors".</p>
+<p>Study the diagrams before reading the formal names. First join or compare the lengths; then look at the rows and columns of unit squares. Say what each picture tells you.</p>
+<figure xml:id="operation-word-models">
+<caption>Joined lengths, a comparison of lengths, and an array of square units give visual models for the operations.</caption>
+<image width="100%">
+<description>Three diagrams: an 8 centimetre bar joined to a 5 centimetre bar; 8 centimetres and 5 centimetres compared from a common starting point, leaving a 3 centimetre difference; and a rectangle with 8 columns and 5 rows of one square centimetre units.</description>
+<latex-image-code><![CDATA[
+\begin{tikzpicture}[x=0.34cm,y=0.34cm,font=\sffamily\normalsize]
+\node[anchor=west,font=\bfseries\large] at (0,14) {Join};
+\fill[blue!16] (0,11) rectangle (8,12.2);
+\draw[thick] (0,11) rectangle (8,12.2);
+\fill[green!16] (8,11) rectangle (13,12.2);
+\draw[thick] (8,11) rectangle (13,12.2);
+\node at (4,11.6) {8 cm};
+\node at (10.5,11.6) {5 cm};
+
+\node[anchor=west,font=\bfseries\large] at (15,14) {Compare};
+\fill[blue!16] (15,10.5) rectangle (23,11.7);
+\draw[thick] (15,10.5) rectangle (23,11.7);
+\fill[green!16] (15,7.6) rectangle (20,8.8);
+\draw[thick] (15,7.6) rectangle (20,8.8);
+\draw[dashed,thick] (20,8.2) -- (20,11.1);
+\node at (19,11.1) {8 cm};
+\node at (17.5,8.2) {5 cm};
+\node[anchor=west] at (20.5,8.2) {difference};
+
+\node[anchor=west,font=\bfseries\large] at (29,14) {Cover or share};
+\fill[blue!8] (29,8) rectangle (37,13);
+\draw[thick] (29,8) rectangle (37,13);
+\foreach \x in {30,31,32,33,34,35,36} {\draw (\x,8) -- (\x,13);}
+\foreach \y in {9,10,11,12} {\draw (29,\y) -- (37,\y);}
+\node[above] at (33,13) {8 cm};
+\node[rotate=90] at (28.1,10.5) {5 cm};
+\node[anchor=west] at (29,6.8) {40 squares, 5 equal rows};
+\end{tikzpicture}
+]]></latex-image-code>
+</image>
+</figure>
+<p>For learning, try these without the algebraic names: what total length do you get when the bars are joined; how much longer is the first bar; how many small squares cover the rectangle; and how many columns are in each of five equal rows? Compare your reasoning with the definitions below.</p>
+<p>A <term>sum</term> is the result of adding two or more terms or quantities. Joining lengths of <m>8</m> centimetres and <m>5</m> centimetres gives a total length of <m>13</m> centimetres. The expression <m>3x+5</m> is the sum of two terms.</p>
+<p>A <term>difference</term> is the result of subtracting one quantity from another. The difference between <m>8</m> centimetres and <m>5</m> centimetres is <m>3</m> centimetres. In <m>7x-4</m>, <m>7x</m> is the minuend and <m>4</m> is the subtrahend.</p>
+<p>A <term>product</term> is the result of multiplying two or more <term>factors</term>. The rectangle has <m>8</m> columns and <m>5</m> rows of unit squares, so its area is <m>8\cdot5=40</m> square centimetres. Also, <m>3x</m> is the product of the factors <m>3</m> and <m>x</m>.</p>
+<p>A <term>quotient</term> is the result of dividing a <term>dividend</term> by a non-zero <term>divisor</term>. If <m>40</m> square centimetres are shared among <m>5</m> one-centimetre rows, each row has width <m>8</m> centimetres: <m>40\text{ cm}^2\div5\text{ cm}=8\text{ cm}</m>. The dividend and divisor are not called “two factors”.</p>
 <p>A <term>fraction</term> is an expression with a numerator above a non-zero denominator. In <m>\frac{x+2}{5}</m>, the numerator is <m>x+2</m> and the denominator is <m>5</m>. A fraction can represent division.</p>
+<p>When positive measurements are multiplied, increasing one factor while the other remains fixed increases the product. Multiplying a positive quantity by a factor between <m>0</m> and <m>1</m> diminishes it; multiplying by a factor greater than <m>1</m> increases or, in older language, <em>augments</em> it. “Increase” is the clearest word to use here.</p>
 <example xml:id="algebra-terms-factors-example"><title>Terms are not factors</title>
 <p><m>3x+5</m> is a sum of two terms. <m>3x</m> is one term but a product of two factors. <m>3(x+2)</m> is a product of two factors; expanding gives the sum <m>3x+6</m>.</p>
 </example>
 <p>Say it aloud: <em>Term plus term gives a sum. Factor times factor gives a product. Dividend divided by divisor gives a quotient.</em></p>
 </section>
+
 <section xml:id="algebra-language-practice">
 <title>Practise the language</title>
 <exercise xml:id="algebra-language-exercise-one"><statement><p>Name the three terms, the coefficients and the constant term in <m>6a^2-5a+9</m>.</p></statement><answer><p>Terms: <m>6a^2</m>, <m>-5a</m>, <m>9</m>. Coefficients: <m>6</m> and <m>-5</m>. Constant term: <m>9</m>.</p></answer></exercise>
 <exercise xml:id="algebra-language-exercise-two"><statement><p>Describe <m>4(2x-3)</m> as a product, then expand it and identify the terms.</p></statement><answer><p>Factors: <m>4</m> and <m>(2x-3)</m>. Expanded expression: <m>8x-12</m>; terms: <m>8x</m> and <m>-12</m>.</p></answer></exercise>
 <exercise xml:id="algebra-language-exercise-three"><statement><p>In <m>\frac{3x+6}{3}</m>, identify numerator, denominator, dividend and divisor.</p></statement><answer><p>Numerator and dividend: <m>3x+6</m>. Denominator and divisor: <m>3</m>.</p></answer></exercise>
+<exercise xml:id="algebra-language-exercise-four"><statement><p>A rectangle has width <m>9</m> centimetres and height <m>4</m> centimetres. Write expressions for its perimeter and area, then find both values.</p></statement><answer><p><m>P=2(9+4)=26</m> centimetres and <m>A=9\cdot4=36</m> square centimetres.</p></answer></exercise>
 </section>
 </chapter>
