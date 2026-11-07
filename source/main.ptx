@@ -60,6 +60,7 @@
       <chapter xml:id="chapter-trigonometry"><title>Ratios and Triangles</title>
         <section xml:id="trig-intro"><title>Right-angled triangles</title>
           <p>Trigonometric ratios connect side lengths and angles in right-angled triangles.</p>
+          <p><url href="https://ronandownes.github.io/maths/trigonometry/">Open the Trigonometry apps section to explore Sine, Cosine and Tangent separately, or practise all three together.</url></p>
         </section>
         <section xml:id="trig-cosine-rule"><title>The Cosine Rule</title>
           <p>The cosine rule extends Pythagoras' theorem to triangles that need not be right-angled.</p>
