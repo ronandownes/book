@@ -166,6 +166,25 @@
 </paragraphs>
 </section>
 
+<section xml:id="expanding-zero-placeholders">
+<title>Hidden Maths: do we need the zeros?</title>
+<p>In place-value multiplication, a zero can hold an otherwise empty position. We sometimes omit zero terms when writing a simplified polynomial, just as we usually omit the positive sign at the beginning of a positive expression. But the risks are different when arranging a multiplication.</p>
+<exercise xml:id="expanding-zero-investigation">
+<statement>
+<p>Multiply <m>(2x+3)(4x^2+5x+6)</m> using partial-product rows. Write the shifted rows with zero placeholders. Then try arranging the same rows without writing the zeros.</p>
+<p>Which presentation makes the powers of <m>x</m> easier to align? What mistake could you make if you simply move a partial-product row to the left without keeping track of its place value?</p>
+<p>When you are very confident, can you leave the zero symbols out <em>without</em> losing the correct columns? Explain how you will check your work.</p>
+</statement>
+<answer>
+<p>One arrangement uses the coefficient rows <m>(12,15,18)</m> under the <m>x^2</m>, <m>x</m> and constant columns, and <m>(8,10,12,0)</m> under <m>x^3</m>, <m>x^2</m>, <m>x</m> and constant. Column addition gives <m>8x^3+22x^2+27x+18</m>. The zero is a placeholder, not an additional non-zero product. You can omit its glyph only if the blank position and column alignment are unambiguous.</p>
+</answer>
+</exercise>
+<paragraphs xml:id="expanding-zero-reflection"><title>Reflect: do so at your own risk</title>
+<p>In a final simplified expression, we normally omit zero terms, but while learning to multiply, write zero placeholders in shifted rows. Do not confuse a missing coefficient with a shift in place value. Only consider leaving the zeros unwritten once you can reliably maintain alignment and check your result.</p>
+</paragraphs>
+<p>Historical connection: zero as a placeholder is ancient, but its use as a number developed over time. Different civilisations devised placeholder symbols independently. Indian mathematician Brahmagupta described arithmetic involving zero in <m>628</m> CE; the Hindu-Arabic place-value system subsequently spread through the Islamic world into Europe. Zero was <em>not</em> invented just two or three hundred years ago.</p>
+</section>
+
 <section xml:id="expanding-language">
 <title>Mathematical language: say it, use it, explain it</title>
 <p>Use these words when explaining your work. For the wider vocabulary of algebra, see <xref ref="algebra-vocabulary"/>.</p>
