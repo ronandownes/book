@@ -10,6 +10,10 @@
       </preface>
     </frontmatter>
 
+    <part xml:id="part-unifying"><title>Unifying Strand</title>
+      <xi:include href="./unifying-strand.ptx" />
+    </part>
+
     <part xml:id="part-number">
       <title>Number</title>
       <xi:include href="./sets-chapter.ptx" />
