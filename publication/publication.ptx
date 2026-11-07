@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <publication>
-  <html>
+  <source>
+    <directories external="../assets"/>
+  </source>
+  <html favicon="svg">
     <baseurl href="https://ronandownes.github.io/book/"/>
+    <brandlogo source="favicon/favicon.svg" url="https://ronandownes.github.io/book/"/>
   </html>
 </publication>
