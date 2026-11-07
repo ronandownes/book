@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-expanding">
+<title>Expanding Brackets</title>
+<introduction>
+  <p>Expanding rewrites a product as a sum of terms. Factorising reverses this process. First learn why every product appears; then choose a clear, efficient method.</p>
+  <p>Before you start, check that you can multiply and add signed integers, interpret coefficients and powers of <m>x</m>, and collect like terms. Revisit <xref ref="algebra-vocabulary"/> if you need to revise the language.</p>
+</introduction>
+<section xml:id="expanding-distribution">
+<title>Every term matters: the distributive law</title>
+<p>The governing idea is <em>every term in one factor multiplies every term in the other</em>.</p>
+<me>a(b+c)=ab+ac.</me>
+<p>Applying distribution twice gives</p>
+<me>(a+b)(c+d)=ac+ad+bc+bd.</me>
+<example xml:id="expanding-example-distribution">
+<title>Multiply every term</title>
+<me>(2x+3)(4x+5)=8x^2+10x+12x+15=8x^2+22x+15.</me>
+<p>There are four partial products but only three different powers of <m>x</m>, because the middle two are like terms.</p>
+</example>
+<exercise xml:id="expanding-prerequisites">
+<statement><p>Without expanding the brackets, predict the leading coefficient, constant term, and number of partial products in <m>(3x+4)(2x+7)</m>. Explain how you know.</p></statement>
+<answer><p>The leading coefficient is <m>3\cdot2=6</m>; the constant term is <m>4\cdot7=28</m>; there are <m>2\cdot2=4</m> partial products.</p></answer>
+</exercise>
+</section>
+
+<section xml:id="expanding-foil-lab">
+<title>FOIL lab: build understanding</title>
+<p>For the product of two binomials, the mnemonic FOIL stands for <em>First, Outer, Inner, Last</em>. It describes four applications of the distributive law. It is not a separate mathematical law.</p>
+<example xml:id="expanding-foil-example">
+<title>Trace the four products</title>
+<p>Use <m>(2x+3)(4x+5)</m>. Predict each product before revealing or calculating it.</p>
+<me>\begin{aligned}
+\text{First: }&amp;(2x)(4x)=8x^2\\
+\text{Outer: }&amp;(2x)(5)=10x\\
+\text{Inner: }&amp;(3)(4x)=12x\\
+\text{Last: }&amp;(3)(5)=15
+\end{aligned}</me>
+<p>Collect the two like terms: <m>10x+12x=22x</m>.</p>
+</example>
+<exercise xml:id="expanding-foil-predict">
+<statement><p>Before expanding <m>(3x+2)(5x+4)</m>, predict the First and Last products mentally. Then find Outer and Inner, and collect like terms.</p></statement>
+<answer><p>First <m>15x^2</m>, Outer <m>12x</m>, Inner <m>10x</m>, Last <m>8</m>. The result is <m>15x^2+22x+8</m>.</p></answer>
+</exercise>
+<exercise xml:id="expanding-foil-limits">
+<statement><p>Try to use the four FOIL labels for <m>(2x+3)(x^2+4x+5)</m>. What difficulty arises? How many partial products are required?</p></statement>
+<answer><p>There are six partial products, not four. The four-letter mnemonic no longer covers them. General distribution or place-value organisation still works.</p></answer>
+</exercise>
+<paragraphs xml:id="expanding-foil-reflect"><title>Reflect</title>
+<p>FOIL can help you see why four products are needed for two binomials. Once this is understood, repeatedly saying First, Outer, Inner, Last is often a slow way to calculate. It is especially unsuitable when a quadratic factor introduces six partial products. The lasting idea is the distributive law, not the mnemonic.</p>
+</paragraphs>
+</section>
+
+<section xml:id="expanding-cross-products">
+<title>The cross-product method: collect like terms in a margin</title>
+<p>For two binomials, a compact alternative is to multiply the leading terms and constant terms directly, then combine the two cross-products for the middle coefficient.</p>
+<me>\begin{aligned}
+(ax+b)(cx+d)&amp;=acx^2+(ad+bc)x+bd,\\
+\text{middle-coefficient margin: }&amp;ad+bc.
+\end{aligned}</me>
+<example xml:id="expanding-cross-example">
+<title>Three coefficients, one margin calculation</title>
+<p>Expand <m>(3x+4)(5x+2)</m>. Predict the outside coefficients first.</p>
+<me>\begin{aligned}
+\text{Leading: }&amp;3\cdot5=15,\\
+\text{Margin (cross-products): }&amp;3\cdot2+4\cdot5=6+20=26,\\
+\text{Constant: }&amp;4\cdot2=8.
+\end{aligned}</me>
+<me>(3x+4)(5x+2)=15x^2+26x+8.</me>
+<p>The margin collects the contributions to the <m>x</m> column immediately, avoiding an extra line of working.</p>
+</example>
+<exercise xml:id="expanding-cross-try">
+<statement><p>Use the cross-product margin to expand <m>(2x+5)(3x+4)</m>. Write the leading coefficient, margin calculation and constant term.</p></statement>
+<answer><p>Leading <m>6</m>; margin <m>2\cdot4+5\cdot3=8+15=23</m>; constant <m>20</m>. Therefore <m>6x^2+23x+20</m>.</p></answer>
+</exercise>
+<paragraphs xml:id="expanding-cross-reflect"><title>Reflect</title>
+<p>Can you predict the first and last coefficients without writing anything down? Which two products must be added in the middle margin? Explain why this shortcut works only because both factors have two terms.</p>
+</paragraphs>
+</section>
+
+<section xml:id="expanding-place-value">
+<title>Place-value multiplication: when a quadratic is involved</title>
+<p>For a linear factor multiplied by a quadratic, each term of the linear factor must multiply all three terms of the quadratic. Align partial products under their powers of <m>x</m> and then add coefficients in the same column.</p>
+<example xml:id="expanding-place-value-example">
+<title>Six partial products</title>
+<me>\begin{aligned}
+(2x+3)(4x^2+5x+6)
+&amp;=8x^3+10x^2+12x+12x^2+15x+18\\
+&amp;=8x^3+22x^2+27x+18.
+\end{aligned}</me>
+<p>Try calculating the bottom constant's full row before moving to the bottom <m>x</m> term. The place-value columns organise terms with the same power of <m>x</m>.</p>
+</example>
+<p><url href="https://ronandownes.github.io/maths/apps/polynomial-place-value/" visual="Expanding Brackets interactive app"/> lets you work through partial products one by one, group like terms, and reflect on your result.</p>
+<exercise xml:id="expanding-leading-constant">
+<statement><p>For <m>(3x+5)(2x^2+4x+7)</m>, predict the leading coefficient and constant term first. Then calculate the middle coefficients using aligned partial products.</p></statement>
+<answer><p>The leading coefficient is <m>6</m> and the constant term is <m>35</m>. The expansion is <m>6x^3+22x^2+41x+35</m>.</p></answer>
+</exercise>
+</section>
+
+<section xml:id="expanding-homework">
+<title>Homework: consolidate, assess and extend</title>
+<p>Complete eight fully worked questions in your Maths copy using the interactive app.</p>
+<ol>
+<li><p>Select <em>Linear × Linear</em>; complete the four numbered Homework questions.</p></li>
+<li><p>Select <em>Linear × Quadratic</em>; complete the four numbered Homework questions.</p></li>
+</ol>
+<p>Start with Step by step. Use the reflections to check which coefficients you could have predicted. Try a quiz, then attempt a test when ready: quizzes provide feedback as you go, whereas tests report results after submission.</p>
+<p>You may try extra questions or investigations if you want further challenge. Make a note of any misconception you identify and how you corrected it.</p>
+<exercise xml:id="expanding-investigate-common">
+<statement><p>Investigate whether expanding <m>(10x+15)(2x^2+3x+4)</m> becomes easier if you first write <m>10x+15=5(2x+3)</m>. Where must the factor <m>5</m> go at the end?</p></statement>
+<answer><p>Expand <m>(2x+3)(2x^2+3x+4)=4x^3+12x^2+17x+12</m>, then multiply every coefficient by <m>5</m>, giving <m>20x^3+60x^2+85x+60</m>.</p></answer>
+</exercise>
+<exercise xml:id="expanding-investigate-negative">
+<statement><p>Show that <m>7-3x=-(3x-7)</m>. Explain how this allows a positive leading coefficient inside the bracket and what you must do to the expanded answer at the end.</p></statement>
+<answer><p>Multiplying <m>3x-7</m> by <m>-1</m> gives <m>-3x+7</m>. If this expression occurs as a factor in a product, expand using <m>3x-7</m> and then negate every coefficient of the answer.</p></answer>
+</exercise>
+</section>
+</chapter>
