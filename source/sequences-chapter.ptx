@@ -96,6 +96,29 @@
 <p>Now ask a different question: not what is the <m>n</m>th term, but what is the <em>sum</em> of the first <m>n</m> terms? We write that sum as <m>S_n</m>. Start with <m>7+9+11+13</m>. Pair the outside terms and then the inside terms:</p>
 <me>(7+13)+(9+11)=20+20=40.</me>
 <p>Reverse the terms and write the sum a second time. Each vertically aligned pair adds to the same amount:</p>
+<figure xml:id="sequences-sum-visual-proof">
+<caption>Visual proof for four terms: write the same sum forwards and backwards. Each coloured column adds to <m>20</m>, and four columns give twice the original sum.</caption>
+<image width="100%">
+<description>Four vertical columns: top row 7, 9, 11, 13; bottom row 13, 11, 9, 7. A line separates the two rows from four totals of 20. The first and third columns have a blue background, the second and fourth a pale green background.</description>
+<latex-image-code><![CDATA[
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\Large]
+\foreach \x/\a/\b in {0/7/13,2.4/9/11,4.8/11/9,7.2/13/7}{
+\pgfmathtruncatemacro{\col}{mod(\x*10,48)}
+\fill[blue!10,rounded corners=4pt] (\x-0.70,0.4) rectangle (\x+0.70,3.4);
+\node at (\x,2.9) {$\a$};
+\node at (\x,1.95) {$\b$};
+\draw[blue!65!black,very thick] (\x-0.55,1.56)--(\x+0.55,1.56);
+\node[blue!65!black,font=\bfseries] at (\x,0.95) {$20$};
+}
+\node[anchor=east,font=\large] at (-1,2.9) {$S_4$};
+\node[anchor=east,font=\large] at (-1,1.95) {$S_4$};
+\node[anchor=east,font=\large] at (-1,0.95) {$2S_4$};
+\node[font=\normalsize] at (3.6,-0.15) {$2S_4=4\times20=80\qquad S_4=40$};
+\end{tikzpicture}
+]]></latex-image-code>
+</image>
+</figure>
+
 <me>\begin{aligned}
 S_n &amp;=a+(a+d)+\cdots+[a+(n-1)d],\\
 S_n &amp;=[a+(n-1)d]+\cdots+(a+d)+a.
@@ -107,8 +130,61 @@ S_n &amp;=[a+(n-1)d]+\cdots+(a+d)+a.
 <p>Since the last term is <m>T_n=a+(n-1)d</m>, the same result can be written more intuitively as</p>
 <me>S_n=\frac n2(T_1+T_n).</me>
 <p><m>a</m> denotes the <em>first</em> term <m>T_1</m> here, not the backwards term <m>T_0</m>. The distinction matters when changing between the general-term form <m>T_n=dn+c</m> and the sum formula.</p>
+<p><em>Exam skill:</em> this is printed in the <term>Formulae and Tables</term> booklet under <em>Sequences and Series</em> on <em>printed page 22</em>. Find the heading and trace each symbol with your finger before substituting. Your job is to decide which information the question supplies: <m>a</m>, <m>d</m>, <m>n</m>, <m>T_n</m> or <m>S_n</m>. The formula is provided; interpreting and rearranging it is the skill.</p>
+<example xml:id="sequences-sum-unknown-n">
+<title>Given the sum: solve for the number of terms</title>
+<p>Suppose <m>a=3</m>, <m>d=4</m>, and <m>S_n=210</m>. Find <m>n</m>.</p>
+<me>\begin{aligned}
+210 &amp;=\frac n2[2(3)+(n-1)4]\\
+&amp;=\frac n2(4n+2)=n(2n+1).
+\end{aligned}</me>
+<me>2n^2+n-210=0=(n-10)(2n+21).</me>
+<p>Only <m>n=10</m> is a positive whole number. The other algebraic root is not a valid number of terms.</p>
+</example>
+<example xml:id="sequences-sum-unknown-a">
+<title>Given the sum: solve for the first term</title>
+<p>If <m>S_{10}=190</m> and the common difference is <m>d=2</m>, find the first term <m>a=T_1</m>.</p>
+<me>\begin{aligned}
+190&amp;=\frac{10}{2}[2a+9(2)]\\
+38&amp;=2a+18\\
+a&amp;=10.
+\end{aligned}</me>
+</example>
+<example xml:id="sequences-sum-unknown-d">
+<title>Given the sum: solve for the signed difference</title>
+<p>If <m>S_8=148</m> and <m>a=8</m>, find the common difference <m>d</m>.</p>
+<me>\begin{aligned}
+148&amp;=\frac82[2(8)+7d]\\
+37&amp;=16+7d\\
+d&amp;=3.
+\end{aligned}</me>
+</example>
+<paragraphs xml:id="sequences-series-question-banks">
+<title>Question-bank progression</title>
+<p><em>Term-rule bank:</em> draw under-arcs, determine the difference and boxed term zero, form <m>T_n</m>, find a distant term or its number, and reason about missing terms. <em>Arithmetic-series bank:</em> visual pairing, calculate a sum, and solve for <m>n</m>, <m>a</m> or <m>d</m>. <em>Exam bank:</em> multi-part problems that combine these skills and ask which operation is appropriate. A quiz may focus on just one bank; not every question needs to be a sum.</p>
+<p>In the companion app, choose a bank first, and practise with a limit of two attempts per question. Compare the worked solutions with page 22 of the Formulae and Tables booklet.</p>
+</paragraphs>
+
 <exercise xml:id="sequences-sum-exercise"><statement><p>For <m>7,9,11,\ldots</m>, find the sum of the first 50 terms. Show your first term, last term and pairing.</p></statement><answer><p><m>T_{50}=105</m>. Thus <m>S_{50}=\frac{50}{2}(7+105)=25(112)=2800</m>.</p></answer></exercise>
 <exercise xml:id="sequences-sum-zero-exercise"><statement><p>A sequence has first term <m>-254</m> and common difference <m>4</m>. Find a positive integer <m>n</m> for which the sum of the first <m>n</m> terms is zero.</p></statement><answer><p><m>S_n=\frac n2[-508+4(n-1)]=\frac n2(4n-512)</m>. Since <m>n&gt;0</m>, <m>4n-512=0</m>, so <m>n=128</m>.</p></answer></exercise>
+</section>
+
+<section xml:id="sequences-exam-practice">
+<title>Authentic Leaving Certificate exam practice</title>
+<p>The following questions are based on the <em>2026 Leaving Certificate Mathematics, Ordinary Level, Paper 1, Question 5</em> (30 marks in total). The numbers and assessed skills are retained; the wording is condensed for classroom practice. Check the original State Examinations Commission paper for complete wording and layout.</p>
+<exercise xml:id="sequences-2026-ol-p1-q5a">
+<statement><p>For the arithmetic sequence <m>12,17,22,\ldots</m>: (i) write its next three terms; (ii) find <m>T_n</m>; (iii) calculate <m>T_{20}</m>.</p></statement>
+<answer><p>(i) <m>27,32,37</m>. (ii) <m>d=5</m>, <m>T_0=7</m>, so <m>T_n=5n+7</m>. (iii) <m>T_{20}=107</m>.</p></answer>
+</exercise>
+<exercise xml:id="sequences-2026-ol-p1-q5b">
+<statement><p>Three consecutive terms of another arithmetic sequence are <m>6,x,-4</m>. Find <m>x</m>.</p></statement>
+<answer><p><m>2x=6-4=2</m>, hence <m>x=1</m>.</p></answer>
+</exercise>
+<exercise xml:id="sequences-2026-ol-p1-q5c">
+<statement><p>The arithmetic sequence is <m>43,39,35,\ldots</m>. Find the smallest number of terms whose sum is negative.</p></statement>
+<answer><p><m>a=43</m>, <m>d=-4</m>. Then <m>S_n=\frac n2[86-4(n-1)]=n(45-2n)</m>. Since <m>n</m> is positive, <m>S_n&lt;0</m> exactly when <m>n&gt;22.5</m>. Therefore the smallest valid number of terms is <m>23</m>.</p></answer>
+</exercise>
+<p>The three parts are connected. A student who understands signed differences, a backwards step, the mean of two neighbours and the sum formula has the tools required. The challenge lies in identifying and combining familiar steps, not in memorising three unrelated methods.</p>
 </section>
 <section xml:id="sequences-quadratic">
 <title>Quadratic sequences: two layers of under-arcs</title>
