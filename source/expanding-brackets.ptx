@@ -7,7 +7,7 @@
 </introduction>
 <section xml:id="expanding-distribution">
 <title>Every term matters: the distributive law</title>
-<p>The governing idea is <em>every term in one factor multiplies every term in the other</em>.</p>
+<p>The governing idea is <em>every term in one factor multiplies every term in the other</em>. This is the <term>distributive law</term>. It is the foundation of all the expansion methods in this chapter.</p>
 <me>a(b+c)=ab+ac.</me>
 <p>Applying distribution twice gives</p>
 <me>(a+b)(c+d)=ac+ad+bc+bd.</me>
@@ -24,6 +24,7 @@
 
 <section xml:id="expanding-foil-lab">
 <title>FOIL lab: build understanding</title>
+<p>In this lab, <em>predict</em> before calculating. Use a different colour to trace each product if you find that helpful. Record your work clearly; large writing and plenty of space are more useful than squeezing the calculation into a small box.</p>
 <p>For the product of two binomials, the mnemonic FOIL stands for <em>First, Outer, Inner, Last</em>. It describes four applications of the distributive law. It is not a separate mathematical law.</p>
 <example xml:id="expanding-foil-example">
 <title>Trace the four products</title>
@@ -40,12 +41,19 @@
 <statement><p>Before expanding <m>(3x+2)(5x+4)</m>, predict the First and Last products mentally. Then find Outer and Inner, and collect like terms.</p></statement>
 <answer><p>First <m>15x^2</m>, Outer <m>12x</m>, Inner <m>10x</m>, Last <m>8</m>. The result is <m>15x^2+22x+8</m>.</p></answer>
 </exercise>
+<exercise xml:id="expanding-foil-pairs">
+<statement>
+<p>Two brackets have two terms each. Write down all the term pairs before calculating anything. Explain how you can tell that none has been missed or counted twice.</p>
+<p>Repeat for <m>(2x+3)(4x^2+5x+6)</m>. What changes?</p>
+</statement>
+<answer><p>The first pair gives four pairs because <m>2\cdot2=4</m>. In the second expression each of the two linear terms pairs with all three quadratic terms, giving <m>2\cdot3=6</m>. List them systematically, one factor at a time.</p></answer>
+</exercise>
 <exercise xml:id="expanding-foil-limits">
 <statement><p>Try to use the four FOIL labels for <m>(2x+3)(x^2+4x+5)</m>. What difficulty arises? How many partial products are required?</p></statement>
 <answer><p>There are six partial products, not four. The four-letter mnemonic no longer covers them. General distribution or place-value organisation still works.</p></answer>
 </exercise>
 <paragraphs xml:id="expanding-foil-reflect"><title>Reflect</title>
-<p>FOIL can help you see why four products are needed for two binomials. Once this is understood, repeatedly saying First, Outer, Inner, Last is often a slow way to calculate. It is especially unsuitable when a quadratic factor introduces six partial products. The lasting idea is the distributive law, not the mnemonic.</p>
+<p>FOIL can help you <em>see</em> the four products and avoid omissions. Once you understand distribution, naming all four products can become slower than grouping the middle contributions immediately. Moreover, FOIL does not name all six products when a quadratic factor is present. The important idea to keep is <em>every term by every term</em>, not a four-letter mnemonic.</p>
 </paragraphs>
 </section>
 
@@ -65,14 +73,18 @@
 \text{Constant: }&amp;4\cdot2=8.
 \end{aligned}</me>
 <me>(3x+4)(5x+2)=15x^2+26x+8.</me>
-<p>The margin collects the contributions to the <m>x</m> column immediately, avoiding an extra line of working.</p>
+<p>The margin collects the contributions to the <m>x</m> column immediately, avoiding an extra line of working. This is still exactly the distributive law; it simply organises the arithmetic more efficiently.</p>
 </example>
+<exercise xml:id="expanding-cross-predict">
+<statement><p>Before writing anything, can you predict the coefficient of <m>x^2</m> and the constant term in <m>(4x+3)(2x+5)</m>? Now put the two cross-products into a small margin and work out the missing coefficient.</p></statement>
+<answer><p>Leading coefficient <m>8</m>; constant <m>15</m>; margin <m>4\cdot5+3\cdot2=20+6=26</m>. The result is <m>8x^2+26x+15</m>.</p></answer>
+</exercise>
 <exercise xml:id="expanding-cross-try">
 <statement><p>Use the cross-product margin to expand <m>(2x+5)(3x+4)</m>. Write the leading coefficient, margin calculation and constant term.</p></statement>
 <answer><p>Leading <m>6</m>; margin <m>2\cdot4+5\cdot3=8+15=23</m>; constant <m>20</m>. Therefore <m>6x^2+23x+20</m>.</p></answer>
 </exercise>
 <paragraphs xml:id="expanding-cross-reflect"><title>Reflect</title>
-<p>Can you predict the first and last coefficients without writing anything down? Which two products must be added in the middle margin? Explain why this shortcut works only because both factors have two terms.</p>
+<p>Can you predict the leading and constant coefficients without pen and paper? Which two cross-products must be combined in the margin? Explain why a single middle-coefficient margin is specific to two linear factors. The distributive law itself remains valid for higher-degree factors.</p>
 </paragraphs>
 </section>
 
@@ -102,7 +114,8 @@
 <li><p>Select <em>Linear × Linear</em>; complete the four numbered Homework questions.</p></li>
 <li><p>Select <em>Linear × Quadratic</em>; complete the four numbered Homework questions.</p></li>
 </ol>
-<p>Start with Step by step. Use the reflections to check which coefficients you could have predicted. Try a quiz, then attempt a test when ready: quizzes provide feedback as you go, whereas tests report results after submission.</p>
+<p>You have the whole weekend for these eight questions. Use <em>Step by step</em> to understand and check your working: that support is there to be used. Read the reflection after each question. Then assess your own understanding with quizzes, which give feedback along the way, and tests, which report results at the end after submission.</p>
+<p>Practise to develop confidence, enjoyment, accuracy and fluency. A screenshot of a quiz or test result may be shared privately with your teacher if you wish; it is not a substitute for the eight fully worked questions.</p>
 <p>You may try extra questions or investigations if you want further challenge. Make a note of any misconception you identify and how you corrected it.</p>
 <exercise xml:id="expanding-investigate-common">
 <statement><p>Investigate whether expanding <m>(10x+15)(2x^2+3x+4)</m> becomes easier if you first write <m>10x+15=5(2x+3)</m>. Where must the factor <m>5</m> go at the end?</p></statement>
@@ -113,4 +126,31 @@
 <answer><p>Multiplying <m>3x-7</m> by <m>-1</m> gives <m>-3x+7</m>. If this expression occurs as a factor in a product, expand using <m>3x-7</m> and then negate every coefficient of the answer.</p></answer>
 </exercise>
 </section>
+<section xml:id="expanding-scaling">
+<title>Investigation lab: scaling a factor scales the product</title>
+<p>There is one idea behind several useful tricks of the trade: if one factor is multiplied by a number, then the product is multiplied by that same number.</p>
+<me>\bigl(kA(x)\bigr)B(x)=k\bigl(A(x)B(x)\bigr).</me>
+<exercise xml:id="expanding-scale-double">
+<statement>
+<p>Expand <m>(2x+3)(x+4)</m>. Now double <em>both</em> coefficients of the linear factor so that it becomes <m>4x+6</m>. Keep the second bracket unchanged and compare the results.</p>
+<p>Could you instead have taken out a common factor <m>2</m>, expanded the original brackets and simply doubled every coefficient in the answer? Predict what would happen with a factor of <m>3</m>, or any number <m>k</m>.</p>
+</statement>
+<answer><p>The first product is <m>2x^2+11x+12</m>. The doubled factor gives <m>(4x+6)(x+4)=4x^2+22x+24</m>, exactly twice the first result. In general <m>(kA)B=k(AB)</m>, because multiplication is associative and commutative.</p></answer>
+</exercise>
+<exercise xml:id="expanding-scale-negative">
+<statement>
+<p>Now change the signs of <em>both</em> terms in the factor <m>7x-1</m>, giving <m>-7x+1</m>. Multiply each factor by <m>x+2</m>. Before calculating the second product, predict every coefficient of its answer.</p>
+<p>Explain why changing all the signs is the special case <m>k=-1</m> of scaling a factor.</p>
+</statement>
+<answer><p><m>(7x-1)(x+2)=7x^2+13x-2</m>. Since <m>-7x+1=-(7x-1)</m>, the new product is <m>-7x^2-13x+2</m>, the negative of the original answer.</p></answer>
+</exercise>
+<exercise xml:id="expanding-scale-common">
+<statement><p>Investigate <m>(10x+15)(2x^2+3x+4)</m>. First write <m>10x+15=5(2x+3)</m>. Expand the smaller factors, then scale the answer by <m>5</m>. Is it less work?</p></statement>
+<answer><p><m>(2x+3)(2x^2+3x+4)=4x^3+12x^2+17x+12</m>. Therefore the required product is <m>20x^3+60x^2+85x+60</m>.</p></answer>
+</exercise>
+<paragraphs xml:id="expanding-scaling-reflect"><title>Reflect and connect to factorising</title>
+<p>Why must <em>every</em> coefficient be doubled or have its sign changed? Why is scaling just one term of a factor a different operation? Taking out a common numerical factor is the reverse step and will be especially useful when we begin factorising.</p>
+</paragraphs>
+</section>
+
 </chapter>
