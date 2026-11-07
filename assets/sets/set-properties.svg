@@ -27,7 +27,7 @@
   <text x="335" y="615" text-anchor="middle" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#173c57">2, 4</text>
   <text x="500" y="600" text-anchor="middle" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#173c57">6, 8</text>
 
-  <text x="760" y="560" font-family="Arial,sans-serif" font-size="39" font-weight="700" fill="#173c57">C ⊆ A</text>
+  <text x="760" y="560" font-family="Arial,sans-serif" font-size="39" font-weight="700" fill="#173c57">C ⊂ A</text>
   <text x="760" y="610" font-family="Arial,sans-serif" font-size="25" fill="#294b65">Every element in C</text>
   <text x="760" y="646" font-family="Arial,sans-serif" font-size="25" fill="#294b65">is also in A.</text>
   <text x="365" y="748" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#53677b">C = {2, 4} sits inside A = {2, 4, 6, 8}.</text>

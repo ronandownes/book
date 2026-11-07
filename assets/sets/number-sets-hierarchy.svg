@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 980" role="img" aria-labelledby="title desc">
+  <title id="title">The hierarchy of four number sets</title>
+  <desc id="desc">Four nested regions show natural numbers inside integers, integers inside rational numbers, and rational numbers inside real numbers. Examples appear in each region.</desc>
+  <rect width="1000" height="980" fill="#fff"/>
+  <text x="500" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#173c57">Four familiar number sets</text>
+
+  <rect x="35" y="80" width="930" height="825" rx="30" fill="#eef4f8" stroke="#225c86" stroke-width="5"/>
+  <text x="75" y="137" font-family="Arial,sans-serif" font-size="35" font-weight="700" fill="#174a76">REAL NUMBERS  ℝ</text>
+  <text x="75" y="180" font-family="Arial,sans-serif" font-size="27" fill="#294b65">All points on the number line</text>
+  <text x="770" y="180" text-anchor="end" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#6b5b8e">√2, π</text>
+
+  <rect x="105" y="220" width="790" height="635" rx="26" fill="#e5f1f6" stroke="#3b7b9b" stroke-width="5"/>
+  <text x="145" y="277" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#28627f">RATIONAL NUMBERS  ℚ</text>
+  <text x="145" y="320" font-family="Arial,sans-serif" font-size="26" fill="#294b65">Can be written as a fraction of integers</text>
+  <text x="845" y="320" text-anchor="end" font-family="Georgia,serif" font-size="31" font-weight="700" fill="#28627f">−¾, ½, 5/1</text>
+
+  <rect x="180" y="365" width="640" height="440" rx="24" fill="#f8edcf" stroke="#b27b22" stroke-width="5"/>
+  <text x="220" y="422" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#855911">INTEGERS  ℤ</text>
+  <text x="220" y="466" font-family="Arial,sans-serif" font-size="25" fill="#58451f">Negative whole numbers, zero and positive whole numbers</text>
+  <line x1="255" y1="530" x2="745" y2="530" stroke="#58451f" stroke-width="4"/>
+  <path d="M745 530 l-16 -10 v20 z" fill="#58451f"/>
+  <g stroke="#58451f" stroke-width="3" fill="#fff">
+    <circle cx="290" cy="530" r="17"/><circle cx="385" cy="530" r="17"/>
+    <circle cx="480" cy="530" r="17"/><circle cx="575" cy="530" r="20"/>
+    <circle cx="670" cy="530" r="17"/><circle cx="735" cy="530" r="17"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="27" font-weight="700" text-anchor="middle" fill="#4c3c1d">
+    <text x="290" y="582">−2</text><text x="385" y="582">−1</text><text x="575" y="582">1</text><text x="670" y="582">2</text>
+  </g>
+  <text x="480" y="582" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#4c3c1d">0</text>
+
+  <rect x="285" y="635" width="430" height="135" rx="22" fill="#e0f0e7" stroke="#39805a" stroke-width="5"/>
+  <text x="325" y="687" font-family="Arial,sans-serif" font-size="33" font-weight="700" fill="#286344">NATURAL NUMBERS  ℕ</text>
+  <text x="500" y="744" text-anchor="middle" font-family="Georgia,serif" font-size="35" font-weight="700" fill="#286344">1, 2, 3, …</text>
+
+  <text x="500" y="884" text-anchor="middle" font-family="Georgia,serif" font-size="38" font-weight="700" fill="#173c57">ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</text>
+  <text x="500" y="940" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#53677b">Each set is contained in the one after it.</text>
+</svg>

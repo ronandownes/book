@@ -49,13 +49,13 @@
       <caption>Lists and notation lead to a picture of distinct elements and subset containment.</caption>
       <image source="sets/set-properties.svg" width="95%">
         <shortdescription>Lists A and B contain the same four distinct elements despite different order and a repeated 2. Nested ovals show C containing 2 and 4 inside A, which also contains 6 and 8.</shortdescription>
-        <description><p>The two lists show <m>A=\{2,4,6,8\}</m> and <m>B=\{8,6,4,2,2\}</m>. Their order differs and <m>B</m> repeats 2, but their distinct elements are the same, so <m>A=B</m> and <m>\#A=\#B=4</m>. In the lower diagram, oval <m>C</m> contains 2 and 4 inside oval <m>A</m>; 6 and 8 are also in <m>A</m>, so <m>C\subseteq A</m>.</p></description>
+        <description><p>The two lists show <m>A=\{2,4,6,8\}</m> and <m>B=\{8,6,4,2,2\}</m>. Their order differs and <m>B</m> repeats 2, but their distinct elements are the same, so <m>A=B</m> and <m>\#A=\#B=4</m>. In the lower diagram, oval <m>C</m> contains 2 and 4 inside oval <m>A</m>; 6 and 8 are also in <m>A</m>, so <m>C\subset A</m>.</p></description>
       </image>
     </figure>
-    <p>If every element of <m>C</m> is also an element of <m>A</m>, then <m>C</m> is a <term>subset</term> of <m>A</m>, written <m>C\subseteq A</m>. For example, <m>\{2,4\}\subseteq\{2,4,6,8\}</m>. The empty set, written <m>\varnothing</m>, has no elements and is a subset of every set.</p>
+    <p>If every element of <m>C</m> is also an element of <m>A</m>, then <m>C</m> is a <term>subset</term> of <m>A</m>, written <m>C\subset A</m>. We use <m>\subset</m> as it appears in the log tables: it means “is a subset of”. For example, <m>\{2,4\}\subset\{2,4,6,8\}</m>. The empty set, written <m>\varnothing</m>, has no elements and is a subset of every set.</p>
     <activity xml:id="activity-set-properties">
       <title>Explain the difference</title>
-      <task><p>Is <m>4\in A</m> or <m>\{4\}\subseteq A</m> the better way to say that 4 is in <m>A</m>? What is the difference between the two statements?</p><answer><p><m>4\in A</m> says that the number 4 is an element. <m>\{4\}\subseteq A</m> says that the set whose only element is 4 is a subset of <m>A</m>. Both statements are true here, but they describe different objects.</p></answer></task>
+      <task><p>Is <m>4\in A</m> or <m>\{4\}\subset A</m> the better way to say that 4 is in <m>A</m>? What is the difference between the two statements?</p><answer><p><m>4\in A</m> says that the number 4 is an element. <m>\{4\}\subset A</m> says that the set whose only element is 4 is a subset of <m>A</m>. Both statements are true here, but they describe different objects.</p></answer></task>
     </activity>
     <exercise xml:id="exercise-set-equality">
       <statement><p>Let <m>P=\{1,3,5\}</m> and <m>Q=\{5,3,1,1\}</m>. Are <m>P</m> and <m>Q</m> equal? Explain.</p></statement>
@@ -86,6 +86,36 @@
       <task><p>Using <m>D=\{1,2,3,4,5,6,7,8\}</m>, write a rule in words for <m>O=\{1,3,5,7\}</m>. Then write the set-builder rule using “such that”.</p><answer><p><m>O</m> is the odd numbers in <m>D</m>; <m>O=\{x\in D:x\text{ is odd}\}</m>.</p></answer></task>
     </activity>
     <p><url href="https://ronandownes.github.io/maths/apps/sets/list-and-notation.html">Open App 1: Set list and notation.</url> Then <url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">open App 2: Build a set from a rule.</url></p>
+  </section>
+
+  <section xml:id="sets-number-families">
+    <title>Four familiar number sets</title>
+    <p>The log tables show four number sets that we will meet often: natural numbers, integers, rational numbers and real numbers. Each new set contains the one before it.</p>
+    <p>In the log tables, the natural numbers begin at 1: <m>\mathbb{N}=\{1,2,3,\ldots\}</m>. Counting objects begins with the first object, then the second, the third and so on. If a chicken coop is empty, we say there are zero chickens. The zero tells us the size of an empty collection; it is not a chicken that we counted. In this book, as in the log tables, <m>0\notin\mathbb{N}</m>. Some books choose a different convention, but we will use the one printed in the tables.</p>
+    <p>Integers include zero, the positive counting numbers and their negative partners. The log tables write them as <m>\mathbb{Z}=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}</m>. We can also write <m>\mathbb{Z}=\{0,\pm1,\pm2,\pm3,\ldots\}</m>. The symbol <m>\pm2</m> is a compact way to show the pair <m>-2</m> and <m>2</m>; zero appears once.</p>
+    <figure xml:id="figure-integer-roster">
+      <caption>The integer list and the number line show negative and positive partners around zero.</caption>
+      <image source="sets/integer-roster.svg" width="95%">
+        <shortdescription>A number line marks the integers from negative three to positive three. Opposite numbers are paired around zero, and the roster form shows zero, plus or minus one, plus or minus two, and so on.</shortdescription>
+        <description><p>The number line has labelled integer points at <m>-3,-2,-1,0,1,2,3</m>. The labels above pair <m>-1</m> with <m>1</m> and <m>-2</m> with <m>2</m>. Below, the roster form reads <m>\mathbb{Z}=\{0,\pm1,\pm2,\ldots\}</m>. The zero is a single integer; each <m>\pm k</m> contributes both <m>-k</m> and <m>k</m>.</p></description>
+      </image>
+    </figure>
+    <p>Rational numbers can be written as a fraction of integers with a non-zero denominator: <m>\mathbb{Q}=\left\{\frac{p}{q}:p\in\mathbb{Z},\,q\in\mathbb{Z},\,q\ne0\right\}</m>. For example, <m>\frac{1}{2}</m>, <m>-\frac{3}{4}</m> and <m>5=\frac{5}{1}</m> are rational numbers.</p>
+    <p>Real numbers are all the numbers represented by points on the number line. They include rational numbers and numbers such as <m>\sqrt{2}</m> and <m>\pi</m>. We can picture the four sets nested inside one another:</p>
+    <figure xml:id="figure-four-number-sets">
+      <caption>The number sets grow from natural numbers to all real numbers.</caption>
+      <image source="sets/number-sets-hierarchy.svg" width="95%">
+        <shortdescription>Four nested regions show natural numbers inside integers, integers inside rational numbers, and rational numbers inside real numbers.</shortdescription>
+        <description><p>The outer region is the real numbers <m>\mathbb{R}</m> and includes examples such as <m>\sqrt{2}</m> and <m>\pi</m>. Inside it, the rational numbers <m>\mathbb{Q}</m> include fractions such as <m>-\frac{3}{4}</m> and <m>\frac{1}{2}</m>. The integers <m>\mathbb{Z}</m> include negative whole numbers, zero and positive whole numbers. The innermost region contains the natural numbers <m>\mathbb{N}=\{1,2,3,\ldots\}</m>. Thus <m>\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}</m>.</p></description>
+      </image>
+    </figure>
+    <p>Read the inclusion chain using the log-table meaning of <m>\subset</m>: <m>\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}</m>. For example, <m>0</m> is an integer but not a natural number; <m>\frac{1}{2}</m> is rational but not an integer.</p>
+    <activity xml:id="activity-classify-number-sets">
+      <title>Which is the smallest set?</title>
+      <task><p>For each number, choose the smallest of <m>\mathbb{N}</m>, <m>\mathbb{Z}</m>, <m>\mathbb{Q}</m> and <m>\mathbb{R}</m> that contains it: <m>4</m>, <m>0</m>, <m>-3</m>, <m>\frac{2}{5}</m> and <m>\sqrt{2}</m>.</p><answer><p><m>4\in\mathbb{N}</m>; <m>0</m> and <m>-3</m> are integers; <m>\frac{2}{5}</m> is rational; and <m>\sqrt{2}</m> is real but not rational.</p></answer></task>
+      <task><p>Explain why “there are zero chickens in the empty coop” does not make zero one of the objects in the natural-number list.</p><answer><p>The chickens are the objects being counted. If there are none, the collection has cardinality zero, <m>\#\varnothing=0</m>. Zero records the count; it is not an additional chicken. In the log-table convention used here, <m>\mathbb{N}</m> starts at 1 and zero belongs to <m>\mathbb{Z}</m>.</p></answer></task>
+    </activity>
+    <p><url href="https://ronandownes.github.io/maths/apps/sets/number-sets.html">Explore the four number sets and practise choosing the smallest set that contains a number.</url></p>
   </section>
 
 <section xml:id="sets-two-sets">
@@ -259,14 +289,15 @@
 
 <section xml:id="sets-lab">
     <title>Sets apps: watch, explore, practise and play</title>
-    <p>The first examples are demonstrations: students can watch and discuss before choosing, dragging or creating anything. The four focused apps then provide guided exploration, many online exercises, quizzes, a region game, tests and challenge levels. The Venn app begins with two sets and adds three-set pair work at Challenge level.</p>
+    <p>The first examples are demonstrations: students can watch and discuss before choosing, dragging or creating anything. The focused apps then provide guided exploration, many online exercises, quizzes, a region game, tests and challenge levels. The Venn app begins with two sets and adds three-set pair work at Challenge level.</p>
     <ul>
       <li><p><url href="https://ronandownes.github.io/maths/apps/sets/list-and-notation.html">App 1: Set list and notation</url> — elements, braces, equality, membership and cardinality.</p></li>
       <li><p><url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">App 2: Build a set from a rule</url> — rule notation, “such that”, list and diagram.</p></li>
       <li><p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html">App 3: Venn operations and problem solving</url> — two-set regions, cardinality, practice, quiz, game, test and pair work.</p></li>
       <li><p><url href="https://ronandownes.github.io/maths/apps/sets/universal-complement.html">App 4: Universal set and complement</url> — the boundary <m>U</m>, <m>A^c</m> and complementary cardinalities.</p></li>
+      <li><p><url href="https://ronandownes.github.io/maths/apps/sets/number-sets.html">App 5: Four number sets</url> — natural numbers, integers, rational numbers, real numbers, and the log-table convention for zero.</p></li>
     </ul>
     <p><url href="https://ronandownes.github.io/maths/apps/sets/index.html">Open the Sets app menu.</url></p>
-    <p><strong>Check your learning.</strong> Can you describe a set using a rule, a list and an oval? Can you explain intersection, union, difference and cardinality? Can you place the shared region first, find the “only” regions and justify the union? After that, can you explain why a complement depends on <m>U</m>?</p>
+    <p><strong>Check your learning.</strong> Can you describe a set using a rule, a list and an oval? Can you explain intersection, union, difference and cardinality? Can you place the shared region first, find the “only” regions and justify the union? Can you describe the relationships among <m>\mathbb{N}</m>, <m>\mathbb{Z}</m>, <m>\mathbb{Q}</m> and <m>\mathbb{R}</m>? After that, can you explain why a complement depends on <m>U</m>?</p>
   </section>
 </chapter>
