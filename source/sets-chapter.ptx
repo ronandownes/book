@@ -45,6 +45,13 @@
         <li><p>Cardinality counts distinct elements: <m>\#\{2,4,4,6\}=3</m>.</p></li>
       </ul>
     </div>
+    <figure xml:id="figure-set-properties-multimodal">
+      <caption>Lists and notation lead to a picture of distinct elements and subset containment.</caption>
+      <image source="sets/set-properties.svg" width="95%">
+        <shortdescription>Lists A and B contain the same four distinct elements despite different order and a repeated 2. Nested ovals show C containing 2 and 4 inside A, which also contains 6 and 8.</shortdescription>
+        <description><p>The two lists show <m>A=\{2,4,6,8\}</m> and <m>B=\{8,6,4,2,2\}</m>. Their order differs and <m>B</m> repeats 2, but their distinct elements are the same, so <m>A=B</m> and <m>\#A=\#B=4</m>. In the lower diagram, oval <m>C</m> contains 2 and 4 inside oval <m>A</m>; 6 and 8 are also in <m>A</m>, so <m>C\subseteq A</m>.</p></description>
+      </image>
+    </figure>
     <p>If every element of <m>C</m> is also an element of <m>A</m>, then <m>C</m> is a <term>subset</term> of <m>A</m>, written <m>C\subseteq A</m>. For example, <m>\{2,4\}\subseteq\{2,4,6,8\}</m>. The empty set, written <m>\varnothing</m>, has no elements and is a subset of every set.</p>
     <activity xml:id="activity-set-properties">
       <title>Explain the difference</title>

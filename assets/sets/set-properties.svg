@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Set properties shown with lists and nested ovals</title>
+  <desc id="desc">A and B list the same distinct elements despite different order and a repeated 2, so each has cardinality 4. Below, oval C containing 2 and 4 sits inside oval A, which also contains 6 and 8, showing C is a subset of A.</desc>
+  <rect width="1200" height="760" fill="#fff"/>
+  <text x="600" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#173c57">A set records distinct elements</text>
+
+  <rect x="45" y="88" width="515" height="158" rx="18" fill="#f4f8fb" stroke="#ccd9e3" stroke-width="3"/>
+  <text x="75" y="132" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#53677b">LIST A</text>
+  <text x="75" y="194" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#173c57">A = {2, 4, 6, 8}</text>
+
+  <rect x="640" y="88" width="515" height="158" rx="18" fill="#f4f8fb" stroke="#ccd9e3" stroke-width="3"/>
+  <text x="670" y="132" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#53677b">LIST B</text>
+  <text x="670" y="194" font-family="Arial,sans-serif" font-size="37" font-weight="700" fill="#173c57"><tspan>B = {8, 6, 4, 2, </tspan><tspan fill="#a44b35">2</tspan><tspan>}</tspan></text>
+  <path d="M1025 207 C1050 218 1070 225 1090 229" fill="none" stroke="#a44b35" stroke-width="3"/>
+  <text x="1095" y="237" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="end" fill="#8d3c2b">repeated</text>
+
+  <text x="600" y="305" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#225c86">Same distinct elements: {2, 4, 6, 8}</text>
+  <text x="600" y="347" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" fill="#294b65">Order changes; repetition adds no new element.</text>
+  <text x="600" y="389" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#173c57">#A = #B = 4</text>
+  <line x1="55" y1="423" x2="1145" y2="423" stroke="#d7e0e9" stroke-width="3"/>
+
+  <text x="600" y="468" text-anchor="middle" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#173c57">A subset means containment</text>
+  <ellipse cx="365" cy="590" rx="260" ry="132" fill="#dcebf7" stroke="#225c86" stroke-width="5"/>
+  <text x="145" y="490" font-family="Arial,sans-serif" font-size="33" font-weight="700" fill="#225c86">A</text>
+  <ellipse cx="335" cy="590" rx="132" ry="82" fill="#f4d88e" stroke="#9a6a16" stroke-width="4"/>
+  <text x="335" y="557" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#6c4a0f">C</text>
+  <text x="335" y="615" text-anchor="middle" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#173c57">2, 4</text>
+  <text x="500" y="600" text-anchor="middle" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#173c57">6, 8</text>
+
+  <text x="760" y="560" font-family="Arial,sans-serif" font-size="39" font-weight="700" fill="#173c57">C ⊆ A</text>
+  <text x="760" y="610" font-family="Arial,sans-serif" font-size="25" fill="#294b65">Every element in C</text>
+  <text x="760" y="646" font-family="Arial,sans-serif" font-size="25" fill="#294b65">is also in A.</text>
+  <text x="365" y="748" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#53677b">C = {2, 4} sits inside A = {2, 4, 6, 8}.</text>
+</svg>
