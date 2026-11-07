@@ -38,6 +38,11 @@ jobs:
             --user-agent "Mathematics educational textbook (source: Wikimedia Commons)" \
             "https://upload.wikimedia.org/wikipedia/commons/8/8e/Magicicada_septendecim-mating.jpg" \
             --output assets/cicadas/magicicada-septendecim-2024.jpg
+          curl --fail --location --retry 3 --silent --show-error \
+            --user-agent "Mathematics educational textbook (source: Wikimedia Commons)" \
+            "https://upload.wikimedia.org/wikipedia/commons/9/9e/Periodical_cicadas_in_a_tree.jpg" \
+            --output assets/cicadas/periodical-cicadas-tree-2024.jpg
+          test "$(wc -c < assets/cicadas/periodical-cicadas-tree-2024.jpg)" -gt 50000
           test "$(wc -c < assets/cicadas/magicicada-tredecim-2024.jpg)" -gt 50000
           test "$(wc -c < assets/cicadas/magicicada-septendecim-2024.jpg)" -gt 50000
       - name: Build web textbook
