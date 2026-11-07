@@ -129,13 +129,26 @@
 <section xml:id="expanding-scaling">
 <title>Investigation lab: scaling a factor scales the product</title>
 <p>There is one idea behind several useful tricks of the trade: if one factor is multiplied by a number, then the product is multiplied by that same number.</p>
-<me>\bigl(kA(x)\bigr)B(x)=k\bigl(A(x)B(x)\bigr).</me>
+<me>\bigl(kA(x)\bigr)B(x)=A(x)\bigl(kB(x)\bigr)=k\bigl(A(x)B(x)\bigr).</me>
+<p>You can scale either factor. More generally, scaling the two factors by <m>r</m> and <m>s</m> scales the answer by <m>rs</m>.</p>
+<me>\bigl(rA(x)\bigr)\bigl(sB(x)\bigr)=rs\bigl(A(x)B(x)\bigr).</me>
 <exercise xml:id="expanding-scale-double">
 <statement>
 <p>Expand <m>(2x+3)(x+4)</m>. Now double <em>both</em> coefficients of the linear factor so that it becomes <m>4x+6</m>. Keep the second bracket unchanged and compare the results.</p>
 <p>Could you instead have taken out a common factor <m>2</m>, expanded the original brackets and simply doubled every coefficient in the answer? Predict what would happen with a factor of <m>3</m>, or any number <m>k</m>.</p>
 </statement>
 <answer><p>The first product is <m>2x^2+11x+12</m>. The doubled factor gives <m>(4x+6)(x+4)=4x^2+22x+24</m>, exactly twice the first result. In general <m>(kA)B=k(AB)</m>, because multiplication is associative and commutative.</p></answer>
+</exercise>
+<exercise xml:id="expanding-scale-either-factor">
+<statement>
+<p>Does it matter <em>which factor</em> you double? Compare <m>(4x+6)(x+4)</m> with <m>(2x+3)(2x+8)</m>. Predict their expansions from <m>(2x+3)(x+4)</m> before multiplying.</p>
+<p>Try tripling either factor. Then double the first factor and triple the second. By what number is the original answer multiplied?</p>
+</statement>
+<answer><p>Both doubled products are <m>4x^2+22x+24</m>. Tripling either factor gives <m>6x^2+33x+36</m>. Doubling one and tripling the other produces six times the original product: <m>12x^2+66x+72</m>.</p></answer>
+</exercise>
+<exercise xml:id="expanding-scale-hcf">
+<statement><p>Before expanding <m>(6x+9)(4x+8)</m>, take out the highest common factor from <em>each</em> bracket. What numerical factor can you place in front of the simpler product? Why might this be efficient?</p></statement>
+<answer><p><m>(6x+9)(4x+8)=3(2x+3)\cdot4(x+2)=12(2x+3)(x+2)=24x^2+84x+72</m>. Taking out the numerical factors first reveals the structure and reduces the sizes of the numbers being multiplied.</p></answer>
 </exercise>
 <exercise xml:id="expanding-scale-negative">
 <statement>
@@ -149,7 +162,7 @@
 <answer><p><m>(2x+3)(2x^2+3x+4)=4x^3+12x^2+17x+12</m>. Therefore the required product is <m>20x^3+60x^2+85x+60</m>.</p></answer>
 </exercise>
 <paragraphs xml:id="expanding-scaling-reflect"><title>Reflect and connect to factorising</title>
-<p>Why must <em>every</em> coefficient be doubled or have its sign changed? Why is scaling just one term of a factor a different operation? Taking out a common numerical factor is the reverse step and will be especially useful when we begin factorising.</p>
+<p>Why does it not matter which factor is doubled? Why must <em>every</em> coefficient of a scaled factor change, not just one? Why does scaling both factors by <m>2</m> multiply the answer by <m>4</m>, not <m>2</m>? Taking out the highest common factor first often simplifies expansion and makes numerical factors explicit, which is especially useful when we begin factorising.</p>
 </paragraphs>
 </section>
 
