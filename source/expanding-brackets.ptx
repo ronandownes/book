@@ -229,4 +229,16 @@
 </paragraphs>
 </section>
 
+<section xml:id="expanding-beyond-school">
+<title>Beyond school maths: an optional quintic challenge</title>
+<p>A quartic polynomial has degree <m>4</m>, and a <term>quintic</term> has degree <m>5</m>. These names describe degrees, not new multiplication rules. The same distributive law still works.</p>
+<exercise xml:id="expanding-quintic-exploration">
+<statement>
+<p>Optional challenge: Without multiplying each term in a long, separate calculation, predict the degree and then expand <m>(x+1)(x^5+2x^3+3)</m>. Can the place-value method help you keep track of the missing powers?</p>
+</statement>
+<answer><p>The answer has degree <m>6</m> and equals <m>x^6+x^5+2x^4+2x^3+3x+3</m>. Treat the missing powers in the quintic factor as having zero coefficients when aligning the partial products.</p></answer>
+</exercise>
+<p>This is an extension, not part of the eight compulsory homework questions. Higher-degree multiplication can be explored later without adding more controls to the main classroom app.</p>
+</section>
+
 </chapter>
