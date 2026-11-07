@@ -31,20 +31,7 @@
 
     <part xml:id="part-algebra"><title>Algebra</title>
       <xi:include href="./algebra-language.ptx" />
-      <chapter xml:id="chapter-expanding"><title>Expanding Brackets</title>
-        <section xml:id="expanding-binomial"><title>Every term matters</title>
-          <p>Before expanding <m>(x+2)(x+3)</m>, predict the number of products.</p>
-          <p>Each term in the first bracket multiplies each term in the second bracket.</p>
-          <example xml:id="example-two-brackets"><title>Two binomials</title>
-            <p><me>(x+2)(x+3)=x^2+3x+2x+6=x^2+5x+6.</me></p>
-          </example>
-          <exercise xml:id="exercise-expand-one">
-            <statement><p>Expand and simplify <m>(x+1)(x+4)</m>.</p></statement>
-            <answer><p><m>x^2+5x+4</m>.</p></answer>
-          </exercise>
-          <p>The FOIL mnemonic describes the four products for two binomials. The distributive law is more general and also works with trinomials and cubic expansions.</p>
-        </section>
-      </chapter>
+      <xi:include href="./expanding-brackets.ptx" />
       <chapter xml:id="chapter-factorisation"><title>Factorisation</title>
         <section xml:id="factorisation-intro"><title>Reversing expansion</title>
           <p>Factorisation writes an expression as a product. For example, <m>6x+9=3(2x+3)</m>.</p>
