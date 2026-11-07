@@ -166,6 +166,26 @@
 </paragraphs>
 </section>
 
+<section xml:id="expanding-language">
+<title>Mathematical language: say it, use it, explain it</title>
+<p>Use these words when explaining your work. For the wider vocabulary of algebra, see <xref ref="algebra-vocabulary"/>.</p>
+<dl>
+<li><title>Binomial</title><p>A polynomial with exactly two non-zero terms, such as <m>3x+2</m>.</p></li>
+<li><title>Quadratic</title><p>A polynomial of degree <m>2</m>, such as <m>x^2+5</m>. A quadratic does not have to contain an <m>x</m> term.</p></li>
+<li><title>Monic</title><p>A polynomial whose leading coefficient is exactly <m>1</m>, such as <m>x^2+7x+12</m>. Monic does not mean that all the other coefficients are <m>1</m>, or that a question is necessarily easy.</p></li>
+<li><title>Leading coefficient</title><p>The coefficient of the highest power, such as <m>4</m> in <m>4x^2-3x+1</m>.</p></li>
+<li><title>Distributive law</title><p>The property <m>a(b+c)=ab+ac</m>, used repeatedly in expansion.</p></li>
+<li><title>Partial product</title><p>One contribution obtained by multiplying a term from each factor.</p></li>
+<li><title>Like terms</title><p>Terms with matching variable parts and powers, such as <m>3x^2</m> and <m>-5x^2</m>.</p></li>
+<li><title>Sparse polynomial</title><p>A polynomial with one or more zero coefficients between non-zero terms, such as <m>x^2+9</m>, whose <m>x</m> coefficient is <m>0</m>.</p></li>
+<li><title>Quintic</title><p>A polynomial of degree <m>5</m>. This is a useful name to recognise, but fifth-degree expansion is not required for the current homework.</p></li>
+</dl>
+<exercise xml:id="expanding-language-sort">
+<statement><p>Decide which expressions are monic and which are quadratics: <m>x^2+4</m>, <m>2x^2+1</m>, <m>x^3-x</m>, <m>3x+7</m>. Can one expression be both monic and quadratic? Explain.</p></statement>
+<answer><p><m>x^2+4</m> is both monic and quadratic; <m>2x^2+1</m> is quadratic but not monic; <m>x^3-x</m> is monic and cubic; <m>3x+7</m> is linear and not monic.</p></answer>
+</exercise>
+</section>
+
 <section xml:id="expanding-hidden-maths">
 <title>Hidden Maths: patterns worth discovering</title>
 <p>A good investigation begins with a prediction. Look for a pattern in the structure before carrying out all the arithmetic.</p>
