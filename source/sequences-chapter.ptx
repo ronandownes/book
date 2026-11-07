@@ -114,28 +114,16 @@
 <p>Now ask a different question: not what is the <m>n</m>th term, but what is the <em>sum</em> of the first <m>n</m> terms? We write that sum as <m>S_n</m>. Start with <m>7+9+11+13</m>. Pair the outside terms and then the inside terms:</p>
 <me>(7+13)+(9+11)=20+20=40.</me>
 <p>Reverse the terms and write the sum a second time. Each vertically aligned pair adds to the same amount:</p>
-<figure xml:id="sequences-sum-visual-proof">
-<caption>Visual proof for four terms: write the same sum forwards and backwards. Each coloured column adds to <m>20</m>, and four columns give twice the original sum.</caption>
-<image width="100%">
-<description>Four vertical columns: top row 7, 9, 11, 13; bottom row 13, 11, 9, 7. A line separates the two rows from four totals of 20. The first and third columns have a blue background, the second and fourth a pale green background.</description>
-<latex-image-code><![CDATA[
-\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\Large]
-\foreach \x/\a/\b in {0/7/13,2.4/9/11,4.8/11/9,7.2/13/7}{
-\pgfmathtruncatemacro{\col}{mod(\x*10,48)}
-\fill[blue!10,rounded corners=4pt] (\x-0.70,0.4) rectangle (\x+0.70,3.4);
-\node at (\x,2.9) {$\a$};
-\node at (\x,1.95) {$\b$};
-\draw[blue!65!black,very thick] (\x-0.55,1.56)--(\x+0.55,1.56);
-\node[blue!65!black,font=\bfseries] at (\x,0.95) {$20$};
-}
-\node[anchor=east,font=\large] at (-1,2.9) {$S_4$};
-\node[anchor=east,font=\large] at (-1,1.95) {$S_4$};
-\node[anchor=east,font=\large] at (-1,0.95) {$2S_4$};
-\node[font=\normalsize] at (3.6,-0.15) {$2S_4=4\times20=80\qquad S_4=40$};
-\end{tikzpicture}
-]]></latex-image-code>
-</image>
-</figure>
+<table xml:id="sequences-sum-visual-proof">
+<title>Pairing four terms forwards and backwards</title>
+<tabular halign="center">
+<row header="yes"><cell>Position</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell></row>
+<row><cell><m>S_4</m> forwards</cell><cell><m>7</m></cell><cell><m>9</m></cell><cell><m>11</m></cell><cell><m>13</m></cell></row>
+<row bottom="medium"><cell><m>S_4</m> backwards</cell><cell><m>13</m></cell><cell><m>11</m></cell><cell><m>9</m></cell><cell><m>7</m></cell></row>
+<row><cell><m>2S_4</m> by column</cell><cell><m>20</m></cell><cell><m>20</m></cell><cell><m>20</m></cell><cell><m>20</m></cell></row>
+</tabular>
+</table>
+<me>2S_4=4\times20=80\qquad\Longrightarrow\qquad S_4=40.</me>
 
 <me>\begin{aligned}
 S_n &amp;=a+(a+d)+\cdots+[a+(n-1)d],\\
