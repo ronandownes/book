@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-algebra-introduction">
+<title>Why Algebra?</title>
+<introduction>
+<p>Mathematics gives us ways to describe patterns, quantities and relationships precisely. Arithmetic allows us to calculate with particular numbers; algebra allows us to describe what happens even when those numbers change. A letter in algebra is not necessarily a mystery to be solved. It may represent a length that can vary, a number we have chosen not to specify, or a quantity that we want to study.</p>
+<p>We shall begin with familiar shapes, not because algebra is confined to geometry, but because their structure is easy to see. The same ideas will later help us reason about costs, journeys, number patterns and much more.</p>
+</introduction>
+<section xml:id="algebra-intro-square">
+<title>A square: one changing length</title>
+<p>Imagine a square whose side length is <m>s</m> units. All four sides have the same length. Walking once around its boundary means travelling that length four times, so its perimeter is</p>
+<me>P=s+s+s+s=4s.</me>
+<p>The expression <m>4s</m> is compact, but it says more than a particular numerical answer. It describes the perimeter of <em>every</em> square, whatever its side length. If <m>s=3</m>, then <m>P=12</m>; if <m>s=5</m>, then <m>P=20</m>. The relationship remains unchanged while the number changes.</p>
+<example xml:id="algebra-intro-square-example"><title>Reading the expression</title>
+<p>The notation <m>4s</m> means <m>4\times s</m>, not the two-digit number formed by writing 4 beside another digit. A coefficient placed beside a variable signifies multiplication. The letter <m>P</m> gives a name to the perimeter, while <m>s</m> names the side length. We have written a relationship between quantities, not just a calculation to finish.</p>
+</example>
+<exercise xml:id="algebra-intro-square-exercise"><statement><p>A square has side length <m>s</m>. Write an expression for the total length of three sides, and explain why it is different from the perimeter. What happens to the perimeter if the side length doubles?</p></statement><answer><p>Three sides total <m>3s</m>, whereas the complete boundary is <m>4s</m>. Doubling <m>s</m> doubles the perimeter, since <m>4(2s)=8s=2(4s)</m>.</p></answer></exercise>
+</section>
+<section xml:id="algebra-intro-rectangle">
+<title>A rectangle: two changing lengths</title>
+<p>A rectangle has two pairs of equal opposite sides. Let <m>l</m> represent its length and <m>h</m> its height. Both are measured in the same unit. Following its boundary gives</p>
+<me>P=l+h+l+h.</me>
+<p>We can collect together the matching lengths:</p>
+<me>P=2l+2h.</me>
+<p>There is another way of seeing the same journey. Travel along one length and one height: that is half of the boundary. The other half repeats those two lengths. This symmetry gives</p>
+<me>P=2(l+h).</me>
+<p>Neither expression is more correct. Both express the same relationship, but they organise our thinking differently. In <m>2l+2h</m>, we see two copies of each dimension. In <m>2(l+h)</m>, we see two copies of a single <em>length-plus-height</em> journey. Equivalent expressions can make different features of a situation visible.</p>
+<example xml:id="algebra-intro-rectangle-example"><title>Two views of one perimeter</title>
+<p>Suppose <m>l=7</m> cm and <m>h=4</m> cm. Counting opposite sides gives <m>2(7)+2(4)=14+8=22</m> cm. Counting the two repeated half-boundaries gives <m>2(7+4)=2(11)=22</m> cm. We are not discovering that two different measurements happen to agree; we are describing the same boundary in two ways.</p>
+</example>
+<p>The equality</p>
+<me>2(l+h)=2l+2h</me>
+<p>is an example of the <term>distributive law</term>. We shall study that law in detail when expanding brackets. Here, geometry helps us see <em>why</em> the two forms must agree.</p>
+</section>
+<section xml:id="algebra-intro-half-perimeter">
+<title>Inventing a useful quantity: the half-perimeter</title>
+<p>Sometimes a new mathematical idea arises because it makes a problem simpler. In a rectangle, the length and height together form exactly half the perimeter. We may therefore define a new quantity, the <term>half-perimeter</term>, and call it <m>H</m>:</p>
+<me>H=l+h,\qquad P=2H.</me>
+<p>This definition does not change the rectangle. It gives a name to something that was already there. Naming it makes some questions easier to ask. If the half-perimeter is 12 cm, then the perimeter is 24 cm, even though we may not know the individual dimensions.</p>
+<p>Moreover, many rectangles have the same half-perimeter. The dimensions <m>l=8</m> cm and <m>h=4</m> cm give <m>H=12</m> cm, but so do <m>l=9</m> cm and <m>h=3</m> cm. A single condition can describe a whole family of shapes.</p>
+<example xml:id="algebra-intro-half-perimeter-example"><title>What can we know without knowing everything?</title>
+<p>A rectangle has perimeter 30 cm. We know immediately that <m>l+h=15</m> cm. The perimeter alone does not determine <m>l</m> and <m>h</m> separately. We need more information to choose one rectangle from the many possibilities.</p>
+</example>
+<exercise xml:id="algebra-intro-half-perimeter-exercise"><statement><p>A rectangle has half-perimeter 18 cm. Give three different pairs of positive dimensions that fit this information. Can you find a square in the family? Explain why the dimensions are not uniquely determined.</p></statement><answer><p>Examples include <m>(l,h)=(10,8),(12,6),(9,9)</m> cm. The last pair describes a square. The equation <m>l+h=18</m> is one condition on two quantities and has many positive solutions.</p></answer></exercise>
+</section>
+<section xml:id="algebra-intro-variable-meaning">
+<title>Expressions have meaning</title>
+<p>We should always ask what a letter represents and what a calculation means. If <m>l</m> and <m>h</m> are lengths in centimetres, then <m>l+h</m> is also a length in centimetres. The product <m>lh</m>, by contrast, is the rectangle's area, measured in square centimetres:</p>
+<me>A=lh.</me>
+<p>The expressions <m>l+h</m> and <m>lh</m> are not interchangeable. One adds two measured lengths; the other multiplies them to describe a two-dimensional quantity. Their different units help us notice the distinction.</p>
+<p>Algebra also lets us describe change. If the length increases by 2 cm while the height remains fixed, the new perimeter is</p>
+<me>2((l+2)+h)=2(l+h)+4.</me>
+<p>The perimeter increases by 4 cm, regardless of the original dimensions. We can discover this general result without selecting a particular rectangle first.</p>
+<example xml:id="algebra-intro-change-example"><title>Predict before calculating</title>
+<p>Why is the increase 4 cm rather than 2 cm? A rectangle has two sides of length <m>l</m>. Increasing that dimension by 2 cm lengthens both of those sides by 2 cm. An algebraic expression and a geometric explanation arrive at the same result.</p>
+</example>
+</section>
+<section xml:id="algebra-intro-reading">
+<title>Learning to read algebra</title>
+<p>Reading mathematics is an active process. Read a sentence, look at its notation, and ask what the symbols are saying. A formula is not a string of letters to memorise blindly. It is a compressed mathematical statement whose meaning should be unpacked.</p>
+<p>Consider <m>P=2(l+h)</m>. Read it aloud as: <q>The perimeter is twice the sum of the length and the height.</q> Then compare this with <m>P=2l+2h</m>: <q>The perimeter is twice the length plus twice the height.</q> The two sentences are not identical, but the distributive law tells us that their numerical values agree for every choice of <m>l</m> and <m>h</m>.</p>
+<p>Pay attention to the brackets. The expression <m>2(l+h)</m> instructs us to double an entire sum. The expression <m>2l+h</m> doubles only the length and then adds one height. Losing a bracket changes the meaning.</p>
+<example xml:id="algebra-intro-language-example"><title>Words, symbols and structure</title>
+<p>Suppose a rectangle has length <m>l=6</m> and height <m>h=3</m>. Compare <m>2(l+h)=18</m> with <m>2l+h=15</m>. Checking a particular example exposes the difference; examining the two expressions explains it.</p>
+</example>
+<p>The aim is to develop a habit of moving in both directions: from a meaningful situation to an expression, and from an expression back to its meaning.</p>
+</section>
+<section xml:id="algebra-intro-beyond-geometry">
+<title>Beyond shapes: relationships everywhere</title>
+<p>Algebra is useful whenever quantities are related. If one ticket costs <m>t</m> euro, then four tickets cost <m>4t</m> euro. If a taxi fare has a fixed charge of <m>f</m> euro and a rate of <m>r</m> euro per kilometre, then a journey of <m>d</m> kilometres costs <m>f+rd</m> euro. Unlike the perimeter of a square, this expression contains both a fixed contribution and one that varies with distance.</p>
+<p>These expressions do not all have to be equations to solve. We can read them, compare them, substitute values, investigate how they change and use them to predict. That is much of the power of algebra.</p>
+<exercise xml:id="algebra-intro-ticket-exercise"><statement><p>A swimming pool charges an entry fee of 5 euro plus 2 euro for each hour spent there. Write a formula for the total charge <m>C</m> for <m>h</m> hours. Explain what each term means, and find the total for three hours.</p></statement><answer><p><m>C=5+2h</m> euro. The 5 euro is fixed and the <m>2h</m> euro depends on the number of hours. Three hours cost <m>C=5+2(3)=11</m> euro.</p></answer></exercise>
+</section>
+<section xml:id="algebra-intro-reflect">
+<title>Read, explain and investigate</title>
+<p>Return to the rectangle formulas <m>P=l+h+l+h</m>, <m>P=2l+2h</m>, <m>P=2(l+h)</m>, and <m>P=2H</m> with <m>H=l+h</m>. Each describes the same perimeter, yet each invites a different thought. Which version helps you count the sides? Which highlights symmetry? Which is easiest when you already know the half-perimeter?</p>
+<p>The next chapter, <xref ref="algebra-vocabulary"/>, will give precise names to the parts of expressions. Later, <xref ref="chapter-expanding"/> will show how the distributive law connects these different forms. For now, the central lesson is that algebra helps us <em>express a relationship, recognise its structure, and reason about every case at once</em>.</p>
+</section>
+</chapter>
