@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-sequences">
+<title>Sequences and Series</title>
+<introduction>
+<p>The aim is not to memorise a formula first. We will represent a pattern visually, identify what stays constant, work backwards when useful, and only then generalise. In the accompanying Maths Apps, the same under-arc representation can be revealed one step at a time.</p>
+<p>There are three related investigations: linear (arithmetic) sequences, quadratic sequences, and geometric sequences. Arithmetic sums belong with linear sequences, where they first arise naturally.</p>
+</introduction>
+<section xml:id="sequences-intro">
+<title>Recognising patterns</title>
+<p>Consider <m>7,9,11,13,\ldots</m>. Write the terms with plenty of space and draw an arc underneath each consecutive pair. Calculate the difference as the later term minus the earlier one, retaining the sign. Each under-arc is <m>+2</m>.</p>
+<figure xml:id="linear-underarc-figure">
+<caption>Three equal first differences, followed by one backwards step to the boxed term zero.</caption>
+<image width="95%">
+<description>Terms 7, 9, 11 and 13 are aligned above three curved under-arcs labelled +2. A backwards arc leads from 7 to a boxed 5, labelled term zero.</description>
+<latex-image-code><![CDATA[
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\large]
+\foreach \x/\n in {1.9/7,4.3/9,6.7/11,9.1/13}{
+\node[font=\LARGE] at (\x,1) {$\n$};
+}
+\foreach \x in {1.9,4.3,6.7}{
+\draw[blue!70!black,very thick] (\x+0.25,0.7) to[out=-65,in=-115] (\x+2.15,0.7);
+\node[blue!70!black] at (\x+1.2,0) {$+2$};
+}
+\node[draw=orange!80!black,fill=orange!12,rounded corners=2pt,inner sep=8pt,font=\LARGE] at (-0.6,1) {$5$};
+\node[orange!70!black,above] at (-0.6,1.55) {$T_0$};
+\draw[orange!80!black,very thick,<-] (-0.25,0.42) to[out=-85,in=-95] (1.55,0.42);
+\node[orange!80!black] at (0.65,-0.15) {$-2$};
+\end{tikzpicture}
+]]></latex-image-code>
+</image>
+</figure>
+<p>The difference between successive terms is always <m>2</m>, so this is a <term>linear</term>, or <term>arithmetic</term>, sequence. Working backwards reverses the forward operation: <m>7-2=5</m>. Place <m>5</m> in a box as <m>T_0</m>, the term immediately before <m>T_1</m>.</p>
+<p>This backwards step is a teaching method, not a change to the standard numbering of the sequence: the first listed term remains <m>T_1=7</m>.</p>
+<me>T_n=2n+5.</me>
+<example xml:id="sequences-linear-distant-term">
+<title>Find a distant term</title>
+<p>For <m>T_n=2n+5</m>, substitute <m>n=50</m>:</p>
+<me>T_{50}=2(50)+5=105.</me>
+</example>
+<example xml:id="sequences-linear-position">
+<title>Find the term number</title>
+<p>Which term has value <m>305</m>?</p>
+<me>2n+5=305\implies 2n=300\implies n=150.</me>
+<p>Therefore <m>305</m> is the <m>150</m>th term.</p>
+</example>
+<figure xml:id="sequences-linear-app">
+<caption>Linear Sequences: reveal under-arcs, work backwards to term zero, practise and assess with sound.</caption>
+<interactive xml:id="sequences-linear-interactive" iframe="https://ronandownes.github.io/maths/apps/linear-sequences/index.html" width="100%" aspect="4:5"/>
+</figure>
+<p><url href="https://ronandownes.github.io/maths/apps/linear-sequences/index.html">Open the Linear Sequences app in a separate tab.</url> On a phone, the settings can be collapsed to keep the working area large.</p>
+<exercise xml:id="exercise-sequences-next">
+<statement><p>Write the next two terms of <m>7,9,11,13,\ldots</m>, then find <m>T_0</m> and <m>T_n</m>.</p></statement>
+<answer><p>The next terms are <m>15</m> and <m>17</m>. We have <m>T_0=5</m> and <m>T_n=2n+5</m>.</p></answer>
+</exercise>
+<exercise xml:id="exercise-sequences-reverse">
+<statement><p>For the sequence <m>24,19,14,9,\ldots</m>, determine the signed common difference, boxed term zero and general term.</p></statement>
+<answer><p>The difference is <m>-5</m>. Therefore <m>T_0=24-(-5)=29</m> and <m>T_n=-5n+29</m>.</p></answer>
+</exercise>
+</section>
+<section xml:id="sequences-three-terms">
+<title>Three consecutive terms and the missing middle</title>
+<p>Suppose three consecutive terms of an arithmetic sequence are <m>9,x,19</m>. You are not told their positions in the sequence, and you do not need to be. Because the common difference is equal on either side of <m>x</m>, we have</p>
+<me>x-9=19-x\implies 2x=28\implies x=14.</me>
+<p>The middle term is the arithmetic mean of its two neighbours. This is useful when the term number is not supplied.</p>
+<exercise xml:id="sequences-middle-exercise"><statement><p>Find the missing middle term in <m>-7,x,17</m> if the three numbers are consecutive terms of an arithmetic sequence.</p></statement><answer><p><m>2x=-7+17=10</m>, so <m>x=5</m>.</p></answer></exercise>
+</section>
+<section xml:id="sequences-sum">
+<title>Sum of the first n terms: discover by pairing</title>
+<p>Now ask a different question: not what is the <m>n</m>th term, but what is the <em>sum</em> of the first <m>n</m> terms? We write that sum as <m>S_n</m>. Start with <m>7+9+11+13</m>. Pair the outside terms and then the inside terms:</p>
+<me>(7+13)+(9+11)=20+20=40.</me>
+<p>Reverse the terms and write the sum a second time. Each vertically aligned pair adds to the same amount:</p>
+<me>\begin{aligned}
+S_n &amp;=a+(a+d)+\cdots+[a+(n-1)d],\\
+S_n &amp;=[a+(n-1)d]+\cdots+(a+d)+a.
+\end{aligned}</me>
+<p>There are exactly <m>n</m> aligned columns, each with the same sum <m>2a+(n-1)d</m>. Adding the two rows gives twice the desired sum:</p>
+<me>2S_n=n[2a+(n-1)d].</me>
+<p>Divide by two:</p>
+<me>S_n=\frac n2[2a+(n-1)d].</me>
+<p>Since the last term is <m>T_n=a+(n-1)d</m>, the same result can be written more intuitively as</p>
+<me>S_n=\frac n2(T_1+T_n).</me>
+<p><m>a</m> denotes the <em>first</em> term <m>T_1</m> here, not the backwards term <m>T_0</m>. The distinction matters when changing between the general-term form <m>T_n=dn+c</m> and the sum formula.</p>
+<exercise xml:id="sequences-sum-exercise"><statement><p>For <m>7,9,11,\ldots</m>, find the sum of the first 50 terms. Show your first term, last term and pairing.</p></statement><answer><p><m>T_{50}=105</m>. Thus <m>S_{50}=\frac{50}{2}(7+105)=25(112)=2800</m>.</p></answer></exercise>
+<exercise xml:id="sequences-sum-zero-exercise"><statement><p>A sequence has first term <m>-254</m> and common difference <m>4</m>. Find a positive integer <m>n</m> for which the sum of the first <m>n</m> terms is zero.</p></statement><answer><p><m>S_n=\frac n2[-508+4(n-1)]=\frac n2(4n-512)</m>. Since <m>n&gt;0</m>, <m>4n-512=0</m>, so <m>n=128</m>.</p></answer></exercise>
+</section>
+<section xml:id="sequences-quadratic">
+<title>Quadratic sequences: two layers of under-arcs</title>
+<p>Consider <m>11,20,31,44,\ldots</m>. Under-arcs give first differences <m>9,11,13</m>. Under-arc again to obtain second differences <m>2,2</m>. Their non-zero constant value identifies a quadratic sequence.</p>
+<figure xml:id="quadratic-underarc-figure">
+<caption>Quadratic sequences have equal second differences. The extra arc layer is why the first difference arcs belong underneath the original numbers.</caption>
+<image width="100%">
+<description>Terms 11 20 31 44, first under-arcs labelled 9 11 13, and a second lower row of under-arcs each labelled +2.</description>
+<latex-image-code><![CDATA[
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily\large]
+\foreach \x/\n in {1/11,3.5/20,6/31,8.5/44}{\node[font=\LARGE] at (\x,2.8) {$\n$};}
+\foreach \x/\n in {1/9,3.5/11,6/13}{
+\draw[blue!70!black,very thick] (\x+0.2,2.4) to[out=-65,in=-115] (\x+2.3,2.4);
+\node[blue!70!black] at (\x+1.25,1.5) {$+\n$};
+}
+\foreach \x in {2.25,4.75}{
+\draw[green!60!black,very thick] (\x+0.2,1.2) to[out=-65,in=-115] (\x+2.3,1.2);
+\node[green!50!black] at (\x+1.25,0.3) {$+2$};
+}
+\end{tikzpicture}
+]]></latex-image-code>
+</image>
+</figure>
+<p>Write <m>T_n=an^2+bn+c</m>. The coefficient of <m>n^2</m> is half of the constant second difference, so <m>a=2/2=1</m>.</p>
+<p>Now extend the first differences backwards: before <m>9</m> is <m>7</m>. Hence <m>T_0=11-7=4</m>, which gives <m>c=4</m>.</p>
+<p>Finally, at term one the powers of one disappear:</p>
+<me>T_1=a+b+c \implies 11=1+b+4 \implies b=6.</me>
+<me>T_n=n^2+6n+4.</me>
+<figure xml:id="sequences-quadratic-app">
+<caption>Quadratic Sequences: first and second under-arcs, halving, backtracking, and two-attempt quizzes.</caption>
+<interactive xml:id="sequences-quadratic-interactive" iframe="https://ronandownes.github.io/maths/apps/quadratic-sequences/index.html" width="100%" aspect="4:5"/>
+</figure>
+<p><url href="https://ronandownes.github.io/maths/apps/quadratic-sequences/index.html">Open the Quadratic Sequences app.</url></p>
+<exercise xml:id="sequences-quadratic-exercise">
+<statement><p>Use two layers of under-arcs to find the general term of <m>3,8,15,24,\ldots</m>.</p></statement>
+<answer><p>First differences <m>5,7,9</m>; second differences <m>2,2</m>; <m>a=1</m>. The previous first difference is <m>3</m>, so <m>c=T_0=3-3=0</m>. Then <m>3=1+b+0</m>, giving <m>b=2</m>. Thus <m>T_n=n^2+2n</m>.</p></answer>
+</exercise>
+</section>
+<section xml:id="sequences-geometric">
+<title>Geometric sequences: multiply or divide</title>
+<p>Consider <m>3,6,12,24,\ldots</m>. When we draw under-arcs, each shows <m>\times 2</m> rather than <m>+2</m>. A geometric sequence is recognised by a constant <em>ratio</em> between consecutive non-zero terms.</p>
+<p>To move backwards, reverse the operation: <m>3\div2=\frac32</m>. Unlike the linear case, the general-term formula is most naturally written using the first listed term:</p>
+<me>T_n=a r^{n-1},</me>
+<p>where <m>a=T_1</m> and <m>r</m> is the common ratio. For the example, <m>T_n=3(2)^{n-1}</m>.</p>
+<p>A decreasing example is <m>81,27,9,3,\ldots</m>. Students can describe each step as <em>divide by three</em>. Later we name the ratio <m>r=\frac13</m>.</p>
+<figure xml:id="sequences-geometric-app">
+<caption>Geometric Sequences: visible under-arc multipliers and divisors, practice, quiz and test.</caption>
+<interactive xml:id="sequences-geometric-interactive" iframe="https://ronandownes.github.io/maths/apps/geometric-sequences/index.html" width="100%" aspect="4:5"/>
+</figure>
+<p><url href="https://ronandownes.github.io/maths/apps/geometric-sequences/index.html">Open the Geometric Sequences app.</url></p>
+<example xml:id="sequences-geometric-depreciation">
+<title>Depreciation as repeated multiplication</title>
+<p>A car worth <m>€20\,000</m> depreciates by <m>20\%</m> each year. It retains <m>80\%</m> of its current value, so each under-arc can be labelled <m>\times0.8</m>:</p>
+<me>V_4=20\,000(0.8)^4=€8192.</me>
+<p>Subtracting the same euro amount each year is a different, linear model and must not be confused with percentage depreciation.</p>
+</example>
+<paragraphs xml:id="sequences-geometric-extension"><title>Higher Level extension</title>
+<p>For a geometric sequence of first term <m>a</m> and ratio <m>r\ne1</m>, the finite geometric sum is</p>
+<me>S_n=a\frac{1-r^n}{1-r}.</me>
+<p>When <m>|r|&lt;1</m>, powers of <m>r</m> tend to zero, giving the infinite geometric sum <m>S_{\infty}=\frac{a}{1-r}</m>. This extension is distinct from the arithmetic sum formula developed earlier.</p>
+</paragraphs>
+</section>
+<section xml:id="sequences-assessment">
+<title>Assessment, explanation and reflection</title>
+<p><em>Assessment for learning:</em> use the first under-arc before presenting formal notation and listen for students' explanations of the sign, multiplier or divisor. <em>Assessment as learning:</em> move from fully revealed examples to partially revealed ones, then use the apps' quizzes. <em>Assessment of learning:</em> complete a test without step-by-step hints. Each question has at most two attempts; quiz feedback explains errors and test feedback is reviewed after completion.</p>
+<p>Compare linear and geometric patterns: a constant additive change is not the same as a constant multiplicative change. Compare linear and quadratic patterns: the former has constant first differences, the latter constant non-zero second differences. Students should be able to classify and justify before calculating a general term.</p>
+</section>
+</chapter>
