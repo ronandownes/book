@@ -5,6 +5,33 @@
 <p>The aim is not to memorise a formula first. We will represent a pattern visually, identify what stays constant, work backwards when useful, and only then generalise. In the accompanying Maths Apps, the same under-arc representation can be revealed one step at a time.</p>
 <p>There are three related investigations: linear (arithmetic) sequences, quadratic sequences, and geometric sequences. Arithmetic sums belong with linear sequences, where they first arise naturally.</p>
 </introduction>
+<section xml:id="sequences-cicadas">
+<title>Two clocks in nature: 13 years and 17 years</title>
+<p>These are two different species of <term>periodical cicada</term>, insects that spend most of their lives underground. Certain populations emerge as adults together every 13 years, while others emerge every 17 years. Their life cycles create a surprising mathematical puzzle.</p>
+<figure xml:id="cicada-two-species">
+<caption>Two periodical cicadas photographed in 2024: a 13-year cicada (<em>Magicicada tredecim</em>, left), and a mating pair of 17-year cicadas (<em>Magicicada septendecim</em>, right). The photos show representative insects from the two different broods, not a shared location.</caption>
+<sidebyside widths="46% 46%" margins="2%">
+<image source="cicadas/magicicada-tredecim-2024.jpg">
+<description>Side view of a 13-year cicada with red eyes, dark body and transparent orange-veined wings on a branch against a soft green background. Photograph taken in Macon, Georgia in May 2024.</description>
+</image>
+<image source="cicadas/magicicada-septendecim-2024.jpg">
+<description>Two 17-year cicadas with reddish eyes and patterned wings on a twig against a bright green background, photographed in Illinois in May 2024.</description>
+</image>
+</sidebyside>
+</figure>
+<p><em>Photograph credits:</em> left, Jeffrey Gammon, <url href="https://commons.wikimedia.org/wiki/File:Riley%27s_13-Year_Cicada_Magicicada_tredecim_JG.jpg" visual="Wikimedia Commons">13-year cicada photograph</url>, licensed <url href="https://creativecommons.org/licenses/by/4.0/" visual="CC BY 4.0">CC BY 4.0</url>; right, peterwchen, <url href="https://commons.wikimedia.org/wiki/File:Magicicada_septendecim-mating.jpg" visual="Wikimedia Commons">17-year cicada photograph</url>, also CC BY 4.0. Both photographs are reproduced without alteration.</p>
+<activity xml:id="cicada-cycle-investigation">
+<title>Will their calendars coincide again?</title>
+<task><p>In 2024, Brood XIX (13-year) and Brood XIII (17-year) emerged in the same year. The broods live in mostly different areas, with only limited geographical overlap in Illinois. If each emerges at its usual interval, when will these <em>same two broods</em> next emerge in the same year? Predict before calculating.</p>
+<answer><p>The intervals are 13 and 17 years. Since these numbers are distinct primes, their lowest common multiple is <m>13\cdot17=221</m>. Therefore <m>2024+221=2245</m>.</p></answer></task>
+<task><p>When did these same two broods last emerge in the same year before 2024?</p>
+<answer><p><m>2024-221=1803</m>.</p></answer></task>
+<task><p>What is the next emergence year for each brood separately?</p>
+<answer><p>Brood XIX: <m>2024+13=2037</m>. Brood XIII: <m>2024+17=2041</m>. Individual emergences occur much sooner than their next joint emergence in 2245.</p></answer></task>
+</activity>
+<p><em>History connection.</em> In <m>1803</m>, Thomas Jefferson was President of the United States, the Louisiana Purchase took place, and in Ireland <em>Robert Emmet led a rebellion</em> against British rule. Emmet was executed in Dublin on <m>20</m> September <m>1803</m>. The cicadas' two clocks have completed a full joint cycle since those events.</p>
+<p>Notice the difference between a <em>constant additive change</em>, the main idea in the arithmetic sequences that follow, and a pair of <em>repeating cycles</em>, which belong to multiples and lowest common multiples. These concepts can be connected without confusing them.</p>
+</section>
 <section xml:id="sequences-intro">
 <title>Recognising patterns</title>
 <p>Consider <m>7,9,11,13,\ldots</m>. Write the terms with plenty of space and draw an arc underneath each consecutive pair. Calculate the difference as the later term minus the earlier one, retaining the sign. Each under-arc is <m>+2</m>.</p>
