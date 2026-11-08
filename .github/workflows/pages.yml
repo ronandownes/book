@@ -61,7 +61,7 @@ jobs:
           source = script.read_text(encoding="utf-8")
           if "</script>" in source.lower():
               raise SystemExit("Auto-check source cannot be embedded safely.")
-          marker = 'data-pretext-auto-check="sets-v3"'
+          marker = 'data-pretext-auto-check="sets-v4"'
           pattern = re.compile(r'<script data-pretext-auto-check="sets-[^"]+">.*?</script>', re.DOTALL)
           tag = f'<script {marker}>\n{source}\n</script>'
           updated = 0

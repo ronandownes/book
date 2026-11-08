@@ -2,27 +2,29 @@
   const componentSelector = 'ul[data-component="multiplechoice"]';
   const radioSelector = 'input[type="radio"]';
 
-  function contextFor(option) {
-    let question = null;
-    let form = null;
-    const match = option.id && option.id.match(/^(.*)_opt_[^_]+$/);
+  function matchingInPath(event, selector) {
+    const path = typeof event.composedPath === "function" ? event.composedPath() : [event.target];
+    return path.find((node) => node && typeof node.matches === "function" && node.matches(selector)) || null;
+  }
 
-    if (match) {
-      question = document.getElementById(match[1]);
-      form = document.getElementById(match[1] + "_form");
-    }
+  function contextFor(option, event) {
+    const path = typeof event.composedPath === "function" ? event.composedPath() : [];
+    const form = path.find((node) => node && node.id && node.id.endsWith("_form")) || null;
+    const questionId = form ? form.id.slice(0, -5) : "";
+    const root = form && typeof form.getRootNode === "function" ? form.getRootNode() : document;
+    let question =
+      (questionId && root.getElementById ? root.getElementById(questionId) : null) ||
+      (questionId ? document.getElementById(questionId) : null);
 
-    if (!question) {
-      const liveForm = option.closest('[id$="_form"]');
-      if (liveForm && liveForm.id.endsWith("_form")) {
-        form = liveForm;
-        question = document.getElementById(liveForm.id.slice(0, -5));
+    if (!question && option.id) {
+      const match = option.id.match(/^(.*)_opt_[^_]+$/);
+      if (match) {
+        question =
+          (root.getElementById ? root.getElementById(match[1]) : null) ||
+          document.getElementById(match[1]);
       }
     }
-
-    if (!question) {
-      question = option.closest(componentSelector);
-    }
+    if (!question) question = option.closest(componentSelector);
 
     if (
       !question ||
@@ -32,25 +34,15 @@
       return null;
     }
 
-    form =
+    const liveForm =
       form ||
-      document.getElementById(question.id + "_form") ||
+      (question.id ? document.getElementById(question.id + "_form") : null) ||
+      option.closest('[id$="_form"]') ||
       question.closest(".ptx-runestone-container") ||
       question.closest(".multiplechoice_section") ||
       question;
 
-    return { question, form };
-  }
-
-  function radioFrom(target) {
-    if (!target || typeof target.closest !== "function") return null;
-    if (target.matches && target.matches(radioSelector)) return target;
-
-    const label = target.closest("label");
-    const control = label && label.control;
-    if (control && control.type === "radio") return control;
-
-    return target.closest(radioSelector);
+    return { question, form: liveForm };
   }
 
   function buttonText(button) {
@@ -63,6 +55,7 @@
   function checkButton(context) {
     const scopes = [
       context.form,
+      context.question.getRootNode(),
       context.question.closest(".ptx-runestone-container"),
       context.question.closest(".multiplechoice_section"),
       context.question.parentElement
@@ -79,59 +72,58 @@
 
   function radios(context) {
     const found = new Set();
-    [context.form, context.question].forEach((scope) => {
+    [context.form, context.question, context.question.getRootNode()].forEach((scope) => {
       if (scope) scope.querySelectorAll(radioSelector).forEach((radio) => found.add(radio));
     });
     return Array.from(found);
   }
 
-  function lockChoices(context, chosen) {
+  function lockChoices(context) {
     radios(context).forEach((radio) => {
       radio.disabled = true;
     });
-    if (chosen) chosen.disabled = true;
   }
 
-  function submitFirstChoice(context, chosen, attempts = 0) {
+  function submitFirstChoice(context, attempts = 0) {
     if (context.question.dataset.firstAnswerLocked === "true") return;
 
     const button = checkButton(context);
     if (!button || button.disabled) {
       if (attempts < 20) {
-        window.setTimeout(() => submitFirstChoice(context, chosen, attempts + 1), 50);
+        window.setTimeout(() => submitFirstChoice(context, attempts + 1), 50);
       }
       return;
     }
 
     context.question.dataset.firstAnswerLocked = "true";
     button.click();
-    lockChoices(context, chosen);
+    lockChoices(context);
     button.hidden = true;
     button.setAttribute("aria-hidden", "true");
     button.style.setProperty("display", "none", "important");
   }
 
-  function beginChoice(option) {
-    if (!option.checked) return;
-
-    const context = contextFor(option);
-    if (!context || context.question.dataset.firstAnswerPending === "true") return;
+  function beginChoice(context, option) {
+    if (!option.checked || context.question.dataset.firstAnswerPending === "true") return;
 
     context.question.dataset.firstAnswerPending = "true";
     radios(context).forEach((radio) => {
       if (radio !== option) radio.disabled = true;
     });
-    window.setTimeout(() => submitFirstChoice(context, option), 0);
+    window.setTimeout(() => submitFirstChoice(context), 0);
   }
 
   function handleChoice(event) {
-    const option = radioFrom(event.target);
+    const option = matchingInPath(event, radioSelector);
     if (!option) return;
 
+    const context = contextFor(option, event);
+    if (!context) return;
+
     if (event.type === "change") {
-      beginChoice(option);
+      beginChoice(context, option);
     } else {
-      window.setTimeout(() => beginChoice(option), 0);
+      window.setTimeout(() => beginChoice(context, option), 0);
     }
   }
 
