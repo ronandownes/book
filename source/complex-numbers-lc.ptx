@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-complex"><title>Complex Numbers — LC</title>
+        <section xml:id="complex-intro"><title>Beyond the real numbers</title>
+          <p>We define <m>i</m> by <m>i^2=-1</m>. A complex number has the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real.</p>
+        </section>
+      </chapter>
