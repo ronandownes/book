@@ -6,6 +6,9 @@
     <frontmatter>
       <preface xml:id="welcome">
         <title>Welcome</title>
+        <p><em>All students, not just those headed for science and engineering, should develop a mathematical viewpoint, including critical thinking, problem-solving strategies, and estimation, in addition to computational skills.</em></p>
+        <p>— Katherine Yoshiwara, <url href="https://runestone.academy/ns/books/published/mfg/preface.html" visual="Modeling, Functions, and Graphs, Preface"/>.</p>
+        <p>Mathematics is for everyone. In this book, calculating correctly matters, but so do understanding ideas, choosing methods, estimating, testing claims and explaining why an answer makes sense.</p>
         <p><url href="https://ronandownes.github.io/maths/" visual="Irish School Maths Apps"/> accompanies this book with interactive activities, explorations and practice.</p>
         <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
       </preface>
