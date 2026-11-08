@@ -22,6 +22,10 @@
       <task><p>Suppose someone writes Spring twice inside the oval. Does that create a new season?</p><answer><p>No. A repeated name does not create a new element.</p></answer></task>
     </activity>
     <p>The <term>cardinality</term> of a set is the number of distinct elements it contains. For this set, <m>\#A=4</m>. The number 4 is a count, not another element: it has no dot in the oval.</p>
+    <warning xml:id="misconception-sets-repeated-elements">
+      <title>Counting an element twice</title>
+      <p>Repeating an element does not make the set larger. <m>\#\{2,2,4\}=2</m>, not <m>3</m>.</p>
+    </warning>
     <exercise xml:id="exercise-seasons-count">
       <statement><p>How many elements are in the set of the four seasons?</p></statement>
       <choices>
@@ -98,6 +102,10 @@
     <p>Now compare two collections, <m>F</m> (students who play football) and <m>M</m> (students who play a musical instrument). A survey records 15 students in <m>F</m>, 12 in <m>M</m>, and 5 in both.</p>
     <p>The <term>intersection</term> <m>F\cap M</m> contains the elements that are in both sets. The <term>union</term> <m>F\cup M</m> contains the elements in <m>F</m>, in <m>M</m>, or in both. In mathematics, “or” in a union includes the elements that belong to both sets.</p>
     <p>Place the 5 shared students first. Then <m>15-5=10</m> play football only, and <m>12-5=7</m> play an instrument only. These are the three regions inside the two ovals.</p>
+    <warning xml:id="misconception-sets-double-counting">
+      <title>Counting the overlap twice</title>
+      <p><m>15+12=27</m> counts the shared students twice. The number in at least one set is <m>15+12-5=22</m>.</p>
+    </warning>
     <figure xml:id="figure-two-set-regions">
       <caption>Two overlapping ovals show three regions.</caption>
       <image source="sets/two-set-regions.svg" width="95%">
