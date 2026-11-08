@@ -96,6 +96,10 @@
       \end{aligned}</me>
       <p>Make the leading term in each original binomial positive where possible. Nevertheless, a negative <em>outside</em> factor can still be necessary: <m>-8y+10=-2(4y-5)</m>. The important check is that both inner brackets match exactly, including their signs.</p>
     </example>
+    <exercise xml:id="four-products-positive-first">
+      <statement><p>Begin with <m>-10xy-14x+15y+21</m>. The first two terms are negative and the last two are positive. Move the positive pair to the front, without changing any sign, and factorise the resulting two groups. Can the final brackets both have positive leading coefficients without placing a minus sign outside the product?</p></statement>
+      <answer><p><m>15y+21-10xy-14x=3(5y+7)-2x(5y+7)=(3-2x)(5y+7)</m>. The corresponding form with a positive leading coefficient of <m>x</m> is <m>-(2x-3)(5y+7)</m>. Reordering makes the working more readable; it does not remove a genuine overall minus sign from the algebra.</p></answer>
+    </exercise>
     <exercise xml:id="four-products-group-alternative">
       <statement><p>Factorise <m>12xy+8y+15x+10</m> by grouping the first two and last two terms. Compare your answer with the expansion of <m>(3x+2)(4y+5)</m>. What has changed?</p></statement>
       <answer><p><m>(12xy+8y)+(15x+10)=4y(3x+2)+5(3x+2)=(4y+5)(3x+2)</m>. The factors are reversed, but multiplication is commutative.</p></answer>
