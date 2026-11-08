@@ -78,6 +78,9 @@
           </exercise>
         </section>
       </chapter>
+    </part>
+
+    <part xml:id="part-combinatorics"><title>Combinatorics</title>
       <chapter xml:id="chapter-counting"><title>Systematic Counting</title>
               <section xml:id="combinatorics-intro"><title>Arrangements and selections</title>
                 <p>Combinatorics studies how to count possible arrangements and selections.</p>
