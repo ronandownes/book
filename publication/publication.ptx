@@ -6,5 +6,7 @@
   <html favicon="simple">
     <baseurl href="https://ronandownes.github.io/book/"/>
     <brandlogo source="four-dots.svg" url="https://ronandownes.github.io/book/"/>
+    <!-- Native PreTeXt textbook layout; colours align with Maths Apps. -->
+    <css theme="default-modern" palette="blue-green" provide-dark-mode="no"/>
   </html>
 </publication>
