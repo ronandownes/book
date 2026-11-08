@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="chapter-factorisation"><title>Factorisation</title>
+        <section xml:id="factorisation-intro"><title>Reversing expansion</title>
+          <p>Factorisation writes an expression as a product. For example, <m>6x+9=3(2x+3)</m>.</p>
+        </section>
+      </section>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xml:id="chapter-expanding">
+<section xml:id="chapter-expanding">
 <title>Expanding Brackets</title>
 <introduction>
   <p>Expanding rewrites a product as a sum of terms. Factorising reverses this process. First learn why every product appears; then choose a clear, efficient method.</p>
   <p>Before you start, check that you can multiply and add signed integers, interpret coefficients and powers of <m>x</m>, and collect like terms. Revisit <xref ref="algebra-vocabulary"/> if you need to revise the language.</p>
 </introduction>
-<section xml:id="expanding-distribution">
+<subsection xml:id="expanding-distribution">
 <title>Every term matters: the distributive law</title>
 <p>The governing idea is <em>every term in one factor multiplies every term in the other</em>. This is the <term>distributive law</term>. It is the foundation of all the expansion methods in this chapter.</p>
 <me>a(b+c)=ab+ac.</me>
@@ -20,9 +20,9 @@
 <statement><p>Without expanding the brackets, predict the leading coefficient, constant term, and number of partial products in <m>(3x+4)(2x+7)</m>. Explain how you know.</p></statement>
 <answer><p>The leading coefficient is <m>3\cdot2=6</m>; the constant term is <m>4\cdot7=28</m>; there are <m>2\cdot2=4</m> partial products.</p></answer>
 </exercise>
-</section>
+</subsection>
 
-<section xml:id="expanding-foil-lab">
+<subsection xml:id="expanding-foil-lab">
 <title>FOIL lab: build understanding</title>
 <p>In this lab, <em>predict</em> before calculating. Use a different colour to trace each product if you find that helpful. Record your work clearly; large writing and plenty of space are more useful than squeezing the calculation into a small box.</p>
 <p>For the product of two binomials, the mnemonic FOIL stands for <em>First, Outer, Inner, Last</em>. It describes four applications of the distributive law. It is not a separate mathematical law.</p>
@@ -55,9 +55,9 @@
 <paragraphs xml:id="expanding-foil-reflect"><title>Reflect</title>
 <p>FOIL can help you <em>see</em> the four products and avoid omissions. Once you understand distribution, naming all four products can become slower than grouping the middle contributions immediately. Moreover, FOIL does not name all six products when a quadratic factor is present. The important idea to keep is <em>every term by every term</em>, not a four-letter mnemonic.</p>
 </paragraphs>
-</section>
+</subsection>
 
-<section xml:id="expanding-cross-products">
+<subsection xml:id="expanding-cross-products">
 <title>The cross-product method: collect like terms in a margin</title>
 <p>For two binomials, a compact alternative is to multiply the leading terms and constant terms directly, then combine the two cross-products for the middle coefficient.</p>
 <me>\begin{aligned}
@@ -86,9 +86,9 @@
 <paragraphs xml:id="expanding-cross-reflect"><title>Reflect</title>
 <p>Can you predict the leading and constant coefficients without pen and paper? Which two cross-products must be combined in the margin? Explain why a single middle-coefficient margin is specific to two linear factors. The distributive law itself remains valid for higher-degree factors.</p>
 </paragraphs>
-</section>
+</subsection>
 
-<section xml:id="expanding-place-value">
+<subsection xml:id="expanding-place-value">
 <title>Place-value multiplication: when a quadratic is involved</title>
 <p>For a linear factor multiplied by a quadratic, each term of the linear factor must multiply all three terms of the quadratic. Align partial products under their powers of <m>x</m> and then add coefficients in the same column.</p>
 <example xml:id="expanding-place-value-example">
@@ -105,9 +105,9 @@
 <statement><p>For <m>(3x+5)(2x^2+4x+7)</m>, predict the leading coefficient and constant term first. Then calculate the middle coefficients using aligned partial products.</p></statement>
 <answer><p>The leading coefficient is <m>6</m> and the constant term is <m>35</m>. The expansion is <m>6x^3+22x^2+41x+35</m>.</p></answer>
 </exercise>
-</section>
+</subsection>
 
-<section xml:id="expanding-homework">
+<subsection xml:id="expanding-homework">
 <title>Homework: consolidate, assess and extend</title>
 <p>Complete eight fully worked questions in your Maths copy using the interactive app.</p>
 <ol>
@@ -129,8 +129,8 @@
 <statement><p>Show that <m>7-3x=-(3x-7)</m>. Explain how this allows a positive leading coefficient inside the bracket and what you must do to the expanded answer at the end.</p></statement>
 <answer><p>Multiplying <m>3x-7</m> by <m>-1</m> gives <m>-3x+7</m>. If this expression occurs as a factor in a product, expand using <m>3x-7</m> and then negate every coefficient of the answer.</p></answer>
 </exercise>
-</section>
-<section xml:id="expanding-scaling">
+</subsection>
+<subsection xml:id="expanding-scaling">
 <title>Investigation lab: scaling a factor scales the product</title>
 <p>There is one idea behind several useful tricks of the trade: if one factor is multiplied by a number, then the product is multiplied by that same number.</p>
 <me>\bigl(kA(x)\bigr)B(x)=A(x)\bigl(kB(x)\bigr)=k\bigl(A(x)B(x)\bigr).</me>
@@ -168,9 +168,9 @@
 <paragraphs xml:id="expanding-scaling-reflect"><title>Reflect and connect to factorising</title>
 <p>Why does it not matter which factor is doubled? Why must <em>every</em> coefficient of a scaled factor change, not just one? Why does scaling both factors by <m>2</m> multiply the answer by <m>4</m>, not <m>2</m>? Taking out the highest common factor first often simplifies expansion and makes numerical factors explicit, which is especially useful when we begin factorising.</p>
 </paragraphs>
-</section>
+</subsection>
 
-<section xml:id="expanding-zero-placeholders">
+<subsection xml:id="expanding-zero-placeholders">
 <title>Hidden Maths: do we need the zeros?</title>
 <p>In place-value multiplication, a zero can hold an otherwise empty position. We sometimes omit zero terms when writing a simplified polynomial, just as we usually omit the positive sign at the beginning of a positive expression. But the risks are different when arranging a multiplication.</p>
 <exercise xml:id="expanding-zero-investigation">
@@ -187,9 +187,9 @@
 <p>In a final simplified expression, we normally omit zero terms, but while learning to multiply, write zero placeholders in shifted rows. Do not confuse a missing coefficient with a shift in place value. Only consider leaving the zeros unwritten once you can reliably maintain alignment and check your result.</p>
 </paragraphs>
 <p>Historical connection: zero as a placeholder is ancient, but its use as a number developed over time. Different civilisations devised placeholder symbols independently. Indian mathematician Brahmagupta described arithmetic involving zero in <m>628</m> CE; the Hindu-Arabic place-value system subsequently spread through the Islamic world into Europe. Zero was <em>not</em> invented just two or three hundred years ago.</p>
-</section>
+</subsection>
 
-<section xml:id="expanding-language">
+<subsection xml:id="expanding-language">
 <title>Mathematical language: say it, use it, explain it</title>
 <p>Use these words when explaining your work. For the wider vocabulary of algebra, see <xref ref="algebra-vocabulary"/>.</p>
 <dl>
@@ -207,9 +207,9 @@
 <statement><p>Decide which expressions are monic and which are quadratics: <m>x^2+4</m>, <m>2x^2+1</m>, <m>x^3-x</m>, <m>3x+7</m>. Can one expression be both monic and quadratic? Explain.</p></statement>
 <answer><p><m>x^2+4</m> is both monic and quadratic; <m>2x^2+1</m> is quadratic but not monic; <m>x^3-x</m> is monic and cubic; <m>3x+7</m> is linear and not monic.</p></answer>
 </exercise>
-</section>
+</subsection>
 
-<section xml:id="expanding-hidden-maths">
+<subsection xml:id="expanding-hidden-maths">
 <title>Hidden Maths: patterns worth discovering</title>
 <p>A good investigation begins with a prediction. Look for a pattern in the structure before carrying out all the arithmetic.</p>
 <exercise xml:id="expanding-hidden-x-plus-one">
@@ -231,9 +231,9 @@
 <title>Reflect</title>
 <p>Could you multiply by <m>x+1</m> by working with the coefficients alone, without repeatedly writing powers of <m>x</m>? Why does the place-value method make this pattern so visible?</p>
 </paragraphs>
-</section>
+</subsection>
 
-<section xml:id="expanding-beyond-school">
+<subsection xml:id="expanding-beyond-school">
 <title>Beyond school maths: an optional quintic challenge</title>
 <p>A quartic polynomial has degree <m>4</m>, and a <term>quintic</term> has degree <m>5</m>. These names describe degrees, not new multiplication rules. The same distributive law still works.</p>
 <exercise xml:id="expanding-quintic-exploration">
@@ -243,6 +243,6 @@
 <answer><p>The answer has degree <m>6</m> and equals <m>x^6+x^5+2x^4+2x^3+3x+3</m>. Treat the missing powers in the quintic factor as having zero coefficients when aligning the partial products.</p></answer>
 </exercise>
 <p>This is an extension, not part of the eight compulsory homework questions. Higher-degree multiplication can be explored later without adding more controls to the main classroom app.</p>
-</section>
+</subsection>
 
-</chapter>
+</section>

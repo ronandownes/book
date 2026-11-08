@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-trigonometry">
-<title>Ratios and Triangles</title>
+<title>Trigonometry — JC</title>
 <introduction>
 <p>We begin with the familiar term <term>reference angle</term>, then quickly call the chosen acute angle the <term>marked angle</term>, written <m>\theta</m>. The other acute angle is the <term>unmarked angle</term>. Every diagram protects the marked-angle arc inside the triangle and marks the right angle as <m>90^\circ</m>.</p>
 <p>Our method gives you two visual routes into a ratio: follow arrows along the two sides in the ratio and find their included angle, or identify the side left out and look at the angle opposite it. Both routes lead to the same choice. In every calculation, use the marked angle <m>\theta</m>.</p>
@@ -54,21 +54,6 @@
 <title>Proportion, change and limits</title>
 <p>For a fixed marked angle, all right-angled triangles with that angle are similar. Their side lengths change by the same scale factor, so each ratio remains constant. For example, if the hypotenuse is held fixed while the marked angle changes,</p>
 <me>o=h\sin\theta,\qquad a=h\cos\theta,\qquad o=a\tan\theta.</me>
-<p>For acute angles, sine increases towards 1, cosine decreases towards 0, and tangent increases. The tangent graph does not turn into a wave in this right-triangle range: it rises without bound as the angle approaches 90 degrees and has a vertical asymptote there.</p>
-<figure xml:id="trig-ratio-graph">
-<caption>As the marked angle moves from 0 degrees to 90 degrees, sine rises, cosine falls, and tangent leaves its separate plotted scale as it approaches the vertical asymptote at 90 degrees. The two vertical scales are labelled.</caption>
-<image source="trigonometry/trigonometry-ratio-graph.svg" width="100%">
-<description>Axes show marked angle in degrees from 0 to 90. On the left scale from 0 to 1, red sine increases and blue cosine decreases. On the right scale from 0 to 5, dark tangent increases and leaves the plotted scale before 90 degrees. A vertical dashed line at 90 degrees marks the asymptote. The graph values at 0 and 90 degrees are approached as limits; the endpoints do not describe non-degenerate right triangles.</description>
-</image>
-</figure>
-<p>Read the endpoints as limits:</p>
-<me>\lim_{\theta\to 0^\circ+}\sin\theta=0,\qquad \lim_{\theta\to 0^\circ+}\cos\theta=1,\qquad \lim_{\theta\to 0^\circ+}\tan\theta=0.</me>
-<me>\lim_{\theta\to 90^\circ-}\sin\theta=1,\qquad \lim_{\theta\to 90^\circ-}\cos\theta=0,\qquad \lim_{\theta\to 90^\circ-}\tan\theta=+\infty.</me>
-<p>For a non-degenerate right-angled triangle, <m>0^\circ&lt;\theta&lt;90^\circ</m>. Therefore <m>0&lt;\sin\theta&lt;1</m> and <m>0&lt;\cos\theta&lt;1</m>; <m>\tan\theta</m> is positive and has no upper bound.</p>
 </section>
-<section xml:id="trig-cosine-rule">
-<title>The Cosine Rule</title>
-<p>The cosine rule extends Pythagoras' theorem to triangles that need not be right-angled.</p>
-<p><me>c^2=a^2+b^2-2ab\cos C.</me></p>
-</section>
+
 </chapter>
