@@ -6,7 +6,7 @@
     <frontmatter>
       <preface xml:id="welcome">
         <title>Welcome</title>
-        <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
+        <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. Junior Cycle (JC) mathematics provides the foundation; Leaving Certificate (LC) chapters contain additional mathematics and refer back to JC rather than repeating it. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
       </preface>
     </frontmatter>
 
@@ -18,71 +18,35 @@
       <title>Number</title>
       <xi:include href="./sets-chapter.ptx" />
       <xi:include href="./sequences-chapter.ptx" />
-      <chapter xml:id="chapter-complex"><title>Complex Numbers</title>
-        <section xml:id="complex-intro"><title>Beyond the real numbers</title>
-          <p>We define <m>i</m> by <m>i^2=-1</m>. A complex number has the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real.</p>
-        </section>
-      </chapter>
+      <xi:include href="./complex-numbers-lc.ptx" />
     </part>
 
     <part xml:id="part-algebra"><title>Algebra</title>
-      <xi:include href="./algebra-language.ptx" />
-      <xi:include href="./expanding-brackets.ptx" />
-      <chapter xml:id="chapter-factorisation"><title>Factorisation</title>
-        <section xml:id="factorisation-intro"><title>Reversing expansion</title>
-          <p>Factorisation writes an expression as a product. For example, <m>6x+9=3(2x+3)</m>.</p>
-        </section>
-      </chapter>
+      <xi:include href="./algebra-jc.ptx" />
+      <xi:include href="./algebra-lc.ptx" />
     </part>
 
     <part xml:id="part-functions"><title>Functions</title>
-      <chapter xml:id="chapter-functions"><title>Functions and Graphs</title>
-        <section xml:id="functions-intro"><title>Inputs and outputs</title>
-          <p>A function assigns exactly one output to each input in its domain.</p>
-        </section>
-      </chapter>
-      <chapter xml:id="chapter-calculus"><title>Calculus</title>
-        <section xml:id="calculus-intro"><title>Change and accumulation</title>
-          <p>Calculus develops ways to study rates of change and accumulated quantities.</p>
-        </section>
-      </chapter>
+      <xi:include href="./functions-core.ptx" />
+      <xi:include href="./calculus-lc.ptx" />
     </part>
 
     <part xml:id="part-geometry"><title>Geometry</title>
-      <chapter xml:id="chapter-geometry"><title>Shapes and Reasoning</title>
-        <section xml:id="geometry-intro"><title>Seeing mathematical structure</title>
-          <p>We describe geometric objects using definitions, diagrams and carefully justified reasoning.</p>
-        </section>
-      </chapter>
+      <xi:include href="./geometry-core.ptx" />
     </part>
 
     <part xml:id="part-trigonometry"><title>Trigonometry</title>
       <xi:include href="./trigonometry-chapter.ptx" />
+      <xi:include href="./trigonometry-lc.ptx" />
     </part>
 
     <part xml:id="part-statistics"><title>Statistics</title>
-      <chapter xml:id="chapter-statistics"><title>Understanding Data</title>
-        <section xml:id="statistics-intro"><title>Data and variation</title>
-          <p>Statistics helps us collect, summarise and draw justified conclusions from data.</p>
-        </section>
-      </chapter>
+      <xi:include href="./statistics-core.ptx" />
     </part>
 
     <part xml:id="part-probability"><title>Probability</title>
-      <chapter xml:id="chapter-probability"><title>Events and Counting</title>
-        <section xml:id="probability-fcp"><title>The Fundamental Counting Principle</title>
-          <p>When the first choice has <m>m</m> possibilities and the second has <m>n</m> possibilities, every combination of choices gives <m>mn</m> possibilities.</p>
-          <exercise xml:id="exercise-fcp">
-            <statement><p>How many two-character codes can be formed from three choices for the first character and four for the second, if every pair is allowed?</p></statement>
-            <answer><p><m>3\cdot4=12</m>.</p></answer>
-          </exercise>
-        </section>
-      </chapter>
-      <chapter xml:id="chapter-counting"><title>Systematic Counting</title>
-              <section xml:id="combinatorics-intro"><title>Arrangements and selections</title>
-                <p>Combinatorics studies how to count possible arrangements and selections.</p>
-              </section>
-            </chapter>
+      <xi:include href="./probability-core.ptx" />
+      <xi:include href="./combinatorics-core.ptx" />
     </part>
 
     <part xml:id="part-specifications">
