@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-GB">
   <book xml:id="mathematics-book">
-    <title>Irish School Maths</title>
-    <subtitle>Book · Junior Cert and Leaving Cert</subtitle>
+    <title>Irish School Maths Book</title>
+    <subtitle>Junior Cert and Leaving Cert</subtitle>
     <frontmatter>
       <preface xml:id="welcome">
         <title>Welcome</title>
+        <p><url href="https://ronandownes.github.io/maths/" visual="Irish School Maths Apps"/> accompanies this book with interactive activities, explorations and practice.</p>
         <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
       </preface>
     </frontmatter>
