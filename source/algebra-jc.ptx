@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="algebra-jc">
+<title>Algebra — JC</title>
+<introduction>
+<p>Junior Cycle algebra provides the foundation for later mathematics. Study each idea here once. Where Leaving Certificate mathematics uses the same idea, the LC material links back rather than repeating it.</p>
+<p>Some exercises extend beyond ordinary requirements. Higher Level material will be labelled within the relevant section, not separated into a second JC chapter.</p>
+</introduction>
+<xi:include href="./algebra-language.ptx"/>
+<xi:include href="./expanding-brackets.ptx"/>
+<xi:include href="./factorisation-jc.ptx"/>
+</chapter>
