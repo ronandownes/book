@@ -117,14 +117,14 @@
 &amp;=\boxed{-1-5i}.
 \end{aligned}</me>
 <p>Check by multiplying your answer by <m>1+i</m>: you should recover <m>4-6i</m>.</p></example>
-<subsection xml:id="complex-bank-division"><title>Practice bank: division</title><p>Work independently. Check the answer only after you have recorded your reasoning; repeat with fresh values in the linked app.</p><exercise xml:id="complex-ex-division-1"><statement><p>Simplify <m>dfrac{4-6i}{1+i}</m>.</p></statement><answer><p><m>-1-5i</m>.</p></answer></exercise>
-<exercise xml:id="complex-ex-division-2"><statement><p>Simplify <m>dfrac{15}{1+2i}</m>.</p></statement><answer><p><m>3-6i</m>.</p></answer></exercise>
-<exercise xml:id="complex-ex-division-3"><statement><p>Simplify <m>dfrac{2+3i}{1-2i}</m>.</p></statement><answer><p><m>dfrac{-4+7i}{5}</m>.</p></answer></exercise>
-<exercise xml:id="complex-ex-division-4"><statement><p>Simplify <m>dfrac{3+i}{1+i}</m>.</p></statement><answer><p><m>2-i</m>.</p></answer></exercise>
-<exercise xml:id="complex-ex-division-5"><statement><p>Simplify <m>dfrac1i</m>.</p></statement><answer><p><m>-i</m>.</p></answer></exercise>
-<exercise xml:id="complex-ex-division-6"><statement><p>Simplify <m>dfrac{1+i}{1-i}</m>.</p></statement><answer><p><m>i</m>.</p></answer></exercise>
-<exercise xml:id="complex-ex-division-7"><statement><p>Simplify <m>dfrac{3+4i}{3-4i}</m>.</p></statement><answer><p><m>dfrac{-7+24i}{25}</m>.</p></answer></exercise>
-<exercise xml:id="complex-ex-division-8"><statement><p>Simplify <m>dfrac{5+5i}{5i}</m>.</p></statement><answer><p><m>1-i</m>.</p></answer></exercise></subsection>
+<subsection xml:id="complex-bank-division"><title>Practice bank: division</title><p>Work independently. Check the answer only after you have recorded your reasoning; repeat with fresh values in the linked app.</p><exercise xml:id="complex-ex-division-1"><statement><p>Simplify <m>\dfrac{4-6i}{1+i}</m>.</p></statement><answer><p><m>-1-5i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-2"><statement><p>Simplify <m>\dfrac{15}{1+2i}</m>.</p></statement><answer><p><m>3-6i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-3"><statement><p>Simplify <m>\dfrac{2+3i}{1-2i}</m>.</p></statement><answer><p><m>\dfrac{-4+7i}{5}</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-4"><statement><p>Simplify <m>\dfrac{3+i}{1+i}</m>.</p></statement><answer><p><m>2-i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-5"><statement><p>Simplify <m>\dfrac1i</m>.</p></statement><answer><p><m>-i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-6"><statement><p>Simplify <m>\dfrac{1+i}{1-i}</m>.</p></statement><answer><p><m>i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-7"><statement><p>Simplify <m>\dfrac{3+4i}{3-4i}</m>.</p></statement><answer><p><m>\dfrac{-7+24i}{25}</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-8"><statement><p>Simplify <m>\dfrac{5+5i}{5i}</m>.</p></statement><answer><p><m>1-i</m>.</p></answer></exercise></subsection>
 </section>
 
 <section xml:id="complex-modulus"><title>7. Modulus: distance and comparisons</title>
@@ -139,8 +139,8 @@ z-w&amp;=-2+4i,\\
 \end{aligned}</me>
 <p>An interesting investigation asks whether <m>|z+w|=|z|+|w|</m> always holds. It does not: the general relationship is <m>|z+w|\le |z|+|w|</m>. Think about the triangle formed by successive displacements.</p></example>
 <subsection xml:id="complex-bank-modulus-and-conjugates"><title>Practice bank: modulus and conjugates</title><p>Work independently. Check the answer only after you have recorded your reasoning; repeat with fresh values in the linked app.</p><exercise xml:id="complex-ex-modulus-and-conjugates-1"><statement><p>Find <m>|3+4i|</m>.</p></statement><answer><p><m>5</m>.</p></answer></exercise>
-<exercise xml:id="complex-ex-modulus-and-conjugates-2"><statement><p>Find <m>|-1+2i|</m> in surd form.</p></statement><answer><p><m>sqrt5</m>.</p></answer></exercise>
-<exercise xml:id="complex-ex-modulus-and-conjugates-3"><statement><p>Find the distance between <m>2+3i</m> and <m>4-i</m>.</p></statement><answer><p><m>|(-2+4i)|=2sqrt5</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-modulus-and-conjugates-2"><statement><p>Find <m>|-1+2i|</m> in surd form.</p></statement><answer><p><m>\sqrt{5}</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-modulus-and-conjugates-3"><statement><p>Find the distance between <m>2+3i</m> and <m>4-i</m>.</p></statement><answer><p><m>|(-2+4i)|=2\sqrt{5}</m>.</p></answer></exercise>
 <exercise xml:id="complex-ex-modulus-and-conjugates-4"><statement><p>Give one complex number with integer components and modulus less than <m>5</m>.</p></statement><answer><p>For example <m>3+0i</m>, whose modulus is <m>3</m>. Other correct examples exist.</p></answer></exercise>
 <exercise xml:id="complex-ex-modulus-and-conjugates-5"><statement><p>Find the conjugate of <m>-3+4i</m>.</p></statement><answer><p><m>-3-4i</m>.</p></answer></exercise>
 <exercise xml:id="complex-ex-modulus-and-conjugates-6"><statement><p>For <m>z=2-3i</m>, find <m>z+ar z</m>.</p></statement><answer><p><m>4</m>: twice the real part.</p></answer></exercise>
