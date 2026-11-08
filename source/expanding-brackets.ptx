@@ -6,7 +6,7 @@
   <p>We begin with one term multiplying a bracket, then move to two brackets. Understand the principle first; choose an accurate and efficient method as you become confident.</p>
   <p>Before you start, revise signed numbers, coefficients, powers and like terms in <xref ref="algebra-vocabulary"/> if needed.</p>
 </introduction>
-<section xml:id="expanding-distribution">
+<section xml:id="expanding-principle">
 <title>The mathematics: the distributive law</title>
 <p>Multiplication distributes over addition and subtraction. Each term inside a bracket is multiplied by the factor outside it.</p>
 <me>a(b+c)=ab+ac.</me>
@@ -80,7 +80,7 @@
 <p><url href="https://ronandownes.github.io/maths/algebra/expansions/" visual="Compare the interactive expansion methods"/>. Use them to understand and check calculations, then work towards the quickest reliable method for you.</p>
 </section>
 
-<section xml:id="expanding-distribution-legacy">
+<section xml:id="expanding-distribution">
 <title>Recognising every partial product</title>
 <p>The partial-product view below reinforces the distributive law. It is a useful explanation, but it need not become your permanent written procedure.</p>
 <example xml:id="expanding-example-distribution">
