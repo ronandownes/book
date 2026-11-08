@@ -35,6 +35,10 @@
       </tabular>
     </table>
     <p>Here <m>T_1=3</m>, <m>T_4=9</m>, and <m>T_5=11</m>. The subscript is the <em>position</em>, not a multiplier.</p>
+    <warning xml:id="misconception-sequences-term-number">
+      <title>Term number and term value</title>
+      <p><m>T_4</m> is the fourth term, not <m>4\times T</m>. In this sequence, <m>T_4=9</m>.</p>
+    </warning>
     <p>Some sequences, including Fibonacci numbers, start at position <m>0</m>. We always state the starting index when it could cause confusion.</p>
   </subsection>
 </section>
