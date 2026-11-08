@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="seq-rules-section">
+  <title>Describing a sequence and finding a rule</title>
+  <subsection xml:id="seq-rule-words">
+    <title>A rule in words</title>
+    <p>For <m>3,5,7,9,\ldots</m>, start at <m>3</m> and add <m>2</m> each time. This is a <term>term-by-term rule</term>: it tells us how to get the next term from the present one.</p>
+    <p>Such a rule is convenient for the next few terms. It is less convenient for finding the hundredth term without calculating all the earlier terms.</p>
+  </subsection>
+  <subsection xml:id="seq-rule-formula">
+    <title>As a formula: the nth term</title>
+    <p>Let <m>n</m> be the position. Since the sequence rises by <m>2</m> each time, test the expression <m>2n</m>. It produces <m>2,4,6,8,\ldots</m>: each result is one too small.</p>
+    <table xml:id="seq-rule-test-table">
+      <title>Testing and improving a proposed rule</title>
+      <tabular halign="center">
+        <row header="yes"><cell><m>n</m></cell><cell>Wanted</cell><cell><m>2n</m></cell><cell><m>2n+1</m></cell></row>
+        <row><cell><m>1</m></cell><cell><m>3</m></cell><cell><m>2</m></cell><cell><m>3</m></cell></row>
+        <row><cell><m>2</m></cell><cell><m>5</m></cell><cell><m>4</m></cell><cell><m>5</m></cell></row>
+        <row><cell><m>3</m></cell><cell><m>7</m></cell><cell><m>6</m></cell><cell><m>7</m></cell></row>
+        <row><cell><m>4</m></cell><cell><m>9</m></cell><cell><m>8</m></cell><cell><m>9</m></cell></row>
+      </tabular>
+    </table>
+    <p>Adding <m>1</m> gives the correct values. We can write an <term>explicit formula</term> (also called a <term>closed formula</term>):</p>
+    <me>T_n=2n+1,\qquad n\geq1.</me>
+    <p>Now the hundredth term is immediate:</p>
+    <me>T_{100}=2(100)+1=201.</me>
+    <exercise xml:id="seq-formula-ex">
+      <statement><p>Use <m>T_n=2n+1</m> to find <m>T_{10}</m> and <m>T_{50}</m>. Which term has value <m>101</m>?</p></statement>
+      <answer><p><m>T_{10}=21</m> and <m>T_{50}=101</m>. Solving <m>2n+1=101</m> gives <m>n=50</m>.</p></answer>
+    </exercise>
+  </subsection>
+  <subsection xml:id="seq-recursive-rule">
+    <title>Term-by-term and recursive formulas</title>
+    <p>We can describe the same sequence using its first term and a <term>recursive formula</term>:</p>
+    <me>T_1=3,\qquad T_{n+1}=T_n+2\quad(n\geq1).</me>
+    <p>A recursive rule uses one or more earlier terms. It must include enough starting terms to make the sequence definite.</p>
+    <p>Compare the two descriptions. The recursive rule tells us how the sequence <em>changes</em>; the explicit formula finds a term directly from its <em>position</em>.</p>
+  </subsection>
+  <subsection xml:id="seq-many-rules">
+    <title>Can the same first terms have different rules?</title>
+    <p>Yes. The beginning <m>3,5,7,9</m> fits a constant increase of two. It also fits the rule “list positive odd numbers whose decimal representation does not contain the digit 1”. This second rule continues <m>3,5,7,9,23,25,\ldots</m>.</p>
+    <p>A finite list never proves that one particular rule is the only possible rule. We can <em>propose</em> a simple rule, check it against the known terms and ask for more information about the intended pattern.</p>
+    <activity xml:id="seq-many-rules-activity">
+      <title>Two answers can both be justified</title>
+      <task><p>A friend writes <m>1,2,4,8,\ldots</m>. Suggest the next number if the terms double. Then invent a different well-defined rule agreeing with the first four terms.</p>
+        <answer><p>Doubling gives <m>16</m>. For example, a rule can agree with <m>2^{n-1}</m> at positions 1 to 4, then add <m>(n-1)(n-2)(n-3)(n-4)</m> at position <m>n</m>. Its fifth term is <m>40</m>, not <m>16</m>. Many other answers are possible if the rule is clearly stated.</p></answer>
+      </task>
+    </activity>
+  </subsection>
+</section>

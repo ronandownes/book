@@ -29,6 +29,10 @@
 <p>Begin with <xref ref="sequences-foundations"/> for definitions. The deeper investigations include <xref ref="sequences-intro"/>, <xref ref="sequences-quadratic"/>, <xref ref="sequences-geometric"/> and <xref ref="sequences-sum"/>. When reading a print copy, use the formula-reference entry in the contents or index rather than relying on a fixed page number.</p>
 </section>
 <xi:include href="./sequences-foundations.ptx"/>
+<xi:include href="./sequences-rules.ptx"/>
+<xi:include href="./sequences-families.ptx"/>
+<xi:include href="./sequences-series-introduction.ptx"/>
+<xi:include href="./sequences-resources.ptx"/>
 <section xml:id="sequences-cicadas">
 <title>Two clocks in nature: 13 years and 17 years</title>
 <p>Imagine walking into a forest where the trunks, branches and ground are suddenly covered with periodical cicadas. These insects spend most of their lives underground, then emerge in very large numbers during a few weeks. The timing creates a surprising mathematical puzzle: some populations emerge every 13 years and others every 17 years. This is a <term>mass emergence</term>, not a crop-destroying swarm.</p>

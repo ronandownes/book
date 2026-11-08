@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="seq-interactive-resources">
+  <title>Explore, practise and check your understanding</title>
+  <introduction><p>Work out an answer <em>before</em> checking it. Begin with the visual exploration, then practise the rule on paper. The final test should come later, without hints.</p></introduction>
+  <subsection xml:id="seq-our-apps">
+    <title>Maths Apps for this chapter</title>
+    <ul>
+      <li><p><url href="https://ronandownes.github.io/maths/apps/linear-sequences/index.html" visual="Linear Sequences"/>: show and hide under-arcs, work backwards to <m>T_0</m>, then test a rule.</p></li>
+      <li><p><url href="https://ronandownes.github.io/maths/apps/quadratic-sequences/index.html" visual="Quadratic Sequences"/>: look at first and second differences.</p></li>
+      <li><p><url href="https://ronandownes.github.io/maths/apps/geometric-sequences/index.html" visual="Geometric Sequences"/>: change the multiplier or divisor.</p></li>
+    </ul>
+  </subsection>
+  <subsection xml:id="seq-other-tools">
+    <title>Other interactive resources worth exploring</title>
+    <ul>
+      <li><p><url href="https://www.geogebra.org/m/ydbg2brp" visual="GeoGebra: Arithmetic and Geometric Series"/> provides fact sheets and test-yourself activities.</p></li>
+      <li><p><url href="https://www.geogebra.org/m/ZCjrspV9" visual="GeoGebra: Linear Sequence Game"/> practises finding the nth term.</p></li>
+      <li><p><url href="https://www.geogebra.org/m/qMdj8Std" visual="GeoGebra: Quadratic Sequence Game"/> extends that practice to quadratic patterns.</p></li>
+      <li><p><url href="https://www.geogebra.org/m/f08hfjvx" visual="GeoGebra: Sequences and Series (University of Melbourne)"/> links sequence terms, limits and partial sums.</p></li>
+      <li><p><url href="https://www.geogebra.org/m/pdekEdf9" visual="GeoGebra: The Sequence of Partial Sums"/> plots terms beside running totals.</p></li>
+      <li><p><url href="https://www.mathsisfun.com/algebra/sequence-diff-tool.html" visual="Maths Is Fun: Sequence Differences Tool"/> is useful for spotting constant differences.</p></li>
+    </ul>
+  </subsection>
+  <subsection xml:id="seq-reading-links">
+    <title>Further reading</title>
+    <p>Compare the original approaches in <url href="https://math.oscarlevin.com/discrete-book/" visual="Oscar Levin's PreTeXt Discrete Mathematics"/>, <url href="https://openstax.org/books/college-algebra-2e/pages/9-introduction-to-sequences-probability-and-counting-theory" visual="OpenStax College Algebra 2e"/>, and <url href="https://www.mathsisfun.com/algebra/sequences-series.html" visual="Maths Is Fun: Sequences and Series"/>. The explanations in this book are independently written and adapted to our teaching sequence.</p>
+  </subsection>
+</section>
