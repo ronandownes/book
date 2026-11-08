@@ -5,9 +5,9 @@
   <section xml:id="sets-first-look">
     <title>A circle and a collection</title>
     <introduction>
-      <p>We begin by looking. We will introduce notation when it helps us say something useful.</p>
+      <p>Begin with one circle. Move the elements. Then learn the notation.</p>
     </introduction>
-    <p>A <term>set</term> is a collection of distinct objects, called its <term>elements</term>. Imagine an oval labelled <m>A</m> with four separate solid dots labelled Spring, Summer, Autumn and Winter. Each dot represents one season.</p>
+    <p>A <xref ref="glossary-set" text="title"/> is a collection of distinct objects. Each object is an <xref ref="glossary-element" text="title"/>. The oval shows four seasons in set <m>A</m>.</p>
     <figure xml:id="figure-seasons-set">
       <caption>A set of four seasons.</caption>
       <image source="sets/seasons.svg" width="95%">
@@ -15,13 +15,17 @@
         <description><p>The oval is labelled <m>A</m>. Four separate solid dots inside it are labelled Spring, Summer, Autumn and Winter. Each dot represents one distinct element.</p></description>
       </image>
     </figure>
-    <p>Draw that oval now and put a solid dot beside each season. Do not draw a box around it yet: one set is enough.</p>
+    <figure xml:id="figure-one-set-venn-app">
+      <caption>Move the elements. Rearranging them does not change the set.</caption>
+      <interactive xml:id="interactive-one-set-venn" iframe="https://ronandownes.github.io/maths/apps/sets/one-set-venn.html?embed=1" width="100%" aspect="4:5"/>
+    </figure>
+    <p><url href="https://ronandownes.github.io/maths/apps/sets/one-set-venn.html">Open the one-set Venn app.</url> Draw your own oval with four labelled dots. No universal rectangle yet.</p>
     <activity xml:id="activity-season-picture">
       <title>Look, count, explain</title>
       <task><p>How many elements can you count? What exactly are you counting?</p><answer><p>Four distinct elements, represented by four solid dots.</p></answer></task>
       <task><p>Suppose someone writes Spring twice inside the oval. Does that create a new season?</p><answer><p>No. A repeated name does not create a new element.</p></answer></task>
     </activity>
-    <p>The <term>cardinality</term> of a set is the number of distinct elements it contains. For this set, <m>\#A=4</m>. The number 4 is a count, not another element: it has no dot in the oval.</p>
+    <p>The <xref ref="glossary-cardinality" text="title"/> of a set is its number of distinct elements: <m>\#A=4</m>. The 4 is a count, not an element.</p>
     <exercise xml:id="exercise-seasons-count">
       <statement><p>How many elements are in the set of the four seasons?</p></statement>
       <choices>
@@ -36,7 +40,9 @@
 <section xml:id="sets-properties">
     <title>Properties of sets</title>
     <p>A set must be <term>well-defined</term>: for any object under discussion, we can decide clearly whether it belongs. “The even numbers from 1 to 8” is clear. “The nicest numbers” is not, because people may disagree about what “nicest” means.</p>
-    <p>Let <m>A=\{2,4,6,8\}</m> and <m>B=\{8,6,4,2,2\}</m>. These are the same set. The order of the elements does not matter, and repeating an element does not add a new element. Two sets are equal exactly when they have the same distinct elements.</p>
+    <p>Let <m>A=\{2,4,6,8\}</m> and <m>B=\{8,6,4,2,2\}</m>. Then <m>A=B</m>. Order and repetition do not change the elements.</p>
+    <p>You may list your favourite subjects in order of preference. A set has no such order. In a Venn diagram, spread the elements out clearly; their positions have no mathematical significance.</p>
+    <p>What about zero? It is a multiple of two because <m>2\times0=0</m>. The single-digit, non-negative multiples of two form <m>E=\{0,2,4,6,8\}</m>. The one-set Venn app lets you investigate this.</p>
     <div>
       <title>Three facts to keep in mind</title>
       <ul>

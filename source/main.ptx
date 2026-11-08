@@ -6,7 +6,8 @@
     <frontmatter>
       <preface xml:id="welcome">
         <title>Welcome</title>
-        <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
+        <p>Look. Predict. Explore. Practise. Explain. Try each question before revealing its answer.</p>
+        <p><url href="https://ronandownes.github.io/maths/apps/index.html">Browse Maths Apps</url> to find every interactive investigation by topic.</p>
       </preface>
     </frontmatter>
 
@@ -84,10 +85,28 @@
               </section>
             </chapter>
     </part>
-
     <part xml:id="part-specifications">
       <title>Specifications</title>
       <xi:include href="./specifications.ptx" />
     </part>
+
+    <backmatter>
+      <glossary xml:id="mathematics-glossary">
+        <title>Mathematical Words</title>
+        <headnote><p>Use these definitions while reading. On the web, linked terms open short explanations.</p></headnote>
+        <gi xml:id="glossary-area"><title>area</title><p>The amount of surface inside a shape. It is measured in square units, such as <m>\mathrm{cm}^2</m>.</p></gi>
+        <gi xml:id="glossary-cardinality"><title>cardinality</title><p>The number of distinct elements in a set. For set <m>A</m>, we write <m>\#A</m>.</p></gi>
+        <gi xml:id="glossary-complement"><title>complement</title><p>The elements in the universal set that are not in the given set.</p></gi>
+        <gi xml:id="glossary-element"><title>element</title><p>One object belonging to a set.</p></gi>
+        <gi xml:id="glossary-height"><title>height</title><p>The perpendicular distance from a base to the opposite side or vertex. For a rectangle here, it is the vertical side length.</p></gi>
+        <gi xml:id="glossary-intersection"><title>intersection</title><p>The elements common to both sets. Written <m>A\cap B</m>.</p></gi>
+        <gi xml:id="glossary-multiple"><title>multiple</title><p>A number of the form <m>kn</m> for an integer <m>n</m>. Zero is a multiple of any non-zero integer <m>k</m>.</p></gi>
+        <gi xml:id="glossary-perimeter"><title>perimeter</title><p>The distance all the way around a shape, measured in length units such as centimetres.</p></gi>
+        <gi xml:id="glossary-set"><title>set</title><p>A well-defined collection of distinct objects. Order and repetition do not affect the set.</p></gi>
+        <gi xml:id="glossary-union"><title>union</title><p>All elements belonging to at least one of two sets. Written <m>A\cup B</m>.</p></gi>
+        <gi xml:id="glossary-universal"><title>universal set</title><p>The set of all elements under discussion, often written <m>U</m>.</p></gi>
+        <gi xml:id="glossary-width"><title>width</title><p>A side length measured across the rectangle.</p></gi>
+      </glossary>
+    </backmatter>
   </book>
 </pretext>

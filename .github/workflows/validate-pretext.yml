@@ -1,0 +1,37 @@
+name: Validate PreTeXt XML and glossary JavaScript
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate PreTeXt XML and linked glossary terms
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+          documents = {}
+          ids = set()
+          references = set()
+          for file in sorted(Path("source").glob("*.ptx")):
+              root = ET.parse(file).getroot()
+              documents[str(file)] = root
+              for node in root.iter():
+                  xmlid = node.get("{http://www.w3.org/XML/1998/namespace}id")
+                  if xmlid:
+                      assert xmlid not in ids, f"Duplicate XML ID: {xmlid}"
+                      ids.add(xmlid)
+                  if node.tag == "xref" and node.get("ref", "").startswith("glossary-"):
+                      references.add(node.get("ref"))
+          assert references <= ids, f"Unresolved glossary references: {references-ids}"
+          print(f"Validated {len(documents)} source XML files and {len(references)} glossary references")
+          PY
+      - name: Check book JavaScript syntax
+        run: node --check assets/sets/literacy-glossary.js
