@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 430" role="img" aria-labelledby="title desc">
+<title id="title">The included angle identifies sine, cosine, or tangent</title>
+<desc id="desc">Three right triangles show the marked angle, unmarked angle, and right angle highlighted according to whether sine, cosine, or tangent is used. Opposite is red, adjacent blue, and hypotenuse green.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9z" fill="#243d55"/></marker></defs>
+<rect x="8" y="8" width="366" height="414" rx="15" fill="#f8fbff" stroke="#d8e3ed"/><rect x="392" y="8" width="366" height="414" rx="15" fill="#f8fbff" stroke="#d8e3ed"/><rect x="776" y="8" width="366" height="414" rx="15" fill="#f8fbff" stroke="#d8e3ed"/>
+<g font-family="Arial,sans-serif" fill="#243d55">
+<text x="30" y="43" font-size="25" font-weight="700">Sine · family 1</text><text x="414" y="43" font-size="25" font-weight="700">Cosine · family 4</text><text x="798" y="43" font-size="25" font-weight="700">Tangent · family 7</text>
+<text x="30" y="390" font-size="18">omit adjacent a → unmarked included angle</text><text x="414" y="390" font-size="18">omit opposite o → marked included angle</text><text x="798" y="390" font-size="18">omit hypotenuse h → right included angle</text>
+<text x="30" y="416" font-size="22" font-weight="700">sin θ = o/h</text><text x="414" y="416" font-size="22" font-weight="700">cos θ = a/h</text><text x="798" y="416" font-size="22" font-weight="700">tan θ = o/a</text>
+</g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(38,0)">
+<path d="M0 330 L232 330" stroke="#2369d1" stroke-width="7"/><path d="M232 330 L232 177" stroke="#c63d43" stroke-width="7"/><path d="M0 330 L232 177" stroke="#18834b" stroke-width="7"/>
+<path d="M92 330 L143 330" stroke="#243d55" stroke-width="3" marker-end="url(#arrow)"/><path d="M232 278 L232 224" stroke="#243d55" stroke-width="3" marker-end="url(#arrow)"/><path d="M91 270 L142 236" stroke="#243d55" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M28 330 A28 28 0 0 0 23.4 314.6" stroke="#c63d43" stroke-width="3"/><path d="M232 203 A26 26 0 0 1 210.2 191.4" stroke="#2369d1" stroke-width="5"/><path d="M212 330 v-18 h20" stroke="#18834b" stroke-width="3"/>
+<text x="133" y="355" fill="#2369d1" font-size="20" font-family="Arial">a</text><text x="251" y="258" fill="#c63d43" font-size="20" font-family="Arial">o</text><text x="103" y="229" fill="#18834b" font-size="20" font-family="Arial">h</text><text x="40" y="321" fill="#c63d43" font-size="18" font-family="Arial" font-weight="700">θ</text><text x="210" y="190" fill="#2369d1" font-size="17" font-family="Arial" font-weight="700">unmarked</text><text x="207" y="304" fill="#18834b" font-size="15" font-family="Arial">90°</text>
+</g>
+<g transform="translate(422,0)">
+<path d="M0 330 L232 330" stroke="#2369d1" stroke-width="7"/><path d="M232 330 L232 177" stroke="#c63d43" stroke-width="7"/><path d="M0 330 L232 177" stroke="#18834b" stroke-width="7"/>
+<path d="M92 330 L143 330" stroke="#243d55" stroke-width="3" marker-end="url(#arrow)"/><path d="M91 270 L142 236" stroke="#243d55" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M28 330 Q26 311 22 306" stroke="#c63d43" stroke-width="5"/><path d="M232 205 Q212 204 205 213" stroke="#2369d1" stroke-width="3"/><path d="M212 330 v-18 h20" stroke="#18834b" stroke-width="3"/>
+<text x="133" y="355" fill="#2369d1" font-size="20" font-family="Arial">a</text><text x="251" y="258" fill="#c63d43" font-size="20" font-family="Arial">o</text><text x="103" y="229" fill="#18834b" font-size="20" font-family="Arial">h</text><text x="40" y="321" fill="#c63d43" font-size="18" font-family="Arial" font-weight="700">θ</text><text x="210" y="190" fill="#2369d1" font-size="17" font-family="Arial" font-weight="700">unmarked</text><text x="207" y="304" fill="#18834b" font-size="15" font-family="Arial">90°</text>
+</g>
+<g transform="translate(806,0)">
+<path d="M0 330 L232 330" stroke="#2369d1" stroke-width="7"/><path d="M232 330 L232 177" stroke="#c63d43" stroke-width="7"/><path d="M0 330 L232 177" stroke="#18834b" stroke-width="7"/>
+<path d="M92 330 L143 330" stroke="#243d55" stroke-width="3" marker-end="url(#arrow)"/><path d="M232 278 L232 224" stroke="#243d55" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M28 330 Q26 311 22 306" stroke="#c63d43" stroke-width="3"/><path d="M232 205 Q212 204 205 213" stroke="#2369d1" stroke-width="3"/><path d="M212 330 v-18 h20" stroke="#18834b" stroke-width="5"/>
+<text x="133" y="355" fill="#2369d1" font-size="20" font-family="Arial">a</text><text x="251" y="258" fill="#c63d43" font-size="20" font-family="Arial">o</text><text x="103" y="229" fill="#18834b" font-size="20" font-family="Arial">h</text><text x="40" y="321" fill="#c63d43" font-size="18" font-family="Arial" font-weight="700">θ</text><text x="210" y="190" fill="#2369d1" font-size="17" font-family="Arial" font-weight="700">unmarked</text><text x="207" y="304" fill="#18834b" font-size="15" font-family="Arial">90°</text>
+</g></g></svg>

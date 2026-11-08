@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-trigonometry">
+<title>Ratios and Triangles</title>
+<introduction>
+<p>We begin with the familiar term <term>reference angle</term>, then quickly call the chosen acute angle the <term>marked angle</term>, written <m>\theta</m>. The other acute angle is the <term>unmarked angle</term>. Every diagram protects the marked-angle arc inside the triangle and marks the right angle as <m>90^\circ</m>.</p>
+<p>Our method gives you two visual routes into a ratio: follow arrows along the two sides in the ratio and find their included angle, or identify the side left out and look at the angle opposite it. Both routes lead to the same choice. In every calculation, use the marked angle <m>\theta</m>.</p>
+</introduction>
+<section xml:id="trig-intro">
+<title>Right-angled triangles</title>
+<p>From the marked angle, name the sides: the <term>opposite</term> side is across from <m>\theta</m>; the <term>adjacent</term> side is the shorter side touching <m>\theta</m>; the <term>hypotenuse</term> is opposite the right angle. The diagrams use red for opposite, blue for adjacent and green for hypotenuse.</p>
+<figure xml:id="trig-included-angle-diagrams">
+<caption>Read the included angle between the two sides in each ratio. The colour of that angle matches the side opposite it: unmarked angle and adjacent side are blue; marked angle and opposite side are red; right angle and hypotenuse are green.</caption>
+<image source="trigonometry/trigonometry-included-angles.svg" width="100%">
+<description>Three flat right-angled triangles. In the sine triangle, dark arrows mark the red opposite side and green hypotenuse; the included angle at the top is highlighted blue and the omitted blue adjacent side is labelled a. In the cosine triangle, arrows mark the blue adjacent side and green hypotenuse; the included marked angle theta is highlighted red and the omitted red opposite side is labelled o. In the tangent triangle, arrows mark the red opposite side and blue adjacent side; their included right angle is highlighted green and the omitted green hypotenuse is labelled h. Each triangle has an interior marked-angle arc and a right-angle square labelled 90 degrees.</description>
+</image>
+</figure>
+<p>The angle between two chosen sides is their <term>included angle</term>: it is the angle at the vertex where those sides meet. In the first route, put an arrow on each of the two ratio sides and look at their shared vertex. In the second route, look at the side left out and the angle opposite it. These are two ways to read the same diagram.</p>
+<p>Here, <em>unmarked side</em> means the third side left out of the selected pair. It does not mean “a side with an unknown length”. The unknown length is written <m>x</m>; an unknown marked angle is written <m>\theta</m>.</p>
+<ol>
+<li><p>Leave out adjacent <m>a</m>. The included angle between opposite <m>o</m> and hypotenuse <m>h</m> is unmarked, so use sine.</p><me>\sin\theta=\frac{o}{h}</me></li>
+<li><p>Leave out opposite <m>o</m>. The included angle between adjacent <m>a</m> and hypotenuse <m>h</m> is the marked angle, so use cosine.</p><me>\cos\theta=\frac{a}{h}</me></li>
+<li><p>Leave out hypotenuse <m>h</m>. The included angle between opposite <m>o</m> and adjacent <m>a</m> is the right angle, so use tangent.</p><me>\tan\theta=\frac{o}{a}</me></li>
+</ol>
+<p>This gives a one-to-one cue: unmarked adjacent side <m>a</m> points to sine; unmarked opposite side <m>o</m> points to cosine; unmarked hypotenuse <m>h</m> points to tangent. Use the marked angle in all three ratios, even when sine's included angle is the unmarked angle.</p>
+<example xml:id="trig-sine-first-example">
+<title>Family 1: find the opposite side</title>
+<statement><p>The marked angle is <m>33^\circ</m>, the hypotenuse is <m>11</m>, and the opposite side is <m>x</m>. Find <m>x</m> to one decimal place.</p></statement>
+<solution>
+<p>The two sides in the ratio are opposite and hypotenuse. Their included angle is unmarked, which identifies sine. The marked angle <m>33^\circ</m> stays in the calculation.</p>
+<me>\sin 33^\circ=\frac{x}{11}</me>
+<me>x=11\sin 33^\circ\approx 6.0</me>
+</solution>
+</example>
+<p><em>Check:</em> the triangle drawing marks <m>33^\circ</m> inside the angle, labels the unknown side <m>x</m>, marks the right angle, and keeps the omitted side visible as a side rather than replacing it with a question mark.</p>
+</section>
+<section xml:id="trig-nine-families">
+<title>Nine question families</title>
+<p>Each ratio has three families: find the numerator side, find the denominator side, or find the marked angle. Each bank keeps that structure while the values change. This makes the visual cue familiar, so attention can move from recognising the included angle to choosing the algebraic step.</p>
+<ol>
+<li><p><em>Sine: find opposite.</em> Given <m>\theta=33^\circ</m> and <m>h=11</m>, find <m>o=x</m>.</p><me>\sin 33^\circ=\frac{x}{11},\qquad x=11\sin 33^\circ\approx 6.0</me></li>
+<li><p><em>Sine: find hypotenuse.</em> Given <m>\theta=33^\circ</m> and <m>o=7</m>, find <m>h=x</m>.</p><me>\sin 33^\circ=\frac{7}{x},\qquad x=\frac{7}{\sin 33^\circ}\approx 12.9</me></li>
+<li><p><em>Sine: find the marked angle.</em> Given <m>o=7</m> and <m>h=11</m>, find <m>\theta</m>.</p><me>\theta=\sin^{-1}\!\left(\frac{7}{11}\right)\approx 39.5^\circ</me></li>
+<li><p><em>Cosine: find adjacent.</em> Given <m>\theta=33^\circ</m> and <m>h=11</m>, find <m>a=x</m>.</p><me>\cos 33^\circ=\frac{x}{11},\qquad x=11\cos 33^\circ\approx 9.2</me></li>
+<li><p><em>Cosine: find hypotenuse.</em> Given <m>\theta=33^\circ</m> and <m>a=7</m>, find <m>h=x</m>.</p><me>\cos 33^\circ=\frac{7}{x},\qquad x=\frac{7}{\cos 33^\circ}\approx 8.3</me></li>
+<li><p><em>Cosine: find the marked angle.</em> Given <m>a=7</m> and <m>h=11</m>, find <m>\theta</m>.</p><me>\theta=\cos^{-1}\!\left(\frac{7}{11}\right)\approx 50.5^\circ</me></li>
+<li><p><em>Tangent: find opposite.</em> Given <m>\theta=33^\circ</m> and <m>a=11</m>, find <m>o=x</m>.</p><me>\tan 33^\circ=\frac{x}{11},\qquad x=11\tan 33^\circ\approx 7.1</me></li>
+<li><p><em>Tangent: find adjacent.</em> Given <m>\theta=33^\circ</m> and <m>o=7</m>, find <m>a=x</m>.</p><me>\tan 33^\circ=\frac{7}{x},\qquad x=\frac{7}{\tan 33^\circ}\approx 10.8</me></li>
+<li><p><em>Tangent: find the marked angle.</em> Given <m>o=7</m> and <m>a=11</m>, find <m>\theta</m>.</p><me>\theta=\tan^{-1}\!\left(\frac{7}{11}\right)\approx 32.5^\circ</me></li>
+</ol>
+<p>In the apps, Sine contains families 1–3, Cosine contains 4–6, and Tangent contains 7–9. Quiz and Test present four different questions from the selected family. Quiz answers allow two attempts; Test accepts one written answer at a time.</p>
+<p><url href="https://ronandownes.github.io/maths/trigonometry/">Open the Trigonometry section</url>: <url href="https://ronandownes.github.io/maths/apps/trigonometry/sine/">Sine</url>, <url href="https://ronandownes.github.io/maths/apps/trigonometry/cosine/">Cosine</url>, and <url href="https://ronandownes.github.io/maths/apps/trigonometry/tangent/">Tangent</url>.</p>
+</section>
+<section xml:id="trig-proportion-and-limits">
+<title>Proportion, change and limits</title>
+<p>For a fixed marked angle, all right-angled triangles with that angle are similar. Their side lengths change by the same scale factor, so each ratio remains constant. For example, if the hypotenuse is held fixed while the marked angle changes,</p>
+<me>o=h\sin\theta,\qquad a=h\cos\theta,\qquad o=a\tan\theta.</me>
+<p>For acute angles, sine increases towards 1, cosine decreases towards 0, and tangent increases. The tangent graph does not turn into a wave in this right-triangle range: it rises without bound as the angle approaches 90 degrees and has a vertical asymptote there.</p>
+<figure xml:id="trig-ratio-graph">
+<caption>As the marked angle moves from 0 degrees to 90 degrees, sine rises, cosine falls, and tangent leaves its separate plotted scale as it approaches the vertical asymptote at 90 degrees. The two vertical scales are labelled.</caption>
+<image source="trigonometry/trigonometry-ratio-graph.svg" width="100%">
+<description>Axes show marked angle in degrees from 0 to 90. On the left scale from 0 to 1, red sine increases and blue cosine decreases. On the right scale from 0 to 5, dark tangent increases and leaves the plotted scale before 90 degrees. A vertical dashed line at 90 degrees marks the asymptote. The graph values at 0 and 90 degrees are approached as limits; the endpoints do not describe non-degenerate right triangles.</description>
+</image>
+</figure>
+<p>Read the endpoints as limits:</p>
+<me>\lim_{\theta\to 0^\circ+}\sin\theta=0,\qquad \lim_{\theta\to 0^\circ+}\cos\theta=1,\qquad \lim_{\theta\to 0^\circ+}\tan\theta=0.</me>
+<me>\lim_{\theta\to 90^\circ-}\sin\theta=1,\qquad \lim_{\theta\to 90^\circ-}\cos\theta=0,\qquad \lim_{\theta\to 90^\circ-}\tan\theta=+\infty.</me>
+<p>For a non-degenerate right-angled triangle, <m>0^\circ&lt;\theta&lt;90^\circ</m>. Therefore <m>0&lt;\sin\theta&lt;1</m> and <m>0&lt;\cos\theta&lt;1</m>; <m>\tan\theta</m> is positive and has no upper bound.</p>
+</section>
+<section xml:id="trig-cosine-rule">
+<title>The Cosine Rule</title>
+<p>The cosine rule extends Pythagoras' theorem to triangles that need not be right-angled.</p>
+<p><me>c^2=a^2+b^2-2ab\cos C.</me></p>
+</section>
+</chapter>
