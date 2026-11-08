@@ -85,6 +85,11 @@
               </section>
             </chapter>
     </part>
+    <part xml:id="part-specifications">
+      <title>Specifications</title>
+      <xi:include href="./specifications.ptx" />
+    </part>
+
     <backmatter>
       <glossary xml:id="mathematics-glossary">
         <title>Mathematical Words</title>
