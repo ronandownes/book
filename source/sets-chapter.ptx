@@ -203,6 +203,14 @@
     <p>“Not red” only has a clear answer after we agree what objects we are considering. If we mean the cards in a standard pack, then “not red” means the black cards. It does not include a pencil, a bicycle or the Moon.</p>
     <p>The agreed collection of objects under discussion is called the <term>universal set</term>, written <m>U</m>. On a Venn diagram, a rectangle represents <m>U</m>. The set or sets being studied are drawn inside it.</p>
     <p>For the card example, let <m>U</m> be the 52 cards in a standard pack without jokers, and let <m>A</m> be its 26 red cards. The meaning of “outside <m>A</m>” now has a precise boundary.</p>
+    <p>Now compare a different choice of <m>U</m>: the three traffic-light states red, amber and green. The diagram shows that the complement changes when the universal set changes.</p>
+    <figure xml:id="figure-complement-depends-on-universe">
+      <caption>The complement depends on the chosen universal set.</caption>
+      <image source="sets/complement-depends-on-U.svg" width="95%">
+        <shortdescription>Two Venn diagrams show the complement of red in different universes: black cards in a 52-card pack, and amber and green in the set of traffic-light states.</shortdescription>
+        <description><p>The first rectangle represents a standard pack of 52 cards. An oval <m>A</m> contains the 26 red cards; the digitally shaded region inside <m>U</m> but outside <m>A</m> is <m>A^c</m>, the 26 black cards. The second rectangle represents the three traffic-light states <m>U=\{\text{red},\text{amber},\text{green}\}</m>. Its oval <m>A</m> contains the red state, while the shaded region contains amber and green, so <m>A^c=\{\text{amber},\text{green}\}</m>. In both diagrams, the rectangle sets the boundary: objects outside <m>U</m> are not part of the complement.</p></description>
+      </image>
+    </figure>
     <activity xml:id="activity-why-universe">
       <title>Think before naming</title>
       <task><p>What would “not red” mean if <m>U</m> were a collection of traffic lights?</p><answer><p>It would mean the non-red lights in the agreed collection of traffic lights. The answer depends on the universal set.</p></answer></task>
@@ -289,7 +297,7 @@
 
 <section xml:id="sets-lab">
     <title>Sets apps: watch, explore, practise and play</title>
-    <p>The first examples are demonstrations: students can watch and discuss before choosing, dragging or creating anything. The focused apps then provide guided exploration, many online exercises, quizzes, a region game, tests and challenge levels. The Venn app begins with two sets and adds three-set pair work at Challenge level. All three links open apps in the same Maths Apps collection, where students can move between the Sets apps.</p>
+    <p>The first examples are demonstrations: students can watch and discuss before choosing, dragging or creating anything. The focused apps then provide guided exploration, many online exercises, quizzes, a region game, tests and challenge levels. The Venn app begins with two sets and adds three-set pair work at Challenge level. All five apps live together in the Sets menu within Maths Apps. The links below open those same apps, so students can move between them without hunting across the site.</p>
     <ul>
       <li><p><url href="https://ronandownes.github.io/maths/apps/sets/list-and-notation.html">App 1: Set list and notation</url> — elements, braces, equality, membership and cardinality.</p></li>
       <li><p><url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">App 2: Build a set from a rule</url> — rule notation, “such that”, list and diagram.</p></li>
