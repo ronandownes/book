@@ -1,0 +1,181 @@
+<chapter xml:id="chapter-complex">
+<title>Complex Numbers</title>
+<introduction>
+<p><em>Leaving Certificate Ordinary Level.</em> We will move between a number, its coordinates, a picture, and a pen-and-paper calculation. Predict first, manipulate or plot when useful, then justify your answer. A complex number is one number, not two unrelated numbers.</p>
+<p>Use the <url href="https://ronandownes.github.io/maths/apps/complex-numbers/" visual="Complex Numbers Explorer"/> as a companion instrument. The book and its exercises remain usable independently of the app. Mathematical workings should be written clearly and checked against the Argand diagram.</p>
+</introduction>
+
+<section xml:id="complex-number-systems"><title>1. Why do we need another kind of number?</title>
+<p>The counting numbers are extended to the integers, then to the rational and real numbers. Some equations, such as <m>x^2+1=0</m>, have no real solution because every real square is non-negative. Define <m>i</m> by <m>i^2=-1</m>. Now <m>x=i</m> and <m>x=-i</m> are solutions.</p>
+<me>z=a+bi,\qquad a,b\in\mathbb R.</me>
+<p>The <term>real part</term> is <m>\operatorname{Re}(z)=a</m>, and the <term>imaginary part</term> is <m>\operatorname{Im}(z)=b</m>. Notice that the imaginary part is the real coefficient <m>b</m>, not the term <m>bi</m>. We do not write <m>6+-2i</m>: we write <m>6-2i</m>. When a coefficient is <m>1</m>, write <m>i</m> rather than <m>1i</m>.</p>
+<example xml:id="complex-intro-example"><title>Name the parts</title>
+<p>For <m>z=-3+4i</m>, <m>\operatorname{Re}(z)=-3</m> and <m>\operatorname{Im}(z)=4</m>. The real number <m>5</m> is also complex: <m>5=5+0i</m>. The number <m>-2i</m> has real part zero.</p></example>
+<exercise xml:id="complex-number-systems-check"><statement><p>What is the imaginary part of <m>7-3i</m>?</p></statement><choices><choice><statement><p><m>-3i</m></p></statement><feedback><p>This is the imaginary <em>term</em>; its coefficient is a real number.</p></feedback></choice><choice correct="yes"><statement><p><m>-3</m></p></statement><feedback><p>Yes. The imaginary part is the coefficient of <m>i</m>.</p></feedback></choice><choice><statement><p><m>3</m></p></statement><feedback><p>Keep the negative sign attached to the coefficient.</p></feedback></choice></choices></exercise>
+</section>
+
+<section xml:id="complex-argand"><title>2. Plot, read and move complex numbers</title>
+<p>On an <term>Argand diagram</term> the horizontal axis is real and the vertical axis is imaginary. The number <m>a+bi</m> is represented by the <em>point</em> <m>(a,b)</m>. Begin with a point; an arrow from the origin can be introduced later to show direction and displacement.</p>
+<example xml:id="complex-plot-example"><title>Read in either direction</title>
+<p>The number <m>z=3+4i</m> is the point <m>(3,4)</m>: three units right and four units up. A point <m>(-2,-3)</m> represents <m>-2-3i</m>. Changing either coordinate moves the same point; it does not create a second number.</p>
+</example>
+<activity xml:id="complex-plot-explore"><title>Two-way plotting</title>
+<task><p>Choose a complex number, write its coordinates, and click the corresponding point on the diagram. Check the location before changing values.</p><answer><p>The horizontal coordinate must equal the real part and the vertical coordinate the coefficient of <m>i</m>.</p></answer></task>
+<task><p>Drag a point across the imaginary axis. Which part of its complex number changes sign?</p><answer><p>The real part changes sign when the point is reflected in the imaginary axis; merely crossing the axis can also change its magnitude.</p></answer></task>
+</activity>
+<subsection xml:id="complex-bank-plotting"><title>Practice bank: plotting</title><p>Work independently. Check the answer only after you have recorded your reasoning; repeat with fresh values in the linked app.</p><exercise xml:id="complex-ex-plotting-1"><statement><p>Plot and label <m>z=3+4i</m> on an Argand diagram. Write its coordinates.</p></statement><answer><p><m>(3,4)</m>. In quadrant I.</p></answer></exercise>
+<exercise xml:id="complex-ex-plotting-2"><statement><p>Plot and label <m>z=-4+2i</m> on an Argand diagram. Write its coordinates.</p></statement><answer><p><m>(-4,2)</m>. In quadrant II.</p></answer></exercise>
+<exercise xml:id="complex-ex-plotting-3"><statement><p>Plot and label <m>z=1-3i</m> on an Argand diagram. Write its coordinates.</p></statement><answer><p><m>(1,-3)</m>. In quadrant IV.</p></answer></exercise>
+<exercise xml:id="complex-ex-plotting-4"><statement><p>Plot and label <m>z=-2-5i</m> on an Argand diagram. Write its coordinates.</p></statement><answer><p><m>(-2,-5)</m>. In quadrant III.</p></answer></exercise>
+<exercise xml:id="complex-ex-plotting-5"><statement><p>Plot and label <m>z=6</m> on an Argand diagram. Write its coordinates.</p></statement><answer><p><m>(6,0)</m>. On the real axis.</p></answer></exercise>
+<exercise xml:id="complex-ex-plotting-6"><statement><p>Plot and label <m>z=-3i</m> on an Argand diagram. Write its coordinates.</p></statement><answer><p><m>(0,-3)</m>. On the imaginary axis.</p></answer></exercise>
+<exercise xml:id="complex-ex-plotting-7"><statement><p>Plot and label <m>z=0</m> on an Argand diagram. Write its coordinates.</p></statement><answer><p><m>(0,0)</m>. The origin.</p></answer></exercise>
+<exercise xml:id="complex-ex-plotting-8"><statement><p>Plot and label <m>z=-1+i</m> on an Argand diagram. Write its coordinates.</p></statement><answer><p><m>(-1,1)</m>. In quadrant II.</p></answer></exercise></subsection>
+</section>
+
+<section xml:id="complex-add"><title>3. Add, subtract and form linear combinations</title>
+<p>Add the real parts together and the imaginary coefficients together. Subtraction works in exactly the same way, taking care to distribute the minus sign across the second number.</p>
+<me>(a+bi)+(c+di)=(a+c)+(b+d)i.</me>
+<me>(a+bi)-(c+di)=(a-c)+(b-d)i.</me>
+<example xml:id="complex-add-example"><title>Two coordinates, one result</title>
+<me>\begin{aligned}
+(2+3i)+(1-2i)&amp;=3+i,\\
+(2+3i)-(1-2i)&amp;=1+5i.
+\end{aligned}</me>
+<p>On an Argand diagram, addition combines displacements. The difference <m>z-w</m> describes the displacement from the point <m>w</m> to the point <m>z</m>.</p></example>
+<p>A <term>real scalar</term> multiplies both components: <m>k(a+bi)=ka+kbi</m>. A <term>linear combination</term>, such as <m>4z-5w</m>, combines scaling and addition.</p>
+<example xml:id="complex-combination-example"><title>A typical exam calculation</title>
+<me>\begin{aligned}
+4(5+i)-5(6-2i)&amp;=20+4i-30+10i\\
+&amp;=-10+14i.
+\end{aligned}</me></example>
+<subsection xml:id="complex-bank-arithmetic-and-combinations"><title>Practice bank: arithmetic and combinations</title><p>Work independently. Check the answer only after you have recorded your reasoning; repeat with fresh values in the linked app.</p><exercise xml:id="complex-ex-arithmetic-and-combinations-1"><statement><p>Find <m>(2+3i)+(1-2i)</m>.</p></statement><answer><p><m>3+i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-arithmetic-and-combinations-2"><statement><p>Find <m>(-3+4i)+(4+3i)</m>.</p></statement><answer><p><m>1+7i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-arithmetic-and-combinations-3"><statement><p>Find <m>(3+4i)-(7-3i)</m>.</p></statement><answer><p><m>-4+7i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-arithmetic-and-combinations-4"><statement><p>Find <m>2(-3+4i)</m>.</p></statement><answer><p><m>-6+8i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-arithmetic-and-combinations-5"><statement><p>Find <m>4(5+i)-5(6-2i)</m>.</p></statement><answer><p><m>-10+14i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-arithmetic-and-combinations-6"><statement><p>Given <m>z=2+3i</m>, evaluate <m>z+ar z</m>.</p></statement><answer><p><m>4</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-arithmetic-and-combinations-7"><statement><p>Given <m>z=2+3i</m>, evaluate <m>z-ar z</m>.</p></statement><answer><p><m>6i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-arithmetic-and-combinations-8"><statement><p>Given <m>u=1+4i</m> and <m>v=a+bi</m>, find <m>a,b</m> if <m>u-2v=-3+10i</m>.</p></statement><answer><p><m>a=2</m> and <m>b=-3</m> by comparing real and imaginary parts.</p></answer></exercise></subsection>
+</section>
+
+<section xml:id="complex-conjugates"><title>4. Conjugates: reflection, horizontal and vertical parts</title>
+<p>The <term>conjugate</term> of <m>z=a+bi</m> is <m>\bar z=a-bi</m>. On the Argand plane it is the reflection of <m>z</m> in the real axis: the real coordinate stays fixed and the imaginary coordinate changes sign.</p>
+<me>z+\bar z=2a=2\operatorname{Re}(z),\qquad z-\bar z=2bi=2i\operatorname{Im}(z).</me>
+<p>Thus the sum is twice the horizontal projection, while the difference is twice the vertical component, represented on the imaginary axis. Move <m>z</m> and predict where these two results will be located.</p>
+<example xml:id="complex-conjugate-example"><title>What disappears and what remains?</title>
+<me>\begin{aligned}
+(3+2i)+(3-2i)&amp;=6,\\
+(3+2i)-(3-2i)&amp;=4i,\\
+(3+2i)(3-2i)&amp;=13.
+\end{aligned}</me>
+<p>Observe that <m>z\bar z=a^2+b^2</m> is real and non-negative. It is zero only when <m>z=0</m>.</p></example>
+<exercise xml:id="complex-conjugate-check"><statement><p>If <m>z=4-3i</m>, which number is <m>z+\bar z</m>?</p></statement><choices><choice><statement><p><m>-6i</m></p></statement><feedback><p>This is <m>z-\bar z</m>, not the sum.</p></feedback></choice><choice correct="yes"><statement><p><m>8</m></p></statement><feedback><p>Correct: two copies of the real part.</p></feedback></choice><choice><statement><p><m>8-6i</m></p></statement><feedback><p>The imaginary parts cancel.</p></feedback></choice></choices></exercise>
+</section>
+
+<section xml:id="complex-multiply"><title>5. Multiply two complex numbers: two clear methods</title>
+<p>Use the distributive law: every term in the first bracket multiplies every term in the second. The four partial products are then collected by <em>type</em>. Do not confuse this with multiplying the coordinates separately.</p>
+<me>(a+bi)(c+di)=(ac-bd)+(ad+bc)i.</me>
+<example xml:id="complex-goalposts"><title>Vertical goalposts and diagonals: keep the two kinds of terms separate</title>
+<p>Multiply <m>(3+4i)(7-3i)</m>. Stack the two complex numbers, with the real terms aligned and the imaginary terms aligned:</p>
+<me>\begin{array}{r}3+4i\\[-3pt]\times(7-3i)\\\hline\end{array}</me>
+<p><em>First: the two straight, vertical goalposts.</em> The left product is <m>3\cdot7=21</m>. The right product is <m>(4i)(-3i)=-12i^2</m>. Because <m>i^2=-1</m>, the right goalpost is real too: <m>-12i^2=+12</m>. Put both contributions into the real column and total them <em>before</em> calculating the diagonals.</p>
+<me>\underbrace{21+12}_{\text{real column}}=33.</me>
+<p><em>Next: the two diagonals.</em> One gives <m>(4i)(7)=+28i</m>; the other gives <m>3(-3i)=-9i</m>. They belong together in the imaginary column. Keep them separate until it is time to add them:</p>
+<me>\underbrace{28i-9i}_{\text{imaginary column}}=19i.</me>
+<p>Now place the real result on the left and the imaginary result on the right:</p>
+<me>\boxed{(3+4i)(7-3i)=33+19i}.</me>
+<me>\begin{array}{r|l}
+\text{REAL: goalposts}&amp;\text{IMAGINARY: diagonals}\\\hline
+3\cdot7=21&amp;(4i)\cdot7=+28i\\
+(4i)(-3i)=-12i^2=+12&amp;3(-3i)=-9i\\\hline
+33&amp;+19i
+\end{array}</me>
+<p>There are four genuine products, but only two types of result. Keep the products visible until you have a reason to combine them. In a narrated screen recording, each line should be revealed separately, in this order.</p>
+</example>
+<p><em>Alternative: Inline Rainbow.</em> Keep the brackets side by side, reveal the four connecting arcs, and collect the same real and imaginary contributions. Compare <url href="https://ronandownes.github.io/maths/apps/inline-rainbow/" visual="Inline Rainbow"/> with <url href="https://ronandownes.github.io/maths/apps/vertical-foil/" visual="Vertical FOIL"/>; these tools show the distributive routes, while this worked example records the special effect of <m>i^2=-1</m>.</p>
+<exercise xml:id="complex-product-misconception"><statement><p>In <m>(2+3i)(4-5i)</m>, what kind of term is <m>(3i)(-5i)</m> after simplification?</p></statement><choices><choice><statement><p>Imaginary: <m>-15i</m></p></statement><feedback><p>There are two factors of <m>i</m>, so the product contains <m>i^2</m>.</p></feedback></choice><choice correct="yes"><statement><p>Real: <m>+15</m></p></statement><feedback><p>Yes: <m>-15i^2=+15</m>.</p></feedback></choice><choice><statement><p>Real: <m>-15</m></p></statement><feedback><p>Use <m>i^2=-1</m> and check both negative signs.</p></feedback></choice></choices></exercise>
+<subsection xml:id="complex-bank-multiplication"><title>Practice bank: multiplication</title><p>Work independently. Check the answer only after you have recorded your reasoning; repeat with fresh values in the linked app.</p><exercise xml:id="complex-ex-multiplication-1"><statement><p>Expand <m>(1+i)(1-i)</m>.</p></statement><answer><p><m>2</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-multiplication-2"><statement><p>Expand <m>(2+3i)(1-2i)</m>.</p></statement><answer><p><m>8-i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-multiplication-3"><statement><p>Use real and imaginary columns to multiply <m>(3+4i)(7-3i)</m>.</p></statement><answer><p>Real: <m>21-12i^2=33</m>. Imaginary: <m>28i-9i=19i</m>. Hence <m>33+19i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-multiplication-4"><statement><p>Expand <m>(2-i)(3+2i)</m>.</p></statement><answer><p><m>8+i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-multiplication-5"><statement><p>Expand <m>(-2+3i)(1+i)</m>.</p></statement><answer><p><m>-5+i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-multiplication-6"><statement><p>Find <m>(4-3i)(4+3i)</m>.</p></statement><answer><p><m>25</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-multiplication-7"><statement><p>Simplify <m>2i(3-4i)</m>.</p></statement><answer><p><m>8+6i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-multiplication-8"><statement><p>Find <m>(2-i)^2</m>.</p></statement><answer><p><m>3-4i</m>.</p></answer></exercise></subsection>
+</section>
+
+<section xml:id="complex-divide"><title>6. Divide: make the denominator real</title>
+<p>If the divisor is a non-zero real number, divide each component by it. For a genuinely complex denominator, multiply the numerator <em>and</em> denominator by its conjugate; this is multiplication by <m>1</m>, so the quotient is unchanged.</p>
+<me>\frac{a+bi}{c+di}=\frac{(a+bi)(c-di)}{c^2+d^2},\qquad c+di\ne0.</me>
+<example xml:id="complex-division-example"><title>A denominator of <m>1+i</m></title>
+<me>\begin{aligned}
+\frac{4-6i}{1+i}
+&amp;=\frac{(4-6i)(1-i)}{(1+i)(1-i)}\\
+&amp;=\frac{4-4i-6i+6i^2}{1-i^2}\\
+&amp;=\frac{-2-10i}{2}\\
+&amp;=\boxed{-1-5i}.
+\end{aligned}</me>
+<p>Check by multiplying your answer by <m>1+i</m>: you should recover <m>4-6i</m>.</p></example>
+<subsection xml:id="complex-bank-division"><title>Practice bank: division</title><p>Work independently. Check the answer only after you have recorded your reasoning; repeat with fresh values in the linked app.</p><exercise xml:id="complex-ex-division-1"><statement><p>Simplify <m>dfrac{4-6i}{1+i}</m>.</p></statement><answer><p><m>-1-5i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-2"><statement><p>Simplify <m>dfrac{15}{1+2i}</m>.</p></statement><answer><p><m>3-6i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-3"><statement><p>Simplify <m>dfrac{2+3i}{1-2i}</m>.</p></statement><answer><p><m>dfrac{-4+7i}{5}</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-4"><statement><p>Simplify <m>dfrac{3+i}{1+i}</m>.</p></statement><answer><p><m>2-i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-5"><statement><p>Simplify <m>dfrac1i</m>.</p></statement><answer><p><m>-i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-6"><statement><p>Simplify <m>dfrac{1+i}{1-i}</m>.</p></statement><answer><p><m>i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-7"><statement><p>Simplify <m>dfrac{3+4i}{3-4i}</m>.</p></statement><answer><p><m>dfrac{-7+24i}{25}</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-division-8"><statement><p>Simplify <m>dfrac{5+5i}{5i}</m>.</p></statement><answer><p><m>1-i</m>.</p></answer></exercise></subsection>
+</section>
+
+<section xml:id="complex-modulus"><title>7. Modulus: distance and comparisons</title>
+<p>The <term>modulus</term> of <m>z=a+bi</m> is its distance from the origin. A right-angled triangle connects the diagram to Pythagoras:</p>
+<me>|z|=\sqrt{a^2+b^2}.</me>
+<p>Distances are non-negative. For two complex numbers, the distance between their points is <m>|z-w|</m>. Plot first, calculate second, then check whether the value is reasonable.</p>
+<example xml:id="complex-distance-example"><title>Distance between two points</title>
+<me>\begin{aligned}
+z&amp;=2+3i,\quad w=4-i,\\
+z-w&amp;=-2+4i,\\
+|z-w|&amp;=\sqrt{(-2)^2+4^2}=2\sqrt5.
+\end{aligned}</me>
+<p>An interesting investigation asks whether <m>|z+w|=|z|+|w|</m> always holds. It does not: the general relationship is <m>|z+w|\le |z|+|w|</m>. Think about the triangle formed by successive displacements.</p></example>
+<subsection xml:id="complex-bank-modulus-and-conjugates"><title>Practice bank: modulus and conjugates</title><p>Work independently. Check the answer only after you have recorded your reasoning; repeat with fresh values in the linked app.</p><exercise xml:id="complex-ex-modulus-and-conjugates-1"><statement><p>Find <m>|3+4i|</m>.</p></statement><answer><p><m>5</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-modulus-and-conjugates-2"><statement><p>Find <m>|-1+2i|</m> in surd form.</p></statement><answer><p><m>sqrt5</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-modulus-and-conjugates-3"><statement><p>Find the distance between <m>2+3i</m> and <m>4-i</m>.</p></statement><answer><p><m>|(-2+4i)|=2sqrt5</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-modulus-and-conjugates-4"><statement><p>Give one complex number with integer components and modulus less than <m>5</m>.</p></statement><answer><p>For example <m>3+0i</m>, whose modulus is <m>3</m>. Other correct examples exist.</p></answer></exercise>
+<exercise xml:id="complex-ex-modulus-and-conjugates-5"><statement><p>Find the conjugate of <m>-3+4i</m>.</p></statement><answer><p><m>-3-4i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-modulus-and-conjugates-6"><statement><p>For <m>z=2-3i</m>, find <m>z+ar z</m>.</p></statement><answer><p><m>4</m>: twice the real part.</p></answer></exercise>
+<exercise xml:id="complex-ex-modulus-and-conjugates-7"><statement><p>For <m>z=2-3i</m>, find <m>z-ar z</m>.</p></statement><answer><p><m>-6i</m>: twice the imaginary contribution.</p></answer></exercise>
+<exercise xml:id="complex-ex-modulus-and-conjugates-8"><statement><p>Compare the moduli of <m>3+4i</m> and <m>-4+3i</m>.</p></statement><answer><p>Both have modulus <m>5</m>, although they are different points.</p></answer></exercise></subsection>
+</section>
+
+<section xml:id="complex-equations"><title>8. Equality, unknown values and checking solutions</title>
+<p>Two complex numbers are equal precisely when their real parts are equal <em>and</em> their imaginary parts are equal.</p>
+<me>a+bi=c+di\quad\Longleftrightarrow\quad a=c\ \text{and}\ b=d.</me>
+<example xml:id="complex-equality-example"><title>Find two real unknowns</title>
+<p>Suppose <m>2a+8+(8-b)i=10-i</m>. Compare the real parts to get <m>2a+8=10</m>, so <m>a=1</m>. Compare imaginary parts to get <m>8-b=-1</m>, so <m>b=9</m>.</p>
+<p>When the equation contains <m>z^2</m>, <m>iz</m> or <m>\bar z</m>, expand or substitute carefully before comparing parts. A proposed solution must make the <em>whole</em> equation true.</p></example>
+<subsection xml:id="complex-bank-equations"><title>Practice bank: equations</title><p>Work independently. Check the answer only after you have recorded your reasoning; repeat with fresh values in the linked app.</p><exercise xml:id="complex-ex-equations-1"><statement><p>Solve <m>z+3i=2-i</m>.</p></statement><answer><p><m>z=2-4i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-equations-2"><statement><p>Solve <m>2z-5=1+6i</m>.</p></statement><answer><p><m>z=3+3i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-equations-3"><statement><p>Solve <m>(1+i)z=2</m>.</p></statement><answer><p><m>z=1-i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-equations-4"><statement><p>Solve <m>3z+2ar z=10+i</m>.</p></statement><answer><p>Let <m>z=a+bi</m>. Then <m>5a+bi=10+i</m>, so <m>z=2+i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-equations-5"><statement><p>Investigate whether <m>z=1+i</m> satisfies <m>z^2-2iz-2=0</m>.</p></statement><answer><p>Yes. Substitution gives <m>2i-2i(1+i)-2=0</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-equations-6"><statement><p>Solve <m>2z+(1-3i)=5+i</m>.</p></statement><answer><p><m>z=2+2i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-equations-7"><statement><p>If <m>z+ar z=8</m> and <m>z-ar z=-6i</m>, find <m>z</m>.</p></statement><answer><p><m>z=4-3i</m>.</p></answer></exercise>
+<exercise xml:id="complex-ex-equations-8"><statement><p>Find all complex numbers satisfying <m>z^2=-4</m>.</p></statement><answer><p><m>z=2i</m> or <m>z=-2i</m>.</p></answer></exercise></subsection>
+</section>
+
+<section xml:id="complex-exam-ladder"><title>9. Exam gallery: what difficulty must we prepare for?</title>
+<p>The following map describes skills represented in the supplied <em>Leaving Certificate Ordinary Level, Paper 1</em> gallery (2015–2026). It is a study guide to the original pages, not a reproduction of the examination papers. Practise multiple examples of each family, not one specimen question.</p>
+<ul>
+<li><p><em>Foundations:</em> read or plot complex numbers; interpret real and imaginary parts; reflect a point to obtain the conjugate (2015, 2017, 2022, 2024, 2025, 2026).</p></li>
+<li><p><em>Calculations:</em> add and subtract, multiply by <m>i</m>, use real scaling and linear combinations, simplify expressions and solve complex equations (2017, 2020, 2021, 2022, 2023, 2026).</p></li>
+<li><p><em>Modulus and reasoning:</em> compute distances, write surd answers, compare moduli visually, find a point whose modulus is below a specified bound, and investigate a proposed relation between moduli (2018, 2021, 2023, 2025).</p></li>
+<li><p><em>More demanding algebra:</em> find an unknown factor, divide by a complex number using its conjugate, interpret conjugate sums, or test a proposed solution by substitution (2020, 2022, 2024, 2025, 2026).</p></li>
+<li><p><em>Stretch interpretation:</em> the 2015 paper combines a conjugate reflection, an angle and a cosine relation. This is a worthwhile extension after students are confident with plotting and modulus.</p></li>
+</ul>
+<activity xml:id="complex-exam-task"><title>Choose your representation</title>
+<task><p>When a question says <em>plot</em>, begin with the plane. When it says <em>express in the form <m>a+bi</m></em>, organise the algebra into real and imaginary columns. When it says <em>show</em> or <em>investigate</em>, give a mathematical reason rather than only a numerical answer.</p><answer><p>A good response combines a correct representation, a justified calculation and a conclusion that answers exactly what the question asked.</p></answer></task>
+</activity>
+<p><em>Further investigation:</em> complex multiplication can also be interpreted as rotation and scaling: moduli multiply and arguments add. This extends the geometric understanding, without requiring it as the starting method for Ordinary Level arithmetic.</p>
+</section>
+</chapter>
