@@ -67,18 +67,18 @@
 <section xml:id="sets-representations">
     <title>Representing a set: rule, list and diagram</title>
     <p>The same set can be described in words, listed inside braces, or shown with an oval. These representations should agree: they must identify the same elements.</p>
-    <p>For this example, the candidate collection is <m>D=\{1,2,3,4,5,6,7,8\}</m>. Let <m>E</m> contain the even numbers in <m>D</m>.</p>
+    <p>For this example, the candidate collection is <m>D=\{1,2,3,4,5,6,7,8,9,10,11\}</m>. Let <m>E</m> contain the even numbers in <m>D</m>.</p>
     <ul>
       <li><p><strong>Rule in words:</strong> <m>E</m> is the even numbers in <m>D</m>.</p></li>
       <li><p><strong>Set-builder notation:</strong> <m>E=\{x\in D:x\text{ is even}\}</m>. Read the colon as “such that”: “<m>E</m> is the set of <m>x</m> in <m>D</m> such that <m>x</m> is even.”</p></li>
-      <li><p><strong>List:</strong> <m>E=\{2,4,6,8\}</m>.</p></li>
+      <li><p><strong>List:</strong> <m>E=\{2,4,6,8,10\}</m>.</p></li>
       <li><p><strong>Diagram:</strong> draw one oval labelled <m>E</m> and place the elements that satisfy the rule inside it. We do not need a universal-set rectangle to show this one set.</p></li>
     </ul>
     <figure xml:id="figure-even-set-representations">
       <caption>The rule, list and single oval describe the same set.</caption>
       <image source="sets/even-set-representations.svg" width="95%">
-        <shortdescription>An oval E contains 2, 4, 6 and 8. The nearby rule and list describe these same even numbers.</shortdescription>
-        <description><p>The diagram uses one oval labelled <m>E</m> and contains 2, 4, 6 and 8. No rectangle is drawn. The rule says that these are the even numbers in the candidate collection <m>D=\{1,2,3,4,5,6,7,8\}</m>, and the list gives <m>E=\{2,4,6,8\}</m>.</p></description>
+        <shortdescription>A single oval E contains the even elements 2, 4, 6, 8 and 10. Each element has a solid dot. The odd candidates 1, 3, 5, 7, 9 and 11 are shown outside, with matching dots and label sizes.</shortdescription>
+        <description><p>The diagram uses one oval labelled <m>E</m>. Inside it, the even elements 2, 4, 6, 8 and 10 are arranged in a loose pattern rather than a row; each number is paired with a solid element dot. Outside the oval, the odd candidates 1, 3, 5, 7, 9 and 11 have dots and labels of the same size. No universal-set rectangle is drawn. The rule says that <m>E</m> contains the even numbers in <m>D=\{1,2,3,4,5,6,7,8,9,10,11\}</m>, and the list gives <m>E=\{2,4,6,8,10\}</m>.</p></description>
       </image>
     </figure>
     <activity xml:id="activity-rule-list-diagram">
@@ -289,7 +289,7 @@
 
 <section xml:id="sets-lab">
     <title>Sets apps: watch, explore, practise and play</title>
-    <p>The first examples are demonstrations: students can watch and discuss before choosing, dragging or creating anything. The focused apps then provide guided exploration, many online exercises, quizzes, a region game, tests and challenge levels. The Venn app begins with two sets and adds three-set pair work at Challenge level.</p>
+    <p>The first examples are demonstrations: students can watch and discuss before choosing, dragging or creating anything. The focused apps then provide guided exploration, many online exercises, quizzes, a region game, tests and challenge levels. The Venn app begins with two sets and adds three-set pair work at Challenge level. All three links open apps in the same Maths Apps collection, where students can move between the Sets apps.</p>
     <ul>
       <li><p><url href="https://ronandownes.github.io/maths/apps/sets/list-and-notation.html">App 1: Set list and notation</url> — elements, braces, equality, membership and cardinality.</p></li>
       <li><p><url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">App 2: Build a set from a rule</url> — rule notation, “such that”, list and diagram.</p></li>

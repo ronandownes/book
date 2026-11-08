@@ -47,6 +47,27 @@ jobs:
           test "$(wc -c < assets/cicadas/magicicada-septendecim-2024.jpg)" -gt 50000
       - name: Build web textbook
         run: pretext build web
+      - name: Add immediate checking to single-choice questions
+        run: |
+          set -euo pipefail
+          mkdir -p output/web/external/sets
+          cp assets/sets/auto-check.js output/web/external/sets/auto-check.js
+          python - <<'PY'
+          import os
+          from pathlib import Path
+
+          site = Path("output/web")
+          script = site / "external/sets/auto-check.js"
+          if not script.is_file():
+              raise SystemExit("Auto-check script is missing from the web output.")
+          for page in site.rglob("*.html"):
+              source = Path(os.path.relpath(script, page.parent)).as_posix()
+              tag = f'<script src="{source}" defer></script>'
+              html = page.read_text(encoding="utf-8")
+              if tag in html or "</body>" not in html:
+                  continue
+              page.write_text(html.replace("</body>", f"  {tag}\n</body>", 1), encoding="utf-8")
+          PY
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
