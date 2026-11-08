@@ -3,7 +3,7 @@
 <title>The Language of Algebra</title>
 <section xml:id="algebra-words">
 <title>Variables, coefficients, constants and terms</title>
-<p>Begin with what the letters describe. Look at the diagrams, make a prediction, and then use the Rectangle Explorer to change the measurements. The definitions will make more sense after the quantities have a meaning.</p>
+<p>Change the width and height in the Rectangle Explorer. Watch the <xref ref="glossary-perimeter" text="title"/> and <xref ref="glossary-area" text="title"/> change. Then use letters for the measurements.</p>
 <figure xml:id="square-rectangle-measures">
 <caption>A square needs one side measurement; a rectangle needs a width and a height. Each pair of opposite sides is equal.</caption>
 <image width="100%">
@@ -33,7 +33,7 @@
 <caption>Change a square or rectangle and observe its perimeter and area in centimetres and square centimetres.</caption>
 <interactive xml:id="rectangle-explorer" iframe="https://ronandownes.github.io/maths/geometry/rectangle-variables/app.html" width="100%" aspect="4:5"/>
 </figure>
-<p><url href="https://ronandownes.github.io/maths/geometry/rectangle-variables/app.html">Open the Rectangle Explorer in a separate tab.</url> It is in Geometry on the Maths site and links back to this section.</p>
+<p><url href="https://ronandownes.github.io/maths/geometry/rectangle-variables/app.html">Open Rectangle Explorer.</url> Or find it under Geometry in <url href="https://ronandownes.github.io/maths/apps/index.html">Maths Apps</url>.</p>
 
 <subsection xml:id="variables-geometric-models">
 <title>Variables represent measurements</title>
