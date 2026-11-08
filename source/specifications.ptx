@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Teacher reference: link to or display unaltered NCCA PDFs; do not retype official outcomes. -->
+<chapter xml:id="chapter-spec-junior-cycle">
+  <title>Junior Cycle Mathematics</title>
+  <p>The official Mathematics specification covers Ordinary and Higher Level. Additional Higher Level learning outcomes are printed in bold in the original document.</p>
+  <p><url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf" visual="curriculumonline.ie">Open the complete original specification (PDF)</url>.</p>
+  <figure xml:id="figure-spec-junior-cycle-original">
+    <caption>Original NCCA Junior Cycle Mathematics specification, unchanged.</caption>
+    <interactive xml:id="interactive-spec-junior-cycle-original" iframe="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf" width="100%" aspect="3:4"/>
+  </figure>
+</chapter>
+
+<chapter xml:id="chapter-spec-leaving-certificate">
+  <title>Leaving Certificate Mathematics</title>
+  <p>The syllabus for examination from 2015 sets out Higher, Ordinary and Foundation Level mathematics. This is the published syllabus, not the draft specification under consultation in 2026.</p>
+  <p><url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" visual="curriculumonline.ie">Open the complete original syllabus (PDF)</url>.</p>
+  <figure xml:id="figure-spec-leaving-certificate-original">
+    <caption>Original NCCA Leaving Certificate Mathematics syllabus, unchanged.</caption>
+    <interactive xml:id="interactive-spec-leaving-certificate-original" iframe="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" width="100%" aspect="3:4"/>
+  </figure>
+</chapter>
+
+<chapter xml:id="chapter-spec-lca">
+  <title>Leaving Certificate Applied</title>
+  <p>Mathematical Applications, revised 2021. The original module descriptor is presented without retyping or modifying its content.</p>
+  <p><url href="https://curriculumonline.ie/getmedia/e24dde0f-8fce-456a-bfd9-705f1473b8c2/LCA-Mathematical-Applications.pdf" visual="curriculumonline.ie">Open the complete original LCA module descriptor (PDF)</url>.</p>
+  <figure xml:id="figure-spec-lca-original">
+    <caption>Original NCCA LCA Mathematical Applications module descriptor, unchanged.</caption>
+    <interactive xml:id="interactive-spec-lca-original" iframe="https://curriculumonline.ie/getmedia/e24dde0f-8fce-456a-bfd9-705f1473b8c2/LCA-Mathematical-Applications.pdf" width="100%" aspect="3:4"/>
+  </figure>
+</chapter>
+
+<chapter xml:id="chapter-spec-foundation">
+  <title>Leaving Certificate Foundation Level</title>
+  <p>Foundation Level is contained in the same official Leaving Certificate Mathematics syllabus. The links below go directly to its original tables, retaining the published layout and wording.</p>
+  <p><url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf#page=16" visual="curriculumonline.ie">Statistics and Probability (original PDF page 16)</url>;
+     <url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf#page=24" visual="curriculumonline.ie">Geometry and Trigonometry (page 24)</url>;
+     <url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf#page=30" visual="curriculumonline.ie">Number (page 30)</url>;
+     <url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf#page=38" visual="curriculumonline.ie">Algebra (page 38)</url>;
+     <url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf#page=42" visual="curriculumonline.ie">Functions (page 42)</url>.</p>
+  <figure xml:id="figure-spec-foundation-original">
+    <caption>Original Leaving Certificate Mathematics syllabus, opened at the first Foundation Level table.</caption>
+    <interactive xml:id="interactive-spec-foundation-original" iframe="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf#page=16" width="100%" aspect="3:4"/>
+  </figure>
+</chapter>
