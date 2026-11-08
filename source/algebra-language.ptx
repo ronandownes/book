@@ -48,10 +48,22 @@
 
 <subsection xml:id="algebra-vocabulary-definitions">
 <title>Name the parts of an expression</title>
-<p>A <term>variable</term> is a letter or symbol representing a number which may vary or is unknown. In <m>3x+5</m>, <m>x</m> is the variable.</p>
-<p>A <term>coefficient</term> is the numerical factor multiplying a variable or its power. In <m>7x^2</m>, the coefficient is <m>7</m>; in <m>-x</m>, it is <m>-1</m>.</p>
-<p>A <term>constant</term> is a fixed value. In <m>3x+5</m>, the constant term is <m>5</m>.</p>
-<p>A <term>term</term> is one of the parts of an expression separated by addition or subtraction at the outermost level. Keep the sign with the term: <m>3x-5</m> has the signed terms <m>3x</m> and <m>-5</m>.</p>
+<definition xml:id="definition-variable">
+<title>Variable</title>
+<statement><p>A <term>variable</term> is a letter or symbol representing a number that may vary or is unknown. In <m>3x+5</m>, <m>x</m> is the variable.</p></statement>
+</definition>
+<definition xml:id="definition-coefficient">
+<title>Coefficient</title>
+<statement><p>A <term>coefficient</term> is the numerical factor multiplying a variable or its power. In <m>7x^2</m>, the coefficient is <m>7</m>; in <m>-x</m>, it is <m>-1</m>.</p></statement>
+</definition>
+<definition xml:id="definition-constant">
+<title>Constant</title>
+<statement><p>A <term>constant</term> is a fixed value. In <m>3x+5</m>, the constant term is <m>5</m>.</p></statement>
+</definition>
+<definition xml:id="definition-algebra-term">
+<title>Term</title>
+<statement><p>A <term>term</term> is one of the parts of an expression separated by addition or subtraction at the outermost level. Keep the sign with the term: <m>3x-5</m> has the signed terms <m>3x</m> and <m>-5</m>.</p></statement>
+</definition>
 <example xml:id="algebra-vocabulary-example"><title>Read an expression</title>
 <p>In <m>4x^2-3x+7</m>, the terms are <m>4x^2</m>, <m>-3x</m>, and <m>7</m>. The coefficients are <m>4</m> and <m>-3</m>, and the constant term is <m>7</m>.</p>
 </example>
@@ -130,6 +142,10 @@
 <p>A <term>product</term> is the result of multiplying two or more <term>factors</term>. The rectangle has <m>8</m> columns and <m>5</m> rows of unit squares, so its area is <m>8\cdot5=40</m> square centimetres. Also, <m>3x</m> is the product of the factors <m>3</m> and <m>x</m>.</p>
 <p>A <term>quotient</term> is the result of dividing a <term>dividend</term> by a non-zero <term>divisor</term>. If <m>40</m> square centimetres are shared among <m>5</m> one-centimetre rows, each row has width <m>8</m> centimetres: <m>40\text{ cm}^2\div5\text{ cm}=8\text{ cm}</m>. The dividend and divisor are not called “two factors”.</p>
 <p>A <term>fraction</term> is an expression with a numerator above a non-zero denominator. In <m>\frac{x+2}{5}</m>, the numerator is <m>x+2</m> and the denominator is <m>5</m>. A fraction can represent division.</p>
+<definition xml:id="definition-ratio">
+<title>Ratio</title>
+<statement><p>A <term>ratio</term> compares two quantities by division. The ratio of <m>8</m> to <m>5</m> is <m>8:5</m>, equivalently <m>\frac{8}{5}</m>.</p></statement>
+</definition>
 <p>When positive measurements are multiplied, increasing one factor while the other remains fixed increases the product. Multiplying a positive quantity by a factor between <m>0</m> and <m>1</m> diminishes it; multiplying by a factor greater than <m>1</m> increases or, in older language, <em>augments</em> it. “Increase” is the clearest word to use here.</p>
 <example xml:id="algebra-terms-factors-example"><title>Terms are not factors</title>
 <p><m>3x+5</m> is a sum of two terms. <m>3x</m> is one term but a product of two factors. <m>3(x+2)</m> is a product of two factors; expanding gives the sum <m>3x+6</m>.</p>
