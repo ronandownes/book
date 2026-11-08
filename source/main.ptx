@@ -18,11 +18,7 @@
       <title>Number</title>
       <xi:include href="./sets-chapter.ptx" />
       <xi:include href="./sequences-chapter.ptx" />
-      <chapter xml:id="chapter-complex"><title>Complex Numbers</title>
-        <section xml:id="complex-intro"><title>Beyond the real numbers</title>
-          <p>We define <m>i</m> by <m>i^2=-1</m>. A complex number has the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real.</p>
-        </section>
-      </chapter>
+      <xi:include href="./complex-numbers-chapter.ptx" />
     </part>
 
     <part xml:id="part-algebra"><title>Algebra</title>
