@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-GB">
   <book xml:id="mathematics-book">
-    <title>Mathematics</title>
-    <subtitle>Explore, understand, practise</subtitle>
+    <title>Irish School Maths</title>
+    <subtitle>Book · Junior Cert and Leaving Cert</subtitle>
     <frontmatter>
       <preface xml:id="welcome">
         <title>Welcome</title>
