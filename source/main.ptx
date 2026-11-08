@@ -84,5 +84,10 @@
               </section>
             </chapter>
     </part>
+
+    <part xml:id="part-specifications">
+      <title>Specifications</title>
+      <xi:include href="./specifications.ptx" />
+    </part>
   </book>
 </pretext>
