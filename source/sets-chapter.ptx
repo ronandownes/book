@@ -3,7 +3,7 @@
   <title>Sets</title>
 
   <section xml:id="sets-first-look">
-    <title>A circle and a collection</title>
+    <title>Introduction</title>
     <introduction>
       <p>We begin by looking. We will introduce notation when it helps us say something useful.</p>
     </introduction>
@@ -31,10 +31,8 @@
       </choices>
     </exercise>
     <p>We can say that Spring is an element of <m>A</m>. We write <m>\text{Spring}\in A</m>. Since Monday is not one of the four seasons, <m>\text{Monday}\notin A</m>.</p>
-  </section>
-
-<section xml:id="sets-properties">
-    <title>Properties of sets</title>
+  <subsection xml:id="sets-properties">
+    <title>Subsets and Set Properties</title>
     <p>A set must be <term>well-defined</term>: for any object under discussion, we can decide clearly whether it belongs. “The even numbers from 1 to 8” is clear. “The nicest numbers” is not, because people may disagree about what “nicest” means.</p>
     <p>Let <m>A=\{2,4,6,8\}</m> and <m>B=\{8,6,4,2,2\}</m>. These are the same set. The order of the elements does not matter, and repeating an element does not add a new element. Two sets are equal exactly when they have the same distinct elements.</p>
     <div>
@@ -62,34 +60,10 @@
       <answer><p>Yes. Both sets contain exactly the distinct elements 1, 3 and 5. Order and repetition do not change a set.</p></answer>
     </exercise>
     <p>For another example, <m>\#\varnothing=0</m>. An empty set is still a set; it simply has no elements.</p>
-  </section>
+  </subsection>
 
-<section xml:id="sets-representations">
-    <title>Representing a set: rule, list and diagram</title>
-    <p>The same set can be described in words, listed inside braces, or shown with an oval. These representations should agree: they must identify the same elements.</p>
-    <p>For this example, the candidate collection is <m>D=\{1,2,3,4,5,6,7,8,9,10,11\}</m>. Let <m>E</m> contain the even numbers in <m>D</m>.</p>
-    <ul>
-      <li><p><strong>Rule in words:</strong> <m>E</m> is the even numbers in <m>D</m>.</p></li>
-      <li><p><strong>Set-builder notation:</strong> <m>E=\{x\in D:x\text{ is even}\}</m>. Read the colon as “such that”: “<m>E</m> is the set of <m>x</m> in <m>D</m> such that <m>x</m> is even.”</p></li>
-      <li><p><strong>List:</strong> <m>E=\{2,4,6,8,10\}</m>.</p></li>
-      <li><p><strong>Diagram:</strong> draw one oval labelled <m>E</m> and place the elements that satisfy the rule inside it. We do not need a universal-set rectangle to show this one set.</p></li>
-    </ul>
-    <figure xml:id="figure-even-set-representations">
-      <caption>The rule, list and single oval describe the same set.</caption>
-      <image source="sets/even-set-representations.svg" width="95%">
-        <shortdescription>A single oval E contains the even elements 2, 4, 6, 8 and 10. Each element has a solid dot. The odd candidates 1, 3, 5, 7, 9 and 11 are shown outside, with matching dots and label sizes.</shortdescription>
-        <description><p>The diagram uses one oval labelled <m>E</m>. Inside it, the even elements 2, 4, 6, 8 and 10 are arranged in a loose pattern rather than a row; each number is paired with a solid element dot. Outside the oval, the odd candidates 1, 3, 5, 7, 9 and 11 have dots and labels of the same size. No universal-set rectangle is drawn. The rule says that <m>E</m> contains the even numbers in <m>D=\{1,2,3,4,5,6,7,8,9,10,11\}</m>, and the list gives <m>E=\{2,4,6,8,10\}</m>.</p></description>
-      </image>
-    </figure>
-    <activity xml:id="activity-rule-list-diagram">
-      <title>Translate between representations</title>
-      <task><p>Using <m>D=\{1,2,3,4,5,6,7,8\}</m>, write a rule in words for <m>O=\{1,3,5,7\}</m>. Then write the set-builder rule using “such that”.</p><answer><p><m>O</m> is the odd numbers in <m>D</m>; <m>O=\{x\in D:x\text{ is odd}\}</m>.</p></answer></task>
-    </activity>
-    <p><url href="https://ronandownes.github.io/maths/apps/sets/list-and-notation.html">Open App 1: Set list and notation.</url> Then <url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">open App 2: Build a set from a rule.</url></p>
-  </section>
-
-  <section xml:id="sets-number-families">
-    <title>Four familiar number sets</title>
+<subsection xml:id="sets-number-families">
+    <title>Number Sets Investigation</title>
     <p>The log tables show four number sets that we will meet often: natural numbers, integers, rational numbers and real numbers. Each new set contains the one before it.</p>
     <p>In the log tables, the natural numbers begin at 1: <m>\mathbb{N}=\{1,2,3,\ldots\}</m>. Counting objects begins with the first object, then the second, the third and so on. If a chicken coop is empty, we say there are zero chickens. The zero tells us the size of an empty collection; it is not a chicken that we counted. In this book, as in the log tables, <m>0\notin\mathbb{N}</m>. Some books choose a different convention, but we will use the one printed in the tables.</p>
     <p>Integers include zero, the positive counting numbers and their negative partners. The log tables write them as <m>\mathbb{Z}=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}</m>. We can also write <m>\mathbb{Z}=\{0,\pm1,\pm2,\pm3,\ldots\}</m>. The symbol <m>\pm2</m> is a compact way to show the pair <m>-2</m> and <m>2</m>; zero appears once.</p>
@@ -116,10 +90,11 @@
       <task><p>Explain why “there are zero chickens in the empty coop” does not make zero one of the objects in the natural-number list.</p><answer><p>The chickens are the objects being counted. If there are none, the collection has cardinality zero, <m>\#\varnothing=0</m>. Zero records the count; it is not an additional chicken. In the log-table convention used here, <m>\mathbb{N}</m> starts at 1 and zero belongs to <m>\mathbb{Z}</m>.</p></answer></task>
     </activity>
     <p><url href="https://ronandownes.github.io/maths/apps/sets/number-sets.html">Explore the four number sets and practise choosing the smallest set that contains a number.</url></p>
-  </section>
+  </subsection>
+</section>
 
 <section xml:id="sets-two-sets">
-    <title>Two sets can overlap: intersection and union</title>
+    <title>Venn Diagrams</title>
     <p>Now compare two collections, <m>F</m> (students who play football) and <m>M</m> (students who play a musical instrument). A survey records 15 students in <m>F</m>, 12 in <m>M</m>, and 5 in both.</p>
     <p>The <term>intersection</term> <m>F\cap M</m> contains the elements that are in both sets. The <term>union</term> <m>F\cup M</m> contains the elements in <m>F</m>, in <m>M</m>, or in both. In mathematics, “or” in a union includes the elements that belong to both sets.</p>
     <p>Place the 5 shared students first. Then <m>15-5=10</m> play football only, and <m>12-5=7</m> play an instrument only. These are the three regions inside the two ovals.</p>
@@ -148,22 +123,52 @@
     </exercise>
   </section>
 
-<section xml:id="sets-difference">
-    <title>Only in one set: set difference</title>
-    <p>The <term>difference</term> <m>F\setminus M</m> means the students who are in <m>F</m> but not in <m>M</m>. The backslash means “remove the elements in <m>M</m> from <m>F</m>”; it is not ordinary subtraction of numbers.</p>
-    <p>In our example, <m>F\setminus M</m> is the football-only region, so <m>\#(F\setminus M)=10</m>. In general, <m>A\setminus B</m> need not equal <m>B\setminus A</m>. The order matters.</p>
-    <activity xml:id="activity-difference-language">
-      <title>Say what the region means</title>
-      <task><p>Explain <m>M\setminus F</m> in words. How many students are in this region?</p><answer><p>They play an instrument but do not play football. There are 7 students.</p></answer></task>
+<section xml:id="sets-representations">
+    <title>List Notation</title>
+    <p>The same set can be described in words, listed inside braces, or shown with an oval. These representations should agree: they must identify the same elements.</p>
+    <p>For this example, the candidate collection is <m>D=\{1,2,3,4,5,6,7,8,9,10,11\}</m>. Let <m>E</m> contain the even numbers in <m>D</m>.</p>
+    <ul>
+      <li><p><strong>Rule in words:</strong> <m>E</m> is the even numbers in <m>D</m>.</p></li>
+      <li><p><strong>Set-builder notation:</strong> <m>E=\{x\in D:x\text{ is even}\}</m>. Read the colon as “such that”: “<m>E</m> is the set of <m>x</m> in <m>D</m> such that <m>x</m> is even.”</p></li>
+      <li><p><strong>List:</strong> <m>E=\{2,4,6,8,10\}</m>.</p></li>
+      <li><p><strong>Diagram:</strong> draw one oval labelled <m>E</m> and place the elements that satisfy the rule inside it. We do not need a universal-set rectangle to show this one set.</p></li>
+    </ul>
+    <figure xml:id="figure-even-set-representations">
+      <caption>The rule, list and single oval describe the same set.</caption>
+      <image source="sets/even-set-representations.svg" width="95%">
+        <shortdescription>A single oval E contains the even elements 2, 4, 6, 8 and 10. Each element has a solid dot. The odd candidates 1, 3, 5, 7, 9 and 11 are shown outside, with matching dots and label sizes.</shortdescription>
+        <description><p>The diagram uses one oval labelled <m>E</m>. Inside it, the even elements 2, 4, 6, 8 and 10 are arranged in a loose pattern rather than a row; each number is paired with a solid element dot. Outside the oval, the odd candidates 1, 3, 5, 7, 9 and 11 have dots and labels of the same size. No universal-set rectangle is drawn. The rule says that <m>E</m> contains the even numbers in <m>D=\{1,2,3,4,5,6,7,8,9,10,11\}</m>, and the list gives <m>E=\{2,4,6,8,10\}</m>.</p></description>
+      </image>
+    </figure>
+    <activity xml:id="activity-rule-list-diagram">
+      <title>Translate between representations</title>
+      <task><p>Using <m>D=\{1,2,3,4,5,6,7,8\}</m>, write a rule in words for <m>O=\{1,3,5,7\}</m>. Then write the set-builder rule using “such that”.</p><answer><p><m>O</m> is the odd numbers in <m>D</m>; <m>O=\{x\in D:x\text{ is odd}\}</m>.</p></answer></task>
     </activity>
-    <exercise xml:id="exercise-set-difference">
-      <statement><p>Let <m>A=\{1,2,3,4\}</m> and <m>B=\{2,4\}</m>. Find <m>A\setminus B</m> and <m>B\setminus A</m>.</p></statement>
-      <answer><p><m>A\setminus B=\{1,3\}</m> and <m>B\setminus A=\varnothing</m>.</p></answer>
-    </exercise>
+    <p><url href="https://ronandownes.github.io/maths/apps/sets/list-and-notation.html">Open App 1: Set list and notation.</url> Then <url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">open App 2: Build a set from a rule.</url></p>
   </section>
 
+<section xml:id="sets-rule-notation"><title>Rule Notation</title>
+ <p>A rule describes which elements belong to a set. For example,
+ <m>E=\{x\in\mathbb{N}:x\text{ is even and }x&lt;10\}</m>, so
+ <m>E=\{2,4,6,8\}</m>.</p>
+ <p>The colon is read <q>such that</q>. The order of a list does not change the set.</p>
+ <p><url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">Explore rule notation in the app.</url></p>
+ </section>
+
+<section xml:id="sets-union"><title>Union</title>
+ <p>The union <m>A\cup B</m> contains elements in <m>A</m>, <m>B</m>, or both.</p>
+ <p>For <m>A=\{1,2,3\}</m> and <m>B=\{3,4,5\}</m>, we have <m>A\cup B=\{1,2,3,4,5\}</m>.</p>
+ <exercise xml:id="sets-union-check"><statement><p>Find <m>\{1,4\}\cup\{4,7\}</m>.</p></statement><answer><p><m>\{1,4,7\}</m>.</p></answer></exercise>
+ </section>
+
+<section xml:id="sets-intersection"><title>Intersection</title>
+ <p>The intersection <m>A\cap B</m> contains elements common to both sets.</p>
+ <p>For <m>A=\{1,2,3\}</m> and <m>B=\{3,4,5\}</m>, we have <m>A\cap B=\{3\}</m>.</p>
+ <exercise xml:id="sets-intersection-check"><statement><p>Find <m>\{1,4\}\cap\{4,7\}</m>.</p></statement><answer><p><m>\{4\}</m>.</p></answer></exercise>
+ </section>
+
 <section xml:id="sets-cardinality">
-    <title>Cardinality and counting without double-counting</title>
+    <title>Cardinality</title>
     <p>Cardinality counts distinct elements. The symbol <m>\#A</m> means the number of elements in <m>A</m>. In the diagram, adding <m>\#F+\#M</m> counts the five shared students twice.</p>
     <p>To count the union, add the two set totals and subtract the intersection once:</p>
     <me>\#(F\cup M)=\#F+\#M-\#(F\cap M)=15+12-5=22.</me>
@@ -178,27 +183,8 @@
     </exercise>
   </section>
 
-<section xml:id="sets-problem-solving">
-    <title>Solve a two-set problem</title>
-    <p>Use the diagram to organise the information before calculating. Start with the overlap, then work outwards.</p>
-    <ol>
-      <li><p>Name the two sets and record what each total means.</p></li>
-      <li><p>Put the number in both sets into the intersection first.</p></li>
-      <li><p>Subtract the intersection from each set total to find the two “only” regions.</p></li>
-      <li><p>Add the three regions to find the union, or check it with the cardinality formula.</p></li>
-      <li><p>Check that each set total is the sum of its two regions.</p></li>
-    </ol>
-    <p>For the football and music example, both is 5; football only is <m>15-5=10</m>; music only is <m>12-5=7</m>; and the union is <m>10+5+7=22</m>. The diagram gives a reason for every calculation.</p>
-    <activity xml:id="activity-two-set-reasoning">
-      <title>Work through the regions</title>
-      <task><p>In an activity survey, 20 students play basketball, 18 play music and 8 do both. How many play only basketball, only music, and at least one of the two activities?</p><answer><p>Basketball only: <m>20-8=12</m>. Music only: <m>18-8=10</m>. At least one: <m>12+8+10=30</m>.</p></answer></task>
-      <task><p>Explain why <m>20+18</m> is not the number who play basketball or music.</p><answer><p>The 8 students who do both appear in both totals, so they would be counted twice. Subtract the overlap once.</p></answer></task>
-    </activity>
-    <p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html#practice">Practise two-set problems with hints and worked reasoning.</url></p>
-  </section>
-
 <section xml:id="sets-universe">
-    <title>Why do we need a universal set?</title>
+    <title>Universal Set</title>
     <p>Now we ask a different question: if <m>A</m> is the set of red playing cards, what are the cards that are <em>not</em> in <m>A</m>?</p>
     <p>“Not red” only has a clear answer after we agree what objects we are considering. If we mean the cards in a standard pack, then “not red” means the black cards. It does not include a pencil, a bicycle or the Moon.</p>
     <p>The agreed collection of objects under discussion is called the <term>universal set</term>, written <m>U</m>. On a Venn diagram, a rectangle represents <m>U</m>. The set or sets being studied are drawn inside it.</p>
@@ -219,7 +205,7 @@
   </section>
 
 <section xml:id="sets-complement">
-    <title>Everything in the universal set outside A</title>
+    <title>Complement</title>
     <p>Draw the rectangle <m>U</m>, then one oval <m>A</m> inside it. Leave a visible region between the oval and the rectangle.</p>
     <p>The <term>complement</term> of <m>A</m> is the part of <m>U</m> outside <m>A</m>. We write <m>A^c</m>, read “A complement”. It contains the elements in the specified universal set that are not in <m>A</m>.</p>
     <figure xml:id="figure-universe-complement">
@@ -253,8 +239,22 @@
     </figure>
   </section>
 
+<section xml:id="sets-difference">
+    <title>Set Difference</title>
+    <p>The <term>difference</term> <m>F\setminus M</m> means the students who are in <m>F</m> but not in <m>M</m>. The backslash means “remove the elements in <m>M</m> from <m>F</m>”; it is not ordinary subtraction of numbers.</p>
+    <p>In our example, <m>F\setminus M</m> is the football-only region, so <m>\#(F\setminus M)=10</m>. In general, <m>A\setminus B</m> need not equal <m>B\setminus A</m>. The order matters.</p>
+    <activity xml:id="activity-difference-language">
+      <title>Say what the region means</title>
+      <task><p>Explain <m>M\setminus F</m> in words. How many students are in this region?</p><answer><p>They play an instrument but do not play football. There are 7 students.</p></answer></task>
+    </activity>
+    <exercise xml:id="exercise-set-difference">
+      <statement><p>Let <m>A=\{1,2,3,4\}</m> and <m>B=\{2,4\}</m>. Find <m>A\setminus B</m> and <m>B\setminus A</m>.</p></statement>
+      <answer><p><m>A\setminus B=\{1,3\}</m> and <m>B\setminus A=\varnothing</m>.</p></answer>
+    </exercise>
+  </section>
+
 <section xml:id="sets-disjoint">
-    <title>Two sets that cannot overlap</title>
+    <title>Disjoint Sets</title>
     <p>Keep the universal set of 52 playing cards. Let <m>R</m> be the red cards and <m>B</m> the black cards. The two sets do not overlap, because a card cannot be both red and black.</p>
     <figure xml:id="figure-card-suits-disjoint">
       <caption>Spades and hearts are disjoint within a pack of cards.</caption>
@@ -274,8 +274,25 @@
     </exercise>
   </section>
 
-<section xml:id="sets-three-set-extension">
-    <title>Three sets: a challenge to explain together</title>
+<section xml:id="sets-problem-solving">
+    <title>Problem Solving</title>
+    <p>Use the diagram to organise the information before calculating. Start with the overlap, then work outwards.</p>
+    <ol>
+      <li><p>Name the two sets and record what each total means.</p></li>
+      <li><p>Put the number in both sets into the intersection first.</p></li>
+      <li><p>Subtract the intersection from each set total to find the two “only” regions.</p></li>
+      <li><p>Add the three regions to find the union, or check it with the cardinality formula.</p></li>
+      <li><p>Check that each set total is the sum of its two regions.</p></li>
+    </ol>
+    <p>For the football and music example, both is 5; football only is <m>15-5=10</m>; music only is <m>12-5=7</m>; and the union is <m>10+5+7=22</m>. The diagram gives a reason for every calculation.</p>
+    <activity xml:id="activity-two-set-reasoning">
+      <title>Work through the regions</title>
+      <task><p>In an activity survey, 20 students play basketball, 18 play music and 8 do both. How many play only basketball, only music, and at least one of the two activities?</p><answer><p>Basketball only: <m>20-8=12</m>. Music only: <m>18-8=10</m>. At least one: <m>12+8+10=30</m>.</p></answer></task>
+      <task><p>Explain why <m>20+18</m> is not the number who play basketball or music.</p><answer><p>The 8 students who do both appear in both totals, so they would be counted twice. Subtract the overlap once.</p></answer></task>
+    </activity>
+    <p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html#practice">Practise two-set problems with hints and worked reasoning.</url></p>
+  <subsection xml:id="sets-three-set-extension">
+    <title>Three Sets</title>
     <p>Begin with two sets until the three regions and the double-counting idea are secure. Then try three sets with a partner. Three circles create eight regions, so agree what each region means before calculating.</p>
     <p>A survey records set totals <m>\#A=20</m>, <m>\#B=18</m> and <m>\#C=15</m>. There are 5 in <m>A</m> and <m>B</m> only, 4 in <m>A</m> and <m>C</m> only, 3 in <m>B</m> and <m>C</m> only, and 2 in all three.</p>
     <figure xml:id="figure-three-set-regions">
@@ -293,10 +310,10 @@
       <task><p>A student adds <m>20+18+15</m> to find the number in the union. What has been counted more than once?</p><answer><p>Elements in more than one set are counted multiple times. The labelled regions help us count each element exactly once.</p></answer></task>
     </activity>
     <p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html#pair-work">Open the three-set pair challenge and compare explanations.</url></p>
-  </section>
+  </subsection>
 
-<section xml:id="sets-lab">
-    <title>Sets apps: watch, explore, practise and play</title>
+<subsection xml:id="sets-lab">
+    <title>Practice and Assessment</title>
     <p>The first examples are demonstrations: students can watch and discuss before choosing, dragging or creating anything. The focused apps then provide guided exploration, many online exercises, quizzes, a region game, tests and challenge levels. The Venn app begins with two sets and adds three-set pair work at Challenge level. All five apps live together in the Sets menu within Maths Apps. The links below open those same apps, so students can move between them without hunting across the site.</p>
     <ul>
       <li><p><url href="https://ronandownes.github.io/maths/apps/sets/list-and-notation.html">App 1: Set list and notation</url> — elements, braces, equality, membership and cardinality.</p></li>
@@ -307,5 +324,6 @@
     </ul>
     <p><url href="https://ronandownes.github.io/maths/apps/sets/index.html">Open the Sets app menu.</url></p>
     <p><strong>Check your learning.</strong> Can you describe a set using a rule, a list and an oval? Can you explain intersection, union, difference and cardinality? Can you place the shared region first, find the “only” regions and justify the union? Can you describe the relationships among <m>\mathbb{N}</m>, <m>\mathbb{Z}</m>, <m>\mathbb{Q}</m> and <m>\mathbb{R}</m>? After that, can you explain why a complement depends on <m>U</m>?</p>
-  </section>
+  </subsection>
+</section>
 </chapter>
