@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-four-products">
+  <title>Four Distinct Products: Expansion and Grouping</title>
+  <introduction>
+    <p>We shall learn one idea in two directions. <em>Expansion</em> makes the four products visible. <em>Grouping</em> recognises those same four products and puts the brackets back.</p>
+    <p>In this chapter the factors use different letters: <m>(ax+b)(cy+d)</m>, with non-zero coefficients and different variables <m>x</m> and <m>y</m>. The partial products have the different forms <m>xy</m>, <m>x</m>, <m>y</m> and a constant. <em>They are four unlike terms.</em> Do not collect, conceal, merge or split any of them. Multiplying two brackets involving the same letter, and collecting like terms afterwards, is a later lesson.</p>
+    <p>Begin with the four multiplication routes, investigate signs, practise expanding in different layouts, and then reverse the routes by grouping. The direction changes, but the mathematics does not.</p>
+  </introduction>
+
+  <section xml:id="four-products-distribution">
+    <title>Every term in one bracket multiplies every term in the other</title>
+    <p>Use the distributive law twice. Each of the two terms in the first bracket must multiply each of the two terms in the second bracket, giving exactly four partial products.</p>
+    <me>(ax+b)(cy+d)=acxy+adx+bcy+bd.</me>
+    <example xml:id="four-products-first-example">
+      <title>All four products remain visible</title>
+      <me>\begin{aligned}
+      (2x+3)(5y+7)
+      &amp;=(2x)(5y)+(2x)(7)+(3)(5y)+(3)(7)\\
+      &amp;=10xy+14x+15y+21.
+      \end{aligned}</me>
+      <p>The four terms are <m>10xy</m>, <m>14x</m>, <m>15y</m> and <m>21</m>. They are unlike terms: there is nothing to collect.</p>
+    </example>
+    <exercise xml:id="four-products-identify">
+      <statement><p>Before calculating, predict the number of partial products in <m>(3x+4)(2y+5)</m>. Identify which product will contain <m>xy</m>, which will contain only <m>x</m>, which will contain only <m>y</m>, and which will be constant.</p></statement>
+      <answer><p>There are four: <m>6xy</m>, <m>15x</m>, <m>8y</m> and <m>20</m>. Their sum is <m>6xy+15x+8y+20</m>.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="four-products-three-expansion-layouts">
+    <title>Three layouts, one multiplication</title>
+    <p>Different layouts should reveal the same four products. Choose a layout that lets you see the pairings and write clearly.</p>
+    <example xml:id="four-products-horizontal">
+      <title>Horizontal: distribute one term at a time</title>
+      <me>\begin{aligned}
+      (2x+3)(5y+7)
+      &amp;=2x(5y+7)+3(5y+7)\\
+      &amp;=(10xy+14x)+(15y+21)\\
+      &amp;=10xy+14x+15y+21.
+      \end{aligned}</me>
+    </example>
+    <example xml:id="four-products-stacked">
+      <title>Vertically stacked: make two partial-product rows</title>
+      <p>Keep the first bracket together. Multiply it by each term of the other bracket. The rows may be displayed one below the other; both are still visible before adding.</p>
+      <me>\begin{aligned}
+      5y(2x+3)&amp;=10xy+15y,\\
+      7(2x+3)&amp;=14x+21,\\
+      (10xy+15y)+(14x+21)&amp;=10xy+14x+15y+21.
+      \end{aligned}</me>
+    </example>
+    <example xml:id="four-products-split">
+      <title>Split brackets: expose the individual pairings</title>
+      <me>\underbrace{(2x)(5y)}_{10xy}+
+      \underbrace{(2x)(7)}_{14x}+
+      \underbrace{(3)(5y)}_{15y}+
+      \underbrace{(3)(7)}_{21}.</me>
+      <p>Whether you use arrows, diagonals, a vertical stack, or separate products, no product should disappear.</p>
+    </example>
+    <exercise xml:id="four-products-layout-compare">
+      <statement><p>Expand <m>(3x+2)(4y+5)</m> horizontally and using two stacked partial-product rows. Circle the same four products in both solutions. Explain why their order can change without changing their sum.</p></statement>
+      <answer><p>Both methods produce the four products <m>12xy</m>, <m>15x</m>, <m>8y</m>, <m>10</m>. Addition is commutative and associative, so rearranging the terms does not change the expression's value.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="four-products-reverse">
+    <title>Undo the multiplication: factorise by grouping</title>
+    <p>Start with four terms that have <em>not</em> been combined. Find two pairs, extract a common factor from each pair, and look for the identical bracket. The common bracket becomes one factor; the two outside factors become the other.</p>
+    <example xml:id="four-products-group-intact">
+      <title>Situation 1: the adjacent pairs work immediately</title>
+      <me>\begin{aligned}
+      10xy+14x+15y+21
+      &amp;=(10xy+14x)+(15y+21)\\
+      &amp;=2x(5y+7)+3(5y+7)\\
+      &amp;=(2x+3)(5y+7).
+      \end{aligned}</me>
+      <p>Check by expanding again. The original four terms must return, with none missing or duplicated.</p>
+    </example>
+    <example xml:id="four-products-group-swap">
+      <title>Situation 2: the first two terms do not belong together</title>
+      <p>Try the expression in the order given. The first two terms <m>10xy</m> and <m>21</m> have no useful common non-unit factor. Keep all four terms; swap the two middle positions.</p>
+      <me>\begin{aligned}
+      10xy+21+14x+15y
+      &amp;=10xy+14x+21+15y\\
+      &amp;=(10xy+14x)+(21+15y)\\
+      &amp;=2x(5y+7)+3(7+5y)\\
+      &amp;=(2x+3)(5y+7).
+      \end{aligned}</me>
+      <p>We have swapped terms, not changed their signs. The two inner brackets <m>5y+7</m> and <m>7+5y</m> are identical because addition is commutative. With these four products of two genuine binomials, a useful adjacent pairing can be recovered without inventing new terms.</p>
+    </example>
+    <example xml:id="four-products-group-negative">
+      <title>Situation 3: a negative common factor restores the same bracket</title>
+      <me>\begin{aligned}
+      12xy-15x-8y+10
+      &amp;=(12xy-15x)+(-8y+10)\\
+      &amp;=3x(4y-5)-2(4y-5)\\
+      &amp;=(3x-2)(4y-5).
+      \end{aligned}</me>
+      <p>Make the leading term in each original binomial positive where possible. Nevertheless, a negative <em>outside</em> factor can still be necessary: <m>-8y+10=-2(4y-5)</m>. The important check is that both inner brackets match exactly, including their signs.</p>
+    </example>
+    <exercise xml:id="four-products-group-alternative">
+      <statement><p>Factorise <m>12xy+8y+15x+10</m> by grouping the first two and last two terms. Compare your answer with the expansion of <m>(3x+2)(4y+5)</m>. What has changed?</p></statement>
+      <answer><p><m>(12xy+8y)+(15x+10)=4y(3x+2)+5(3x+2)=(4y+5)(3x+2)</m>. The factors are reversed, but multiplication is commutative.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="four-products-sign-investigation">
+    <title>Investigation: can exactly one or three products be negative?</title>
+    <p>Take four non-zero coefficients <m>a,b,c,d</m>. Before collecting anything, the coefficients of the four partial products of <m>(ax+b)(cy+d)</m> are <m>ac</m>, <m>ad</m>, <m>bc</m>, and <m>bd</m>.</p>
+    <exercise xml:id="four-products-sign-experiment">
+      <statement>
+        <p>Try changing the signs in the original two brackets. Record the signs of all four partial products for at least six examples. Can you make exactly one negative product? Can you make exactly three?</p>
+        <p>First insist on positive leading coefficients <m>a&gt;0</m> and <m>c&gt;0</m>. Then allow negative leading coefficients. State what changes.</p>
+      </statement>
+      <answer>
+        <p>With positive leading coefficients there are either zero or two negative partial products. Allowing arbitrary non-zero coefficients also permits four negatives, but never exactly one or three.</p>
+        <p>The product of the four partial-product coefficients is <m>(ac)(ad)(bc)(bd)=(abcd)^2&gt;0</m>. Therefore the number of negative coefficients must be even. Changing the sign of one term in either original binomial also reverses the signs of exactly two of the four partial products.</p>
+      </answer>
+    </exercise>
+    <p>Be precise in your conclusion: we are counting the signs of the <em>four non-zero partial-product coefficients</em>, not the signs of numerical values after substituting particular values of <m>x</m> and <m>y</m>, and not the terms of a later simplified polynomial.</p>
+  </section>
+
+  <section xml:id="four-products-check-practise">
+    <title>Practise, explain, reverse</title>
+    <exercise xml:id="four-products-ex-1">
+      <statement><p>Expand <m>(4x+3)(2y+5)</m>. Show all four separate partial products.</p></statement>
+      <answer><p><m>8xy+20x+6y+15</m>.</p></answer>
+    </exercise>
+    <exercise xml:id="four-products-ex-2">
+      <statement><p>Factorise <m>18xy+12x+15y+10</m> without combining or splitting any terms.</p></statement>
+      <answer><p><m>(6x+5)(3y+2)</m>.</p></answer>
+    </exercise>
+    <exercise xml:id="four-products-ex-3">
+      <statement><p>Factorise <m>12xy+10+15x+8y</m>. If the first two terms do not form a useful pair, try a middle swap. Explain why that swap is permitted.</p></statement>
+      <answer><p>Swap the middle terms: <m>12xy+15x+10+8y=3x(4y+5)+2(5+4y)=(3x+2)(4y+5)</m>. Rearranging terms is permitted by commutativity of addition.</p></answer>
+    </exercise>
+    <exercise xml:id="four-products-ex-4">
+      <statement><p>Factorise <m>12xy-15x-8y+10</m>, explaining why the second pair requires a negative factor.</p></statement>
+      <answer><p><m>3x(4y-5)-2(4y-5)=(3x-2)(4y-5)</m>. Using <m>+2</m> instead would make the inner bracket <m>-4y+5</m>, which is the negative of the first one.</p></answer>
+    </exercise>
+    <exercise xml:id="four-products-ex-5">
+      <statement><p>A student claims that a product of two binomials can give exactly three negative partial products. Test the claim with examples, then explain whether it can ever be correct when all four original coefficients are non-zero.</p></statement>
+      <answer><p>It cannot: the product of the four partial-product coefficients equals the strictly positive square <m>(abcd)^2</m>, so their signs contain an even number of negatives.</p></answer>
+    </exercise>
+    <paragraphs xml:id="four-products-check-list">
+      <title>Check your reasoning</title>
+      <p>Can you identify each of the four multiplication routes? Can you see whether adjacent terms form genuine groups? Can you rearrange terms without changing signs? Can you recognise when a negative factor is needed to make the brackets match? Can you reverse your result to check it?</p>
+    </paragraphs>
+  </section>
+
+  <section xml:id="four-products-app-and-progression">
+    <title>Explore the same four products interactively</title>
+    <p>Open the <url href="https://ronandownes.github.io/maths/apps/foil/" visual="Unlike Factors: Expansion and Grouping app"/>. Switch between expanding and factorising while keeping each partial product visible. Compare the two adjacent groupings and the middle swap. Use the app as a way of investigating the mathematics, not as a substitute for writing the steps yourself.</p>
+    <p>Curriculum connections: Junior Cycle Algebra and Functions <m>\mathrm{AF.3}</m>, with the unifying outcomes for representation, connections, generalisation, proof and mathematical communication; Leaving Certificate Mathematics, Strand 4.1 (Expressions). The four-unlike-product model here is a deliberate foundation for those outcomes, not a claim that every listed syllabus expression has four unlike terms.</p>
+    <p>In the next chapter, we will deliberately use the <em>same</em> letter in both brackets. Some partial products will then be like terms and can be collected <em>after they have been shown</em>. That is a new step, not a hidden part of this one.</p>
+  </section>
+</chapter>
