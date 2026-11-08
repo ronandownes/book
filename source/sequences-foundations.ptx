@@ -171,7 +171,7 @@
 
 <section xml:id="seq-interactive-resources">
   <title>Explore, practise and check your understanding</title>
-  <p>Work out an answer <em>before</em> checking it. Begin with the visual exploration, then practise the rule on paper. The final test should come later, without hints.</p>
+  <introduction><p>Work out an answer <em>before</em> checking it. Begin with the visual exploration, then practise the rule on paper. The final test should come later, without hints.</p></introduction>
   <subsection xml:id="seq-our-apps">
     <title>Maths Apps for this chapter</title>
     <ul>
