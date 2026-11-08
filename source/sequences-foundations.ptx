@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Original teaching material for Mathematics: Sequences and Series.
+     The section sequence is informed by several open learning resources,
+     but the prose, examples, activities and exercises are newly written. -->
+<section xml:id="sequences-foundations">
+  <title>What is a sequence?</title>
+  <introduction>
+    <p>A <term>sequence</term> is a list of terms in a specified order. The terms may be numbers, shapes, positions or other mathematical objects. A number sequence is our starting point.</p>
+  </introduction>
+  <subsection xml:id="seq-in-order">
+    <title>In order</title>
+    <p>Order means <em>position matters</em>. It does not mean the numbers must increase. A sequence can increase, decrease, alternate, repeat or follow a more surprising pattern.</p>
+    <me>4,\ 7,\ 10,\ 13,\ldots\qquad 20,\ 15,\ 10,\ 5,\ldots\qquad 0,\ 1,\ 0,\ 1,\ldots</me>
+    <p>We decide which term comes first, second, third and so on. Once a sequence has been defined, changing its order usually makes a different sequence.</p>
+    <exercise xml:id="seq-order-ex">
+      <statement><p>Which of the three lists above alternates between two values? Which decreases by five at each step?</p></statement>
+      <answer><p>The last list alternates. The middle list decreases by five.</p></answer>
+    </exercise>
+  </subsection>
+  <subsection xml:id="seq-compared-with-sets">
+    <title>Like a set, but different</title>
+    <p>Compare the sequence <m>0,1,0,1,0,1,\ldots</m> with the set <m>\{0,1\}</m>. The sequence remembers <em>each position</em>, including repetitions. The set records only the <em>distinct elements</em>.</p>
+    <p>A set does not change when we rearrange or repeat its elements. A sequence generally does. This is why we use commas without set braces for our displayed sequences.</p>
+    <p>Return to <xref ref="chapter-sets"/> for sets, membership and cardinality.</p>
+    <exercise xml:id="seq-set-contrast-ex">
+      <statement><p>Write the set of distinct numbers appearing in <m>2,4,2,6,4,2</m>. How many terms are in the sequence? How many elements are in the set?</p></statement>
+      <answer><p>The set is <m>\{2,4,6\}</m>. The sequence has six terms. The set has three elements.</p></answer>
+    </exercise>
+  </subsection>
+  <subsection xml:id="seq-notation">
+    <title>Terms, positions and notation</title>
+    <p>We usually number the first term <m>1</m>, the next <m>2</m>, and so on. The symbol <m>T_n</m> means the term at position <m>n</m>. Other books may write <m>a_n</m>, <m>u_n</m> or <m>x_n</m>. The letter may change; the idea does not.</p>
+    <table xml:id="seq-notation-table">
+      <title>Term number and term value are different quantities</title>
+      <tabular halign="center">
+        <row header="yes"><cell>Position <m>n</m></cell><cell><m>1</m></cell><cell><m>2</m></cell><cell><m>3</m></cell><cell><m>4</m></cell><cell><m>5</m></cell></row>
+        <row><cell>Term <m>T_n</m></cell><cell><m>3</m></cell><cell><m>5</m></cell><cell><m>7</m></cell><cell><m>9</m></cell><cell><m>11</m></cell></row>
+      </tabular>
+    </table>
+    <p>Here <m>T_1=3</m>, <m>T_4=9</m>, and <m>T_5=11</m>. The subscript is the <em>position</em>, not a multiplier.</p>
+    <p>Some sequences, including Fibonacci numbers, start at position <m>0</m>. We always state the starting index when it could cause confusion.</p>
+  </subsection>
+</section>
+
+<section xml:id="seq-rules-section">
+  <title>Describing a sequence and finding a rule</title>
+  <subsection xml:id="seq-rule-words">
+    <title>A rule in words</title>
+    <p>For <m>3,5,7,9,\ldots</m>, start at <m>3</m> and add <m>2</m> each time. This is a <term>term-by-term rule</term>: it tells us how to get the next term from the present one.</p>
+    <p>Such a rule is convenient for the next few terms. It is less convenient for finding the hundredth term without calculating all the earlier terms.</p>
+  </subsection>
+  <subsection xml:id="seq-rule-formula">
+    <title>As a formula: the nth term</title>
+    <p>Let <m>n</m> be the position. Since the sequence rises by <m>2</m> each time, test the expression <m>2n</m>. It produces <m>2,4,6,8,\ldots</m>: each result is one too small.</p>
+    <table xml:id="seq-rule-test-table">
+      <title>Testing and improving a proposed rule</title>
+      <tabular halign="center">
+        <row header="yes"><cell><m>n</m></cell><cell>Wanted</cell><cell><m>2n</m></cell><cell><m>2n+1</m></cell></row>
+        <row><cell><m>1</m></cell><cell><m>3</m></cell><cell><m>2</m></cell><cell><m>3</m></cell></row>
+        <row><cell><m>2</m></cell><cell><m>5</m></cell><cell><m>4</m></cell><cell><m>5</m></cell></row>
+        <row><cell><m>3</m></cell><cell><m>7</m></cell><cell><m>6</m></cell><cell><m>7</m></cell></row>
+        <row><cell><m>4</m></cell><cell><m>9</m></cell><cell><m>8</m></cell><cell><m>9</m></cell></row>
+      </tabular>
+    </table>
+    <p>Adding <m>1</m> gives the correct values. We can write an <term>explicit formula</term> (also called a <term>closed formula</term>):</p>
+    <me>T_n=2n+1,\qquad n\geq1.</me>
+    <p>Now the hundredth term is immediate:</p>
+    <me>T_{100}=2(100)+1=201.</me>
+    <exercise xml:id="seq-formula-ex">
+      <statement><p>Use <m>T_n=2n+1</m> to find <m>T_{10}</m> and <m>T_{50}</m>. Which term has value <m>101</m>?</p></statement>
+      <answer><p><m>T_{10}=21</m> and <m>T_{50}=101</m>. Solving <m>2n+1=101</m> gives <m>n=50</m>.</p></answer>
+    </exercise>
+  </subsection>
+  <subsection xml:id="seq-recursive-rule">
+    <title>Term-by-term and recursive formulas</title>
+    <p>We can describe the same sequence using its first term and a <term>recursive formula</term>:</p>
+    <me>T_1=3,\qquad T_{n+1}=T_n+2\quad(n\geq1).</me>
+    <p>A recursive rule uses one or more earlier terms. It must include enough starting terms to make the sequence definite.</p>
+    <p>Compare the two descriptions. The recursive rule tells us how the sequence <em>changes</em>; the explicit formula finds a term directly from its <em>position</em>.</p>
+  </subsection>
+  <subsection xml:id="seq-many-rules">
+    <title>Can the same first terms have different rules?</title>
+    <p>Yes. The beginning <m>3,5,7,9</m> fits a constant increase of two. It also fits the rule “list positive odd numbers whose decimal representation does not contain the digit 1”. This second rule continues <m>3,5,7,9,23,25,\ldots</m>.</p>
+    <p>A finite list never proves that one particular rule is the only possible rule. We can <em>propose</em> a simple rule, check it against the known terms and ask for more information about the intended pattern.</p>
+    <activity xml:id="seq-many-rules-activity">
+      <title>Two answers can both be justified</title>
+      <task><p>A friend writes <m>1,2,4,8,\ldots</m>. Suggest the next number if the terms double. Then invent a different well-defined rule agreeing with the first four terms.</p>
+        <answer><p>Doubling gives <m>16</m>. For example, a rule can agree with <m>2^{n-1}</m> at positions 1 to 4, then add <m>(n-1)(n-2)(n-3)(n-4)</m> at position <m>n</m>. Its fifth term is <m>40</m>, not <m>16</m>. Many other answers are possible if the rule is clearly stated.</p></answer>
+      </task>
+    </activity>
+  </subsection>
+</section>
+
+<section xml:id="seq-families">
+  <title>Special sequences</title>
+  <introduction><p>Some families have especially useful rules. Learn to <em>recognise</em> the structure before memorising a formula.</p></introduction>
+  <subsection xml:id="seq-family-arithmetic">
+    <title>Arithmetic sequences: add the same amount</title>
+    <p>An <term>arithmetic sequence</term> has a constant <term>common difference</term> <m>d</m> between consecutive terms. For example, <m>1,4,7,10,13,\ldots</m> has <m>d=3</m>.</p>
+    <me>T_n=a+(n-1)d,\qquad a=T_1.</me>
+    <p>The <m>n-1</m> counts how many jumps occur between the first and the <m>n</m>th term. Differences may be positive, zero or negative.</p>
+    <p>For your visual method, continue to <xref ref="sequences-intro"/> to reveal the signed differences beneath the terms and work backwards to the boxed term zero.</p>
+    <exercise xml:id="seq-arith-ex"><statement><p>Find the common difference and tenth term of <m>14,10,6,2,\ldots</m>.</p></statement><answer><p><m>d=-4</m>, so <m>T_{10}=14+9(-4)=-22</m>.</p></answer></exercise>
+  </subsection>
+  <subsection xml:id="seq-family-geometric">
+    <title>Geometric sequences: multiply by the same factor</title>
+    <p>A <term>geometric sequence</term> has a constant <term>common ratio</term> <m>r</m>. For example, <m>2,6,18,54,\ldots</m> multiplies by <m>3</m>.</p>
+    <me>T_n=ar^{n-1},\qquad a=T_1.</me>
+    <p>Here <m>T_{10}=2(3)^9</m>. A ratio between <m>0</m> and <m>1</m> describes decay; a negative ratio alternates the signs. A ratio of <m>0</m> produces zero after the first term.</p>
+    <p>Go to <xref ref="sequences-geometric"/> for diagrams, depreciation, and geometric sums.</p>
+    <exercise xml:id="seq-geo-ex"><statement><p>Write the next two terms of <m>64,32,16,8,\ldots</m>. State <m>r</m>.</p></statement><answer><p><m>4,2</m>; the common ratio is <m>r=\frac12</m>.</p></answer></exercise>
+  </subsection>
+  <subsection xml:id="seq-family-triangular">
+    <title>Triangular numbers: add another row</title>
+    <p>Arrange dots in rows of lengths <m>1,2,3,\ldots</m>. The first triangle has one dot; the next has <m>1+2=3</m>; then <m>1+2+3=6</m>. The totals form</p>
+    <me>1,\ 3,\ 6,\ 10,\ 15,\ 21,\ldots</me>
+    <p>The <m>n</m>th triangular number is</p>
+    <me>T_n=1+2+\cdots+n=\frac{n(n+1)}2.</me>
+    <table xml:id="seq-triangular-growing-table">
+      <title>Each new row grows the triangle</title>
+      <tabular halign="center">
+        <row header="yes"><cell>Rows</cell><cell><m>1</m></cell><cell><m>2</m></cell><cell><m>3</m></cell><cell><m>4</m></cell><cell><m>5</m></cell></row>
+        <row><cell>Dots added</cell><cell><m>1</m></cell><cell><m>2</m></cell><cell><m>3</m></cell><cell><m>4</m></cell><cell><m>5</m></cell></row>
+        <row><cell>Total dots</cell><cell><m>1</m></cell><cell><m>3</m></cell><cell><m>6</m></cell><cell><m>10</m></cell><cell><m>15</m></cell></row>
+      </tabular>
+    </table>
+    <exercise xml:id="seq-triangle-ex"><statement><p>How many dots are in a triangular pattern with 20 rows? What is the difference between the 20th and the 19th triangular numbers?</p></statement><answer><p><m>T_{20}=20(21)/2=210</m>. The newest row adds <m>20</m> dots, so the difference is 20.</p></answer></exercise>
+  </subsection>
+  <subsection xml:id="seq-family-squares-cubes">
+    <title>Square numbers and cube numbers</title>
+    <p>The square numbers count dots arranged as <m>n</m> rows of <m>n</m> dots. The cube numbers count unit cubes in an <m>n</m> by <m>n</m> by <m>n</m> block.</p>
+    <me>\underbrace{1,4,9,16,25,\ldots}_{T_n=n^2}
+    \qquad
+    \underbrace{1,8,27,64,125,\ldots}_{T_n=n^3}</me>
+    <p>Square numbers have constant <em>second differences</em>. Explore that connection in <xref ref="sequences-quadratic"/>.</p>
+    <exercise xml:id="seq-sq-cube-ex"><statement><p>Is <m>64</m> a square number, a cube number, or both? Give its position in each sequence.</p></statement><answer><p>Both: <m>8^2=64</m> (the eighth square) and <m>4^3=64</m> (the fourth cube).</p></answer></exercise>
+  </subsection>
+  <subsection xml:id="seq-family-fibonacci">
+    <title>Fibonacci numbers: use two earlier terms</title>
+    <p>Start at <m>F_0=0</m> and <m>F_1=1</m>. Add the previous two terms to obtain each new term:</p>
+    <me>0,\ 1,\ 1,\ 2,\ 3,\ 5,\ 8,\ 13,\ 21,\ldots</me>
+    <me>F_n=F_{n-1}+F_{n-2}\qquad(n\geq2).</me>
+    <p>Unlike an arithmetic or geometric sequence, this recursive rule needs <em>two</em> starting values. Notice that the first term is labelled <m>F_0</m>, not <m>F_1</m>.</p>
+    <exercise xml:id="seq-fib-ex"><statement><p>Find <m>F_7</m>, <m>F_8</m> and <m>F_9</m>, starting from <m>F_5=5</m> and <m>F_6=8</m>.</p></statement><answer><p><m>F_7=13</m>, <m>F_8=21</m> and <m>F_9=34</m>.</p></answer></exercise>
+  </subsection>
+</section>
+
+<section xml:id="seq-series-first-look">
+  <title>From sequences to series</title>
+  <subsection xml:id="seq-series-sums">
+    <title>Sequences, sums and partial sums</title>
+    <p>A <term>sequence</term> lists terms, such as <m>1,3,5,7,\ldots</m>. A <term>series</term> adds terms of a sequence: <m>1+3+5+7+\cdots</m>. A series may have finitely many terms or infinitely many.</p>
+    <p>The <term>partial sum</term> <m>S_n</m> is the sum of the first <m>n</m> terms. For this example,</p>
+    <me>S_1=1,\qquad S_2=1+3=4,\qquad S_3=1+3+5=9,\qquad S_4=16.</me>
+    <p>Notice the unexpected connection: the sum of the first <m>n</m> positive odd numbers is <m>n^2</m>. You can test it by drawing an <m>n</m>-by-<m>n</m> square and adding one L-shaped border at a time.</p>
+    <activity xml:id="seq-odds-square-activity">
+      <title>Investigate before using a formula</title>
+      <task><p>Predict <m>S_5</m>. Draw a square of 25 dots and explain how adding the next five odd numbers changes the growing square.</p><answer><p><m>S_5=1+3+5+7+9=25=5^2</m>. Each new odd-number border increases a square of side <m>n-1</m> to a square of side <m>n</m>.</p></answer></task>
+    </activity>
+  </subsection>
+  <subsection xml:id="seq-series-infinity">
+    <title>What about an infinite series?</title>
+    <p>An infinite series asks what happens as we add more and more terms. Sometimes the partial sums approach a finite limit; sometimes they do not.</p>
+    <me>1+\frac12+\frac14+\frac18+\cdots=2.</me>
+    <p>The equality means its sequence of partial sums approaches <m>2</m>. By contrast, <m>1+2+3+4+\cdots</m> does not approach a finite value.</p>
+    <p>The mathematical test is about the <em>partial sums</em>, not merely whether the individual terms get small. More advanced treatment belongs in calculus and mathematical analysis.</p>
+    <p>The arithmetic-series pairing method is developed in <xref ref="sequences-sum"/>. The finite and infinite geometric formulas appear in <xref ref="sequences-geometric"/>.</p>
+    <exercise xml:id="seq-series-ex"><statement><p>Calculate the first four partial sums of <m>2,4,8,16,\ldots</m>. Do they appear to approach a finite total?</p></statement><answer><p>The partial sums are <m>2,6,14,30</m>. This geometric series with ratio 2 grows without bound.</p></answer></exercise>
+  </subsection>
+</section>
+
+<section xml:id="seq-interactive-resources">
+  <title>Explore, practise and check your understanding</title>
+  <p>Work out an answer <em>before</em> checking it. Begin with the visual exploration, then practise the rule on paper. The final test should come later, without hints.</p>
+  <subsection xml:id="seq-our-apps">
+    <title>Maths Apps for this chapter</title>
+    <ul>
+      <li><p><url href="https://ronandownes.github.io/maths/apps/linear-sequences/index.html" visual="Linear Sequences"/>: show and hide under-arcs, work backwards to <m>T_0</m>, then test a rule.</p></li>
+      <li><p><url href="https://ronandownes.github.io/maths/apps/quadratic-sequences/index.html" visual="Quadratic Sequences"/>: look at first and second differences.</p></li>
+      <li><p><url href="https://ronandownes.github.io/maths/apps/geometric-sequences/index.html" visual="Geometric Sequences"/>: change the multiplier or divisor.</p></li>
+    </ul>
+  </subsection>
+  <subsection xml:id="seq-other-tools">
+    <title>Other interactive resources worth exploring</title>
+    <ul>
+      <li><p><url href="https://www.geogebra.org/m/ydbg2brp" visual="GeoGebra: Arithmetic and Geometric Series"/> provides fact sheets and test-yourself activities.</p></li>
+      <li><p><url href="https://www.geogebra.org/m/ZCjrspV9" visual="GeoGebra: Linear Sequence Game"/> practises finding the nth term.</p></li>
+      <li><p><url href="https://www.geogebra.org/m/qMdj8Std" visual="GeoGebra: Quadratic Sequence Game"/> extends that practice to quadratic patterns.</p></li>
+      <li><p><url href="https://www.geogebra.org/m/f08hfjvx" visual="GeoGebra: Sequences and Series (University of Melbourne)"/> links sequence terms, limits and partial sums.</p></li>
+      <li><p><url href="https://www.geogebra.org/m/pdekEdf9" visual="GeoGebra: The Sequence of Partial Sums"/> plots terms beside running totals.</p></li>
+      <li><p><url href="https://www.mathsisfun.com/algebra/sequence-diff-tool.html" visual="Maths Is Fun: Sequence Differences Tool"/> is useful for spotting constant differences.</p></li>
+    </ul>
+  </subsection>
+  <subsection xml:id="seq-reading-links">
+    <title>Further reading</title>
+    <p>Compare the original approaches in <url href="https://math.oscarlevin.com/discrete-book/" visual="Oscar Levin's PreTeXt Discrete Mathematics"/>, <url href="https://openstax.org/books/college-algebra-2e/pages/9-introduction-to-sequences-probability-and-counting-theory" visual="OpenStax College Algebra 2e"/>, and <url href="https://www.mathsisfun.com/algebra/sequences-series.html" visual="Maths Is Fun: Sequences and Series"/>. The explanations in this book are independently written and adapted to our teaching sequence.</p>
+  </subsection>
+</section>
