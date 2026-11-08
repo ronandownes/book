@@ -1,0 +1,32 @@
+/* Shared misconception callouts across the PreTeXt web edition.
+   Author as <warning xml:id="misconception-topic">...</warning>.
+   The book's docinfo renames all <warning> blocks to "Misconception". */
+.pretext .warning[id^="misconception-"],
+.warning[id^="misconception-"] {
+  background-color: #fff0f6;
+  color: #36232e;
+  border: 1px solid #cc6193;
+  border-left: 6px solid #b5226e;
+  border-radius: 0.5rem;
+  padding: 0.85rem 1rem;
+  margin-block: 1.2rem;
+  box-shadow: none;
+}
+.pretext .warning[id^="misconception-"] .heading,
+.warning[id^="misconception-"] .heading,
+.pretext .warning[id^="misconception-"] .title,
+.warning[id^="misconception-"] .title {
+  color: #87164b;
+  font-weight: 700;
+}
+.warning[id^="misconception-"] p {
+  color: #36232e;
+}
+@media print {
+  .warning[id^="misconception-"] {
+    background-color: #fff !important;
+    border-color: #666;
+    border-left-width: 4px;
+    break-inside: avoid;
+  }
+}

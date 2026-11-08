@@ -9,6 +9,10 @@
 <title>Every term matters: the distributive law</title>
 <p>The governing idea is <em>every term in one factor multiplies every term in the other</em>. This is the <term>distributive law</term>. It is the foundation of all the expansion methods in this chapter.</p>
 <me>a(b+c)=ab+ac.</me>
+<warning xml:id="misconception-expanding-every-term">
+  <title>Multiplying only the first term</title>
+  <p><m>3x+4</m> is not the expansion of <m>3(x+4)</m>. Multiply <em>both</em> terms: <m>3(x+4)=3x+12</m>.</p>
+</warning>
 <p>Applying distribution twice gives</p>
 <me>(a+b)(c+d)=ac+ad+bc+bd.</me>
 <example xml:id="expanding-example-distribution">

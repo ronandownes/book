@@ -55,6 +55,10 @@
 <example xml:id="algebra-vocabulary-example"><title>Read an expression</title>
 <p>In <m>4x^2-3x+7</m>, the terms are <m>4x^2</m>, <m>-3x</m>, and <m>7</m>. The coefficients are <m>4</m> and <m>-3</m>, and the constant term is <m>7</m>.</p>
 </example>
+<warning xml:id="misconception-algebra-coefficients">
+  <title>Coefficients and addition</title>
+  <p><m>5x</m> means <m>5\cdot x</m>, not <m>5+x</m>. The coefficient is <m>5</m>.</p>
+</warning>
 </subsection>
 
 <subsection xml:id="algebra-context-and-assessment">
