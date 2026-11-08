@@ -2,15 +2,87 @@
 <chapter xml:id="chapter-expanding">
 <title>Expanding Brackets</title>
 <introduction>
-  <p>Expanding rewrites a product as a sum of terms. Factorising reverses this process. First learn why every product appears; then choose a clear, efficient method.</p>
-  <p>Before you start, check that you can multiply and add signed integers, interpret coefficients and powers of <m>x</m>, and collect like terms. Revisit <xref ref="algebra-vocabulary"/> if you need to revise the language.</p>
+  <p>Start with the mathematics: the <term>distributive law</term>. It explains why expansion works. Splitting brackets, FOIL, diagrams and column multiplication are ways of using the same law, not different laws.</p>
+  <p>We begin with one term multiplying a bracket, then move to two brackets. Understand the principle first; choose an accurate and efficient method as you become confident.</p>
+  <p>Before you start, revise signed numbers, coefficients, powers and like terms in <xref ref="algebra-vocabulary"/> if needed.</p>
 </introduction>
 <section xml:id="expanding-distribution">
-<title>Every term matters: the distributive law</title>
-<p>The governing idea is <em>every term in one factor multiplies every term in the other</em>. This is the <term>distributive law</term>. It is the foundation of all the expansion methods in this chapter.</p>
+<title>The mathematics: the distributive law</title>
+<p>Multiplication distributes over addition and subtraction. Each term inside a bracket is multiplied by the factor outside it.</p>
 <me>a(b+c)=ab+ac.</me>
-<p>Applying distribution twice gives</p>
-<me>(a+b)(c+d)=ac+ad+bc+bd.</me>
+<me>a(b-c)=ab-ac.</me>
+<p>These are mathematical identities, not instructions tied to one particular layout. A diagram or written method can help us apply them.</p>
+<paragraphs xml:id="expanding-principle-versus-method">
+<title>Principle and method</title>
+<p><em>The principle</em> explains why two expressions are equal. <em>A method</em> is a way of organising a calculation.</p>
+<p>Learn the principle. Practise a method. As you improve, choose a method that is accurate and economical for you.</p>
+</paragraphs>
+</section>
+
+<section xml:id="expanding-monomial-bracket">
+<title>One term multiplying a bracket</title>
+<p>A <term>monomial</term> is an expression containing one term, such as <m>3</m>, <m>-2x</m> or <m>4x^2</m>. Begin by multiplying a monomial by every term in a bracket.</p>
+<example xml:id="expanding-monomial-first">
+<title>Multiply both terms</title>
+<statement><p>Expand <m>3(x+4)</m>.</p></statement>
+<solution>
+<me>3(x+4)=3\cdot x+3\cdot4=3x+12.</me>
+<p>Both <m>x</m> and <m>4</m> are multiplied by <m>3</m>.</p>
+</solution>
+</example>
+<example xml:id="expanding-monomial-variable">
+<title>A variable outside the bracket</title>
+<statement><p>Expand <m>2x(3x+5)</m>.</p></statement>
+<solution><me>2x(3x+5)=6x^2+10x.</me>
+<p>Since <m>x\cdot x=x^2</m>, the first product is <m>6x^2</m>.</p></solution>
+</example>
+<example xml:id="expanding-monomial-negative">
+<title>Keep the negative sign</title>
+<statement><p>Expand <m>-3x(2x-4)</m>.</p></statement>
+<solution><me>-3x(2x-4)=-6x^2+12x.</me>
+<p>The second product is positive because the product of two negative numbers is positive.</p></solution>
+</example>
+<exercise xml:id="expanding-monomial-predict">
+<statement><p>Before calculating <m>5(x+7)</m>, predict the coefficient of <m>x</m> and the constant term. Then expand.</p></statement>
+<answer><p>The coefficient is <m>5</m>, and the constant term is <m>35</m>. So <m>5(x+7)=5x+35</m>.</p></answer>
+</exercise>
+<exercise xml:id="expanding-monomial-signs">
+<statement><p>Expand <m>4(2x-3)</m>, <m>-2(x+5)</m>, and <m>-3(2x-4)</m>. Check each sign.</p></statement>
+<answer><p><m>8x-12</m>, <m>-2x-10</m>, and <m>-6x+12</m>, respectively.</p></answer>
+</exercise>
+<exercise xml:id="expanding-monomial-powers">
+<statement><p>Expand <m>3x(2x^2-4x+5)</m>. How many products do you need?</p></statement>
+<answer><p>Three products: <m>6x^3-12x^2+15x</m>.</p></answer>
+</exercise>
+<exercise xml:id="expanding-monomial-reverse">
+<statement><p>Write <m>6x+18</m> as a product of a monomial and a bracket. What mathematical law justifies your answer?</p></statement>
+<answer><p><m>6x+18=6(x+3)</m>, by the distributive law in reverse.</p></answer>
+</exercise>
+<paragraphs xml:id="expanding-monomial-reflection">
+<title>Check your understanding</title>
+<p>What must be multiplied when a bracket contains three terms? Can you explain why <m>2(x+3)</m> is not <m>2x+3</m>? Can you expand without drawing arrows once you understand the law?</p>
+</paragraphs>
+<p>Practise first with a numerical monomial, then with a variable and signed coefficients. The same law applies in every case.</p>
+</section>
+
+<section xml:id="expanding-two-brackets">
+<title>Two brackets: apply the same law twice</title>
+<p>There is no new multiplication law. Treat one bracket as a complete factor and distribute the terms of the other bracket across it.</p>
+<me>(a+b)(c+d)=a(c+d)+b(c+d)=ac+ad+bc+bd.</me>
+<example xml:id="expanding-two-brackets-example">
+<title>Four products, one principle</title>
+<statement><p>Expand <m>(2x+3)(4x+5)</m>.</p></statement>
+<solution>
+<me>\begin{aligned}(2x+3)(4x+5)&amp;=8x^2+10x+12x+15\\&amp;=8x^2+22x+15.\end{aligned}</me>
+<p>Four partial products give three unlike terms after the like <m>x</m> terms are collected.</p>
+</solution>
+</example>
+<p><url href="https://ronandownes.github.io/maths/algebra/expansions/" visual="Compare the interactive expansion methods"/>. Use them to understand and check calculations, then work towards the quickest reliable method for you.</p>
+</section>
+
+<section xml:id="expanding-distribution-legacy">
+<title>Recognising every partial product</title>
+<p>The partial-product view below reinforces the distributive law. It is a useful explanation, but it need not become your permanent written procedure.</p>
 <example xml:id="expanding-example-distribution">
 <title>Multiply every term</title>
 <me>(2x+3)(4x+5)=8x^2+10x+12x+15=8x^2+22x+15.</me>
