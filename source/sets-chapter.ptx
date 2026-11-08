@@ -238,7 +238,7 @@
         <choice><statement><p>13</p></statement><feedback><p>The complement is the rest within <m>U</m>, not an extra set beyond it.</p></feedback></choice>
       </choices>
     </exercise>
-    <p><url href="https://ronandownes.github.io/maths/apps/sets/universal-complement.html#explore">Explore digital shading, paper hatching and complement cardinality.</url></p>
+    <p>Choose how to use this activity: <url href="https://ronandownes.github.io/maths/apps/sets/universal-complement.html#explore">Open the full Universal Set and Complement app</url> for more space, or use the embedded version below without leaving the book.</p>
     <figure xml:id="figure-universal-complement-app">
       <caption>Explore a universal set and complement.</caption>
       <interactive xml:id="interactive-universal-complement" iframe="https://ronandownes.github.io/maths/apps/sets/universal-complement.html?embed=1#watch" width="100%" aspect="16:10"/>
