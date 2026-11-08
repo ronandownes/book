@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xml:id="algebra-vocabulary">
+<section xml:id="algebra-vocabulary">
 <title>The Language of Algebra</title>
-<section xml:id="algebra-words">
+<subsection xml:id="algebra-words">
 <title>Variables, coefficients, constants and terms</title>
 <p>Begin with what the letters describe. Look at the diagrams, make a prediction, and then use the Rectangle Explorer to change the measurements. The definitions will make more sense after the quantities have a meaning.</p>
 <figure xml:id="square-rectangle-measures">
@@ -35,7 +35,7 @@
 </figure>
 <p><url href="https://ronandownes.github.io/maths/geometry/rectangle-variables/app.html">Open the Rectangle Explorer in a separate tab.</url> It is in Geometry on the Maths site and links back to this section.</p>
 
-<subsection xml:id="variables-geometric-models">
+<subsubsection xml:id="variables-geometric-models">
 <title>Variables represent measurements</title>
 <p>Let <m>s</m> centimetres be the side length of a square. A square has four equal sides, so its perimeter is <m>s+s+s+s=4s</m>. The expression <m>4s</m> describes the perimeter for every possible side length. If <m>s=5</m>, the perimeter is <m>4(5)=20</m> centimetres.</p>
 <p>The area of the same square is <m>s^2</m>. If <m>s=5</m>, its area is <m>25</m> square centimetres. The same measurement <m>s</m> appears in both expressions, but perimeter measures a boundary and area measures a surface.</p>
@@ -44,9 +44,9 @@
 <p>If <m>w=8</m> centimetres and <m>h=5</m> centimetres, then <m>P=2(8+5)=26</m> centimetres. The half-perimeter is <m>w+h=13</m> centimetres. The area is <m>A=wh=8\cdot5=40</m> square centimetres.</p>
 <p>In the expression <m>2(w+h)</m>, one width and one height form a pair. The rectangle has two such pairs because opposite sides are equal. This symmetry is why the half-perimeter <m>w+h</m> is convenient.</p>
 <p>If <m>h</m> stays fixed and <m>w</m> increases, the area increases. If a positive side length decreases, the area diminishes. The app makes the changing quantities visible before you have to reason from the symbols alone.</p>
-</subsection>
+</subsubsection>
 
-<subsection xml:id="algebra-vocabulary-definitions">
+<subsubsection xml:id="algebra-vocabulary-definitions">
 <title>Name the parts of an expression</title>
 <p>A <term>variable</term> is a letter or symbol representing a number which may vary or is unknown. In <m>3x+5</m>, <m>x</m> is the variable.</p>
 <p>A <term>coefficient</term> is the numerical factor multiplying a variable or its power. In <m>7x^2</m>, the coefficient is <m>7</m>; in <m>-x</m>, it is <m>-1</m>.</p>
@@ -55,9 +55,9 @@
 <example xml:id="algebra-vocabulary-example"><title>Read an expression</title>
 <p>In <m>4x^2-3x+7</m>, the terms are <m>4x^2</m>, <m>-3x</m>, and <m>7</m>. The coefficients are <m>4</m> and <m>-3</m>, and the constant term is <m>7</m>.</p>
 </example>
-</subsection>
+</subsubsection>
 
-<subsection xml:id="algebra-context-and-assessment">
+<subsubsection xml:id="algebra-context-and-assessment">
 <title>Use the model in a practical situation</title>
 <example xml:id="wall-paint-area-example">
 <title>Estimate paint for a room</title>
@@ -71,9 +71,9 @@
 <statement><p>The depth of a trapezoidal prism must be at least <m>5</m> centimetres. Let <m>x</m> centimetres be the extra depth beyond that minimum. Write an expression for the depth and state what values <m>x</m> can take.</p></statement>
 <answer><p><m>d=x+5</m> centimetres, where <m>x\geq0</m>. Here <m>x</m> is the extra amount, not the whole depth.</p></answer>
 </exercise>
-</subsection>
+</subsubsection>
 
-<subsection xml:id="algebra-vocabulary-reflection">
+<subsubsection xml:id="algebra-vocabulary-reflection">
 <title>Predict, explore, and check what you can do</title>
 <p><term>Assessment for learning:</term> write your first perimeter prediction before exploring. Your reasoning helps a teacher see what you already understand and what needs attention.</p>
 <p><term>Assessment as learning:</term> change one side at a time, record how <m>P</m> and <m>A</m> change, and decide whether you can explain the pattern independently or with a hint.</p>
@@ -82,10 +82,10 @@
 <statement><p>Complete the exit check above before revealing the solution.</p></statement>
 <answer><p><m>P=2(9+4)=26</m> centimetres; half-perimeter <m>9+4=13</m> centimetres; <m>A=9\cdot4=36</m> square centimetres.</p></answer>
 </exercise>
+</subsubsection>
 </subsection>
-</section>
 
-<section xml:id="algebra-operation-words">
+<subsection xml:id="algebra-operation-words">
 <title>Sum, difference, product, fraction and quotient</title>
 <p>Study the diagrams before reading the formal names. First join or compare the lengths; then look at the rows and columns of unit squares. Say what each picture tells you.</p>
 <figure xml:id="operation-word-models">
@@ -135,13 +135,13 @@
 <p><m>3x+5</m> is a sum of two terms. <m>3x</m> is one term but a product of two factors. <m>3(x+2)</m> is a product of two factors; expanding gives the sum <m>3x+6</m>.</p>
 </example>
 <p>Say it aloud: <em>Term plus term gives a sum. Factor times factor gives a product. Dividend divided by divisor gives a quotient.</em></p>
-</section>
+</subsection>
 
-<section xml:id="algebra-language-practice">
+<subsection xml:id="algebra-language-practice">
 <title>Practise the language</title>
 <exercise xml:id="algebra-language-exercise-one"><statement><p>Name the three terms, the coefficients and the constant term in <m>6a^2-5a+9</m>.</p></statement><answer><p>Terms: <m>6a^2</m>, <m>-5a</m>, <m>9</m>. Coefficients: <m>6</m> and <m>-5</m>. Constant term: <m>9</m>.</p></answer></exercise>
 <exercise xml:id="algebra-language-exercise-two"><statement><p>Describe <m>4(2x-3)</m> as a product, then expand it and identify the terms.</p></statement><answer><p>Factors: <m>4</m> and <m>(2x-3)</m>. Expanded expression: <m>8x-12</m>; terms: <m>8x</m> and <m>-12</m>.</p></answer></exercise>
 <exercise xml:id="algebra-language-exercise-three"><statement><p>In <m>\frac{3x+6}{3}</m>, identify numerator, denominator, dividend and divisor.</p></statement><answer><p>Numerator and dividend: <m>3x+6</m>. Denominator and divisor: <m>3</m>.</p></answer></exercise>
 <exercise xml:id="algebra-language-exercise-four"><statement><p>A rectangle has width <m>9</m> centimetres and height <m>4</m> centimetres. Write expressions for its perimeter and area, then find both values.</p></statement><answer><p><m>P=2(9+4)=26</m> centimetres and <m>A=9\cdot4=36</m> square centimetres.</p></answer></exercise>
+</subsection>
 </section>
-</chapter>
