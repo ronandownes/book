@@ -2,9 +2,29 @@
 <chapter xml:id="chapter-sequences">
 <title>Sequences and Series</title>
 <introduction>
+<p><em>Formula reference.</em> Return to this table whenever you need a formula. Here <m>a=T_1</m> is the first term; <m>d</m> is the common difference; <m>r</m> is the common ratio; and <m>n</m> is the term number. The symbol <m>S_n</m> means the sum of the first <m>n</m> terms. A different starting index must be stated explicitly.</p>
+<table xml:id="sequences-formula-reference">
+<title>Sequences and series: formulas at a glance</title>
+<tabular halign="left">
+<row header="yes"><cell>Sequence or sum</cell><cell>Formula</cell><cell>Meaning and conditions</cell></row>
+<row><cell>Arithmetic: nth term</cell><cell><m>T_n=a+(n-1)d</m></cell><cell>Start at <m>a</m>, add <m>d</m> per step.</cell></row>
+<row><cell>Arithmetic: recursive</cell><cell><m>T_{n+1}=T_n+d</m></cell><cell>Give <m>T_1=a</m> as well.</cell></row>
+<row><cell>Arithmetic: first <m>n</m> summed</cell><cell><m>S_n=\frac n2[2a+(n-1)d]</m></cell><cell>Or <m>S_n=\frac n2(T_1+T_n)</m>.</cell></row>
+<row><cell>Geometric: nth term</cell><cell><m>T_n=ar^{n-1}</m></cell><cell>Multiply by <m>r</m> at each step.</cell></row>
+<row><cell>Geometric: recursive</cell><cell><m>T_{n+1}=rT_n</m></cell><cell>Give <m>T_1=a</m> as well.</cell></row>
+<row><cell>Geometric: first <m>n</m> summed</cell><cell><m>S_n=a\frac{1-r^n}{1-r}</m></cell><cell>For <m>r\ne1</m>. If <m>r=1</m>, then <m>S_n=na</m>.</cell></row>
+<row><cell>Infinite geometric sum</cell><cell><m>S_\infty=\frac a{1-r}</m></cell><cell>Only when <m>|r|&lt;1</m>.</cell></row>
+<row><cell>Quadratic: nth term</cell><cell><m>T_n=An^2+Bn+C</m></cell><cell>Constant second difference <m>2A</m>.</cell></row>
+<row><cell>Triangular numbers</cell><cell><m>T_n=\frac{n(n+1)}2</m></cell><cell>Sum of <m>1</m> through <m>n</m>.</cell></row>
+<row><cell>Square and cube numbers</cell><cell><m>T_n=n^2</m>, <m>T_n=n^3</m></cell><cell>Dot squares and unit-cube blocks.</cell></row>
+<row><cell>Fibonacci</cell><cell><m>F_n=F_{n-1}+F_{n-2}</m></cell><cell><m>F_0=0</m>, <m>F_1=1</m>.</cell></row>
+</tabular>
+</table>
+<p>Begin with <xref ref="sequences-foundations"/> for definitions. The deeper investigations include <xref ref="sequences-intro"/>, <xref ref="sequences-quadratic"/>, <xref ref="sequences-geometric"/> and <xref ref="sequences-sum"/>. When reading a print copy, use the formula-reference entry in the contents or index rather than relying on a fixed page number.</p>
 <p>The aim is not to memorise a formula first. We will represent a pattern visually, identify what stays constant, work backwards when useful, and only then generalise. In the accompanying Maths Apps, the same under-arc representation can be revealed one step at a time.</p>
 <p>There are three related investigations: linear (arithmetic) sequences, quadratic sequences, and geometric sequences. Arithmetic sums belong with linear sequences, where they first arise naturally.</p>
 </introduction>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="./sequences-foundations.ptx"/>
 <section xml:id="sequences-cicadas">
 <title>Two clocks in nature: 13 years and 17 years</title>
 <p>Imagine walking into a forest where the trunks, branches and ground are suddenly covered with periodical cicadas. These insects spend most of their lives underground, then emerge in very large numbers during a few weeks. The timing creates a surprising mathematical puzzle: some populations emerge every 13 years and others every 17 years. This is a <term>mass emergence</term>, not a crop-destroying swarm.</p>
