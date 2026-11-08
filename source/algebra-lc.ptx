@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="algebra-lc">
+<title>Algebra — LC</title>
+<introduction>
+<p>Leaving Certificate algebra builds on <xref ref="algebra-jc"/>. Revise the JC material when needed; this chapter contains additional content only, without duplicating the earlier explanations.</p>
+<p>Ordinary Level is the starting point. Material specific to Higher Level will be identified within the appropriate section. Foundation Level will be dealt with separately later.</p>
+</introduction>
+<section xml:id="algebra-lc-polynomial-division">
+<title>Polynomial Division</title>
+<p>LC-only content to be developed.</p>
+</section>
+<section xml:id="algebra-lc-remainder-factor-theorems">
+<title>Remainder and Factor Theorems</title>
+<p>LC-only content to be developed. Revise <xref ref="chapter-factorisation"/> for the foundational algebra.</p>
+</section>
+<section xml:id="algebra-lc-equations-extensions">
+<title>Further Equations and Inequalities</title>
+<p>LC-only content to be developed. Earlier algebraic manipulation will be linked rather than repeated.</p>
+</section>
+<section xml:id="algebra-lc-proof">
+<title>Algebraic Proof and Reasoning</title>
+<p>LC-only content to be developed, with Higher Level requirements identified where applicable.</p>
+</section>
+</chapter>
