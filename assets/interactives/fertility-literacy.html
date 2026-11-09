@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Female literacy and fertility — explore real data</title>
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:#172736;background:#fff;font-size:16px}
+*{box-sizing:border-box}body{margin:0;padding:15px;max-width:1100px}
+h1{font-size:1.25rem;line-height:1.25;margin:0 0 6px}p{margin:6px 0;line-height:1.45}
+.sub{color:#415568;font-size:.92rem}
+.toolbar{display:flex;flex-wrap:wrap;align-items:end;gap:10px;margin:14px 0 5px}
+.field{display:flex;flex-direction:column;gap:3px;font-size:.83rem;font-weight:650;color:#293f53}
+input,select,button{font:inherit;border:1px solid #9aafbd;border-radius:6px;background:#fff;color:#172736;padding:8px}
+input{min-width:195px;width:240px;max-width:100%}
+button{cursor:pointer;background:#f1f6fa;font-weight:600}button:hover{background:#e3eff6}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #2678a8;outline-offset:2px}
+.checkbox{display:flex;align-items:center;gap:6px;font-size:.88rem;font-weight:600;padding:8px 0}
+.checkbox input{min-width:0;width:auto}
+#status{min-height:22px;font-size:.9rem;color:#37516c;margin:8px 0}
+#plot{display:block;width:100%;height:auto;max-height:520px;border:1px solid #dbe5eb;border-radius:8px;background:#fff;touch-action:manipulation}
+.tick{fill:#3b4b59;font-size:16px}.axis-label{fill:#203447;font-size:18px;font-weight:700}
+.grid{stroke:#e1e6eb;stroke-width:1}.axis{stroke:#324251;stroke-width:1.5}
+.dot{fill:#e33b32;stroke:#a9211e;stroke-width:.5;cursor:pointer;opacity:.83}
+.dot:hover,.dot:focus{fill:#b91714;stroke:#3b1c1c;stroke-width:2;outline:none}
+.dot.selected{fill:#e22c20;stroke:#102d4e;stroke-width:4}
+.trend{stroke:#145bb4;stroke-width:3;fill:none;pointer-events:none}
+.cutoff{stroke:#126c65;stroke-width:2.5;stroke-dasharray:9 6;pointer-events:none}
+.panel{border:1px solid #d4e0e8;border-radius:8px;background:#f7fafc;padding:11px 13px;min-height:77px;margin:10px 0}
+.panel strong{font-size:1.08rem}.panel p{font-size:.94rem;margin:4px 0}
+.stats{display:flex;flex-wrap:wrap;gap:9px;margin:10px 0}
+.stat{border:1px solid #d7e2e9;border-radius:7px;padding:8px 11px;flex:1 1 150px}
+.stat b{display:block;font-size:1.13rem}.stat span{color:#496070;font-size:.82rem}
+.foot{font-size:.8rem;color:#4e6274;margin-top:12px}
+a{color:#125a92}#error{display:none;color:#90201c;margin:8px 0}
+@media(max-width:560px){body{padding:8px}h1{font-size:1.05rem}.toolbar{gap:7px}.field{flex:1 1 155px}input{width:100%;min-width:0}select{width:100%}.tick{font-size:17px}.axis-label{font-size:18px}}
+</style>
+</head>
+<body>
+<h1>Births per woman and female literacy</h1>
+<p class="sub">Each red point is a country. Select a point to discover its name, values and observation year.</p>
+<div class="toolbar">
+  <label class="field" for="countrySearch">Find a country<input id="countrySearch" list="countries" placeholder="Search by country name" autocomplete="off"><datalist id="countries"></datalist></label>
+  <label class="field" for="threshold">Explore a fertility threshold<select id="threshold"><option value="2" selected>Below 2 births per woman</option><option value="1">Below 1 birth per woman</option><option value="2.1">Below 2.1 (approx. replacement)</option><option value="none">No threshold line</option></select></label>
+  <label class="checkbox"><input type="checkbox" id="trend" checked> Show regression line</label>
+  <button type="button" id="reload">Refresh data</button>
+</div>
+<div id="status" role="status" aria-live="polite">Loading World Bank data…</div>
+<div id="error" role="alert"></div>
+<svg id="plot" viewBox="0 0 840 490" role="img" aria-label="Scatter plot of adult female literacy percentage versus fertility rate. Select a red data point to see the country."></svg>
+<div id="selection" class="panel" aria-live="polite"><strong>Select a point</strong><p>Choose a red point or search for a country.</p></div>
+<div class="stats">
+  <div class="stat"><b id="countryCount">—</b><span>Countries with a matching data year</span></div>
+  <div class="stat"><b id="thresholdCount">—</b><span id="thresholdLabel">Countries below 2</span></div>
+  <div class="stat"><b id="correlation">—</b><span>Pearson correlation, r</span></div>
+</div>
+<p class="foot">Source: <a href="https://data.worldbank.org/indicator/SE.ADT.LITR.FE.ZS" target="_blank" rel="noopener">World Bank / UNESCO adult female literacy (ages 15+)</a> and <a href="https://data.worldbank.org/indicator/SP.DYN.TFRT.IN" target="_blank" rel="noopener">World Bank total fertility (births per woman)</a>. The latest year in which <em>both</em> values are available is selected for each country, from 2015 onwards; years can differ between countries. Countries without a matched year and geographical aggregates are excluded. Correlation does not establish causation. Replacement-level fertility is approximately 2.1 in low-mortality populations; migration, mortality and population age structure also matter.</p>
+<script>
+(function () {
+  "use strict";
+  var NS="http://www.w3.org/2000/svg";
+  var svg=document.getElementById("plot");
+  var status=document.getElementById("status");
+  var err=document.getElementById("error");
+  var selection=document.getElementById("selection");
+  var search=document.getElementById("countrySearch");
+  var threshold=document.getElementById("threshold");
+  var trendCheck=document.getElementById("trend");
+  var countryList=document.getElementById("countries");
+  var rows=[],selected=null,fit=null;
+  var W=840,H=490,L=74,R=22,T=30,B=70,maxY=8;
+  var x=function(v){return L+(v/100)*(W-L-R);};
+  var y=function(v){return H-B-(v/maxY)*(H-T-B);};
+  function node(tag,attrs,parent,text) {
+    var n=document.createElementNS(NS,tag);
+    Object.keys(attrs||{}).forEach(function(k){n.setAttribute(k,attrs[k]);});
+    if(text!==undefined)n.textContent=text;
+    (parent||svg).appendChild(n);
+    return n;
+  }
+  function clear(el){while(el.firstChild)el.removeChild(el.firstChild);}
+  function fmt(v,d){return Number(v).toFixed(d);}
+  function metric(url) {
+    return fetch(url,{cache:"no-store"}).then(function(response){
+      if(!response.ok)throw new Error("World Bank request failed ("+response.status+")");
+      return response.json();
+    }).then(function(data){
+      if(!Array.isArray(data)||!Array.isArray(data[1]))throw new Error("World Bank returned an unexpected response");
+      return data[1];
+    });
+  }
+  function regression(data) {
+    var n=data.length,sx=0,sy=0,sxx=0,syy=0,sxy=0;
+    data.forEach(function(d){sx+=d.x;sy+=d.y;sxx+=d.x*d.x;syy+=d.y*d.y;sxy+=d.x*d.y;});
+    var vx=n*sxx-sx*sx,vy=n*syy-sy*sy,cov=n*sxy-sx*sy;
+    return vx>0&&vy>0 ? {slope:cov/vx,intercept:(sy-(cov/vx)*sx)/n,r:cov/Math.sqrt(vx*vy)} : null;
+  }
+  function choose(country){
+    selected=country;
+    render();
+    var d=rows.find(function(row){return row.name.toLowerCase()===country.toLowerCase();});
+    if(!d)return;
+    clear(selection);
+    var title=document.createElement("strong");
+    title.textContent=d.name+" ("+d.year+")";
+    selection.appendChild(title);
+    var p=document.createElement("p");
+    p.textContent="Female literacy: "+fmt(d.x,1)+"%. Fertility: "+fmt(d.y,2)+" births per woman.";
+    selection.appendChild(p);
+    var p2=document.createElement("p");
+    var t=Number(threshold.value);
+    p2.textContent=Number.isFinite(t) ? (d.y<t ? "Below " : "Not below ")+fmt(t,t===2.1?1:0)+" births per woman." : "Compare this country with others on the graph.";
+    selection.appendChild(p2);
+  }
+  function render(){
+    clear(svg);
+    var gx=W-L-R,gy=H-T-B;
+    for(var t=0;t<=100;t+=20){
+      node("line",{x1:x(t),y1:T,x2:x(t),y2:H-B,class:"grid"});
+      node("text",{x:x(t),y:H-B+27,"text-anchor":"middle",class:"tick"},svg,String(t));
+    }
+    for(var v=0;v<=maxY;v++){
+      node("line",{x1:L,y1:y(v),x2:W-R,y2:y(v),class:"grid"});
+      node("text",{x:L-15,y:y(v)+5,"text-anchor":"end",class:"tick"},svg,String(v));
+    }
+    node("line",{x1:L,y1:T,x2:L,y2:H-B,class:"axis"});
+    node("line",{x1:L,y1:H-B,x2:W-R,y2:H-B,class:"axis"});
+    node("text",{x:L+gx/2,y:H-14,"text-anchor":"middle",class:"axis-label"},svg,"Adult female literacy (%)");
+    node("text",{x:19,y:T+gy/2,transform:"rotate(-90 19 "+(T+gy/2)+")","text-anchor":"middle",class:"axis-label"},svg,"Births per woman");
+    var line=Number(threshold.value);
+    if(Number.isFinite(line) && line<=maxY){
+      node("line",{x1:L,y1:y(line),x2:W-R,y2:y(line),class:"cutoff"});
+      node("text",{x:W-R-6,y:y(line)-8,"text-anchor":"end",fill:"#126c65","font-size":"16","font-weight":"700"},svg,"threshold "+threshold.value);
+    }
+    if(fit&&trendCheck.checked){
+      var ya=fit.intercept,yb=fit.intercept+fit.slope*100;
+      node("line",{x1:x(0),y1:y(ya),x2:x(100),y2:y(yb),class:"trend"});
+    }
+    rows.forEach(function(d){
+      var active=selected&&d.name.toLowerCase()===selected.toLowerCase();
+      var circ=node("circle",{cx:x(d.x),cy:y(d.y),r:active?8:5.2,tabindex:0,role:"button",
+        "aria-label":d.name+": "+fmt(d.x,1)+" percent literacy, "+fmt(d.y,2)+" births per woman, "+d.year,
+        class:"dot"+(active?" selected":"")});
+      var tip=node("title",{},circ,d.name+" ("+d.year+"): "+fmt(d.x,1)+"%; "+fmt(d.y,2)+" births");
+      circ.addEventListener("click",function(){search.value=d.name;choose(d.name);});
+      circ.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();search.value=d.name;choose(d.name);}});
+    });
+  }
+  function updateCounts(){
+    document.getElementById("countryCount").textContent=String(rows.length);
+    document.getElementById("correlation").textContent=fit?fmt(fit.r,2):"—";
+    var thresholdValue=Number(threshold.value);
+    document.getElementById("thresholdCount").textContent=Number.isFinite(thresholdValue)?String(rows.filter(function(d){return d.y<thresholdValue;}).length):"—";
+    document.getElementById("thresholdLabel").textContent=Number.isFinite(thresholdValue)?"Countries below "+threshold.value:"No threshold chosen";
+  }
+  function prepare(meta,literacy,fertility){
+    var valid=new Set(meta.filter(function(c){return c.region&&c.region.value!=="Aggregates";}).map(function(c){return c.id;}));
+    var countries=new Map(meta.filter(function(c){return valid.has(c.id);}).map(function(c){return [c.id,c.name];}));
+    var f=new Map();
+    fertility.forEach(function(d){
+      if(!valid.has(d.country.id)||!Number.isFinite(d.value))return;
+      f.set(d.country.id+"|"+d.date,Number(d.value));
+    });
+    var best=new Map();
+    literacy.forEach(function(d){
+      if(!valid.has(d.country.id)||!Number.isFinite(d.value))return;
+      var key=d.country.id+"|"+d.date;
+      if(!f.has(key))return;
+      var old=best.get(d.country.id);
+      if(!old||Number(d.date)>Number(old.year)){
+        best.set(d.country.id,{code:d.country.id,name:countries.get(d.country.id)||d.country.value,
+          year:Number(d.date),x:Number(d.value),y:f.get(key)});
+      }
+    });
+    return Array.from(best.values()).filter(function(d){return d.x>=0&&d.x<=100&&d.y>=0&&d.y<=15;}).sort(function(a,b){return a.name.localeCompare(b.name);});
+  }
+  async function load(){
+    status.textContent="Loading the latest available matching country-year observations…";
+    err.style.display="none";
+    document.getElementById("reload").disabled=true;
+    try{
+      var endYear=new Date().getFullYear();
+      var base="https://api.worldbank.org/v2/";
+      var suffix="?format=json&per_page=20000&date=2015:"+endYear;
+      var responses=await Promise.all([
+        metric(base+"country?format=json&per_page=500"),
+        metric(base+"country/all/indicator/SE.ADT.LITR.FE.ZS"+suffix),
+        metric(base+"country/all/indicator/SP.DYN.TFRT.IN"+suffix)
+      ]);
+      var next=prepare(responses[0],responses[1],responses[2]);
+      if(next.length<15)throw new Error("Too few matched observations were returned; try again later");
+      rows=next;selected=null;fit=regression(rows);
+      maxY=Math.max(8,Math.ceil(Math.max.apply(null,rows.map(function(d){return d.y;}))));
+      clear(countryList);
+      rows.forEach(function(d){var option=document.createElement("option");option.value=d.name;countryList.appendChild(option);});
+      clear(selection);
+      var strong=document.createElement("strong");strong.textContent="Select a point";selection.appendChild(strong);
+      var p=document.createElement("p");p.textContent="Choose a red point or search for a country.";selection.appendChild(p);
+      render();updateCounts();
+      var years=rows.map(function(d){return d.year;});
+      status.textContent=rows.length+" countries • matched observations from "+Math.min.apply(null,years)+" to "+Math.max.apply(null,years)+" • loaded "+new Date().toLocaleDateString("en-IE");
+    }catch(e){
+      status.textContent="Data unavailable";
+      err.style.display="block";
+      err.textContent="Could not retrieve the World Bank data. Check your connection and select Refresh data. "+(e&&e.message?e.message:"");
+      rows=[];fit=null;selected=null;render();updateCounts();
+    }finally{document.getElementById("reload").disabled=false;}
+  }
+  threshold.addEventListener("change",function(){render();updateCounts();if(selected)choose(selected);});
+  trendCheck.addEventListener("change",render);
+  search.addEventListener("change",function(){
+    var q=search.value.trim().toLowerCase();
+    var found=rows.find(function(d){return d.name.toLowerCase()===q;});
+    if(!found)found=rows.find(function(d){return d.name.toLowerCase().indexOf(q)===0;});
+    if(found)choose(found.name);
+  });
+  document.getElementById("reload").addEventListener("click",load);
+  render();load();
+})();
+</script>
+</body>
+</html>
