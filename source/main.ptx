@@ -41,7 +41,18 @@
 
     <part xml:id="part-functions"><title>Functions</title>
       <chapter xml:id="chapter-functions"><title>Functions and Graphs</title>
-        <section xml:id="functions-intro"><title>Inputs and outputs</title>
+        <section xml:id="functions-intro"><title>Introduction</title>
+          <p>Do countries with higher female literacy rates tend to have fewer births per woman? We can explore this question using real data.</p>
+          <p>Each point on the graph represents a country. Select a point to see its name, its measurements and the year. The blue line models the general trend.</p>
+          <figure xml:id="figure-literacy-fertility">
+            <caption>Female literacy and fertility: explore country-level World Bank data.</caption>
+            <interactive xml:id="interactive-literacy-fertility" iframe="https://ronandownes.github.io/book/interactives/fertility-literacy.html" width="100%" aspect="3:4"/>
+          </figure>
+          <p><url href="https://ronandownes.github.io/book/interactives/fertility-literacy.html" visual="Open the interactive graph full screen"/> for classroom projection.</p>
+          <p><em>Investigate.</em> Describe the general pattern. Find two countries with similar literacy rates but different fertility rates. Click a country with fertility below 2 births per woman, and then try to find one below 1. Why might these thresholds matter? Is either threshold necessarily critical?</p>
+          <p><em>Think further.</em> Does this graph demonstrate that literacy causes fertility to fall? What other factors could influence the relationship?</p>
+          <p>The red points are observations, not necessarily the graph of a function. The fitted blue line <em>is</em> a function: it gives a modelled output for each literacy-rate input.</p>
+          <p>Source: <url href="https://data.worldbank.org/indicator/SE.ADT.LITR.FE.ZS" visual="World Bank/UNESCO female adult literacy"/> and <url href="https://data.worldbank.org/indicator/SP.DYN.TFRT.IN" visual="World Bank total fertility"/>. The app pairs both measurements for the most recent shared year available for each country from 2015 onwards. Years differ between countries.</p>
           <p>A function assigns exactly one output to each input in its domain.</p>
         </section>
       </chapter>
