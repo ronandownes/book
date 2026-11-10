@@ -25,6 +25,18 @@
       <chapter xml:id="chapter-complex"><title>Complex Numbers</title>
         <section xml:id="complex-intro"><title>Beyond the real numbers</title>
           <p>We define <m>i</m> by <m>i^2=-1</m>. A complex number has the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real.</p>
+          <p>On the Argand diagram, <m>a+bi</m> is represented by the point <m>(a,b)</m>. The horizontal axis shows the real part and the vertical axis shows the imaginary part.</p>
+          <p>Multiplication by <m>i</m> sends <m>a+bi</m> to <m>-b+ai</m>: a quarter-turn anticlockwise about the origin. Division by <m>i</m> produces a quarter-turn clockwise.</p>
+          <p>For classroom exploration and step-by-step calculations, <url href="https://ronandownes.github.io/maths/apps/complex-numbers/index.html" visual="open the standalone Complex Number Calculations app full screen"/>.</p>
+        </section>
+        <section xml:id="complex-reading"><title>Further reading on complex numbers</title>
+          <p>These are external references for further explanation and study. The IB course notes are independent of the Irish Leaving Certificate syllabus; the PreTeXt books range from introductory material to undergraduate complex analysis.</p>
+          <p><url href="https://aa.selfsg.com/units/u19-complex-numbers/" visual="IB Mathematics AA: Complex Numbers"/> covers Cartesian form, conjugates, the Argand diagram, modulus, argument, powers and geometric interpretation.</p>
+          <p><url href="https://complexanalysis.org/web/ch_Complex_Numbers.html" visual="Howell and Mathews: Complex Analysis, Chapter 1"/> develops the algebra and geometry of complex numbers.</p>
+          <p><url href="https://judsonbooks.org/aata-files/aata-html/cyclic-section-mult-group-c.html" visual="Judson: Multiplicative Group of Complex Numbers"/> covers complex operations, modulus, argument and the roots of unity.</p>
+          <p><url href="https://www.cs.uleth.ca/~morris/Combinatorics/Combinatorics.html" visual="Morris: Combinatorics, Appendix A: Complex Numbers"/> provides an introductory account in a PreTeXt textbook.</p>
+          <p><url href="https://matthbeck.github.io/papers/complex.pdf" visual="Beck et al.: A First Course in Complex Analysis (PDF, PreTeXt edition)"/> introduces complex-number arithmetic and geometry.</p>
+          <p><url href="https://pretextbook.org/examples/sample-book/structural/html/section-cyclic-complex-numbers.html" visual="PreTeXt Sample Book: Cyclic Groups of Complex Numbers"/> also demonstrates how complex-number mathematics can be presented in PreTeXt.</p>
         </section>
       </chapter>
     </part>
