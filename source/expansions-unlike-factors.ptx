@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="expansions-unlike-factors">
+<title>Unlike Factors</title>
+<p>Multiply the two binomials. The terms in these products do not require collecting into a single middle term. Attempt each question before revealing its final answer. No workings are shown.</p>
+<exercise xml:id="expansions-unlike-factors-q001"><statement><p><m>\begin{array}{r}3x-7\\[3pt]2y+9\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>6xy+27x-14y-63</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q002"><statement><p><m>\begin{array}{r}2r+7\\[3pt]5+2t\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>4rt+10r+14t+35</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q003"><statement><p><m>\begin{array}{r}7+2m\\[3pt]3n+5\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>6mn+10m+21n+35</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q004"><statement><p><m>\begin{array}{r}3a^2+2\\[3pt]5b^2+7\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>15a^{2}b^{2}+21a^{2}+10b^{2}+14</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q005"><statement><p><m>\begin{array}{r}2u+1\\[3pt]5v+3\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>10uv+6u+5v+3</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q006"><statement><p><m>\begin{array}{r}5e+f\\[3pt]f^2+3\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>5ef^{2}+f^{3}+15e+3f</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q007"><statement><p><m>(x+2)(y+3)</m></p></statement><answer><p><m>xy+3x+2y+6</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q008"><statement><p><m>(2x+3)(3y+5)</m></p></statement><answer><p><m>6xy+10x+9y+15</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q009"><statement><p><m>(3x+5)(7y+2)</m></p></statement><answer><p><m>21xy+6x+35y+10</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q010"><statement><p><m>(x-2)(y-3)</m></p></statement><answer><p><m>xy-3x-2y+6</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q011"><statement><p><m>(3x-2)(5y-3)</m></p></statement><answer><p><m>15xy-9x-10y+6</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q012"><statement><p><m>(2x-5)(7y-3)</m></p></statement><answer><p><m>14xy-6x-35y+15</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q013"><statement><p><m>(x+3)(2y-5)</m></p></statement><answer><p><m>2xy-5x+6y-15</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q014"><statement><p><m>(2x-3)(y+4)</m></p></statement><answer><p><m>2xy+8x-3y-12</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q015"><statement><p><m>(5x+7)(3y-2)</m></p></statement><answer><p><m>15xy-10x+21y-14</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q016"><statement><p><m>(3x+1)(7y+4)</m></p></statement><answer><p><m>21xy+12x+7y+4</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q017"><statement><p><m>(7x-1)(5y+3)</m></p></statement><answer><p><m>35xy+21x-5y-3</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q018"><statement><p><m>(11x+3)(2y-5)</m></p></statement><answer><p><m>22xy-55x+6y-15</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q019"><statement><p><m>\begin{array}{r}x+2\\[3pt]y+5\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>xy+5x+2y+10</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q020"><statement><p><m>\begin{array}{r}3x+1\\[3pt]5y+2\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>15xy+6x+5y+2</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q021"><statement><p><m>\begin{array}{r}2x+5\\[3pt]7y+3\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>14xy+6x+35y+15</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q022"><statement><p><m>\begin{array}{r}x-2\\[3pt]y-5\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>xy-5x-2y+10</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q023"><statement><p><m>\begin{array}{r}3x-1\\[3pt]5y-2\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>15xy-6x-5y+2</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q024"><statement><p><m>\begin{array}{r}2x-5\\[3pt]7y-3\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>14xy-6x-35y+15</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q025"><statement><p><m>\begin{array}{r}x+4\\[3pt]3y-2\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>3xy-2x+12y-8</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q026"><statement><p><m>\begin{array}{r}3x-2\\[3pt]y+6\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>3xy+18x-2y-12</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q027"><statement><p><m>\begin{array}{r}5x+7\\[3pt]2y-3\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>10xy-15x+14y-21</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q028"><statement><p><m>\begin{array}{r}7x+1\\[3pt]5y+3\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>35xy+21x+5y+3</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q029"><statement><p><m>\begin{array}{r}7x-2\\[3pt]11y+3\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>77xy+21x-22y-6</m></p></answer></exercise>
+<exercise xml:id="expansions-unlike-factors-q030"><statement><p><m>\begin{array}{r}11x+4\\[3pt]5y-6\\[-1pt]\hline\end{array}</m></p></statement><answer><p><m>55xy-66x+20y-24</m></p></answer></exercise>
+</section>
