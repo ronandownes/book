@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xml:id="chapter-expanding">
+<chapter xml:id="chapter-expanding" xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Expanding Brackets</title>
 <introduction>
   <p>Start with the mathematics: the <term>distributive law</term>. It explains why expansion works. Splitting brackets, FOIL, diagrams and column multiplication are ways of using the same law, not different laws.</p>
@@ -317,4 +317,6 @@
 <p>This is an extension, not part of the eight compulsory homework questions. Higher-degree multiplication can be explored later without adding more controls to the main classroom app.</p>
 </section>
 
+  <xi:include href="./expansions-unlike-factors.ptx" />
+  <xi:include href="./expansions-like-factors.ptx" />
 </chapter>
