@@ -1,41 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="expansions-unlike-factors">
-  <title>Unlike Factors</title>
-  <p>Expand each product and simplify your answer. Attempt each question before revealing the answer.</p>
-  <exercise xml:id="expansions-unlike-factors-q001">
-    <statement>
-      <p><m>\begin{array}{r}3x-7\\[4pt]2y+9\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>6xy+27x-14y-63</m></p></answer>
-  </exercise>
-  <exercise xml:id="expansions-unlike-factors-q002">
-    <statement>
-      <p><m>\begin{array}{r}2r+7\\[4pt]5+2t\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>4rt+10r+14t+35</m></p></answer>
-  </exercise>
-  <exercise xml:id="expansions-unlike-factors-q003">
-    <statement>
-      <p><m>\begin{array}{r}7+2m\\[4pt]3n+5\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>6mn+10m+21n+35</m></p></answer>
-  </exercise>
-  <exercise xml:id="expansions-unlike-factors-q004">
-    <statement>
-      <p><m>\begin{array}{r}3a^2+2\\[4pt]5b^2+7\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>15a^{2}b^{2}+21a^{2}+10b^{2}+14</m></p></answer>
-  </exercise>
-  <exercise xml:id="expansions-unlike-factors-q005">
-    <statement>
-      <p><m>\begin{array}{r}2u+1\\[4pt]5v+3\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>10uv+6u+5v+3</m></p></answer>
-  </exercise>
-  <exercise xml:id="expansions-unlike-factors-q006">
-    <statement>
-      <p><m>\begin{array}{r}5e+f\\[4pt]f^2+3\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>5ef^{2}+f^{3}+15e+3f</m></p></answer>
-  </exercise>
+  <title>Falling Fan Method for Unlike Factors</title>
+  <p>Arrange the two binomials vertically. Follow the falling fan to obtain each of the four partial products. If their variable parts differ, retain all four terms; collect terms only when they are actually alike.</p>
+  <me>(3x-7)(2y+9)=6xy+27x-14y-63.</me>
+  <figure xml:id="falling-fan-figure">
+    <caption>The completed worked example and the unnumbered questions, arranged as on the classroom sheet.</caption>
+    <interactive xml:id="falling-fan-interactive" iframe="https://ronandownes.github.io/maths/apps/falling-fan/index.html" width="100%" aspect="16:9"/>
+  </figure>
+  <p><url href="https://ronandownes.github.io/maths/apps/falling-fan/index.html" visual="Open the complete interactive sheet full screen"/> to see the paths clearly, hide the worked steps, print the page or reveal answers when checking your work.</p>
+  <paragraphs xml:id="expansions-unlike-factors-print">
+    <title>Print-friendly mathematical layout</title>
+    <p>The six stacks are reproduced here for print and for use when an embedded page is unavailable. The completed calculation is shown above; the remaining calculations are unnumbered.</p>
+    <me>\begin{array}{ccc}
+\begin{array}{r}3x-7\\[3pt]2y+9\\[-2pt]\hline\end{array}
+&amp;\qquad\begin{array}{r}7+2m\\[3pt]3n+5\\[-2pt]\hline\end{array}
+&amp;\qquad\begin{array}{r}3a^2+2\\[3pt]5b^2+7\\[-2pt]\hline\end{array}\\[3.5em]
+\begin{array}{r}2r+7\\[3pt]5+2t\\[-2pt]\hline\end{array}
+&amp;\qquad\begin{array}{r}2u+1\\[3pt]5v+3\\[-2pt]\hline\end{array}
+&amp;\qquad\begin{array}{r}5e+f\\[3pt]f^2+3\\[-2pt]\hline\end{array}
+\end{array}</me>
+  </paragraphs>
 </section>
