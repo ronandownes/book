@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="expansions-unlike-factors">
-  <title>Falling Fan Method for Unlike Factors</title>
-  <p>Arrange the two binomials vertically. Follow the falling fan to obtain each of the four partial products. If their variable parts differ, retain all four terms; collect terms only when they are actually alike.</p>
-  <me>(3x-7)(2y+9)=6xy+27x-14y-63.</me>
+  <title>Verticals and Wings: Unlike Factors</title>
+  <p>Arrange the two binomials vertically. The first product <m>(3x)(2y)=6xy</m> and the last product <m>(-7)(9)=-63</m> go straight down. The cross-products travel to the wings: <m>(-7)(2y)=-14y</m> at the left and <m>(3x)(9)=27x</m> at the right. Keep all four terms when they are unlike.</p><p>Draw arrows to visualise the four products while learning. You may leave the arrows out of your own calculations when you can confidently picture those routes.</p>
+  <me>(3x-7)(2y+9)=-14y+6xy-63+27x.</me>
   <figure xml:id="falling-fan-figure">
     <caption>The completed worked example and the unnumbered questions, arranged as on the classroom sheet.</caption>
     <interactive xml:id="falling-fan-interactive" iframe="https://ronandownes.github.io/maths/apps/falling-fan/index.html" width="100%" aspect="16:9"/>
   </figure>
-  <p><url href="https://ronandownes.github.io/maths/apps/falling-fan/index.html" visual="Open the complete interactive sheet full screen"/> to see the paths clearly, hide the worked steps, print the page or reveal answers when checking your work.</p>
+  <p><url href="https://ronandownes.github.io/maths/apps/falling-fan/index.html" visual="Open the complete interactive sheet full screen"/> to see the paths clearly, hide or show the arrows, print the page or reveal answers when checking your work.</p>
   <paragraphs xml:id="expansions-unlike-factors-print">
     <title>Print-friendly mathematical layout</title>
     <p>The six stacks are reproduced here for print and for use when an embedded page is unavailable. The completed calculation is shown above; the remaining calculations are unnumbered.</p>
