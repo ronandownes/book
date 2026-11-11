@@ -1,41 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="expansions-like-factors">
-  <title>Like Factors</title>
-  <p>Expand each product and collect like terms where needed. Attempt each question before revealing the answer.</p>
-  <exercise xml:id="expansions-like-factors-q001">
-    <statement>
-      <p><m>\begin{array}{r}3x+2\\[4pt]5x+4\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>15x^{2}+22x+8</m></p></answer>
-  </exercise>
-  <exercise xml:id="expansions-like-factors-q002">
-    <statement>
-      <p><m>\begin{array}{r}13x-5\\[4pt]2x+3\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>26x^{2}+29x-15</m></p></answer>
-  </exercise>
-  <exercise xml:id="expansions-like-factors-q003">
-    <statement>
-      <p><m>\begin{array}{r}7x-2\\[4pt]5x-3\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>35x^{2}-31x+6</m></p></answer>
-  </exercise>
-  <exercise xml:id="expansions-like-factors-q004">
-    <statement>
-      <p><m>\begin{array}{r}5x-2\\[4pt]5x+2\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>25x^{2}-4</m></p></answer>
-  </exercise>
-  <exercise xml:id="expansions-like-factors-q005">
-    <statement>
-      <p><m>\begin{array}{r}11x-5\\[4pt]2x+3\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>22x^{2}+23x-15</m></p></answer>
-  </exercise>
-  <exercise xml:id="expansions-like-factors-q006">
-    <statement>
-      <p><m>\begin{array}{r}3x^2-2\\[4pt]x^2-5\\[-2pt]\hline\end{array}</m></p>
-    </statement>
-    <answer><p><m>3x^{4}-17x^{2}+10</m></p></answer>
-  </exercise>
+  <title>Margin Chicane Method for Like Terms</title>
+  <p>Arrange the two binomials vertically. Multiply the leading terms and the constants directly. Put both cross-products in the right margin, add them, then bring the combined middle term back to the answer.</p>
+  <me>\begin{aligned}(3x+2)(5x+4)&amp;=15x^2+(10x+12x)+8\\&amp;=15x^2+22x+8.\end{aligned}</me>
+  <figure xml:id="margin-chicane-figure">
+    <caption>The completed worked example and the unnumbered questions, arranged as on the classroom sheet.</caption>
+    <interactive xml:id="margin-chicane-interactive" iframe="https://ronandownes.github.io/maths/apps/margin-chicane/index.html" width="100%" aspect="16:9"/>
+  </figure>
+  <p><url href="https://ronandownes.github.io/maths/apps/margin-chicane/index.html" visual="Open the complete interactive sheet full screen"/> to see the paths clearly, hide the worked steps, print the page or reveal answers when checking your work.</p>
+  <paragraphs xml:id="expansions-like-factors-print">
+    <title>Print-friendly mathematical layout</title>
+    <p>The six stacks are reproduced here for print and for use when an embedded page is unavailable. The completed calculation is shown above; the remaining calculations are unnumbered.</p>
+    <me>\begin{array}{ccc}
+\begin{array}{r}3x+2\\[3pt]5x+4\\[-2pt]\hline\end{array}
+&amp;\qquad\begin{array}{r}7x-2\\[3pt]5x-3\\[-2pt]\hline\end{array}
+&amp;\qquad\begin{array}{r}11x-5\\[3pt]2x+3\\[-2pt]\hline\end{array}\\[3.5em]
+\begin{array}{r}13x-5\\[3pt]2x+3\\[-2pt]\hline\end{array}
+&amp;\qquad\begin{array}{r}5x-2\\[3pt]5x+2\\[-2pt]\hline\end{array}
+&amp;\qquad\begin{array}{r}3x^2-2\\[3pt]x^2-5\\[-2pt]\hline\end{array}
+\end{array}</me>
+  </paragraphs>
 </section>
