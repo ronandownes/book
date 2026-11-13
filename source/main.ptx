@@ -1,123 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-GB">
   <book xml:id="mathematics-book">
-    <title>Irish School Maths Book</title>
-    <subtitle>Junior Cert and Leaving Cert</subtitle>
+    <title>Irish School Maths</title>
+    <subtitle>Bringing the Craft of Mathematics Back to Life</subtitle>
     <frontmatter>
-      <preface xml:id="welcome">
-        <title>Welcome</title>
-        <p><em>All students, not just those headed for science and engineering, should develop a mathematical viewpoint, including critical thinking, problem-solving strategies, and estimation, in addition to computational skills.</em></p>
-        <p>— Katherine Yoshiwara, <url href="https://runestone.academy/ns/books/published/mfg/preface.html" visual="Modeling, Functions, and Graphs, Preface"/>.</p>
-        <p>Mathematics is for everyone. In this book, calculating correctly matters, but so do understanding ideas, choosing methods, estimating, testing claims and explaining why an answer makes sense.</p>
-        <p><url href="https://ronandownes.github.io/maths/" visual="Irish School Maths Apps"/> accompanies this book with interactive activities, explorations and practice.</p>
-        <p>Additional <url href="https://ronandownes.github.io/calculator/resources/" visual="free textbooks and maths resources"/> are collected on a separate page, including links to Desmos, GeoGebra and open textbooks. These supplement, rather than replace, your own course.</p>
-        <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
-      </preface>
-    </frontmatter>
+          <preface xml:id="welcome">
+            <title>Welcome</title>
+            <p><em>All students, not just those headed for science and engineering, should develop a mathematical viewpoint, including critical thinking, problem-solving strategies, and estimation, in addition to computational skills.</em></p>
+            <p>— Katherine Yoshiwara, <url href="https://runestone.academy/ns/books/published/mfg/preface.html" visual="Modeling, Functions, and Graphs, Preface"/>.</p>
+            <p>Mathematics is for everyone. In this book, calculating correctly matters, but so do understanding ideas, choosing methods, estimating, testing claims and explaining why an answer makes sense.</p>
+            <p><url href="https://ronandownes.github.io/maths/" visual="Irish School Maths Apps"/> accompanies this book with interactive activities, explorations and practice.</p>
+            <p>Additional <url href="https://ronandownes.github.io/calculator/resources/" visual="free textbooks and maths resources"/> are collected on a separate page, including links to Desmos, GeoGebra and open textbooks. These supplement, rather than replace, your own course.</p>
+            <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
+            <p>Junior Cycle, Transition Year, Leaving Certificate, Foundation Level and Leaving Certificate Applied: all levels, all students.</p>
+          </preface>
+        </frontmatter>
 
-    <part xml:id="part-unifying"><title>Unifying Strand</title>
+    <part xml:id="part-jc-unifying">
+      <title>JC — Unifying Strand</title>
       <xi:include href="./unifying-strand.ptx" />
     </part>
 
-    <part xml:id="part-number">
-      <title>Number</title>
+    <part xml:id="part-jc-number">
+      <title>JC — Number</title>
       <xi:include href="./sets-chapter.ptx" />
-      <xi:include href="./sequences-chapter.ptx" />
-      <chapter xml:id="chapter-complex"><title>Complex Numbers</title>
-        <section xml:id="complex-intro"><title>Beyond the real numbers</title>
-          <p>We define <m>i</m> by <m>i^2=-1</m>. A complex number has the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real.</p>
-          <p>On the Argand diagram, <m>a+bi</m> is represented by the point <m>(a,b)</m>. The horizontal axis shows the real part and the vertical axis shows the imaginary part.</p>
-          <p>Multiplication by <m>i</m> sends <m>a+bi</m> to <m>-b+ai</m>: a quarter-turn anticlockwise about the origin. Division by <m>i</m> produces a quarter-turn clockwise.</p>
-          <p>For classroom exploration and step-by-step calculations, <url href="https://ronandownes.github.io/maths/apps/complex-numbers/index.html" visual="open the standalone Complex Number Calculations app full screen"/>.</p>
-        </section>
-        <section xml:id="complex-reading"><title>Further reading on complex numbers</title>
-          <p>These are external references for further explanation and study. The IB course notes are independent of the Irish Leaving Certificate syllabus; the PreTeXt books range from introductory material to undergraduate complex analysis.</p>
-          <p><url href="https://aa.selfsg.com/units/u19-complex-numbers/" visual="IB Mathematics AA: Complex Numbers"/> covers Cartesian form, conjugates, the Argand diagram, modulus, argument, powers and geometric interpretation.</p>
-          <p><url href="https://complexanalysis.org/web/ch_Complex_Numbers.html" visual="Howell and Mathews: Complex Analysis, Chapter 1"/> develops the algebra and geometry of complex numbers.</p>
-          <p><url href="https://judsonbooks.org/aata-files/aata-html/cyclic-section-mult-group-c.html" visual="Judson: Multiplicative Group of Complex Numbers"/> covers complex operations, modulus, argument and the roots of unity.</p>
-          <p><url href="https://www.cs.uleth.ca/~morris/Combinatorics/Combinatorics.html" visual="Morris: Combinatorics, Appendix A: Complex Numbers"/> provides an introductory account in a PreTeXt textbook.</p>
-          <p><url href="https://matthbeck.github.io/papers/complex.pdf" visual="Beck et al.: A First Course in Complex Analysis (PDF, PreTeXt edition)"/> introduces complex-number arithmetic and geometry.</p>
-          <p><url href="https://pretextbook.org/examples/sample-book/structural/html/section-cyclic-complex-numbers.html" visual="PreTeXt Sample Book: Cyclic Groups of Complex Numbers"/> also demonstrates how complex-number mathematics can be presented in PreTeXt.</p>
-        </section>
-      </chapter>
     </part>
 
-    <part xml:id="part-algebra"><title>Algebra</title>
+    <part xml:id="part-jc-algebra-functions">
+      <title>JC — Algebra and Functions</title>
       <xi:include href="./algebra-language.ptx" />
       <xi:include href="./expanding-brackets.ptx" />
       <chapter xml:id="chapter-factorisation"><title>Factorisation</title>
-        <section xml:id="factorisation-intro"><title>Reversing expansion</title>
-          <p>Factorisation writes an expression as a product. For example, <m>6x+9=3(2x+3)</m>.</p>
-        </section>
-      </chapter>
-    </part>
-
-    <part xml:id="part-functions"><title>Functions</title>
+              <section xml:id="factorisation-intro"><title>Reversing expansion</title>
+                <p>Factorisation writes an expression as a product. For example, <m>6x+9=3(2x+3)</m>.</p>
+              </section>
+            </chapter>
       <chapter xml:id="chapter-functions"><title>Functions and Graphs</title>
-        <section xml:id="functions-intro"><title>Introduction</title>
-          <p>Do countries with higher female literacy rates tend to have fewer births per woman? We can explore this question using real data.</p>
-          <p>Each point on the graph represents a country. Select a point to see its name, its measurements and the year. The blue line models the general trend.</p>
-          <figure xml:id="figure-literacy-fertility">
-            <caption>Female literacy and fertility: explore country-level World Bank data.</caption>
-            <interactive xml:id="interactive-literacy-fertility" iframe="https://ronandownes.github.io/book/interactives/fertility-literacy.html" width="100%" aspect="3:4"/>
-          </figure>
-          <p><url href="https://ronandownes.github.io/book/interactives/fertility-literacy.html" visual="Open the interactive graph full screen"/> for classroom projection.</p>
-          <p><em>Investigate.</em> Describe the general pattern. Find two countries with similar literacy rates but different fertility rates. Click a country with fertility below 2 births per woman, and then try to find one below 1. Why might these thresholds matter? Is either threshold necessarily critical?</p>
-          <p><em>Think further.</em> Does this graph demonstrate that literacy causes fertility to fall? What other factors could influence the relationship?</p>
-          <p>The red points are observations, not necessarily the graph of a function. The fitted blue line <em>is</em> a function: it gives a modelled output for each literacy-rate input.</p>
-          <p>Source: <url href="https://data.worldbank.org/indicator/SE.ADT.LITR.FE.ZS" visual="World Bank/UNESCO female adult literacy"/> and <url href="https://data.worldbank.org/indicator/SP.DYN.TFRT.IN" visual="World Bank total fertility"/>. The app pairs both measurements for the most recent shared year available for each country from 2015 onwards. Years differ between countries.</p>
-          <p>A function assigns exactly one output to each input in its domain.</p>
-        </section>
-      </chapter>
-      <chapter xml:id="chapter-calculus"><title>Calculus</title>
-        <section xml:id="calculus-intro"><title>Change and accumulation</title>
-          <p>Calculus develops ways to study rates of change and accumulated quantities.</p>
-        </section>
-      </chapter>
-    </part>
-
-    <part xml:id="part-geometry"><title>Geometry</title>
-      <chapter xml:id="chapter-geometry"><title>Shapes and Reasoning</title>
-        <section xml:id="geometry-intro"><title>Seeing mathematical structure</title>
-          <p>We describe geometric objects using definitions, diagrams and carefully justified reasoning.</p>
-        </section>
-      </chapter>
-    </part>
-
-    <part xml:id="part-trigonometry"><title>Trigonometry</title>
-      <xi:include href="./trigonometry-chapter.ptx" />
-    </part>
-
-    <part xml:id="part-statistics"><title>Statistics</title>
-      <chapter xml:id="chapter-statistics"><title>Understanding Data</title>
-        <section xml:id="statistics-intro"><title>Data and variation</title>
-          <p>Statistics helps us collect, summarise and draw justified conclusions from data.</p>
-        </section>
-      </chapter>
-    </part>
-
-    <part xml:id="part-probability"><title>Probability</title>
-      <chapter xml:id="chapter-probability"><title>Events and Counting</title>
-        <section xml:id="probability-fcp"><title>The Fundamental Counting Principle</title>
-          <p>When the first choice has <m>m</m> possibilities and the second has <m>n</m> possibilities, every combination of choices gives <m>mn</m> possibilities.</p>
-          <exercise xml:id="exercise-fcp">
-            <statement><p>How many two-character codes can be formed from three choices for the first character and four for the second, if every pair is allowed?</p></statement>
-            <answer><p><m>3\cdot4=12</m>.</p></answer>
-          </exercise>
-        </section>
-      </chapter>
-    </part>
-
-    <part xml:id="part-combinatorics"><title>Combinatorics</title>
-      <chapter xml:id="chapter-counting"><title>Systematic Counting</title>
-              <section xml:id="combinatorics-intro"><title>Arrangements and selections</title>
-                <p>Combinatorics studies how to count possible arrangements and selections.</p>
+              <section xml:id="functions-intro"><title>Introduction</title>
+                <p>Do countries with higher female literacy rates tend to have fewer births per woman? We can explore this question using real data.</p>
+                <p>Each point on the graph represents a country. Select a point to see its name, its measurements and the year. The blue line models the general trend.</p>
+                <figure xml:id="figure-literacy-fertility">
+                  <caption>Female literacy and fertility: explore country-level World Bank data.</caption>
+                  <interactive xml:id="interactive-literacy-fertility" iframe="https://ronandownes.github.io/book/interactives/fertility-literacy.html" width="100%" aspect="3:4"/>
+                </figure>
+                <p><url href="https://ronandownes.github.io/book/interactives/fertility-literacy.html" visual="Open the interactive graph full screen"/> for classroom projection.</p>
+                <p><em>Investigate.</em> Describe the general pattern. Find two countries with similar literacy rates but different fertility rates. Click a country with fertility below 2 births per woman, and then try to find one below 1. Why might these thresholds matter? Is either threshold necessarily critical?</p>
+                <p><em>Think further.</em> Does this graph demonstrate that literacy causes fertility to fall? What other factors could influence the relationship?</p>
+                <p>The red points are observations, not necessarily the graph of a function. The fitted blue line <em>is</em> a function: it gives a modelled output for each literacy-rate input.</p>
+                <p>Source: <url href="https://data.worldbank.org/indicator/SE.ADT.LITR.FE.ZS" visual="World Bank/UNESCO female adult literacy"/> and <url href="https://data.worldbank.org/indicator/SP.DYN.TFRT.IN" visual="World Bank total fertility"/>. The app pairs both measurements for the most recent shared year available for each country from 2015 onwards. Years differ between countries.</p>
+                <p>A function assigns exactly one output to each input in its domain.</p>
               </section>
             </chapter>
     </part>
 
+    <part xml:id="part-jc-geometry-trigonometry">
+      <title>JC — Geometry and Trigonometry</title>
+      <chapter xml:id="chapter-geometry"><title>Shapes and Reasoning</title>
+              <section xml:id="geometry-intro"><title>Seeing mathematical structure</title>
+                <p>We describe geometric objects using definitions, diagrams and carefully justified reasoning.</p>
+              </section>
+            </chapter>
+      <xi:include href="./trigonometry-chapter.ptx" />
+    </part>
+
+    <part xml:id="part-jc-statistics-probability">
+      <title>JC — Statistics and Probability</title>
+      <chapter xml:id="chapter-statistics"><title>Understanding Data</title>
+              <section xml:id="statistics-intro"><title>Data and variation</title>
+                <p>Statistics helps us collect, summarise and draw justified conclusions from data.</p>
+              </section>
+            </chapter>
+      <chapter xml:id="chapter-probability"><title>Events and Counting</title>
+              <section xml:id="probability-fcp"><title>The Fundamental Counting Principle</title>
+                <p>When the first choice has <m>m</m> possibilities and the second has <m>n</m> possibilities, every combination of choices gives <m>mn</m> possibilities.</p>
+                <exercise xml:id="exercise-fcp">
+                  <statement><p>How many two-character codes can be formed from three choices for the first character and four for the second, if every pair is allowed?</p></statement>
+                  <answer><p><m>3\cdot4=12</m>.</p></answer>
+                </exercise>
+              </section>
+            </chapter>
+    </part>
+
+    <part xml:id="part-ty-mathematics">
+      <title>Transition Year Mathematics</title>
+      <chapter xml:id="chapter-ty-programme"><title>The TY Mathematics Programme</title>
+        <section xml:id="ty-programme-introduction"><title>Investigations and Applications</title><p>This part will develop the Transition Year mathematics programme through investigations, projects, modelling and practical applications.</p></section>
+      </chapter>
+    </part>
+
+    <part xml:id="part-lc-number">
+      <title>LC — Number</title>
+      <chapter xml:id="chapter-complex"><title>Complex Numbers</title>
+              <section xml:id="complex-intro"><title>Beyond the real numbers</title>
+                <p>We define <m>i</m> by <m>i^2=-1</m>. A complex number has the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real.</p>
+                <p>On the Argand diagram, <m>a+bi</m> is represented by the point <m>(a,b)</m>. The horizontal axis shows the real part and the vertical axis shows the imaginary part.</p>
+                <p>Multiplication by <m>i</m> sends <m>a+bi</m> to <m>-b+ai</m>: a quarter-turn anticlockwise about the origin. Division by <m>i</m> produces a quarter-turn clockwise.</p>
+                <p>For classroom exploration and step-by-step calculations, <url href="https://ronandownes.github.io/maths/apps/complex-numbers/index.html" visual="open the standalone Complex Number Calculations app full screen"/>.</p>
+              </section>
+              <section xml:id="complex-reading"><title>Further reading on complex numbers</title>
+                <p>These are external references for further explanation and study. The IB course notes are independent of the Irish Leaving Certificate syllabus; the PreTeXt books range from introductory material to undergraduate complex analysis.</p>
+                <p><url href="https://aa.selfsg.com/units/u19-complex-numbers/" visual="IB Mathematics AA: Complex Numbers"/> covers Cartesian form, conjugates, the Argand diagram, modulus, argument, powers and geometric interpretation.</p>
+                <p><url href="https://complexanalysis.org/web/ch_Complex_Numbers.html" visual="Howell and Mathews: Complex Analysis, Chapter 1"/> develops the algebra and geometry of complex numbers.</p>
+                <p><url href="https://judsonbooks.org/aata-files/aata-html/cyclic-section-mult-group-c.html" visual="Judson: Multiplicative Group of Complex Numbers"/> covers complex operations, modulus, argument and the roots of unity.</p>
+                <p><url href="https://www.cs.uleth.ca/~morris/Combinatorics/Combinatorics.html" visual="Morris: Combinatorics, Appendix A: Complex Numbers"/> provides an introductory account in a PreTeXt textbook.</p>
+                <p><url href="https://matthbeck.github.io/papers/complex.pdf" visual="Beck et al.: A First Course in Complex Analysis (PDF, PreTeXt edition)"/> introduces complex-number arithmetic and geometry.</p>
+                <p><url href="https://pretextbook.org/examples/sample-book/structural/html/section-cyclic-complex-numbers.html" visual="PreTeXt Sample Book: Cyclic Groups of Complex Numbers"/> also demonstrates how complex-number mathematics can be presented in PreTeXt.</p>
+              </section>
+            </chapter>
+    </part>
+
+    <part xml:id="part-lc-algebra">
+      <title>LC — Algebra</title>
+      <xi:include href="./sequences-chapter.ptx" />
+    </part>
+
+    <part xml:id="part-lc-functions">
+      <title>LC — Functions</title>
+      <chapter xml:id="chapter-calculus"><title>Calculus</title>
+              <section xml:id="calculus-intro"><title>Change and accumulation</title>
+                <p>Calculus develops ways to study rates of change and accumulated quantities.</p>
+              </section>
+            </chapter>
+    </part>
+
+    <part xml:id="part-lc-geometry-trigonometry">
+      <title>LC — Geometry and Trigonometry</title>
+      <chapter xml:id="chapter-lc-geometry-trigonometry"><title>Further Geometry and Trigonometry</title>
+        <section xml:id="lc-geometry-trigonometry-introduction"><title>Building on Earlier Mathematics</title><p>This part develops Leaving Certificate geometry and trigonometry. Existing work on the cosine rule is currently available in <xref ref="trig-cosine-rule"/>; the material will be organised here as the course develops.</p></section>
+      </chapter>
+    </part>
+
+    <part xml:id="part-lc-statistics-probability">
+      <title>LC — Statistics and Probability</title>
+      <chapter xml:id="chapter-counting"><title>Systematic Counting</title>
+                    <section xml:id="combinatorics-intro"><title>Arrangements and selections</title>
+                      <p>Combinatorics studies how to count possible arrangements and selections.</p>
+                    </section>
+                  </chapter>
+    </part>
+
+    <part xml:id="part-foundation-mathematics">
+      <title>Foundation Level Mathematics</title>
+      <chapter xml:id="chapter-foundation-programme"><title>Foundation Level Programme</title>
+        <section xml:id="foundation-programme-introduction"><title>Mathematics for Foundation Level</title><p>Foundation Level has its own mathematical requirements. This part will be developed as a coherent programme, with links to shared concepts where useful.</p></section>
+      </chapter>
+    </part>
+
+    <part xml:id="part-lca-mathematical-applications">
+      <title>LCA Mathematical Applications</title>
+      <chapter xml:id="chapter-lca-programme"><title>Mathematical Applications Programme</title>
+        <section xml:id="lca-programme-introduction"><title>Mathematics in Practical Contexts</title><p>This part will be developed around the Leaving Certificate Applied Mathematical Applications programme, with practical activities and authentic problems.</p></section>
+      </chapter>
+    </part>
+
     <part xml:id="part-specifications">
-      <title>Specifications</title>
+      <title>Resources and Official Specifications</title>
       <xi:include href="./specifications.ptx" />
     </part>
   </book>
