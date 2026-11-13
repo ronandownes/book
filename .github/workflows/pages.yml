@@ -87,6 +87,28 @@ jobs:
           test -s output/web/functions-intro.html
           grep -q 'fertility-literacy.html' output/web/functions-intro.html
           test -s output/web/interactives/fertility-literacy.html
+      - name: Add separate ABCD shortcuts to PreTeXt navigation
+        run: |
+          set -euo pipefail
+          cp assets/quick-links.js output/web/quick-links.js
+          cp assets/quick-links.css output/web/quick-links.css
+          python - <<'PY'
+          from pathlib import Path
+          root=Path("output/web")
+          tag='<script defer src="quick-links.js?v=1" data-maths-quick-links="abcd"></script>'
+          updated=0
+          for page in root.glob("*.html"):
+              html=page.read_text(encoding="utf-8")
+              if '</body>' not in html:
+                  continue
+              if 'data-maths-quick-links="abcd"' in html:
+                  continue
+              page.write_text(html.replace("</body>",f"  {tag}\n</body>",1),encoding="utf-8")
+              updated+=1
+          if not updated:
+              raise SystemExit("No PreTeXt pages received the ABCD shortcut navigation.")
+          print(f"Added separate four-dot shortcuts to {updated} book pages.")
+          PY
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
