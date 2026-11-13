@@ -8,14 +8,25 @@
 </introduction>
 <section xml:id="expanding-principle">
 <title>The mathematics: the distributive law</title>
-<p>Multiplication distributes over addition and subtraction. Each term inside a bracket is multiplied by the factor outside it.</p>
+<p>Brackets indicate <term>grouping</term>. Grouping occurs elsewhere in mathematics too: the numerator and denominator of a fraction are each groups, and the expression beneath a square-root sign is a group.</p>
+<p>Multiplication <term>distributes</term> over addition and subtraction:</p>
 <me>a(b+c)=ab+ac.</me>
 <me>a(b-c)=ab-ac.</me>
-<p>These are mathematical identities, not instructions tied to one particular layout. A diagram or written method can help us apply them.</p>
+<p>Instead of adding or subtracting within the brackets first, we may multiply each term by the factor outside. Sometimes the terms inside cannot be combined because they are unlike terms. The distributive law still applies.</p>
+<figure xml:id="figure-expanding-distributive-law">
+<caption>One factor multiplies every term in a group.</caption>
+<image source="diagrams/distributive-law.svg" width="78%">
+<shortdescription>Two arrows show that 3 multiplies both x and 4 in 3(x+4), giving 3x+12.</shortdescription>
+<description><p>The expression <m>3(x+4)</m> is above two arrows originating from the factor <m>3</m>. The first arrow leads to <m>3\cdot x</m> and the second to <m>3\cdot 4</m>. These partial products combine to give <m>3x+12</m>.</p></description>
+</image>
+</figure>
 <paragraphs xml:id="expanding-principle-versus-method">
-<title>Principle and method</title>
-<p><em>The principle</em> explains why two expressions are equal. <em>A method</em> is a way of organising a calculation.</p>
-<p>Learn the principle. Practise a method. As you improve, choose a method that is accurate and economical for you.</p>
+<title>Principles and methods</title>
+<p>The distributive law is a <term>mathematical principle</term>. It explains why the expressions are equal, regardless of how we arrange our calculations.</p>
+<p>A <term>method</term> is a way of applying that principle. Several methods may perform the same calculation, each with its own advantages.</p>
+<p>One aim of learning mathematics is to develop <term>strategic competence</term>: knowing different approaches, understanding how they work, and choosing an appropriate method for the problem.</p>
+<p>Visualisation matters. Diagrams and carefully arranged calculations can reveal mathematical structure that is less obvious when everything is written on one line.</p>
+<p>In the following sections, we will explore several methods. <em>The mathematics remains the same; what changes is how we organise and see it.</em></p>
 </paragraphs>
 </section>
 
