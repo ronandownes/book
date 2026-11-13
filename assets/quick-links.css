@@ -1,0 +1,35 @@
+/* Separate four-dot shortcut nav — not the PreTeXt Home/brand logo. */
+.book-abcd-quick-links{
+ display:flex!important;align-items:center;justify-content:center;gap:3px!important;
+ flex:0 0 auto!important;width:max-content!important;
+ margin:0 10px!important;padding:3px 5px!important;
+ background:#fff!important;border:1px solid #d8dfe8!important;
+ border-radius:9px!important;box-sizing:border-box!important;
+}
+.book-abcd-quick-links a{
+ display:flex!important;justify-content:center!important;align-items:center!important;
+ min-width:25px!important;min-height:27px!important;padding:3px!important;
+ text-decoration:none!important;border-radius:5px!important;
+}
+.book-abcd-quick-links i{
+ display:block!important;width:15px!important;height:15px!important;
+ border:2px solid white!important;border-radius:50%!important;
+ box-shadow:0 0 0 1px #bec8d2!important;
+}
+.book-abcd-quick-links .book-abcd-red i{background:#e63329!important}
+.book-abcd-quick-links .book-abcd-green i{background:#3fae49!important}
+.book-abcd-quick-links .book-abcd-blue i{background:#2d7dd2!important}
+.book-abcd-quick-links .book-abcd-black i{background:#171b22!important}
+.book-abcd-quick-links a:hover i{transform:scale(1.10)}
+.book-abcd-quick-links a:focus-visible{
+ outline:3px solid #2d7dd2!important;outline-offset:2px!important;
+}
+.book-abcd-quick-links.book-abcd-standalone{
+ margin:4px auto!important;
+}
+@media(max-width:700px){
+ .book-abcd-quick-links{gap:1px!important;margin:0 5px!important;padding:2px!important}
+ .book-abcd-quick-links a{min-width:22px!important;min-height:25px!important}
+ .book-abcd-quick-links i{width:13px!important;height:13px!important}
+}
+@media print{.book-abcd-quick-links{display:none!important}}
