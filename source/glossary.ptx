@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-glossary">
+ <title>Mathematical Glossary</title>
+ <glossary xml:id="glossary-mathematics">
+ <title>Definitions</title>
+  <gi xml:id="glossary-absolute-value"><title>absolute value</title><p>The distance of a number from zero on the number line, never negative.</p></gi>
+  <gi xml:id="glossary-algebraic-expression"><title>algebraic expression</title><p>A combination of numbers, variables and operations that represents a value without making a statement of equality.</p></gi>
+  <gi xml:id="glossary-algorithm"><title>algorithm</title><p>A precise sequence of steps which, when followed under the stated conditions, completes a calculation or task.</p></gi>
+  <gi xml:id="glossary-area"><title>area</title><p>The amount of two-dimensional space enclosed by a region, measured in square units.</p></gi>
+  <gi xml:id="glossary-bracket"><title>bracket</title><p>A grouping symbol used to show which parts of an expression belong together.</p></gi>
+  <gi xml:id="glossary-coefficient"><title>coefficient</title><p>A numerical factor multiplying a variable or power of a variable; in 5x the coefficient of x is 5.</p></gi>
+  <gi xml:id="glossary-conceptual-understanding"><title>conceptual understanding</title><p>Understanding mathematical ideas, operations and relationships, and why procedures work.</p></gi>
+  <gi xml:id="glossary-constant"><title>constant</title><p>A fixed value that does not vary in the situation under discussion.</p></gi>
+  <gi xml:id="glossary-counterexample"><title>counterexample</title><p>A single example that shows a general claim is false.</p></gi>
+  <gi xml:id="glossary-degree"><title>degree of a polynomial</title><p>The greatest exponent of the variable appearing with a non-zero coefficient in a polynomial.</p></gi>
+  <gi xml:id="glossary-denominator"><title>denominator</title><p>The lower expression in a fraction, indicating the number or expression by which the numerator is divided.</p></gi>
+  <gi xml:id="glossary-distributive-law"><title>distributive law</title><p>The principle that multiplication distributes over addition and subtraction: <m>a(b+c)=ab+ac</m>.</p></gi>
+  <gi xml:id="glossary-equation"><title>equation</title><p>A mathematical statement that two expressions have equal value, written using an equals sign.</p></gi>
+  <gi xml:id="glossary-equivalence"><title>equivalent expressions</title><p>Expressions that have the same value for every value of the variables for which both are defined.</p></gi>
+  <gi xml:id="glossary-estimate"><title>estimate</title><p>An approximate value obtained by reasoning, measurement or calculation.</p></gi>
+  <gi xml:id="glossary-event"><title>event</title><p>A set of possible outcomes of a random experiment.</p></gi>
+  <gi xml:id="glossary-expand"><title>expand</title><p>Rewrite a product using the distributive law as a sum or difference of terms.</p></gi>
+  <gi xml:id="glossary-expression"><title>expression</title><p>A mathematical combination of quantities and operations representing a value; unlike an equation, it does not assert equality.</p></gi>
+  <gi xml:id="glossary-factor"><title>factor</title><p>A number or expression that multiplies another to produce a product.</p></gi>
+  <gi xml:id="glossary-factorisation"><title>factorisation</title><p>Rewrite an expression as a product of factors.</p></gi>
+  <gi xml:id="glossary-function"><title>function</title><p>A relationship that assigns exactly one output to each input in its domain.</p></gi>
+  <gi xml:id="glossary-generalisation"><title>generalisation</title><p>A statement of a mathematical pattern or relationship that applies beyond the examples considered.</p></gi>
+  <gi xml:id="glossary-heuristic"><title>heuristic</title><p>A problem-solving suggestion, such as drawing a diagram or working backwards, that may help but does not guarantee a solution.</p></gi>
+  <gi xml:id="glossary-identity"><title>identity</title><p>An equation that is true for every permitted value of its variables.</p></gi>
+  <gi xml:id="glossary-inequality"><title>inequality</title><p>A statement comparing expressions using symbols such as <m>&lt;</m>, <m>&gt;</m>, <m>\leq</m> or <m>\geq</m>.</p></gi>
+  <gi xml:id="glossary-intersection"><title>intersection</title><p>The set of elements common to two or more sets.</p></gi>
+  <gi xml:id="glossary-like-terms"><title>like terms</title><p>Terms containing the same variable factors raised to the same powers, whose coefficients can be combined.</p></gi>
+  <gi xml:id="glossary-linear-expression"><title>linear expression</title><p>An expression of the form <m>ax+b</m> in one variable with <m>a\neq0</m>.</p></gi>
+  <gi xml:id="glossary-mathematical-model"><title>mathematical model</title><p>A mathematical representation of a situation that helps describe, analyse or predict it.</p></gi>
+  <gi xml:id="glossary-principle"><title>mathematical principle</title><p>A mathematical rule or relationship that underlies and justifies a procedure.</p></gi>
+  <gi xml:id="glossary-mean"><title>mean</title><p>An average formed by dividing the sum of the values by the number of values.</p></gi>
+  <gi xml:id="glossary-median"><title>median</title><p>The middle value in an ordered data set, or the mean of the two central values when there are an even number of observations.</p></gi>
+  <gi xml:id="glossary-mode"><title>mode</title><p>The most frequently occurring value or category in a data set.</p></gi>
+  <gi xml:id="glossary-numerator"><title>numerator</title><p>The upper expression of a fraction, indicating the quantity being divided.</p></gi>
+  <gi xml:id="glossary-outcome"><title>outcome</title><p>One possible result of a random experiment.</p></gi>
+  <gi xml:id="glossary-parameter"><title>parameter</title><p>A quantity treated as fixed within a particular problem but allowed to vary between problems or models.</p></gi>
+  <gi xml:id="glossary-polynomial"><title>polynomial</title><p>A sum of terms consisting of numerical coefficients multiplied by non-negative integer powers of one or more variables.</p></gi>
+  <gi xml:id="glossary-probability"><title>probability</title><p>A number between zero and one describing the likelihood of an event.</p></gi>
+  <gi xml:id="glossary-procedural-fluency"><title>procedural fluency</title><p>The ability to carry out mathematical procedures flexibly, accurately, efficiently and appropriately.</p></gi>
+  <gi xml:id="glossary-procedure"><title>procedure</title><p>A sequence of steps used to carry out a mathematical task.</p></gi>
+  <gi xml:id="glossary-proof"><title>proof</title><p>A logically justified argument showing why a mathematical claim is true under its assumptions.</p></gi>
+  <gi xml:id="glossary-representation"><title>representation</title><p>A way of showing a mathematical idea, such as words, a diagram, a graph, a table or symbols.</p></gi>
+  <gi xml:id="glossary-sample-space"><title>sample space</title><p>The set of all possible outcomes of a random experiment.</p></gi>
+  <gi xml:id="glossary-simplify"><title>simplify</title><p>Rewrite an expression in an equivalent form that is more useful, concise or easier to work with for a stated purpose.</p></gi>
+  <gi xml:id="glossary-solution-set"><title>solution set</title><p>All values that satisfy an equation or inequality in the stated domain.</p></gi>
+  <gi xml:id="glossary-strategic-competence"><title>strategic competence</title><p>The ability to formulate, represent and solve mathematical problems, including choosing suitable approaches.</p></gi>
+  <gi xml:id="glossary-surface-area"><title>surface area</title><p>The total area of the outside surfaces of a three-dimensional object.</p></gi>
+  <gi xml:id="glossary-term"><title>term</title><p>A part of an algebraic expression separated from others by addition or subtraction.</p></gi>
+  <gi xml:id="glossary-union"><title>union</title><p>The set of elements belonging to at least one of the given sets.</p></gi>
+  <gi xml:id="glossary-variable"><title>variable</title><p>A symbol used to represent a quantity whose value may change or may be unknown.</p></gi>
+  <gi xml:id="glossary-volume"><title>volume</title><p>The amount of three-dimensional space occupied by an object, measured in cubic units.</p></gi>
+ </glossary>
+</chapter>
