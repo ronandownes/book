@@ -3,10 +3,19 @@
   <source>
     <directories external="../assets"/>
   </source>
+  <common>
+    <tableofcontents level="2"/>
+  </common>
+  <numbering>
+    <divisions level="2"/>
+    <blocks level="1"/>
+  </numbering>
   <html favicon="simple">
     <baseurl href="https://ronandownes.github.io/book/"/>
     <brandlogo source="four-dots.svg" url="https://ronandownes.github.io/book/"/>
-    <!-- Native PreTeXt textbook layout; colours align with Maths Apps. -->
-    <css theme="default-modern" palette="blue-green" provide-dark-mode="no"/>
+    <!-- Katherine Yoshiwara's Denver layout and original palette values. -->
+    <css theme="denver" palette="primaries" color-main="#006699"
+         color-fact="#009999" color-do="#9966ff" color-meta="#ffcccc"
+         provide-dark-mode="no"/>
   </html>
 </publication>
