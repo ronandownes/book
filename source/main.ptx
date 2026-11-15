@@ -81,6 +81,9 @@
             </chapter>
     </part>
 
+    <!-- Official Junior Cycle references, organised as five strand appendices. -->
+    <xi:include href="./jc-official-outcomes.ptx" />
+
     <part xml:id="part-ty-mathematics">
       <title>Transition Year Mathematics</title>
       <chapter xml:id="chapter-ty-programme"><title>The TY Mathematics Programme</title>
@@ -138,6 +141,9 @@
                     </section>
                   </chapter>
     </part>
+
+    <!-- Ordinary Level source outcomes only, with source-PDF fidelity. -->
+    <xi:include href="./lc-ordinary-official-outcomes.ptx" />
 
     <part xml:id="part-foundation-mathematics">
       <title>Foundation Level Mathematics</title>
