@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AUTHOR TEMPLATE ONLY: copy to a relevant chapter, assign unique stable xml:ids. -->
+<section xml:id="replace-with-stable-concept-id">
+  <title>The mathematical idea</title>
+  <introduction>
+    <p>A short, specific question or situation that makes this mathematics useful.</p>
+  </introduction>
+  <p>Define the concept precisely, connect it to prior knowledge, and name the principle underpinning any method.</p>
+  <example xml:id="replace-with-example-id">
+    <title>Worked example</title>
+    <statement><p>State the task without giving away the method.</p></statement>
+    <solution><p>Explain the mathematical reasoning, then the computation.</p></solution>
+  </example>
+  <exercise xml:id="replace-with-exercise-id">
+    <statement><p>Ask for a result and a justification or comparison.</p></statement>
+    <answer><p>Include the correct result and a clear reason.</p></answer>
+  </exercise>
+</section>
