@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <part xml:id="part-lc-official-appendices">
   <title>LC Ordinary Level — Official Outcomes (Appendices A–E)</title>
-  <introduction>
-    <p>Each appendix takes you directly to one official strand. The original curriculum publication is retained unaltered; it can be magnified and compared with a larger-text reading view. Our own explanations appear elsewhere in the book, never inside the official source.</p>
-  </introduction>
   <chapter xml:id="lc-official-statistics">
     <title>Appendix A — Statistics and Probability</title>
     <introduction>
