@@ -1,0 +1,38 @@
+/* Programme colours are navigation cues only, never a substitute for labels.
+   The PreTeXt HTML, MathJax and print output remain otherwise unmodified. */
+a.maths-programme-link {
+  display: block;
+  padding: 0.42em 0.5em !important;
+  background: var(--maths-part-bg) !important;
+  color: #fff !important;
+  border-left: 5px solid var(--maths-part-accent) !important;
+  border-radius: 0.2em;
+  text-decoration: none !important;
+  font-weight: 650 !important;
+}
+a.maths-programme-link:hover,
+a.maths-programme-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+  filter: brightness(1.08);
+}
+.maths-programme-container {
+  background: var(--maths-part-bg) !important;
+  color: #fff !important;
+}
+.maths-programme-container > a,
+.maths-programme-container > button,
+.maths-programme-container > span,
+.maths-programme-container > .toc-title-box,
+.maths-programme-container > .toc-title-box a {
+  color: #fff !important;
+}
+.maths-programme-jc { --maths-part-bg:#176946; --maths-part-accent:#9de5b7; }
+.maths-programme-ty { --maths-part-bg:#70458e; --maths-part-accent:#ddc0ef; }
+.maths-programme-lc { --maths-part-bg:#255a91; --maths-part-accent:#b6d7f5; }
+.maths-programme-foundation { --maths-part-bg:#8d6019; --maths-part-accent:#ffe1a2; }
+.maths-programme-lca { --maths-part-bg:#126c72; --maths-part-accent:#b9f3f1; }
+.maths-programme-appendices { --maths-part-bg:#485668; --maths-part-accent:#d4dfeb; }
+@media print {
+  a.maths-programme-link { background: transparent !important;color:#111 !important;border-left:2px solid #444 !important; }
+}
