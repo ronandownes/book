@@ -37,7 +37,7 @@ footer{max-width:1030px;padding:1rem;margin:auto;font-size:.83rem;color:var(--mu
 <div class="toolbar">
 <button id="prev" type="button" aria-label="Previous original page">← Previous</button><span id="counter">Page</span><button id="next" type="button" aria-label="Next original page">Next →</button>
 <button id="smaller" type="button" aria-label="Reduce page size">A−</button><button id="larger" type="button" aria-label="Enlarge page size">A+</button>
-<button id="mode" type="button" aria-pressed="false">Spacious text view</button>
+<button id="mode" type="button" aria-pressed="true">Original facsimile</button>
 <label id="fullLabel"><input type="checkbox" id="full"> Whole page (includes HL column)</label>
 <button id="magnify" type="button" aria-pressed="false">Hover magnifier</button>
 <a id="official" target="_blank" rel="noopener">Original NCCA PDF</a>
@@ -58,7 +58,7 @@ window.addEventListener("load",async()=>{
  lc:{statistics:["Statistics and Probability",17,22],geometry:["Geometry and Trigonometry",23,26],number:["Number",27,34],algebra:["Algebra",35,40],functions:["Functions",41,43]}
  };
  const q=new URLSearchParams(location.search),course=q.get("course")==="lc"?"lc":"jc",strand=lookup[course][q.get("strand")]?q.get("strand"):Object.keys(lookup[course])[0];
- const [title,start,end]=lookup[course][strand];let current=start,scale=1.55,original=true,whole=course==="jc",useLens=false,pdf=null,renderToken=0;
+ const [title,start,end]=lookup[course][strand];let current=start,scale=1.55,original=false,whole=course==="jc",useLens=false,pdf=null,renderToken=0;
  const $=id=>document.getElementById(id),source=course==="jc"?JC:LC;
  $("heading").textContent=(course==="jc"?"Junior Cycle":"Leaving Certificate · Ordinary Level")+" — "+title;
  $("official").href=source+"#page="+start+"&zoom=160";
@@ -75,7 +75,7 @@ window.addEventListener("load",async()=>{
   $("stage").style.display="block";$("reading").style.display="none";$("fallback").style.display="none";$("page").style.display="block";
   const viewport=page.getViewport({scale}),dpr=Math.min(2,devicePixelRatio||1);
   const canvas=$("page"),ctx=canvas.getContext("2d");
-  const crop=course==="lc"&&!whole?.645:1;
+  const crop=(course==="lc"&&!whole)?0.645:1;
   canvas.width=Math.ceil(viewport.width*crop*dpr);canvas.height=Math.ceil(viewport.height*dpr);
   canvas.style.width=Math.ceil(viewport.width*crop)+"px";canvas.style.height=Math.ceil(viewport.height)+"px";
   await page.render({canvasContext:ctx,viewport,transform:dpr===1?null:[dpr,0,0,dpr,0,0]}).promise;
@@ -91,7 +91,11 @@ window.addEventListener("load",async()=>{
   const box=$("reading");box.textContent="";
   for(const [_,bits] of rows){bits.sort((a,b)=>a.x-b.x);let txt=bits.map(i=>i.txt).join(" ").replace(/\s+/g," ").trim();if(!txt)continue;
    const p=document.createElement("div");p.className="text-line"+(/^(?:U\.\d+|N\.\d+|GT\.\d+|AF\.\d+|SP\.\d+|\d+\.\d+\s)/.test(txt)?" outcome":"");
-   p.textContent=txt;box.appendChild(p);
+   const math=/(?:[A-Za-z0-9ℕℤℚℝ²³()]+(?:\\s?[=+−×÷∩∪≤≥]\\s?[A-Za-z0-9ℕℤℚℝ²³()]+)+)|(?:[A-Za-z][²³])/g;
+   let at=0,match;
+   while((match=math.exec(txt))){if(match.index>at)p.appendChild(document.createTextNode(txt.slice(at,match.index)));const span=document.createElement("span");span.className="formula";span.tabIndex=0;span.textContent=match[0];p.appendChild(span);at=match.index+match[0].length;}
+   if(at<txt.length)p.appendChild(document.createTextNode(txt.slice(at)));
+   box.appendChild(p);
   }
   if(token===renderToken)showStatus("12 pt spacious text · 1.75 line spacing. Reflowed from the PDF text layer; original remains authoritative.");
  }
