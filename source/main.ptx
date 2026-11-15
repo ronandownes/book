@@ -16,19 +16,13 @@
           </preface>
         </frontmatter>
 
-    <part xml:id="part-jc-unifying">
-      <title>JC — Unifying Strand</title>
-      <xi:include href="./unifying-strand.ptx" />
-    </part>
+    <part xml:id="part-junior-cycle">
+      <title>Junior Cycle</title>
+<xi:include href="./unifying-strand.ptx" />
 
-    <part xml:id="part-jc-number">
-      <title>JC — Number</title>
-      <xi:include href="./sets-chapter.ptx" />
-    </part>
+<xi:include href="./sets-chapter.ptx" />
 
-    <part xml:id="part-jc-algebra-functions">
-      <title>JC — Algebra and Functions</title>
-      <xi:include href="./algebra-language.ptx" />
+<xi:include href="./algebra-language.ptx" />
       <xi:include href="./expanding-brackets.ptx" />
       <chapter xml:id="chapter-factorisation"><title>Factorisation</title>
               <section xml:id="factorisation-intro"><title>Reversing expansion</title>
@@ -51,21 +45,15 @@
                 <p>A function assigns exactly one output to each input in its domain.</p>
               </section>
             </chapter>
-    </part>
 
-    <part xml:id="part-jc-geometry-trigonometry">
-      <title>JC — Geometry and Trigonometry</title>
-      <chapter xml:id="chapter-geometry"><title>Shapes and Reasoning</title>
+<chapter xml:id="chapter-geometry"><title>Shapes and Reasoning</title>
               <section xml:id="geometry-intro"><title>Seeing mathematical structure</title>
                 <p>We describe geometric objects using definitions, diagrams and carefully justified reasoning.</p>
               </section>
             </chapter>
       <xi:include href="./trigonometry-chapter.ptx" />
-    </part>
 
-    <part xml:id="part-jc-statistics-probability">
-      <title>JC — Statistics and Probability</title>
-      <chapter xml:id="chapter-statistics"><title>Understanding Data</title>
+<chapter xml:id="chapter-statistics"><title>Understanding Data</title>
               <section xml:id="statistics-intro"><title>Data and variation</title>
                 <p>Statistics helps us collect, summarise and draw justified conclusions from data.</p>
               </section>
@@ -81,16 +69,16 @@
             </chapter>
     </part>
 
-<part xml:id="part-ty-mathematics">
-      <title>Transition Year Mathematics</title>
-      <chapter xml:id="chapter-ty-programme"><title>The TY Mathematics Programme</title>
+    <part xml:id="part-transition-year">
+      <title>Transition Year</title>
+<chapter xml:id="chapter-ty-programme"><title>The TY Mathematics Programme</title>
         <section xml:id="ty-programme-introduction"><title>Investigations and Applications</title><p>This part will develop the Transition Year mathematics programme through investigations, projects, modelling and practical applications.</p></section>
       </chapter>
     </part>
 
-    <part xml:id="part-lc-number">
-      <title>LC — Number</title>
-      <chapter xml:id="chapter-complex"><title>Complex Numbers</title>
+    <part xml:id="part-leaving-certificate">
+      <title>Leaving Certificate</title>
+<chapter xml:id="chapter-complex"><title>Complex Numbers</title>
               <section xml:id="complex-intro"><title>Beyond the real numbers</title>
                 <p>We define <m>i</m> by <m>i^2=-1</m>. A complex number has the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real.</p>
                 <p>On the Argand diagram, <m>a+bi</m> is represented by the point <m>(a,b)</m>. The horizontal axis shows the real part and the vertical axis shows the imaginary part.</p>
@@ -107,48 +95,36 @@
                 <p><url href="https://pretextbook.org/examples/sample-book/structural/html/section-cyclic-complex-numbers.html" visual="PreTeXt Sample Book: Cyclic Groups of Complex Numbers"/> also demonstrates how complex-number mathematics can be presented in PreTeXt.</p>
               </section>
             </chapter>
-    </part>
 
-    <part xml:id="part-lc-algebra">
-      <title>LC — Algebra</title>
-      <xi:include href="./sequences-chapter.ptx" />
-    </part>
+<xi:include href="./sequences-chapter.ptx" />
 
-    <part xml:id="part-lc-functions">
-      <title>LC — Functions</title>
-      <chapter xml:id="chapter-calculus"><title>Calculus</title>
+<chapter xml:id="chapter-calculus"><title>Calculus</title>
               <section xml:id="calculus-intro"><title>Change and accumulation</title>
                 <p>Calculus develops ways to study rates of change and accumulated quantities.</p>
               </section>
             </chapter>
-    </part>
 
-    <part xml:id="part-lc-geometry-trigonometry">
-      <title>LC — Geometry and Trigonometry</title>
-      <chapter xml:id="chapter-lc-geometry-trigonometry"><title>Further Geometry and Trigonometry</title>
+<chapter xml:id="chapter-lc-geometry-trigonometry"><title>Further Geometry and Trigonometry</title>
         <section xml:id="lc-geometry-trigonometry-introduction"><title>Building on Earlier Mathematics</title><p>This part develops Leaving Certificate geometry and trigonometry. Existing work on the cosine rule is currently available in <xref ref="trig-cosine-rule"/>; the material will be organised here as the course develops.</p></section>
       </chapter>
-    </part>
 
-    <part xml:id="part-lc-statistics-probability">
-      <title>LC — Statistics and Probability</title>
-      <chapter xml:id="chapter-counting"><title>Systematic Counting</title>
+<chapter xml:id="chapter-counting"><title>Systematic Counting</title>
                     <section xml:id="combinatorics-intro"><title>Arrangements and selections</title>
                       <p>Combinatorics studies how to count possible arrangements and selections.</p>
                     </section>
                   </chapter>
     </part>
 
-<part xml:id="part-foundation-mathematics">
-      <title>Foundation Level Mathematics</title>
-      <chapter xml:id="chapter-foundation-programme"><title>Foundation Level Programme</title>
+    <part xml:id="part-foundation">
+      <title>Foundation Level</title>
+<chapter xml:id="chapter-foundation-programme"><title>Foundation Level Programme</title>
         <section xml:id="foundation-programme-introduction"><title>Mathematics for Foundation Level</title><p>Foundation Level has its own mathematical requirements. This part will be developed as a coherent programme, with links to shared concepts where useful.</p></section>
       </chapter>
     </part>
 
-    <part xml:id="part-lca-mathematical-applications">
-      <title>LCA Mathematical Applications</title>
-      <chapter xml:id="chapter-lca-programme"><title>Mathematical Applications Programme</title>
+    <part xml:id="part-leaving-certificate-applied">
+      <title>Leaving Certificate Applied</title>
+<chapter xml:id="chapter-lca-programme"><title>Mathematical Applications Programme</title>
         <section xml:id="lca-programme-introduction"><title>Mathematics in Practical Contexts</title><p>This part will be developed around the Leaving Certificate Applied Mathematical Applications programme, with practical activities and authentic problems.</p></section>
       </chapter>
     </part>
