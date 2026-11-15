@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<part xml:id="part-jc-official-appendices">
+  <title>JC — Official Learning Outcomes (Appendices A–E)</title>
+  <introduction>
+    <p>Each appendix takes you directly to one official strand. The original curriculum publication is retained unaltered; it can be magnified and compared with a larger-text reading view. Our own explanations appear elsewhere in the book, never inside the official source.</p>
+  </introduction>
+  <chapter xml:id="jc-official-unifying">
+    <title>Appendix A — Unifying Strand</title>
+    <introduction>
+      <p>This is a reference to the original published Junior Cycle Mathematics specification. The source wording, symbols and level distinctions are preserved in the original document. The reader provides larger type, zoom and a reformatted reading view alongside the unchanged original.</p>
+      <p>Where outcomes are bold in the original specification, that indicates additional Higher Level material. Keep that distinction when consulting the original.</p>
+    </introduction>
+    <section xml:id="jc-official-unifying-reader">
+      <title>Read the official outcomes</title>
+      <p><url href="https://ronandownes.github.io/book/syllabus/reader.html?course=jc&amp;strand=unifying" visual="Open the large-text, zoomable strand reader in a new page"/>. It opens at the beginning of this strand and lets you move through its pages.</p>
+      <p><url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf#page=14&amp;zoom=160" visual="Open the unchanged NCCA source at page 14"/>. Source acknowledgement: National Council for Curriculum and Assessment (NCCA), curriculumonline.ie, copyright retained by the NCCA.</p>
+      <figure xml:id="jc-official-unifying-figure">
+        <caption>Unifying Strand: NCCA source viewed through the accessible reader. The original PDF remains authoritative for mathematical notation and level distinctions.</caption>
+        <interactive xml:id="jc-official-unifying-interactive" iframe="https://ronandownes.github.io/book/syllabus/reader.html?course=jc&amp;strand=unifying" width="100%" aspect="4:5"/>
+      </figure>
+    </section>
+  </chapter>
+  <chapter xml:id="jc-official-number">
+    <title>Appendix B — Number</title>
+    <introduction>
+      <p>This is a reference to the original published Junior Cycle Mathematics specification. The source wording, symbols and level distinctions are preserved in the original document. The reader provides larger type, zoom and a reformatted reading view alongside the unchanged original.</p>
+      <p>Where outcomes are bold in the original specification, that indicates additional Higher Level material. Keep that distinction when consulting the original.</p>
+    </introduction>
+    <section xml:id="jc-official-number-reader">
+      <title>Read the official outcomes</title>
+      <p><url href="https://ronandownes.github.io/book/syllabus/reader.html?course=jc&amp;strand=number" visual="Open the large-text, zoomable strand reader in a new page"/>. It opens at the beginning of this strand and lets you move through its pages.</p>
+      <p><url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf#page=15&amp;zoom=160" visual="Open the unchanged NCCA source at page 15"/>. Source acknowledgement: National Council for Curriculum and Assessment (NCCA), curriculumonline.ie, copyright retained by the NCCA.</p>
+      <figure xml:id="jc-official-number-figure">
+        <caption>Number: NCCA source viewed through the accessible reader. The original PDF remains authoritative for mathematical notation and level distinctions.</caption>
+        <interactive xml:id="jc-official-number-interactive" iframe="https://ronandownes.github.io/book/syllabus/reader.html?course=jc&amp;strand=number" width="100%" aspect="4:5"/>
+      </figure>
+    </section>
+  </chapter>
+  <chapter xml:id="jc-official-geometry">
+    <title>Appendix C — Geometry and Trigonometry</title>
+    <introduction>
+      <p>This is a reference to the original published Junior Cycle Mathematics specification. The source wording, symbols and level distinctions are preserved in the original document. The reader provides larger type, zoom and a reformatted reading view alongside the unchanged original.</p>
+      <p>Where outcomes are bold in the original specification, that indicates additional Higher Level material. Keep that distinction when consulting the original.</p>
+    </introduction>
+    <section xml:id="jc-official-geometry-reader">
+      <title>Read the official outcomes</title>
+      <p><url href="https://ronandownes.github.io/book/syllabus/reader.html?course=jc&amp;strand=geometry" visual="Open the large-text, zoomable strand reader in a new page"/>. It opens at the beginning of this strand and lets you move through its pages.</p>
+      <p><url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf#page=17&amp;zoom=160" visual="Open the unchanged NCCA source at page 17"/>. Source acknowledgement: National Council for Curriculum and Assessment (NCCA), curriculumonline.ie, copyright retained by the NCCA.</p>
+      <figure xml:id="jc-official-geometry-figure">
+        <caption>Geometry and Trigonometry: NCCA source viewed through the accessible reader. The original PDF remains authoritative for mathematical notation and level distinctions.</caption>
+        <interactive xml:id="jc-official-geometry-interactive" iframe="https://ronandownes.github.io/book/syllabus/reader.html?course=jc&amp;strand=geometry" width="100%" aspect="4:5"/>
+      </figure>
+    </section>
+  </chapter>
+  <chapter xml:id="jc-official-algebra">
+    <title>Appendix D — Algebra and Functions</title>
+    <introduction>
+      <p>This is a reference to the original published Junior Cycle Mathematics specification. The source wording, symbols and level distinctions are preserved in the original document. The reader provides larger type, zoom and a reformatted reading view alongside the unchanged original.</p>
+      <p>Where outcomes are bold in the original specification, that indicates additional Higher Level material. Keep that distinction when consulting the original.</p>
+    </introduction>
+    <section xml:id="jc-official-algebra-reader">
+      <title>Read the official outcomes</title>
+      <p><url href="https://ronandownes.github.io/book/syllabus/reader.html?course=jc&amp;strand=algebra" visual="Open the large-text, zoomable strand reader in a new page"/>. It opens at the beginning of this strand and lets you move through its pages.</p>
+      <p><url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf#page=18&amp;zoom=160" visual="Open the unchanged NCCA source at page 18"/>. Source acknowledgement: National Council for Curriculum and Assessment (NCCA), curriculumonline.ie, copyright retained by the NCCA.</p>
+      <figure xml:id="jc-official-algebra-figure">
+        <caption>Algebra and Functions: NCCA source viewed through the accessible reader. The original PDF remains authoritative for mathematical notation and level distinctions.</caption>
+        <interactive xml:id="jc-official-algebra-interactive" iframe="https://ronandownes.github.io/book/syllabus/reader.html?course=jc&amp;strand=algebra" width="100%" aspect="4:5"/>
+      </figure>
+    </section>
+  </chapter>
+  <chapter xml:id="jc-official-statistics">
+    <title>Appendix E — Statistics and Probability</title>
+    <introduction>
+      <p>This is a reference to the original published Junior Cycle Mathematics specification. The source wording, symbols and level distinctions are preserved in the original document. The reader provides larger type, zoom and a reformatted reading view alongside the unchanged original.</p>
+      <p>Where outcomes are bold in the original specification, that indicates additional Higher Level material. Keep that distinction when consulting the original.</p>
+    </introduction>
+    <section xml:id="jc-official-statistics-reader">
+      <title>Read the official outcomes</title>
+      <p><url href="https://ronandownes.github.io/book/syllabus/reader.html?course=jc&amp;strand=statistics" visual="Open the large-text, zoomable strand reader in a new page"/>. It opens at the beginning of this strand and lets you move through its pages.</p>
+      <p><url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf#page=20&amp;zoom=160" visual="Open the unchanged NCCA source at page 20"/>. Source acknowledgement: National Council for Curriculum and Assessment (NCCA), curriculumonline.ie, copyright retained by the NCCA.</p>
+      <figure xml:id="jc-official-statistics-figure">
+        <caption>Statistics and Probability: NCCA source viewed through the accessible reader. The original PDF remains authoritative for mathematical notation and level distinctions.</caption>
+        <interactive xml:id="jc-official-statistics-interactive" iframe="https://ronandownes.github.io/book/syllabus/reader.html?course=jc&amp;strand=statistics" width="100%" aspect="4:5"/>
+      </figure>
+    </section>
+  </chapter>
+</part>
