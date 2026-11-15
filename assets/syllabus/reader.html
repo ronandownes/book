@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NCCA Mathematics — large-text source reader</title>
+<style>
+:root{color-scheme:light;--ink:#173047;--muted:#526579;--line:#cfdde6;--bg:#f4f8fb;--blue:#125c82}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}
+header{padding:1rem max(1rem,calc((100vw - 1030px)/2));background:#fff;border-bottom:1px solid var(--line)}
+h1{font:700 clamp(1.25rem,2.6vw,1.9rem)/1.3 Georgia,serif;margin:.2rem 0}
+.kicker{font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700}
+nav{display:flex;flex-wrap:wrap;gap:.45rem;margin:.75rem 0}
+nav a{padding:.3rem .55rem;border-radius:.45rem;border:1px solid var(--line);font-size:.88rem;text-decoration:none;color:var(--blue)}
+nav a[aria-current]{background:#e5f4fa;border-color:var(--blue);font-weight:700}
+.toolbar{position:sticky;top:0;z-index:3;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;background:#fff;border-bottom:1px solid var(--line);padding:.75rem max(1rem,calc((100vw - 1030px)/2))}
+button,select{border:1px solid #a8bdcb;border-radius:.45rem;background:white;color:var(--ink);font:inherit;padding:.35rem .65rem;cursor:pointer}
+button:hover,a:hover{background:#eef7fc}button:focus-visible,a:focus-visible{outline:3px solid #0784c4;outline-offset:2px}
+main{max-width:1060px;margin:1rem auto;padding:0 1rem}
+.note{font-size:.91rem;color:var(--muted);margin:.65rem 0}a{color:var(--blue)}
+#stage{overflow:auto;background:#e4ecf2;border:1px solid var(--line);padding:1.2rem;border-radius:.8rem}
+#stage canvas{display:block;background:white;margin:0 auto;box-shadow:0 3px 18px #253e5522;max-width:none}
+#reading{display:none;background:white;border-radius:.75rem;max-width:850px;margin:auto;padding:clamp(1rem,3vw,3rem);box-shadow:0 3px 18px #253e5519;font-size:12pt;line-height:1.75}
+#reading .text-line{margin:.25rem 0;overflow-wrap:anywhere}
+#reading .outcome{margin-top:1.1rem;border-top:1px solid #e1e8ed;padding-top:.7rem}
+#reading .formula{font-weight:650;border-bottom:1px dotted #7996a6}
+#reading .formula:hover,#reading .formula:focus{position:relative;z-index:2;display:inline-block;transform:scale(1.6);transform-origin:left center;background:#fff9de;box-shadow:0 1px 8px #3b4a5533}
+#status{min-height:1.5em}#fallback{width:100%;min-height:740px;border:0;display:none}
+#lens{position:fixed;pointer-events:none;width:230px;height:145px;border:3px solid var(--blue);background-color:#fff;background-repeat:no-repeat;box-shadow:0 7px 20px #10273544;border-radius:.6rem;display:none;z-index:10}
+footer{max-width:1030px;padding:1rem;margin:auto;font-size:.83rem;color:var(--muted)}
+@media(max-width:700px){#stage{padding:.2rem}.toolbar{position:static}#reading{padding:1rem}}
+@media print{header,nav,.toolbar,.note,footer{display:none!important}#stage{border:0;padding:0;overflow:visible}#reading{box-shadow:none}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+</head>
+<body>
+<header><div class="kicker">Irish School Maths · Official NCCA reference</div><h1 id="heading">Learning outcomes</h1><nav id="navigation" aria-label="Choose strand"></nav></header>
+<div class="toolbar">
+<button id="prev" type="button" aria-label="Previous original page">← Previous</button><span id="counter">Page</span><button id="next" type="button" aria-label="Next original page">Next →</button>
+<button id="smaller" type="button" aria-label="Reduce page size">A−</button><button id="larger" type="button" aria-label="Enlarge page size">A+</button>
+<button id="mode" type="button" aria-pressed="false">Spacious text view</button>
+<label id="fullLabel"><input type="checkbox" id="full"> Whole page (includes HL column)</label>
+<button id="magnify" type="button" aria-pressed="false">Hover magnifier</button>
+<a id="official" target="_blank" rel="noopener">Original NCCA PDF</a>
+</div>
+<main>
+<p id="notice" class="note"></p><p id="status" role="status" class="note">Loading the original specification…</p>
+<section id="stage" aria-label="Original NCCA PDF page"><canvas id="page"></canvas><iframe id="fallback" title="Unchanged original NCCA PDF"></iframe></section>
+<section id="reading" aria-label="PDF text reflowed with larger type"></section>
+</main>
+<div id="lens" aria-hidden="true"></div>
+<footer>Source: National Council for Curriculum and Assessment (NCCA), curriculumonline.ie. Copyright remains with the NCCA. Original publication is definitive; the spacious text view is an automatic reflow and may not preserve complex notation or formatting.</footer>
+<script>
+window.addEventListener("load",async()=>{
+ const JC="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf";
+ const LC="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf";
+ const lookup={
+ jc:{unifying:["Unifying Strand",14,14],number:["Number",15,16],geometry:["Geometry and Trigonometry",17,17],algebra:["Algebra and Functions",18,19],statistics:["Statistics and Probability",20,20]},
+ lc:{statistics:["Statistics and Probability",17,22],geometry:["Geometry and Trigonometry",23,26],number:["Number",27,34],algebra:["Algebra",35,40],functions:["Functions",41,43]}
+ };
+ const q=new URLSearchParams(location.search),course=q.get("course")==="lc"?"lc":"jc",strand=lookup[course][q.get("strand")]?q.get("strand"):Object.keys(lookup[course])[0];
+ const [title,start,end]=lookup[course][strand];let current=start,scale=1.55,original=true,whole=course==="jc",useLens=false,pdf=null,renderToken=0;
+ const $=id=>document.getElementById(id),source=course==="jc"?JC:LC;
+ $("heading").textContent=(course==="jc"?"Junior Cycle":"Leaving Certificate · Ordinary Level")+" — "+title;
+ $("official").href=source+"#page="+start+"&zoom=160";
+ $("notice").textContent=course==="lc"?"Only the topic and Ordinary Level columns are shown by default. The unchanged original also has Higher Level outcomes in the right-hand column. Use “Whole page” to compare.":"The original Junior Cycle outcomes are unchanged; bold wording in the NCCA source identifies extra Higher Level requirements.";
+ $("fullLabel").style.display=course==="lc"?"inline-flex":"none";
+ $("navigation").innerHTML=Object.entries(lookup[course]).map(([k,v])=>'<a href="?course='+course+'&strand='+k+'" '+(strand===k?'aria-current="page"':'')+'>'+v[0]+'</a>').join("");
+ const showStatus=(s)=>$("status").textContent=s;
+ function setButtons(){ $("counter").textContent="Original page "+current+" ("+(current-start+1)+" of "+(end-start+1)+")";$("prev").disabled=current===start;$("next").disabled=current===end;}
+ function showFallback(message){showStatus(message+" Use the unchanged original PDF below.");$("stage").style.display="block";$("page").style.display="none";$("fallback").style.display="block";$("fallback").src=source+"#page="+current+"&zoom=150";}
+ async function render(){
+  setButtons();$("official").href=source+"#page="+current+"&zoom=160";if(!pdf)return;
+  const token=++renderToken,page=await pdf.getPage(current);
+  if(!original){await renderText(page,token);return}
+  $("stage").style.display="block";$("reading").style.display="none";$("fallback").style.display="none";$("page").style.display="block";
+  const viewport=page.getViewport({scale}),dpr=Math.min(2,devicePixelRatio||1);
+  const canvas=$("page"),ctx=canvas.getContext("2d");
+  const crop=course==="lc"&&!whole?.645:1;
+  canvas.width=Math.ceil(viewport.width*crop*dpr);canvas.height=Math.ceil(viewport.height*dpr);
+  canvas.style.width=Math.ceil(viewport.width*crop)+"px";canvas.style.height=Math.ceil(viewport.height)+"px";
+  await page.render({canvasContext:ctx,viewport,transform:dpr===1?null:[dpr,0,0,dpr,0,0]}).promise;
+  if(token===renderToken)showStatus("Original NCCA PDF · enlarged "+Math.round(scale*100)+"%. "+(course==="lc"&&!whole?"Higher Level column hidden.":""));
+ }
+ async function renderText(page,token){
+  $("stage").style.display="none";$("reading").style.display="block";
+  showStatus("Reflowing PDF text. Check mathematical symbols against the original.");
+  const content=await page.getTextContent(),vp=page.getViewport({scale:1}),maxX=course==="lc"?vp.width*.645:vp.width,left=course==="jc"?vp.width*.2:0;
+  const lines=new Map();
+  for(const item of content.items){if(!item.str?.trim())continue;const x=item.transform[4],y=item.transform[5];if(x<left||x>maxX)continue;const key=Math.round(y/3)*3;if(!lines.has(key))lines.set(key,[]);lines.get(key).push({x,txt:item.str});}
+  const rows=Array.from(lines.entries()).sort((a,b)=>b[0]-a[0]);
+  const box=$("reading");box.textContent="";
+  for(const [_,bits] of rows){bits.sort((a,b)=>a.x-b.x);let txt=bits.map(i=>i.txt).join(" ").replace(/\s+/g," ").trim();if(!txt)continue;
+   const p=document.createElement("div");p.className="text-line"+(/^(?:U\.\d+|N\.\d+|GT\.\d+|AF\.\d+|SP\.\d+|\d+\.\d+\s)/.test(txt)?" outcome":"");
+   p.textContent=txt;box.appendChild(p);
+  }
+  if(token===renderToken)showStatus("12 pt spacious text · 1.75 line spacing. Reflowed from the PDF text layer; original remains authoritative.");
+ }
+ $("prev").onclick=()=>{if(current>start){current--;render()}};
+ $("next").onclick=()=>{if(current<end){current++;render()}};
+ $("smaller").onclick=()=>{scale=Math.max(.8,scale-.2);if(original)render();else{$("reading").style.fontSize=Math.max(12,parseInt(getComputedStyle($("reading")).fontSize)-2)+"px"}};
+ $("larger").onclick=()=>{scale=Math.min(3.1,scale+.2);if(original)render();else{$("reading").style.fontSize=Math.min(30,parseInt(getComputedStyle($("reading")).fontSize)+2)+"px"}};
+ $("mode").onclick=()=>{original=!original;$("mode").setAttribute("aria-pressed",String(!original));$("mode").textContent=original?"Spacious text view":"Original facsimile";render()};
+ $("full").onchange=e=>{whole=e.target.checked;render()};
+ $("magnify").onclick=()=>{useLens=!useLens;$("magnify").setAttribute("aria-pressed",String(useLens));$("magnify").textContent=useLens?"Hide magnifier":"Hover magnifier";if(!useLens)$("lens").style.display="none"};
+ $("page").addEventListener("mousemove",e=>{if(!useLens||!original)return;let b=e.currentTarget.getBoundingClientRect(),x=e.clientX-b.left,y=e.clientY-b.top,l=$("lens");
+ l.style.display="block";l.style.left=Math.min(innerWidth-245,e.clientX+18)+"px";l.style.top=Math.min(innerHeight-160,e.clientY+18)+"px";
+ l.style.backgroundImage="url("+$("page").toDataURL()+")";l.style.backgroundSize=(b.width*2.0)+"px "+(b.height*2.0)+"px";l.style.backgroundPosition=(115-x*2)+"px "+(73-y*2)+"px";
+ });
+ $("page").addEventListener("mouseleave",()=>{$("lens").style.display="none"});
+ setButtons();
+ if(!window.pdfjsLib){showFallback("Interactive PDF viewer is unavailable.");return;}
+ pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+ try{pdf=await pdfjsLib.getDocument({url:course==="jc"?"jc.pdf":"lc.pdf"}).promise;await render();}
+ catch(err){showFallback("The PDF could not be loaded.");}
+});
+</script></body></html>
