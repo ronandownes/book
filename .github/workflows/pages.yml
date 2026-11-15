@@ -89,6 +89,17 @@ jobs:
               raise SystemExit("No web pages received automatic-check handling.")
           print(f"Embedded automatic checking in {updated} pages.")
           PY
+      - name: Publish the complete Junior Cycle Unifying Strand overview
+        run: |
+          set -euo pipefail
+          mkdir -p output/web/interactives
+          cp assets/interactives/jc-unifying.html output/web/interactives/jc-unifying.html
+          test -s output/web/jc-introduction.html
+          test -s output/web/interactives/jc-unifying.html
+          grep -q 'jc-unifying.html' output/web/jc-introduction.html
+          grep -q 'U.13' output/web/interactives/jc-unifying.html
+          grep -q 'U.1' output/web/interactives/jc-unifying.html
+          echo "Complete Unifying Strand: all 13 outcomes and original six elements."
       - name: Copy fertility and literacy interactive
         run: |
           set -euo pipefail
