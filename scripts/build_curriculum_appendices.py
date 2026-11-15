@@ -132,40 +132,83 @@ def leave_content():
     doc = fitz.open(PDF_PATH)
     out = []
     counts = {}
+    sections = {}
     for key, title, indices in LC:
         out.append(f'<chapter xml:id="lc-official-{key}">')
         out.append(f'<title>LC Ordinary Level — {xt(title)}</title>')
+        bullet = []
+        open_topic = False
+        topic_number = None
         count = 0
-        for idx in range(indices[0], indices[1]+1):
+        subsection_count = 0
+
+        def flush():
+            nonlocal bullet, count
+            sentence = clean(" ".join(bullet))
+            if sentence:
+                out.append("<p>" + xt(sentence) + "</p>")
+                count += 1
+            bullet = []
+
+        for idx in range(indices[0], indices[1] + 1):
             page = doc[idx]
             body = page.get_text("text")
-            # First page of each strand is introductory prose, not an outcome table.
             if not re.search(r"Students working at OL", body, re.I):
                 continue
             w = page.rect.width
-            left = page_lines(page, .19*w, .34*w)
-            ol = page_lines(page, .335*w, .65*w)
-            topics = [(y, t) for y,t in left if re.match(r"^[1-5]\.\d+(?:\s|$)", t)]
-            if not ol:
-                continue
-            for y, t in ol:
-                if re.search(r"Students working at OL|should be able to",t,re.I):
+            raw_left = page_lines(page, .19 * w, .335 * w)
+            ol = page_lines(page, .335 * w, .645 * w)
+            topics = []
+            for y, text in raw_left:
+                if y > page.rect.height * .90:
                     continue
-                if re.search(r"^(?:In addition,|Students learn about)",t,re.I):
+                match = re.match(r"^([1-5]\.\d+)\s+(.+)$", text)
+                if match:
+                    topics.append({"y": y, "code": match.group(1), "title": text})
+                elif topics and text and (y - topics[-1]["y"]) < 150:
+                    topics[-1]["title"] += " " + text
+
+            for y, text in ol:
+                if y > page.rect.height * .90:
                     continue
-                if t in ["–","-","•"]:
+                if re.search(r"Students working at OL|should be able to", text, re.I):
                     continue
-                if re.search(r"^Leaving Certificate Mathematics\s*\d*",t,re.I):
+                if not text or re.search(r"^Leaving Certificate Mathematics", text, re.I):
                     continue
-                # Retain each source line in original order, with no invented outcomes.
-                # Paragraph spacing comes from PreTeXt typography, not blank lines.
-                out.append("<p>"+xt(t)+"</p>")
-                count += 1
+                headings = [item for item in topics if item["y"] <= y + 5]
+                if headings:
+                    h = headings[-1]
+                    if h["code"] != topic_number:
+                        flush()
+                        if open_topic:
+                            out.append("</section>")
+                            open_topic = False
+                        subsection_count += 1
+                        out.append(f'<section xml:id="lc-{key}-topic-{subsection_count}">')
+                        out.append("<title>" + xt(clean(h["title"])) + "</title>")
+                        topic_number = h["code"]
+                        open_topic = True
+
+                # A source en-dash/bullet begins a new learning outcome.
+                # Following printed lines belong to that outcome, not new paragraphs.
+                if re.match(r"^\s*[–•]\s*", text):
+                    flush()
+                    bullet = [re.sub(r"^\s*[–•]\s*", "", text).strip()]
+                elif text == "-":
+                    flush()
+                else:
+                    if not bullet:
+                        bullet = [text]
+                    else:
+                        bullet.append(text)
+        flush()
+        if open_topic:
+            out.append("</section>")
         out.append("</chapter>")
-        counts[key] = count
-    print("LC Ordinary Level extracted lines:", counts, flush=True)
-    if any(n < 8 for n in counts.values()):
-        raise RuntimeError("One or more Leaving Certificate strands were not extracted; refusing to publish.")
+        counts[key] = {"outcomes": count, "topics": subsection_count}
+    print("LC Ordinary Level topics and outcomes:", counts, flush=True)
+    if any(v["outcomes"] < 8 or v["topics"] < 2 for v in counts.values()):
+        raise RuntimeError("LC topic extraction is incomplete; refusing to publish.")
     return out
 
 def main():
