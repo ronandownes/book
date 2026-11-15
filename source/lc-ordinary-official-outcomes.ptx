@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<part xml:id="part-lc-official-appendices">
+  <title>LC Ordinary Level — Official Outcomes (Appendices A–E)</title>
+  <introduction>
+    <p>Each appendix takes you directly to one official strand. The original curriculum publication is retained unaltered; it can be magnified and compared with a larger-text reading view. Our own explanations appear elsewhere in the book, never inside the official source.</p>
+  </introduction>
+  <chapter xml:id="lc-official-statistics">
+    <title>Appendix A — Statistics and Probability</title>
+    <introduction>
+      <p>This is a reference to the original published Leaving Certificate Mathematics syllabus (for examination from 2015). The source wording, symbols and level distinctions are preserved in the original document. The reader provides larger type, zoom and a reformatted reading view alongside the unchanged original.</p>
+      <p><em>Ordinary Level only:</em> the reading view shows the topic and Ordinary Level columns. The original source also includes Higher Level material in a separate right-hand column.</p>
+    </introduction>
+    <section xml:id="lc-official-statistics-reader">
+      <title>Read the official outcomes</title>
+      <p><url href="https://ronandownes.github.io/book/syllabus/reader.html?course=lc&amp;strand=statistics" visual="Open the large-text, zoomable strand reader in a new page"/>. It opens at the beginning of this strand and lets you move through its pages.</p>
+      <p><url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf#page=17&amp;zoom=160" visual="Open the unchanged NCCA source at page 17"/>. Source acknowledgement: National Council for Curriculum and Assessment (NCCA), curriculumonline.ie, copyright retained by the NCCA.</p>
+      <figure xml:id="lc-official-statistics-figure">
+        <caption>Statistics and Probability: NCCA source viewed through the accessible reader. The original PDF remains authoritative for mathematical notation and level distinctions.</caption>
+        <interactive xml:id="lc-official-statistics-interactive" iframe="https://ronandownes.github.io/book/syllabus/reader.html?course=lc&amp;strand=statistics" width="100%" aspect="4:5"/>
+      </figure>
+    </section>
+  </chapter>
+  <chapter xml:id="lc-official-geometry">
+    <title>Appendix B — Geometry and Trigonometry</title>
+    <introduction>
+      <p>This is a reference to the original published Leaving Certificate Mathematics syllabus (for examination from 2015). The source wording, symbols and level distinctions are preserved in the original document. The reader provides larger type, zoom and a reformatted reading view alongside the unchanged original.</p>
+      <p><em>Ordinary Level only:</em> the reading view shows the topic and Ordinary Level columns. The original source also includes Higher Level material in a separate right-hand column.</p>
+    </introduction>
+    <section xml:id="lc-official-geometry-reader">
+      <title>Read the official outcomes</title>
+      <p><url href="https://ronandownes.github.io/book/syllabus/reader.html?course=lc&amp;strand=geometry" visual="Open the large-text, zoomable strand reader in a new page"/>. It opens at the beginning of this strand and lets you move through its pages.</p>
+      <p><url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf#page=23&amp;zoom=160" visual="Open the unchanged NCCA source at page 23"/>. Source acknowledgement: National Council for Curriculum and Assessment (NCCA), curriculumonline.ie, copyright retained by the NCCA.</p>
+      <figure xml:id="lc-official-geometry-figure">
+        <caption>Geometry and Trigonometry: NCCA source viewed through the accessible reader. The original PDF remains authoritative for mathematical notation and level distinctions.</caption>
+        <interactive xml:id="lc-official-geometry-interactive" iframe="https://ronandownes.github.io/book/syllabus/reader.html?course=lc&amp;strand=geometry" width="100%" aspect="4:5"/>
+      </figure>
+    </section>
+  </chapter>
+  <chapter xml:id="lc-official-number">
+    <title>Appendix C — Number</title>
+    <introduction>
+      <p>This is a reference to the original published Leaving Certificate Mathematics syllabus (for examination from 2015). The source wording, symbols and level distinctions are preserved in the original document. The reader provides larger type, zoom and a reformatted reading view alongside the unchanged original.</p>
+      <p><em>Ordinary Level only:</em> the reading view shows the topic and Ordinary Level columns. The original source also includes Higher Level material in a separate right-hand column.</p>
+    </introduction>
+    <section xml:id="lc-official-number-reader">
+      <title>Read the official outcomes</title>
+      <p><url href="https://ronandownes.github.io/book/syllabus/reader.html?course=lc&amp;strand=number" visual="Open the large-text, zoomable strand reader in a new page"/>. It opens at the beginning of this strand and lets you move through its pages.</p>
+      <p><url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf#page=27&amp;zoom=160" visual="Open the unchanged NCCA source at page 27"/>. Source acknowledgement: National Council for Curriculum and Assessment (NCCA), curriculumonline.ie, copyright retained by the NCCA.</p>
+      <figure xml:id="lc-official-number-figure">
+        <caption>Number: NCCA source viewed through the accessible reader. The original PDF remains authoritative for mathematical notation and level distinctions.</caption>
+        <interactive xml:id="lc-official-number-interactive" iframe="https://ronandownes.github.io/book/syllabus/reader.html?course=lc&amp;strand=number" width="100%" aspect="4:5"/>
+      </figure>
+    </section>
+  </chapter>
+  <chapter xml:id="lc-official-algebra">
+    <title>Appendix D — Algebra</title>
+    <introduction>
+      <p>This is a reference to the original published Leaving Certificate Mathematics syllabus (for examination from 2015). The source wording, symbols and level distinctions are preserved in the original document. The reader provides larger type, zoom and a reformatted reading view alongside the unchanged original.</p>
+      <p><em>Ordinary Level only:</em> the reading view shows the topic and Ordinary Level columns. The original source also includes Higher Level material in a separate right-hand column.</p>
+    </introduction>
+    <section xml:id="lc-official-algebra-reader">
+      <title>Read the official outcomes</title>
+      <p><url href="https://ronandownes.github.io/book/syllabus/reader.html?course=lc&amp;strand=algebra" visual="Open the large-text, zoomable strand reader in a new page"/>. It opens at the beginning of this strand and lets you move through its pages.</p>
+      <p><url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf#page=35&amp;zoom=160" visual="Open the unchanged NCCA source at page 35"/>. Source acknowledgement: National Council for Curriculum and Assessment (NCCA), curriculumonline.ie, copyright retained by the NCCA.</p>
+      <figure xml:id="lc-official-algebra-figure">
+        <caption>Algebra: NCCA source viewed through the accessible reader. The original PDF remains authoritative for mathematical notation and level distinctions.</caption>
+        <interactive xml:id="lc-official-algebra-interactive" iframe="https://ronandownes.github.io/book/syllabus/reader.html?course=lc&amp;strand=algebra" width="100%" aspect="4:5"/>
+      </figure>
+    </section>
+  </chapter>
+  <chapter xml:id="lc-official-functions">
+    <title>Appendix E — Functions</title>
+    <introduction>
+      <p>This is a reference to the original published Leaving Certificate Mathematics syllabus (for examination from 2015). The source wording, symbols and level distinctions are preserved in the original document. The reader provides larger type, zoom and a reformatted reading view alongside the unchanged original.</p>
+      <p><em>Ordinary Level only:</em> the reading view shows the topic and Ordinary Level columns. The original source also includes Higher Level material in a separate right-hand column.</p>
+    </introduction>
+    <section xml:id="lc-official-functions-reader">
+      <title>Read the official outcomes</title>
+      <p><url href="https://ronandownes.github.io/book/syllabus/reader.html?course=lc&amp;strand=functions" visual="Open the large-text, zoomable strand reader in a new page"/>. It opens at the beginning of this strand and lets you move through its pages.</p>
+      <p><url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf#page=41&amp;zoom=160" visual="Open the unchanged NCCA source at page 41"/>. Source acknowledgement: National Council for Curriculum and Assessment (NCCA), curriculumonline.ie, copyright retained by the NCCA.</p>
+      <figure xml:id="lc-official-functions-figure">
+        <caption>Functions: NCCA source viewed through the accessible reader. The original PDF remains authoritative for mathematical notation and level distinctions.</caption>
+        <interactive xml:id="lc-official-functions-interactive" iframe="https://ronandownes.github.io/book/syllabus/reader.html?course=lc&amp;strand=functions" width="100%" aspect="4:5"/>
+      </figure>
+    </section>
+  </chapter>
+</part>
