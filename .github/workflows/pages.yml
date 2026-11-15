@@ -119,30 +119,13 @@ jobs:
               raise SystemExit("No PreTeXt pages received the ABCD shortcut navigation.")
           print(f"Added separate four-dot shortcuts to {updated} book pages.")
           PY
-      - name: Apply programme colours to PreTeXt table of contents
+      - name: Apply programme colours to Parts and Chapters
         run: |
           set -euo pipefail
-          cp assets/programme-colours.css output/web/programme-colours.css
-          cp assets/programme-colours.js output/web/programme-colours.js
-          python - <<'PY'
-          from pathlib import Path
-          root = Path("output/web")
-          css = '<link rel="stylesheet" href="programme-colours.css?v=1" data-maths-programme="colour"/>'
-          js = '<script defer src="programme-colours.js?v=1" data-maths-programme="colour"></script>'
-          n=0
-          for page in root.glob("*.html"):
-              html = page.read_text(encoding="utf-8")
-              if "</head>" not in html or "</body>" not in html:
-                  continue
-              if 'data-maths-programme="colour"' not in html:
-                  html=html.replace("</head>",f"  {css}\n</head>",1)
-                  html=html.replace("</body>",f"  {js}\n</body>",1)
-                  page.write_text(html,encoding="utf-8")
-                  n+=1
-          if not n:
-              raise SystemExit("No pages were annotated with programme colours.")
-          print(f"Programme colours added to {n} pages.")
-          PY
+          python scripts/apply_programme_colours.py
+          node --check output/web/programme-colours.js
+          grep -q 'maths-chapter-link' output/web/programme-colours.js
+          grep -q 'maths-chapter-bg' output/web/programme-colours.css
       - name: Verify native appendices glossary and programme navigation
         run: |
           set -euo pipefail
