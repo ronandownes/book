@@ -81,10 +81,7 @@
             </chapter>
     </part>
 
-    <!-- Official Junior Cycle references, organised as five strand appendices. -->
-    <xi:include href="./jc-official-outcomes.ptx" />
-
-    <part xml:id="part-ty-mathematics">
+<part xml:id="part-ty-mathematics">
       <title>Transition Year Mathematics</title>
       <chapter xml:id="chapter-ty-programme"><title>The TY Mathematics Programme</title>
         <section xml:id="ty-programme-introduction"><title>Investigations and Applications</title><p>This part will develop the Transition Year mathematics programme through investigations, projects, modelling and practical applications.</p></section>
@@ -142,10 +139,7 @@
                   </chapter>
     </part>
 
-    <!-- Ordinary Level source outcomes only, with source-PDF fidelity. -->
-    <xi:include href="./lc-ordinary-official-outcomes.ptx" />
-
-    <part xml:id="part-foundation-mathematics">
+<part xml:id="part-foundation-mathematics">
       <title>Foundation Level Mathematics</title>
       <chapter xml:id="chapter-foundation-programme"><title>Foundation Level Programme</title>
         <section xml:id="foundation-programme-introduction"><title>Mathematics for Foundation Level</title><p>Foundation Level has its own mathematical requirements. This part will be developed as a coherent programme, with links to shared concepts where useful.</p></section>
@@ -159,9 +153,6 @@
       </chapter>
     </part>
 
-    <part xml:id="part-specifications">
-      <title>Resources and Official Specifications</title>
-      <xi:include href="./specifications.ptx" />
-    </part>
+    <xi:include href="./appendices.ptx" />
   </book>
 </pretext>
