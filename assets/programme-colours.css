@@ -1,38 +1,99 @@
-/* Programme colours are navigation cues only, never a substitute for labels.
-   The PreTeXt HTML, MathJax and print output remain otherwise unmodified. */
-a.maths-programme-link {
-  display: block;
-  padding: 0.42em 0.5em !important;
-  background: var(--maths-part-bg) !important;
-  color: #fff !important;
-  border-left: 5px solid var(--maths-part-accent) !important;
-  border-radius: 0.2em;
-  text-decoration: none !important;
-  font-weight: 650 !important;
+/* Irish School Maths programme hierarchy: Part strong colour; Chapter pastel;
+   Section/Subsection white. Styling only: all content remains native PreTeXt. */
+.maths-programme-jc {
+  --maths-part-bg:#176946; --maths-part-accent:#9de5b7;
+  --maths-chapter-bg:#e0efe5; --maths-chapter-ink:#185039;
+  --maths-chapter-edge:#78b692;
 }
-a.maths-programme-link:hover,
-a.maths-programme-link:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: -2px;
-  filter: brightness(1.08);
+.maths-programme-ty {
+  --maths-part-bg:#70458e; --maths-part-accent:#ddc0ef;
+  --maths-chapter-bg:#eee4f4; --maths-chapter-ink:#563474;
+  --maths-chapter-edge:#bba0d2;
+}
+.maths-programme-lc {
+  --maths-part-bg:#255a91; --maths-part-accent:#b6d7f5;
+  --maths-chapter-bg:#e2ecf7; --maths-chapter-ink:#244e77;
+  --maths-chapter-edge:#8baed3;
+}
+.maths-programme-foundation {
+  --maths-part-bg:#8d6019; --maths-part-accent:#ffe1a2;
+  --maths-chapter-bg:#fff0d5; --maths-chapter-ink:#6e4d16;
+  --maths-chapter-edge:#d8b978;
+}
+.maths-programme-lca {
+  --maths-part-bg:#126c72; --maths-part-accent:#b9f3f1;
+  --maths-chapter-bg:#dff2f0; --maths-chapter-ink:#13585d;
+  --maths-chapter-edge:#7bbfbd;
+}
+.maths-programme-appendices {
+  --maths-part-bg:#485668; --maths-part-accent:#d4dfeb;
+  --maths-chapter-bg:#e8edf2; --maths-chapter-ink:#34475c;
+  --maths-chapter-edge:#a7b8c9;
+}
+
+/* The strongest colour is reserved for the programme Part. */
+a.maths-programme-link {
+  display:block;
+  padding:.42em .5em !important;
+  background:var(--maths-part-bg) !important;
+  color:#fff !important;
+  border-left:5px solid var(--maths-part-accent) !important;
+  border-radius:0;
+  text-decoration:none !important;
+  font-weight:700 !important;
 }
 .maths-programme-container {
-  background: var(--maths-part-bg) !important;
-  color: #fff !important;
+  background:var(--maths-part-bg) !important;
+  color:#fff !important;
 }
 .maths-programme-container > a,
 .maths-programme-container > button,
 .maths-programme-container > span,
 .maths-programme-container > .toc-title-box,
 .maths-programme-container > .toc-title-box a {
-  color: #fff !important;
+  color:#fff !important;
 }
-.maths-programme-jc { --maths-part-bg:#176946; --maths-part-accent:#9de5b7; }
-.maths-programme-ty { --maths-part-bg:#70458e; --maths-part-accent:#ddc0ef; }
-.maths-programme-lc { --maths-part-bg:#255a91; --maths-part-accent:#b6d7f5; }
-.maths-programme-foundation { --maths-part-bg:#8d6019; --maths-part-accent:#ffe1a2; }
-.maths-programme-lca { --maths-part-bg:#126c72; --maths-part-accent:#b9f3f1; }
-.maths-programme-appendices { --maths-part-bg:#485668; --maths-part-accent:#d4dfeb; }
+
+/* Chapters use pastel shades of the parent Part. */
+a.maths-chapter-link {
+  display:block;
+  padding:.35em .55em !important;
+  background:var(--maths-chapter-bg) !important;
+  color:var(--maths-chapter-ink) !important;
+  border-left:4px solid var(--maths-chapter-edge) !important;
+  border-radius:0;
+  text-decoration:none !important;
+  font-weight:650 !important;
+}
+.maths-chapter-container {
+  background:var(--maths-chapter-bg) !important;
+  color:var(--maths-chapter-ink) !important;
+}
+.maths-chapter-container > a,
+.maths-chapter-container > button,
+.maths-chapter-container > span,
+.maths-chapter-container > .toc-title-box,
+.maths-chapter-container > .toc-title-box a {
+  color:var(--maths-chapter-ink) !important;
+}
+
+/* All section and subsection rows remain plain white.
+   Native current-page highlighting and keyboard accessibility are preserved. */
+a.maths-programme-link:hover,
+a.maths-chapter-link:hover {filter:brightness(.96);}
+a.maths-programme-link:focus-visible,
+a.maths-chapter-link:focus-visible {
+  outline:2px solid currentColor !important;
+  outline-offset:-2px !important;
+}
 @media print {
-  a.maths-programme-link { background: transparent !important;color:#111 !important;border-left:2px solid #444 !important; }
+  a.maths-programme-link,
+  a.maths-chapter-link {
+    background:transparent !important;
+    color:#111 !important;
+    border-left:2px solid #444 !important;
+  }
+  .maths-programme-container,.maths-chapter-container {
+    background:transparent !important;
+  }
 }
