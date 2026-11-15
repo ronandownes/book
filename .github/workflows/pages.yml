@@ -126,6 +126,15 @@ jobs:
           node --check output/web/programme-colours.js
           grep -q 'maths-chapter-link' output/web/programme-colours.js
           grep -q 'maths-chapter-bg' output/web/programme-colours.css
+      - name: Enable accessible diagram enlargement throughout the book
+        run: |
+          set -euo pipefail
+          node --check assets/diagram-zoom.js
+          python scripts/add_diagram_zoom.py
+          test -s output/web/diagram-zoom.js
+          test -s output/web/diagram-zoom.css
+          grep -q 'data-maths-diagram-zoom="yes"' output/web/sets-two-sets.html
+          grep -q 'data-maths-diagram-zoom="yes"' output/web/sets-domain-codomain.html
       - name: Verify native appendices glossary and programme navigation
         run: |
           set -euo pipefail
