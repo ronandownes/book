@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="jc-introduction">
+  <title>Introduction</title>
+  <p>Welcome to Junior Cycle Mathematics. We begin with the <term>Unifying Strand</term>: the mathematical thinking that connects all four contextual strands. Its six elements are <term>Building blocks</term>, <term>Representation</term>, <term>Connections</term>, <term>Problem solving</term>, <term>Generalisation and proof</term>, and <term>Communication</term>.</p>
+  <p><em>Learning intention:</em> Recognise the six elements and identify the 13 official learning outcomes that support our work throughout Junior Cycle Mathematics.</p>
+  <p>All 13 outcomes are displayed together below. Select any one to read it in larger type, then use Previous and Next to explore the others. The full overview remains available whenever you want to return to it.</p>
+  <p><url href="https://ronandownes.github.io/book/interactives/jc-unifying.html" visual="Open the Unifying Strand overview full-screen"/>. This is particularly useful for classroom projection and reading on a phone or tablet.</p>
+  <figure xml:id="figure-jc-unifying-overview">
+    <caption>The official Unifying Strand learning outcomes, grouped by the six elements and shown in their original order.</caption>
+    <interactive xml:id="interactive-jc-unifying-overview" iframe="https://ronandownes.github.io/book/interactives/jc-unifying.html" width="100%" aspect="5:8"/>
+  </figure>
+  <p><em>Source:</em> National Council for Curriculum and Assessment, <url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf#page=14" visual="Junior Cycle Mathematics Specification (2018), page 14"/>. The outcome wording and sequence are retained; initial capitals and sentence-ending full stops are normalised for reading. The specification remains the authoritative text.</p>
+</chapter>
