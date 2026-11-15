@@ -143,6 +143,24 @@ jobs:
               raise SystemExit("No pages were annotated with programme colours.")
           print(f"Programme colours added to {n} pages.")
           PY
+      - name: Verify native appendices glossary and programme navigation
+        run: |
+          set -euo pipefail
+          for page in \
+            part-junior-cycle.html \
+            part-transition-year.html \
+            part-leaving-certificate.html \
+            part-official-appendices.html \
+            jc-official-unifying.html \
+            lc-official-statistics.html \
+            chapter-glossary.html; do
+            test -s "output/web/$page" || { echo "Missing $page"; exit 1; }
+          done
+          test ! -e output/web/section-spec-junior-cycle.html || { echo "Legacy PDF specification section still published"; exit 1; }
+          grep -q 'data-maths-programme="colour"' output/web/part-junior-cycle.html
+          ! grep -q 'syllabus/reader.html' output/web/jc-official-unifying.html
+          ! grep -q 'syllabus/reader.html' output/web/lc-official-statistics.html
+          echo "Verified programme navigation, native appendices, glossary and removal of old viewer."
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
