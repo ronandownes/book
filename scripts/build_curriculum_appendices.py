@@ -33,7 +33,7 @@ LC = [
 ]
 
 def clean(s: str) -> str:
-    return re.sub(r"\s+", " ", s).strip()
+    return re.sub(r"\\s+", " ", "".join(c for c in s if (ord(c) >= 32 or c in "\\t\\n\\r") and not (0xD800 <= ord(c) <= 0xDFFF))).strip()
 
 def xt(s: str) -> str:
     return html.escape(s, quote=False)
