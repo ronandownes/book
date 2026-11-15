@@ -40,7 +40,7 @@
 
   <section xml:id="unifying-representation">
     <title>2. Representation</title>
-    <p>A <term>representation</term> is a way of showing the same mathematical object or situation. Words, algebra, a table, a geometric diagram and a vertical multiplication layout can express one underlying relationship.</p>
+    <p>A <xref ref="glossary-representation" text="title"/><idx>representation</idx> is a way of showing the same mathematical object or situation. Words, algebra, a table, a geometric diagram and a vertical multiplication layout can express one underlying relationship.</p>
     <figure xml:id="unifying-area-model">
       <caption>An area model for the product. The four regions correspond to the four partial products. The drawing is schematic, not to scale.</caption>
       <image width="78%">
@@ -99,7 +99,7 @@
 
   <section xml:id="unifying-generalisation-proof">
     <title>5. Generalisation and proof</title>
-    <p>A <term>generalisation</term> states a relationship that extends beyond the example in front of us. A <term>proof</term> explains why a claim must be true in every case covered by the assumptions.</p>
+    <p>A <xref ref="glossary-generalisation" text="title"/><idx>generalisation</idx> states a relationship that extends beyond the example in front of us. A <xref ref="glossary-proof" text="title"/><idx>proof</idx> explains why a claim must be true in every case covered by the assumptions.</p>
     <me>(a+b)(c+d)=ac+ad+bc+bd.</me>
     <p>This follows from the distributive law: first multiply <m>(a+b)</m> by <m>c</m> and <m>d</m>, then distribute each product. The letters can stand for any real numbers, not just positive lengths in an area diagram.</p>
     <p>One example can suggest a general rule, but it cannot normally prove it. A single <term>counterexample</term> can disprove a universal claim.</p>
