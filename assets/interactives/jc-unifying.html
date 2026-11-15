@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Junior Cycle Mathematics — Unifying Strand</title>
+<style>
+:root{font-family:Georgia,"Times New Roman",serif;color:#17263a;background:#fff;font-size:17px;line-height:1.48}
+*{box-sizing:border-box}
+body{margin:0;padding:clamp(10px,2.2vw,24px)}
+header{display:flex;align-items:center;gap:1rem;padding:.6rem 0 1.2rem;border-bottom:2px solid #d9e1e9}
+.marker{flex:none;min-width:4rem;padding:.45rem .65rem;background:#e86c24;color:#fff;font:700 1.6rem/1.1 system-ui,sans-serif;text-align:center;clip-path:polygon(0 0,86% 0,100% 50%,86% 100%,0 100%)}
+h1{font-size:clamp(1.4rem,3.5vw,2rem);color:#b74f15;margin:0}
+.intro{margin:.8rem 0 1.3rem;font-size:1rem;color:#3b4e62}
+table{border-collapse:collapse;width:100%;table-layout:fixed}
+col.element{width:25%}col.code{width:10%}col.statement{width:65%}
+thead th{text-align:left;border-bottom:2px solid #748597;color:#455668;font-weight:600;font-size:.99rem;padding:.45rem .6rem}
+tbody tr:first-child>*{border-top:1px solid #d4dce5}
+tbody:last-of-type tr:last-child>*{border-bottom:1px solid #d4dce5}
+tbody th.element{vertical-align:top;font-weight:600;text-align:left;color:#244b65;padding:.65rem .6rem;background:#f6f9fb;font-size:1.04rem}
+tbody th.code{font:600 1rem/1.5 system-ui,sans-serif;white-space:nowrap;text-align:left;vertical-align:top;padding:.6rem .3rem}
+tbody td{padding:.22rem .25rem;vertical-align:top}
+button.outcome{font:inherit;line-height:1.45;color:#182b40;text-align:left;width:100%;background:transparent;border:1px solid transparent;border-radius:.35rem;padding:.37rem .3rem;cursor:pointer}
+button.outcome:hover,button.outcome:focus-visible{background:#fff1e9;border-color:#cb7951;outline-offset:1px}
+.source{font: .86rem/1.4 system-ui,sans-serif;margin:1.15rem 0;color:#445566}
+.source a{color:#175d91}
+.reading{color:#53616e;font: .83rem/1.5 system-ui,sans-serif}
+dialog{border:1px solid #aec0d1;border-radius:12px;box-shadow:0 16px 56px #14273770;background:#fff;color:#17263a;padding:1.4rem;max-width:min(96vw,850px);width:850px;max-height:90dvh}
+dialog::backdrop{background:#11263ecb}
+dialog h2{font:700 clamp(1.35rem,3vw,1.75rem)/1.25 system-ui,sans-serif;color:#934015;margin:0 0 .8rem}
+dialog p{font-size:clamp(1.3rem,2.5vw,1.75rem);line-height:1.6;margin:.5rem 0 1.3rem}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
+.controls button{font:600 1rem system-ui,sans-serif;background:#e9f2f8;color:#143c59;border:1px solid #8ca8ba;border-radius:8px;padding:.6rem .9rem;cursor:pointer}
+.controls button:hover,.controls button:focus-visible{outline:2px solid #d27b4b}
+.controls button:disabled{opacity:.4;cursor:default}
+.counter{font: .95rem system-ui,sans-serif;color:#586c7b}
+@media(max-width:620px){
+:root{font-size:15px}
+body{padding:8px}
+col.element{width:23%}col.code{width:13%}col.statement{width:64%}
+thead th,tbody th.element{padding:.35rem .2rem}
+tbody th.element{font-size:.9rem;overflow-wrap:anywhere}
+tbody th.code{font-size:.83rem}
+button.outcome{font-size:.96rem}
+dialog{padding:1rem}
+}
+@media print{
+button.outcome{padding:.2rem;border:0}
+body{font-size:11pt}
+dialog{display:none!important}
+}
+</style>
+</head>
+<body>
+<main>
+<header><span class="marker" aria-hidden="true">JC</span><h1>Unifying Strand</h1></header>
+<p class="intro"><strong>Elements</strong> · Students should be able to:</p>
+<table aria-label="The complete Junior Cycle Unifying Strand learning outcomes">
+<colgroup><col class="element"><col class="code"><col class="statement"></colgroup>
+<thead><tr><th scope="col">Elements</th><th scope="col">Outcome</th><th scope="col">Students should be able to</th></tr></thead>
+<tbody aria-label="Building blocks">
+<tr><th scope="rowgroup" class="element" rowspan="3">Building blocks</th><th scope="row" class="code">U.1</th><td><button class="outcome" type="button" data-index="0" aria-label="Read U.1 in detail">Recall and demonstrate understanding of the fundamental concepts and procedures that underpin each strand.</button></td></tr>
+<tr><th scope="row" class="code">U.2</th><td><button class="outcome" type="button" data-index="1" aria-label="Read U.2 in detail">Apply the procedures associated with each strand accurately, effectively, and appropriately.</button></td></tr>
+<tr><th scope="row" class="code">U.3</th><td><button class="outcome" type="button" data-index="2" aria-label="Read U.3 in detail">Recognise that equality is a relationship in which two mathematical expressions have the same value.</button></td></tr>
+</tbody>
+<tbody aria-label="Representation">
+<tr><th scope="rowgroup" class="element" rowspan="1">Representation</th><th scope="row" class="code">U.4</th><td><button class="outcome" type="button" data-index="3" aria-label="Read U.4 in detail">Represent a mathematical situation in a variety of different ways, including: numerically, algebraically, graphically, physically, in words; and to interpret, analyse, and compare such representations.</button></td></tr>
+</tbody>
+<tbody aria-label="Connections">
+<tr><th scope="rowgroup" class="element" rowspan="2">Connections</th><th scope="row" class="code">U.5</th><td><button class="outcome" type="button" data-index="4" aria-label="Read U.5 in detail">Make connections within and between strands.</button></td></tr>
+<tr><th scope="row" class="code">U.6</th><td><button class="outcome" type="button" data-index="5" aria-label="Read U.6 in detail">Make connections between mathematics and the real world.</button></td></tr>
+</tbody>
+<tbody aria-label="Problem solving">
+<tr><th scope="rowgroup" class="element" rowspan="4">Problem solving</th><th scope="row" class="code">U.7</th><td><button class="outcome" type="button" data-index="6" aria-label="Read U.7 in detail">Make sense of a given problem, and if necessary mathematise a situation.</button></td></tr>
+<tr><th scope="row" class="code">U.8</th><td><button class="outcome" type="button" data-index="7" aria-label="Read U.8 in detail">Apply their knowledge and skills to solve a problem, including decomposing it into manageable parts and/or simplifying it using appropriate assumptions.</button></td></tr>
+<tr><th scope="row" class="code">U.9</th><td><button class="outcome" type="button" data-index="8" aria-label="Read U.9 in detail">Interpret their solution to a problem in terms of the original question.</button></td></tr>
+<tr><th scope="row" class="code">U.10</th><td><button class="outcome" type="button" data-index="9" aria-label="Read U.10 in detail">Evaluate different possible solutions to a problem, including evaluating the reasonableness of the solutions, and exploring possible improvements and/or limitations of the solutions (if any).</button></td></tr>
+</tbody>
+<tbody aria-label="Generalisation and proof">
+<tr><th scope="rowgroup" class="element" rowspan="2">Generalisation and proof</th><th scope="row" class="code">U.11</th><td><button class="outcome" type="button" data-index="10" aria-label="Read U.11 in detail">Generate general mathematical statements or conjectures based on specific instances.</button></td></tr>
+<tr><th scope="row" class="code">U.12</th><td><button class="outcome" type="button" data-index="11" aria-label="Read U.12 in detail">Generate and evaluate mathematical arguments and proofs.</button></td></tr>
+</tbody>
+<tbody aria-label="Communication">
+<tr><th scope="rowgroup" class="element" rowspan="1">Communication</th><th scope="row" class="code">U.13</th><td><button class="outcome" type="button" data-index="12" aria-label="Read U.13 in detail">Communicate mathematics effectively: justify their reasoning, interpret their results, explain their conclusions, and use the language and notation of mathematics to express mathematical ideas precisely.</button></td></tr>
+</tbody>
+</table>
+<p class="source">Source: <a href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf#page=14" target="_blank" rel="noopener noreferrer">NCCA, <em>Junior Cycle Mathematics Specification</em> (2018), page 14</a>. The original wording and outcome order are retained. Initial letters and sentence-ending full stops are normalised for reading.</p>
+<p class="reading">Select any learning outcome to read it individually. Use Previous/Next to move between outcomes; press Escape to close. The complete list remains visible until you choose one.</p>
+</main>
+<dialog id="detail" aria-labelledby="detail-heading" aria-describedby="detail-statement">
+<h2 id="detail-heading"></h2>
+<p id="detail-statement"></p>
+<div class="controls">
+<button type="button" id="previous">← Previous</button>
+<span class="counter" id="counter"></span>
+<button type="button" id="next">Next →</button>
+<button type="button" id="close">Close ×</button>
+</div>
+</dialog>
+<script>
+(()=>{"use strict";
+const data=[["Building blocks","U.1","Recall and demonstrate understanding of the fundamental concepts and procedures that underpin each strand."],["Building blocks","U.2","Apply the procedures associated with each strand accurately, effectively, and appropriately."],["Building blocks","U.3","Recognise that equality is a relationship in which two mathematical expressions have the same value."],["Representation","U.4","Represent a mathematical situation in a variety of different ways, including: numerically, algebraically, graphically, physically, in words; and to interpret, analyse, and compare such representations."],["Connections","U.5","Make connections within and between strands."],["Connections","U.6","Make connections between mathematics and the real world."],["Problem solving","U.7","Make sense of a given problem, and if necessary mathematise a situation."],["Problem solving","U.8","Apply their knowledge and skills to solve a problem, including decomposing it into manageable parts and/or simplifying it using appropriate assumptions."],["Problem solving","U.9","Interpret their solution to a problem in terms of the original question."],["Problem solving","U.10","Evaluate different possible solutions to a problem, including evaluating the reasonableness of the solutions, and exploring possible improvements and/or limitations of the solutions (if any)."],["Generalisation and proof","U.11","Generate general mathematical statements or conjectures based on specific instances."],["Generalisation and proof","U.12","Generate and evaluate mathematical arguments and proofs."],["Communication","U.13","Communicate mathematics effectively: justify their reasoning, interpret their results, explain their conclusions, and use the language and notation of mathematics to express mathematical ideas precisely."]];
+const dialog=document.getElementById("detail");
+const heading=document.getElementById("detail-heading");
+const statement=document.getElementById("detail-statement");
+const counter=document.getElementById("counter");
+const previous=document.getElementById("previous");
+const next=document.getElementById("next");
+const close=document.getElementById("close");
+let selected=0,lastTrigger=null;
+function show(index) {
+ selected=Math.max(0,Math.min(data.length-1,index));
+ const item=data[selected];
+ heading.textContent=item[1]+" — "+item[0];
+ statement.textContent=item[2];
+ counter.textContent=(selected+1)+" of "+data.length;
+ previous.disabled=selected===0;
+ next.disabled=selected===data.length-1;
+}
+document.querySelectorAll("button.outcome").forEach(button=>{
+ button.addEventListener("click",()=>{lastTrigger=button;show(Number(button.dataset.index));dialog.showModal();close.focus();});
+});
+previous.addEventListener("click",()=>show(selected-1));
+next.addEventListener("click",()=>show(selected+1));
+close.addEventListener("click",()=>dialog.close());
+dialog.addEventListener("close",()=>{if(lastTrigger)lastTrigger.focus();});
+dialog.addEventListener("keydown",event=>{
+ if(event.key==="ArrowLeft"&&!event.altKey){event.preventDefault();show(selected-1);}
+ if(event.key==="ArrowRight"&&!event.altKey){event.preventDefault();show(selected+1);}
+});
+})();
+</script>
+</body>
+</html>
