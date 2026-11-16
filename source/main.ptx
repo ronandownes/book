@@ -20,19 +20,11 @@
       <title>JC Maths</title>
       <xi:include href="./jc-introduction.ptx" />
 
-      <!-- Number chapters, in teaching order -->
-      <xi:include href="./number-introduction.ptx" />
-      <xi:include href="./number-systems.ptx" />
-      <xi:include href="./arithmetic.ptx" />
-      <xi:include href="./factors-multiples-primes.ptx" />
-      <xi:include href="./fractions.ptx" />
-      <xi:include href="./decimals-percentages.ptx" />
-      <xi:include href="./ratio-proportion.ptx" />
-      <xi:include href="./indices-roots.ptx" />
-      <xi:include href="./accuracy-standard-form.ptx" />
-      <xi:include href="./financial-mathematics.ptx" />
-      <xi:include href="./number-patterns.ptx" />
+      <!-- Four introductory Number chapters; retained source chapters are not removed. -->
       <xi:include href="./sets-chapter.ptx" />
+      <xi:include href="./arithmetic.ptx" />
+      <xi:include href="./indices-roots.ptx" />
+      <xi:include href="./factors-multiples-primes.ptx" />
 
       <!-- Algebra and Functions chapters, in teaching order -->
       <xi:include href="./algebra-patterns.ptx" />
