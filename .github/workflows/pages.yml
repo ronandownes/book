@@ -54,7 +54,14 @@ jobs:
             "https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" \
             --output assets/syllabus/LC_Mathematics_Syllabus_2015.pdf
           python scripts/build_curriculum_appendices.py
+          python scripts/build_intro_outcomes.py
           test -s source/appendices.ptx
+          for strand in number geometry algebra statistics; do
+            test -s "source/jc-${strand}-outcomes.ptx"
+          done
+          for strand in statistics geometry number algebra functions; do
+            test -s "source/lc-ol-${strand}-outcomes.ptx"
+          done
       - name: Build web textbook
         run: pretext build web
       - name: Add immediate checking to single-choice questions
