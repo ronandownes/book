@@ -202,6 +202,45 @@ jobs:
                   raise SystemExit("Missing LC Ordinary Level outcomes: " + key)
           print("Validated 12 responsive introduction and strand pages.")
           PY
+      - name: Enable two-level native learning outcome pop-ups
+        run: |
+          set -euo pipefail
+          node --check assets/strand-outcome-drill.js
+          cp assets/strand-outcome-drill.js output/web/strand-outcome-drill.js
+          cp assets/strand-outcome-drill.css output/web/strand-outcome-drill.css
+          python - <<'PY'
+          from pathlib import Path
+          root = Path("output/web")
+          pages = {
+              "jc-outcomes-number": ("N.1", "N.5"),
+              "jc-outcomes-geometry": ("GT.1", "GT.6"),
+              "jc-outcomes-algebra": ("AF.1", "AF.7"),
+              "jc-outcomes-statistics": ("SP.1", "SP.3"),
+              "lc-ol-statistics-outcomes": ("1.1", "1.7"),
+              "lc-ol-geometry-outcomes": ("2.1", "2.4"),
+              "lc-ol-number-outcomes": ("3.1", "3.4"),
+              "lc-ol-algebra-outcomes": ("4.1", "4.4"),
+              "lc-ol-functions-outcomes": ("5.1", "5.2"),
+          }
+          css = '<link rel="stylesheet" href="strand-outcome-drill.css?v=1" data-lo-drill="true"/>'
+          script = '<script defer src="strand-outcome-drill.js?v=1" data-lo-drill="true"></script>'
+          for name, labels in pages.items():
+              page = root / (name + ".html")
+              if not page.is_file():
+                  raise SystemExit("Outcome page absent: " + name)
+              html = page.read_text(encoding="utf-8")
+              if not all(label in html for label in labels):
+                  raise SystemExit("Incomplete numbered outcomes: " + name)
+              if name + "-table" not in html:
+                  raise SystemExit("No native outcome table: " + name)
+              if "</head>" not in html or "</body>" not in html:
+                  raise SystemExit("Malformed outcome HTML: " + name)
+              if 'data-lo-drill="true"' not in html:
+                  html = html.replace("</head>", "  " + css + "\n</head>", 1)
+                  html = html.replace("</body>", "  " + script + "\n</body>", 1)
+                  page.write_text(html, encoding="utf-8")
+          print("Added accessible optional subpart drill-down to all 9 JC and LC OL strand pages.")
+          PY
       - name: Verify native appendices glossary and programme navigation
         run: |
           set -euo pipefail
