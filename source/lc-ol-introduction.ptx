@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="lc-ol-introduction">
+  <title>Introduction</title>
+  <section xml:id="lc-ol-learning-outcomes">
+    <title>Learning Outcomes</title>
+    <p>Learning outcomes describe the knowledge, understanding, skills and values students should be able to demonstrate.</p>
+    <p>This introduction presents the <em>Ordinary Level</em> learning outcomes from the Leaving Certificate Mathematics syllabus for examination from 2015. It does not list the additional Higher Level outcomes or the separate Foundation Level outcomes.</p>
+  </section>
+  <xi:include href="./lc-ol-statistics-outcomes.ptx"/>
+  <xi:include href="./lc-ol-geometry-outcomes.ptx"/>
+  <xi:include href="./lc-ol-number-outcomes.ptx"/>
+  <xi:include href="./lc-ol-algebra-outcomes.ptx"/>
+  <xi:include href="./lc-ol-functions-outcomes.ptx"/>
+  <p><em>Source:</em> <url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" visual="Leaving Certificate Mathematics Syllabus (for examination from 2015)"/>. The published syllabus remains the authority for mathematical notation and scope.</p>
+</chapter>
