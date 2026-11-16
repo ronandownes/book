@@ -139,8 +139,9 @@
           '<h2 class="lo-drill-title"></h2>',
           '<div class="lo-drill-mode" role="group" aria-label="Reading mode">',
             '<button type="button" class="lo-drill-whole" aria-pressed="true">Complete outcome</button>',
-            '<button type="button" class="lo-drill-parts" aria-pressed="false">One part at a time</button>',
-            '<button type="button" class="lo-drill-details" aria-pressed="false" hidden>One idea / equation</button>',
+            '<button type="button" class="lo-drill-parts" aria-pressed="false">By letter / part</button>',
+            '<button type="button" class="lo-drill-subparts" aria-pressed="false" hidden>By roman numeral</button>',
+            '<button type="button" class="lo-drill-details" aria-pressed="false" hidden>By equation</button>',
           '</div>',
           '<div class="lo-drill-intro"></div>',
           '<div class="lo-drill-content"></div>',
@@ -148,6 +149,11 @@
             '<button type="button" class="lo-drill-part-prev">← Previous part</button>',
             '<span class="lo-drill-part-count" aria-live="polite"></span>',
             '<button type="button" class="lo-drill-part-next">Next part →</button>',
+          '</div>',
+          '<div class="lo-drill-subpart-controls" hidden>',
+            '<button type="button" class="lo-drill-subpart-prev">← Previous subpart</button>',
+            '<span class="lo-drill-subpart-count" aria-live="polite"></span>',
+            '<button type="button" class="lo-drill-subpart-next">Next subpart →</button>',
           '</div>',
           '<div class="lo-drill-piece-controls" hidden>',
             '<button type="button" class="lo-drill-piece-prev">← Previous idea</button>',
@@ -165,146 +171,210 @@
       const $ = sel => dialog.querySelector(sel);
       const title = $(".lo-drill-title"), content = $(".lo-drill-content"),
         intro = $(".lo-drill-intro"), wholeBtn = $(".lo-drill-whole"),
-        partsBtn = $(".lo-drill-parts"), detailsBtn = $(".lo-drill-details"),
-        partBar = $(".lo-drill-part-controls"), pieceBar = $(".lo-drill-piece-controls"),
+        partsBtn = $(".lo-drill-parts"), subpartsBtn = $(".lo-drill-subparts"),
+        detailsBtn = $(".lo-drill-details"),
+        partBar = $(".lo-drill-part-controls"),
+        subpartBar = $(".lo-drill-subpart-controls"), pieceBar = $(".lo-drill-piece-controls"),
+        prevSubpart = $(".lo-drill-subpart-prev"), nextSubpart = $(".lo-drill-subpart-next"),
         prevPiece = $(".lo-drill-piece-prev"), nextPiece = $(".lo-drill-piece-next"),
         prevPart = $(".lo-drill-part-prev"), nextPart = $(".lo-drill-part-next"),
         prev = $(".lo-drill-prev"), next = $(".lo-drill-next"),
         counter = $(".lo-drill-count"), partCounter = $(".lo-drill-part-count"),
+        subpartCounter = $(".lo-drill-subpart-count"),
         pieceCounter = $(".lo-drill-piece-count"),
         scroller = $(".lo-drill-scroll"), close = $(".lo-drill-close");
       $(".lo-drill-context").textContent = course + " · " + strand;
-      let position = 0, part = 0, piece = 0, mode = "whole", trigger = null;
-      function split(outcome) {
+      let position = 0, part = 0, subpart = 0, piece = 0, mode = "whole", trigger = null;
+      function hierarchy(outcome) {
         const items = outcome.statements;
-        // A single printed line, or a heading and one statement, has no
-        // meaningful additional level. Preserve those in whole-outcome mode.
-        if (items.length < 2) return null;
-        const first = items[0];
-        const hasLead = /(:|should be able to|so that they can)\s*$/i.test(text(first));
-        const lead = hasLead ? first : null;
-        const subparts = hasLead ? items.slice(1) : items.slice();
-        return subparts.length >= 2 ? {lead, subparts} : null;
+        const hasLead = items.length > 0 && /(:|so that they can)\s*$/i.test(text(items[0]));
+        const lead = hasLead ? items[0] : null;
+        const groups = [];
+        let current = null, roman = null;
+        for (const p of (hasLead ? items.slice(1) : items)) {
+          const value = text(p);
+          // Main alphabetic parts appear as a), b), c), etc.
+          const letter = value.match(/^([a-z])\)\s*/i) ||
+                         value.match(/^([a-hj-uw-z])\.\s+/i);
+          const numeral = value.match(/^(viii|vii|vi|iv|iii|ii|ix|v|i|x)\.\s+/i);
+          if (letter) {
+            current = {label:letter[1].toLowerCase(), nodes:[p], roman:[]};
+            groups.push(current);
+            roman = null;
+          } else if (numeral && current?.label) {
+            roman = {label:numeral[1].toLowerCase(), nodes:[p]};
+            current.roman.push(roman);
+          } else if (roman) {
+            // Continuation of roman statement, e.g. the five index laws in N.1(c)(iii).
+            roman.nodes.push(p);
+          } else if (current?.label) {
+            current.nodes.push(p);
+          } else {
+            current = {label:"",nodes:[p],roman:[]};
+            groups.push(current);
+          }
+        }
+        return {lead, groups};
       }
       function appendClones(target, nodes) {
         target.replaceChildren(...nodes.map(safeClone));
       }
-      function currentSource(outcome, more) {
-        return more ? more.subparts[part] : outcome.statements[Math.min(part,outcome.statements.length-1)];
+      function romanPieces(roman) {
+        if (!roman) return {lead:null,items:[]};
+        const hasLead = roman.nodes.length > 1 && /:\s*$/.test(text(roman.nodes[0]));
+        if (hasLead) return {lead:roman.nodes[0], items:roman.nodes.slice(1)};
+        if (roman.nodes.length === 1) return {lead:null,items:detailPieces(roman.nodes[0])};
+        return {lead:null,items:roman.nodes.flatMap(detailPieces)};
       }
-      function autoMode(outcome) {
-        const more = split(outcome);
-        const source = currentSource(outcome,more);
-        const chunks = detailPieces(source);
-        if (chunks.length > 1 && text(source).length > 240) return "details";
-        return more ? "parts" : "whole";
+      function activeContext() {
+        const outline=hierarchy(outcomes[position]);
+        if (part>=outline.groups.length) part=0;
+        const group=outline.groups[part];
+        if (subpart >= (group?.roman.length || 1)) subpart=0;
+        const roman=group?.roman[subpart];
+        const eq=roman ? romanPieces(roman) : {lead:null,items:group?.nodes.flatMap(detailPieces) || []};
+        if (piece>=Math.max(eq.items.length,1)) piece=0;
+        return {outline, group, roman, eq};
+      }
+      function preferredMode(outcome, group, roman) {
+        if (roman) {
+          const rp=romanPieces(roman);
+          if (rp.items.length > 1) return "details";
+          return "subparts";
+        }
+        return hierarchy(outcome).groups.length>1 ? "parts" : "whole";
       }
       function render() {
-        const outcome = outcomes[position];
-        const more = split(outcome);
-        if (part >= (more?.subparts.length || outcome.statements.length)) part = 0;
-        const source = currentSource(outcome,more);
-        const pieces = detailPieces(source);
-        if (mode === "parts" && !more) mode = "whole";
-        if (mode === "details" && pieces.length < 2) mode = more ? "parts" : "whole";
-        if (piece >= pieces.length) piece = 0;
-        title.textContent = outcome.code + (outcome.heading ? " — " + outcome.heading : "");
-        counter.textContent = (position+1) + " of " + outcomes.length;
-        prev.disabled = position === 0;
-        next.disabled = position === outcomes.length-1;
-        partsBtn.hidden = !more;
-        detailsBtn.hidden = pieces.length < 2;
-        $(".lo-drill-mode").hidden = !more && pieces.length < 2;
-        wholeBtn.setAttribute("aria-pressed", String(mode === "whole"));
-        partsBtn.setAttribute("aria-pressed", String(mode === "parts"));
-        detailsBtn.setAttribute("aria-pressed", String(mode === "details"));
+        const {outline,group,roman,eq}=activeContext();
+        if (!group) {mode="whole";}
+        if (mode==="subparts" && !roman) mode="parts";
+        if (mode==="details" && eq.items.length<2) mode=roman?"subparts":"parts";
+        const outcome=outcomes[position];
+        title.textContent=outcome.code+(outcome.heading?" — "+outcome.heading:"");
+        counter.textContent=(position+1)+" of "+outcomes.length;
+        prev.disabled=position===0;next.disabled=position===outcomes.length-1;
+        const partAvailable=outline.groups.length>1;
+        partsBtn.hidden=!partAvailable;
+        subpartsBtn.hidden=!(group?.roman.length);
+        detailsBtn.hidden=eq.items.length<2;
+        $(".lo-drill-mode").hidden=!partAvailable && !(group?.roman.length) && eq.items.length<2;
+        wholeBtn.setAttribute("aria-pressed",String(mode==="whole"));
+        partsBtn.setAttribute("aria-pressed",String(mode==="parts"));
+        subpartsBtn.setAttribute("aria-pressed",String(mode==="subparts"));
+        detailsBtn.setAttribute("aria-pressed",String(mode==="details"));
         intro.replaceChildren();
-        if (mode !== "whole" && more?.lead) appendClones(intro,[more.lead]);
-        if (mode === "details" && pieces.length > 1) {
-          appendClones(content,[pieces[piece]]);
-          pieceBar.hidden = false;
-          pieceCounter.textContent = "Idea / equation " + (piece+1) + " of " + pieces.length;
-          prevPiece.disabled = piece === 0;
-          nextPiece.disabled = piece === pieces.length-1;
-        } else if (mode === "parts" && more) {
-          appendClones(content,[source]);
-          pieceBar.hidden = true;
-        } else {
+        partBar.hidden=mode!=="parts" || !partAvailable;
+        subpartBar.hidden=mode!=="subparts" || !roman;
+        pieceBar.hidden=mode!=="details" || eq.items.length<2;
+        if (mode==="whole") {
           appendClones(content,outcome.statements);
-          pieceBar.hidden = true;
+        } else if (mode==="parts") {
+          if(outline.lead) appendClones(intro,[outline.lead]);
+          appendClones(content,[...group.nodes,...group.roman.flatMap(entry=>entry.nodes)]);
+        } else if (mode==="subparts" && roman) {
+          appendClones(intro,[...(outline.lead?[outline.lead]:[]),...group.nodes]);
+          appendClones(content,roman.nodes);
+        } else if (mode==="details") {
+          const leadNodes=[
+            ...(outline.lead?[outline.lead]:[]),
+            ...(roman?group.nodes:[]),
+            ...(eq.lead?[eq.lead]:[])
+          ];
+          appendClones(intro,leadNodes);
+          appendClones(content,eq.items[piece]?[eq.items[piece]]:[]);
+          pieceCounter.textContent="Equation / idea "+(piece+1)+" of "+eq.items.length;
+          prevPiece.disabled=piece===0;
+          nextPiece.disabled=piece===eq.items.length-1;
         }
-        partBar.hidden = !more || mode === "whole";
-        if (more) {
-          partCounter.textContent = "Part " + (part+1) + " of " + more.subparts.length;
-          prevPart.disabled = part === 0;
-          nextPart.disabled = part === more.subparts.length-1;
+        if (partAvailable) {
+          partCounter.textContent=(group.label?group.label+") · ":"")+"Part "+(part+1)+" of "+outline.groups.length;
+          prevPart.disabled=part===0;
+          nextPart.disabled=part===outline.groups.length-1;
         }
-        scroller.scrollTop = 0;
-        // Preserve PreTeXt's mathematical markup in every cloned segment.
-        if (window.MathJax?.typesetPromise && !content.querySelector("mjx-container"))
-          window.MathJax.typesetPromise([content,intro]).catch(() => {});
+        if (roman) {
+          subpartCounter.textContent=roman.label.toUpperCase()+". · Subpart "+(subpart+1)+" of "+group.roman.length;
+          prevSubpart.disabled=subpart===0;
+          nextSubpart.disabled=subpart===group.roman.length-1;
+        }
+        scroller.scrollTop=0;
+        if(window.MathJax?.typesetPromise && !content.querySelector("mjx-container"))
+          window.MathJax.typesetPromise([content,intro]).catch(()=>{});
       }
-      function advancePart(direction) {
-        const more=split(outcomes[position]);
-        if (!more) return;
-        const dest=part+direction;
-        if (dest<0 || dest>=more.subparts.length) return;
-        part=dest;piece=0;mode=autoMode(outcomes[position]);render();
+      function changePart(offset) {
+        const outline=hierarchy(outcomes[position]);
+        const target=part+offset;
+        if(target<0||target>=outline.groups.length)return;
+        part=target;subpart=0;piece=0;
+        mode=preferredMode(outcomes[position],outline.groups[part],null);
+        // For a deep branch, show one roman subpart rather than all its formulas.
+        if(outline.groups[part].roman.length) mode="subparts";
+        render();
       }
-      function moveOutcome(offset) {
-        const destination = position+offset;
-        if (destination<0 || destination>=outcomes.length) return;
-        position=destination;part=0;piece=0;
-        mode=autoMode(outcomes[position]);render();
+      function changeSubpart(offset) {
+        const outline=hierarchy(outcomes[position]),group=outline.groups[part];
+        const target=subpart+offset;
+        if(!group||target<0||target>=group.roman.length)return;
+        subpart=target;piece=0;
+        mode=preferredMode(outcomes[position],group,group.roman[subpart]);
+        render();
       }
-      outcomes.forEach((outcome, i) => {
-        const open = document.createElement("button");
-        open.type = "button";
-        open.className = "lo-drill-open";
-        open.textContent = "Enlarge " + outcome.code;
-        open.setAttribute("aria-label", "Read complete learning outcome " + outcome.code);
-        open.addEventListener("click", () => {
-          trigger = open; position = i; part = 0; piece = 0;
-          mode = autoMode(outcomes[position]);
-          render(); dialog.showModal(); close.focus();
+      function changeOutcome(offset) {
+        const target=position+offset;
+        if(target<0||target>=outcomes.length)return;
+        position=target;part=0;subpart=0;piece=0;
+        const outline=hierarchy(outcomes[position]);
+        mode=preferredMode(outcomes[position],outline.groups[0],null);
+        render();
+      }
+      outcomes.forEach((outcome,i)=>{
+        const open=document.createElement("button");
+        open.type="button";open.className="lo-drill-open";
+        open.textContent="Enlarge "+outcome.code;
+        open.setAttribute("aria-label","Read learning outcome "+outcome.code);
+        open.addEventListener("click",()=>{
+          trigger=open;position=i;part=0;subpart=0;piece=0;
+          const outline=hierarchy(outcomes[position]);
+          mode=preferredMode(outcomes[position],outline.groups[0],null);
+          render();dialog.showModal();close.focus();
         });
         outcome.labelCell.appendChild(open);
-        // Also click the statement, without replacing the source HTML.
         outcome.statementCell.classList.add("lo-drill-clickable");
-        outcome.statementCell.addEventListener("click", event => {
-          if (event.target.closest("a,button") || window.getSelection()?.toString()) return;
+        outcome.statementCell.addEventListener("click",event=>{
+          if(event.target.closest("a,button")||window.getSelection()?.toString())return;
           open.click();
         });
       });
       wholeBtn.addEventListener("click",()=>{mode="whole";piece=0;render();});
       partsBtn.addEventListener("click",()=>{mode="parts";piece=0;render();});
+      subpartsBtn.addEventListener("click",()=>{mode="subparts";piece=0;render();});
       detailsBtn.addEventListener("click",()=>{mode="details";piece=0;render();});
-      prevPart.addEventListener("click",()=>advancePart(-1));
-      nextPart.addEventListener("click",()=>advancePart(1));
+      prevPart.addEventListener("click",()=>changePart(-1));
+      nextPart.addEventListener("click",()=>changePart(1));
+      prevSubpart.addEventListener("click",()=>changeSubpart(-1));
+      nextSubpart.addEventListener("click",()=>changeSubpart(1));
       prevPiece.addEventListener("click",()=>{if(piece>0){piece--;render();}});
       nextPiece.addEventListener("click",()=>{
-        const total=detailPieces(currentSource(outcomes[position],split(outcomes[position]))).length;
+        const total=activeContext().eq.items.length;
         if(piece<total-1){piece++;render();}
       });
-      prev.addEventListener("click",()=>moveOutcome(-1));
-      next.addEventListener("click",()=>moveOutcome(1));
-      close.addEventListener("click", () => dialog.close());
-      dialog.addEventListener("close", () => {if(trigger?.isConnected) trigger.focus();});
+      prev.addEventListener("click",()=>changeOutcome(-1));
+      next.addEventListener("click",()=>changeOutcome(1));
+      close.addEventListener("click",()=>dialog.close());
+      dialog.addEventListener("close",()=>{if(trigger?.isConnected)trigger.focus();});
       dialog.addEventListener("keydown",event=>{
-        if(event.ctrlKey || event.altKey || event.metaKey ||
-           event.target instanceof HTMLInputElement) return;
-        if(event.key!=="ArrowLeft" && event.key!=="ArrowRight") return;
+        if(event.ctrlKey||event.altKey||event.metaKey||event.target instanceof HTMLInputElement)return;
+        if(event.key!=="ArrowLeft"&&event.key!=="ArrowRight")return;
         event.preventDefault();
         const direction=event.key==="ArrowRight"?1:-1;
-        const more=split(outcomes[position]);
-        if(event.shiftKey) moveOutcome(direction);
+        if(event.shiftKey)changeOutcome(direction);
         else if(mode==="details"){
-          const total=detailPieces(currentSource(outcomes[position],more)).length;
-          const target=piece+direction;
-          if(target>=0 && target<total){piece=target;render();}
-          else if(more) advancePart(direction);
-        } else if(mode==="parts" && more) advancePart(direction);
-        else moveOutcome(direction);
+          const ctx=activeContext(),target=piece+direction;
+          if(target>=0&&target<ctx.eq.items.length){piece=target;render();}
+          else if(ctx.roman)changeSubpart(direction);
+          else changePart(direction);
+        }else if(mode==="subparts")changeSubpart(direction);
+        else if(mode==="parts")changePart(direction);
+        else changeOutcome(direction);
       });
     }
   }
