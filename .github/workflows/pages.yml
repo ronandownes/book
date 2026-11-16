@@ -97,7 +97,7 @@ jobs:
           cp assets/jc-unifying-native.css output/web/jc-unifying-native.css
           python - <<'PY'
           from pathlib import Path
-          page = Path("output/web/jc-introduction.html")
+          page = Path("output/web/jc-unifying-strand.html")
           html = page.read_text(encoding="utf-8")
           if 'jc-unifying-table' not in html or 'U.13' not in html or 'U.1' not in html:
               raise SystemExit("The complete native Unifying Strand table was not built.")
