@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-number-patterns">
-  <title>Number Patterns</title>
+  <title>Sequences</title>
+  <objectives xml:id="li-number-sequences"><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol>
+      <li><p>Describe numerical patterns in words and rules.</p></li>
+      <li><p>Continue arithmetic, geometric and other sequences.</p></li>
+      <li><p>Create tables and explain limits of predictions based on finite terms.</p></li>
+    </ol></objectives>
   <section xml:id="number-patterns-intro">
     <title>Introduction</title>
-    <introduction><p>A number pattern is a sequence or arrangement governed by a rule. Some patterns increase by a constant difference; others multiply by a constant factor or follow a different relationship.</p></introduction>
+    <introduction><p>A sequence is an ordered list of numbers governed by a rule or relationship. Some patterns increase by a constant difference; others multiply by a constant factor or follow a different relationship.</p></introduction>
     <p>Use tables, diagrams and verbal rules before generalising with symbols. Several early terms may fit more than one possible rule, so a rule must be stated and justified.</p>
   </section>
   <section xml:id="number-patterns-practice">
