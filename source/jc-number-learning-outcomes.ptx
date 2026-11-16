@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="jc-number-learning-outcomes">
+  <title>Learning Outcomes</title>
+  <introduction><p>The official Number learning outcomes describe what you are expected to understand and be able to demonstrate across this entire strand. These are curriculum outcomes, not the shorter lesson-by-lesson Learning Intentions.</p></introduction>
+  <xi:include href="./jc-number-outcomes.ptx" />
+</chapter>
