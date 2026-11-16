@@ -1,0 +1,97 @@
+/* Irish School Maths — native outcome pop-ups; print still shows all source text. */
+.lo-drill-section .lo-drill-open {
+ display:block;margin:.45rem 0 .12rem;
+ padding:.33rem .55rem;border:1px solid #9bb6c9;
+ background:#f5f9fc;color:#154869;border-radius:.4rem;
+ font:600 .8rem/1.25 system-ui,sans-serif;cursor:pointer;
+ white-space:normal;overflow-wrap:normal;
+}
+.lo-drill-section .lo-drill-open:hover,
+.lo-drill-section .lo-drill-open:focus-visible {
+ background:#e3f1fa;outline:2px solid #4b86ad;outline-offset:2px;
+}
+.lo-drill-section td.lo-drill-clickable {cursor:zoom-in;}
+.lo-drill-section td.lo-drill-clickable:hover {background:#f4f9fc;}
+.lo-drill-dialog {
+ position:fixed;top:clamp(12px,5dvh,58px);left:50%;
+ transform:translateX(-50%);inset-block-end:auto;
+ box-sizing:border-box;margin:0;
+ width:min(850px,calc(100vw - 24px));max-width:calc(100vw - 24px);
+ height:auto;max-height:86dvh;overflow:hidden;
+ border:1px solid #acc4d1;border-radius:12px;
+ background:#fff;color:#152b3b;box-shadow:0 20px 60px #0a213b50;
+ padding:0;flex-direction:column;
+}
+.lo-drill-dialog[open] {display:flex;}
+.lo-drill-dialog::backdrop {background:rgba(14,30,45,.57);}
+.lo-drill-header,.lo-drill-footer {
+ flex:none;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;
+ padding:.7rem clamp(.8rem,2.5vw,1.5rem);
+ background:#f2f7fa;
+}
+.lo-drill-header{border-bottom:1px solid #d6e2ea;}
+.lo-drill-footer{border-top:1px solid #d6e2ea;justify-content:space-between;}
+.lo-drill-context {flex:1 1 180px;font:600 .85rem/1.35 system-ui,sans-serif;color:#34546c;}
+.lo-drill-header button,.lo-drill-footer button,
+.lo-drill-mode button,.lo-drill-part-controls button {
+ border:1px solid #9db8c9;color:#17445f;border-radius:.45rem;
+ background:#fff;padding:.47rem .7rem;
+ font:600 .86rem/1.35 system-ui,sans-serif;cursor:pointer;min-height:2.25rem;
+}
+.lo-drill-header button:hover,.lo-drill-footer button:hover,
+.lo-drill-mode button:hover,.lo-drill-part-controls button:hover,
+.lo-drill-dialog button:focus-visible {
+ background:#e1f0f9;outline:2px solid #2b6f9b;outline-offset:1px;
+}
+.lo-drill-dialog button:disabled{opacity:.42;cursor:default;}
+.lo-drill-scroll{
+ flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;
+ padding:clamp(.9rem,2.5vw,1.6rem);
+ scrollbar-gutter:stable;
+}
+.lo-drill-title {
+ font:700 clamp(1.3rem,2.4vw,1.8rem)/1.3 Georgia,serif;
+ color:#143f5e;margin:0 0 1rem;overflow-wrap:anywhere;
+}
+.lo-drill-mode {
+ display:flex;flex-wrap:wrap;gap:.5rem;padding-bottom:.75rem;
+ margin-bottom:1rem;border-bottom:1px solid #e0e8ef;
+}
+.lo-drill-mode [aria-pressed="true"] {
+ background:#1d526f;color:#fff;border-color:#1d526f;
+}
+.lo-drill-mode[hidden],.lo-drill-part-controls[hidden] {display:none!important;}
+.lo-drill-intro .para {
+ font-weight:600;border-left:3px solid #8aacbf;
+ padding-left:.8rem;background:#f5f9fc;
+}
+.lo-drill-content .para,.lo-drill-intro .para {
+ font:400 clamp(1.08rem,2vw,1.4rem)/1.55 Georgia,serif;
+ color:#172b3e;margin:.4rem 0 1rem;
+ overflow-wrap:break-word;white-space:normal;
+}
+.lo-drill-content .para mjx-container,
+.lo-drill-intro .para mjx-container {max-width:100%;overflow-x:auto;overflow-y:hidden;}
+.lo-drill-content .para .alert,.lo-drill-intro .para .alert {font-weight:650;}
+.lo-drill-part-controls {
+ border-top:1px solid #dde8f0;padding:.75rem 0 .1rem;
+ display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;justify-content:space-between;
+}
+.lo-drill-count,.lo-drill-part-count {
+ font: .84rem system-ui,sans-serif;color:#526b7b;
+ font-variant-numeric:tabular-nums;
+}
+@media(max-width:560px){
+ .lo-drill-dialog{top:2dvh;max-height:95dvh;width:calc(100vw - 12px);max-width:calc(100vw - 12px);}
+ .lo-drill-header,.lo-drill-footer{gap:.3rem;padding:.5rem .65rem;}
+ .lo-drill-scroll{padding:.85rem .65rem;}
+ .lo-drill-footer button,.lo-drill-part-controls button {font-size:.8rem;padding:.45rem .48rem;}
+ .lo-drill-content .para,.lo-drill-intro .para{font-size:1.08rem;}
+}
+@media print{
+ .lo-drill-open,.lo-drill-dialog {display:none!important;}
+ .lo-drill-section td.lo-drill-clickable {cursor:auto;background:transparent;}
+}
+@media(prefers-reduced-motion:reduce) {
+ .lo-drill-dialog * {scroll-behavior:auto!important;transition:none!important;}
+}
