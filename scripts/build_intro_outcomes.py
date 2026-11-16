@@ -64,6 +64,30 @@ LEADS = {
     ],
 }
 
+# Concise editorial introductions: these are not part of the verbatim outcomes.
+LC_STRAND_SUMMARIES = {
+    "statistics": (
+        "Probability develops reasoning about uncertainty through experiments, simulations and models. "
+        "Statistics develops the skills to investigate data, recognise patterns, evaluate claims and communicate conclusions."
+    ),
+    "geometry": (
+        "Geometry examines shape, space, measurement and reasoning. "
+        "Trigonometry connects angles and lengths to solve mathematical and practical problems."
+    ),
+    "number": (
+        "Number develops fluency with number systems, calculations, estimation and proportional reasoning. "
+        "Students apply these ideas to quantitative situations and evaluate whether answers are reasonable."
+    ),
+    "algebra": (
+        "Algebra uses expressions, equations and inequalities to represent relationships and solve problems. "
+        "Students explain and justify the transformations they make."
+    ),
+    "functions": (
+        "Functions describe relationships between varying quantities. "
+        "Students use formulas, graphs and rates of change to interpret situations and solve problems."
+    ),
+}
+
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 
 def compact(s: str) -> str:
@@ -279,7 +303,8 @@ def leaving():
         section=etree.Element("section")
         section.set(XML_ID,f"lc-ol-{key}-outcomes")
         etree.SubElement(section,"title").text=title
-        etree.SubElement(section,"p").text="Ordinary Level learning outcomes only, in the order of the published 2015 syllabus."
+        etree.SubElement(section, "p").text = LC_STRAND_SUMMARIES[key]
+        etree.SubElement(section, "p").text = "The official Ordinary Level learning outcomes follow in the published syllabus order."
         add_table(section,f"lc-ol-{key}-table",f"{title}: Ordinary Level learning outcomes",grouped)
         write(section,f"lc-ol-{key}-outcomes.ptx")
         print(f"Leaving Certificate Ordinary Level {key}: {len(grouped)} official topics",flush=True)
