@@ -29,6 +29,41 @@ LEAVING = [
     ("algebra", "Algebra", "4", 4),
     ("functions", "Functions", "5", "2"),
 ]
+
+# These lead sentences are checked against the printed NCCA 2018 specification,
+# pp. 15-20. The website's HTML lists subparts but may omit these lead sentences.
+LEADS = {
+    "number": [
+        "Investigate the representation of numbers and arithmetic operations so that they can:",
+        "Investigate equivalent representations of rational numbers so that they can:",
+        "Investigate situations involving proportionality so that they can:",
+        "Analyse numerical patterns in different ways, including making out tables and graphs, and continue such patterns.",
+        "Explore the concept of a set so that they can:",
+    ],
+    "geometry": [
+        "Calculate, interpret, and apply units of measure and time.",
+        "Investigate 2D shapes and 3D solids so that they can:",
+        "Investigate the concept of proof through their engagement with geometry so that they can:",
+        "Evaluate and use trigonometric ratios (sin, cos, and tan, defined in terms of right-angled triangles) and their inverses, involving angles between 0° and 90° at integer values and in decimal form.",
+        "Investigate properties of points, lines and line segments in the co-ordinate plane so that they can:",
+        "Investigate transformations of simple objects so that they can:",
+    ],
+    "algebra": [
+        "Investigate patterns and relationships (linear, quadratic, doubling and tripling) in number, spatial patterns and real-world phenomena involving change so that they can:",
+        "Investigate situations in which letters stand for quantities that are variable so that they can:",
+        "Apply the properties of arithmetic operations and factorisation to generate equivalent expressions so that they can develop and use appropriate strategies to:",
+        "Select and use suitable strategies (graphic, numeric, algebraic, trial and improvement, working backwards) for finding solutions to:",
+        "Generate quadratic equations given integer roots.",
+        "Apply the relationship between operations and an understanding of the order of operations including brackets and exponents to change the subject of a formula.",
+        "Investigate functions so that they can:",
+    ],
+    "statistics": [
+        "Investigate the outcomes of experiments so that they can:",
+        "Investigate random events so that they can:",
+        "Carry out a statistical investigation which includes the ability to:",
+    ],
+}
+
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 
 def compact(s: str) -> str:
@@ -81,20 +116,30 @@ def junior():
         if len(chapter) != 1:
             raise RuntimeError("Missing Junior Cycle " + key)
         rows = []
-        for part in chapter[0].findall("section"):
+        parts = chapter[0].findall("section")
+        if len(parts) != expected or len(LEADS[key]) != expected:
+            raise RuntimeError(f"JC {key}: source has {len(parts)} outcomes, expected {expected}")
+        for number, part in enumerate(parts, 1):
+            code = prefix + "." + str(number)
             paragraphs = part.findall("p")
-            codepattern = re.compile(r"\b" + re.escape(prefix) + r"\.(\d+)\b")
-            found = [(i,codepattern.search(compact("".join(p.itertext()))))
-                     for i,p in enumerate(paragraphs)]
-            found = [(i,m) for i,m in found if m]
-            if len(found) != 1:
-                raise RuntimeError(f"Cannot identify exactly one source code in JC {key}: {part.findtext('title')!r}")
-            pos,match = found[0]
-            code = prefix + "." + match.group(1)
-            # The source website places some numbered lead sentences after their subparts.
-            # Present that source sentence first, followed by *all* of its original subparts.
-            ordered = [paragraphs[pos], *paragraphs[:pos], *paragraphs[pos+1:]]
-            rows.append((code,compact(part.findtext("title") or ""),ordered))
+            main = etree.Element("p")
+            main.text = LEADS[key][number-1]
+            # The source HTML sometimes lists the main code only after its
+            # subparts and sometimes omits it entirely. Use the PDF-verified
+            # main sentence, preserving every separately extracted subpart.
+            extras = []
+            for p in paragraphs:
+                t = compact("".join(p.itertext()))
+                if not t:
+                    continue
+                if re.search(r"\b" + re.escape(code) + r"\b", t):
+                    # Retain the source text too if it differs substantively.
+                    rest = re.sub(r"\b"+re.escape(code)+r"\b", "", t).strip()
+                    if rest and rest.lower().rstrip(".:") != main.text.lower().rstrip(".:"):
+                        extras.append(p)
+                else:
+                    extras.append(p)
+            rows.append((code, compact(part.findtext("title") or ""), [main, *extras]))
         wanted = [prefix+"."+str(i) for i in range(1,expected+1)]
         actual = [r[0] for r in rows]
         if actual != wanted:
