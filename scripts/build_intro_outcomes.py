@@ -419,5 +419,5 @@ def leaving():
         print(f"Leaving Certificate Ordinary Level {key}: {len(grouped)} official topics",flush=True)
 
 if __name__=="__main__":
+    # Junior Cycle edition: retain LC helpers for a separate future build.
     junior()
-    leaving()
