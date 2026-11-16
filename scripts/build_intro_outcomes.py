@@ -218,6 +218,31 @@ def junior():
         section = etree.Element("section")
         section.set(XML_ID, f"jc-outcomes-{key}")
         etree.SubElement(section,"title").text=title
+        if key == "algebra":
+            etree.SubElement(section, "p").text = (
+                "First, scroll through the original Junior Cycle specification pages 18–19. "
+                "Then use the seven-slide view to explore outcomes AF.1–AF.7."
+            )
+            figure = etree.SubElement(section, "figure")
+            figure.set(XML_ID, "jc-algebra-original-pages")
+            etree.SubElement(figure, "caption").text = (
+                "Original NCCA Algebra and Functions outcomes, pages 18–19. Scroll inside the viewer."
+            )
+            interactive = etree.SubElement(figure, "interactive")
+            interactive.set(XML_ID, "jc-algebra-original-scroll")
+            interactive.set(
+                "iframe",
+                "https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/"
+                "JC_Mathematics_Specification.pdf#page=18&zoom=100",
+            )
+            interactive.set("width", "100%")
+            interactive.set("aspect", "4:5")
+            p = etree.SubElement(section, "p")
+            source_link = etree.SubElement(p, "url", href=(
+                "https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/"
+                "JC_Mathematics_Specification.pdf#page=18&zoom=100"
+            ), visual="Open the original specification pages 18–19 in a new tab")
+            source_link.tail = "."
         if key in ("number","geometry","algebra","statistics"):
             etree.SubElement(section, "p").text = ("Official learning outcomes. Higher Level-only material remains "
                 "distinguished in bold where marked in the NCCA source.")
@@ -231,9 +256,9 @@ def para(xml_body: str) -> etree._Element:
 def correct_junior_index_notation(paragraphs: list[etree._Element]) -> list[etree._Element]:
     """Typeset the Junior Cycle index-form sub-outcome as native mathematics.
 
-    The NCCA HTML stores powers in sup elements and the fractional power
+    The NCCA HTML stores powers in ``sup`` elements and the fractional power
     as a two-dimensional fraction. The generic text extractor flattens those
-    into strings such as a^(p)/^(q). Replace only that known paragraph,
+    into strings such as ``a^(p)/^(q)``. Replace only that known paragraph,
     retaining the remaining N.1 wording and the source's Higher Level emphasis.
     """
     fixed: list[etree._Element] = []
@@ -256,6 +281,7 @@ def correct_junior_index_notation(paragraphs: list[etree._Element]) -> list[etre
     if not replaced:
         raise RuntimeError("JC N.1 index-form outcome was not found; refusing flattened maths publication.")
     return fixed
+
 def correct_lc_formulas(code: str, paragraphs: list[etree._Element]) -> list[etree._Element]:
     """Repair formulas that a two-dimensional PDF cannot convert to plain text.
 
