@@ -277,7 +277,9 @@ jobs:
             chapter-foundation-programme.html \
             chapter-lca-programme.html; do
             test -s "output/web/$introduction" || { echo "Missing Introduction $introduction"; exit 1; }
-            grep -q 'Coming soon' "output/web/$introduction" || { echo "Missing Coming soon on $introduction"; exit 1; }
+            # A valid Introduction is not required to contain placeholder text.
+            # Check the built chapter, not whether the author still says Coming soon.
+            grep -qi 'Introduction' "output/web/$introduction" || { echo "Missing Introduction heading in $introduction"; exit 1; }
           done
           grep -q 'part-jc-coding.html' output/web/programme-colours.js
           grep -q 'part-jc-digital-literacy.html' output/web/programme-colours.js
