@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-indices-roots">
-  <title>Index Form, Powers and Roots</title>
-  <objectives xml:id="li-index-form">
-    <title>Learning Intentions</title>
-    <introduction><p>After completing this chapter, you should be able to do the following.</p></introduction>
-    <ol>
-      <li><p>Write repeated multiplication in index form, identifying the base, exponent and power.</p></li>
-      <li><p>Evaluate integer powers and roots and understand their inverse relationship in appropriate cases.</p></li>
-      <li><p>Use the laws of indices to simplify expressions, taking care with zero and negative exponents.</p></li>
-      <li><p>Distinguish a negative base from a negative sign outside a power, using correct grouping notation.</p></li>
-    </ol>
-  </objectives>
+  <title>Powers and Roots</title>
+  <objectives xml:id="li-index-form"><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol>
+      <li><p>Express repeated multiplication in index form.</p></li>
+      <li><p>Identify the base and exponent and evaluate powers.</p></li>
+      <li><p>Evaluate roots in the appropriate number system and distinguish the sign from the base.</p></li>
+    </ol></objectives>
+  <introduction><p>Powers express repeated multiplication. Roots reverse powers where appropriate. We begin with meaning, not just a list of rules.</p></introduction>
 
   <section xml:id="indices-intro">
     <title>Introduction</title>
