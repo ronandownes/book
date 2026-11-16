@@ -6,6 +6,7 @@
       <li><p>Identify natural numbers, integers and rational numbers using <m>\mathbb{N}</m>, <m>\mathbb{Z}</m> and <m>\mathbb{Q}</m>.</p></li>
       <li><p>Explain how the number systems are related.</p></li>
     </ol></objectives>
+  <introduction><p>A number is an idea that can be represented in several ways. We start with natural numbers, integers and rational numbers.</p></introduction>
   <section xml:id="number-intro">
     <title>Introduction</title>
     <introduction><p>Numbers help us describe quantities, positions, measurements and patterns. A number is not the same as the symbol used to write it. For example, twelve objects can be represented by 12, by a diagram of twelve dots, or by an expression such as 3 × 4.</p></introduction>
