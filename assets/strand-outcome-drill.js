@@ -15,7 +15,12 @@
     "lc-ol-algebra-outcomes": ["Leaving Certificate · Ordinary Level", "Algebra", 4],
     "lc-ol-functions-outcomes": ["Leaving Certificate · Ordinary Level", "Functions", 2]
   };
-  function text(node) { return (node?.textContent || "").replace(/\s+/g, " ").trim(); }
+  function text(node) {
+    if (!node) return "";
+    const clone = node.cloneNode(true);
+    clone.querySelectorAll(".autopermalink").forEach(el => el.remove());
+    return (clone.textContent || "").replace(/\s+/g, " ").trim();
+  }
   function safeClone(node) {
     const copy = node.cloneNode(true);
     if (copy.hasAttribute("id")) copy.removeAttribute("id");
@@ -42,7 +47,8 @@
         const statements = paragraphs(cells[1]);
         if (!statements.length) continue;
         const lead = paragraphs(cells[0])[1] || null;
-        outcomes.push({code:match[1], heading:text(lead), row, labelCell:cells[0], statementCell:cells[1], statements});
+        const heading = text(lead).replace(new RegExp("^" + match[1].replace(".", "\\.") + "\\s*"), "");
+        outcomes.push({code:match[1], heading, row, labelCell:cells[0], statementCell:cells[1], statements});
       }
       if (outcomes.length !== expected) {
         console.warn("Outcome count does not match syllabus; leaving table untouched", sectionId, outcomes.length, expected);
