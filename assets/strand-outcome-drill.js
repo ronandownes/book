@@ -37,7 +37,7 @@
         const cells = Array.from(row.children).filter(c => c.matches("td"));
         if (cells.length !== 2) continue;
         const label = paragraphs(cells[0])[0] || cells[0];
-        const match = text(label).match(/^((?:N|GT|AF|SP|[1-5])\.\d+)$/);
+        const match = text(label).match(/^((?:N|GT|AF|SP|[1-5])\.\d+)(?=\D|$)/);
         if (!match) continue;
         const statements = paragraphs(cells[1]);
         if (!statements.length) continue;
