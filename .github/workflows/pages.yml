@@ -89,17 +89,29 @@ jobs:
               raise SystemExit("No web pages received automatic-check handling.")
           print(f"Embedded automatic checking in {updated} pages.")
           PY
-      - name: Publish the complete Junior Cycle Unifying Strand overview
+      - name: Enhance native Junior Cycle Unifying Strand table
         run: |
           set -euo pipefail
-          mkdir -p output/web/interactives
-          cp assets/interactives/jc-unifying.html output/web/interactives/jc-unifying.html
-          test -s output/web/jc-introduction.html
-          test -s output/web/interactives/jc-unifying.html
-          grep -q 'jc-unifying.html' output/web/jc-introduction.html
-          grep -q 'U.13' output/web/interactives/jc-unifying.html
-          grep -q 'U.1' output/web/interactives/jc-unifying.html
-          echo "Complete Unifying Strand: all 13 outcomes and original six elements."
+          node --check assets/jc-unifying-native.js
+          cp assets/jc-unifying-native.js output/web/jc-unifying-native.js
+          cp assets/jc-unifying-native.css output/web/jc-unifying-native.css
+          python - <<'PY'
+          from pathlib import Path
+          page = Path("output/web/jc-introduction.html")
+          html = page.read_text(encoding="utf-8")
+          if 'jc-unifying-table' not in html or 'U.13' not in html or 'U.1' not in html:
+              raise SystemExit("The complete native Unifying Strand table was not built.")
+          if 'interactives/jc-unifying.html' in html or 'interactive-jc-unifying-overview' in html:
+              raise SystemExit("An old embedded Unifying Strand reader remains in the Introduction.")
+          if '</head>' not in html or '</body>' not in html:
+              raise SystemExit("The Introduction HTML is incomplete.")
+          css = '<link rel="stylesheet" href="jc-unifying-native.css?v=1" data-jc-native="1"/>'
+          js = '<script defer src="jc-unifying-native.js?v=1" data-jc-native="1"></script>'
+          html = html.replace('</head>', '  '+css+'\n</head>', 1)
+          html = html.replace('</body>', '  '+js+'\n</body>', 1)
+          page.write_text(html, encoding="utf-8")
+          print("All 13 Unifying Strand outcomes are now native PreTeXt; modal uses top-level dialog.")
+          PY
       - name: Copy fertility and literacy interactive
         run: |
           set -euo pipefail
