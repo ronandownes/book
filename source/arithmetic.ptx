@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-arithmetic">
   <title>Operations</title>
-  <objectives xml:id="li-number-operations">
-    <title>Learning Intentions</title>
-    <introduction><p>After completing this chapter, you should be able to do the following.</p></introduction>
-    <ol>
-      <li><p>Use addition, subtraction, multiplication and division to describe quantities, changes, equal groups and sharing.</p></li>
-      <li><p>Determine which operations are commutative and associative, using examples or counterexamples.</p></li>
-      <li><p>Explain distribution of multiplication over a grouped sum or difference.</p></li>
-      <li><p>Explain precisely when division distributes over a sum or difference, and recognise when it does not.</p></li>
-    </ol>
-  </objectives>
+  <objectives xml:id="li-number-operations"><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol>
+      <li><p>Use the four arithmetic operations to solve problems.</p></li>
+      <li><p>Determine whether each operation is commutative and associative.</p></li>
+      <li><p>Explain when multiplication or division distributes over a grouped sum or difference.</p></li>
+    </ol></objectives>
+  <introduction><p>Addition, subtraction, multiplication and division each have their own properties. Brackets and other grouping symbols reveal the structure of an expression.</p></introduction>
 
   <section xml:id="arithmetic-intro">
     <title>Operations and Their Properties</title>
