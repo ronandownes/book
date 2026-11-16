@@ -4,16 +4,8 @@
   "use strict";
   const partTargets = {
     "part-junior-cycle.html":"jc",
-    "part-transition-year.html":"ty",
     "part-leaving-certificate.html":"lc",
-    "part-foundation.html":"foundation",
-    "part-leaving-certificate-applied.html":"lca",
-    "part-jc-coding.html":"coding",
-    "part-jc-digital-literacy.html":"digital",
-    "part-computer-science.html":"cs",
-    "part-physics.html":"physics",
-    "part-applied-mathematics.html":"applied",
-    "part-official-appendices.html":"appendices"
+    "part-transition-year.html":"ty"
   };
   const chapterTargets = __MATHS_CHAPTERS__;
   const tocSelector = "nav, .toc, .ptx-toc, .toc-container, #toc, .toc-items, .toc-item-list, [role='navigation']";
