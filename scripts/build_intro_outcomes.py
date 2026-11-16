@@ -133,12 +133,10 @@ def junior():
                 if not t:
                     continue
                 if re.search(r"\b" + re.escape(code) + r"\b", t):
-                    # Retain the source text too if it differs substantively.
-                    rest = re.sub(r"\b"+re.escape(code)+r"\b", "", t).strip()
-                    if rest and rest.lower().rstrip(".:") != main.text.lower().rstrip(".:"):
-                        extras.append(p)
-                else:
-                    extras.append(p)
+                    # The numbered lead is already represented by the
+                    # PDF-verified statement above. Do not print it twice.
+                    continue
+                extras.append(p)
             rows.append((code, compact(part.findtext("title") or ""), [main, *extras]))
         wanted = [prefix+"."+str(i) for i in range(1,expected+1)]
         actual = [r[0] for r in rows]
