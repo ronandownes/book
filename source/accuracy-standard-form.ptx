@@ -6,6 +6,7 @@
       <li><p>Round to decimal places or significant figures.</p></li>
       <li><p>Distinguish rounding from truncation and interpret measurement precision.</p></li>
     </ol></objectives>
+  <introduction><p>Accuracy, precision, truncation and rounding must be distinguished whenever we report an approximation.</p></introduction>
   <section xml:id="accuracy-intro">
     <title>Introduction</title>
     <introduction><p>Measurements and calculations should be reported to a degree of accuracy appropriate to the context. Decimal places, significant figures and rounding describe different kinds of precision.</p></introduction>
