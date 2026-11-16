@@ -2,8 +2,8 @@
 """Produce native PreTeXt strand tables from the official curriculum sources.
 
 Every official numbered outcome is mandatory. An unexpected source layout is an
-error, not an invitation to omit material. This generates *only* LC Ordinary Level
-and the four remaining Junior Cycle strands; it never imports the HL column.
+error, not an invitation to omit material. The Junior Cycle edition builds the four numbered JC strand tables;
+LC Ordinary Level generator functions remain available for future editions.
 """
 from __future__ import annotations
 
