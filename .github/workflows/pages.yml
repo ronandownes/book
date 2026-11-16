@@ -255,6 +255,32 @@ jobs:
             chapter-glossary.html; do
             test -s "output/web/$page" || { echo "Missing $page"; exit 1; }
           done
+          for part in \
+            part-junior-cycle.html \
+            part-transition-year.html \
+            part-leaving-certificate.html \
+            part-computer-science.html \
+            part-jc-coding.html \
+            part-jc-digital-literacy.html \
+            part-physics.html \
+            part-applied-mathematics.html \
+            part-foundation.html \
+            part-leaving-certificate-applied.html; do
+            test -s "output/web/$part" || { echo "Missing subject Part $part"; exit 1; }
+          done
+          for introduction in \
+            chapter-computer-science-introduction.html \
+            chapter-jc-coding-introduction.html \
+            chapter-jc-digital-literacy-introduction.html \
+            chapter-physics-introduction.html \
+            chapter-applied-mathematics-introduction.html \
+            chapter-foundation-programme.html \
+            chapter-lca-programme.html; do
+            test -s "output/web/$introduction" || { echo "Missing Introduction $introduction"; exit 1; }
+            grep -q 'Coming soon' "output/web/$introduction" || { echo "Missing Coming soon on $introduction"; exit 1; }
+          done
+          grep -q 'part-jc-coding.html' output/web/programme-colours.js
+          grep -q 'part-jc-digital-literacy.html' output/web/programme-colours.js
           test ! -e output/web/section-spec-junior-cycle.html || { echo "Legacy PDF specification section still published"; exit 1; }
           grep -q 'data-maths-programme="colour"' output/web/part-junior-cycle.html
           ! grep -q 'syllabus/reader.html' output/web/jc-official-unifying.html
