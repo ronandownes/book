@@ -1,34 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="jc-introduction">
   <title>Introduction</title>
-  <p>Mathematics connects ideas, representations, problem solving, proof and communication. The <term>Unifying Strand</term> describes the mathematical thinking that we will use throughout Junior Cycle. It contains six elements and 13 learning outcomes.</p>
-  <p>Here are all thirteen outcomes together. Select any outcome to enlarge it and read it individually, or simply read the whole table without opening anything.</p>
-  <table xml:id="jc-unifying-table">
-    <title>Unifying Strand — Learning Outcomes</title>
-    <tabular>
-      <col width="19%"/>
-      <col width="81%"/>
-      <row header="yes"><cell>Element / outcome</cell><cell>Students should be able to</cell></row>
-      <row><cell colspan="2"><em>Building blocks</em></cell></row>
-      <row><cell>U.1</cell><cell>Recall and demonstrate understanding of the fundamental concepts and procedures that underpin each strand.</cell></row>
-      <row><cell>U.2</cell><cell>Apply the procedures associated with each strand accurately, effectively, and appropriately.</cell></row>
-      <row><cell>U.3</cell><cell>Recognise that equality is a relationship in which two mathematical expressions have the same value.</cell></row>
-      <row><cell colspan="2"><em>Representation</em></cell></row>
-      <row><cell>U.4</cell><cell>Represent a mathematical situation in a variety of different ways, including: numerically, algebraically, graphically, physically, in words; and to interpret, analyse, and compare such representations.</cell></row>
-      <row><cell colspan="2"><em>Connections</em></cell></row>
-      <row><cell>U.5</cell><cell>Make connections within and between strands.</cell></row>
-      <row><cell>U.6</cell><cell>Make connections between mathematics and the real world.</cell></row>
-      <row><cell colspan="2"><em>Problem solving</em></cell></row>
-      <row><cell>U.7</cell><cell>Make sense of a given problem, and if necessary mathematise a situation.</cell></row>
-      <row><cell>U.8</cell><cell>Apply their knowledge and skills to solve a problem, including decomposing it into manageable parts and/or simplifying it using appropriate assumptions.</cell></row>
-      <row><cell>U.9</cell><cell>Interpret their solution to a problem in terms of the original question.</cell></row>
-      <row><cell>U.10</cell><cell>Evaluate different possible solutions to a problem, including evaluating the reasonableness of the solutions, and exploring possible improvements and/or limitations of the solutions (if any).</cell></row>
-      <row><cell colspan="2"><em>Generalisation and proof</em></cell></row>
-      <row><cell>U.11</cell><cell>Generate general mathematical statements or conjectures based on specific instances.</cell></row>
-      <row><cell>U.12</cell><cell>Generate and evaluate mathematical arguments and proofs.</cell></row>
-      <row><cell colspan="2"><em>Communication</em></cell></row>
-      <row><cell>U.13</cell><cell>Communicate mathematics effectively: justify their reasoning, interpret their results, explain their conclusions, and use the language and notation of mathematics to express mathematical ideas precisely.</cell></row>
-    </tabular>
-  </table>
-  <p><em>Source:</em> National Council for Curriculum and Assessment, <url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf#page=14" visual="Junior Cycle Mathematics Specification (2018), page 14"/>. The 13 learning outcomes and the six elements are presented in their published order. Initial capitals and final full stops have been added for consistent reading; the specification is the authoritative source.</p>
+
+  <section xml:id="jc-learning-outcomes">
+    <title>Learning Outcomes</title>
+    <p>Learning outcomes describe the <em>knowledge</em>, <em>understanding</em>, <em>skills</em> and <em>values</em> students should be able to demonstrate.</p>
+  </section>
+
+  <section xml:id="jc-unifying-strand">
+    <title>Unifying Strand</title>
+    <table xml:id="jc-unifying-table">
+      <title>Unifying Strand — Learning Outcomes</title>
+      <tabular>
+        <col width="19%"/>
+        <col width="81%"/>
+        <row header="yes"><cell>Element / outcome</cell><cell>Students should be able to</cell></row>
+        <row><cell colspan="2"><em>Building blocks</em></cell></row>
+        <row><cell>U.1</cell><cell>Recall and demonstrate understanding of the fundamental concepts and procedures that underpin each strand.</cell></row>
+        <row><cell>U.2</cell><cell>Apply the procedures associated with each strand accurately, effectively, and appropriately.</cell></row>
+        <row><cell>U.3</cell><cell>Recognise that equality is a relationship in which two mathematical expressions have the same value.</cell></row>
+        <row><cell colspan="2"><em>Representation</em></cell></row>
+        <row><cell>U.4</cell><cell>Represent a mathematical situation in a variety of different ways, including: numerically, algebraically, graphically, physically, in words; and to interpret, analyse, and compare such representations.</cell></row>
+        <row><cell colspan="2"><em>Connections</em></cell></row>
+        <row><cell>U.5</cell><cell>Make connections within and between strands.</cell></row>
+        <row><cell>U.6</cell><cell>Make connections between mathematics and the real world.</cell></row>
+        <row><cell colspan="2"><em>Problem solving</em></cell></row>
+        <row><cell>U.7</cell><cell>Make sense of a given problem, and if necessary mathematise a situation.</cell></row>
+        <row><cell>U.8</cell><cell>Apply their knowledge and skills to solve a problem, including decomposing it into manageable parts and/or simplifying it using appropriate assumptions.</cell></row>
+        <row><cell>U.9</cell><cell>Interpret their solution to a problem in terms of the original question.</cell></row>
+        <row><cell>U.10</cell><cell>Evaluate different possible solutions to a problem, including evaluating the reasonableness of the solutions, and exploring possible improvements and/or limitations of the solutions (if any).</cell></row>
+        <row><cell colspan="2"><em>Generalisation and proof</em></cell></row>
+        <row><cell>U.11</cell><cell>Generate general mathematical statements or conjectures based on specific instances.</cell></row>
+        <row><cell>U.12</cell><cell>Generate and evaluate mathematical arguments and proofs.</cell></row>
+        <row><cell colspan="2"><em>Communication</em></cell></row>
+        <row><cell>U.13</cell><cell>Communicate mathematics effectively: justify their reasoning, interpret their results, explain their conclusions, and use the language and notation of mathematics to express mathematical ideas precisely.</cell></row>
+      </tabular>
+    </table>
+    <p><em>Source:</em> National Council for Curriculum and Assessment, <url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf#page=14" visual="Junior Cycle Mathematics Specification (2018), page 14"/>. The 13 learning outcomes and the six elements are presented in their published order. Initial capitals and final full stops have been added for consistent reading; the specification is the authoritative source.</p>
+  </section>
 </chapter>
