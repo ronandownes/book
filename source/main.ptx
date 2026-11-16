@@ -17,7 +17,7 @@
         </frontmatter>
 
     <part xml:id="part-junior-cycle">
-      <title>Junior Cycle</title>
+      <title>JC Maths</title>
       <xi:include href="./jc-introduction.ptx" />
 
 <xi:include href="./sets-chapter.ptx" />
@@ -70,14 +70,14 @@
     </part>
 
     <part xml:id="part-transition-year">
-      <title>Transition Year</title>
+      <title>TY Maths</title>
 <chapter xml:id="chapter-ty-programme"><title>The TY Mathematics Programme</title>
         <section xml:id="ty-programme-introduction"><title>Investigations and Applications</title><p>This part will develop the Transition Year mathematics programme through investigations, projects, modelling and practical applications.</p></section>
       </chapter>
     </part>
 
     <part xml:id="part-leaving-certificate">
-      <title>LC Maths OL</title>
+      <title>LC OL Maths</title>
       <xi:include href="./lc-ol-introduction.ptx"/>
 <chapter xml:id="chapter-complex"><title>Complex Numbers</title>
               <section xml:id="complex-intro"><title>Beyond the real numbers</title>
@@ -116,41 +116,57 @@
                   </chapter>
     </part>
 
+    <part xml:id="part-computer-science">
+      <title>LC Computer Science</title>
+      <chapter xml:id="chapter-computer-science-introduction">
+        <title>Introduction</title>
+        <p>Coming soon.</p>
+      </chapter>
+    </part>
+
+    <part xml:id="part-jc-coding">
+      <title>JC Coding</title>
+      <chapter xml:id="chapter-jc-coding-introduction">
+        <title>Introduction</title>
+        <p>Coming soon.</p>
+      </chapter>
+    </part>
+
+    <part xml:id="part-jc-digital-literacy">
+      <title>JC Digital Literacy</title>
+      <chapter xml:id="chapter-jc-digital-literacy-introduction">
+        <title>Introduction</title>
+        <p>Coming soon.</p>
+      </chapter>
+    </part>
+
+    <part xml:id="part-physics">
+      <title>LC Physics</title>
+      <chapter xml:id="chapter-physics-introduction">
+        <title>Introduction</title>
+        <p>Coming soon.</p>
+      </chapter>
+    </part>
+
+    <part xml:id="part-applied-mathematics">
+      <title>LC Applied Maths</title>
+      <chapter xml:id="chapter-applied-mathematics-introduction">
+        <title>Introduction</title>
+        <p>Coming soon.</p>
+      </chapter>
+    </part>
+
     <part xml:id="part-foundation">
       <title>Foundation Level</title>
-<chapter xml:id="chapter-foundation-programme"><title>Foundation Level Programme</title>
-        <section xml:id="foundation-programme-introduction"><title>Mathematics for Foundation Level</title><p>Foundation Level has its own mathematical requirements. This part will be developed as a coherent programme, with links to shared concepts where useful.</p></section>
+<chapter xml:id="chapter-foundation-programme"><title>Introduction</title>
+        <section xml:id="foundation-programme-introduction"><title>Mathematics for Foundation Level</title><p>Coming soon.</p></section>
       </chapter>
     </part>
 
     <part xml:id="part-leaving-certificate-applied">
       <title>Leaving Certificate Applied</title>
-<chapter xml:id="chapter-lca-programme"><title>Mathematical Applications Programme</title>
-        <section xml:id="lca-programme-introduction"><title>Mathematics in Practical Contexts</title><p>This part will be developed around the Leaving Certificate Applied Mathematical Applications programme, with practical activities and authentic problems.</p></section>
-      </chapter>
-    </part>
-
-    <part xml:id="part-computer-science">
-      <title>Computer Science</title>
-      <chapter xml:id="chapter-computer-science-introduction">
-        <title>Introduction</title>
-        <p>This part provides a place for computer science material as the course is developed.</p>
-      </chapter>
-    </part>
-
-    <part xml:id="part-physics">
-      <title>Physics</title>
-      <chapter xml:id="chapter-physics-introduction">
-        <title>Introduction</title>
-        <p>This part provides a place for physics material as the course is developed.</p>
-      </chapter>
-    </part>
-
-    <part xml:id="part-applied-mathematics">
-      <title>Applied Mathematics</title>
-      <chapter xml:id="chapter-applied-mathematics-introduction">
-        <title>Introduction</title>
-        <p>This part provides a place for applied mathematics material as the course is developed.</p>
+<chapter xml:id="chapter-lca-programme"><title>Introduction</title>
+        <section xml:id="lca-programme-introduction"><title>Mathematics in Practical Contexts</title><p>Coming soon.</p></section>
       </chapter>
     </part>
 
