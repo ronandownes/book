@@ -19,6 +19,8 @@ PARTS = {
     "part-leaving-certificate": "lc",
     "part-foundation": "foundation",
     "part-leaving-certificate-applied": "lca",
+    "part-jc-coding": "coding",
+    "part-jc-digital-literacy": "digital",
     "part-computer-science": "cs",
     "part-physics": "physics",
     "part-applied-mathematics": "applied",
