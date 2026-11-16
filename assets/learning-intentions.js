@@ -4,7 +4,8 @@
   function cleanClone(node){
     const copy=node.cloneNode(true);
     copy.removeAttribute?.("id");
-    copy.querySelectorAll?.("[id],.autopermalink").forEach(el=>el.remove());
+    copy.querySelectorAll?.("[id]").forEach(el=>el.removeAttribute("id"));
+    copy.querySelectorAll?.(".autopermalink").forEach(el=>el.remove());
     return copy;
   }
   function init(){
