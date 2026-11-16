@@ -45,20 +45,13 @@ jobs:
           test "$(wc -c < assets/cicadas/periodical-cicadas-tree-2024.jpg)" -gt 50000
           test "$(wc -c < assets/cicadas/magicicada-tredecim-2024.jpg)" -gt 50000
           test "$(wc -c < assets/cicadas/magicicada-septendecim-2024.jpg)" -gt 50000
-      - name: Generate JC and LC Ordinary Level learning outcomes
+      - name: Generate complete Junior Cycle learning outcomes
         run: |
           set -euo pipefail
           python -m pip install requests beautifulsoup4 pymupdf
-          mkdir -p assets/syllabus
-          curl --fail --location --retry 3 --connect-timeout 15 --max-time 120 --silent --show-error \
-            "https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" \
-            --output assets/syllabus/LC_Mathematics_Syllabus_2015.pdf
           python scripts/build_intro_outcomes.py
           for strand in number geometry algebra statistics; do
             test -s "source/jc-${strand}-outcomes.ptx"
-          done
-          for strand in statistics geometry number algebra functions; do
-            test -s "source/lc-ol-${strand}-outcomes.ptx"
           done
       - name: Add section-start Learning Intentions
         run: |
