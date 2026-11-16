@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-algebra-equations-inequalities">
+  <title>Equations and Inequalities</title>
+  <section xml:id="algebra-equations-intro">
+    <title>Introduction</title>
+    <introduction><p>An equation claims that two expressions are equal. Solve by applying equivalent operations that preserve equality. An inequality compares the relative sizes of expressions and has its own rules.</p></introduction>
+    <p>When multiplying or dividing an inequality by a negative number, reverse its direction. Check whether each proposed answer satisfies the original statement.</p>
+  </section>
+  <section xml:id="algebra-equations-inequalities-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-algebra-equations-inequalities">
+      <title>Worked example</title>
+      <statement><p>Solve 3x+5=20.</p></statement>
+      <solution><p>Subtract 5, then divide by 3: x=5.</p></solution>
+    </example>
+    <exercise xml:id="exercise-algebra-equations-inequalities">
+      <statement><p>Solve −2x&lt;6.</p></statement>
+      <answer><p>Dividing by −2 reverses the inequality, so x&gt;−3.</p></answer>
+    </exercise>
+  </section>
+</chapter>

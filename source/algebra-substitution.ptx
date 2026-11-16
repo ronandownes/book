@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-algebra-substitution">
+  <title>Substitution</title>
+  <section xml:id="algebra-substitution-intro">
+    <title>Introduction</title>
+    <introduction><p>A variable can stand for a quantity that changes or for a specified value. Substitution replaces the variable with a value while preserving the operations in the expression.</p></introduction>
+    <p>When substituting negative numbers, use brackets to keep the intended grouping visible.</p>
+  </section>
+  <section xml:id="algebra-substitution-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-algebra-substitution">
+      <title>Worked example</title>
+      <statement><p>Evaluate 2x²−3 when x=−2.</p></statement>
+      <solution><p>2(−2)²−3=2×4−3=5.</p></solution>
+    </example>
+    <exercise xml:id="exercise-algebra-substitution">
+      <statement><p>Evaluate a²+2a when a=−3.</p></statement>
+      <answer><p>9−6=3.</p></answer>
+    </exercise>
+  </section>
+</chapter>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-algebra-division-fractions">
+  <title>Algebraic Division and Fractions</title>
+  <section xml:id="algebra-division-intro">
+    <title>Introduction</title>
+    <introduction><p>Algebraic fractions are quotients of expressions. Factoring can reveal common multiplicative factors that may be cancelled, provided the denominator is not zero.</p></introduction>
+    <p>Cancellation applies to factors in a product, not to separate terms joined by addition or subtraction. Always record restrictions on the denominator.</p>
+  </section>
+  <section xml:id="algebra-division-fractions-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-algebra-division-fractions">
+      <title>Worked example</title>
+      <statement><p>Simplify (6x²)/(3x) for x≠0.</p></statement>
+      <solution><p>The quotient is 2x for x≠0.</p></solution>
+    </example>
+    <exercise xml:id="exercise-algebra-division-fractions">
+      <statement><p>Simplify (x²−9)/(x−3) for x≠3.</p></statement>
+      <answer><p>Factorise the numerator: (x−3)(x+3)/(x−3)=x+3, for x≠3.</p></answer>
+    </exercise>
+  </section>
+</chapter>

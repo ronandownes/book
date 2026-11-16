@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-arithmetic">
+  <title>Arithmetic</title>
+  <section xml:id="arithmetic-intro">
+    <title>Introduction</title>
+    <introduction><p>Addition and subtraction combine or compare quantities; multiplication and division describe equal groups, scaling and sharing. An expression may contain more than one operation, so grouping and the agreed order of operations matter.</p></introduction>
+    <p>The commutative, associative and distributive properties explain why many different calculation methods produce the same answer.</p>
+  </section>
+  <section xml:id="arithmetic-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-arithmetic">
+      <title>Worked example</title>
+      <statement><p>Evaluate 7+3×4.</p></statement>
+      <solution><p>Multiplication is performed first: 7+12=19.</p></solution>
+    </example>
+    <exercise xml:id="exercise-arithmetic">
+      <statement><p>Evaluate (7+3)×4 and explain why it differs.</p></statement>
+      <answer><p>The brackets group the addition first, giving 10×4=40.</p></answer>
+    </exercise>
+  </section>
+</chapter>

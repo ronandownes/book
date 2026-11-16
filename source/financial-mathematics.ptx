@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-financial-mathematics">
+  <title>Financial Mathematics</title>
+  <section xml:id="financial-intro">
+    <title>Introduction</title>
+    <introduction><p>Financial decisions involve comparing costs, income, discounts, taxes, interest and value for money. Percentage calculations are central, but we must also understand what each percentage is applied to.</p></introduction>
+    <p>A calculated answer should be interpreted with the correct currency, period and assumptions. A model is useful only when its assumptions are clear.</p>
+  </section>
+  <section xml:id="financial-mathematics-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-financial-mathematics">
+      <title>Worked example</title>
+      <statement><p>A €120 item has a 25% discount. Find its sale price.</p></statement>
+      <solution><p>25% of €120 is €30, so the sale price is €90.</p></solution>
+    </example>
+    <exercise xml:id="exercise-financial-mathematics">
+      <statement><p>Calculate one year's simple interest on €500 at 4% per year.</p></statement>
+      <answer><p>€20 interest, assuming the principal remains €500 for that year.</p></answer>
+    </exercise>
+  </section>
+</chapter>

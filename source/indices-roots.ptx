@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-indices-roots">
+  <title>Indices and Roots</title>
+  <section xml:id="indices-intro">
+    <title>Introduction</title>
+    <introduction><p>An index indicates repeated multiplication of a base. Roots reverse powers in a suitable domain. Index laws summarise repeated multiplication and division.</p></introduction>
+    <p>Before using index rules, identify the base and distinguish a negative base inside brackets from a negative sign outside.</p>
+  </section>
+  <section xml:id="indices-roots-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-indices-roots">
+      <title>Worked example</title>
+      <statement><p>Simplify 2³×2⁴.</p></statement>
+      <solution><p>2³×2⁴=2⁷=128 because powers with the same base add their exponents when multiplied.</p></solution>
+    </example>
+    <exercise xml:id="exercise-indices-roots">
+      <statement><p>Evaluate (−3)² and −3².</p></statement>
+      <answer><p>(−3)²=9, whereas −3²=−9.</p></answer>
+    </exercise>
+  </section>
+</chapter>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-algebra-patterns">
+  <title>Patterns and Generalisation</title>
+  <section xml:id="algebra-patterns-intro">
+    <title>Introduction</title>
+    <introduction><p>Algebra expresses general relationships rather than only particular numerical cases. Visual, numeric and geometric patterns can be represented with tables, words, expressions and graphs.</p></introduction>
+    <p>A formula should explain the rule for any term, not merely continue the next few examples.</p>
+  </section>
+  <section xml:id="algebra-patterns-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-algebra-patterns">
+      <title>Worked example</title>
+      <statement><p>A pattern has 5, 8, 11, 14 objects in stages 1, 2, 3, 4. Write a formula for stage n.</p></statement>
+      <solution><p>The count increases by 3, so a possible formula is 3n+2.</p></solution>
+    </example>
+    <exercise xml:id="exercise-algebra-patterns">
+      <statement><p>Use the rule 3n+2 to find the count at stage 12.</p></statement>
+      <answer><p>38.</p></answer>
+    </exercise>
+  </section>
+</chapter>

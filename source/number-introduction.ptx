@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-number-introduction">
+  <title>Number: Introduction</title>
+  <section xml:id="number-intro">
+    <title>Introduction</title>
+    <introduction><p>Numbers help us describe quantities, positions, measurements and patterns. A number is not the same as the symbol used to write it. For example, twelve objects can be represented by 12, by a diagram of twelve dots, or by an expression such as 3 × 4.</p></introduction>
+    <p>Study a number through examples, diagrams, the number line and calculations. Ask whether a result is reasonable before accepting it.</p>
+  </section>
+  <section xml:id="number-introduction-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-number-introduction">
+      <title>Worked example</title>
+      <statement><p>Show two different ways to represent the number 12.</p></statement>
+      <solution><p>One way is 10+2; another is 3×4. Both represent the same quantity.</p></solution>
+    </example>
+    <exercise xml:id="exercise-number-introduction">
+      <statement><p>Write 18 as a sum and as a product of two whole numbers.</p></statement>
+      <answer><p>For example, 10+8 and 3×6.</p></answer>
+    </exercise>
+  </section>
+</chapter>

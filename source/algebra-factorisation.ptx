@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-algebra-factorisation">
+  <title>Factorisation</title>
+  <section xml:id="algebra-factorisation-intro">
+    <title>Introduction</title>
+    <introduction><p>To factorise an expression is to rewrite it as a product. Factorisation reverses expansion. A common factor can be taken outside brackets; other patterns require recognising how products expand.</p></introduction>
+    <p>Always check a factorisation by expanding the result. A correct answer must reproduce every term of the original expression.</p>
+  </section>
+  <section xml:id="algebra-factorisation-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-algebra-factorisation">
+      <title>Worked example</title>
+      <statement><p>Factorise 6x+9.</p></statement>
+      <solution><p>The highest common factor is 3, so 6x+9=3(2x+3).</p></solution>
+    </example>
+    <exercise xml:id="exercise-algebra-factorisation">
+      <statement><p>Factorise x²+7x+12.</p></statement>
+      <answer><p>(x+3)(x+4).</p></answer>
+    </exercise>
+  </section>
+</chapter>

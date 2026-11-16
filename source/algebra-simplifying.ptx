@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-algebra-simplifying">
+  <title>Simplifying Expressions</title>
+  <section xml:id="algebra-simplifying-intro">
+    <title>Introduction</title>
+    <introduction><p>Two terms are like terms when they have the same variable part, including the same powers. Their coefficients may be added or subtracted, but unlike variable parts cannot be combined by addition.</p></introduction>
+    <p>Use the properties of arithmetic to rearrange and collect terms without changing the value of the expression.</p>
+  </section>
+  <section xml:id="algebra-simplifying-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-algebra-simplifying">
+      <title>Worked example</title>
+      <statement><p>Simplify 4x+3−2x+5.</p></statement>
+      <solution><p>(4x−2x)+(3+5)=2x+8.</p></solution>
+    </example>
+    <exercise xml:id="exercise-algebra-simplifying">
+      <statement><p>Simplify 3a+2b−a+5b.</p></statement>
+      <answer><p>2a+7b.</p></answer>
+    </exercise>
+  </section>
+</chapter>

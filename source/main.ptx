@@ -20,11 +20,31 @@
       <title>JC Maths</title>
       <xi:include href="./jc-introduction.ptx" />
 
-<xi:include href="./sets-chapter.ptx" />
+      <!-- Number chapters, in teaching order -->
+      <xi:include href="./number-introduction.ptx" />
+      <xi:include href="./number-systems.ptx" />
+      <xi:include href="./arithmetic.ptx" />
+      <xi:include href="./factors-multiples-primes.ptx" />
+      <xi:include href="./fractions.ptx" />
+      <xi:include href="./decimals-percentages.ptx" />
+      <xi:include href="./ratio-proportion.ptx" />
+      <xi:include href="./indices-roots.ptx" />
+      <xi:include href="./accuracy-standard-form.ptx" />
+      <xi:include href="./financial-mathematics.ptx" />
+      <xi:include href="./number-patterns.ptx" />
+      <xi:include href="./sets-chapter.ptx" />
 
-<xi:include href="./algebra-language.ptx" />
+      <!-- Algebra and Functions chapters, in teaching order -->
+      <xi:include href="./algebra-patterns.ptx" />
+      <xi:include href="./algebra-language.ptx" />
+      <xi:include href="./algebra-substitution.ptx" />
+      <xi:include href="./algebra-simplifying.ptx" />
       <xi:include href="./expanding-brackets.ptx" />
-      <chapter xml:id="chapter-functions"><title>Functions and Graphs</title>
+      <xi:include href="./algebra-factorisation.ptx" />
+      <xi:include href="./algebra-division-fractions.ptx" />
+      <xi:include href="./algebra-equations-inequalities.ptx" />
+      <xi:include href="./algebra-changing-subject.ptx" />
+<chapter xml:id="chapter-functions"><title>Functions and Graphs</title>
               <section xml:id="functions-intro"><title>Introduction</title>
                 <p>Do countries with higher female literacy rates tend to have fewer births per woman? We can explore this question using real data.</p>
                 <p>Each point on the graph represents a country. Select a point to see its name, its measurements and the year. The blue line models the general trend.</p>
@@ -40,8 +60,10 @@
                 <p>A function assigns exactly one output to each input in its domain.</p>
               </section>
             </chapter>
+
+      <!-- Other developed Junior Cycle material -->
       <xi:include href="./trigonometry-chapter.ptx" />
-      <chapter xml:id="chapter-probability"><title>Events and Counting</title>
+<chapter xml:id="chapter-probability"><title>Events and Counting</title>
               <section xml:id="probability-fcp"><title>The Fundamental Counting Principle</title>
                 <p>When the first choice has <m>m</m> possibilities and the second has <m>n</m> possibilities, every combination of choices gives <m>mn</m> possibilities.</p>
                 <exercise xml:id="exercise-fcp">

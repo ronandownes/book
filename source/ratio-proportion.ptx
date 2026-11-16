@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-ratio-proportion">
+  <title>Ratio and Proportion</title>
+  <section xml:id="ratio-intro">
+    <title>Introduction</title>
+    <introduction><p>A ratio compares quantities multiplicatively. Equivalent ratios describe the same relationship. In a direct proportion, multiplying one quantity by a factor multiplies the other by the same factor.</p></introduction>
+    <p>Always check that quantities being compared use compatible units. Ratios and rates help us solve problems in recipes, maps, speed and currency.</p>
+  </section>
+  <section xml:id="ratio-proportion-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-ratio-proportion">
+      <title>Worked example</title>
+      <statement><p>Share €35 in the ratio 2:5.</p></statement>
+      <solution><p>There are seven parts; each is €5. The shares are €10 and €25.</p></solution>
+    </example>
+    <exercise xml:id="exercise-ratio-proportion">
+      <statement><p>A recipe for 4 people uses 300 g of flour. How much is needed for 6 people?</p></statement>
+      <answer><p>450 g, because 300×6/4=450.</p></answer>
+    </exercise>
+  </section>
+</chapter>

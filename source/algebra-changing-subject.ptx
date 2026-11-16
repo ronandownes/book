@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-algebra-changing-subject">
+  <title>Changing the Subject</title>
+  <section xml:id="algebra-changing-intro">
+    <title>Introduction</title>
+    <introduction><p>A formula expresses a relationship among quantities. Changing the subject means rearranging a formula to isolate a different variable while keeping the relationship equivalent.</p></introduction>
+    <p>Work with inverse operations, then substitute simple values to check that the rearranged formula is consistent with the original.</p>
+  </section>
+  <section xml:id="algebra-changing-subject-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-algebra-changing-subject">
+      <title>Worked example</title>
+      <statement><p>Make h the subject of A=bh.</p></statement>
+      <solution><p>For b≠0, divide both sides by b: h=A/b.</p></solution>
+    </example>
+    <exercise xml:id="exercise-algebra-changing-subject">
+      <statement><p>Make r the subject of C=2πr.</p></statement>
+      <answer><p>r=C/(2π).</p></answer>
+    </exercise>
+  </section>
+</chapter>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-factors-multiples-primes">
+  <title>Factors, Multiples and Prime Numbers</title>
+  <section xml:id="factors-intro">
+    <title>Introduction</title>
+    <introduction><p>A factor divides a whole number without a remainder; a multiple is obtained by multiplying it by an integer. A prime number greater than one has exactly two positive factors, 1 and itself.</p></introduction>
+    <p>Prime factorisation reveals the structure of whole numbers and helps us calculate the highest common factor and lowest common multiple.</p>
+  </section>
+  <section xml:id="factors-multiples-primes-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-factors-multiples-primes">
+      <title>Worked example</title>
+      <statement><p>Express 60 as a product of prime factors.</p></statement>
+      <solution><p>60=2×2×3×5, or 2²×3×5.</p></solution>
+    </example>
+    <exercise xml:id="exercise-factors-multiples-primes">
+      <statement><p>Find the HCF of 12 and 18.</p></statement>
+      <answer><p>The common factors are 1, 2, 3 and 6, so the HCF is 6.</p></answer>
+    </exercise>
+  </section>
+</chapter>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-decimals-percentages">
+  <title>Decimals and Percentages</title>
+  <section xml:id="decimals-intro">
+    <title>Introduction</title>
+    <introduction><p>Decimal notation is based on place value. A percentage means a quantity per hundred. Fractions, decimals and percentages can express the same ratio.</p></introduction>
+    <p>When finding a percentage of a quantity, make clear which quantity is the whole. This is particularly important in percentage increase and decrease.</p>
+  </section>
+  <section xml:id="decimals-percentages-practice">
+    <title>Worked Example and Practice</title>
+    <example xml:id="example-decimals-percentages">
+      <title>Worked example</title>
+      <statement><p>Find 15% of €80.</p></statement>
+      <solution><p>10% is €8 and 5% is €4, so 15% is €12.</p></solution>
+    </example>
+    <exercise xml:id="exercise-decimals-percentages">
+      <statement><p>A price of €50 increases by 10%. Find the new price.</p></statement>
+      <answer><p>The increase is €5; the new price is €55.</p></answer>
+    </exercise>
+  </section>
+</chapter>
