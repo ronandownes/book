@@ -33,13 +33,15 @@
 .lo-drill-footer{border-top:1px solid #d6e2ea;justify-content:space-between;}
 .lo-drill-context {flex:1 1 180px;font:600 .85rem/1.35 system-ui,sans-serif;color:#34546c;}
 .lo-drill-header button,.lo-drill-footer button,
-.lo-drill-mode button,.lo-drill-part-controls button {
+.lo-drill-mode button,.lo-drill-part-controls button,
+.lo-drill-piece-controls button {
  border:1px solid #9db8c9;color:#17445f;border-radius:.45rem;
  background:#fff;padding:.47rem .7rem;
  font:600 .86rem/1.35 system-ui,sans-serif;cursor:pointer;min-height:2.25rem;
 }
 .lo-drill-header button:hover,.lo-drill-footer button:hover,
 .lo-drill-mode button:hover,.lo-drill-part-controls button:hover,
+.lo-drill-piece-controls button:hover,
 .lo-drill-dialog button:focus-visible {
  background:#e1f0f9;outline:2px solid #2b6f9b;outline-offset:1px;
 }
@@ -60,24 +62,25 @@
 .lo-drill-mode [aria-pressed="true"] {
  background:#1d526f;color:#fff;border-color:#1d526f;
 }
-.lo-drill-mode[hidden],.lo-drill-part-controls[hidden] {display:none!important;}
+.lo-drill-mode[hidden],.lo-drill-part-controls[hidden],
+.lo-drill-piece-controls[hidden],.lo-drill-mode button[hidden] {display:none!important;}
 .lo-drill-intro .para {
  font-weight:600;border-left:3px solid #8aacbf;
  padding-left:.8rem;background:#f5f9fc;
 }
 .lo-drill-content .para,.lo-drill-intro .para {
- font:400 clamp(1.08rem,2vw,1.4rem)/1.55 Georgia,serif;
+ font:400 clamp(1.07rem,1.45vw,1.29rem)/1.63 Georgia,serif;
  color:#172b3e;margin:.4rem 0 1rem;
  overflow-wrap:break-word;white-space:normal;
 }
 .lo-drill-content .para mjx-container,
 .lo-drill-intro .para mjx-container {max-width:100%;overflow-x:auto;overflow-y:hidden;}
 .lo-drill-content .para .alert,.lo-drill-intro .para .alert {font-weight:650;}
-.lo-drill-part-controls {
+.lo-drill-part-controls,.lo-drill-piece-controls {
  border-top:1px solid #dde8f0;padding:.75rem 0 .1rem;
  display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;justify-content:space-between;
 }
-.lo-drill-count,.lo-drill-part-count {
+.lo-drill-count,.lo-drill-part-count,.lo-drill-piece-count {
  font: .84rem system-ui,sans-serif;color:#526b7b;
  font-variant-numeric:tabular-nums;
 }
@@ -85,8 +88,9 @@
  .lo-drill-dialog{top:2dvh;max-height:95dvh;width:calc(100vw - 12px);max-width:calc(100vw - 12px);}
  .lo-drill-header,.lo-drill-footer{gap:.3rem;padding:.5rem .65rem;}
  .lo-drill-scroll{padding:.85rem .65rem;}
- .lo-drill-footer button,.lo-drill-part-controls button {font-size:.8rem;padding:.45rem .48rem;}
- .lo-drill-content .para,.lo-drill-intro .para{font-size:1.08rem;}
+ .lo-drill-footer button,.lo-drill-part-controls button,
+ .lo-drill-piece-controls button {font-size:.8rem;padding:.45rem .48rem;}
+ .lo-drill-content .para,.lo-drill-intro .para{font-size:1.07rem;}
 }
 @media print{
  .lo-drill-open,.lo-drill-dialog {display:none!important;}
@@ -94,4 +98,25 @@
 }
 @media(prefers-reduced-motion:reduce) {
  .lo-drill-dialog * {scroll-behavior:auto!important;transition:none!important;}
+}
+/* A single mathematical idea or equation is the readable unit in dense outcomes. */
+.lo-drill-content .lo-drill-piece {
+  max-width:100%;
+  padding:clamp(.35rem,.9vw,.8rem) 0;
+  margin:.2rem 0 1rem;
+  font-size:clamp(1.08rem,1.65vw,1.4rem);
+  line-height:1.7;
+  overflow-wrap:break-word;
+}
+.lo-drill-content .lo-drill-piece mjx-container {
+  max-width:100%;overflow-x:auto;overflow-y:hidden;
+}
+.lo-drill-piece-controls {
+ display:flex;align-items:center;justify-content:space-between;
+ gap:.5rem;flex-wrap:wrap;
+}
+.lo-drill-mode {align-items:center;}
+.lo-drill-piece-count {text-align:center;}
+@media(max-width:560px) {
+ .lo-drill-content .lo-drill-piece {font-size:1.1rem;}
 }
