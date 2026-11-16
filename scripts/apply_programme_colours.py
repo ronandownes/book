@@ -14,9 +14,11 @@ SOURCE = Path("source/main.ptx")
 ASSETS = Path("assets")
 
 PARTS = {
-    "part-junior-cycle": "jc",
-    "part-leaving-certificate": "lc",
-    "part-transition-year": "ty",
+    "part-jc-unifying": "unifying",
+    "part-jc-number": "number",
+    "part-jc-geometry": "geometry",
+    "part-jc-algebra": "algebra",
+    "part-jc-statistics": "statistics",
 }
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 
@@ -43,7 +45,7 @@ def main() -> None:
         raise RuntimeError("Expected chapter HTML files not built: " + ", ".join(missing))
     built_parts = {part.get(XML_ID) for part in doc.getroot().iter("part")}
     if built_parts != set(PARTS):
-        raise RuntimeError(f"Expected exactly three programme Parts, found: {sorted(built_parts)}")
+        raise RuntimeError(f"Expected five Junior Cycle strand Parts, found: {sorted(built_parts)}")
     if len(chapters) < 10:
         raise RuntimeError(f"Unexpectedly few published teaching chapters: {len(chapters)}")
 
