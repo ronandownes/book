@@ -19,6 +19,9 @@ PARTS = {
     "part-leaving-certificate": "lc",
     "part-foundation": "foundation",
     "part-leaving-certificate-applied": "lca",
+    "part-computer-science": "cs",
+    "part-physics": "physics",
+    "part-applied-mathematics": "applied",
     "part-official-appendices": "appendices",
 }
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
