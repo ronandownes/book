@@ -12,6 +12,10 @@
     let group = "";
     for (const row of Array.from(table.querySelectorAll("tr"))) {
       const cells = Array.from(row.children).filter(el => /^(TD|TH)$/.test(el.tagName));
+      if (cells.length === 1 && cells[0].getAttribute("colspan") === "2") {
+        group = cells[0].textContent.trim();
+        continue;
+      }
       if (cells.length !== 2) continue;
       const code = cells[0].textContent.trim().replace(/\s+/g, "");
       if (/^U\.(?:[1-9]|1[0-3])$/.test(code)) {
