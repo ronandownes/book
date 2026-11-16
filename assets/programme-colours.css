@@ -25,6 +25,21 @@
   --maths-chapter-bg:#dff2f0; --maths-chapter-ink:#13585d;
   --maths-chapter-edge:#7bbfbd;
 }
+.maths-programme-cs {
+  --maths-part-bg:#3c547f; --maths-part-accent:#c0d8fb;
+  --maths-chapter-bg:#e7edf8; --maths-chapter-ink:#294467;
+  --maths-chapter-edge:#96acd3;
+}
+.maths-programme-physics {
+  --maths-part-bg:#803f5b; --maths-part-accent:#f5c9dc;
+  --maths-chapter-bg:#f7e8ef; --maths-chapter-ink:#68384f;
+  --maths-chapter-edge:#d5a1b6;
+}
+.maths-programme-applied {
+  --maths-part-bg:#5b6136; --maths-part-accent:#e2e7a2;
+  --maths-chapter-bg:#f1f2e3; --maths-chapter-ink:#454b29;
+  --maths-chapter-edge:#b7bf8b;
+}
 .maths-programme-appendices {
   --maths-part-bg:#485668; --maths-part-accent:#d4dfeb;
   --maths-chapter-bg:#e8edf2; --maths-chapter-ink:#34475c;
