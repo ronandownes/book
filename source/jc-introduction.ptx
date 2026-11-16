@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="jc-introduction">
-  <title>Introduction</title>
+  <title>Learning Outcomes</title>
 
   <section xml:id="jc-learning-outcomes">
     <title>Learning Outcomes</title>
@@ -38,9 +38,4 @@
     </table>
     <p><em>Source:</em> National Council for Curriculum and Assessment, <url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf#page=14" visual="Junior Cycle Mathematics Specification (2018), page 14"/>. The 13 learning outcomes and the six elements are presented in their published order. Initial capitals and final full stops have been added for consistent reading; the specification is the authoritative source.</p>
   </section>
-
-  <xi:include href="./jc-number-outcomes.ptx"/>
-  <xi:include href="./jc-geometry-outcomes.ptx"/>
-  <xi:include href="./jc-algebra-outcomes.ptx"/>
-  <xi:include href="./jc-statistics-outcomes.ptx"/>
 </chapter>
