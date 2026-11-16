@@ -268,19 +268,32 @@ jobs:
             part-leaving-certificate-applied.html; do
             test -s "output/web/$part" || { echo "Missing subject Part $part"; exit 1; }
           done
+          # Chapter landing pages list their child sections and may not render
+          # the section's body text directly. Check the five chapter-only
+          # placeholders in HTML and verify both nested introductions in source.
           for introduction in \
             chapter-computer-science-introduction.html \
             chapter-jc-coding-introduction.html \
             chapter-jc-digital-literacy-introduction.html \
             chapter-physics-introduction.html \
-            chapter-applied-mathematics-introduction.html \
-            chapter-foundation-programme.html \
-            chapter-lca-programme.html; do
+            chapter-applied-mathematics-introduction.html; do
             test -s "output/web/$introduction" || { echo "Missing Introduction $introduction"; exit 1; }
-            # A valid Introduction is not required to contain placeholder text.
-            # Check the built chapter, not whether the author still says Coming soon.
-            grep -qi 'Introduction' "output/web/$introduction" || { echo "Missing Introduction heading in $introduction"; exit 1; }
+            grep -q 'Coming soon' "output/web/$introduction" || { echo "Missing Coming soon on $introduction"; exit 1; }
           done
+          python - <<'PY'
+          from lxml import etree
+          from pathlib import Path
+          root = etree.parse("source/main.ptx").getroot()
+          namespaces={"xml":"http://www.w3.org/XML/1998/namespace"}
+          for chapter_id in ("chapter-foundation-programme","chapter-lca-programme"):
+              chapters=root.xpath(".//chapter[@xml:id=$id]", namespaces=namespaces, id=chapter_id)
+              if len(chapters)!=1 or "Coming soon." not in " ".join(chapters[0].itertext()):
+                  raise SystemExit("Missing placeholder in source chapter: "+chapter_id)
+              page=Path("output/web")/(chapter_id+".html")
+              if not page.is_file():
+                  raise SystemExit("Missing generated chapter page: "+str(page))
+          print("All seven upcoming subject Introductions are present in the source or published pages.")
+          PY
           grep -q 'part-jc-coding.html' output/web/programme-colours.js
           grep -q 'part-jc-digital-literacy.html' output/web/programme-colours.js
           test ! -e output/web/section-spec-junior-cycle.html || { echo "Legacy PDF specification section still published"; exit 1; }
