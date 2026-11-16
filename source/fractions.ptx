@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-fractions">
-  <title>Fractions</title>
+  <title>Fractions and Rational Numbers</title>
+  <objectives xml:id="li-number-fractions"><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol>
+      <li><p>Explain a fraction as equal parts, a quotient and a rational number.</p></li>
+      <li><p>Form and compare equivalent fractions.</p></li>
+      <li><p>Perform arithmetic with fractions without dividing by zero.</p></li>
+    </ol></objectives>
   <section xml:id="fractions-intro">
     <title>Introduction</title>
     <introduction><p>A fraction describes part of a whole, a quotient, or a multiplicative comparison. Equivalent fractions have the same value even when their numerators and denominators differ.</p></introduction>
+    <p>Every rational number is <m>\frac{a}{b}</m> for integers <m>a,b</m>, where <m>b\ne0</m>. Dividing a whole into equal parts explains why <m>\frac{2}{3}=\frac{4}{6}</m>.</p>
     <p>To add fractions, use a common denominator. To multiply fractions, multiply numerators and denominators, then simplify where possible.</p>
   </section>
   <section xml:id="fractions-practice">
