@@ -231,8 +231,9 @@ jobs:
               html = page.read_text(encoding="utf-8")
               if not all(label in html for label in labels):
                   raise SystemExit("Incomplete numbered outcomes: " + name)
-              if name + "-table" not in html:
-                  raise SystemExit("No native outcome table: " + name)
+              table_id = (name.removesuffix("-outcomes") if name.startswith("lc-ol-") else name) + "-table"
+              if table_id not in html:
+                  raise SystemExit("No native outcome table: " + name + " (" + table_id + ")")
               if "</head>" not in html or "</body>" not in html:
                   raise SystemExit("Malformed outcome HTML: " + name)
               if 'data-lo-drill="true"' not in html:
