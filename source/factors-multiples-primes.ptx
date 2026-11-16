@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-factors-multiples-primes">
-  <title>Factors, Multiples and Prime Factorisation</title>
-  <objectives xml:id="li-factors-multiples">
-    <title>Learning Intentions</title>
-    <introduction><p>After completing this chapter, you should be able to do the following.</p></introduction>
-    <ol>
-      <li><p>Identify factors, multiples, prime numbers and composite numbers.</p></li>
-      <li><p>Express a positive integer greater than one as a product of prime factors, including in index form.</p></li>
-      <li><p>Find the highest common factor (HCF) of two or more positive integers.</p></li>
-      <li><p>Find the lowest common multiple (LCM) and explain how prime factorisation supports both calculations.</p></li>
-    </ol>
-  </objectives>
+  <title>Factors and Multiples</title>
+  <objectives xml:id="li-factors-multiples"><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol>
+      <li><p>Recognise factors, multiples, primes and composite numbers.</p></li>
+      <li><p>Find the prime factorisation of a positive integer.</p></li>
+      <li><p>Calculate the highest common factor and lowest common multiple.</p></li>
+    </ol></objectives>
 
   <section xml:id="factors-intro">
     <title>Introduction</title>
