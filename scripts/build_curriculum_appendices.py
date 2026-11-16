@@ -167,7 +167,16 @@ def leave_content():
                 continue
             w = page.rect.width
             raw_left = page_lines(page, .19 * w, .335 * w)
-            ol = page_lines(page, .335 * w, .645 * w)
+            # Determine the first HL bullet rather than assuming every
+            # printed table has identical column widths. Page 43 is narrower.
+            high_bullets = []
+            for block in page.get_text("dict")["blocks"]:
+                for ln in block.get("lines", []):
+                    line_text = "".join(span.get("text", "") for span in ln["spans"]).strip()
+                    if line_text.startswith("–") and ln["bbox"][0] >= .61 * w:
+                        high_bullets.append(ln["bbox"][0])
+            ol_right_edge = min(.645 * w, min(high_bullets) - 2 if high_bullets else .645 * w)
+            ol = page_lines(page, .335 * w, ol_right_edge)
             topics = []
             for y, text in raw_left:
                 if y > page.rect.height * .90:
