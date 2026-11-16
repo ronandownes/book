@@ -12,7 +12,7 @@
             <p><url href="https://ronandownes.github.io/maths/" visual="Irish School Maths Apps"/> accompanies this book with interactive activities, explorations and practice.</p>
             <p>Additional <url href="https://ronandownes.github.io/calculator/resources/" visual="free textbooks and maths resources"/> are collected on a separate page, including links to Desmos, GeoGebra and open textbooks. These supplement, rather than replace, your own course.</p>
             <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
-            <p>Junior Cycle, Transition Year, Leaving Certificate, Foundation Level and Leaving Certificate Applied: all levels, all students.</p>
+            <p>This book presently contains JC Maths, LC Ordinary Level Maths and TY Maths.</p>
           </preface>
         </frontmatter>
 
@@ -24,11 +24,6 @@
 
 <xi:include href="./algebra-language.ptx" />
       <xi:include href="./expanding-brackets.ptx" />
-      <chapter xml:id="chapter-factorisation"><title>Factorisation</title>
-              <section xml:id="factorisation-intro"><title>Reversing expansion</title>
-                <p>Factorisation writes an expression as a product. For example, <m>6x+9=3(2x+3)</m>.</p>
-              </section>
-            </chapter>
       <chapter xml:id="chapter-functions"><title>Functions and Graphs</title>
               <section xml:id="functions-intro"><title>Introduction</title>
                 <p>Do countries with higher female literacy rates tend to have fewer births per woman? We can explore this question using real data.</p>
@@ -45,19 +40,7 @@
                 <p>A function assigns exactly one output to each input in its domain.</p>
               </section>
             </chapter>
-
-<chapter xml:id="chapter-geometry"><title>Shapes and Reasoning</title>
-              <section xml:id="geometry-intro"><title>Seeing mathematical structure</title>
-                <p>We describe geometric objects using definitions, diagrams and carefully justified reasoning.</p>
-              </section>
-            </chapter>
       <xi:include href="./trigonometry-chapter.ptx" />
-
-<chapter xml:id="chapter-statistics"><title>Understanding Data</title>
-              <section xml:id="statistics-intro"><title>Data and variation</title>
-                <p>Statistics helps us collect, summarise and draw justified conclusions from data.</p>
-              </section>
-            </chapter>
       <chapter xml:id="chapter-probability"><title>Events and Counting</title>
               <section xml:id="probability-fcp"><title>The Fundamental Counting Principle</title>
                 <p>When the first choice has <m>m</m> possibilities and the second has <m>n</m> possibilities, every combination of choices gives <m>mn</m> possibilities.</p>
@@ -67,13 +50,7 @@
                 </exercise>
               </section>
             </chapter>
-    </part>
-
-    <part xml:id="part-transition-year">
-      <title>TY Maths</title>
-<chapter xml:id="chapter-ty-programme"><title>The TY Mathematics Programme</title>
-        <section xml:id="ty-programme-introduction"><title>Investigations and Applications</title><p>This part will develop the Transition Year mathematics programme through investigations, projects, modelling and practical applications.</p></section>
-      </chapter>
+      <xi:include href="./glossary.ptx" />
     </part>
 
     <part xml:id="part-leaving-certificate">
@@ -98,80 +75,34 @@
             </chapter>
 
 <xi:include href="./sequences-chapter.ptx" />
-
-<chapter xml:id="chapter-calculus"><title>Calculus</title>
-              <section xml:id="calculus-intro"><title>Change and accumulation</title>
-                <p>Calculus develops ways to study rates of change and accumulated quantities.</p>
-              </section>
-            </chapter>
-
-<chapter xml:id="chapter-lc-geometry-trigonometry"><title>Further Geometry and Trigonometry</title>
-        <section xml:id="lc-geometry-trigonometry-introduction"><title>Building on Earlier Mathematics</title><p>This part develops Leaving Certificate geometry and trigonometry. Existing work on the cosine rule is currently available in <xref ref="trig-cosine-rule"/>; the material will be organised here as the course develops.</p></section>
-      </chapter>
-
-<chapter xml:id="chapter-counting"><title>Systematic Counting</title>
-                    <section xml:id="combinatorics-intro"><title>Arrangements and selections</title>
-                      <p>Combinatorics studies how to count possible arrangements and selections.</p>
-                    </section>
-                  </chapter>
     </part>
 
-    <part xml:id="part-computer-science">
-      <title>LC Computer Science</title>
-      <chapter xml:id="chapter-computer-science-introduction">
+    <part xml:id="part-transition-year">
+      <title>TY Maths</title>
+      <chapter xml:id="chapter-ty-programme">
         <title>Introduction</title>
-        <p>Coming soon.</p>
+        <section xml:id="ty-programme-introduction">
+          <title>Investigations and Mathematical Modelling</title>
+          <p><em>Learning intentions:</em> Interpret data, construct a model, justify assumptions and communicate the limitations of a conclusion.</p>
+          <p>In Transition Year we can investigate interesting questions without treating mathematics as a fixed sequence of yearly chapters. We use diagrams, data, calculation, reasoning and technology to explore and test ideas.</p>
+          <activity xml:id="ty-first-modelling-investigation">
+            <title>A first modelling investigation</title>
+            <p>The following electricity-use figures are illustrative, not readings from a particular home. Four consecutive months record <m>240</m>, <m>220</m>, <m>205</m> and <m>195</m> kWh.</p>
+            <task>
+              <p>Represent the data in a table and plot it on a graph. Describe the pattern and explain whether it is reasonable to fit a straight line.</p>
+              <answer><p>The values decline, but the decreases of <m>20</m>, <m>15</m> and <m>10</m> kWh are not constant. A straight line might serve as an approximation over these four months, not as an exact rule.</p></answer>
+            </task>
+            <task>
+              <p>Make a tentative estimate for the next month. Explain your choice and why it should not be treated as a reliable prediction.</p>
+              <answer><p>One possible estimate is around <m>185</m> kWh if recent changes continue. However, seasonal patterns, occupancy, weather and appliances could all change the trend. Other reasonable estimates with a stated method are acceptable.</p></answer>
+            </task>
+            <task>
+              <p>Identify one additional measurement or source of evidence that would make your conclusion stronger.</p>
+              <answer><p>For example, collect comparable monthly readings from the same household over a full year to examine seasonal variation, or compare consumption with local temperatures.</p></answer>
+            </task>
+          </activity>
+        </section>
       </chapter>
     </part>
-
-    <part xml:id="part-jc-coding">
-      <title>JC Coding</title>
-      <chapter xml:id="chapter-jc-coding-introduction">
-        <title>Introduction</title>
-        <p>Coming soon.</p>
-      </chapter>
-    </part>
-
-    <part xml:id="part-jc-digital-literacy">
-      <title>JC Digital Literacy</title>
-      <chapter xml:id="chapter-jc-digital-literacy-introduction">
-        <title>Introduction</title>
-        <p>Coming soon.</p>
-      </chapter>
-    </part>
-
-    <part xml:id="part-physics">
-      <title>LC Physics</title>
-      <chapter xml:id="chapter-physics-introduction">
-        <title>Introduction</title>
-        <p>Coming soon.</p>
-      </chapter>
-    </part>
-
-    <part xml:id="part-applied-mathematics">
-      <title>LC Applied Maths</title>
-      <chapter xml:id="chapter-applied-mathematics-introduction">
-        <title>Introduction</title>
-        <p>Coming soon.</p>
-      </chapter>
-    </part>
-
-    <part xml:id="part-foundation">
-      <title>Foundation Level</title>
-<chapter xml:id="chapter-foundation-programme"><title>Introduction</title>
-        <introduction><p>Coming soon.</p></introduction>
-        <section xml:id="foundation-programme-introduction"><title>Mathematics for Foundation Level</title><p>Coming soon.</p></section>
-      </chapter>
-    </part>
-
-    <part xml:id="part-leaving-certificate-applied">
-      <title>Leaving Certificate Applied</title>
-<chapter xml:id="chapter-lca-programme"><title>Introduction</title>
-        <introduction><p>Coming soon.</p></introduction>
-        <section xml:id="lca-programme-introduction"><title>Mathematics in Practical Contexts</title><p>Coming soon.</p></section>
-      </chapter>
-    </part>
-
-    <xi:include href="./appendices.ptx" />
   </book>
 </pretext>
