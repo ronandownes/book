@@ -1,0 +1,60 @@
+/* Native, readable, responsive official learning-outcome tables.
+   The complete statements are always present in HTML; no iframe or truncation. */
+section[id^="jc-outcomes-"], section[id^="lc-ol-"] {
+  max-width:100%;
+}
+section[id^="jc-outcomes-"] .tabular,
+section[id^="lc-ol-"] .tabular {
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  table-layout:fixed;
+}
+section[id^="jc-outcomes-"] .tabular :is(td,th),
+section[id^="lc-ol-"] .tabular :is(td,th) {
+  vertical-align:top;
+  overflow-wrap:break-word;
+  word-break:normal;
+  white-space:normal;
+  hyphens:auto;
+  line-height:1.5;
+  padding:.65rem .8rem;
+  border-bottom:1px solid #e0e7ee;
+}
+section[id^="jc-outcomes-"] .tabular th,
+section[id^="lc-ol-"] .tabular th {
+  font-weight:600;
+  color:#1d4863;
+  background:#edf4f8;
+}
+section[id^="jc-outcomes-"] .tabular td:first-child,
+section[id^="lc-ol-"] .tabular td:first-child {
+  font-weight:600;
+  color:#244961;
+  background:#f5f8fa;
+}
+section[id^="jc-outcomes-"] .tabular td p,
+section[id^="lc-ol-"] .tabular td p {
+  margin:.1rem 0 .5rem;
+  max-width:100%;
+  line-height:1.48;
+  overflow-wrap:break-word;
+}
+section[id^="jc-outcomes-"] .tabular td p:last-child,
+section[id^="lc-ol-"] .tabular td p:last-child { margin-bottom:0; }
+section[id^="jc-outcomes-"] .tabular td p + p,
+section[id^="lc-ol-"] .tabular td p + p { padding-top:.22rem; }
+@media(max-width:650px) {
+  section[id^="jc-outcomes-"] .tabular :is(td,th),
+  section[id^="lc-ol-"] .tabular :is(td,th) {
+    padding:.42rem .35rem;
+    font-size:.93rem;
+    line-height:1.45;
+  }
+  section[id^="jc-outcomes-"] .tabular,
+  section[id^="lc-ol-"] .tabular { max-width:100%; }
+}
+@media print {
+  section[id^="jc-outcomes-"] .tabular tr,
+  section[id^="lc-ol-"] .tabular tr { break-inside:avoid; }
+}
