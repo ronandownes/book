@@ -6,6 +6,7 @@
       <li><p>Continue arithmetic, geometric and other sequences.</p></li>
       <li><p>Create tables and explain limits of predictions based on finite terms.</p></li>
     </ol></objectives>
+  <introduction><p>Sequences give ordered numerical patterns. We express them in words, tables and algebraic rules.</p></introduction>
   <section xml:id="number-patterns-intro">
     <title>Introduction</title>
     <introduction><p>A sequence is an ordered list of numbers governed by a rule or relationship. Some patterns increase by a constant difference; others multiply by a constant factor or follow a different relationship.</p></introduction>
