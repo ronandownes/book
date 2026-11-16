@@ -30,6 +30,17 @@
   --maths-chapter-bg:#e7edf8; --maths-chapter-ink:#294467;
   --maths-chapter-edge:#96acd3;
 }
+.maths-programme-coding {
+  --maths-part-bg:#276a56; --maths-part-accent:#b0e2c6;
+  --maths-chapter-bg:#e0f0e9; --maths-chapter-ink:#1f5343;
+  --maths-chapter-edge:#8fc5ad;
+}
+.maths-programme-digital {
+  --maths-part-bg:#45678b; --maths-part-accent:#c7daf4;
+  --maths-chapter-bg:#e7eff8; --maths-chapter-ink:#345372;
+  --maths-chapter-edge:#9dbad6;
+}
+
 .maths-programme-physics {
   --maths-part-bg:#803f5b; --maths-part-accent:#f5c9dc;
   --maths-chapter-bg:#f7e8ef; --maths-chapter-ink:#68384f;
