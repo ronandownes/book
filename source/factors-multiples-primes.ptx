@@ -6,6 +6,7 @@
       <li><p>Find the prime factorisation of a positive integer.</p></li>
       <li><p>Calculate the highest common factor and lowest common multiple.</p></li>
     </ol></objectives>
+  <introduction><p>Factors and multiples reveal the multiplicative structure of integers. Prime factorisation allows systematic calculations.</p></introduction>
 
   <section xml:id="factors-intro">
     <title>Introduction</title>
