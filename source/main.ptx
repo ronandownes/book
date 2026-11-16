@@ -159,7 +159,7 @@
     <part xml:id="part-foundation">
       <title>Foundation Level</title>
 <chapter xml:id="chapter-foundation-programme"><title>Introduction</title>
-        <p>Coming soon.</p>
+        <introduction><p>Coming soon.</p></introduction>
         <section xml:id="foundation-programme-introduction"><title>Mathematics for Foundation Level</title><p>Coming soon.</p></section>
       </chapter>
     </part>
@@ -167,7 +167,7 @@
     <part xml:id="part-leaving-certificate-applied">
       <title>Leaving Certificate Applied</title>
 <chapter xml:id="chapter-lca-programme"><title>Introduction</title>
-        <p>Coming soon.</p>
+        <introduction><p>Coming soon.</p></introduction>
         <section xml:id="lca-programme-introduction"><title>Mathematics in Practical Contexts</title><p>Coming soon.</p></section>
       </chapter>
     </part>
