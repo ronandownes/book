@@ -152,6 +152,64 @@ def junior():
         write(section, f"jc-{key}-outcomes.ptx")
         print(f"Junior Cycle {key}: {len(rows)} complete numbered outcomes",flush=True)
 
+def para(xml_body: str) -> etree._Element:
+    return etree.fromstring(("<p>" + xml_body + "</p>").encode("utf-8"))
+
+def correct_lc_formulas(code: str, paragraphs: list[etree._Element]) -> list[etree._Element]:
+    """Repair formulas that a two-dimensional PDF cannot convert to plain text.
+
+    These particular outcomes have been checked against the source syllabus's
+    printed mathematics, not guessed from the clipped extraction.
+    """
+    if code == "1.7":
+        fixed = []
+        for p in paragraphs:
+            raw = compact("".join(p.itertext()))
+            if "calculate the margin of error" in raw:
+                fixed.append(para(r"Calculate the margin of error (<m>1/\sqrt{n}</m>) for a population proportion*."))
+            else:
+                fixed.append(p)
+        return fixed
+    if code == "3.2":
+        return [
+            para(r"Solve problems using the rules for indices (where <m>a,b\in\mathbb{R}</m>; <m>p,q\in\mathbb{Q}</m>; <m>a^p,a^q\in\mathbb{Q}</m>; <m>a,b\ne 0</m>):"),
+            para(r"<m>a^pa^q=a^{p+q}</m>."),
+            para(r"<m>\frac{a^p}{a^q}=a^{p-q}</m>."),
+            para(r"<m>a^0=1</m>."),
+            para(r"<m>(a^p)^q=a^{pq}</m>."),
+            para(r"<m>a^{1/q}=\sqrt[q]{a}</m>, <m>q\in\mathbb{Z}</m>, <m>q\ne0</m>, <m>a\gt0</m>."),
+            para(r"<m>a^{p/q}=\sqrt[q]{a^p}=(\sqrt[q]{a})^p</m>, <m>p,q\in\mathbb{Z}</m>, <m>q\ne0</m>, <m>a\gt0</m>."),
+            para(r"<m>a^{-p}=\frac{1}{a^p}</m>."),
+            para(r"<m>(ab)^p=a^pb^p</m>."),
+            para(r"<m>\left(\frac{a}{b}\right)^p=\frac{a^p}{b^p}</m>."),
+        ]
+    if code == "4.1":
+        return [
+            para("Evaluate expressions given the value of the variables."),
+            para("Expand and re-group expressions."),
+            para("Factorise expressions of order 2."),
+            para("Add and subtract expressions of the form:"),
+            para(r"<m>(ax+by+c)\pm\cdots\pm(dx+ey+f)</m>."),
+            para(r"<m>(ax^2+bx+c)\pm\cdots\pm(dx^2+ex+f)</m>, where <m>a,b,c,d,e,f\in\mathbb{Z}</m>."),
+            para(r"<m>\frac{a}{bx+c}\pm\frac{p}{qx+r}</m>, where <m>a,b,c,p,q,r\in\mathbb{Z}</m>."),
+            para("Use the associative and distributive properties to simplify expressions of the form:"),
+            para(r"<m>a(bx\pm cy\pm d)\pm\cdots\pm e(fx\pm gy\pm h)</m>, where <m>a,b,c,d,e,f,g,h\in\mathbb{Z}</m>."),
+            para(r"<m>(x\pm y)(w\pm z)</m>."),
+            para("Rearrange formulae."),
+        ]
+    if code == "4.2":
+        return [
+            para("Select and use suitable strategies (graphic, numeric, algebraic, mental) for finding solutions to equations of the form:"),
+            para(r"<m>f(x)=g(x)</m>, with <m>f(x)=ax+b</m>, <m>g(x)=cx+d</m>, where <m>a,b,c,d\in\mathbb{Q}</m>."),
+            para(r"<m>f(x)=g(x)</m>, with <m>f(x)=\frac{a}{bx+c}\pm\frac{p}{qx+r}</m>; <m>g(x)=\frac{e}{f}</m>, where <m>a,b,c,e,f,p,q,r\in\mathbb{Z}</m>."),
+            para(r"<m>f(x)=k</m>, with <m>f(x)=ax^2+bx+c</m> (and not necessarily factorisable), where <m>a,b,c\in\mathbb{Q}</m>; and interpret the results."),
+            para("Select and use suitable strategies (graphic, numeric, algebraic, mental) for finding solutions to:"),
+            para("Simultaneous linear equations with two unknowns, and interpret the results."),
+            para("One linear equation and one equation of order 2 with two unknowns (restricted to the case where either the coefficient of x or the coefficient of y is ±1 in the linear equation), and interpret the results."),
+            para("Form quadratic equations given whole number roots."),
+        ]
+    return paragraphs
+
 def leaving():
     raw="".join(leave_content())
     root=etree.fromstring(("<root>"+raw+"</root>").encode("utf-8"))
@@ -168,6 +226,7 @@ def leaving():
             code=prefix+"."+m.group(1)
             paragraphs=part.findall("p")
             if not paragraphs: raise RuntimeError("Missing Ordinary Level text in "+heading)
+            paragraphs=correct_lc_formulas(code,paragraphs)
             rows.append((code,heading,paragraphs))
         unique_codes=[]
         grouped=[]
