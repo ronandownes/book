@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-ratio-proportion">
   <title>Ratio and Proportion</title>
+  <objectives xml:id="li-number-proportion"><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol>
+      <li><p>Use ratios to make relative comparisons.</p></li>
+      <li><p>Model direct and inverse proportion, stating what remains constant.</p></li>
+      <li><p>Solve problems involving speed, currency, rates, percentages and money.</p></li>
+    </ol></objectives>
   <section xml:id="ratio-intro">
     <title>Introduction</title>
     <introduction><p>A ratio compares quantities multiplicatively. Equivalent ratios describe the same relationship. In a direct proportion, multiplying one quantity by a factor multiplies the other by the same factor.</p></introduction>
+    <p>In direct proportion <m>y=kx</m>; in inverse proportion <m>y=\frac{k}{x}</m> for <m>x\ne0</m>. A fixed-distance journey has speed inversely proportional to journey time; for a fixed time, speed is directly proportional to distance.</p>
+    <p>Absolute comparisons use differences, while relative comparisons use ratios. For 12 and 8, the absolute difference is 4, and the ratio is <m>\frac{12}{8}=1.5</m>.</p>
     <p>Always check that quantities being compared use compatible units. Ratios and rates help us solve problems in recipes, maps, speed and currency.</p>
+  </section>
+  <section xml:id="ratio-proportion-applications"><title>Direct and Inverse Proportion in Context</title>
+    <p>For distance <m>d</m>, time <m>t\ne0</m> and average speed <m>v</m>, <m>v=\frac{d}{t}</m>. State which quantity is held fixed before claiming proportionality.</p>
+    <p>A 25% discount on €120 is €30, leaving a price of €90. The reference amount must be identified for every percentage.</p>
+    <exercise xml:id="exercise-ratio-inverse"><statement><p>A journey of 120 km takes 2 hours. What average speed would complete the same distance in 3 hours?</p></statement><answer><p>40 km/h, assuming the distance stays at 120 km.</p></answer></exercise>
   </section>
   <section xml:id="ratio-proportion-practice">
     <title>Worked Example and Practice</title>
