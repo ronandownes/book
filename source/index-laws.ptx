@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-index-laws">
+  <title>Index Laws</title>
+  <objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Explain and apply the product, quotient and power-of-a-power rules.</p></li><li><p>Use zero, negative and fractional indices when defined.</p></li><li><p>Justify rules by understanding powers, rather than relying on memory alone.</p></li></ol></objectives>
+  <introduction><p>Index laws express general numerical relationships involving powers. We shall explain the patterns before applying the rules.</p></introduction>
+  <section xml:id="index-laws-product"><title>Generalising Powers</title>
+    <p>Combining equal factors leads to <m>a^p a^q=a^{p+q}</m>. For <m>a\ne0</m>, division gives <m>\frac{a^p}{a^q}=a^{p-q}</m>. Raising a power to another power gives <m>(a^p)^q=a^{pq}</m>, whenever these expressions are defined.</p>
+    <p>For <m>a\ne0</m>, <m>a^0=1</m> and <m>a^{-n}=\frac1{a^n}</m>. For <m>a\ge0</m>, <m>a^{1/2}=\sqrt a</m>.</p>
+    <example xml:id="example-index-laws"><title>Combining powers</title><statement><p>Calculate <m>2^3\cdot2^5</m>.</p></statement><solution><p><m>2^{3+5}=2^8=256</m>.</p></solution></example>
+    <exercise xml:id="exercise-index-laws"><statement><p>Simplify <m>3^5/3^2</m> and <m>2^{-3}</m>.</p></statement><answer><p><m>27</m> and <m>1/8</m>.</p></answer></exercise>
+  </section>
+</chapter>
