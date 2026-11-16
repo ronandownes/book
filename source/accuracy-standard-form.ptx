@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-accuracy-standard-form">
-  <title>Accuracy and Standard Form</title>
+  <title>Accuracy, Precision, Truncation and Rounding</title>
+  <objectives xml:id="li-number-accuracy"><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol>
+      <li><p>Explain the difference between exact and approximate quantities.</p></li>
+      <li><p>Round to decimal places or significant figures.</p></li>
+      <li><p>Distinguish rounding from truncation and interpret measurement precision.</p></li>
+    </ol></objectives>
   <section xml:id="accuracy-intro">
     <title>Introduction</title>
     <introduction><p>Measurements and calculations should be reported to a degree of accuracy appropriate to the context. Decimal places, significant figures and rounding describe different kinds of precision.</p></introduction>
-    <p>Scientific notation expresses a non-zero number as a number of magnitude at least one but less than ten, multiplied by a power of ten.</p>
+    <p>Truncation discards digits beyond a specified place. Rounding selects the value to a specified precision using an agreed rule.</p>
   </section>
   <section xml:id="accuracy-standard-form-practice">
     <title>Worked Example and Practice</title>
     <example xml:id="example-accuracy-standard-form">
       <title>Worked example</title>
-      <statement><p>Write 5,600,000 in scientific notation.</p></statement>
-      <solution><p>5.6×10⁶.</p></solution>
+      <statement><p>Round 12.786 to two decimal places and truncate it to two decimal places.</p></statement>
+      <solution><p>Rounding gives 12.79; truncation gives 12.78.</p></solution>
     </example>
     <exercise xml:id="exercise-accuracy-standard-form">
       <statement><p>Round 0.004786 to two significant figures.</p></statement>
