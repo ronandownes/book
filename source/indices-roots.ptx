@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-indices-roots">
-  <title>Indices and Roots</title>
+  <title>Index Form, Powers and Roots</title>
+  <objectives xml:id="li-index-form">
+    <title>Learning Intentions</title>
+    <introduction><p>After completing this chapter, you should be able to do the following.</p></introduction>
+    <ol>
+      <li><p>Write repeated multiplication in index form, identifying the base, exponent and power.</p></li>
+      <li><p>Evaluate integer powers and roots and understand their inverse relationship in appropriate cases.</p></li>
+      <li><p>Use the laws of indices to simplify expressions, taking care with zero and negative exponents.</p></li>
+      <li><p>Distinguish a negative base from a negative sign outside a power, using correct grouping notation.</p></li>
+    </ol>
+  </objectives>
+
   <section xml:id="indices-intro">
     <title>Introduction</title>
-    <introduction><p>An index indicates repeated multiplication of a base. Roots reverse powers in a suitable domain. Index laws summarise repeated multiplication and division.</p></introduction>
+    <p>In <m>a^n</m>, <m>a</m> is the <term>base</term> and <m>n</m> is the <term>index</term> or <term>exponent</term>. For a positive integer <m>n</m>, the expression denotes <m>n</m> factors equal to <m>a</m>. The resulting value is a <term>power</term>.</p>
+    <p>Roots undo powers where appropriate: for example, <m>\sqrt{49}=7</m> is the principal square root, while <m>7^2=49</m>. The laws of indices express patterns in multiplying and dividing powers with the same non-zero base.</p>
     <p>Before using index rules, identify the base and distinguish a negative base inside brackets from a negative sign outside.</p>
   </section>
   <section xml:id="indices-roots-practice">
