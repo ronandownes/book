@@ -80,3 +80,16 @@ main .objectives li, .ptx-content .objectives li {
  .learning-intentions-enlarge,.learning-intentions-dialog{display:none!important;}
  main .objectives{break-inside:avoid;background:#fff!important;}
 }
+/* PreTeXt's built-in 'Objectives:' preamble is not the requested heading.
+   Retain native semantic objectives; show only 'Learning Intentions'. */
+main .objectives > .heading > .type,
+main .objectives > .heading > .heading-divison-mark__space,
+.ptx-content .objectives > .heading > .type,
+.ptx-content .objectives > .heading > .heading-divison-mark__space{
+ display:none!important;
+}
+main .objectives > .heading > .title,
+.ptx-content .objectives > .heading > .title{
+ color:#194b6b;
+ font-weight:700;
+}
