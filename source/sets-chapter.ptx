@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-sets">
-  <title>Sets</title>
+  <title>Number Sets</title>
+  <objectives xml:id="li-number-sets">
+    <title>Learning Intentions</title>
+    <introduction><p>After completing this chapter, you should be able to do the following.</p></introduction>
+    <ol>
+      <li><p>Recognise the natural numbers <m>\mathbb{N}</m>, integers <m>\mathbb{Z}</m> and rational numbers <m>\mathbb{Q}</m>, and describe how these sets are related.</p></li>
+      <li><p>Explain what a set and an element are, and represent simple sets in words, lists and diagrams.</p></li>
+      <li><p>Explain how a fraction is formed from equal parts or a quotient, and why its denominator cannot be zero.</p></li>
+      <li><p>Recognise and construct equivalent fractions, and use the notation of sets and fractions accurately.</p></li>
+    </ol>
+  </objectives>
+
+
+  <section xml:id="number-sets-nzq-fractions">
+    <title>Numbers, Sets and Fractions</title>
+    <p>Numbers help us count, measure, compare and describe quantities. We distinguish a number from the numeral or other representation used to express it. The same quantity can be written in different ways.</p>
+    <p>A <term>set</term> is a well-defined collection of distinct elements. Three sets of numbers will form our starting point:</p>
+    <ul>
+      <li><p>The <term>natural numbers</term> <m>\mathbb{N}=\{1,2,3,\ldots\}</m> are the counting numbers. In the Irish log-table convention used here, zero is not a natural number.</p></li>
+      <li><p>The <term>integers</term> <m>\mathbb{Z}=\{\ldots,-2,-1,0,1,2,\ldots\}</m> include zero and the negative as well as the positive whole numbers.</p></li>
+      <li><p>The <term>rational numbers</term> <m>\mathbb{Q}</m> are numbers of the form <m>\frac{a}{b}</m>, where <m>a,b\in\mathbb{Z}</m> and <m>b\ne0</m>.</p></li>
+    </ul>
+    <p>These sets are nested: <m>\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}</m>. Every natural number is an integer and every integer is rational. For instance, <m>5=\frac{5}{1}</m>.</p>
+    <p>A <term>fraction</term> can be understood by dividing one whole into <m>b</m> equal parts and taking <m>a</m> of those parts, giving <m>\frac{a}{b}</m>. It can also mean the quotient of two numbers or a multiplicative comparison. The denominator must be non-zero because division by zero is not defined.</p>
+    <p>Dividing each of three equal parts into two smaller equal parts shows that <m>\frac{2}{3}=\frac{4}{6}</m>. The number of parts changes, but the quantity does not. Multiplying numerator and denominator by the same non-zero integer gives an equivalent fraction.</p>
+    <example xml:id="example-making-fractions">
+      <title>Making a fraction</title>
+      <statement><p>Three identical bars are shared equally among four people. What fraction of one bar does each person receive?</p></statement>
+      <solution><p>Each bar is divided into four equal pieces, so each person receives three quarter-bars: <m>\frac{3}{4}</m> of a bar. This also represents the quotient <m>3\div4</m>.</p></solution>
+    </example>
+    <exercise xml:id="exercise-number-fractions-intro">
+      <statement><p>Explain why <m>\frac{3}{4}</m> and <m>\frac{6}{8}</m> name the same number. State the smallest of <m>\mathbb{N}</m>, <m>\mathbb{Z}</m> and <m>\mathbb{Q}</m> containing <m>-2</m> and <m>\frac{3}{4}</m>.</p></statement>
+      <answer><p>Every quarter can be divided into two equal eighths, so three quarters equal six eighths. The smallest listed set containing <m>-2</m> is <m>\mathbb{Z}</m>; the smallest containing <m>\frac{3}{4}</m> is <m>\mathbb{Q}</m>.</p></answer>
+    </exercise>
+  </section>
 
   <section xml:id="sets-first-look">
     <title>Introduction</title>
