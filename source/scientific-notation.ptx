@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-scientific-notation">
+  <title>Scientific Notation</title>
+  <objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Convert large and small numbers to scientific notation.</p></li><li><p>Use the form <m>a	imes10^n</m>, where <m>1le|a|&lt;10</m>.</p></li><li><p>Interpret the scale and precision of a number written using powers of ten.</p></li></ol></objectives>
+  <introduction><p>Scientific notation expresses scale efficiently and makes comparisons between very small or very large quantities easier.</p></introduction>
+  <section xml:id="scientific-notation-converting"><title>Converting Numbers</title>
+    <p>For example, <m>5\,600\,000=5.6\times10^6</m> and <m>0.00042=4.2\times10^{-4}</m>.</p>
+    <example xml:id="example-scientific-notation"><title>A large number</title><statement><p>Write <m>72\,000\,000</m> in scientific notation.</p></statement><solution><p><m>7.2\times10^7</m>.</p></solution></example>
+    <exercise xml:id="exercise-scientific-notation"><statement><p>Write <m>0.000031</m> in scientific notation.</p></statement><answer><p><m>3.1\times10^{-5}</m>.</p></answer></exercise>
+  </section>
+</chapter>
