@@ -8,6 +8,9 @@
     "part-leaving-certificate.html":"lc",
     "part-foundation.html":"foundation",
     "part-leaving-certificate-applied.html":"lca",
+    "part-computer-science.html":"cs",
+    "part-physics.html":"physics",
+    "part-applied-mathematics.html":"applied",
     "part-official-appendices.html":"appendices"
   };
   const chapterTargets = __MATHS_CHAPTERS__;
