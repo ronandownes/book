@@ -1,0 +1,82 @@
+/* Native PreTeXt section-start Learning Intentions. No iframes; print friendly. */
+.ptx-content .objectives:has(.heading),
+main .objectives:has(.heading) {
+ box-sizing:border-box;
+ margin:1rem 0 1.6rem;
+ padding:clamp(.75rem,1.8vw,1.15rem);
+ border:1px solid #b8cddc;
+ border-left:5px solid #286b8c;
+ border-radius:.6rem;
+ background:#f6fafc;
+ color:#172e40;
+ max-width:100%;
+}
+main .objectives:has(.heading) .heading {
+ color:#194b6b;
+ font-weight:700;
+ margin:0 0 .6rem;
+ font-size:clamp(1.05rem,1.5vw,1.25rem);
+}
+main .objectives ul, .ptx-content .objectives ul {
+ margin:.45rem 0 .2rem;
+ padding-inline-start:1.5rem;
+}
+main .objectives li, .ptx-content .objectives li {
+ margin:.3rem 0;
+ line-height:1.48;
+ overflow-wrap:break-word;
+}
+.learning-intentions-enlarge {
+ margin:.3rem 0 .25rem;
+ padding:.37rem .65rem;
+ background:#fff;
+ border:1px solid #8eacc0;
+ color:#1b506c;
+ border-radius:.45rem;
+ font:600 .85rem/1.35 system-ui,sans-serif;
+ cursor:pointer;
+}
+.learning-intentions-enlarge:hover,.learning-intentions-enlarge:focus-visible {
+ background:#e1f0f7;outline:2px solid #467f9d;outline-offset:1px;
+}
+.learning-intentions-dialog{
+ position:fixed;inset:auto;top:clamp(12px,6dvh,65px);left:50%;
+ transform:translateX(-50%);margin:0;
+ width:min(820px,calc(100vw - 24px));max-width:calc(100vw - 24px);
+ max-height:85dvh;box-sizing:border-box;
+ background:#fff;color:#152c40;border:1px solid #a7bece;
+ border-radius:12px;box-shadow:0 18px 62px rgba(10,31,47,.3);
+ padding:0;overflow:hidden;flex-direction:column;
+}
+.learning-intentions-dialog[open]{display:flex;}
+.learning-intentions-dialog::backdrop{background:rgba(12,30,47,.52);}
+.li-dialog-head,.li-dialog-foot{
+ display:flex;align-items:center;gap:.6rem;justify-content:space-between;
+ padding:.8rem clamp(.8rem,2.5vw,1.4rem);
+ background:#f1f7fa;flex:none;
+}
+.li-dialog-head{border-bottom:1px solid #d9e5ec;}
+.li-dialog-foot{border-top:1px solid #d9e5ec;}
+.li-dialog-context{color:#496579;font:500 .87rem/1.4 system-ui,sans-serif;}
+.li-dialog-body{overflow:auto;min-height:0;padding:1.2rem clamp(.85rem,2.5vw,1.6rem);}
+.li-dialog-body h2{color:#174f70;font-size:clamp(1.2rem,2.4vw,1.55rem);margin:.1rem 0 1rem;}
+.li-dialog-text{font:400 clamp(1.22rem,2.3vw,1.65rem)/1.55 Georgia,serif;overflow-wrap:break-word;}
+.li-dialog-foot button,.li-dialog-head button{
+ border:1px solid #96b1c3;background:#fff;color:#164660;
+ border-radius:.4rem;padding:.55rem .75rem;
+ font:600 .85rem/1.3 system-ui,sans-serif;cursor:pointer;
+}
+.li-dialog-foot button:disabled{opacity:.4;cursor:default;}
+.li-dialog-foot button:focus-visible,.li-dialog-head button:focus-visible{
+ outline:2px solid #3e82aa;outline-offset:1px;
+}
+.li-dialog-counter{font: .85rem system-ui,sans-serif;color:#506b7e;}
+@media(max-width:560px){
+ .learning-intentions-dialog{top:2dvh;max-height:95dvh;}
+ .li-dialog-foot button{padding:.45rem .55rem;font-size:.8rem;}
+ .li-dialog-text{font-size:1.25rem;}
+}
+@media print{
+ .learning-intentions-enlarge,.learning-intentions-dialog{display:none!important;}
+ main .objectives{break-inside:avoid;background:#fff!important;}
+}
