@@ -249,7 +249,7 @@ jobs:
                   html = html.replace("</head>", "  " + css + "\n</head>", 1)
                   html = html.replace("</body>", "  " + script + "\n</body>", 1)
                   page.write_text(html, encoding="utf-8")
-          print("Added accessible optional subpart drill-down to all 9 JC and LC OL strand pages.")
+          print("Added accessible optional drill-down to all four Junior Cycle strand tables.")
           PY
       - name: Add Junior Cycle Algebra seven-slide view
         run: |
