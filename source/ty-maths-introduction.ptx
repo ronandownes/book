@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-ty-programme">
+        <title>Introduction</title>
+        <section xml:id="ty-programme-introduction">
+          <title>Investigations and Mathematical Modelling</title>
+          <p><em>Learning intentions:</em> Interpret data, construct a model, justify assumptions and communicate the limitations of a conclusion.</p>
+          <p>In Transition Year we can investigate interesting questions without treating mathematics as a fixed sequence of yearly chapters. We use diagrams, data, calculation, reasoning and technology to explore and test ideas.</p>
+          <activity xml:id="ty-first-modelling-investigation">
+            <title>A first modelling investigation</title>
+            <p>The following electricity-use figures are illustrative, not readings from a particular home. Four consecutive months record <m>240</m>, <m>220</m>, <m>205</m> and <m>195</m> kWh.</p>
+            <task>
+              <p>Represent the data in a table and plot it on a graph. Describe the pattern and explain whether it is reasonable to fit a straight line.</p>
+              <answer><p>The values decline, but the decreases of <m>20</m>, <m>15</m> and <m>10</m> kWh are not constant. A straight line might serve as an approximation over these four months, not as an exact rule.</p></answer>
+            </task>
+            <task>
+              <p>Make a tentative estimate for the next month. Explain your choice and why it should not be treated as a reliable prediction.</p>
+              <answer><p>One possible estimate is around <m>185</m> kWh if recent changes continue. However, seasonal patterns, occupancy, weather and appliances could all change the trend. Other reasonable estimates with a stated method are acceptable.</p></answer>
+            </task>
+            <task>
+              <p>Identify one additional measurement or source of evidence that would make your conclusion stronger.</p>
+              <answer><p>For example, collect comparable monthly readings from the same household over a full year to examine seasonal variation, or compare consumption with local temperatures.</p></answer>
+            </task>
+          </activity>
+        </section>
+      </chapter>

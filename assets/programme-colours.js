@@ -3,11 +3,18 @@
 (() => {
   "use strict";
   const partTargets = {
-    "part-jc-unifying.html":"unifying",
     "part-jc-number.html":"number",
     "part-jc-geometry.html":"geometry",
+    "part-jc-trigonometry.html":"trigonometry",
     "part-jc-algebra.html":"algebra",
-    "part-jc-statistics.html":"statistics"
+    "part-jc-functions.html":"functions",
+    "part-jc-statistics.html":"statistics",
+    "part-transition-year.html":"ty",
+    "part-lc-ol-statistics.html":"lc-statistics",
+    "part-lc-ol-geometry.html":"lc-geometry",
+    "part-lc-ol-number.html":"lc-number",
+    "part-lc-ol-algebra.html":"lc-algebra",
+    "part-lc-ol-functions.html":"lc-functions"
   };
   const chapterTargets = __MATHS_CHAPTERS__;
   const tocSelector = "nav, .toc, .ptx-toc, .toc-container, #toc, .toc-items, .toc-item-list, [role='navigation']";

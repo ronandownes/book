@@ -45,13 +45,18 @@ jobs:
           test "$(wc -c < assets/cicadas/periodical-cicadas-tree-2024.jpg)" -gt 50000
           test "$(wc -c < assets/cicadas/magicicada-tredecim-2024.jpg)" -gt 50000
           test "$(wc -c < assets/cicadas/magicicada-septendecim-2024.jpg)" -gt 50000
-      - name: Generate complete Junior Cycle learning outcomes
+      - name: Generate JC and LC Ordinary Level learning outcomes
         run: |
           set -euo pipefail
           python -m pip install requests beautifulsoup4 pymupdf
+          mkdir -p assets/syllabus
+          curl --fail --location --retry 3 --connect-timeout 15 --max-time 120 --silent --show-error "https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" --output assets/syllabus/LC_Mathematics_Syllabus_2015.pdf
           python scripts/build_intro_outcomes.py
           for strand in number geometry algebra statistics; do
             test -s "source/jc-${strand}-outcomes.ptx"
+          done
+          for strand in statistics geometry number algebra functions; do
+            test -s "source/lc-ol-${strand}-outcomes.ptx"
           done
       - name: Add section-start Learning Intentions
         run: |
@@ -198,7 +203,10 @@ jobs:
           expected = [
               "jc-introduction", "jc-unifying-strand",
               "jc-outcomes-number", "jc-outcomes-geometry",
-              "jc-outcomes-algebra", "jc-outcomes-statistics",]
+              "jc-outcomes-algebra", "jc-outcomes-statistics",
+              "lc-ol-introduction", "lc-ol-statistics-outcomes",
+              "lc-ol-geometry-outcomes", "lc-ol-number-outcomes",
+              "lc-ol-algebra-outcomes", "lc-ol-functions-outcomes",]
           for name in expected:
               path = root / (name + ".html")
               if not path.is_file():
@@ -230,6 +238,11 @@ jobs:
               "jc-outcomes-geometry": ("GT.1", "GT.6"),
               "jc-outcomes-algebra": ("AF.1", "AF.7"),
               "jc-outcomes-statistics": ("SP.1", "SP.3"),
+              "lc-ol-statistics-outcomes": ("1.1", "1.7"),
+              "lc-ol-geometry-outcomes": ("2.1", "2.4"),
+              "lc-ol-number-outcomes": ("3.1", "3.4"),
+              "lc-ol-algebra-outcomes": ("4.1", "4.4"),
+              "lc-ol-functions-outcomes": ("5.1", "5.2"),
           }
           css = '<link rel="stylesheet" href="strand-outcome-drill.css?v=1" data-lo-drill="true"/>'
           script = '<script defer src="strand-outcome-drill.js?v=1" data-lo-drill="true"></script>'
@@ -272,53 +285,43 @@ jobs:
               page.write_text(html, encoding="utf-8")
           print("Added the scrollable NCCA pages and seven-outcome Algebra slide view.")
           PY
-      - name: Verify five Junior Cycle strand Parts and thirteen Number chapters
+      - name: Verify six JC Parts, TY and five LC OL Parts
         run: |
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
           from lxml import etree
-          xmlid = "{http://www.w3.org/XML/1998/namespace}id"
-          document = etree.parse("source/main.ptx")
-          expected_parts = ["part-jc-unifying", "part-jc-number", "part-jc-geometry",
-                            "part-jc-algebra", "part-jc-statistics"]
-          observed = [p.get(xmlid) for p in document.findall(".//part")]
-          if observed != expected_parts:
-              raise SystemExit(f"Wrong JC Parts: {observed}")
-          document.xinclude()
-          parts = document.findall(".//part")
-          for p in parts:
-              chapters = p.findall("./chapter")
-              if not chapters or chapters[0].findtext("title") != "Learning Outcomes":
-                  raise SystemExit("A strand does not begin with Learning Outcomes: " + p.get(xmlid))
-          number = parts[1].findall("./chapter")
-          expected_titles = [
-              "Learning Outcomes", "Representation of Numbers", "Operations",
-              "Powers and Roots", "Index Laws", "Order of Operations",
-              "Factors and Multiples", "Accuracy, Precision, Truncation and Rounding",
-              "Scientific Notation", "Fractions and Rational Numbers",
-              "Ratio and Proportion", "Sequences", "Graphs and Numerical Patterns",
-              "Sets"]
-          observed_titles = [c.findtext("title") for c in number]
-          if observed_titles != expected_titles:
-              raise SystemExit("Number chapters are not complete or in order: " + str(observed_titles))
-          for chapter in number[1:]:
-              if chapter.find("objectives") is None or chapter.find("introduction") is None:
-                  raise SystemExit("Missing chapter Learning Intentions or introduction: " + chapter.get(xmlid))
-          web = Path("output/web")
-          required = [
-              *[v + ".html" for v in expected_parts],
-              "jc-unifying-strand.html", "jc-outcomes-number.html",
-              "jc-outcomes-geometry.html", "jc-outcomes-algebra.html",
-              "jc-outcomes-statistics.html", "sets-domain-codomain.html",
-              "chapter-glossary.html", "functions-intro.html"]
-          missing = [name for name in required if not (web / name).is_file()]
-          if missing:
-              raise SystemExit("Missing published JC pages: " + ", ".join(missing))
-          for name in (p + ".html" for p in expected_parts):
-              if 'data-maths-programme="colour"' not in (web / name).read_text(encoding="utf-8"):
-                  raise SystemExit("Part colour navigation missing: " + name)
-          print("Verified five JC strands, five Learning Outcomes chapters, thirteen Number chapters.")
+          xmlid="{http://www.w3.org/XML/1998/namespace}id"
+          doc=etree.parse("source/main.ptx")
+          expected=["part-jc-number","part-jc-geometry","part-jc-trigonometry","part-jc-algebra","part-jc-functions","part-jc-statistics","part-transition-year","part-lc-ol-statistics","part-lc-ol-geometry","part-lc-ol-number","part-lc-ol-algebra","part-lc-ol-functions"]
+          parts=[p.get(xmlid) for p in doc.findall(".//part")]
+          if parts!=expected: raise SystemExit("Wrong Part order: "+str(parts))
+          doc.xinclude()
+          for p in doc.findall(".//part"):
+              children=p.findall("./chapter")
+              if not children: raise SystemExit("Part without chapters: "+str(p.get(xmlid)))
+              for chapter in children:
+                  if "Coming soon" in " ".join(chapter.itertext()):
+                      raise SystemExit("Empty placeholder chapter: "+str(chapter.get(xmlid)))
+          site=Path("output/web")
+          all_parts={p+".html" for p in expected}
+          found={p.name for p in site.glob("part-*.html")}
+          if all_parts!=found: raise SystemExit("Incorrect published Parts: "+str(sorted(found)))
+          required=["jc-introduction.html","jc-unifying-strand.html",
+             "jc-number-learning-outcomes.html","jc-outcomes-number.html",
+             "jc-outcomes-geometry.html","jc-outcomes-algebra.html",
+             "jc-outcomes-statistics.html","sets-domain-codomain.html",
+             "chapter-functions.html","chapter-glossary.html","chapter-ty-programme.html",
+             "lc-ol-introduction.html","lc-ol-statistics-outcomes.html",
+             "lc-ol-geometry-outcomes.html","lc-ol-number-outcomes.html",
+             "lc-ol-algebra-outcomes.html","lc-ol-functions-outcomes.html",
+             "chapter-complex.html","chapter-sequences.html"]
+          missing=[x for x in required if not (site/x).is_file()]
+          if missing: raise SystemExit("Missing pages: "+str(missing))
+          for x in all_parts:
+              if 'data-maths-programme="colour"' not in (site/x).read_text(encoding="utf-8"):
+                  raise SystemExit("Missing colour design on "+x)
+          print("Verified all six coloured JC Parts, TY and LC Ordinary Level course Parts.")
           PY
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3

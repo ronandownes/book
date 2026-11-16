@@ -4,13 +4,13 @@
   <section xml:id="lc-ol-learning-outcomes">
     <title>Learning Outcomes</title>
     <p>Learning outcomes describe the knowledge, understanding, skills and values students should be able to demonstrate.</p>
-    <p>This introduction contains the Leaving Certificate Mathematics <em>Ordinary Level</em> learning outcomes, grouped by strand in the published syllabus order.</p>
+    <p>The Ordinary Level learning outcomes are presented in five course Parts, in syllabus order. Each Part starts with the complete learning outcomes.</p>
     <p>Across the five strands, students should be able to explore patterns, explain findings, justify conclusions, communicate mathematics clearly and apply suitable methods in familiar and unfamiliar situations.</p>
   </section>
-  <xi:include href="./lc-ol-statistics-outcomes.ptx"/>
-  <xi:include href="./lc-ol-geometry-outcomes.ptx"/>
-  <xi:include href="./lc-ol-number-outcomes.ptx"/>
-  <xi:include href="./lc-ol-algebra-outcomes.ptx"/>
-  <xi:include href="./lc-ol-functions-outcomes.ptx"/>
+
+
+
+
+
   <p><em>Source:</em> <url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" visual="Leaving Certificate Mathematics Syllabus (for examination from 2015)"/>. The published syllabus remains the authority for mathematical notation and scope.</p>
 </chapter>

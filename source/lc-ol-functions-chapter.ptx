@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="lc-ol-functions-learning-outcomes">
+<title>Learning Outcomes</title>
+<p>Leaving Certificate Mathematics — Ordinary Level: Functions. The full official learning outcomes follow.</p>
+<xi:include href="./lc-ol-functions-outcomes.ptx"/>
+</chapter>

@@ -1,89 +1,16 @@
-/* Junior Cycle strand-specific Part colours and paler chapter colours. */
-.maths-programme-unifying {
-  --maths-part-bg:#36577d; --maths-part-accent:#b8d2eb;
-  --maths-chapter-bg:#e4edf5; --maths-chapter-ink:#284a6c;
-  --maths-chapter-edge:#91b0cd;
-}
-.maths-programme-number {
-  --maths-part-bg:#176946; --maths-part-accent:#9de5b7;
-  --maths-chapter-bg:#e0efe5; --maths-chapter-ink:#185039;
-  --maths-chapter-edge:#78b692;
-}
-.maths-programme-geometry {
-  --maths-part-bg:#176a78; --maths-part-accent:#b3e5ea;
-  --maths-chapter-bg:#e1f1f3; --maths-chapter-ink:#185363;
-  --maths-chapter-edge:#86c3c9;
-}
-.maths-programme-algebra {
-  --maths-part-bg:#633b87; --maths-part-accent:#d9baf2;
-  --maths-chapter-bg:#ece4f3; --maths-chapter-ink:#563574;
-  --maths-chapter-edge:#b99ed1;
-}
-.maths-programme-statistics {
-  --maths-part-bg:#345786; --maths-part-accent:#b9d4f5;
-  --maths-chapter-bg:#e5edf7; --maths-chapter-ink:#2b507b;
-  --maths-chapter-edge:#9fbbdc;
-}
-
-/* Irish School Maths programme hierarchy: Part strong colour; Chapter pastel;
-   Section/Subsection white. Styling only: all content remains native PreTeXt. */
-.maths-programme-jc {
-  --maths-part-bg:#176946; --maths-part-accent:#9de5b7;
-  --maths-chapter-bg:#e0efe5; --maths-chapter-ink:#185039;
-  --maths-chapter-edge:#78b692;
-}
-.maths-programme-ty {
-  --maths-part-bg:#70458e; --maths-part-accent:#ddc0ef;
-  --maths-chapter-bg:#eee4f4; --maths-chapter-ink:#563474;
-  --maths-chapter-edge:#bba0d2;
-}
-.maths-programme-lc {
-  --maths-part-bg:#255a91; --maths-part-accent:#b6d7f5;
-  --maths-chapter-bg:#e2ecf7; --maths-chapter-ink:#244e77;
-  --maths-chapter-edge:#8baed3;
-}
-.maths-programme-foundation {
-  --maths-part-bg:#8d6019; --maths-part-accent:#ffe1a2;
-  --maths-chapter-bg:#fff0d5; --maths-chapter-ink:#6e4d16;
-  --maths-chapter-edge:#d8b978;
-}
-.maths-programme-lca {
-  --maths-part-bg:#126c72; --maths-part-accent:#b9f3f1;
-  --maths-chapter-bg:#dff2f0; --maths-chapter-ink:#13585d;
-  --maths-chapter-edge:#7bbfbd;
-}
-.maths-programme-cs {
-  --maths-part-bg:#3c547f; --maths-part-accent:#c0d8fb;
-  --maths-chapter-bg:#e7edf8; --maths-chapter-ink:#294467;
-  --maths-chapter-edge:#96acd3;
-}
-.maths-programme-coding {
-  --maths-part-bg:#276a56; --maths-part-accent:#b0e2c6;
-  --maths-chapter-bg:#e0f0e9; --maths-chapter-ink:#1f5343;
-  --maths-chapter-edge:#8fc5ad;
-}
-.maths-programme-digital {
-  --maths-part-bg:#45678b; --maths-part-accent:#c7daf4;
-  --maths-chapter-bg:#e7eff8; --maths-chapter-ink:#345372;
-  --maths-chapter-edge:#9dbad6;
-}
-
-.maths-programme-physics {
-  --maths-part-bg:#803f5b; --maths-part-accent:#f5c9dc;
-  --maths-chapter-bg:#f7e8ef; --maths-chapter-ink:#68384f;
-  --maths-chapter-edge:#d5a1b6;
-}
-.maths-programme-applied {
-  --maths-part-bg:#5b6136; --maths-part-accent:#e2e7a2;
-  --maths-chapter-bg:#f1f2e3; --maths-chapter-ink:#454b29;
-  --maths-chapter-edge:#b7bf8b;
-}
-.maths-programme-appendices {
-  --maths-part-bg:#485668; --maths-part-accent:#d4dfeb;
-  --maths-chapter-bg:#e8edf2; --maths-chapter-ink:#34475c;
-  --maths-chapter-edge:#a7b8c9;
-}
-
+/* Six distinct Junior Cycle colours, TY and five LC OL companion palettes. */
+.maths-programme-number{--maths-part-bg:#176946;--maths-part-accent:#B1E6C5;--maths-chapter-bg:#E1F1E8;--maths-chapter-ink:#185039;--maths-chapter-edge:#83BB99;}
+.maths-programme-geometry{--maths-part-bg:#117781;--maths-part-accent:#B8E7E9;--maths-chapter-bg:#E2F2F3;--maths-chapter-ink:#145361;--maths-chapter-edge:#8AC8CE;}
+.maths-programme-trigonometry{--maths-part-bg:#285FA3;--maths-part-accent:#BFDAF8;--maths-chapter-bg:#E4EEFA;--maths-chapter-ink:#234D7F;--maths-chapter-edge:#9CB9E3;}
+.maths-programme-algebra{--maths-part-bg:#70408C;--maths-part-accent:#E1C5F1;--maths-chapter-bg:#F0E7F6;--maths-chapter-ink:#58356F;--maths-chapter-edge:#B99BD0;}
+.maths-programme-functions{--maths-part-bg:#973E6C;--maths-part-accent:#F3C8DE;--maths-chapter-bg:#F8E8F1;--maths-chapter-ink:#753151;--maths-chapter-edge:#DBA4BD;}
+.maths-programme-statistics{--maths-part-bg:#915916;--maths-part-accent:#F6DAAA;--maths-chapter-bg:#FBF1DF;--maths-chapter-ink:#694311;--maths-chapter-edge:#D6B37B;}
+.maths-programme-ty{--maths-part-bg:#414A83;--maths-part-accent:#CAD2FA;--maths-chapter-bg:#EBEEFA;--maths-chapter-ink:#333B6B;--maths-chapter-edge:#A3B0DF;}
+.maths-programme-lc-statistics{--maths-part-bg:#28567A;--maths-part-accent:#BBDCF1;--maths-chapter-bg:#E5F0F8;--maths-chapter-ink:#214861;--maths-chapter-edge:#9EC6DF;}
+.maths-programme-lc-geometry{--maths-part-bg:#236B73;--maths-part-accent:#BBE7E6;--maths-chapter-bg:#E2F2F1;--maths-chapter-ink:#1C565C;--maths-chapter-edge:#97CBCA;}
+.maths-programme-lc-number{--maths-part-bg:#27634E;--maths-part-accent:#BAE6CE;--maths-chapter-bg:#E2F3E9;--maths-chapter-ink:#1E513E;--maths-chapter-edge:#98CBAE;}
+.maths-programme-lc-algebra{--maths-part-bg:#624C81;--maths-part-accent:#DDCEF0;--maths-chapter-bg:#EFE8F7;--maths-chapter-ink:#4E3B68;--maths-chapter-edge:#BAA8D7;}
+.maths-programme-lc-functions{--maths-part-bg:#7A496B;--maths-part-accent:#E9C5DA;--maths-chapter-bg:#F5E8EF;--maths-chapter-ink:#623A56;--maths-chapter-edge:#D3A5C1;}
 /* The strongest colour is reserved for the programme Part. */
 a.maths-programme-link {
   display:block;

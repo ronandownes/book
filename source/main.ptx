@@ -12,17 +12,12 @@
             <p><url href="https://ronandownes.github.io/maths/" visual="Irish School Maths Apps"/> accompanies this book with interactive activities, explorations and practice.</p>
             <p>Additional <url href="https://ronandownes.github.io/calculator/resources/" visual="free textbooks and maths resources"/> are collected on a separate page, including links to Desmos, GeoGebra and open textbooks. These supplement, rather than replace, your own course.</p>
             <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
-            <p>This edition follows the five interconnected strands of Junior Cycle Mathematics. Existing LC Ordinary Level and TY sources remain in the repository but are not included in this edition.</p>
+            <p>This edition contains six Junior Cycle areas, TY Maths and Leaving Certificate Ordinary Level Maths.</p>
           </preface>
-        </frontmatter>
+              <xi:include href="./jc-introduction.ptx"/>
+    </frontmatter>
 
-    <part xml:id="part-jc-unifying">
-      <title>Unifying Strand</title>
-      <xi:include href="./jc-introduction.ptx" />
-      <xi:include href="./glossary.ptx" />
-    </part>
-
-    <part xml:id="part-jc-number">
+<part xml:id="part-jc-number">
       <title>Number</title>
       <xi:include href="./jc-number-learning-outcomes.ptx" />
       <xi:include href="./number-introduction.ptx" />
@@ -40,14 +35,19 @@
       <xi:include href="./sets-chapter.ptx" />
     </part>
 
-    <part xml:id="part-jc-geometry">
-      <title>Geometry and Trigonometry</title>
+<part xml:id="part-jc-geometry">
+      <title>Geometry</title>
       <xi:include href="./jc-geometry-learning-outcomes.ptx" />
-      <xi:include href="./trigonometry-chapter.ptx" />
+
     </part>
 
-    <part xml:id="part-jc-algebra">
-      <title>Algebra and Functions</title>
+    <part xml:id="part-jc-trigonometry">
+      <title>Trigonometry</title>
+      <xi:include href="./trigonometry-chapter.ptx"/>
+    </part>
+
+<part xml:id="part-jc-algebra">
+      <title>Algebra</title>
       <xi:include href="./jc-algebra-learning-outcomes.ptx" />
       <xi:include href="./algebra-patterns.ptx" />
       <xi:include href="./algebra-language.ptx" />
@@ -58,7 +58,12 @@
       <xi:include href="./algebra-division-fractions.ptx" />
       <xi:include href="./algebra-equations-inequalities.ptx" />
       <xi:include href="./algebra-changing-subject.ptx" />
-<chapter xml:id="chapter-functions"><title>Functions and Graphs</title><objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Define a function using an input-output rule.</p></li><li><p>Distinguish data points from a mathematical model.</p></li></ol></objectives><introduction><p>Functions describe relationships between quantities and help us investigate real data.</p></introduction>
+
+    </part>
+
+    <part xml:id="part-jc-functions">
+      <title>Functions</title>
+      <chapter xml:id="chapter-functions"><title>Functions and Graphs</title><objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Define a function using an input-output rule.</p></li><li><p>Distinguish data points from a mathematical model.</p></li></ol></objectives><introduction><p>Functions describe relationships between quantities and help us investigate real data.</p></introduction>
               <section xml:id="functions-intro"><title>Introduction</title>
                 <p>Do countries with higher female literacy rates tend to have fewer births per woman? We can explore this question using real data.</p>
                 <p>Each point on the graph represents a country. Select a point to see its name, its measurements and the year. The blue line models the general trend.</p>
@@ -76,7 +81,7 @@
             </chapter>
     </part>
 
-    <part xml:id="part-jc-statistics">
+<part xml:id="part-jc-statistics">
       <title>Statistics and Probability</title>
       <xi:include href="./jc-statistics-learning-outcomes.ptx" />
 <chapter xml:id="chapter-probability"><title>Events and Counting</title><objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Use the fundamental counting principle.</p></li><li><p>Explain why the counting rule applies.</p></li></ol></objectives><introduction><p>Probability begins with a precise account of possible outcomes.</p></introduction>
@@ -88,6 +93,39 @@
                 </exercise>
               </section>
             </chapter>
+    </part>
+
+    <part xml:id="part-transition-year">
+      <title>TY Maths</title>
+      <xi:include href="./ty-maths-introduction.ptx"/>
+    </part>
+
+    <part xml:id="part-lc-ol-statistics">
+      <title>LC OL · Statistics and Probability</title>
+      <xi:include href="./lc-ol-introduction.ptx"/>
+      <xi:include href="./lc-ol-statistics-chapter.ptx"/>
+    </part>
+
+    <part xml:id="part-lc-ol-geometry">
+      <title>LC OL · Geometry and Trigonometry</title>
+      <xi:include href="./lc-ol-geometry-chapter.ptx"/>
+    </part>
+
+    <part xml:id="part-lc-ol-number">
+      <title>LC OL · Number</title>
+      <xi:include href="./lc-ol-number-chapter.ptx"/>
+      <xi:include href="./complex-numbers-chapter.ptx"/>
+      <xi:include href="./sequences-chapter.ptx"/>
+    </part>
+
+    <part xml:id="part-lc-ol-algebra">
+      <title>LC OL · Algebra</title>
+      <xi:include href="./lc-ol-algebra-chapter.ptx"/>
+    </part>
+
+    <part xml:id="part-lc-ol-functions">
+      <title>LC OL · Functions</title>
+      <xi:include href="./lc-ol-functions-chapter.ptx"/>
     </part>
   </book>
 </pretext>
