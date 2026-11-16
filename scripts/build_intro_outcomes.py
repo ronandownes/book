@@ -69,6 +69,42 @@ XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 def compact(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
+def tidy_outcome_sentence(p: etree._Element) -> None:
+    """Make outcome sentences readable without changing their mathematical content.
+
+    Preserve algebraic case, official subpart labels, and lead-in colons. Add
+    sentence capitals and final stops to textual statements only.
+    """
+    if p.text:
+        opening = p.text
+        opening = re.sub(
+            r"^(\s*(?:[a-z]|[ivx]{1,4})[.)]\s*)([a-z])",
+            lambda m: m.group(1).rstrip() + " " + m.group(2).upper(),
+            opening,
+            count=1,
+        )
+        if not re.match(r"^\s*(?:[a-z]|[ivx]{1,4})[.)]", opening):
+            opening = re.sub(
+                r"^(\s*)([a-z])",
+                lambda m: m.group(1) + m.group(2).upper(),
+                opening, count=1,
+            )
+        p.text = opening
+    rendered = "".join(p.itertext()).rstrip()
+    if not rendered:
+        return
+    # The colon introduces a sublist: do not convert it into a full stop.
+    if rendered.endswith((".", "!", "?", ":", ";")):
+        return
+    if re.search(r"\\text\{[.!?]\}\s*$", rendered):
+        return
+    if len(p):
+        last = p[-1]
+        last.tail = (last.tail or "").rstrip() + "."
+    else:
+        p.text = (p.text or "").rstrip() + "."
+
+
 def cell_with_paragraphs(texts: list[etree._Element]) -> etree._Element:
     cell = etree.Element("cell")
     for p in texts:
@@ -78,6 +114,7 @@ def cell_with_paragraphs(texts: list[etree._Element]) -> etree._Element:
         for node in cp.iter():
             if node.text: node.text = re.sub(r"\s+", " ", node.text)
             if node.tail: node.tail = re.sub(r"\s+", " ", node.tail)
+        tidy_outcome_sentence(cp)
         cell.append(cp)
     return cell
 
@@ -132,7 +169,7 @@ def junior():
                 t = compact("".join(p.itertext()))
                 if not t:
                     continue
-                if re.search(r"\b" + re.escape(code) + r"\b", t):
+                if re.match(r"^" + re.escape(code) + r"(?=\D|$)", t):
                     # The numbered lead is already represented by the
                     # PDF-verified statement above. Do not print it twice.
                     continue
