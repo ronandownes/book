@@ -15,16 +15,8 @@ ASSETS = Path("assets")
 
 PARTS = {
     "part-junior-cycle": "jc",
-    "part-transition-year": "ty",
     "part-leaving-certificate": "lc",
-    "part-foundation": "foundation",
-    "part-leaving-certificate-applied": "lca",
-    "part-jc-coding": "coding",
-    "part-jc-digital-literacy": "digital",
-    "part-computer-science": "cs",
-    "part-physics": "physics",
-    "part-applied-mathematics": "applied",
-    "part-official-appendices": "appendices",
+    "part-transition-year": "ty",
 }
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 
@@ -49,8 +41,11 @@ def main() -> None:
                 chapters[name] = palette
     if missing:
         raise RuntimeError("Expected chapter HTML files not built: " + ", ".join(missing))
-    if len(chapters) < 15:
-        raise RuntimeError(f"Insufficient chapters for colour mapping: {len(chapters)}")
+    built_parts = {part.get(XML_ID) for part in doc.getroot().iter("part")}
+    if built_parts != set(PARTS):
+        raise RuntimeError(f"Expected exactly three programme Parts, found: {sorted(built_parts)}")
+    if len(chapters) < 10:
+        raise RuntimeError(f"Unexpectedly few published teaching chapters: {len(chapters)}")
 
     css = (ASSETS / "programme-colours.css").read_text(encoding="utf-8")
     js = (ASSETS / "programme-colours.js").read_text(encoding="utf-8")
