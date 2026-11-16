@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="jc-algebra-learning-outcomes">
+  <title>Learning Outcomes</title>
+  <introduction><p>These official Algebra and Functions learning outcomes describe what students are expected to understand and demonstrate across the strand. Each teaching chapter has its own shorter Learning Intentions.</p></introduction>
+  <xi:include href="./jc-algebra-outcomes.ptx"/>
+</chapter>
