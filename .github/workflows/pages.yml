@@ -45,7 +45,7 @@ jobs:
           test "$(wc -c < assets/cicadas/periodical-cicadas-tree-2024.jpg)" -gt 50000
           test "$(wc -c < assets/cicadas/magicicada-tredecim-2024.jpg)" -gt 50000
           test "$(wc -c < assets/cicadas/magicicada-septendecim-2024.jpg)" -gt 50000
-      - name: Generate native NCCA curriculum appendices
+      - name: Generate JC and LC Ordinary Level learning outcomes
         run: |
           set -euo pipefail
           python -m pip install requests beautifulsoup4 pymupdf
@@ -53,9 +53,7 @@ jobs:
           curl --fail --location --retry 3 --connect-timeout 15 --max-time 120 --silent --show-error \
             "https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" \
             --output assets/syllabus/LC_Mathematics_Syllabus_2015.pdf
-          python scripts/build_curriculum_appendices.py
           python scripts/build_intro_outcomes.py
-          test -s source/appendices.ptx
           for strand in number geometry algebra statistics; do
             test -s "source/jc-${strand}-outcomes.ptx"
           done
@@ -242,65 +240,62 @@ jobs:
                   page.write_text(html, encoding="utf-8")
           print("Added accessible optional subpart drill-down to all 9 JC and LC OL strand pages.")
           PY
-      - name: Verify native appendices glossary and programme navigation
+      - name: Verify exactly three populated Maths Parts
         run: |
           set -euo pipefail
-          for page in \
-            part-junior-cycle.html \
-            part-transition-year.html \
-            part-leaving-certificate.html \
-            part-official-appendices.html \
-            jc-official-unifying.html \
-            lc-official-statistics.html \
-            chapter-glossary.html; do
-            test -s "output/web/$page" || { echo "Missing $page"; exit 1; }
-          done
-          for part in \
-            part-junior-cycle.html \
-            part-transition-year.html \
-            part-leaving-certificate.html \
-            part-computer-science.html \
-            part-jc-coding.html \
-            part-jc-digital-literacy.html \
-            part-physics.html \
-            part-applied-mathematics.html \
-            part-foundation.html \
-            part-leaving-certificate-applied.html; do
-            test -s "output/web/$part" || { echo "Missing subject Part $part"; exit 1; }
-          done
-          # Chapter landing pages list their child sections and may not render
-          # the section's body text directly. Check the five chapter-only
-          # placeholders in HTML and verify both nested introductions in source.
-          for introduction in \
-            chapter-computer-science-introduction.html \
-            chapter-jc-coding-introduction.html \
-            chapter-jc-digital-literacy-introduction.html \
-            chapter-physics-introduction.html \
-            chapter-applied-mathematics-introduction.html; do
-            test -s "output/web/$introduction" || { echo "Missing Introduction $introduction"; exit 1; }
-            grep -q 'Coming soon' "output/web/$introduction" || { echo "Missing Coming soon on $introduction"; exit 1; }
-          done
           python - <<'PY'
-          from lxml import etree
           from pathlib import Path
-          root = etree.parse("source/main.ptx").getroot()
-          namespaces={"xml":"http://www.w3.org/XML/1998/namespace"}
-          for chapter_id in ("chapter-foundation-programme","chapter-lca-programme"):
-              chapters=root.xpath(".//chapter[@xml:id=$id]", namespaces=namespaces, id=chapter_id)
-              if len(chapters)!=1 or "Coming soon." not in " ".join(chapters[0].itertext()):
-                  raise SystemExit("Missing placeholder in source chapter: "+chapter_id)
-              page=Path("output/web")/(chapter_id+".html")
-              if not page.is_file():
-                  raise SystemExit("Missing generated chapter page: "+str(page))
-          print("All seven upcoming subject Introductions are present in the source or published pages.")
+          from lxml import etree
+          root = etree.parse("source/main.ptx")
+          NS = "{http://www.w3.org/XML/1998/namespace}"
+          expected = [
+              "part-junior-cycle",
+              "part-leaving-certificate",
+              "part-transition-year",
+          ]
+          parts = [part.get(NS + "id") for part in root.findall(".//part")]
+          if parts != expected:
+              raise SystemExit("Expected JC Maths, LC OL Maths, TY Maths only; got " + str(parts))
+          root.xinclude()
+          for part in root.findall(".//part"):
+              chapters = part.findall("./chapter")
+              if not chapters:
+                  raise SystemExit("Empty Part: " + part.get(NS + "id"))
+              for chapter in chapters:
+                  if "Coming soon" in " ".join(chapter.itertext()):
+                      raise SystemExit("Placeholder in published chapter " + str(chapter.get(NS + "id")))
+          site = Path("output/web")
+          expected_pages = {part + ".html" for part in expected}
+          actual_pages = {p.name for p in site.glob("part-*.html")}
+          if actual_pages != expected_pages:
+              raise SystemExit("Unexpected published Parts: " + str(sorted(actual_pages)))
+          required = [
+              "jc-introduction.html",
+              "jc-unifying-strand.html",
+              "jc-outcomes-number.html",
+              "jc-outcomes-geometry.html",
+              "jc-outcomes-algebra.html",
+              "jc-outcomes-statistics.html",
+              "sets-domain-codomain.html",
+              "chapter-glossary.html",
+              "lc-ol-introduction.html",
+              "lc-ol-statistics-outcomes.html",
+              "lc-ol-geometry-outcomes.html",
+              "lc-ol-number-outcomes.html",
+              "lc-ol-algebra-outcomes.html",
+              "lc-ol-functions-outcomes.html",
+              "chapter-complex.html",
+              "chapter-sequences.html",
+              "chapter-ty-programme.html",
+          ]
+          missing = [name for name in required if not (site / name).is_file()]
+          if missing:
+              raise SystemExit("Missing populated pages: " + ", ".join(missing))
+          for name in ("part-junior-cycle.html","part-leaving-certificate.html","part-transition-year.html"):
+              if 'data-maths-programme="colour"' not in (site / name).read_text(encoding="utf-8"):
+                  raise SystemExit("Missing colour navigation: " + name)
+          print("Verified precisely three Maths Parts, learning outcomes, glossary and substantial content.")
           PY
-          grep -q 'part-jc-coding.html' output/web/programme-colours.js
-          grep -q 'part-jc-digital-literacy.html' output/web/programme-colours.js
-          test ! -e output/web/section-spec-junior-cycle.html || { echo "Legacy PDF specification section still published"; exit 1; }
-          grep -q 'data-maths-programme="colour"' output/web/part-junior-cycle.html
-          ! grep -q 'syllabus/reader.html' output/web/jc-official-unifying.html
-          ! grep -q 'syllabus/reader.html' output/web/lc-official-statistics.html
-          echo "Verified programme navigation, native appendices, glossary and removal of old viewer."
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
