@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-arithmetic">
-  <title>Arithmetic</title>
+  <title>Operations</title>
+  <objectives xml:id="li-number-operations">
+    <title>Learning Intentions</title>
+    <introduction><p>After completing this chapter, you should be able to do the following.</p></introduction>
+    <ol>
+      <li><p>Use addition, subtraction, multiplication and division to describe quantities, changes, equal groups and sharing.</p></li>
+      <li><p>Determine which operations are commutative and associative, using examples or counterexamples.</p></li>
+      <li><p>Explain distribution of multiplication over a grouped sum or difference.</p></li>
+      <li><p>Explain precisely when division distributes over a sum or difference, and recognise when it does not.</p></li>
+    </ol>
+  </objectives>
+
   <section xml:id="arithmetic-intro">
-    <title>Introduction</title>
-    <introduction><p>Addition and subtraction combine or compare quantities; multiplication and division describe equal groups, scaling and sharing. An expression may contain more than one operation, so grouping and the agreed order of operations matter.</p></introduction>
-    <p>The commutative, associative and distributive properties explain why many different calculation methods produce the same answer.</p>
+    <title>Operations and Their Properties</title>
+    <p>The four arithmetic operations are <term>addition</term>, <term>subtraction</term>, <term>multiplication</term> and <term>division</term>. They model combining, comparing, grouping, scaling and sharing. A group is a single mathematical object for the purpose of an operation; brackets, a fraction bar and a square-root bar can all indicate grouping.</p>
+    <p>An operation is <term>commutative</term> when swapping the operands does not change the result. It is <term>associative</term> when regrouping repeated uses of that operation does not change the result. These are separate properties.</p>
+    <table xml:id="operation-properties">
+      <title>Properties of the four operations</title>
+      <tabular>
+        <col width="23%"/><col width="23%"/><col width="23%"/><col width="31%"/>
+        <row header="yes"><cell>Operation</cell><cell>Commutative?</cell><cell>Associative?</cell><cell>Distributive relationship</cell></row>
+        <row><cell>Addition</cell><cell>Yes</cell><cell>Yes</cell><cell>Not the standard distribution law</cell></row>
+        <row><cell>Subtraction</cell><cell>No</cell><cell>No</cell><cell>Not in general</cell></row>
+        <row><cell>Multiplication</cell><cell>Yes</cell><cell>Yes</cell><cell>Over addition and subtraction</cell></row>
+        <row><cell>Division</cell><cell>No</cell><cell>No</cell><cell>Across a sum or difference in the numerator only</cell></row>
+      </tabular>
+    </table>
+    <p>For example, <m>3+5=5+3</m> and <m>(2+3)+4=2+(3+4)</m>. By contrast, <m>8-3\ne3-8</m> and <m>(12-6)-2\ne12-(6-2)</m>. Division also fails both commutativity and associativity in general.</p>
+    <p><term>Distribution</term> relates two operations. Multiplication distributes over a grouped sum: <m>a(b+c)=ab+ac</m>. It also distributes over a grouped difference: <m>a(b-c)=ab-ac</m>. For example, <m>3(4+5)=3\cdot4+3\cdot5</m>.</p>
+    <p>Division distributes over a grouped numerator when the same non-zero divisor is applied to every term: <m>\frac{a+b}{c}=\frac{a}{c}+\frac{b}{c}</m>, for <m>c\ne0</m>. This does <em>not</em> mean that division distributes over a denominator: <m>\frac{12}{2+4}=2</m>, whereas <m>\frac{12}{2}+\frac{12}{4}=9</m>.</p>
+    <p>Adding a number to a group, such as <m>3+(4+5)</m>, does not multiply it into every term. Here the brackets may be removed because addition is associative. It is therefore essential to name the principle used, not just the visible method.</p>
   </section>
   <section xml:id="arithmetic-practice">
     <title>Worked Example and Practice</title>
