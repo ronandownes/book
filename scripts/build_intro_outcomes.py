@@ -114,6 +114,16 @@ def tidy_outcome_sentence(p: etree._Element) -> None:
                 opening, count=1,
             )
         p.text = opening
+    # NCCA's webpage wraps subpart labels such as <alert>a)</alert>
+    # separately from the verb that follows. Capitalise after the label, not
+    # the label itself, and insert the previously missing inter-word space.
+    if len(p) and p[0].tag in ("alert", "em"):
+        label = (p[0].text or "").strip()
+        if re.fullmatch(r"(?:[a-z]|[ivx]{1,4})[.)]", label):
+            tail = p[0].tail or ""
+            match = re.match(r"^\s*([a-z])", tail)
+            if match:
+                p[0].tail = " " + match.group(1).upper() + tail[match.end():]
     rendered = "".join(p.itertext()).rstrip()
     if not rendered:
         return
