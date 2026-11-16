@@ -36,6 +36,8 @@ def from_existing(section: etree._Element) -> list[str]:
             if not value:
                 raise ValueError("Empty existing intention in " + str(section.get(XML_ID)))
             child.remove(p)
+            if child.tag == "introduction" and len(child) == 0:
+                section.remove(child)
             return [value[:1].upper() + value[1:]]
     return []
 
