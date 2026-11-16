@@ -208,6 +208,8 @@ def junior():
                     # PDF-verified statement above. Do not print it twice.
                     continue
                 extras.append(p)
+            if key == "number" and code == "N.1":
+                extras = correct_junior_index_notation(extras)
             rows.append((code, compact(part.findtext("title") or ""), [main, *extras]))
         wanted = [prefix+"."+str(i) for i in range(1,expected+1)]
         actual = [r[0] for r in rows]
@@ -226,6 +228,34 @@ def junior():
 def para(xml_body: str) -> etree._Element:
     return etree.fromstring(("<p>" + xml_body + "</p>").encode("utf-8"))
 
+def correct_junior_index_notation(paragraphs: list[etree._Element]) -> list[etree._Element]:
+    """Typeset the Junior Cycle index-form sub-outcome as native mathematics.
+
+    The NCCA HTML stores powers in sup elements and the fractional power
+    as a two-dimensional fraction. The generic text extractor flattens those
+    into strings such as a^(p)/^(q). Replace only that known paragraph,
+    retaining the remaining N.1 wording and the source's Higher Level emphasis.
+    """
+    fixed: list[etree._Element] = []
+    replaced = False
+    for p in paragraphs:
+        raw = compact("".join(p.itertext())).lower()
+        if not replaced and "explore numbers written as" in raw:
+            fixed.extend([
+                para(r"<alert>c)</alert> Explore numbers written as <m>a^b</m> (in index form) so that they can:"),
+                para("i. Flexibly translate between whole numbers and index representation of numbers."),
+                para(r"ii. Use and apply generalisations such as <m>a^p a^q=a^{p+q}</m>; <m>\frac{a^p}{a^q}=a^{p-q}</m>; <m>(a^p)^q=a^{pq}</m>; and <m>n^{1/2}=\sqrt{n}</m>, for <m>a\in\mathbb{Z}</m>, and <m>p,q,p-q,\sqrt{n}\in\mathbb{N}</m>; and for <m>a,b,\sqrt{n}\in\mathbb{R}</m> and <m>p,q\in\mathbb{Q}</m>."),
+                para(r"iii. <alert>Use and apply generalisations such as <m>a^0=1</m>; <m>a^{p/q}=\sqrt[q]{a^p}=(\sqrt[q]{a})^p</m>; <m>a^{-r}=\frac{1}{a^r}</m>;</alert>"),
+                para(r"<alert><m>(ab)^r=a^rb^r</m>; and <m>(a/b)^r=\frac{a^r}{b^r}</m>, for <m>a,b\in\mathbb{R}</m>; <m>p,q\in\mathbb{Z}</m>; and <m>r\in\mathbb{Q}</m>.</alert>"),
+                para("iv. Generalise numerical relationships involving operations involving numbers written in index form."),
+                para("v. Correctly use the order of arithmetic and index operations including the use of brackets."),
+            ])
+            replaced = True
+        else:
+            fixed.append(p)
+    if not replaced:
+        raise RuntimeError("JC N.1 index-form outcome was not found; refusing flattened maths publication.")
+    return fixed
 def correct_lc_formulas(code: str, paragraphs: list[etree._Element]) -> list[etree._Element]:
     """Repair formulas that a two-dimensional PDF cannot convert to plain text.
 
