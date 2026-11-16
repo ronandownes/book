@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-number-graphs">
+  <title>Graphs and Numerical Patterns</title>
+  <objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Represent sequences with tables and ordered pairs.</p></li><li><p>Plot numerical patterns on the co-ordinate plane.</p></li><li><p>Explain the distinction between discrete points and a continuous graph.</p></li></ol></objectives>
+  <introduction><p>A table and graph make a numerical pattern visible. We can test a rule and make predictions without assuming every pattern is continuous.</p></introduction>
+  <section xml:id="number-graphs-tables"><title>Tables and Co-ordinate Graphs</title>
+    <p>Consider <m>2,5,8,11,\ldots</m>. For term number <m>n</m>, the rule is <m>u_n=3n-1</m>. The corresponding points are <m>(1,2),(2,5),(3,8),(4,11)</m>. Plot them using term number on the horizontal axis.</p>
+    <p>Because term numbers are positive integers, the points represent a discrete sequence. Joining them with a line would introduce inputs not specified by that sequence.</p>
+    <example xml:id="example-number-graphs"><title>The fifth point</title><statement><p>Find the point for the fifth term.</p></statement><solution><p><m>(5,14)</m>.</p></solution></example>
+    <exercise xml:id="exercise-number-graphs"><statement><p>List the first four points for <m>u_n=2n+1</m>.</p></statement><answer><p><m>(1,3),(2,5),(3,7),(4,9)</m>.</p></answer></exercise>
+  </section>
+</chapter>
