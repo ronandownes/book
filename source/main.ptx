@@ -12,21 +12,43 @@
             <p><url href="https://ronandownes.github.io/maths/" visual="Irish School Maths Apps"/> accompanies this book with interactive activities, explorations and practice.</p>
             <p>Additional <url href="https://ronandownes.github.io/calculator/resources/" visual="free textbooks and maths resources"/> are collected on a separate page, including links to Desmos, GeoGebra and open textbooks. These supplement, rather than replace, your own course.</p>
             <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
-            <p>This book presently contains JC Maths, LC Ordinary Level Maths and TY Maths.</p>
+            <p>This edition follows the five interconnected strands of Junior Cycle Mathematics. Existing LC Ordinary Level and TY sources remain in the repository but are not included in this edition.</p>
           </preface>
         </frontmatter>
 
-    <part xml:id="part-junior-cycle">
-      <title>JC Maths</title>
+    <part xml:id="part-jc-unifying">
+      <title>Unifying Strand</title>
       <xi:include href="./jc-introduction.ptx" />
+      <xi:include href="./glossary.ptx" />
+    </part>
 
-      <!-- Four introductory Number chapters; retained source chapters are not removed. -->
-      <xi:include href="./sets-chapter.ptx" />
+    <part xml:id="part-jc-number">
+      <title>Number</title>
+      <xi:include href="./jc-number-learning-outcomes.ptx" />
+      <xi:include href="./number-introduction.ptx" />
       <xi:include href="./arithmetic.ptx" />
       <xi:include href="./indices-roots.ptx" />
+      <xi:include href="./index-laws.ptx" />
+      <xi:include href="./order-of-operations.ptx" />
       <xi:include href="./factors-multiples-primes.ptx" />
+      <xi:include href="./accuracy-standard-form.ptx" />
+      <xi:include href="./scientific-notation.ptx" />
+      <xi:include href="./fractions.ptx" />
+      <xi:include href="./ratio-proportion.ptx" />
+      <xi:include href="./number-patterns.ptx" />
+      <xi:include href="./number-graphs.ptx" />
+      <xi:include href="./sets-chapter.ptx" />
+    </part>
 
-      <!-- Algebra and Functions chapters, in teaching order -->
+    <part xml:id="part-jc-geometry">
+      <title>Geometry and Trigonometry</title>
+      <xi:include href="./jc-geometry-learning-outcomes.ptx" />
+      <xi:include href="./trigonometry-chapter.ptx" />
+    </part>
+
+    <part xml:id="part-jc-algebra">
+      <title>Algebra and Functions</title>
+      <xi:include href="./jc-algebra-learning-outcomes.ptx" />
       <xi:include href="./algebra-patterns.ptx" />
       <xi:include href="./algebra-language.ptx" />
       <xi:include href="./algebra-substitution.ptx" />
@@ -36,7 +58,7 @@
       <xi:include href="./algebra-division-fractions.ptx" />
       <xi:include href="./algebra-equations-inequalities.ptx" />
       <xi:include href="./algebra-changing-subject.ptx" />
-<chapter xml:id="chapter-functions"><title>Functions and Graphs</title>
+<chapter xml:id="chapter-functions"><title>Functions and Graphs</title><objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Define a function using an input-output rule.</p></li><li><p>Distinguish data points from a mathematical model.</p></li></ol></objectives><introduction><p>Functions describe relationships between quantities and help us investigate real data.</p></introduction>
               <section xml:id="functions-intro"><title>Introduction</title>
                 <p>Do countries with higher female literacy rates tend to have fewer births per woman? We can explore this question using real data.</p>
                 <p>Each point on the graph represents a country. Select a point to see its name, its measurements and the year. The blue line models the general trend.</p>
@@ -52,10 +74,12 @@
                 <p>A function assigns exactly one output to each input in its domain.</p>
               </section>
             </chapter>
+    </part>
 
-      <!-- Other developed Junior Cycle material -->
-      <xi:include href="./trigonometry-chapter.ptx" />
-<chapter xml:id="chapter-probability"><title>Events and Counting</title>
+    <part xml:id="part-jc-statistics">
+      <title>Statistics and Probability</title>
+      <xi:include href="./jc-statistics-learning-outcomes.ptx" />
+<chapter xml:id="chapter-probability"><title>Events and Counting</title><objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Use the fundamental counting principle.</p></li><li><p>Explain why the counting rule applies.</p></li></ol></objectives><introduction><p>Probability begins with a precise account of possible outcomes.</p></introduction>
               <section xml:id="probability-fcp"><title>The Fundamental Counting Principle</title>
                 <p>When the first choice has <m>m</m> possibilities and the second has <m>n</m> possibilities, every combination of choices gives <m>mn</m> possibilities.</p>
                 <exercise xml:id="exercise-fcp">
@@ -64,59 +88,6 @@
                 </exercise>
               </section>
             </chapter>
-      <xi:include href="./glossary.ptx" />
-    </part>
-
-    <part xml:id="part-leaving-certificate">
-      <title>LC OL Maths</title>
-      <xi:include href="./lc-ol-introduction.ptx"/>
-<chapter xml:id="chapter-complex"><title>Complex Numbers</title>
-              <section xml:id="complex-intro"><title>Beyond the real numbers</title>
-                <p>We define <m>i</m> by <m>i^2=-1</m>. A complex number has the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real.</p>
-                <p>On the Argand diagram, <m>a+bi</m> is represented by the point <m>(a,b)</m>. The horizontal axis shows the real part and the vertical axis shows the imaginary part.</p>
-                <p>Multiplication by <m>i</m> sends <m>a+bi</m> to <m>-b+ai</m>: a quarter-turn anticlockwise about the origin. Division by <m>i</m> produces a quarter-turn clockwise.</p>
-                <p>For classroom exploration and step-by-step calculations, <url href="https://ronandownes.github.io/maths/apps/complex-numbers/index.html" visual="open the standalone Complex Number Calculations app full screen"/>.</p>
-              </section>
-              <section xml:id="complex-reading"><title>Further reading on complex numbers</title>
-                <p>These are external references for further explanation and study. The IB course notes are independent of the Irish Leaving Certificate syllabus; the PreTeXt books range from introductory material to undergraduate complex analysis.</p>
-                <p><url href="https://aa.selfsg.com/units/u19-complex-numbers/" visual="IB Mathematics AA: Complex Numbers"/> covers Cartesian form, conjugates, the Argand diagram, modulus, argument, powers and geometric interpretation.</p>
-                <p><url href="https://complexanalysis.org/web/ch_Complex_Numbers.html" visual="Howell and Mathews: Complex Analysis, Chapter 1"/> develops the algebra and geometry of complex numbers.</p>
-                <p><url href="https://judsonbooks.org/aata-files/aata-html/cyclic-section-mult-group-c.html" visual="Judson: Multiplicative Group of Complex Numbers"/> covers complex operations, modulus, argument and the roots of unity.</p>
-                <p><url href="https://www.cs.uleth.ca/~morris/Combinatorics/Combinatorics.html" visual="Morris: Combinatorics, Appendix A: Complex Numbers"/> provides an introductory account in a PreTeXt textbook.</p>
-                <p><url href="https://matthbeck.github.io/papers/complex.pdf" visual="Beck et al.: A First Course in Complex Analysis (PDF, PreTeXt edition)"/> introduces complex-number arithmetic and geometry.</p>
-                <p><url href="https://pretextbook.org/examples/sample-book/structural/html/section-cyclic-complex-numbers.html" visual="PreTeXt Sample Book: Cyclic Groups of Complex Numbers"/> also demonstrates how complex-number mathematics can be presented in PreTeXt.</p>
-              </section>
-            </chapter>
-
-<xi:include href="./sequences-chapter.ptx" />
-    </part>
-
-    <part xml:id="part-transition-year">
-      <title>TY Maths</title>
-      <chapter xml:id="chapter-ty-programme">
-        <title>Introduction</title>
-        <section xml:id="ty-programme-introduction">
-          <title>Investigations and Mathematical Modelling</title>
-          <p><em>Learning intentions:</em> Interpret data, construct a model, justify assumptions and communicate the limitations of a conclusion.</p>
-          <p>In Transition Year we can investigate interesting questions without treating mathematics as a fixed sequence of yearly chapters. We use diagrams, data, calculation, reasoning and technology to explore and test ideas.</p>
-          <activity xml:id="ty-first-modelling-investigation">
-            <title>A first modelling investigation</title>
-            <p>The following electricity-use figures are illustrative, not readings from a particular home. Four consecutive months record <m>240</m>, <m>220</m>, <m>205</m> and <m>195</m> kWh.</p>
-            <task>
-              <p>Represent the data in a table and plot it on a graph. Describe the pattern and explain whether it is reasonable to fit a straight line.</p>
-              <answer><p>The values decline, but the decreases of <m>20</m>, <m>15</m> and <m>10</m> kWh are not constant. A straight line might serve as an approximation over these four months, not as an exact rule.</p></answer>
-            </task>
-            <task>
-              <p>Make a tentative estimate for the next month. Explain your choice and why it should not be treated as a reliable prediction.</p>
-              <answer><p>One possible estimate is around <m>185</m> kWh if recent changes continue. However, seasonal patterns, occupancy, weather and appliances could all change the trend. Other reasonable estimates with a stated method are acceptable.</p></answer>
-            </task>
-            <task>
-              <p>Identify one additional measurement or source of evidence that would make your conclusion stronger.</p>
-              <answer><p>For example, collect comparable monthly readings from the same household over a full year to examine seasonal variation, or compare consumption with local temperatures.</p></answer>
-            </task>
-          </activity>
-        </section>
-      </chapter>
     </part>
   </book>
 </pretext>
