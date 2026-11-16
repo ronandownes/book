@@ -60,8 +60,40 @@ jobs:
           for strand in statistics geometry number algebra functions; do
             test -s "source/lc-ol-${strand}-outcomes.ptx"
           done
+      - name: Add section-start Learning Intentions
+        run: |
+          set -euo pipefail
+          python scripts/add_learning_intentions.py
+          grep -q '<objectives>' source/sets-chapter.ptx
+          grep -q '<objectives>' source/number-introduction.ptx
+          grep -q '<objectives>' source/algebra-language.ptx
       - name: Build web textbook
         run: pretext build web
+      - name: Apply Learning Intentions reading panels
+        run: |
+          set -euo pipefail
+          node --check assets/learning-intentions.js
+          cp assets/learning-intentions.css output/web/learning-intentions.css
+          cp assets/learning-intentions.js output/web/learning-intentions.js
+          python - <<'PY'
+          from pathlib import Path
+          site = Path("output/web")
+          count = 0
+          css = '<link rel="stylesheet" href="learning-intentions.css?v=1" data-learning-intentions="1"/>'
+          js = '<script defer src="learning-intentions.js?v=1" data-learning-intentions="1"></script>'
+          for page in site.glob("*.html"):
+              html = page.read_text(encoding="utf-8")
+              if "Learning Intentions" not in html or "</head>" not in html or "</body>" not in html:
+                  continue
+              if 'data-learning-intentions="1"' not in html:
+                  html = html.replace("</head>", "  " + css + "\n</head>", 1)
+                  html = html.replace("</body>", "  " + js + "\n</body>", 1)
+                  page.write_text(html, encoding="utf-8")
+              count += 1
+          if count < 65:
+              raise SystemExit("Learning Intentions present on only " + str(count) + " pages.")
+          print("Published native Learning Intentions on " + str(count) + " pages.")
+          PY
       - name: Add immediate checking to single-choice questions
         run: |
           set -euo pipefail
