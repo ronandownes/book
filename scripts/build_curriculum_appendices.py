@@ -114,17 +114,27 @@ def junior_content():
     return out
 
 def page_lines(page, x0, x1):
-    rect = fitz.Rect(x0, 0, x1, page.rect.height)
-    blocks = page.get_text("dict", clip=rect)["blocks"]
+    """Read whole source lines whose *starts* lie within the selected column.
+
+    Clipping rectangles can cut off the final letters of a word even when its
+    text legitimately belongs to the column. This intentionally retains the
+    full original text of each selected line, without including adjacent HL
+    lines whose starts lie in the separate right-hand column.
+    """
+    blocks = page.get_text("dict")["blocks"]
     result = []
     for b in blocks:
         if "lines" not in b:
             continue
         for line in b["lines"]:
+            begin = line["bbox"][0]
+            if not (x0 - 4 <= begin < x1):
+                continue
             txt = clean("".join(s.get("text", "") for s in line["spans"]))
             if txt:
                 result.append((line["bbox"][1], txt))
     return sorted(result, key=lambda row: row[0])
+
 
 def leave_content():
     if not PDF_PATH.exists() or PDF_PATH.stat().st_size < 100000:
