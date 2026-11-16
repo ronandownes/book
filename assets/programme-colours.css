@@ -1,3 +1,30 @@
+/* Junior Cycle strand-specific Part colours and paler chapter colours. */
+.maths-programme-unifying {
+  --maths-part-bg:#36577d; --maths-part-accent:#b8d2eb;
+  --maths-chapter-bg:#e4edf5; --maths-chapter-ink:#284a6c;
+  --maths-chapter-edge:#91b0cd;
+}
+.maths-programme-number {
+  --maths-part-bg:#176946; --maths-part-accent:#9de5b7;
+  --maths-chapter-bg:#e0efe5; --maths-chapter-ink:#185039;
+  --maths-chapter-edge:#78b692;
+}
+.maths-programme-geometry {
+  --maths-part-bg:#176a78; --maths-part-accent:#b3e5ea;
+  --maths-chapter-bg:#e1f1f3; --maths-chapter-ink:#185363;
+  --maths-chapter-edge:#86c3c9;
+}
+.maths-programme-algebra {
+  --maths-part-bg:#633b87; --maths-part-accent:#d9baf2;
+  --maths-chapter-bg:#ece4f3; --maths-chapter-ink:#563574;
+  --maths-chapter-edge:#b99ed1;
+}
+.maths-programme-statistics {
+  --maths-part-bg:#345786; --maths-part-accent:#b9d4f5;
+  --maths-chapter-bg:#e5edf7; --maths-chapter-ink:#2b507b;
+  --maths-chapter-edge:#9fbbdc;
+}
+
 /* Irish School Maths programme hierarchy: Part strong colour; Chapter pastel;
    Section/Subsection white. Styling only: all content remains native PreTeXt. */
 .maths-programme-jc {
