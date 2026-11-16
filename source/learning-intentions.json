@@ -1,0 +1,227 @@
+{
+  "description": "Author-reviewed, concise intentions for populated teaching sections. Specification reference tables are deliberately excluded.",
+  "intentions": {
+    "number-intro": [
+      "Explain what a number represents and express a quantity in more than one way."
+    ],
+    "number-introduction-practice": [
+      "Represent a number in two different ways and explain why the representations are equivalent."
+    ],
+    "number-systems-intro": [
+      "Classify numbers as natural, integer, rational, irrational or real, and explain the relationships between these sets."
+    ],
+    "number-systems-practice": [
+      "Classify given numbers and justify each classification."
+    ],
+    "arithmetic-intro": [
+      "Explain the four operations and apply the order of operations accurately."
+    ],
+    "arithmetic-practice": [
+      "Evaluate numerical expressions using a clear order of operations and justify each step."
+    ],
+    "factors-intro": [
+      "Distinguish factors, multiples and prime numbers, and use prime factorisation."
+    ],
+    "factors-multiples-primes-practice": [
+      "Find a prime factorisation and use it to analyse a whole number."
+    ],
+    "fractions-intro": [
+      "Interpret fractions as quantities, quotients and comparisons, and recognise equivalent fractions."
+    ],
+    "fractions-practice": [
+      "Calculate with fractions using equivalent forms and explain the result."
+    ],
+    "decimals-intro": [
+      "Explain decimal place value and connect fractions, decimals and percentages."
+    ],
+    "decimals-percentages-practice": [
+      "Calculate a percentage of a quantity using a method you can explain."
+    ],
+    "ratio-intro": [
+      "Interpret ratios as multiplicative comparisons and identify equivalent ratios."
+    ],
+    "ratio-proportion-practice": [
+      "Divide a quantity in a given ratio and check that the parts total the original quantity."
+    ],
+    "indices-intro": [
+      "Interpret indices as powers and roots as inverse operations in appropriate number sets."
+    ],
+    "indices-roots-practice": [
+      "Use an index law to simplify a product of powers and justify the rule used."
+    ],
+    "accuracy-intro": [
+      "Choose an appropriate degree of accuracy and express large or small numbers in standard form."
+    ],
+    "accuracy-standard-form-practice": [
+      "Write a number in standard form and explain its place value."
+    ],
+    "financial-intro": [
+      "Use percentages and proportional reasoning to compare prices, discounts and financial quantities."
+    ],
+    "financial-mathematics-practice": [
+      "Calculate a discounted price and explain the saving."
+    ],
+    "number-patterns-intro": [
+      "Describe a numerical pattern, identify its rule and predict subsequent terms."
+    ],
+    "number-patterns-practice": [
+      "Extend a sequence and explain why the proposed rule fits the known terms."
+    ],
+    "algebra-patterns-intro": [
+      "Represent patterns with variables and use algebra to express a general rule."
+    ],
+    "algebra-patterns-practice": [
+      "Find a formula for a growing pattern and test it against known stages."
+    ],
+    "algebra-substitution-intro": [
+      "Substitute values into an algebraic expression while respecting grouping and order of operations."
+    ],
+    "algebra-substitution-practice": [
+      "Evaluate expressions correctly for given values, including negative inputs."
+    ],
+    "algebra-simplifying-intro": [
+      "Identify like terms and simplify expressions by collecting their coefficients."
+    ],
+    "algebra-simplifying-practice": [
+      "Collect like terms and check that the simplified expression is equivalent."
+    ],
+    "algebra-factorisation-intro": [
+      "Explain factorisation as writing an expression as a product and reversing expansion."
+    ],
+    "algebra-factorisation-practice": [
+      "Factorise using a common factor and verify by expanding."
+    ],
+    "algebra-division-intro": [
+      "Simplify algebraic fractions by cancelling factors and state any excluded values."
+    ],
+    "algebra-division-fractions-practice": [
+      "Simplify an algebraic quotient and explain why its restrictions matter."
+    ],
+    "algebra-equations-intro": [
+      "Solve equations using operations that preserve equality and interpret inequalities."
+    ],
+    "algebra-equations-inequalities-practice": [
+      "Solve a linear equation and check the solution by substitution."
+    ],
+    "algebra-changing-intro": [
+      "Rearrange a formula to make a chosen variable the subject."
+    ],
+    "algebra-changing-subject-practice": [
+      "Change the subject of a formula and check the rearrangement."
+    ],
+    "algebra-words": [
+      "Distinguish variables, coefficients, constants and terms, and explain what each represents."
+    ],
+    "variables-geometric-models": [
+      "Represent measurements using variables and relate symbols to lengths or areas."
+    ],
+    "algebra-vocabulary-definitions": [
+      "Identify and name the components of an algebraic expression accurately."
+    ],
+    "algebra-context-and-assessment": [
+      "Build and interpret an algebraic model for a practical situation."
+    ],
+    "algebra-vocabulary-reflection": [
+      "Predict a result, investigate it and check your mathematical explanation."
+    ],
+    "algebra-operation-words": [
+      "Use sum, difference, product, quotient and fraction precisely when describing expressions."
+    ],
+    "algebra-language-practice": [
+      "Translate between verbal descriptions and algebraic expressions."
+    ],
+    "expanding-principle": [
+      "Explain distribution of multiplication over a grouped sum or difference."
+    ],
+    "expanding-monomial-bracket": [
+      "Expand a product of one term and a bracket and account for every term."
+    ],
+    "expanding-two-brackets": [
+      "Expand two brackets by applying the distributive law twice."
+    ],
+    "expanding-distribution": [
+      "Identify all partial products and explain why none may be omitted."
+    ],
+    "expanding-foil-lab": [
+      "Use a visual model to investigate the four products in two binomial factors."
+    ],
+    "expanding-cross-products": [
+      "Collect cross-products as like terms using a clear written layout."
+    ],
+    "expanding-place-value": [
+      "Multiply polynomials using a place-value layout and correctly combine terms."
+    ],
+    "expanding-homework": [
+      "Apply expansion independently and check answers with an alternative representation."
+    ],
+    "expanding-scaling": [
+      "Investigate how scaling a factor changes the product and justify the relationship."
+    ],
+    "expanding-zero-placeholders": [
+      "Explain why zero coefficients can be useful placeholders in polynomial multiplication."
+    ],
+    "expanding-language": [
+      "Explain expansions accurately using the language of groups, terms, products and distribution."
+    ],
+    "expanding-hidden-maths": [
+      "Identify general patterns arising from expanded products."
+    ],
+    "expanding-beyond-school": [
+      "Explore the expansion of higher-degree polynomials using the same underlying principles."
+    ],
+    "trig-intro": [
+      "Identify the sides of a right-angled triangle relative to an angle and select an appropriate ratio."
+    ],
+    "trig-nine-families": [
+      "Recognise the main families of right-triangle questions and choose an efficient strategy."
+    ],
+    "trig-proportion-and-limits": [
+      "Explain how trigonometric ratios represent proportional relationships and investigate their behaviour."
+    ],
+    "trig-cosine-rule": [
+      "Apply the cosine rule to calculate a missing side or angle in a non-right triangle."
+    ],
+    "sequences-formula-guide": [
+      "Identify and interpret the formulas used for arithmetic and geometric sequences."
+    ],
+    "sequences-cicadas": [
+      "Model repeating events and explain when cycles coincide."
+    ],
+    "sequences-intro": [
+      "Recognise a sequence, describe its pattern and distinguish arithmetic from geometric change."
+    ],
+    "sequences-three-terms": [
+      "Find a missing middle term and justify a relationship between three consecutive terms."
+    ],
+    "sequences-sum": [
+      "Derive and use the arithmetic-series sum formula by pairing terms."
+    ],
+    "sequences-exam-practice": [
+      "Select appropriate sequence formulas and explain solutions to examination questions."
+    ],
+    "sequences-quadratic": [
+      "Recognise a quadratic sequence from its differences and investigate a general rule."
+    ],
+    "sequences-geometric": [
+      "Model repeated multiplication using a geometric sequence and calculate its terms."
+    ],
+    "sequences-assessment": [
+      "Explain the strategy used for a sequence problem and reflect on accuracy and efficiency."
+    ],
+    "functions-intro": [
+      "Interpret points in a data set, describe the relationship between two quantities and question a fitted model."
+    ],
+    "probability-fcp": [
+      "Use the fundamental counting principle to count outcomes in successive choices."
+    ],
+    "complex-intro": [
+      "Explain why complex numbers extend the real numbers and interpret their basic notation."
+    ],
+    "complex-reading": [
+      "Locate mathematical references and compare explanations of complex-number ideas."
+    ],
+    "ty-programme-introduction": [
+      "Represent a real situation mathematically, test assumptions and explain limits of a model."
+    ]
+  }
+}
