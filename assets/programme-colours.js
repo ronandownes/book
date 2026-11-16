@@ -3,9 +3,11 @@
 (() => {
   "use strict";
   const partTargets = {
-    "part-junior-cycle.html":"jc",
-    "part-leaving-certificate.html":"lc",
-    "part-transition-year.html":"ty"
+    "part-jc-unifying.html":"unifying",
+    "part-jc-number.html":"number",
+    "part-jc-geometry.html":"geometry",
+    "part-jc-algebra.html":"algebra",
+    "part-jc-statistics.html":"statistics"
   };
   const chapterTargets = __MATHS_CHAPTERS__;
   const tocSelector = "nav, .toc, .ptx-toc, .toc-container, #toc, .toc-items, .toc-item-list, [role='navigation']";
