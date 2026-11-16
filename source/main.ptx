@@ -130,6 +130,30 @@
       </chapter>
     </part>
 
+    <part xml:id="part-computer-science">
+      <title>Computer Science</title>
+      <chapter xml:id="chapter-computer-science-introduction">
+        <title>Introduction</title>
+        <p>This part provides a place for computer science material as the course is developed.</p>
+      </chapter>
+    </part>
+
+    <part xml:id="part-physics">
+      <title>Physics</title>
+      <chapter xml:id="chapter-physics-introduction">
+        <title>Introduction</title>
+        <p>This part provides a place for physics material as the course is developed.</p>
+      </chapter>
+    </part>
+
+    <part xml:id="part-applied-mathematics">
+      <title>Applied Mathematics</title>
+      <chapter xml:id="chapter-applied-mathematics-introduction">
+        <title>Introduction</title>
+        <p>This part provides a place for applied mathematics material as the course is developed.</p>
+      </chapter>
+    </part>
+
     <xi:include href="./appendices.ptx" />
   </book>
 </pretext>
