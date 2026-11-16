@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<preface xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="jc-introduction">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="jc-introduction">
   <title>JC Maths Introduction</title>
+  <introduction>
   <p>The six areas are organised around mathematical ideas, not prescribed years of study. Return to a chapter whenever a prerequisite or connection needs attention.</p>
   <p>Each teaching section begins with Learning Intentions. Official learning outcomes are available within the course, with notes and cross-references added as topics develop.</p>
+  </introduction>
   <section xml:id="jc-learning-outcomes">
     <title>Learning Outcomes</title>
     <p>Learning outcomes describe the <em>knowledge</em>, <em>understanding</em>, <em>skills</em> and <em>values</em> students should be able to demonstrate.</p>
@@ -39,4 +41,4 @@
     </table>
     <p><em>Source:</em> National Council for Curriculum and Assessment, <url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf#page=14" visual="Junior Cycle Mathematics Specification (2018), page 14"/>. The 13 learning outcomes and the six elements are presented in their published order. Initial capitals and final full stops have been added for consistent reading; the specification is the authoritative source.</p>
   </section>
-</preface>
+</chapter>

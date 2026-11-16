@@ -293,7 +293,7 @@ jobs:
           from lxml import etree
           xmlid="{http://www.w3.org/XML/1998/namespace}id"
           doc=etree.parse("source/main.ptx")
-          expected=["part-jc-number","part-jc-geometry","part-jc-trigonometry","part-jc-algebra","part-jc-functions","part-jc-statistics","part-transition-year","part-lc-ol-statistics","part-lc-ol-geometry","part-lc-ol-number","part-lc-ol-algebra","part-lc-ol-functions"]
+          expected=["part-jc-introduction","part-jc-number","part-jc-geometry","part-jc-trigonometry","part-jc-algebra","part-jc-functions","part-jc-statistics","part-transition-year","part-lc-ol-statistics","part-lc-ol-geometry","part-lc-ol-number","part-lc-ol-algebra","part-lc-ol-functions"]
           parts=[p.get(xmlid) for p in doc.findall(".//part")]
           if parts!=expected: raise SystemExit("Wrong Part order: "+str(parts))
           doc.xinclude()

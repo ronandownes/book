@@ -1,4 +1,6 @@
-/* Six distinct Junior Cycle colours, TY and five LC OL companion palettes. */
+/* Six Junior Cycle subject colours, a neutral Introduction, TY and five LC OL companion palettes. */
+.maths-programme-intro{--maths-part-bg:#31556C;--maths-part-accent:#BBD8E7;--maths-chapter-bg:#E8F1F6;--maths-chapter-ink:#23485D;--maths-chapter-edge:#9CBFD4;}
+
 .maths-programme-number{--maths-part-bg:#176946;--maths-part-accent:#B1E6C5;--maths-chapter-bg:#E1F1E8;--maths-chapter-ink:#185039;--maths-chapter-edge:#83BB99;}
 .maths-programme-geometry{--maths-part-bg:#117781;--maths-part-accent:#B8E7E9;--maths-chapter-bg:#E2F2F3;--maths-chapter-ink:#145361;--maths-chapter-edge:#8AC8CE;}
 .maths-programme-trigonometry{--maths-part-bg:#285FA3;--maths-part-accent:#BFDAF8;--maths-chapter-bg:#E4EEFA;--maths-chapter-ink:#234D7F;--maths-chapter-edge:#9CB9E3;}

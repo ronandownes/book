@@ -3,6 +3,7 @@
 (() => {
   "use strict";
   const partTargets = {
+    "part-jc-introduction.html":"intro",
     "part-jc-number.html":"number",
     "part-jc-geometry.html":"geometry",
     "part-jc-trigonometry.html":"trigonometry",

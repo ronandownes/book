@@ -14,10 +14,14 @@
             <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
             <p>This edition contains six Junior Cycle areas, TY Maths and Leaving Certificate Ordinary Level Maths.</p>
           </preface>
-              <xi:include href="./jc-introduction.ptx"/>
     </frontmatter>
 
-<part xml:id="part-jc-number">
+<part xml:id="part-jc-introduction">
+      <title>JC Maths Introduction</title>
+      <xi:include href="./jc-introduction.ptx"/>
+    </part>
+
+    <part xml:id="part-jc-number">
       <title>Number</title>
       <xi:include href="./jc-number-learning-outcomes.ptx" />
       <xi:include href="./number-introduction.ptx" />
@@ -59,6 +63,7 @@
       <xi:include href="./algebra-equations-inequalities.ptx" />
       <xi:include href="./algebra-changing-subject.ptx" />
 
+          <xi:include href="./glossary.ptx"/>
     </part>
 
     <part xml:id="part-jc-functions">
