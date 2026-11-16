@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-order-operations">
+  <title>Order of Operations</title>
+  <objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Interpret grouping, brackets and fraction bars.</p></li><li><p>Use powers, multiplication, division, addition and subtraction in the agreed order.</p></li><li><p>Explain why expressions with different grouping can have different values.</p></li></ol></objectives>
+  <introduction><p>The order of operations is a convention for reading expressions without ambiguity. A bracket or fraction bar can group an expression into a single mathematical object.</p></introduction>
+  <section xml:id="order-of-operations-groups"><title>Groups and Precedence</title>
+    <p>Evaluate groups first, then powers and roots, then multiplication and division from left to right, then addition and subtraction from left to right.</p>
+    <example xml:id="example-order-of-operations"><title>Compare two expressions</title><statement><p>Evaluate <m>5+2\cdot3^2</m> and <m>(5+2)\cdot3^2</m>.</p></statement><solution><p>The first gives <m>5+18=23</m>; the second gives <m>7\cdot9=63</m>.</p></solution></example>
+    <exercise xml:id="exercise-order-of-operations"><statement><p>Calculate <m>24\div4\cdot2</m> and <m>24\div(4\cdot2)</m>.</p></statement><answer><p>The results are <m>12</m> and <m>3</m>.</p></answer></exercise>
+  </section>
+</chapter>
