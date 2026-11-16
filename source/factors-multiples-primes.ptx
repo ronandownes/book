@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-factors-multiples-primes">
-  <title>Factors, Multiples and Prime Numbers</title>
+  <title>Factors, Multiples and Prime Factorisation</title>
+  <objectives xml:id="li-factors-multiples">
+    <title>Learning Intentions</title>
+    <introduction><p>After completing this chapter, you should be able to do the following.</p></introduction>
+    <ol>
+      <li><p>Identify factors, multiples, prime numbers and composite numbers.</p></li>
+      <li><p>Express a positive integer greater than one as a product of prime factors, including in index form.</p></li>
+      <li><p>Find the highest common factor (HCF) of two or more positive integers.</p></li>
+      <li><p>Find the lowest common multiple (LCM) and explain how prime factorisation supports both calculations.</p></li>
+    </ol>
+  </objectives>
+
   <section xml:id="factors-intro">
     <title>Introduction</title>
     <introduction><p>A factor divides a whole number without a remainder; a multiple is obtained by multiplying it by an integer. A prime number greater than one has exactly two positive factors, 1 and itself.</p></introduction>
-    <p>Prime factorisation reveals the structure of whole numbers and helps us calculate the highest common factor and lowest common multiple.</p>
+    <p>Prime factorisation reveals the structure of positive integers. The <term>highest common factor</term> (HCF) uses the prime factors shared by the numbers, each with the lower power; the <term>lowest common multiple</term> (LCM) uses every prime factor needed, each with the higher power.</p>
+    <p>For example, <m>12=2^2\cdot3</m> and <m>18=2\cdot3^2</m>. Their HCF is <m>2\cdot3=6</m>; their LCM is <m>2^2\cdot3^2=36</m>. The two ideas answer different questions: what divides both, and what is divisible by both?</p>
   </section>
   <section xml:id="factors-multiples-primes-practice">
     <title>Worked Example and Practice</title>
