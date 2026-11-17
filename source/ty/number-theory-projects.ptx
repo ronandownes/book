@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-ty-number-theory">
+  <title>20 Number Theory Projects</title>
+  <introduction>
+    <p>Choose a question that makes you curious. Each project has a finite investigation that you can finish and another student can verify. Some connect to famous conjectures; your project is to investigate the stated range and explain your evidence.</p>
+  </introduction>
+  <section xml:id="ty-number-theory-projects">
+    <title>Choose Your Investigation</title>
+    <objectives>
+      <title>Learning Intentions</title>
+      <ul>
+        <li><p>Ask a precise question and collect reproducible mathematical evidence.</p></li>
+        <li><p>Explain a pattern, check a counterexample and distinguish evidence from proof.</p></li>
+        <li><p>Communicate a conclusion that another student can verify independently.</p></li>
+      </ul>
+    </objectives>
+    <introduction>
+      <p><alert>Your finished display:</alert> a clear question; a table, diagram or graph; at least two worked checks; your explanation; the exact limits of your conclusion; and your sources. Use one poster or four short slides, followed by a two-minute explanation.</p>
+      <p><alert>How to work:</alert> predict first, calculate systematically, look for a failure, and exchange checks with a partner. A calculator, spreadsheet or short program may help. Keep formulas or code so the results can be reproduced. If AI helps, record what it suggested and what you checked yourself.</p>
+      <p><alert>A manageable sequence:</alert> one lesson to choose and plan; one to collect evidence; one to explain and check; one to prepare and share. A stretch question is optional. These are TY investigations inspired by mathematical investigation work, rather than an official CBA assessment task.</p>
+      <p><alert>Claim language:</alert> write <q>I verified this for every integer from … to …</q> when you have checked a range. Reserve <q>proved for all</q> for a valid general argument. Goldbach, twin-prime and Collatz projects do not ask you to settle the general conjectures.</p>
+    </introduction>
+    <subsection xml:id="ty-project-recurring-decimals">
+      <title>Recurring Decimals: Where Does the Repeat Begin?</title>
+      <p><alert>Question.</alert> What decides whether a fraction terminates, and how long its repeating block is?</p>
+      <p><alert>Investigate.</alert> Find the exact decimal behaviour of <m>1/n</m> for <m>2\leq n\leq30</m>. Record any non-repeating prefix, the repeating block and its length. Track remainders in long division: a displayed calculator decimal may be rounded.</p>
+      <p><alert>Start here.</alert> <m>1/8=0.125</m>, <m>1/6=0.1\overline{6}</m> and <m>1/7=0.\overline{142857}</m>. Their period lengths are <m>0</m>, <m>1</m> and <m>6</m>.</p>
+      <p><alert>Display and explain.</alert> Colour-code terminating and recurring cases, then compare denominator factorisations. Explain why a repeated remainder forces the digits to repeat. Reduce a fraction before applying the denominator rule.</p>
+      <p><alert>Stretch.</alert> Prove that a reduced fraction terminates in base ten exactly when its denominator has no prime factors other than <m>2</m> and <m>5</m>.</p>
+    </subsection>
+    <subsection xml:id="ty-project-cyclic-numbers">
+      <title>142857: The Number That Rotates</title>
+      <p><alert>Question.</alert> Why do the multiples of <m>142857</m> appear to rotate its digits?</p>
+      <p><alert>Investigate.</alert> Calculate <m>k\times142857</m> for <m>1\leq k\leq7</m>. Compare the decimal expansions of <m>k/7</m> for <m>1\leq k\leq6</m>, using long division to verify the blocks.</p>
+      <p><alert>Start here.</alert> <m>2\times142857=285714</m> and <m>7\times142857=999999</m>. The seventh multiple does not rotate the same six digits.</p>
+      <p><alert>Display and explain.</alert> Arrange the six rotations around a circle. Use <m>7\times142857=10^6-1</m> to connect multiplication with the fraction <m>1/7</m>.</p>
+      <p><alert>Stretch.</alert> Compare <m>1/11</m>, <m>1/13</m>, <m>1/17</m> and <m>1/19</m>. Which have period <m>p-1</m>? Keep a leading zero when it belongs to a repeating block.</p>
+    </subsection>
+    <subsection xml:id="ty-project-egyptian-fractions">
+      <title>Egyptian Fractions: One Numerator, Many Possibilities</title>
+      <p><alert>Question.</alert> Can a proper fraction be written as a sum of distinct unit fractions?</p>
+      <p><alert>Investigate.</alert> List the distinct reduced fractions <m>a/b</m> with <m>1\leq a\lt b\leq12</m>. Repeatedly subtract the largest unit fraction no greater than the remainder. Record the number of terms and largest denominator.</p>
+      <p><alert>Start here.</alert> <m>2/3=1/2+1/6</m> and <m>4/5=1/2+1/4+1/20</m>. Verify both by finding a common denominator.</p>
+      <p><alert>Display and explain.</alert> Show fraction-bar diagrams and exact sums for five examples. Compare different valid decompositions of the same fraction; the greedy method need not use the fewest terms.</p>
+      <p><alert>Stretch.</alert> Explain why the numerator of the reduced remainder decreases at each non-final step of the greedy method.</p>
+    </subsection>
+    <subsection xml:id="ty-project-goldbach">
+      <title>Goldbach: Every Even Number as Two Primes?</title>
+      <p><alert>Question.</alert> How many prime-pair representations do small even numbers have?</p>
+      <p><alert>Investigate.</alert> For each even integer <m>4\leq N\leq200</m>, list every pair of primes <m>p\leq q</m> with <m>p+q=N</m>. Count a pair once; equal primes are allowed.</p>
+      <p><alert>Start here.</alert> <m>10=3+7=5+5</m> has two unordered prime pairs. Check primality by trial division using primes no greater than the square root.</p>
+      <p><alert>Display and explain.</alert> Plot the number of representations against <m>N</m>. Identify the even numbers with the fewest and most representations in your range.</p>
+      <p><alert>Stretch.</alert> Extend the range to <m>1000</m> and independently check five rows. State precisely why this finite investigation does not prove the universal conjecture.</p>
+    </subsection>
+    <subsection xml:id="ty-project-perfect-numbers">
+      <title>Perfect Numbers: Exactly the Sum of Their Parts</title>
+      <p><alert>Question.</alert> Which numbers equal the sum of their positive proper divisors?</p>
+      <p><alert>Investigate.</alert> Search <m>2\leq n\leq10000</m>, recording the proper-divisor sum. A proper divisor excludes the number itself. Pair factors to make a spreadsheet or program efficient.</p>
+      <p><alert>Start here.</alert> <m>6=1+2+3</m> and <m>28=1+2+4+7+14</m>. Check <m>496</m> and <m>8128</m> by listing their divisors.</p>
+      <p><alert>Display and explain.</alert> Make a divisor diagram for each perfect number found and show the sums exactly.</p>
+      <p><alert>Stretch.</alert> Test <m>2^{p-1}(2^p-1)</m> for <m>p=2,3,5,7</m>. Explain why the construction works when <m>2^p-1</m> is prime; do not assume it is prime for every prime <m>p</m>.</p>
+    </subsection>
+    <subsection xml:id="ty-project-amicable-numbers">
+      <title>Amicable Numbers: A Two-Way Friendship</title>
+      <p><alert>Question.</alert> Can two different numbers be the proper-divisor sums of one another?</p>
+      <p><alert>Investigate.</alert> Calculate <m>s(n)</m>, the sum of positive proper divisors, for <m>2\leq n\leq1000</m>. Find pairs within this range with <m>s(a)=b</m>, <m>s(b)=a</m> and <m>a\ne b</m>. Record each pair once.</p>
+      <p><alert>Start here.</alert> The proper divisors of <m>220</m> sum to <m>284</m>; those of <m>284</m> sum to <m>220</m>. Verify both lists.</p>
+      <p><alert>Display and explain.</alert> Use two arrows labelled with divisor sums. Explain why a perfect number does not count as an amicable pair under this definition.</p>
+      <p><alert>Stretch.</alert> Search up to <m>10000</m> and compare the factorisations of any additional pairs.</p>
+    </subsection>
+    <subsection xml:id="ty-project-abundant-deficient">
+      <title>Abundant, Deficient or Perfect?</title>
+      <p><alert>Question.</alert> How does a number compare with the sum of its proper divisors?</p>
+      <p><alert>Investigate.</alert> Classify <m>1\leq n\leq100</m> as deficient if <m>s(n)\lt n</m>, perfect if <m>s(n)=n</m>, or abundant if <m>s(n)\gt n</m>. Use <m>s(1)=0</m>.</p>
+      <p><alert>Start here.</alert> <m>s(8)=7</m>, <m>s(6)=6</m> and <m>s(12)=16</m>. These give one example of each type.</p>
+      <p><alert>Display and explain.</alert> Build a coloured hundred square with a written key. Compare odd and even cases, and explain why every prime is deficient.</p>
+      <p><alert>Stretch.</alert> Investigate <m>945</m>. If your first hundred suggest that every abundant number is even, use its divisors to test that conjecture.</p>
+    </subsection>
+    <subsection xml:id="ty-project-aliquot-chains">
+      <title>Aliquot Chains: Where Do Divisors Take You?</title>
+      <p><alert>Question.</alert> What happens when we repeatedly replace a number by its proper-divisor sum?</p>
+      <p><alert>Investigate.</alert> Start with <m>6,10,12,20,28,220</m>. Stop at <m>0</m>, at a repeated value, or after <m>30</m> steps. Record which stopping rule applied; use <m>s(1)=0</m>.</p>
+      <p><alert>Start here.</alert> <m>12\to16\to15\to9\to4\to3\to1\to0</m>. Check every arrow by listing divisors.</p>
+      <p><alert>Display and explain.</alert> Draw the chains, identifying fixed points and two-number loops. Explain how perfect and amicable numbers appear.</p>
+      <p><alert>Stretch.</alert> Add all starting values from <m>2</m> to <m>50</m>. A chain unfinished at the step limit is unresolved by your computation, rather than proved to continue forever.</p>
+    </subsection>
+    <subsection xml:id="ty-project-twin-primes">
+      <title>Twin Primes: Neighbours Two Apart</title>
+      <p><alert>Question.</alert> Where do prime pairs separated by <m>2</m> occur?</p>
+      <p><alert>Investigate.</alert> List every pair <m>(p,p+2)</m> with both primes at most <m>1000</m>. Count pairs in each hundred, using the smaller prime to assign the interval.</p>
+      <p><alert>Start here.</alert> <m>(3,5)</m>, <m>(5,7)</m> and <m>(11,13)</m> qualify; <m>(7,9)</m> does not.</p>
+      <p><alert>Display and explain.</alert> Plot the pairs on a number line. Prove that every pair except <m>(3,5)</m> has the form <m>(6k-1,6k+1)</m>, and explain why that form alone does not guarantee two primes.</p>
+      <p><alert>Stretch.</alert> Look for prime triples <m>(p,p+2,p+4)</m>. Explain the special role of <m>3</m>, and distinguish a finite twin-prime list from a proof of infinitely many pairs.</p>
+    </subsection>
+    <subsection xml:id="ty-project-prime-gaps">
+      <title>Prime Deserts: How Long Can a Gap Be?</title>
+      <p><alert>Question.</alert> Are there arbitrarily long runs of consecutive composite numbers?</p>
+      <p><alert>Investigate.</alert> List consecutive primes up to <m>1000</m> and their differences. Separate gap size <m>q-p</m> from the number <m>q-p-1</m> of composite integers between them.</p>
+      <p><alert>Start here.</alert> <m>113</m> and <m>127</m> are consecutive primes: the gap is <m>14</m> and the <m>13</m> intervening integers are composite. Find a factor of each integer from <m>114</m> to <m>126</m>.</p>
+      <p><alert>Display and explain.</alert> Make a prime-gap chart and a checked <q>prime-free decade</q>.</p>
+      <p><alert>Stretch.</alert> Prove that <m>(k+1)!+2,\ldots,(k+1)!+(k+1)</m> are <m>k</m> consecutive composite numbers for every positive integer <m>k</m>.</p>
+    </subsection>
+    <subsection xml:id="ty-project-euler-polynomial">
+      <title>A Prime Generator That Eventually Fails</title>
+      <p><alert>Question.</alert> How convincing is a formula that keeps producing primes?</p>
+      <p><alert>Investigate.</alert> Calculate <m>n^2+n+41</m> for <m>0\leq n\leq50</m>, checking each value for primality rather than assuming the pattern continues.</p>
+      <p><alert>Start here.</alert> The first values are <m>41,43,47,53,61</m>. At <m>n=40</m>, the value is <m>1681=41^2</m>.</p>
+      <p><alert>Display and explain.</alert> Show the run of prime outputs and mark the first failure. Include the factorisation of every composite output in your range.</p>
+      <p><alert>Stretch.</alert> Replace <m>41</m> by <m>17</m>. Explain algebraically why <m>n=p-1</m> defeats the claim that <m>n^2+n+p</m> is always prime for any prime <m>p</m>.</p>
+    </subsection>
+    <subsection xml:id="ty-project-mersenne-primes">
+      <title>Mersenne Numbers: Is a Prime Exponent Enough?</title>
+      <p><alert>Question.</alert> When is <m>2^n-1</m> prime?</p>
+      <p><alert>Investigate.</alert> Test every exponent <m>2\leq n\leq20</m>. Record <m>n</m>, <m>2^n-1</m> and either a primality check or a non-trivial factor.</p>
+      <p><alert>Start here.</alert> <m>2^3-1=7</m>, but <m>2^{11}-1=2047=23\times89</m>. A prime exponent does not guarantee a prime result.</p>
+      <p><alert>Display and explain.</alert> Compare prime and composite exponents, then connect successful cases to the perfect-number construction.</p>
+      <p><alert>Stretch.</alert> If <m>n=ab</m> with <m>a,b\gt1</m>, factor <m>2^{ab}-1</m> using a geometric sum. Deduce why a prime result requires a prime exponent.</p>
+    </subsection>
+    <subsection xml:id="ty-project-fermat-numbers">
+      <title>Fermat Numbers: Five Successes and a Surprise</title>
+      <p><alert>Question.</alert> Does <m>F_n=2^{2^n}+1</m> always give a prime?</p>
+      <p><alert>Investigate.</alert> Calculate <m>F_n</m> for <m>0\leq n\leq5</m>. Verify primality for the first five by trial division, using technology when needed. For <m>F_5</m>, verify the supplied factorisation exactly.</p>
+      <p><alert>Start here.</alert> The first values are <m>3,5,17,257,65537</m>, but <m>F_5=4294967297=641\times6700417</m>.</p>
+      <p><alert>Display and explain.</alert> Make a growth chart and show the multiplication that breaks the apparent pattern.</p>
+      <p><alert>Stretch.</alert> Test <m>F_0F_1\cdots F_{n-1}=F_n-2</m> for <m>1\leq n\leq5</m>, then try an algebraic proof.</p>
+    </subsection>
+    <subsection xml:id="ty-project-ulam-spiral">
+      <title>The Ulam Spiral: Pictures Made of Primes</title>
+      <p><alert>Question.</alert> What patterns appear when primes are marked on a square spiral?</p>
+      <p><alert>Investigate.</alert> Put <m>1</m> at the centre, move right to <m>2</m>, then turn anticlockwise with runs of lengths <m>1,1,2,2,3,3,\ldots</m>. Continue to <m>441</m> and mark the primes. Keep <m>1</m> unmarked.</p>
+      <p><alert>Start here.</alert> The first marked entries are <m>2,3,5,7</m>. The square numbers <m>1,9,25,49</m> lie on one diagonal from the centre.</p>
+      <p><alert>Display and explain.</alert> Show a fully numbered spiral and verify a promising diagonal by listing its entries and checking each one.</p>
+      <p><alert>Stretch.</alert> Compare the diagonal containing <m>3,13,31,57</m>. Why can a striking visual pattern still include composite numbers?</p>
+    </subsection>
+    <subsection xml:id="ty-project-euclid-algorithm">
+      <title>Euclid’s Algorithm: A Race to Find the HCF</title>
+      <p><alert>Question.</alert> Which pairs take the most divisions to find their highest common factor?</p>
+      <p><alert>Investigate.</alert> Apply Euclid’s remainder algorithm to <m>(48,18),(55,34),(89,55),(144,89),(100,37)</m>. Count divisions, including the final division giving remainder zero. Compare with listing factors.</p>
+      <p><alert>Start here.</alert> <m>48=2(18)+12</m>, <m>18=1(12)+6</m>, <m>12=2(6)+0</m>; the HCF is <m>6</m>, found in three divisions.</p>
+      <p><alert>Display and explain.</alert> Make a division-count table and use factor arguments to explain why replacing <m>(a,b)</m> by <m>(b,a\bmod b)</m> preserves the HCF.</p>
+      <p><alert>Stretch.</alert> Investigate consecutive Fibonacci numbers and explain why repeated quotient <m>1</m> slows the algorithm.</p>
+    </subsection>
+    <subsection xml:id="ty-project-last-digits">
+      <title>Last-Digit Cycles: Huge Powers Without Huge Calculations</title>
+      <p><alert>Question.</alert> Can we predict the last digit of an enormous power?</p>
+      <p><alert>Investigate.</alert> Record the last digit of <m>a^n</m> for <m>a=2,3,7,8</m> and <m>1\leq n\leq20</m>. Find each cycle length and use remainders to make predictions.</p>
+      <p><alert>Start here.</alert> Powers of <m>7</m> end in <m>7,9,3,1</m>, then repeat. Since <m>2026</m> leaves remainder <m>2</m> on division by <m>4</m>, <m>7^{2026}</m> ends in <m>9</m>.</p>
+      <p><alert>Display and explain.</alert> Draw four digit-cycle wheels. Check five predictions by modular arithmetic or exact-integer computation.</p>
+      <p><alert>Stretch.</alert> Investigate the final two digits. Explain why a calculator’s rounded scientific notation cannot reliably verify the last digits.</p>
+    </subsection>
+    <subsection xml:id="ty-project-divisibility-tests">
+      <title>Divisibility Detectives: Why Do the Tricks Work?</title>
+      <p><alert>Question.</alert> Can we explain divisibility tests instead of merely memorising them?</p>
+      <p><alert>Investigate.</alert> Test the digit-sum rules for <m>3</m> and <m>9</m>, the alternating-sum rule for <m>11</m>, and the <m>7</m> rule: remove the last digit, double it, and subtract it from the remaining number. Check <m>30</m> three- or four-digit integers, including multiples and non-multiples.</p>
+      <p><alert>Start here.</alert> <m>2728</m> has alternating sum <m>2-7+2-8=-11</m> and equals <m>11\times248</m>. For <m>203</m>, <m>20-2(3)=14</m>, confirming divisibility by <m>7</m>.</p>
+      <p><alert>Display and explain.</alert> Give one worked test and one countercheck for each divisor. Derive a rule using place value.</p>
+      <p><alert>Stretch.</alert> Write <m>N=10a+b</m> and use <m>10(a-2b)=N-21b</m> to justify the rule for <m>7</m>.</p>
+    </subsection>
+    <subsection xml:id="ty-project-pythagorean-triples">
+      <title>Pythagorean Triples: Making Whole-Number Triangles</title>
+      <p><alert>Question.</alert> How can two integers generate right-angled triangles?</p>
+      <p><alert>Investigate.</alert> For <m>2\leq m\leq14</m> and <m>1\leq n\lt m</m>, calculate <m>a=m^2-n^2</m>, <m>b=2mn</m> and <m>c=m^2+n^2</m>. Keep <m>c\leq200</m>, order the legs and remove duplicate triples.</p>
+      <p><alert>Start here.</alert> <m>(m,n)=(2,1)</m> gives <m>(3,4,5)</m>; <m>(3,2)</m> gives <m>(5,12,13)</m>.</p>
+      <p><alert>Display and explain.</alert> Draw three triangles and verify <m>a^2+b^2=c^2</m>. Mark a triple primitive when its three entries have HCF <m>1</m>.</p>
+      <p><alert>Stretch.</alert> Expand the formula to prove the identity. Investigate why coprime <m>m,n</m> of opposite parity produce primitive triples.</p>
+    </subsection>
+    <subsection xml:id="ty-project-square-triangular">
+      <title>Square and Triangular: Two Shapes, One Number</title>
+      <p><alert>Question.</alert> Which numbers can form both a square and a triangular dot pattern?</p>
+      <p><alert>Investigate.</alert> Calculate <m>T_n=n(n+1)/2</m> for <m>1\leq n\leq300</m>. Test each result for being a perfect square, recording the square root as an integer.</p>
+      <p><alert>Start here.</alert> <m>T_8=8(9)/2=36=6^2</m> and <m>T_{49}=1225=35^2</m>.</p>
+      <p><alert>Display and explain.</alert> Draw both dot arrangements for <m>36</m>, list every match in your range, and verify each match by substitution into both formulas.</p>
+      <p><alert>Stretch.</alert> Rearrange <m>n(n+1)/2=k^2</m> to obtain <m>(2n+1)^2-8k^2=1</m>. Investigate this new equation without claiming your finite list is complete for all integers.</p>
+    </subsection>
+    <subsection xml:id="ty-project-collatz">
+      <title>Collatz: One Rule, Unexpected Journeys</title>
+      <p><alert>Question.</alert> How long do small starting numbers take to reach <m>1</m>?</p>
+      <p><alert>Investigate.</alert> Start with each integer from <m>1</m> to <m>100</m>. If it is even, divide by <m>2</m>; if odd, replace it by <m>3n+1</m>. Stop at <m>1</m> or after <m>1000</m> steps. Record steps and the highest value reached.</p>
+      <p><alert>Start here.</alert> <m>6\to3\to10\to5\to16\to8\to4\to2\to1</m> takes eight steps and peaks at <m>16</m>. Starting at <m>1</m> takes zero steps.</p>
+      <p><alert>Display and explain.</alert> Plot starting number against steps. Compare <m>27</m> with neighbouring starts, and check selected chains by hand.</p>
+      <p><alert>Stretch.</alert> Explain why success for every tested start does not establish the claim for every positive integer. Keep any unfinished computation labelled as unfinished.</p>
+    </subsection>
+  </section>
+</chapter>

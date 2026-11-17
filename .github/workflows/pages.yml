@@ -67,6 +67,11 @@ jobs:
           grep -q '<objectives>' source/algebra-language.ptx
       - name: Build web textbook
         run: pretext build web
+      - name: Add TY story and number theory classroom displays
+        run: |
+          set -euo pipefail
+          node --check assets/ty-display.js
+          python scripts/add_ty_displays.py
       - name: Apply Learning Intentions reading panels
         run: |
           set -euo pipefail

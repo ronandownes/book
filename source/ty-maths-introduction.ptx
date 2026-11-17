@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="chapter-ty-programme">
         <title>Introduction</title>
+        <introduction>
+          <p><xref ref="ty-news-story">Maths in the News: Erdős, Navier–Stokes and 722 manuscripts</xref> tells a recent mathematical story. Open its classroom display to explore it together.</p>
+          <p><xref ref="ty-number-theory-projects">Choose from 20 number theory projects</xref>, with a question, a checked starting example and a manageable investigation for each choice.</p>
+        </introduction>
         <section xml:id="ty-programme-introduction">
           <title>Investigations and Mathematical Modelling</title>
           <p><em>Learning intentions:</em> Interpret data, construct a model, justify assumptions and communicate the limitations of a conclusion.</p>

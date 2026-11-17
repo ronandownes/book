@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-ty-maths-news">
+  <title>Maths in the News</title>
+  <introduction>
+    <p>Mathematics is being made today. These stories connect artificial intelligence, number theory and the mathematics of moving fluids with a question we can investigate ourselves: what counts as convincing evidence?</p>
+  </introduction>
+  <section xml:id="ty-news-story">
+    <title>Erdős, Navier–Stokes and 722 Manuscripts</title>
+    <objectives>
+      <title>Learning Intentions</title>
+      <ul>
+        <li><p>Explain the difference between testing examples and proving a general statement.</p></li>
+        <li><p>Distinguish a research announcement, a checked formal statement and independent mathematical acceptance.</p></li>
+        <li><p>Use a primary source to check a mathematical news claim.</p></li>
+      </ul>
+    </objectives>
+    <introduction>
+      <p><em>Classroom story · prepared 17 November 2026.</em> Read down the page, or use the classroom display to show one idea at a time. Dates below refer to the events, rather than the date of this lesson.</p>
+    </introduction>
+    <subsection xml:id="ty-news-erdos">
+      <title>A Simple Question Can Be a Research Problem</title>
+      <p>Paul Erdős asked questions about numbers and patterns that still inspire mathematical research. Some are easy to state but difficult to settle.</p>
+      <p>Try a different famous example: can every even integer greater than <m>2</m> be written as a sum of two primes?</p>
+      <p><me>20=3+17=7+13,\qquad 50=3+47=7+43=13+37=19+31.</me></p>
+      <p>This is Goldbach’s conjecture, not a problem originally posed by Erdős. Finding examples gives evidence. A proof would have to cover every even integer greater than <m>2</m>.</p>
+      <p><em>Discuss:</em> What would one counterexample establish? What do a million successful examples establish?</p>
+    </subsection>
+    <subsection xml:id="ty-news-erdos-ai">
+      <title>January 2026: From an AI Proof to Human Explanation</title>
+      <p>A paper submitted on <em>12 January 2026</em> by Nat Sothanaphan explains a resolution of Erdős Problem <m>728</m>, a question involving divisibility of factorials.</p>
+      <p>The paper credits a combination of GPT-5.2 Pro and Harmonic’s Aristotle, operated by Kevin Barreto. The final proof was written in Lean; Sothanaphan translated it into conventional mathematics for readers.</p>
+      <p>We do not need to understand the advanced result to notice the distinct jobs: proposing an argument, checking its formal steps and making its ideas understandable.</p>
+      <p><em>Discuss:</em> If a computer checks an argument, what might a human explanation still add?</p>
+      <p>Source: <url href="https://arxiv.org/abs/2601.07421" visual="Sothanaphan, Resolution of Erdős Problem 728 (version 5, 26 January 2026)"/>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-fluid-question">
+      <title>Can Smooth Fluid Motion Break Down?</title>
+      <p>The Navier–Stokes equations model flowing water and air. Think of aircraft, weather and blood flow: mathematical models help us study motion that is difficult to predict.</p>
+      <p>The famous existence and smoothness problem concerns an idealised three-dimensional fluid. Can initially smooth motion develop a mathematical singularity, or does it remain smooth under the specified assumptions?</p>
+      <p>A singularity is a breakdown of the mathematical description. It is not an observation of a real fluid moving infinitely fast.</p>
+      <p><em>Discuss:</em> Why is testing many computer simulations different from proving a statement about every allowed starting condition?</p>
+      <p>Sources: <url href="https://www.claymath.org/millennium/navier-stokes-equation/" visual="Clay Mathematics Institute: Navier–Stokes"/>; <url href="https://openai.com/index/navier-stokes-solution/" visual="OpenAI’s explanation of the problem"/>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-september-claim">
+      <title>8 September 2026: A Major Proof Claim</title>
+      <p>OpenAI announced a proposed solution to the Navier–Stokes Millennium Prize Problem and published a written argument and a Lean formalisation.</p>
+      <p>The claimed construction starts with a smooth fluid at rest, applies a smooth external force, and develops a singularity in finite time while retaining finite energy. These assumptions matter: the claim is not that every flow breaks down.</p>
+      <p>The company’s announcement is evidence of what it claims. Independent scrutiny has a different role. On the Clay page checked for this lesson, the prize problem is still labelled <em>Active</em>.</p>
+      <p><em>Discuss:</em> What questions should we ask before turning a headline into an established mathematical fact?</p>
+      <p>Sources: <url href="https://openai.com/index/navier-stokes-solution/" visual="OpenAI, 8 September 2026"/>; <url href="https://www.claymath.org/millennium/navier-stokes-equation/" visual="Clay problem status, checked 17 November 2026"/>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-october-release">
+      <title>6 October 2026: 722 Manuscripts</title>
+      <p>The original release contained <em>722 mathematical manuscripts</em>, grouped into <em>372 families of related results</em>. It was a collection of papers, rather than one 722-page document.</p>
+      <p>OpenAI released the material for mathematical examination, including Lean formalisations for some results. A manuscript, a result family and a checked formal proof are different units; their counts cannot be interchanged.</p>
+      <p>The repository describes the work as research material at different stages of verification. A large output creates a large task of checking, explaining and connecting ideas.</p>
+      <p><em>Discuss:</em> If manuscripts arrive faster than people can read them, how should mathematicians decide what to examine first?</p>
+      <p>Sources: <url href="https://openai.com/index/sharing-ai-progress-in-mathematics/" visual="OpenAI, 6 October 2026"/>; <url href="https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a" visual="the original repository release"/>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-corrections">
+      <title>Checking Changes the Record</title>
+      <p>On <em>7 October</em>, OpenAI recorded the withdrawal of three manuscripts: a sign error affected one argument and two papers depending on it. Other papers were revised.</p>
+      <p>On <em>26 October</em>, two further manuscripts were added. The current catalogue checked for this lesson lists <em>721 manuscripts in 373 families</em>. Keep the original release count separate from the current count.</p>
+      <p>A formal proof checks a precisely written statement from specified assumptions. Reviewers must also check that this statement matches the claimed result and that the assumptions are appropriate.</p>
+      <p><em>Discuss:</em> If result B uses result A, what must be rechecked when a mistake is found in A?</p>
+      <p>Sources: <url href="https://github.com/openai/math/blob/main/history.md" visual="OpenAI’s correction and addition history"/>; <url href="https://github.com/openai/math" visual="current catalogue"/>; <url href="https://agmai.org/general-sep29/" visual="AGMAI recommendations on responsible release"/>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-our-test">
+      <title>Our Turn: Find the Point Where a Pattern Fails</title>
+      <p>Consider the claim: <q><m>n^2+n+41</m> is prime for every whole number <m>n\geq0</m>.</q></p>
+      <p><me>n=0:\ 41,\qquad n=1:\ 43,\qquad n=2:\ 47.</me></p>
+      <p>Predict what happens. Test further. Then calculate the value at <m>n=40</m> and check whether it has a factor.</p>
+      <p>Keep four headings in your record: <em>claim; method; evidence; conclusion</em>. Give the exact range you tested. One counterexample refutes a universal claim; a finite set of successes does not prove it.</p>
+      <p>Choose an investigation from <xref ref="ty-number-theory-projects"/>. Your task is to produce a small, convincing mathematical display that another student can check.</p>
+    </subsection>
+  </section>
+</chapter>

@@ -103,6 +103,8 @@
     <part xml:id="part-transition-year">
       <title>TY Maths</title>
       <xi:include href="./ty-maths-introduction.ptx"/>
+      <xi:include href="./ty/maths-in-the-news.ptx"/>
+      <xi:include href="./ty/number-theory-projects.ptx"/>
     </part>
 
     <part xml:id="part-lc-ol-statistics">
