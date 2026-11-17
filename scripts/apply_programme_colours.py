@@ -19,7 +19,6 @@ PARTS = {
     "part-jc-geometry": "geometry",
     "part-jc-trigonometry": "trigonometry",
     "part-jc-algebra": "algebra",
-    "part-jc-functions": "functions",
     "part-jc-statistics": "statistics",
     "part-transition-year": "ty",
     "part-lc-ol-statistics": "lc-statistics",
@@ -53,7 +52,7 @@ def main() -> None:
         raise RuntimeError("Expected chapter HTML files not built: " + ", ".join(missing))
     built_parts = {part.get(XML_ID) for part in doc.getroot().iter("part")}
     if built_parts != set(PARTS):
-        raise RuntimeError(f"Expected JC Introduction, six Junior Cycle, TY and five LC Ordinary Level Parts, found: {sorted(built_parts)}")
+        raise RuntimeError(f"Expected JC Introduction, five Junior Cycle, TY and five LC Ordinary Level Parts, found: {sorted(built_parts)}")
     if len(chapters) < 10:
         raise RuntimeError(f"Unexpectedly few published teaching chapters: {len(chapters)}")
 
