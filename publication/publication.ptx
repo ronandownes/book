@@ -3,7 +3,13 @@
   <source>
     <directories external="../assets"/>
   </source>
+  <common>
+    <!-- Show Parts, chapters and sections in the contents panel. -->
+    <tableofcontents level="3"/>
+  </common>
   <html favicon="simple">
+    <!-- Keep the whole contents panel expanded for continuous scrolling. -->
+    <tableofcontents focused="no"/>
     <baseurl href="https://ronandownes.github.io/book/"/>
     <brandlogo source="four-dots.svg" url="https://ronandownes.github.io/book/"/>
     <!-- Native PreTeXt textbook layout; colours align with Maths Apps. -->
