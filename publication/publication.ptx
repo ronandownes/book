@@ -8,8 +8,8 @@
     <tableofcontents level="3"/>
   </common>
   <html favicon="simple">
-    <!-- Keep the whole contents panel expanded for continuous scrolling. -->
-    <tableofcontents focused="no"/>
+    <!-- Focus navigation on the current page; visitors can expand/collapse branches. -->
+    <tableofcontents focused="yes" preexpanded-levels="1"/>
     <baseurl href="https://ronandownes.github.io/book/"/>
     <brandlogo source="four-dots.svg" url="https://ronandownes.github.io/book/"/>
     <!-- Native PreTeXt textbook layout; colours align with Maths Apps. -->
