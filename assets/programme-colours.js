@@ -8,7 +8,6 @@
     "part-jc-geometry.html":"geometry",
     "part-jc-trigonometry.html":"trigonometry",
     "part-jc-algebra.html":"algebra",
-    "part-jc-functions.html":"functions",
     "part-jc-statistics.html":"statistics",
     "part-transition-year.html":"ty",
     "part-lc-ol-statistics.html":"lc-statistics",
