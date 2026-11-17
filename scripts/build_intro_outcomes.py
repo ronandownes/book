@@ -215,69 +215,101 @@ def junior():
         actual = [r[0] for r in rows]
         if actual != wanted:
             raise RuntimeError(f"JC {key}: expected {wanted}, got {actual}. Refusing incomplete publication.")
-        section = etree.Element("section")
-        section.set(XML_ID, f"jc-outcomes-{key}")
-        etree.SubElement(section,"title").text=title
-        if key == "algebra":
-            etree.SubElement(section, "p").text = (
-                "First, scroll through the original Junior Cycle specification pages 18–19. "
-                "Then use the seven-slide view to explore outcomes AF.1–AF.7."
+        if key in ("number", "algebra"):
+            # Directly navigable N.1–N.5 and AF.1–AF.7 sections.
+            # The chapter introduction holds the full, readable official text.
+            chapter_out = etree.Element("chapter")
+            chapter_out.set(XML_ID, f"jc-outcomes-{key}")
+            etree.SubElement(chapter_out, "title").text = "Learning Outcomes"
+            intro = etree.SubElement(chapter_out, "introduction")
+            etree.SubElement(intro, "p").text = (
+                "Official learning outcomes are printed in full below. "
+                "The numbered sections provide focused reading and presentation "
+                "without hiding or replacing the original specification."
             )
-            figure = etree.SubElement(section, "figure")
-            figure.set(XML_ID, "jc-algebra-original-pages")
-            etree.SubElement(figure, "caption").text = (
-                "Original NCCA Algebra and Functions outcomes, pages 18–19. Scroll inside the viewer."
-            )
-            interactive = etree.SubElement(figure, "interactive")
-            interactive.set(XML_ID, "jc-algebra-original-scroll")
-            interactive.set(
-                "iframe",
-                "https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/"
-                "JC_Mathematics_Specification.pdf#page=18&zoom=100",
-            )
-            interactive.set("width", "100%")
-            interactive.set("aspect", "4:5")
-            p = etree.SubElement(section, "p")
-            source_link = etree.SubElement(p, "url", href=(
-                "https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/"
-                "JC_Mathematics_Specification.pdf#page=18&zoom=100"
-            ), visual="Open the original specification pages 18–19 in a new tab")
-            source_link.tail = "."
-        if key in ("number","geometry","algebra","statistics"):
-            etree.SubElement(section, "p").text = ("Official learning outcomes. Higher Level-only material remains "
-                "distinguished in bold where marked in the NCCA source.")
-        add_table(section, f"jc-outcomes-{key}-table", f"{title}: official learning outcomes", rows)
-        if key == "number":
-            # An original teaching note, visibly distinct from official outcomes.
-            note = etree.SubElement(section, "subsection")
-            note.set(XML_ID, "jc-number-n3-comparison")
-            etree.SubElement(note, "title").text = "N.3(a): Absolute and Relative Comparison"
-            etree.SubElement(note, "p").text = (
-                "An absolute comparison asks how much more or less. A relative comparison "
-                "asks how many times as much, or what proportion or percentage."
-            )
-            example = etree.SubElement(note, "example")
-            etree.SubElement(example, "title").text = "Two ways to compare"
-            etree.SubElement(example, "p").text = (
-                "Suppose two groups contain 12 and 8 people. The absolute difference is 4 people; "
-                "the relative comparison is 12 divided by 8, or 1.5 times as many."
-            )
-            p = etree.SubElement(example, "p")
-            p.text = "Absolute: "
-            m = etree.SubElement(p, "m")
-            m.text = "12-8=4"
-            m.tail = ". Relative: "
-            m = etree.SubElement(p, "m")
-            m.text = r"\frac{12}{8}=1.5"
-            m.tail = ", or 50% more, taking 8 as the reference group."
-            p = etree.SubElement(note, "p")
-            p.text = (
-                "Addition and subtraction describe additive differences; multiplication and "
-                "division describe multiplicative or proportional comparisons. "
-                "The choice depends on the question."
-            )
+            listing = etree.SubElement(intro, "ol")
+            outcome_sections = {}
+            for code, heading, statements in rows:
+                list_item = etree.SubElement(listing, "li")
+                label = etree.SubElement(list_item, "p")
+                etree.SubElement(label, "alert").text = (
+                    code + (" — " + heading if heading else "")
+                )
+                list_item.extend(list(cell_with_paragraphs(statements)))
+                numbered = etree.SubElement(chapter_out, "section")
+                numbered.set(XML_ID, f"jc-outcomes-{key}-{code.lower().replace('.', '')}")
+                etree.SubElement(numbered, "title").text = (
+                    code + (" — " + heading if heading else "")
+                )
+                numbered.extend(list(cell_with_paragraphs(statements)))
+                outcome_sections[code] = numbered
+            if len(outcome_sections) != expected:
+                raise RuntimeError(f"Missing numbered {key} learning outcomes")
 
-        write(section, f"jc-{key}-outcomes.ptx")
+            if key == "algebra":
+                # NCCA's original scrollable pages remain available inside AF.1.
+                af1 = outcome_sections["AF.1"]
+                original_url = (
+                    "https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/"
+                    "JC_Mathematics_Specification.pdf#page=18&zoom=100"
+                )
+                figure = etree.SubElement(af1, "figure")
+                figure.set(XML_ID, "jc-algebra-original-pages")
+                etree.SubElement(figure, "caption").text = (
+                    "Original NCCA Algebra and Functions outcomes, pages 18–19."
+                )
+                viewer = etree.SubElement(figure, "interactive")
+                viewer.set(XML_ID, "jc-algebra-original-scroll")
+                viewer.set("iframe", original_url)
+                viewer.set("width", "100%")
+                viewer.set("aspect", "4:5")
+                p = etree.SubElement(af1, "p")
+                etree.SubElement(p, "url", href=original_url,
+                                 visual="Open the original specification").tail = "."
+
+            if key == "number":
+                # Retain this illustrative, explicitly non-official teaching note.
+                note = etree.SubElement(outcome_sections["N.3"], "remark")
+                note.set(XML_ID, "jc-number-n3-comparison")
+                etree.SubElement(note, "title").text = (
+                    "Teaching example: Absolute and Relative Comparison"
+                )
+                etree.SubElement(note, "p").text = (
+                    "An absolute comparison asks how much more or less. "
+                    "A relative comparison asks how many times as much, "
+                    "or what proportion or percentage."
+                )
+                etree.SubElement(note, "p").text = (
+                    "Suppose two groups contain 12 and 8 people. "
+                    "The absolute difference is 4 people; the relative "
+                    "comparison is 12 divided by 8, or 1.5 times as many."
+                )
+                p = etree.SubElement(note, "p")
+                p.text = "Absolute: "
+                etree.SubElement(p, "m").text = "12-8=4"
+                p[-1].tail = ". Relative: "
+                etree.SubElement(p, "m").text = r"\frac{12}{8}=1.5"
+                p[-1].tail = ", or 50% more, taking 8 as the reference group."
+                etree.SubElement(note, "p").text = (
+                    "Addition and subtraction describe additive differences; "
+                    "multiplication and division describe multiplicative "
+                    "or proportional comparisons. The choice depends on the question."
+                )
+            payload = etree.tostring(
+                chapter_out, encoding="utf-8", xml_declaration=True, pretty_print=True
+            )
+            (DEST / f"jc-{key}-outcomes.ptx").write_bytes(payload)
+        else:
+            section = etree.Element("section")
+            section.set(XML_ID, f"jc-outcomes-{key}")
+            etree.SubElement(section, "title").text = title
+            etree.SubElement(section, "p").text = (
+                "Official learning outcomes. Higher Level-only material remains "
+                "distinguished in bold where marked in the NCCA source."
+            )
+            add_table(section, f"jc-outcomes-{key}-table",
+                      f"{title}: official learning outcomes", rows)
+            write(section, f"jc-{key}-outcomes.ptx")
         print(f"Junior Cycle {key}: {len(rows)} complete numbered outcomes",flush=True)
 
 def para(xml_body: str) -> etree._Element:
