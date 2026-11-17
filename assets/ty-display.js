@@ -4,7 +4,7 @@
 
   function install() {
     const settings = [
-      {id: "ty-news-story", title: "Maths in the News", label: "panel", expected: 7},
+      {id: "ty-news-story", title: "From Chess to Mathematical Discovery", label: "slide", expected: 18},
       {id: "ty-number-theory-projects", title: "20 Number Theory Projects", label: "project", expected: 20}
     ];
     for (const setting of settings) {
@@ -13,6 +13,27 @@
       const slides = [...section.querySelectorAll(":scope > .subsection")];
       if (slides.length !== setting.expected) continue;
       section.dataset.tyDisplayReady = "true";
+      const isStory = setting.id === "ty-news-story";
+      if (isStory) {
+        section.classList.add("ty-story-page");
+        slides.forEach(slide => {
+          for (const preview of slide.querySelectorAll(".video-box > div[onclick]")) {
+            preview.setAttribute("role", "button");
+            preview.setAttribute("aria-label", "Play the AlphaGo documentary");
+            preview.tabIndex = 0;
+            preview.addEventListener("keydown", event => {
+              if (event.key === "Enter" || event.key === " ") { event.preventDefault(); preview.click(); }
+            });
+          }
+          for (const frame of slide.querySelectorAll("iframe.video")) frame.title = "AlphaGo — the official documentary";
+          for (const paragraph of slide.querySelectorAll(":scope > .para")) {
+            if (/^(Source|Sources|History|Results|Context|Background|Read further):/.test(paragraph.textContent.trim())) {
+              paragraph.classList.add("ty-story-source");
+            }
+            if (paragraph.querySelector('a[href*="youtube.com/watch"]')) paragraph.classList.add("ty-story-video-link");
+          }
+        });
+      }
       const titles = slides.map(slide =>
         (slide.querySelector(":scope > .heading .title") || slide.querySelector(":scope > .heading"))
           .textContent.trim());
@@ -22,7 +43,7 @@
       const launch = document.createElement("button");
       launch.type = "button";
       launch.className = "ty-display-launch";
-      launch.textContent = setting.label === "panel" ? "Start the classroom story" : "Display the 20 project choices";
+      launch.textContent = isStory ? "Start the visual classroom story" : "Display the 20 project choices";
       launch.setAttribute("aria-haspopup", "dialog");
       const help = document.createElement("p");
       help.textContent = "One idea at a time · arrow keys to move · Esc to return to the book";
@@ -33,6 +54,7 @@
 
       const dialog = document.createElement("dialog");
       dialog.className = "ty-display-dialog";
+      if (isStory) dialog.classList.add("ty-story-dialog");
       dialog.setAttribute("aria-labelledby", `${setting.id}-display-title`);
       dialog.innerHTML = `
         <header class="ty-display-header">
@@ -90,7 +112,7 @@
         active.replaceWith(placeholder);
         content.replaceChildren(active);
         heading.textContent = `${position + 1}. ${titles[position]}`;
-        counter.textContent = `${setting.label === "project" ? "Project" : "Panel"} ${position + 1} of ${slides.length}`;
+        counter.textContent = `${isStory ? "Slide" : "Project"} ${position + 1} of ${slides.length}`;
         chooser.value = String(position);
         previous.disabled = position === 0;
         next.disabled = position === slides.length - 1;
@@ -122,19 +144,26 @@
       dialog.querySelector(".ty-display-close").addEventListener("click", () => dialog.close());
       dialog.querySelector(".ty-display-smaller").addEventListener("click", () => changeScale(-0.1));
       dialog.querySelector(".ty-display-larger").addEventListener("click", () => changeScale(0.1));
-      fullscreen.hidden = !document.fullscreenEnabled;
+      function updateFullscreenLabel() {
+        const expanded = document.fullscreenElement === dialog || dialog.classList.contains("ty-display-expanded");
+        fullscreen.textContent = expanded ? "Restore view" : "Full screen";
+        fullscreen.setAttribute("aria-pressed", String(expanded));
+      }
       fullscreen.addEventListener("click", async () => {
         try {
           if (document.fullscreenElement) await document.exitFullscreen();
-          else await dialog.requestFullscreen();
-        } catch (_) { /* The large dialog still works if full screen is unavailable. */ }
+          else if (dialog.classList.contains("ty-display-expanded")) dialog.classList.remove("ty-display-expanded");
+          else if (document.fullscreenEnabled) await dialog.requestFullscreen();
+          else dialog.classList.add("ty-display-expanded");
+        } catch (_) { dialog.classList.add("ty-display-expanded"); }
+        updateFullscreenLabel();
       });
-      document.addEventListener("fullscreenchange", () => {
-        fullscreen.textContent = document.fullscreenElement === dialog ? "Exit full screen" : "Full screen";
-      });
+      document.addEventListener("fullscreenchange", updateFullscreenLabel);
       dialog.addEventListener("close", () => {
         restore();
+        dialog.classList.remove("ty-display-expanded");
         if (document.fullscreenElement === dialog) document.exitFullscreen().catch(() => {});
+        updateFullscreenLabel();
         returnFocus.focus();
       });
       dialog.addEventListener("keydown", event => {

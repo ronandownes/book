@@ -2,76 +2,219 @@
 <chapter xml:id="chapter-ty-maths-news">
   <title>Maths in the News</title>
   <introduction>
-    <p>Mathematics is being made today. These stories connect artificial intelligence, number theory and the mathematics of moving fluids with a question we can investigate ourselves: what counts as convincing evidence?</p>
+    <p>Computers have surprised chess champions, Go players and mathematicians. Follow the people, the games and the ideas, then investigate a question for yourself.</p>
   </introduction>
   <section xml:id="ty-news-story">
-    <title>Erdős, Navier–Stokes and 722 Manuscripts</title>
+    <title>From Chess to Mathematical Discovery</title>
     <objectives>
       <title>Learning Intentions</title>
       <ul>
-        <li><p>Explain the difference between testing examples and proving a general statement.</p></li>
-        <li><p>Distinguish a research announcement, a checked formal statement and independent mathematical acceptance.</p></li>
-        <li><p>Use a primary source to check a mathematical news claim.</p></li>
+        <li><p>Describe a surprising moment in chess, Go or mathematics.</p></li>
+        <li><p>Count pairs of points exactly one unit apart.</p></li>
+        <li><p>Explain why a mathematical claim needs checking.</p></li>
       </ul>
     </objectives>
     <introduction>
-      <p><em>Classroom story · prepared 17 November 2026.</em> Read down the page, or use the classroom display to show one idea at a time. Dates below refer to the events, rather than the date of this lesson.</p>
+      <p><em>A visual classroom story · updated 17 November 2026.</em> Use the display button for one short slide at a time. Pictures, game diagrams and video links are included. Choose a short video excerpt during class; the full documentary is optional.</p>
     </introduction>
+    <subsection xml:id="ty-news-opening">
+      <title>Can a Computer Surprise Us?</title>
+      <figure xml:id="ty-news-figure-route">
+        <caption>Three stages of our story.</caption>
+        <image source="ty-news/story-route.svg" width="100%"><shortdescription>Chess in 1997, Go in 2016 and mathematical discovery in 2026.</shortdescription></image>
+      </figure>
+      <p>A chess champion loses. A Go move surprises the experts. A mathematical conjecture turns out to be false.</p>
+      <p>These are different achievements. We will look at what actually happened.</p>
+      <p><alert>Predict:</alert> Which is harder to recognise: a winning move, or a correct proof?</p>
+    </subsection>
+    <subsection xml:id="ty-news-chess-first-match">
+      <title>1996: Kasparov Wins the Match</title>
+      <figure xml:id="ty-news-figure-deep-blue">
+        <caption>A Deep Blue computer at the Computer History Museum. Photo: James the photographer, unchanged, <url href="https://creativecommons.org/licenses/by/2.0/" visual="CC BY 2.0"/>; <url href="https://commons.wikimedia.org/wiki/File:Deep_Blue.jpg" visual="source"/>.</caption>
+        <image source="ty-news/deep-blue.jpg" width="65%"><shortdescription>A tall Deep Blue computer cabinet photographed in a museum, rather than at the match.</shortdescription></image>
+      </figure>
+      <p>IBM’s Deep Blue won the first game against world chess champion <em>Garry Kasparov</em>.</p>
+      <p>Kasparov recovered and won the six-game match <m>4-2</m>.</p>
+      <p><alert>Notice:</alert> Winning one game is different from winning a match.</p>
+      <p>History: <url href="https://www.ibm.com/history/deep-blue" visual="IBM’s account of the matches"/>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-chess-rematch">
+      <title>1997: The Rematch Turns</title>
+      <figure xml:id="ty-news-figure-chess-rematch">
+        <caption>The result of each game, shown as points.</caption>
+        <image source="ty-news/chess-rematch.svg" width="100%"><shortdescription>Kasparov wins game one; Deep Blue wins game two; games three, four and five are draws; Deep Blue wins game six and the match.</shortdescription></image>
+      </figure>
+      <p>Kasparov won the opener. Deep Blue won the next game. Three draws followed.</p>
+      <p>Everything came down to the final game. Deep Blue won it, taking the match <m>3\frac12-2\frac12</m>.</p>
+      <p><url href="https://www.youtube.com/watch?v=5hRNlfAUeEE" visual="Watch: EndGame — Challenging the Chess Masters (Computer History Museum)"/>.</p>
+      <p><alert>Watch for:</alert> What changed between the two matches? How did the pressure become part of the story?</p>
+      <p>Results: <url href="https://www.ibm.com/history/deep-blue" visual="IBM match history"/>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-lee-sedol">
+      <title>2016: Lee Sedol Meets AlphaGo</title>
+      <figure xml:id="ty-news-figure-lee-sedol">
+        <caption>Lee Sedol in May 2016, after the match. Photo: LG Electronics, unchanged, <url href="https://creativecommons.org/licenses/by/2.0/" visual="CC BY 2.0"/>; <url href="https://commons.wikimedia.org/wiki/File:Lee_Se-Dol.jpg" visual="source"/>.</caption>
+        <image source="ty-news/lee-sedol.jpg" width="100%"><shortdescription>A portrait of Go champion Lee Sedol at a later event in 2016.</shortdescription></image>
+      </figure>
+      <p>Go champion <em>Lee Sedol</em> faced Google DeepMind’s AlphaGo in Seoul.</p>
+      <p>The match lasted five games. Two particular moves became central to the story: <em>AlphaGo’s Move 37</em> and <em>Lee’s Move 78</em>.</p>
+      <p><alert>First:</alert> Learn just enough Go to follow the pictures.</p>
+      <p>Source: <url href="https://deepmind.google/research/alphago/" visual="Google DeepMind: AlphaGo"/>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-go-rules">
+      <title>Go: A Few Simple Rules</title>
+      <figure xml:id="ty-news-figure-go-rules">
+        <caption>A small teaching board, separate from the match.</caption>
+        <image source="ty-news/go-capture.svg" width="100%"><shortdescription>A white stone has one remaining adjacent empty intersection; black fills it and captures the white stone.</shortdescription></image>
+      </figure>
+      <p>Place black and white stones on <em>intersections</em>, taking turns. The full board has <m>19\times19</m> intersections.</p>
+      <p>An adjacent empty intersection is a <em>liberty</em>. A group with no liberties is captured. Players aim to control territory.</p>
+      <p><alert>Try:</alert> Point to the white stone’s last liberty before looking at the second board.</p>
+    </subsection>
+    <subsection xml:id="ty-news-move-37">
+      <title>Game 2: The Move That Looked Wrong</title>
+      <figure xml:id="ty-news-figure-move-37">
+        <caption>The actual position after Black 37 at P10, highlighted in red. Original drawing from the <url href="https://homepages.cwi.nl/~aeb/go/games/games/AlphaGo/LeeSedol/2.sgf" visual="game record"/>.</caption>
+        <image source="ty-news/go-move-37.svg" width="100%"><shortdescription>The Go board after AlphaGo’s surprising move 37, a black stone at P10 on the fifth line from the right.</shortdescription></image>
+      </figure>
+      <p>AlphaGo placed a black stone on the fifth line from the edge. Expert commentators were surprised; it looked like an unusual choice.</p>
+      <p>The move helped AlphaGo win Game 2.</p>
+      <p><url href="https://www.youtube.com/watch?v=JNrXgpSEEIE" visual="Watch: Move 37 — the live commentary"/>.</p>
+      <p><alert>Pause and discuss:</alert> Is an unfamiliar move necessarily a mistake?</p>
+      <p>Context: <url href="https://deepmind.google/blog/10-years-of-alphago/" visual="DeepMind’s account of Move 37"/>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-move-78">
+      <title>Game 4: Lee Sedol Answers</title>
+      <figure xml:id="ty-news-figure-move-78">
+        <caption>The actual position after White 78 at L11, highlighted in red. Original drawing from the <url href="https://homepages.cwi.nl/~aeb/go/games/games/AlphaGo/LeeSedol/4.sgf" visual="game record"/>.</caption>
+        <image source="ty-news/go-move-78.svg" width="100%"><shortdescription>The Go board after Lee Sedol’s move 78, a white stone at L11 in the central fighting.</shortdescription></image>
+      </figure>
+      <p>After losing the first three games, Lee found his own surprising move: <em>White 78</em>.</p>
+      <p>It helped him win Game 4. A very strong computer opponent could still make mistakes.</p>
+      <p><alert>Discuss:</alert> What does Lee’s response add to the story?</p>
+      <p>Source: <url href="https://deepmind.google/research/alphago/" visual="DeepMind on the two famous moves"/>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-watch-alphago">
+      <title>Watch the Human Story</title>
+      <figure xml:id="ty-news-video-alphago">
+        <caption>The official AlphaGo documentary, published by Google DeepMind.</caption>
+        <video youtube="WXuK6gekU1Y" width="100%" aspect="16:9" play-at="embed" preview="generic"><title>AlphaGo — The Movie</title></video>
+      </figure>
+      <p><url href="https://www.youtube.com/watch?v=WXuK6gekU1Y" visual="Open the official AlphaGo documentary on YouTube"/>.</p>
+      <p>Choose a short excerpt around the match. Watch the players, commentators and team members as well as the board.</p>
+      <p><alert>Watch for:</alert> Surprise, uncertainty, disappointment and recovery. What changes somebody’s mind?</p>
+      <p>The final score was <em>AlphaGo 4, Lee Sedol 1</em>. The full documentary is optional viewing beyond this lesson.</p>
+    </subsection>
+    <subsection xml:id="ty-news-alphazero-stockfish">
+      <title>AlphaZero and Stockfish</title>
+      <figure xml:id="ty-news-figure-alphazero">
+        <caption>The 1,000-game chess test reported in 2018. The bar is proportional to the results.</caption>
+        <image source="ty-news/alphazero-stockfish.svg" width="100%"><shortdescription>AlphaZero wins 155 games, draws 839 and loses 6 against Stockfish in the reported evaluation.</shortdescription></image>
+      </figure>
+      <p>AlphaZero learned through <em>self-play</em>: play games, learn from the results, and improve.</p>
+      <p>It was tested against the chess engine <em>Stockfish</em>. Many games were draws.</p>
+      <p><alert>Check:</alert> Do the three counts add to <m>1000</m>? Why should we name the year and test conditions?</p>
+      <p>Source: <url href="https://deepmind.google/blog/alphazero-shedding-new-light-on-chess-shogi-and-go/" visual="DeepMind’s 2018 evaluation"/>. These are historical results, rather than a comparison with today’s engines.</p>
+    </subsection>
     <subsection xml:id="ty-news-erdos">
-      <title>A Simple Question Can Be a Research Problem</title>
-      <p>Paul Erdős asked questions about numbers and patterns that still inspire mathematical research. Some are easy to state but difficult to settle.</p>
-      <p>Try a different famous example: can every even integer greater than <m>2</m> be written as a sum of two primes?</p>
-      <p><me>20=3+17=7+13,\qquad 50=3+47=7+43=13+37=19+31.</me></p>
-      <p>This is Goldbach’s conjecture, not a problem originally posed by Erdős. Finding examples gives evidence. A proof would have to cover every even integer greater than <m>2</m>.</p>
-      <p><em>Discuss:</em> What would one counterexample establish? What do a million successful examples establish?</p>
+      <title>Erdős: Count the One-Unit Pairs</title>
+      <figure xml:id="ty-news-figure-unit-pairs">
+        <caption>Moving four points changes the number of pairs exactly one unit apart.</caption>
+        <image source="ty-news/unit-pairs.svg" width="100%"><shortdescription>A square has four unit pairs; a rhombus made of two equilateral triangles has five.</shortdescription></image>
+      </figure>
+      <p>Put points on a flat plane. Count pairs exactly <m>1</m> unit apart.</p>
+      <p>Paul Erdős asked how large this count can become as the number of points grows.</p>
+      <p><alert>Try:</alert> Check every blue link. Where does the extra unit pair come from in the second picture?</p>
+      <p>Context: <url href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/" visual="the planar unit-distance problem"/>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-cube">
+      <title>Why the Cube Does Not Settle It</title>
+      <figure xml:id="ty-news-figure-cube">
+        <caption>A unit cube, drawn in perspective. The picture represents a three-dimensional object.</caption>
+        <image source="ty-news/cube-distances.svg" width="100%"><shortdescription>The cube’s twelve edges have length one; a face diagonal has length square root two and a body diagonal square root three.</shortdescription></image>
+      </figure>
+      <p>A cube has <m>8</m> vertices and <m>12</m> unit edges. Its face diagonals are <m>\sqrt2</m>; its body diagonals are <m>\sqrt3</m>.</p>
+      <p>But the Erdős problem keeps <em>every point on a flat plane</em>. Flattening a cube changes its distances.</p>
+      <p><alert>Remember:</alert> <m>9^3=729</m> and <m>10^3=1000</m> count points in cubic grids. They do not provide a planar counterexample.</p>
     </subsection>
     <subsection xml:id="ty-news-erdos-ai">
-      <title>January 2026: From an AI Proof to Human Explanation</title>
-      <p>A paper submitted on <em>12 January 2026</em> by Nat Sothanaphan explains a resolution of Erdős Problem <m>728</m>, a question involving divisibility of factorials.</p>
-      <p>The paper credits a combination of GPT-5.2 Pro and Harmonic’s Aristotle, operated by Kevin Barreto. The final proof was written in Lean; Sothanaphan translated it into conventional mathematics for readers.</p>
-      <p>We do not need to understand the advanced result to notice the distinct jobs: proposing an argument, checking its formal steps and making its ideas understandable.</p>
-      <p><em>Discuss:</em> If a computer checks an argument, what might a human explanation still add?</p>
-      <p>Source: <url href="https://arxiv.org/abs/2601.07421" visual="Sothanaphan, Resolution of Erdős Problem 728 (version 5, 26 January 2026)"/>.</p>
+      <title>May 2026: A Conjecture Fails</title>
+      <figure xml:id="ty-news-figure-unit-result">
+        <caption>The important distinction: a conjecture can be disproved by a checked construction.</caption>
+        <image source="ty-news/unit-distance-result.svg" width="100%"><shortdescription>A grid-based expectation is defeated by a different construction, which mathematicians check and explain.</shortdescription></image>
+      </figure>
+      <p>Mathematicians had expected grid-based constructions to be essentially best.</p>
+      <p>An AI-generated construction beat the predicted growth. On <em>20 May 2026</em>, mathematicians published a human-verified explanation of the counterexample.</p>
+      <p>The advanced construction uses number theory. Our cube is a classroom comparison, not that construction.</p>
+      <p><alert>Discuss:</alert> Why is finding a counterexample different from trying more examples?</p>
+      <p>Read further: <url href="https://arxiv.org/abs/2605.20695" visual="the mathematicians’ companion paper"/>.</p>
     </subsection>
     <subsection xml:id="ty-news-fluid-question">
-      <title>Can Smooth Fluid Motion Break Down?</title>
-      <p>The Navier–Stokes equations model flowing water and air. Think of aircraft, weather and blood flow: mathematical models help us study motion that is difficult to predict.</p>
-      <p>The famous existence and smoothness problem concerns an idealised three-dimensional fluid. Can initially smooth motion develop a mathematical singularity, or does it remain smooth under the specified assumptions?</p>
-      <p>A singularity is a breakdown of the mathematical description. It is not an observation of a real fluid moving infinitely fast.</p>
-      <p><em>Discuss:</em> Why is testing many computer simulations different from proving a statement about every allowed starting condition?</p>
-      <p>Sources: <url href="https://www.claymath.org/millennium/navier-stokes-equation/" visual="Clay Mathematics Institute: Navier–Stokes"/>; <url href="https://openai.com/index/navier-stokes-solution/" visual="OpenAI’s explanation of the problem"/>.</p>
+      <title>Air and Water Need Mathematics Too</title>
+      <figure xml:id="ty-news-figure-vortex">
+        <caption>Smoke reveals an aircraft’s wake vortex. NASA Langley; edited by Fir0002; <url href="https://commons.wikimedia.org/wiki/File:Airplane_vortex_edit.jpg" visual="public-domain image and source"/>. Shown unchanged.</caption>
+        <image source="ty-news/wake-vortex.jpg" width="100%"><shortdescription>Coloured smoke makes the curling wake behind an aircraft visible.</shortdescription></image>
+      </figure>
+      <p>Look at the swirling air behind the aircraft.</p>
+      <p>The Navier–Stokes equations model moving fluids, including air and water. They matter in aircraft design, weather and blood flow.</p>
+      <p><alert>Discuss:</alert> What can a photograph show us? What would we need a mathematical model to predict?</p>
+      <p>Background: <url href="https://www.claymath.org/millennium/navier-stokes-equation/" visual="Clay Mathematics Institute"/>.</p>
     </subsection>
     <subsection xml:id="ty-news-september-claim">
-      <title>8 September 2026: A Major Proof Claim</title>
-      <p>OpenAI announced a proposed solution to the Navier–Stokes Millennium Prize Problem and published a written argument and a Lean formalisation.</p>
-      <p>The claimed construction starts with a smooth fluid at rest, applies a smooth external force, and develops a singularity in finite time while retaining finite energy. These assumptions matter: the claim is not that every flow breaks down.</p>
-      <p>The company’s announcement is evidence of what it claims. Independent scrutiny has a different role. On the Clay page checked for this lesson, the prize problem is still labelled <em>Active</em>.</p>
-      <p><em>Discuss:</em> What questions should we ask before turning a headline into an established mathematical fact?</p>
-      <p>Sources: <url href="https://openai.com/index/navier-stokes-solution/" visual="OpenAI, 8 September 2026"/>; <url href="https://www.claymath.org/millennium/navier-stokes-equation/" visual="Clay problem status, checked 17 November 2026"/>.</p>
+      <title>September 2026: A Major Proof Claim</title>
+      <figure xml:id="ty-news-figure-fluid-question">
+        <caption>A sketch of the question, not a simulation or the claimed construction.</caption>
+        <image source="ty-news/fluid-question.svg" width="100%"><shortdescription>Smooth flow and a spiral illustrate the question of whether a mathematical fluid model can develop a singularity.</shortdescription></image>
+      </figure>
+      <p>Can initially smooth fluid motion develop a mathematical breakdown?</p>
+      <p>On <em>8 September 2026</em>, OpenAI announced a proof claim involving a smooth external force and a finite-time singularity.</p>
+      <p>A published claim still needs scrutiny. Clay’s page remains labelled <em>Active</em> when checked for this lesson.</p>
+      <p><alert>Discuss:</alert> What evidence would help us decide whether the claim is correct?</p>
+      <p>Sources: <url href="https://openai.com/index/navier-stokes-solution/" visual="the announcement"/>; <url href="https://www.claymath.org/millennium/navier-stokes-equation/" visual="Clay’s problem page"/>.</p>
     </subsection>
     <subsection xml:id="ty-news-october-release">
-      <title>6 October 2026: 722 Manuscripts</title>
-      <p>The original release contained <em>722 mathematical manuscripts</em>, grouped into <em>372 families of related results</em>. It was a collection of papers, rather than one 722-page document.</p>
-      <p>OpenAI released the material for mathematical examination, including Lean formalisations for some results. A manuscript, a result family and a checked formal proof are different units; their counts cannot be interchanged.</p>
-      <p>The repository describes the work as research material at different stages of verification. A large output creates a large task of checking, explaining and connecting ideas.</p>
-      <p><em>Discuss:</em> If manuscripts arrive faster than people can read them, how should mathematicians decide what to examine first?</p>
-      <p>Sources: <url href="https://openai.com/index/sharing-ai-progress-in-mathematics/" visual="OpenAI, 6 October 2026"/>; <url href="https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a" visual="the original repository release"/>.</p>
+      <title>October 2026: 722 Papers Arrive</title>
+      <figure xml:id="ty-news-figure-722">
+        <caption>Every small card represents one manuscript in the original release.</caption>
+        <image source="ty-news/722-manuscripts.svg" width="100%"><shortdescription>722 manuscript symbols arranged in 38 columns and 19 rows.</shortdescription></image>
+      </figure>
+      <p>On <em>6 October 2026</em>, OpenAI released <em>722 mathematical manuscripts</em>, grouped into <em>372 related families</em>.</p>
+      <p>This was a collection of papers. Some results had computer-checked Lean proofs; others required further checking.</p>
+      <p><alert>Think:</alert> If many papers arrive at once, who checks them, explains them and spots connections?</p>
+      <p>Source: <url href="https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a" visual="the original collection"/>.</p>
     </subsection>
     <subsection xml:id="ty-news-corrections">
-      <title>Checking Changes the Record</title>
-      <p>On <em>7 October</em>, OpenAI recorded the withdrawal of three manuscripts: a sign error affected one argument and two papers depending on it. Other papers were revised.</p>
-      <p>On <em>26 October</em>, two further manuscripts were added. The current catalogue checked for this lesson lists <em>721 manuscripts in 373 families</em>. Keep the original release count separate from the current count.</p>
-      <p>A formal proof checks a precisely written statement from specified assumptions. Reviewers must also check that this statement matches the claimed result and that the assumptions are appropriate.</p>
-      <p><em>Discuss:</em> If result B uses result A, what must be rechecked when a mistake is found in A?</p>
-      <p>Sources: <url href="https://github.com/openai/math/blob/main/history.md" visual="OpenAI’s correction and addition history"/>; <url href="https://github.com/openai/math" visual="current catalogue"/>; <url href="https://agmai.org/general-sep29/" visual="AGMAI recommendations on responsible release"/>.</p>
+      <title>Checking Can Change the Story</title>
+      <figure xml:id="ty-news-figure-dependencies">
+        <caption>One faulty argument can affect other work that depends on it.</caption>
+        <image source="ty-news/proof-dependencies.svg" width="100%"><shortdescription>A sign error in one manuscript affects two dependent manuscripts; three are withdrawn.</shortdescription></image>
+      </figure>
+      <p>On <em>7 October</em>, three manuscripts were withdrawn after a sign error affected one argument and two dependent papers.</p>
+      <p>Two further manuscripts were added on <em>26 October</em>. The catalogue checked for this lesson contains <em>721 manuscripts in 373 families</em>.</p>
+      <p><alert>Connect:</alert> If an early line in your working is wrong, which later answers must you recheck?</p>
+      <p>Source: <url href="https://github.com/openai/math/blob/main/history.md" visual="the public correction history"/>.</p>
     </subsection>
     <subsection xml:id="ty-news-our-test">
-      <title>Our Turn: Find the Point Where a Pattern Fails</title>
-      <p>Consider the claim: <q><m>n^2+n+41</m> is prime for every whole number <m>n\geq0</m>.</q></p>
-      <p><me>n=0:\ 41,\qquad n=1:\ 43,\qquad n=2:\ 47.</me></p>
-      <p>Predict what happens. Test further. Then calculate the value at <m>n=40</m> and check whether it has a factor.</p>
-      <p>Keep four headings in your record: <em>claim; method; evidence; conclusion</em>. Give the exact range you tested. One counterexample refutes a universal claim; a finite set of successes does not prove it.</p>
-      <p>Choose an investigation from <xref ref="ty-number-theory-projects"/>. Your task is to produce a small, convincing mathematical display that another student can check.</p>
+      <title>Our Turn to Investigate</title>
+      <figure xml:id="ty-news-figure-investigation">
+        <caption>Four questions for our own work.</caption>
+        <image source="ty-news/our-investigation.svg" width="100%"><shortdescription>Ask a question, test it, explain the pattern and state what the evidence establishes.</shortdescription></image>
+      </figure>
+      <p>You can investigate <em>recurring decimals, 142857, Goldbach, perfect numbers</em> and many other questions.</p>
+      <p>Keep your claim small enough to check, show your working, and invite another student to verify it.</p>
+      <p><xref ref="ty-number-theory-projects">Choose from the 20 number theory projects</xref>.</p>
+    </subsection>
+    <subsection xml:id="ty-news-video-choices">
+      <title>Choose a Video and a Question</title>
+      <figure xml:id="ty-news-figure-go-match">
+        <caption>The AlphaGo match result; the videos show the people behind the numbers.</caption>
+        <image source="ty-news/go-match.svg" width="100%"><shortdescription>AlphaGo wins games one, two, three and five; Lee Sedol wins game four.</shortdescription></image>
+      </figure>
+      <p><url href="https://www.youtube.com/watch?v=5hRNlfAUeEE" visual="Chess: EndGame — Computer History Museum"/>. What changed from 1996 to 1997?</p>
+      <p><url href="https://www.youtube.com/watch?v=JNrXgpSEEIE" visual="Go: Move 37 — live commentary"/>. How do experts respond to a surprise?</p>
+      <p><url href="https://www.youtube.com/watch?v=WXuK6gekU1Y" visual="AlphaGo — the official full documentary"/>. How does Lee respond after losing?</p>
+      <p><url href="https://www.youtube.com/watch?v=qoinGjj60Fo" visual="Ten years of AlphaGo — Google DeepMind"/>. What do the researchers think changed?</p>
+      <p><alert>After watching:</alert> Name one claim, the evidence supporting it and one question you still have.</p>
     </subsection>
   </section>
 </chapter>

@@ -65,6 +65,8 @@ jobs:
           grep -q '<objectives>' source/sets-chapter.ptx
           grep -q '<objectives>' source/number-introduction.ptx
           grep -q '<objectives>' source/algebra-language.ptx
+      - name: Retrieve openly licensed TY photographs
+        run: python scripts/fetch_ty_news_photos.py
       - name: Build web textbook
         run: pretext build web
       - name: Add TY story and number theory classroom displays
