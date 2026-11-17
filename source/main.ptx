@@ -19,6 +19,7 @@
 <part xml:id="part-jc-introduction">
       <title>JC Maths Introduction</title>
       <xi:include href="./jc-introduction.ptx"/>
+      <xi:include href="./jc-unifying-outcomes.ptx"/>
     </part>
 
     <part xml:id="part-jc-number">
@@ -41,7 +42,7 @@
 
 <part xml:id="part-jc-geometry">
       <title>Geometry</title>
-      <xi:include href="./jc-geometry-learning-outcomes.ptx" />
+      <xi:include href="./jc-geometry-outcomes.ptx" />
 
     </part>
 
@@ -84,7 +85,7 @@
 
 <part xml:id="part-jc-statistics">
       <title>Statistics and Probability</title>
-      <xi:include href="./jc-statistics-learning-outcomes.ptx" />
+      <xi:include href="./jc-statistics-outcomes.ptx" />
 <chapter xml:id="chapter-probability"><title>Events and Counting</title><objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Use the fundamental counting principle.</p></li><li><p>Explain why the counting rule applies.</p></li></ol></objectives><introduction><p>Probability begins with a precise account of possible outcomes.</p></introduction>
               <section xml:id="probability-fcp"><title>The Fundamental Counting Principle</title>
                 <p>When the first choice has <m>m</m> possibilities and the second has <m>n</m> possibilities, every combination of choices gives <m>mn</m> possibilities.</p>
@@ -106,29 +107,29 @@
     <part xml:id="part-lc-ol-statistics">
       <title>LC OL · Statistics and Probability</title>
       <xi:include href="./lc-ol-introduction.ptx"/>
-      <xi:include href="./lc-ol-statistics-chapter.ptx"/>
+      <xi:include href="./lc-ol-statistics-outcomes.ptx"/>
     </part>
 
     <part xml:id="part-lc-ol-geometry">
       <title>LC OL · Geometry and Trigonometry</title>
-      <xi:include href="./lc-ol-geometry-chapter.ptx"/>
+      <xi:include href="./lc-ol-geometry-outcomes.ptx"/>
     </part>
 
     <part xml:id="part-lc-ol-number">
       <title>LC OL · Number</title>
-      <xi:include href="./lc-ol-number-chapter.ptx"/>
+      <xi:include href="./lc-ol-number-outcomes.ptx"/>
       <xi:include href="./complex-numbers-chapter.ptx"/>
       <xi:include href="./sequences-chapter.ptx"/>
     </part>
 
     <part xml:id="part-lc-ol-algebra">
       <title>LC OL · Algebra</title>
-      <xi:include href="./lc-ol-algebra-chapter.ptx"/>
+      <xi:include href="./lc-ol-algebra-outcomes.ptx"/>
     </part>
 
     <part xml:id="part-lc-ol-functions">
       <title>LC OL · Functions</title>
-      <xi:include href="./lc-ol-functions-chapter.ptx"/>
+      <xi:include href="./lc-ol-functions-outcomes.ptx"/>
     </part>
   </book>
 </pretext>

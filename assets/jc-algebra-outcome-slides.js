@@ -1,16 +1,18 @@
-/* Presentation belongs inside each AF.1–AF.7 outcome section.
+/* Presentation belongs inside each individual JC / LC OL outcome section.
    Official content remains fully visible in the underlying page. */
 (() => {
   "use strict";
   function install() {
-    const section = [...document.querySelectorAll('section[id^="jc-outcomes-algebra-af"]')]
+    const section = document.querySelector('section[data-outcome-code]') || [...document.querySelectorAll('section[id^="jc-outcomes-algebra-af"]')]
       .find(el => /^jc-outcomes-algebra-af[1-7]$/.test(el.id));
     if (!section || section.dataset.outcomeSlides === "yes") return;
     const paragraphs = [...section.querySelectorAll(":scope > .para")]
       .filter(p => p.textContent.trim());
     if (!paragraphs.length) return;
     section.dataset.outcomeSlides = "yes";
-    const code = "AF." + section.id.match(/af([1-7])$/)[1];
+    const code = section.dataset.outcomeCode || "AF." + section.id.match(/af([1-7])$/)[1];
+    const course = section.dataset.outcomeCourse || "Junior Cycle";
+    const group = section.dataset.outcomeGroup || "Algebra and Functions";
     const headingSource = section.querySelector(":scope > .heading, :scope > h2, :scope > h3");
     const title = headingSource?.textContent?.replace(/\s+/g, " ").trim() || code;
     const launcher = document.createElement("button");
@@ -41,6 +43,7 @@
     ].join("");
     document.body.appendChild(dialog);
     const $ = q => dialog.querySelector(q);
+    $(".jc-algebra-slide-kicker").textContent = course + " · " + group;
     const count = $(".jc-algebra-slide-count");
     const heading = $("#jc-algebra-slide-title");
     const content = $(".jc-algebra-slide-content");
@@ -48,7 +51,9 @@
     const previous = $(".jc-algebra-slide-prev");
     const next = $(".jc-algebra-slide-next");
     const close = $(".jc-algebra-slide-close");
+    const example = section.querySelector(':scope > .remark');
     const slides = [paragraphs, ...paragraphs.map(p => [p])];
+    if (example) slides.push([example]);
     let current = 0;
     function clone(node) {
       const copy = node.cloneNode(true);
@@ -59,7 +64,8 @@
     }
     function show(i) {
       current = Math.max(0, Math.min(slides.length - 1, i));
-      count.textContent = (current === 0 ? "Complete outcome" : "Detail " + current) +
+      count.textContent = (current === 0 ? "Complete outcome" :
+        example && current === slides.length - 1 ? "Teaching example" : "Detail " + current) +
         " · " + (current + 1) + " of " + slides.length;
       heading.textContent = title;
       content.replaceChildren(...slides[current].map(clone));
@@ -75,7 +81,7 @@
     launcher.addEventListener("click", () => { show(0); dialog.showModal(); close.focus(); });
     dialog.addEventListener("close", () => launcher.focus());
     dialog.addEventListener("keydown", event => {
-      if (event.altKey || event.ctrlKey || event.metaKey || event.target.closest("button")) return;
+      if (event.altKey || event.ctrlKey || event.metaKey || event.target.closest("a, input, select, textarea")) return;
       if (event.key === "ArrowRight") { event.preventDefault(); show(current + 1); }
       if (event.key === "ArrowLeft") { event.preventDefault(); show(current - 1); }
     });

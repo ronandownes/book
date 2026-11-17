@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Original illustrative examples. The official statements are generated separately. -->
+<examples>
+  <example code="U.1">
+    <title>What does three quarters mean?</title>
+    <p>The denominator in <m>\frac34</m> tells us to divide a whole into four equal parts. The numerator tells us to take three of those parts.</p>
+    <p>To find three quarters of 20 counters, make four equal groups of 5 and take three groups: <m>\frac34\times20=15</m>.</p>
+    <p>Ask a partner to explain why dividing by 4 comes before multiplying by 3 in this model. A correct calculation should connect to the meaning of the fraction.</p>
+  </example>
+  <example code="U.2">
+    <title>Choosing the correct order</title>
+    <p>Compare <m>6+4\times3</m> with <m>(6+4)\times3</m>.</p>
+    <p>Multiplication comes before addition, so <m>6+4\times3=6+12=18</m>. Brackets change the grouping: <m>(6+4)\times3=10\times3=30</m>.</p>
+    <p>Explain what changed, rather than simply quoting an answer. Check both calculations with a calculator after doing them yourself.</p>
+  </example>
+  <example code="U.3">
+    <title>Two expressions with the same value</title>
+    <p>Is <m>7+5=8+4</m> true? Each expression has value 12, so the equality is true.</p>
+    <p>In <m>7+5=8+\square</m>, the missing number is 4. The equals sign says that both sides have the same value.</p>
+    <p>Find three different expressions that could replace <m>8+4</m> while keeping the equality true.</p>
+  </example>
+  <example code="U.4">
+    <title>One journey, several representations</title>
+    <p>In a fictional taxi tariff, the starting charge is €3 and each kilometre costs €2. In words: add twice the distance to the starting charge.</p>
+    <p>Algebraically, <m>C=2d+3</m>, where <m>d</m> is distance in kilometres and <m>C</m> is cost in euro. Distances 0, 2 and 5 give costs €3, €7 and €13.</p>
+    <p>Put those values in a table, plot them and draw the straight-line model for <m>d\geq0</m>. Explain the starting height and the increase per kilometre.</p>
+  </example>
+  <example code="U.5">
+    <title>Area explains an algebraic expansion</title>
+    <p>A rectangle has side lengths <m>x+2</m> and <m>x+3</m>, with <m>x&gt;0</m>. Split it into four rectangles with areas <m>x^2</m>, <m>3x</m>, <m>2x</m> and 6.</p>
+    <p>The whole area can therefore be written in two ways: <m>(x+2)(x+3)=x^2+5x+6</m>.</p>
+    <p>Draw the partition and label every area. This connects the distributive property in algebra with the area of a rectangle in geometry.</p>
+  </example>
+  <example code="U.6">
+    <title>Comparing value for money</title>
+    <p>A 750 g packet costs €2.40; a 1 kg packet costs €3.40. Assume the contents are identical and that you will use everything you buy.</p>
+    <p>The first price per kilogram is <m>2.40\div0.75=3.20</m>. Its unit price is €3.20/kg, compared with €3.40/kg for the larger packet.</p>
+    <p>The smaller packet has the lower unit price. Explain why buying a larger packet does not always give better value.</p>
+  </example>
+  <example code="U.7">
+    <title>Turning a transport question into mathematics</title>
+    <p>There are 53 passengers. Each bus has 40 available passenger seats. All passengers must travel at the same time, with one seat each.</p>
+    <p>The calculation <m>53\div40=1.325</m> compares passengers with seats per bus. We need a whole number of buses, so the minimum is 2.</p>
+    <p>Identify the information used and the assumptions made. Would the answer change if one bus could make several trips?</p>
+  </example>
+  <example code="U.8">
+    <title>Breaking a costing problem into steps</title>
+    <p>A rectangular floor measures 5 m by 4 m. Flooring costs €12 per square metre. Allow an extra 10% of the floor area for wastage and assume any quantity can be bought.</p>
+    <p>First find the area: <m>5\times4=20\text{ m}^2</m>. Then allow for wastage: <m>20\times1.10=22\text{ m}^2</m>. Finally find the material cost: <m>22\times12=264</m>, or €264.</p>
+    <p>Label the three steps: area, quantity to buy, cost. Discuss how selling flooring only in complete packs could change the result.</p>
+  </example>
+  <example code="U.9">
+    <title>Interpreting a rounded answer</title>
+    <p>For one journey, 47 students need transport in minibuses with 16 available passenger seats each.</p>
+    <p><m>47\div16=2.9375</m>. Three minibuses provide <m>3\times16=48</m> seats, leaving one spare seat.</p>
+    <p>Two minibuses would leave 15 students without seats. Finish with a sentence answering the transport question, rather than leaving a decimal number of minibuses.</p>
+  </example>
+  <example code="U.10">
+    <title>Comparing two designs</title>
+    <p>Two rectangular gardens measure 4 m by 9 m and 6 m by 6 m. Both have area <m>36\text{ m}^2</m>.</p>
+    <p>Their perimeters are <m>2(4+9)=26\text{ m}</m> and <m>2(6+6)=24\text{ m}</m>. The square needs 2 m less fencing for the same area.</p>
+    <p>If fencing length is the only concern, the square is preferable. Discuss other constraints, such as the shape of the available site, before recommending a design.</p>
+  </example>
+  <example code="U.11">
+    <title>From examples to a conjecture</title>
+    <p>Calculate <m>1=1^2</m>, <m>1+3=2^2</m> and <m>1+3+5=3^2</m>. Predict the sum of the first four positive odd numbers.</p>
+    <p>The pattern suggests <m>1+3+\cdots+(2n-1)=n^2</m> for positive integers <m>n</m>.</p>
+    <p>Testing more cases supports the conjecture. For an explanation, draw an <m>n\times n</m> square: adding <m>2n+1</m> new dots makes the next square.</p>
+  </example>
+  <example code="U.12">
+    <title>Why do two odd numbers add to an even number?</title>
+    <p>The examples <m>3+5=8</m> and <m>7+9=16</m> suggest a rule, but examples alone do not establish it for every pair.</p>
+    <p>Write any two odd integers as <m>2a+1</m> and <m>2b+1</m>, where <m>a,b\in\mathbb Z</m>. Their sum is <m>2a+1+2b+1=2(a+b+1)</m>.</p>
+    <p>This is twice an integer, so it is even. Explain why the argument covers all odd integers, including negative ones.</p>
+  </example>
+  <example code="U.13">
+    <title>Giving a complete mathematical explanation</title>
+    <p>A journey covers 90 km in 1.5 hours. To find average speed, divide total distance by total time.</p>
+    <p><m>\text{Average speed}=\frac{90}{1.5}=60\text{ km/h}</m>.</p>
+    <p>State the method, show the calculation and include units in the conclusion. This average does not mean that the vehicle travelled at 60 km/h throughout the journey.</p>
+  </example>
+  <example code="N.1">
+    <title>Prime factors, HCF and LCM</title>
+    <p>Write <m>72=2^3\times3^2</m> and <m>108=2^2\times3^3</m>. Each prime factorisation describes the same number in index form.</p>
+    <p>The HCF uses the smaller common powers: <m>2^2\times3^2=36</m>. The LCM uses the larger required powers: <m>2^3\times3^3=216</m>.</p>
+    <p>Check that 36 divides both numbers and that both numbers divide 216. Explain why taking the larger powers gives a common multiple.</p>
+  </example>
+  <example code="N.2">
+    <title>A fraction, a decimal and a percentage</title>
+    <p><m>\frac34=0.75=75\%</m>. These are three representations of the same rational number.</p>
+    <p>If 15 of 20 counters are blue, the blue fraction is <m>\frac{15}{20}=\frac34</m>, so 75% are blue. The ratio of blue to other counters is <m>15:5=3:1</m>.</p>
+    <p>Explain why the fraction of counters that are blue is <m>\frac34</m>, while the blue-to-other ratio is <m>3:1</m>.</p>
+  </example>
+  <example code="N.3">
+    <title>Absolute and Relative Comparison</title>
+    <p>The original approved N.3 teaching example is retained by the page generator.</p>
+  </example>
+  <example code="N.4">
+    <title>Describing a numerical pattern</title>
+    <p>The first four terms are 3, 7, 11 and 15. The difference between successive terms is always 4.</p>
+    <p>With the first term at <m>n=1</m>, the rule is <m>T_n=4n-1</m>. It gives <m>T_{10}=4(10)-1=39</m>.</p>
+    <p>Make a table of term number and value, plot the first five points and explain how the constant increase appears on the graph.</p>
+  </example>
+  <example code="N.5">
+    <title>Intersection, union and complement</title>
+    <p>Let <m>U=\{1,2,3,4,5,6\}</m>, <m>A=\{2,4,6\}</m> and <m>B=\{1,2,3\}</m>.</p>
+    <p><m>A\cap B=\{2\}</m>, <m>A\cup B=\{1,2,3,4,6\}</m> and <m>A^{\mathrm c}=\{1,3,5\}</m>, with the complement taken in <m>U</m>.</p>
+    <p>Place every element of <m>U</m> in a two-set Venn diagram. Check <m>\#A=3</m>, <m>\#B=3</m> and <m>\#(A\cup B)=3+3-1=5</m>.</p>
+  </example>
+  <example code="GT.1">
+    <title>Choosing compatible units</title>
+    <p>A distance of 1.8 km is <m>1.8\times1000=1800\text{ m}</m>. A duration of 1 hour 35 minutes is <m>60+35=95</m> minutes.</p>
+    <p>To convert <m>72\text{ km/h}</m> to metres per second, calculate <m>72\times\frac{1000}{3600}=20\text{ m/s}</m>.</p>
+    <p>Explain where the factors 1000 and 3600 come from. Keep units beside the quantities so that unlike units are not mixed.</p>
+  </example>
+  <example code="GT.2">
+    <title>Volume and surface area of a cuboid</title>
+    <p>A closed cuboid measures 4 cm by 3 cm by 2 cm. Its volume is <m>4\times3\times2=24\text{ cm}^3</m>.</p>
+    <p>A net contains two 4-by-3 rectangles, two 4-by-2 rectangles and two 3-by-2 rectangles. The total surface area is <m>2(12+8+6)=52\text{ cm}^2</m>.</p>
+    <p>Sketch and label a net. Explain why square units measure the covering and cubic units measure the space inside.</p>
+  </example>
+  <example code="GT.3">
+    <title>Using a theorem to justify an answer</title>
+    <p>The interior angles of a triangle are <m>x</m>, <m>2x</m> and <m>3x</m>. Their sum is 180°, by the angle-sum theorem for triangles.</p>
+    <p>Thus <m>x+2x+3x=180^\circ</m>, giving <m>x=30^\circ</m>. The three angles are 30°, 60° and 90°.</p>
+    <p>State the theorem used and check the sum. A measured drawing can suggest these values; the theorem supplies the justification.</p>
+  </example>
+  <example code="GT.4">
+    <title>Matching a ratio to a right-angled triangle</title>
+    <p>Relative to an acute angle <m>\theta</m>, a right-angled triangle has opposite side 3, adjacent side 4 and hypotenuse 5.</p>
+    <p><m>\sin\theta=\frac35</m>, <m>\cos\theta=\frac45</m> and <m>\tan\theta=\frac34</m>. In degree mode, <m>\theta=\sin^{-1}(3/5)\approx36.87^\circ</m>.</p>
+    <p>Label the sides on a sketch before calculating. Check that the other two inverse ratios give the same acute angle.</p>
+  </example>
+  <example code="GT.5">
+    <title>Reading a line segment from its endpoints</title>
+    <p>Let <m>A=(1,2)</m> and <m>B=(4,6)</m>. From <m>A</m> to <m>B</m>, the horizontal change is 3 and the vertical change is 4.</p>
+    <p>The slope is <m>\frac43</m>, the distance is <m>\sqrt{3^2+4^2}=5</m> and the midpoint is <m>(2.5,4)</m>. The line has equation <m>y-2=\frac43(x-1)</m>.</p>
+    <p>Plot the points and mark the right-angled triangle used for the distance. Substitute both endpoints into the line equation to check it.</p>
+  </example>
+  <example code="GT.6">
+    <title>Three different images of one point</title>
+    <p>Start with <m>P=(2,3)</m> each time. Reflection in the <m>y</m>-axis gives <m>(-2,3)</m>.</p>
+    <p>Translation by vector <m>(4,-1)</m> gives <m>(6,2)</m>. Rotation through 90° anticlockwise about the origin gives <m>(-3,2)</m>.</p>
+    <p>Plot the original point and the three separate images. Describe what each transformation preserves, and specify the mirror line, vector or centre and angle.</p>
+  </example>
+  <example code="AF.1">
+    <title>From a growing pattern to a rule</title>
+    <p>A tile pattern uses 5, 9, 13 and 17 tiles in stages 1, 2, 3 and 4. Each new stage adds 4 tiles.</p>
+    <p>The rule <m>T_n=4n+1</m> gives 5 tiles at <m>n=1</m> and <m>T_{10}=41</m> tiles at stage 10.</p>
+    <p>Build a table and plot the points. Describe a possible tile arrangement with four groups of <m>n</m> tiles and one extra tile, then explain the rule in words.</p>
+  </example>
+  <example code="AF.2">
+    <title>Substituting a negative value</title>
+    <p>Find the value of <m>3x^2-2x</m> when <m>x=-2</m>.</p>
+    <p>Use brackets for the substituted value: <m>3(-2)^2-2(-2)=3(4)+4=16</m>.</p>
+    <p>Explain why <m>(-2)^2=4</m> and why <m>-2(-2)=4</m>. The letter represents a number; it is not a label to attach to the answer.</p>
+  </example>
+  <example code="AF.3">
+    <title>Equivalent expressions</title>
+    <p>Simplify <m>2(x+3)+3(x-1)</m> by distributing multiplication across each bracket.</p>
+    <p><m>2(x+3)+3(x-1)=2x+6+3x-3=5x+3</m>.</p>
+    <p>Check both forms at <m>x=2</m>: each gives 13. Checking one value is useful for spotting an error; the distributive property explains why the expressions agree for every value.</p>
+  </example>
+  <example code="AF.4">
+    <title>Solving and checking an equation</title>
+    <p>Solve <m>3x+5=20</m>. Subtract 5 from both sides to get <m>3x=15</m>, then divide both sides by 3.</p>
+    <p>The solution is <m>x=5</m>. Substitution checks it: <m>3(5)+5=20</m>.</p>
+    <p>Explain how each operation keeps the two sides equal. Show how working backwards from 20 gives the same solution.</p>
+  </example>
+  <example code="AF.5">
+    <title>Building an equation from its roots</title>
+    <p>We want a quadratic equation with roots 2 and <m>-3</m>. The corresponding factors are <m>x-2</m> and <m>x+3</m>.</p>
+    <p><m>(x-2)(x+3)=0</m> expands to <m>x^2+x-6=0</m>.</p>
+    <p>Substitute 2 and <m>-3</m> into the expanded equation to check both roots. Explain why a root of <m>-3</m> produces the factor <m>x+3</m>.</p>
+  </example>
+  <example code="AF.6">
+    <title>Making height the subject</title>
+    <p>The area of a triangle is <m>A=\frac12bh</m>. Multiply both sides by 2, then divide both sides by <m>b</m>, where <m>b\ne0</m>.</p>
+    <p>The rearranged formula is <m>h=\frac{2A}{b}</m>. If <m>A=30\text{ cm}^2</m> and <m>b=10\text{ cm}</m>, then <m>h=6\text{ cm}</m>.</p>
+    <p>Put the values back into the original area formula. Describe how the inverse operations undo multiplying the height by <m>\frac12b</m>.</p>
+  </example>
+  <example code="AF.7">
+    <title>One output for each input</title>
+    <p>For <m>f(x)=2x+3</m>, the input 4 gives <m>f(4)=11</m>. Every input in the domain has exactly one output.</p>
+    <p>Different inputs may share an output in another function: for <m>g(x)=x^2</m>, both 2 and <m>-2</m> give 4. This still defines a function.</p>
+    <p>Represent <m>f</m> with a table, an input-output diagram and a graph. Locate the point <m>(4,11)</m> and explain what its coordinates mean.</p>
+  </example>
+  <example code="SP.1">
+    <title>Listing a sample space systematically</title>
+    <p>Toss a fair coin and roll an independent fair six-sided die. An outcome records both results, such as <m>(H,4)</m>.</p>
+    <p>There are <m>2\times6=12</m> equally likely outcomes: six beginning with <m>H</m> and six beginning with <m>T</m>.</p>
+    <p>List all 12 in a two-way table or tree diagram. Explain why recording only the coin result would leave out part of the experiment.</p>
+  </example>
+  <example code="SP.2">
+    <title>Theoretical probability and relative frequency</title>
+    <p>A bag contains 3 red counters and 2 blue counters, identical apart from colour. A random selection has probability <m>P(\text{red})=\frac35=0.6</m>.</p>
+    <p>Replace the counter and mix after every selection. If 28 of 50 selections are red, the observed relative frequency is <m>\frac{28}{50}=0.56</m>.</p>
+    <p>The theoretical probability and the experimental estimate need not be equal. Pool repeated experiments and discuss why a larger total usually gives a more stable estimate.</p>
+  </example>
+  <example code="SP.3">
+    <title>Choosing and interpreting summaries</title>
+    <p>Five students report travel times of 2, 4, 4, 5 and 10 minutes. The mean is <m>25\div5=5</m> minutes; the median and mode are both 4 minutes.</p>
+    <p>The range is <m>10-2=8</m> minutes. A dot plot makes the repeated value and the longest journey easy to see.</p>
+    <p>Explain which summary best answers your question. These five observations do not automatically represent every student in the school: describe how a more representative sample could be collected.</p>
+  </example>
+  <example code="1.1">
+    <title>When order matters</title>
+    <p>Five distinct books can be arranged on a shelf in <m>5!=5\times4\times3\times2\times1=120</m> ways.</p>
+    <p>If only three of the five books are chosen and placed in order, there are <m>5\times4\times3=60</m> arrangements.</p>
+    <p>Explain why each choice leaves one fewer book available. Compare choosing three books with arranging them: changing their order produces another arrangement.</p>
+  </example>
+  <example code="1.2">
+    <title>Expected value and a fair game</title>
+    <p>In a fictional game, a player pays €2 to toss a fair coin. Heads pays €3 back to the player; tails pays €0.</p>
+    <p>The expected payout is <m>\frac12(3)+\frac12(0)=1.50</m> euro. The expected net gain is <m>1.50-2=-0.50</m> euro per play.</p>
+    <p>A fair entry fee, using expected net gain of zero, would be €1.50. The expected payout need not be a payout available on any single play.</p>
+  </example>
+  <example code="1.3">
+    <title>Three independent Bernoulli trials</title>
+    <p>Toss a fair coin three times independently, treating heads as success. Exactly two heads can occur as <m>HHT</m>, <m>HTH</m> or <m>THH</m>.</p>
+    <p>Each sequence has probability <m>(\frac12)^3=\frac18</m>, so <m>P(\text{exactly two heads})=\frac38</m>.</p>
+    <p>For the first head to occur on the third toss, the sequence must be <m>TTH</m>, with probability <m>\frac18</m>. Explain why these are different events.</p>
+  </example>
+  <example code="1.4">
+    <title>Can a sample speak for the whole school?</title>
+    <p>A sports club asks its members whether the school should spend more on sports facilities. The population of interest is the whole school; the respondents form a sample.</p>
+    <p>Club members may have different views from other students. A large number of club responses does not by itself remove this selection bias.</p>
+    <p>For a bivariate investigation, heights and shoe sizes could be recorded for the same students and plotted together. An association between two variables is not, by itself, evidence that one causes the other.</p>
+  </example>
+  <example code="1.5">
+    <title>Designing a simple random sample</title>
+    <p>A school has 400 students and wants to survey 40. Number the students from 1 to 400 and select 40 different numbers randomly, without replacement.</p>
+    <p>Use the selected numbers to identify the students. A simple random sample gives every possible group of 40 the same chance of selection.</p>
+    <p>Compare this with asking the first 40 students in the canteen. Explain a possible bias, and plan how to handle non-response without quietly substituting convenient respondents.</p>
+  </example>
+  <example code="1.6">
+    <title>Centre and spread describe different features</title>
+    <p>For the complete data set 2, 4, 6, 8, 10, the mean and median are both 6. The squared deviations from the mean sum to 40.</p>
+    <p>The population standard deviation is <m>\sigma=\sqrt{40/5}=\sqrt8\approx2.83</m>. On a calculator, distinguish this from the sample standard deviation.</p>
+    <p>Using the convention that excludes the overall median when forming the two halves, <m>Q_1=3</m>, <m>Q_3=9</m> and the interquartile range is 6. State the quartile convention and explain what each measure tells you.</p>
+  </example>
+  <example code="1.7">
+    <title>Using the syllabus margin-of-error rule</title>
+    <p>In a representative simple random sample of 400 people, 224 support a proposal. The sample proportion is <m>\hat p=224/400=0.56</m>.</p>
+    <p>The approximate margin of error is <m>1/\sqrt{400}=0.05</m>, or 5 percentage points. The corresponding approximate 95% confidence interval is <m>0.56\pm0.05</m>, from 51% to 61%.</p>
+    <p>Under this syllabus rule, 50% lies outside the interval, giving evidence against a population proportion of 50%. State the sampling assumptions and explain why the conclusion is evidence rather than certainty.</p>
+  </example>
+  <example code="2.1">
+    <title>Using similarity</title>
+    <p>Two triangles have equal corresponding angles, so they are similar. A side of length 6 cm in the first corresponds to a side of length 9 cm in the second.</p>
+    <p>The scale factor from the first triangle to the second is <m>9/6=1.5</m>. A corresponding side of length 4 cm therefore becomes <m>4\times1.5=6\text{ cm}</m>.</p>
+    <p>Mark the equal angles and pair the corresponding sides before using a ratio. Explain the geometric reason for similarity.</p>
+  </example>
+  <example code="2.2">
+    <title>Where a line meets a circle</title>
+    <p>The circle <m>x^2+y^2=25</m> has centre <m>(0,0)</m> and radius 5. Find its intersections with the line <m>y=3</m>.</p>
+    <p>Substitution gives <m>x^2+9=25</m>, so <m>x^2=16</m> and <m>x=\pm4</m>. The intersection points are <m>(4,3)</m> and <m>(-4,3)</m>.</p>
+    <p>Check each point in both equations and sketch the two intersections. Explain why retaining only the positive square root would miss one point.</p>
+  </example>
+  <example code="2.3">
+    <title>Two sides and the included angle</title>
+    <p>A triangle has sides 5 cm and 7 cm enclosing an angle of 60°. Its area is <m>\frac12(5)(7)\sin60^\circ=\frac{35\sqrt3}{4}\approx15.16\text{ cm}^2</m>.</p>
+    <p>If <m>c</m> is opposite the 60° angle, the cosine rule gives <m>c^2=5^2+7^2-2(5)(7)\cos60^\circ=39</m>, so <m>c=\sqrt{39}\approx6.24\text{ cm}</m>.</p>
+    <p>Label a diagram with the included angle. Explain why the right-angled-triangle ratios alone do not directly solve this triangle.</p>
+  </example>
+  <example code="2.4">
+    <title>Lengths and areas scale differently</title>
+    <p>Enlarge a 4 cm by 6 cm rectangle by scale factor <m>k=1.5</m>. The new dimensions are 6 cm by 9 cm.</p>
+    <p>The area changes from <m>24\text{ cm}^2</m> to <m>54\text{ cm}^2</m>. The area factor is <m>54/24=2.25=k^2</m>.</p>
+    <p>With centre of enlargement at the origin, <m>(2,-4)</m> maps to <m>(3,-6)</m>. Draw the centre and a ray through the point, and explain both scale factors.</p>
+  </example>
+  <example code="3.1">
+    <title>Locating numbers in different number systems</title>
+    <p><m>\frac34</m> is rational because it is a ratio of integers with non-zero denominator. <m>\sqrt2</m> is real and irrational.</p>
+    <p>The complex number <m>z=3+4i</m> is represented by <m>(3,4)</m> on an Argand diagram. Its modulus is <m>|z|=\sqrt{3^2+4^2}=5</m> and its conjugate is <m>3-4i</m>.</p>
+    <p>Place the two real numbers on a number line and plot the complex number separately. Explain why a non-real complex number needs two coordinates.</p>
+  </example>
+  <example code="3.2">
+    <title>Fractional and negative indices</title>
+    <p><m>16^{3/4}=(\sqrt[4]{16})^3=2^3=8</m>. The denominator of the fractional index identifies the root.</p>
+    <p><m>2^{-3}=1/2^3=1/8</m>. A negative index gives a reciprocal. Also, <m>a^0=1</m> for <m>a\ne0</m>.</p>
+    <p>Check <m>2^3\times2^{-3}=2^0=1</m>. Explain why a negative index does not mean a negative answer.</p>
+  </example>
+  <example code="3.3">
+    <title>Mark-up and margin use different bases</title>
+    <p>An item costs a retailer €80 and sells for €100. Ignoring other costs, the profit is <m>100-80=20</m> euro.</p>
+    <p>Mark-up is profit as a percentage of cost price: <m>\frac{20}{80}\times100\%=25\%</m>. Margin is profit as a percentage of selling price: <m>\frac{20}{100}\times100\%=20\%</m>.</p>
+    <p>Name the reference amount each time. Check that adding 25% of €80 gives €100, while 20% of the selling price is the same €20 profit.</p>
+  </example>
+  <example code="3.4">
+    <title>A cylinder and its net</title>
+    <p>A closed cylinder has radius 3 cm and height 10 cm. Its volume is <m>\pi r^2h=90\pi\text{ cm}^3</m>.</p>
+    <p>Its net has two circles and a rectangle with dimensions <m>6\pi</m> cm by 10 cm. The total surface area is <m>2\pi r^2+2\pi rh=78\pi\text{ cm}^2</m>.</p>
+    <p>Draw the net and explain why the rectangle width is the circumference of the circular base. Distinguish the total surface area from the curved surface area, which is <m>60\pi\text{ cm}^2</m>.</p>
+  </example>
+  <example code="4.1">
+    <title>Expanded and factorised forms</title>
+    <p>Distribute multiplication across the sums: <m>(x+2)(x+3)=x^2+3x+2x+6=x^2+5x+6</m>.</p>
+    <p>Reading the identity in reverse gives the factorisation <m>x^2+5x+6=(x+2)(x+3)</m>.</p>
+    <p>At <m>x=2</m>, both forms give 20. Explain how the two numbers 2 and 3 have sum 5 and product 6, and why this helps to recover the factors.</p>
+  </example>
+  <example code="4.2">
+    <title>A quadratic that does not factor over the integers</title>
+    <p>Solve <m>x^2-2x-1=0</m>. Here <m>a=1</m>, <m>b=-2</m> and <m>c=-1</m>.</p>
+    <p>The quadratic formula gives <m>x=\frac{2\pm\sqrt{4+4}}{2}=1\pm\sqrt2</m>. The approximate solutions are 2.414 and <m>-0.414</m>.</p>
+    <p>Check by substituting an exact root, or by completing the square to obtain <m>(x-1)^2=2</m>. Keep exact values until the final rounding step.</p>
+  </example>
+  <example code="4.3">
+    <title>Dividing an inequality by a negative number</title>
+    <p>Solve <m>-2x+3&lt;11</m>. Subtract 3 from both sides to obtain <m>-2x&lt;8</m>.</p>
+    <p>Dividing by <m>-2</m> reverses the inequality, giving <m>x&gt;-4</m>. On a number line, use an open circle at <m>-4</m> and shade to the right.</p>
+    <p>Check that <m>x=0</m> satisfies the original inequality and <m>x=-5</m> does not. Explain why the boundary value is excluded.</p>
+  </example>
+  <example code="4.4">
+    <title>Multiplying complex numbers</title>
+    <p>Expand <m>(3+4i)(2-i)</m> using the distributive property: <m>6-3i+8i-4i^2</m>.</p>
+    <p>Since <m>i^2=-1</m>, the real part is <m>6+4=10</m> and the imaginary part is <m>-3i+8i=5i</m>. The product is <m>10+5i</m>.</p>
+    <p>Group the real terms and the imaginary terms separately. Explain why the final term contributes positive 4 to the real part.</p>
+  </example>
+  <example code="5.1">
+    <title>The order of composition matters</title>
+    <p>Let <m>f(x)=2x+3</m> and <m>g(x)=x^2</m>. Applying <m>g</m> first to the input 2 gives <m>g(2)=4</m>, then <m>f(4)=11</m>.</p>
+    <p>Thus <m>f(g(2))=11</m>. Reversing the order gives <m>g(f(2))=g(7)=49</m>.</p>
+    <p>In general, <m>f(g(x))=2x^2+3</m> while <m>g(f(x))=(2x+3)^2</m>. Draw two input-output chains and explain why they produce different functions.</p>
+  </example>
+  <example code="5.2">
+    <title>Derivatives describe a curve</title>
+    <p>For <m>f(x)=x^3-3x</m>, the first derivative is <m>f'(x)=3x^2-3</m> and the second derivative is <m>f''(x)=6x</m>.</p>
+    <p>Stationary points occur at <m>x=-1</m> and <m>x=1</m>. The point <m>(-1,2)</m> is a local maximum because <m>f''(-1)&lt;0</m>; <m>(1,-2)</m> is a local minimum because <m>f''(1)&gt;0</m>.</p>
+    <p>At <m>x=2</m>, the slope is 9 and the point is <m>(2,2)</m>, so the tangent is <m>y-2=9(x-2)</m>. Sketch the curve and connect each derivative calculation to a feature of the graph.</p>
+  </example>
+</examples>

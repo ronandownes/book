@@ -52,6 +52,7 @@ jobs:
           mkdir -p assets/syllabus
           curl --fail --location --retry 3 --connect-timeout 15 --max-time 120 --silent --show-error "https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" --output assets/syllabus/LC_Mathematics_Syllabus_2015.pdf
           python scripts/build_intro_outcomes.py
+          python scripts/build_outcome_pages.py
           for strand in number geometry algebra statistics; do
             test -s "source/jc-${strand}-outcomes.ptx"
           done
@@ -303,6 +304,10 @@ jobs:
                   page.write_text(html, encoding="utf-8")
           print("AF slides are available within AF.1 through AF.7, never on the overview.")
           PY
+      - name: Complete and verify all 55 JC and LC OL outcome displays
+        run: |
+          set -euo pipefail
+          python scripts/add_outcome_displays.py
       - name: Verify five JC Parts, TY and five LC OL Parts
         run: |
           set -euo pipefail
