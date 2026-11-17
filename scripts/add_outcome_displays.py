@@ -1,61 +1,66 @@
 #!/usr/bin/env python3
-"""Verify and enhance all 55 native outcome/topic pages after the HTML build."""
+"""Validate 55 official, native HTML learning-outcome pages.
+
+No injected presentation scripts, teaching remarks or editorial examples.
+"""
 from pathlib import Path
 import json
-import shutil
 from lxml import etree, html
 
-site = Path('output/web')
-manifest = json.loads(Path('source/learning-outcomes-pages.json').read_text(encoding='utf-8'))
-assert len(manifest['pages']) == 55
-for suffix in ['js', 'css']:
-    shutil.copy2(f'assets/jc-algebra-outcome-slides.{suffix}', site)
+site = Path("output/web")
+manifest = json.loads(
+    Path("source/learning-outcomes-pages.json").read_text(encoding="utf-8")
+)
+entries = manifest["pages"]
+if len(entries) != 55:
+    raise ValueError("Exactly 55 outcomes/topics are required")
 
-for item in manifest['pages']:
-    path = site / (item['id'] + '.html')
-    page = path.read_text(encoding='utf-8')
-    parsed = html.fromstring(page)
-    sections = parsed.xpath('//section[@id=$ident]', ident=item['id'])
+groups = {}
+for item in entries:
+    page_path = site / (item["id"] + ".html")
+    if not page_path.is_file():
+        raise ValueError("Missing outcome page: " + page_path.name)
+    content = page_path.read_text(encoding="utf-8")
+    parsed = html.fromstring(content)
+    sections = parsed.xpath("//section[@id=$ident]", ident=item["id"])
     if len(sections) != 1:
-        raise ValueError('Focused native section missing: ' + path.name)
+        raise ValueError("Native section missing: " + page_path.name)
     section = sections[0]
-    official = section.xpath('./div[contains(concat(" ", normalize-space(@class), " "), " para ")]')
-    examples = section.xpath('./article[contains(concat(" ", normalize-space(@class), " "), " remark ")]')
-    if not official or len(examples) != 1 or 'Teaching example:' not in examples[0].text_content():
-        raise ValueError('Official statement or teaching example missing: ' + path.name)
-    if item['code'] not in section.text_content():
-        raise ValueError('Wrong outcome code: ' + path.name)
-    attributes = {'data-outcome-code': item['code'], 'data-outcome-course': item['course'],
-                  'data-outcome-group': item['group']}
-    old = '<section class="section" id="' + item['id'] + '">'
-    if old not in page:
-        # Retain any native classes/attributes when serialising the opening tag.
-        import re
-        match = re.search(r'<section\b[^>]*\bid="' + re.escape(item['id']) + r'"[^>]*>', page)
-        if not match: raise ValueError('Cannot locate section opening: ' + path.name)
-        old = match.group()
-    addition = ''.join(' ' + key + '=' + json.dumps(value, ensure_ascii=False) for key,value in attributes.items())
-    if 'data-outcome-code=' not in old:
-        page = page.replace(old, old[:-1] + addition + '>', 1)
-    # AF pages may already have the legacy injector. Upgrade it without adding
-    # a second script or a second presentation button.
-    page = page.replace('jc-algebra-outcome-slides.css?v=2', 'jc-algebra-outcome-slides.css?v=3')
-    page = page.replace('jc-algebra-outcome-slides.js?v=2', 'jc-algebra-outcome-slides.js?v=3')
-    if 'src="jc-algebra-outcome-slides.js?' not in page:
-        css = '<link rel="stylesheet" href="jc-algebra-outcome-slides.css?v=3" data-outcome-display="1"/>'
-        script = '<script defer src="jc-algebra-outcome-slides.js?v=3" data-outcome-display="1"></script>'
-        page = page.replace('</head>', '  ' + css + '\n</head>', 1)
-        page = page.replace('</body>', '  ' + script + '\n</body>', 1)
-    path.write_text(page, encoding='utf-8')
+    statements = section.xpath(
+        './div[contains(concat(" ", normalize-space(@class), " "), " para ")]'
+    )
+    if not statements:
+        raise ValueError("Missing official statement: " + page_path.name)
+    if item["code"] not in section.text_content():
+        raise ValueError("Incorrect outcome code: " + page_path.name)
+    if section.xpath(".//*[contains(concat(' ', normalize-space(@class), ' '), ' remark ')]"):
+        raise ValueError("Teaching remark in " + page_path.name)
+    if "jc-algebra-outcome-slides" in content or 'data-outcome-display=' in content:
+        raise ValueError("Outcome presentation unexpectedly present: " + page_path.name)
+    groups.setdefault(item["group"] + ": " + item["course"], 0)
+    groups[item["group"] + ": " + item["course"]] += 1
 
-# Verify the complete source structure, including exact-once IDs and the
-# original N.3 example, before allowing deployment.
-doc = etree.parse('source/main.ptx')
-doc.xinclude()
-ids = doc.xpath('//@xml:id', namespaces={'xml':'http://www.w3.org/XML/1998/namespace'})
-if len(ids) != len(set(ids)): raise ValueError('Duplicate PreTeXt IDs')
-if len(doc.xpath('//*[@xml:id="jc-number-n3-comparison"]', namespaces={'xml':'http://www.w3.org/XML/1998/namespace'})) != 1:
-    raise ValueError('The approved N.3 teaching example changed or disappeared')
-for item in manifest['pages']:
-    if sum(ident == item['id'] for ident in ids) != 1: raise ValueError('Outcome not included in the book: ' + item['id'])
-print('Verified all 55 focused pages: full official statements, labelled examples and optional presentations.')
+# Verify that outcome chapters open with the complete original wording,
+# followed by *only* their numbered sections.
+book = etree.parse("source/main.ptx")
+book.xinclude()
+ids = book.xpath(
+    "//@xml:id", namespaces={"xml": "http://www.w3.org/XML/1998/namespace"}
+)
+if len(ids) != len(set(ids)):
+    raise ValueError("Duplicate XML ids")
+for item in entries:
+    if ids.count(item["id"]) != 1:
+        raise ValueError("Outcome missing from book: " + item["id"])
+
+for part in book.findall(".//part"):
+    for chapter in part.findall("chapter"):
+        children = chapter.findall("section")
+        if not children or chapter.findtext("title") != "Learning Outcomes":
+            continue
+        if any(node.tag in {"remark", "figure", "interactive"} for node in chapter.iter()):
+            raise ValueError("Non-official content in " + (chapter.get("{http://www.w3.org/XML/1998/namespace}id") or "?"))
+        intro = chapter.find("introduction")
+        if intro is None or intro.find("ol") is None:
+            raise ValueError("Missing complete-text overview in " + (chapter.get("{http://www.w3.org/XML/1998/namespace}id") or "?"))
+print("Verified 55 raw outcomes and chapter navigation: no remarks, examples or slides.")
