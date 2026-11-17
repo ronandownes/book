@@ -66,17 +66,27 @@
       const items=[...block.querySelectorAll("li")].filter(el=>el.textContent.trim());
       if(!items.length)continue;
       block.dataset.liEnhanced="yes";
-      const button=document.createElement("button");
-      button.type="button";button.className="learning-intentions-enlarge";
-      button.textContent="Enlarge Learning Intentions";
-      button.addEventListener("click",()=>{
-        makeDialog();sentences=items;trigger=button;
+      // Keep the presentation control discreet: double-click the intentions.
+      function openReader(){
+        makeDialog();sentences=items;trigger=block;
         const section=block.parentElement;
         const title=section?.querySelector(":scope > .heading,:scope > h1,:scope > h2,:scope > h3,:scope > h4");
         heading.textContent=(title?.textContent||"Mathematics").trim().replace(/\s+/g," ");
         show(0);dialog.showModal();close.focus();
+      }
+      block.addEventListener("dblclick",event=>{
+        if(event.target.closest("a,button,input,select,textarea"))return;
+        event.preventDefault();
+        openReader();
       });
-      h.insertAdjacentElement("afterend",button);
+      // A keyboard equivalent preserves access without displaying a button.
+      block.tabIndex=0;
+      block.addEventListener("keydown",event=>{
+        if(event.target===block && (event.key==="Enter" || event.key===" ")){
+          event.preventDefault();
+          openReader();
+        }
+      });
     }
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init,{once:true});
