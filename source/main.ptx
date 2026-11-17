@@ -23,7 +23,7 @@
 
     <part xml:id="part-jc-number">
       <title>Number</title>
-      <xi:include href="./jc-number-learning-outcomes.ptx" />
+      <xi:include href="./jc-number-outcomes.ptx" />
       <xi:include href="./number-introduction.ptx" />
       <xi:include href="./arithmetic.ptx" />
       <xi:include href="./indices-roots.ptx" />
@@ -51,8 +51,8 @@
     </part>
 
 <part xml:id="part-jc-algebra">
-      <title>Algebra</title>
-      <xi:include href="./jc-algebra-learning-outcomes.ptx" />
+      <title>Algebra and Functions</title>
+      <xi:include href="./jc-algebra-outcomes.ptx" />
       <xi:include href="./algebra-patterns.ptx" />
       <xi:include href="./algebra-language.ptx" />
       <xi:include href="./algebra-substitution.ptx" />
@@ -63,11 +63,6 @@
       <xi:include href="./algebra-equations-inequalities.ptx" />
       <xi:include href="./algebra-changing-subject.ptx" />
 
-          <xi:include href="./glossary.ptx"/>
-    </part>
-
-    <part xml:id="part-jc-functions">
-      <title>Functions</title>
       <chapter xml:id="chapter-functions"><title>Functions and Graphs</title><objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Define a function using an input-output rule.</p></li><li><p>Distinguish data points from a mathematical model.</p></li></ol></objectives><introduction><p>Functions describe relationships between quantities and help us investigate real data.</p></introduction>
               <section xml:id="functions-intro"><title>Introduction</title>
                 <p>Do countries with higher female literacy rates tend to have fewer births per woman? We can explore this question using real data.</p>
@@ -84,6 +79,7 @@
                 <p>A function assigns exactly one output to each input in its domain.</p>
               </section>
             </chapter>
+      <xi:include href="./glossary.ptx"/>
     </part>
 
 <part xml:id="part-jc-statistics">
