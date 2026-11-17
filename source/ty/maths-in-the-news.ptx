@@ -148,6 +148,7 @@
       <p>The advanced construction uses number theory. Our cube is a classroom comparison, not that construction.</p>
       <p><alert>Discuss:</alert> Why is finding a counterexample different from trying more examples?</p>
       <p>Read further: <url href="https://arxiv.org/abs/2605.20695" visual="the mathematicians’ companion paper"/>.</p>
+      <p><url href="https://www.youtube.com/watch?v=ZJ8KThKAfbs" visual="Watch: Matt Parker — Has an AI discovered new maths?"/>. Look for the unit-distance problem and the unexpected construction.</p>
     </subsection>
     <subsection xml:id="ty-news-fluid-question">
       <title>Air and Water Need Mathematics Too</title>
@@ -168,9 +169,13 @@
       </figure>
       <p>Can initially smooth fluid motion develop a mathematical breakdown?</p>
       <p>On <em>8 September 2026</em>, OpenAI announced a proof claim involving a smooth external force and a finite-time singularity.</p>
+      <p>The construction starts with fluid at rest, driven by a smooth external force. Carefully designed oscillatory pulses within the flow sustain a shrinking vortex.</p>
+      <p>The predicted maximum speed grows without bound as a finite time approaches. Total kinetic energy stays finite because the fastest motion is concentrated in a shrinking region. This signals a breakdown of the mathematical fluid model.</p>
+      <p><url href="https://www.youtube.com/watch?v=82WhfkCWU2Y" visual="Watch: Visualising the collapsing Navier–Stokes vortex — Complexity"/>. Watch the vortex become thinner and faster.</p>
+      <p><url href="https://www.youtube.com/watch?v=PsWR1rQEWYo&amp;t=478s" visual="Watch: Quanta’s explanation from 7:58 — what does blowup mean?"/>. The recent proof claim is discussed from <url href="https://www.youtube.com/watch?v=PsWR1rQEWYo&amp;t=688s" visual="11:28"/>.</p>
       <p>A published claim still needs scrutiny. Clay’s page remains labelled <em>Active</em> when checked for this lesson.</p>
       <p><alert>Discuss:</alert> What evidence would help us decide whether the claim is correct?</p>
-      <p>Sources: <url href="https://openai.com/index/navier-stokes-solution/" visual="the announcement"/>; <url href="https://www.claymath.org/millennium/navier-stokes-equation/" visual="Clay’s problem page"/>.</p>
+      <p>Sources: <url href="https://openai.com/index/navier-stokes-solution/" visual="the announcement"/>; <url href="https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf#page=3" visual="the paper’s physical description and diagrams, pages 3–6"/>; <url href="https://www.claymath.org/millennium/navier-stokes-equation/" visual="Clay’s problem page"/>.</p>
     </subsection>
     <subsection xml:id="ty-news-october-release">
       <title>October 2026: 722 Papers Arrive</title>
@@ -182,6 +187,7 @@
       <p>This was a collection of papers. Some results had computer-checked Lean proofs; others required further checking.</p>
       <p><alert>Think:</alert> If many papers arrive at once, who checks them, explains them and spots connections?</p>
       <p>Source: <url href="https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a" visual="the original collection"/>.</p>
+      <p><url href="https://www.youtube.com/watch?v=fTGIV3e8dTU" visual="Watch: Wes Roth — the reaction to 722 mathematical manuscripts"/>. Which claims need independent checking?</p>
     </subsection>
     <subsection xml:id="ty-news-corrections">
       <title>Checking Can Change the Story</title>
@@ -214,6 +220,10 @@
       <p><url href="https://www.youtube.com/watch?v=JNrXgpSEEIE" visual="Go: Move 37 — live commentary"/>. How do experts respond to a surprise?</p>
       <p><url href="https://www.youtube.com/watch?v=WXuK6gekU1Y" visual="AlphaGo — the official full documentary"/>. How does Lee respond after losing?</p>
       <p><url href="https://www.youtube.com/watch?v=qoinGjj60Fo" visual="Ten years of AlphaGo — Google DeepMind"/>. What do the researchers think changed?</p>
+      <p><url href="https://www.youtube.com/watch?v=ZJ8KThKAfbs" visual="Unit distances: Matt Parker — Has an AI discovered new maths?"/>. What changed mathematicians’ expectations?</p>
+      <p><url href="https://www.youtube.com/watch?v=82WhfkCWU2Y" visual="Navier–Stokes: visualising the collapsing vortex — Complexity"/>. How can speed increase while total energy stays finite?</p>
+      <p><url href="https://www.youtube.com/watch?v=PsWR1rQEWYo&amp;t=478s" visual="Navier–Stokes: Quanta’s explanation from 7:58"/>. What does a mathematical singularity mean?</p>
+      <p><url href="https://www.youtube.com/watch?v=fTGIV3e8dTU" visual="722 manuscripts: Wes Roth’s reaction and overview"/>. Separate the reaction from the evidence in the papers.</p>
       <p><alert>After watching:</alert> Name one claim, the evidence supporting it and one question you still have.</p>
     </subsection>
   </section>

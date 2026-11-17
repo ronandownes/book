@@ -22,5 +22,9 @@ Videos remain with their publishers. Links and the official film's normal embedd
 - Move 37 live-commentary excerpt (Daniel Estrada upload): https://www.youtube.com/watch?v=JNrXgpSEEIE
 - Google DeepMind, AlphaGo documentary: https://www.youtube.com/watch?v=WXuK6gekU1Y
 - Google DeepMind, tenth-anniversary conversation: https://www.youtube.com/watch?v=qoinGjj60Fo
+- Stand-up Maths / Matt Parker, Has an AI discovered new maths?: https://www.youtube.com/watch?v=ZJ8KThKAfbs
+- Complexity, Visualizing the OpenAI solution to the Navier-Stokes problem: https://www.youtube.com/watch?v=82WhfkCWU2Y
+- Quanta Magazine, Why Navier-Stokes Pushes Math and Physics to the Edge: https://www.youtube.com/watch?v=PsWR1rQEWYo (blowup at 7:58; recent results at 11:28)
+- Wes Roth, OpenAI's secret model just BROKE math...: https://www.youtube.com/watch?v=fTGIV3e8dTU (commentary on the manuscript release)
 
 Sources and video metadata checked on 17 November 2026. Mathematical and historical primary sources are also linked beside the corresponding slides.
