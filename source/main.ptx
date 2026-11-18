@@ -2,7 +2,7 @@
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-GB">
   <book xml:id="mathematics-book">
     <title>Irish School Maths</title>
-    <subtitle>Discover the Craft of Mathematics</subtitle>
+    <subtitle>Making Maths as Simple as Possible</subtitle>
     <frontmatter>
       <bibinfo>
         <author>
@@ -22,6 +22,15 @@
         <p>The <url href="https://ronandownes.github.io/maths/" visual="Maths Apps"/>, <url href="https://ronandownes.github.io/calculator/" visual="calculators"/> and <url href="https://ronandownes.github.io/pastpapers/" visual="past papers"/> are companions to the book. Further <url href="https://ronandownes.github.io/calculator/resources/" visual="free textbooks and mathematics resources"/> are also collected separately.</p>
       </preface>
 
+      <preface xml:id="about-the-author">
+        <title>About the Author</title>
+        <p>Ronan Downes is a Mathematics teacher based in Limerick, Ireland. He studied physics at NUI Galway and later graduated with an honours degree in Physical Optoelectronics from the University of Essex, before completing a Higher Diploma in Education.</p>
+        <p>After four years teaching in secondary schools, he moved into industry and self-employment, working in telecommunications and multimedia, including photography, video production and web development.</p>
+        <p>A lifelong interest in learning brought him back to university for a Master's degree in Mathematical Modelling at the University of Limerick. He subsequently returned to classroom teaching and later completed a Master's degree in Data Analytics at CCT College Dublin.</p>
+        <p>Programming, computational thinking and mathematical modelling inform his approach to the explanations and interactive resources in this book. He is particularly interested in understanding why mathematical methods work, comparing alternative approaches and considering which are most useful for students.</p>
+        <p>His guiding principle is inspired by a saying commonly attributed to Albert Einstein: <em>Making maths as simple as possible, but not too simple.</em></p>
+      </preface>
+
       <preface xml:id="project-preface">
         <title>Preface</title>
         <p>Welcome to <em>Irish School Maths</em>, an open, evolving mathematics resource for the Irish post-primary education system, freely available to anyone interested in learning mathematics.</p>
@@ -37,7 +46,7 @@
         <p>The book is developed using <em>PreTeXt</em>, an open-source publishing system for mathematical textbooks. It allows mathematics to be presented clearly and accessibly, with interactive resources, structured navigation and printable versions.</p>
         <p>This is a developing project, not a finished textbook. Its content, organisation and scope will continue to evolve.</p>
         <p>Above all, I hope to build a community of students, teachers, parents, special needs assistants and others who share an interest in better mathematics education. Your ideas, experiences and contributions are very welcome.</p>
-        <p>I hope this book helps you discover the craft of mathematics.</p>
+        <p>I hope this book helps make mathematics clearer and encourages students to become confident, curious and independent mathematical thinkers.</p>
         <p><em>Ronan Downes</em></p>
       </preface>
 
