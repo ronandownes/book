@@ -140,7 +140,7 @@ jobs:
           test -s output/web/functions-intro.html
           grep -q 'fertility-literacy.html' output/web/functions-intro.html
           test -s output/web/interactives/fertility-literacy.html
-      - name: Add separate ABCD shortcuts to PreTeXt navigation
+      - name: Add A B C PP shortcuts to PreTeXt toolbar
         run: |
           set -euo pipefail
           cp assets/quick-links.js output/web/quick-links.js
@@ -148,7 +148,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           root=Path("output/web")
-          tag='<script defer src="quick-links.js?v=2" data-maths-quick-links="abcd"></script>'
+          tag='<script defer src="quick-links.js?v=3" data-maths-quick-links="abcd"></script>'
           updated=0
           for page in root.glob("*.html"):
               html=page.read_text(encoding="utf-8")
