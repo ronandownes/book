@@ -10,6 +10,7 @@
     "part-jc-algebra.html":"algebra",
     "part-jc-statistics.html":"statistics",
     "part-transition-year.html":"ty",
+    "part-lc-ol-introduction.html":"intro",
     "part-lc-ol-statistics.html":"lc-statistics",
     "part-lc-ol-geometry.html":"lc-geometry",
     "part-lc-ol-number.html":"lc-number",
