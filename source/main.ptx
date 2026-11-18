@@ -22,6 +22,25 @@
         <p>The <url href="https://ronandownes.github.io/maths/" visual="Maths Apps"/>, <url href="https://ronandownes.github.io/calculator/" visual="calculators"/> and <url href="https://ronandownes.github.io/pastpapers/" visual="past papers"/> are companions to the book. Further <url href="https://ronandownes.github.io/calculator/resources/" visual="free textbooks and mathematics resources"/> are also collected separately.</p>
       </preface>
 
+      <preface xml:id="project-preface">
+        <title>Preface</title>
+        <p>Welcome to <em>Irish School Maths</em>, an open, evolving mathematics resource for the Irish post-primary education system, freely available to anyone interested in learning mathematics.</p>
+        <p>Our students progress through Junior Cycle, with the option of Transition Year (TY), and onwards to the Leaving Certificate. Competition for college places can make the Leaving Certificate particularly stressful, with pressures sometimes extending back into TY.</p>
+        <p>Transition Year offers a wonderful opportunity for teachers and students to be more creative, to investigate, collaborate and engage in project-based learning. Yet it can become dominated by revisiting Junior Cycle procedures or teaching Leaving Certificate material in advance, from complex numbers and general-triangle trigonometry to Pascal's triangle and higher-order polynomials. These topics have their place, but the TY section of this book will concentrate on exploration, investigation, real-world applications and the development of independent learners.</p>
+        <p><em>The procedural fluency trap</em></p>
+        <p>One of my central convictions is that we cannot develop the habit of mathematical problem-solving by teaching procedures first and introducing problem-solving afterwards.</p>
+        <p>I call this <em>the procedural fluency trap</em>: the assumption that students must master procedural fluency before developing other areas of mathematical proficiency, such as conceptual understanding, strategic competence and adaptive reasoning.</p>
+        <p>Procedural fluency is essential, but it must develop alongside these other proficiencies. If we teach only one procedure for applying a mathematical principle, students have little opportunity to compare methods, exercise judgement or make meaningful strategic choices.</p>
+        <p><em>Problem-solving is not simply the final application of mathematical learning. It is one of the ways mathematical learning takes place.</em></p>
+        <p>That philosophy runs throughout this book. I want students to explore mathematical ideas, recognise connections, discover underlying principles and appreciate the beauty and sometimes surprising simplicity of mathematics.</p>
+        <p>The explanations, worked examples, exercises, quizzes and interactive applications are designed to encourage understanding, independence and curiosity. Students should be able to practise procedures, investigate alternatives, check their reasoning and return to earlier material whenever necessary.</p>
+        <p>The book is developed using <em>PreTeXt</em>, an open-source publishing system for mathematical textbooks. It allows mathematics to be presented clearly and accessibly, with interactive resources, structured navigation and printable versions.</p>
+        <p>This is a developing project, not a finished textbook. Its content, organisation and scope will continue to evolve.</p>
+        <p>Above all, I hope to build a community of students, teachers, parents, special needs assistants and others who share an interest in better mathematics education. Your ideas, experiences and contributions are very welcome.</p>
+        <p>I hope this book helps you discover the craft of mathematics.</p>
+        <p><em>Ronan Downes</em></p>
+      </preface>
+
       <preface xml:id="for-students">
         <title>For Students</title>
         <p>Start with the mathematics you are studying. You do not need to read the whole book from the beginning, or work through all the earlier material before you reach your own course. If you need to revisit a basic idea, follow the contents or a link back to the relevant explanation, then return to where you left off.</p>
