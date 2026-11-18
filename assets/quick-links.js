@@ -9,12 +9,12 @@
  document.head.append(css);
  const nav=document.createElement("nav");
  nav.className="book-abcd-quick-links";
- nav.setAttribute("aria-label","Quick links: A Apps, B Book, C Calculator, D Desmos");
+ nav.setAttribute("aria-label","Quick links: A Apps, B Book, C Calculator, D Past Papers");
  const links=[
   ["red","A · Apps","https://ronandownes.github.io/maths/"],
   ["green","B · Maths Book","https://ronandownes.github.io/book/"],
   ["blue","C · Calculator","https://ronandownes.github.io/calculator/"],
-  ["black","D · Desmos","https://www.desmos.com/calculator"]
+  ["black","D · Past Papers","https://ronandownes.github.io/pastpapers/"]
  ];
  for(const [colour,label,href] of links){
    const a=document.createElement("a");
