@@ -1,35 +1,73 @@
-/* Separate four-dot shortcut nav — not the PreTeXt Home/brand logo. */
+/* Four-resource navigation. Large links replace only the masthead logo;
+   compact links remain in the sticky PreTeXt toolbar. */
+.book-resource-red   {--book-link-colour:#e63329}
+.book-resource-green {--book-link-colour:#3fae49}
+.book-resource-blue  {--book-link-colour:#2d7dd2}
+.book-resource-black {--book-link-colour:#171b22}
+
+/* Original four-dot masthead footprint: four independently clickable circles. */
+.book-main-quick-links{
+ display:flex!important;align-items:center!important;justify-content:flex-start!important;
+ flex:0 0 auto!important;flex-wrap:nowrap!important;gap:14px!important;
+ width:max-content!important;max-width:100%!important;
+ padding:0!important;margin:0!important;
+}
+.book-main-quick-links .book-resource-link{
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ flex:0 0 62px!important;width:62px!important;height:62px!important;
+ padding:0!important;margin:0!important;
+ box-sizing:border-box!important;border:0!important;border-radius:50%!important;
+ background:var(--book-link-colour)!important;color:#fff!important;
+ font-family:system-ui,-apple-system,"Segoe UI",sans-serif!important;
+ font-size:24px!important;font-weight:750!important;line-height:1!important;
+ text-decoration:none!important;
+}
+.book-main-quick-links .book-shortcut-label{color:#fff!important;font:inherit!important}
+.book-main-quick-links .book-resource-black{font-size:18px!important}
+
+/* Compact in-book shortcuts. */
 .book-abcd-quick-links{
- display:flex!important;align-items:center;justify-content:center;gap:3px!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;gap:3px!important;
  flex:0 0 auto!important;width:max-content!important;
  margin:0 10px!important;padding:3px 5px!important;
  background:#fff!important;border:1px solid #d8dfe8!important;
  border-radius:9px!important;box-sizing:border-box!important;
 }
-.book-abcd-quick-links a{
+.book-abcd-quick-links .book-resource-link{
  display:flex!important;justify-content:center!important;align-items:center!important;
  min-width:25px!important;min-height:27px!important;padding:3px!important;
  text-decoration:none!important;border-radius:5px!important;
 }
-.book-abcd-quick-links i{
- display:block!important;width:15px!important;height:15px!important;
+.book-abcd-quick-links .book-shortcut-label{
+ display:flex!important;justify-content:center!important;align-items:center!important;
+ box-sizing:border-box!important;width:18px!important;height:18px!important;
  border:2px solid white!important;border-radius:50%!important;
+ background:var(--book-link-colour)!important;color:#fff!important;
  box-shadow:0 0 0 1px #bec8d2!important;
+ font:700 9px/1 system-ui,-apple-system,"Segoe UI",sans-serif!important;
 }
-.book-abcd-quick-links .book-abcd-red i{background:#e63329!important}
-.book-abcd-quick-links .book-abcd-green i{background:#3fae49!important}
-.book-abcd-quick-links .book-abcd-blue i{background:#2d7dd2!important}
-.book-abcd-quick-links .book-abcd-black i{background:#171b22!important}
-.book-abcd-quick-links a:hover i{transform:scale(1.10)}
-.book-abcd-quick-links a:focus-visible{
- outline:3px solid #2d7dd2!important;outline-offset:2px!important;
+.book-abcd-quick-links .book-resource-black .book-shortcut-label{
+ font-size:7px!important;letter-spacing:-.4px!important;
 }
-.book-abcd-quick-links.book-abcd-standalone{
- margin:4px auto!important;
+.book-main-quick-links .book-resource-link:hover,
+.book-abcd-quick-links .book-resource-link:hover .book-shortcut-label{
+ transform:scale(1.08);
 }
+.book-main-quick-links .book-resource-link:focus-visible,
+.book-abcd-quick-links .book-resource-link:focus-visible{
+ outline:3px solid #2d7dd2!important;outline-offset:3px!important;
+}
+.book-abcd-quick-links.book-abcd-standalone{margin:4px auto!important}
 @media(max-width:700px){
+ .book-main-quick-links{gap:7px!important}
+ .book-main-quick-links .book-resource-link{
+  flex-basis:43px!important;width:43px!important;height:43px!important;font-size:18px!important;
+ }
+ .book-main-quick-links .book-resource-black{font-size:14px!important}
  .book-abcd-quick-links{gap:1px!important;margin:0 5px!important;padding:2px!important}
- .book-abcd-quick-links a{min-width:22px!important;min-height:25px!important}
- .book-abcd-quick-links i{width:13px!important;height:13px!important}
+ .book-abcd-quick-links .book-resource-link{min-width:22px!important;min-height:25px!important}
+ .book-abcd-quick-links .book-shortcut-label{width:16px!important;height:16px!important}
 }
-@media print{.book-abcd-quick-links{display:none!important}}
+@media print{
+ .book-main-quick-links,.book-abcd-quick-links{display:none!important}
+}
