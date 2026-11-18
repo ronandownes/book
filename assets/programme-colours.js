@@ -6,7 +6,6 @@
     "part-jc-introduction.html":"intro",
     "part-jc-number.html":"number",
     "part-jc-geometry.html":"geometry",
-    "part-jc-trigonometry.html":"trigonometry",
     "part-jc-algebra.html":"algebra",
     "part-jc-statistics.html":"statistics",
     "part-jc-assessment.html":"assessment",

@@ -229,7 +229,7 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/add_outcome_displays.py
-      - name: Verify five JC Parts, TY and five LC OL Parts
+      - name: Verify JC strand structure, TY and five LC OL Parts
         run: |
           set -euo pipefail
           python - <<'PY'
@@ -237,7 +237,7 @@ jobs:
           from lxml import etree
           xmlid="{http://www.w3.org/XML/1998/namespace}id"
           doc=etree.parse("source/main.ptx")
-          expected=["part-jc-introduction","part-jc-number","part-jc-geometry","part-jc-trigonometry","part-jc-algebra","part-jc-statistics","part-jc-assessment","part-transition-year","part-lc-ol-introduction","part-lc-ol-statistics","part-lc-ol-geometry","part-lc-ol-number","part-lc-ol-algebra","part-lc-ol-functions"]
+          expected=["part-jc-introduction","part-jc-number","part-jc-geometry","part-jc-algebra","part-jc-statistics","part-jc-assessment","part-transition-year","part-lc-ol-introduction","part-lc-ol-statistics","part-lc-ol-geometry","part-lc-ol-number","part-lc-ol-algebra","part-lc-ol-functions"]
           parts=[p.get(xmlid) for p in doc.findall(".//part")]
           if parts!=expected: raise SystemExit("Wrong Part order: "+str(parts))
           doc.xinclude()
@@ -265,7 +265,7 @@ jobs:
           for x in all_parts:
               if 'data-maths-programme="colour"' not in (site/x).read_text(encoding="utf-8"):
                   raise SystemExit("Missing colour design on "+x)
-          print("Verified the JC Unifying Strand, five content Parts, CBA and Assessment, TY and LC Ordinary Level Parts.")
+          print("Verified the JC Unifying Strand, four content Parts (including Geometry and Trigonometry), CBA and Assessment, TY and LC Ordinary Level Parts.")
           PY
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
