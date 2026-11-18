@@ -68,7 +68,7 @@ def main() -> None:
     (ROOT / "programme-colours.css").write_text(css, encoding="utf-8")
     (ROOT / "programme-colours.js").write_text(js, encoding="utf-8")
     # Asset version changed to invalidate previously cached CSS and JavaScript.
-    style_tag = '<link rel="stylesheet" href="programme-colours.css?v=3" data-maths-programme="colour"/>'
+    style_tag = '<link rel="stylesheet" href="programme-colours.css?v=4" data-maths-programme="colour"/>'
     script_tag = '<script defer src="programme-colours.js?v=3" data-maths-programme="colour"></script>'
     changed = 0
     for page in ROOT.glob("*.html"):
