@@ -1,31 +1,37 @@
-/* Four-resource navigation. Large links replace only the masthead logo;
-   compact links remain in the sticky PreTeXt toolbar. */
+/* The masthead four-dot mark is ONE logo and ONE link to the book.
+   Preserve its native PreTeXt behaviour; constrain only the icon footprint. */
+img[src*="four-dots.svg"]{
+  width:28px!important;
+  height:28px!important;
+  min-width:28px!important;
+  max-width:28px!important;
+  min-height:28px!important;
+  max-height:28px!important;
+  object-fit:contain!important;
+  vertical-align:middle!important;
+}
+.ptx-banner a:has(img[src*="four-dots.svg"]),
+header a:has(img[src*="four-dots.svg"]){
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:32px!important;
+  min-width:32px!important;
+  max-width:32px!important;
+  height:32px!important;
+  flex:0 0 32px!important;
+  overflow:visible!important;
+  padding:0!important;
+  margin:0 12px 0 0!important;
+  border:0!important;
+  box-sizing:border-box!important;
+}
+
+/* Separate four resource shortcuts: A Apps, B Book, C Calculators, PP Papers. */
 .book-resource-red   {--book-link-colour:#e63329}
 .book-resource-green {--book-link-colour:#3fae49}
 .book-resource-blue  {--book-link-colour:#2d7dd2}
 .book-resource-black {--book-link-colour:#171b22}
-
-/* Original four-dot masthead footprint: four independently clickable circles. */
-.book-main-quick-links{
- display:flex!important;align-items:center!important;justify-content:flex-start!important;
- flex:0 0 auto!important;flex-wrap:nowrap!important;gap:14px!important;
- width:max-content!important;max-width:100%!important;
- padding:0!important;margin:0!important;
-}
-.book-main-quick-links .book-resource-link{
- display:flex!important;align-items:center!important;justify-content:center!important;
- flex:0 0 62px!important;width:62px!important;height:62px!important;
- padding:0!important;margin:0!important;
- box-sizing:border-box!important;border:0!important;border-radius:50%!important;
- background:var(--book-link-colour)!important;color:#fff!important;
- font-family:system-ui,-apple-system,"Segoe UI",sans-serif!important;
- font-size:24px!important;font-weight:750!important;line-height:1!important;
- text-decoration:none!important;
-}
-.book-main-quick-links .book-shortcut-label{color:#fff!important;font:inherit!important}
-.book-main-quick-links .book-resource-black{font-size:18px!important}
-
-/* Compact in-book shortcuts. */
 .book-abcd-quick-links{
  display:flex!important;align-items:center!important;justify-content:center!important;gap:3px!important;
  flex:0 0 auto!important;width:max-content!important;
@@ -49,25 +55,16 @@
 .book-abcd-quick-links .book-resource-black .book-shortcut-label{
  font-size:7px!important;letter-spacing:-.4px!important;
 }
-.book-main-quick-links .book-resource-link:hover,
 .book-abcd-quick-links .book-resource-link:hover .book-shortcut-label{
  transform:scale(1.08);
 }
-.book-main-quick-links .book-resource-link:focus-visible,
 .book-abcd-quick-links .book-resource-link:focus-visible{
- outline:3px solid #2d7dd2!important;outline-offset:3px!important;
+ outline:3px solid #2d7dd2!important;outline-offset:2px!important;
 }
 .book-abcd-quick-links.book-abcd-standalone{margin:4px auto!important}
 @media(max-width:700px){
- .book-main-quick-links{gap:7px!important}
- .book-main-quick-links .book-resource-link{
-  flex-basis:43px!important;width:43px!important;height:43px!important;font-size:18px!important;
- }
- .book-main-quick-links .book-resource-black{font-size:14px!important}
  .book-abcd-quick-links{gap:1px!important;margin:0 5px!important;padding:2px!important}
  .book-abcd-quick-links .book-resource-link{min-width:22px!important;min-height:25px!important}
  .book-abcd-quick-links .book-shortcut-label{width:16px!important;height:16px!important}
 }
-@media print{
- .book-main-quick-links,.book-abcd-quick-links{display:none!important}
-}
+@media print{.book-abcd-quick-links{display:none!important}}
