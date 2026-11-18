@@ -8,9 +8,12 @@ ROOT = Path("source")
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 FILES = [ROOT / f"jc-{key}-outcomes.ptx" for key in ("number", "geometry", "algebra", "statistics")]
 FILES += [ROOT / f"lc-ol-{key}-outcomes.ptx" for key in ("statistics", "geometry", "number", "algebra", "functions")]
+# Include all original teaching chapters as well as the generated curriculum pages.
+# The structural size checks below remain limited to the official source files.
+AUDIT_FILES = sorted(set(FILES) | set(ROOT.rglob("*.ptx")))
 errors = []
 warnings = []
-for path in FILES:
+for path in AUDIT_FILES:
     book = etree.parse(str(path))
     for paragraph in book.xpath("//p"):
         label = next((str(s) for s in paragraph.iterancestors() if s.get(XML_ID)), path.name)
@@ -37,7 +40,7 @@ else:
 for path in FILES:
     if not path.is_file() or path.stat().st_size < 300:
         errors.append("Missing or empty outcomes: " + path.name)
-print("Maths audit checked", len(FILES), "source files.")
+print("Maths audit checked", len(AUDIT_FILES), "PreTeXt source files, including", len(FILES), "curriculum outcome files.")
 for path, ident, raw in warnings[:40]:
     print("REVIEW mathematical typography:", path, ident, repr(raw[:95]))
 print("Other potential text-only maths fragments:", len(warnings))
