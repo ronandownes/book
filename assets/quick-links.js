@@ -1,6 +1,5 @@
-/* Four direct Maths-resource links. The large masthead dots and compact
-   PreTeXt toolbar shortcuts both point to Apps, Book, Calculators, Past Papers.
-   Leave the book structure, section navigation and original SVG intact. */
+/* Compact A/B/C/PP navigation beside the PreTeXt reading toolbar.
+   The separate masthead brand logo remains one book-home link. */
 (() => {
   "use strict";
   const resources = [
@@ -9,10 +8,10 @@
     { colour: "blue",  short: "C",  label: "Calculators", href: "https://ronandownes.github.io/calculator/" },
     { colour: "black", short: "PP", label: "Past Papers", href: "https://ronandownes.github.io/pastpapers/" }
   ];
-  if (!document.querySelector('link[data-maths-navigation="2"]')) {
+  if (!document.querySelector('link[data-maths-navigation="3"]')) {
     const css = document.createElement("link");
     css.rel = "stylesheet";
-    css.href = "quick-links.css?v=2";
+    css.href = "quick-links.css?v=3";
     css.setAttribute("data-maths-navigation", "2");
     document.head.append(css);
   }
@@ -40,18 +39,8 @@
     return nav;
   }
 
-  // Replace only the SVG's enclosing link. This is a visual navigation change,
-  // not a change to the actual PreTeXt source or its Parts/chapters/sections.
-  const logo = Array.from(document.images).find(img =>
-    (img.getAttribute("src") || "").includes("four-dots.svg")
-  );
-  const logoLink = logo && logo.closest("a");
-  if (logoLink && logoLink.querySelectorAll("img").length === 1 &&
-      logoLink.textContent.trim() === "" &&
-      !document.querySelector(".book-main-quick-links")) {
-    logoLink.replaceWith(makeNavigation("book-main-quick-links",
-      "Maths resources: Apps, Book, Calculators and Past Papers"));
-  }
+  // Keep the masthead SVG as a single linked logo. Only these toolbar
+  // shortcuts are individual A, B, C and PP navigation links.
 
   // Keep the compact links in the page toolbar, including while reading.
   if (!document.querySelector(".book-abcd-quick-links")) {
