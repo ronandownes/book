@@ -63,9 +63,9 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/add_learning_intentions.py
-          grep -q '<objectives>' source/sets-chapter.ptx
-          grep -q '<objectives>' source/number-introduction.ptx
-          grep -q '<objectives>' source/algebra-language.ptx
+          grep -q '<objectives>' source/jc-number-sets.ptx
+          grep -q '<objectives>' source/jc-number-representation.ptx
+          grep -q '<objectives>' source/jc-algebra-language.ptx
       - name: Retrieve openly licensed TY photographs
         run: python scripts/fetch_ty_news_photos.py
       - name: Build web textbook

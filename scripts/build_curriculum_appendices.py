@@ -238,7 +238,7 @@ def main():
         '<part xml:id="part-official-appendices">',
         '<title>Appendices</title>',
         *src, *lc,
-        Path("source/glossary.ptx").read_text(encoding="utf-8").replace('<?xml version="1.0" encoding="UTF-8"?>', '').strip(),
+        Path("source/shared-glossary.ptx").read_text(encoding="utf-8").replace('<?xml version="1.0" encoding="UTF-8"?>', '').strip(),
         '<chapter xml:id="official-curriculum-attribution">',
         '<title>Source acknowledgement</title>',
         '<p>Junior Cycle Mathematics (2018) and Leaving Certificate Mathematics Syllabus (for examination from 2015). © National Council for Curriculum and Assessment (NCCA). Reproduced with acknowledgement; copyright remains with the NCCA.</p>',

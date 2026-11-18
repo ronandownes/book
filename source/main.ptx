@@ -25,19 +25,19 @@
     <part xml:id="part-jc-number">
       <title>Number</title>
       <xi:include href="./jc-number-outcomes.ptx" />
-      <xi:include href="./number-introduction.ptx" />
-      <xi:include href="./arithmetic.ptx" />
-      <xi:include href="./indices-roots.ptx" />
-      <xi:include href="./index-laws.ptx" />
-      <xi:include href="./order-of-operations.ptx" />
-      <xi:include href="./factors-multiples-primes.ptx" />
-      <xi:include href="./accuracy-standard-form.ptx" />
-      <xi:include href="./scientific-notation.ptx" />
-      <xi:include href="./fractions.ptx" />
-      <xi:include href="./ratio-proportion.ptx" />
-      <xi:include href="./number-patterns.ptx" />
-      <xi:include href="./number-graphs.ptx" />
-      <xi:include href="./sets-chapter.ptx" />
+      <xi:include href="./jc-number-representation.ptx" />
+      <xi:include href="./jc-number-operations.ptx" />
+      <xi:include href="./jc-number-powers-roots.ptx" />
+      <xi:include href="./jc-number-index-laws.ptx" />
+      <xi:include href="./jc-number-order-of-operations.ptx" />
+      <xi:include href="./jc-number-factors-multiples-primes.ptx" />
+      <xi:include href="./jc-number-accuracy-rounding.ptx" />
+      <xi:include href="./jc-number-scientific-notation.ptx" />
+      <xi:include href="./jc-number-fractions.ptx" />
+      <xi:include href="./jc-number-ratio-proportion.ptx" />
+      <xi:include href="./jc-number-sequences.ptx" />
+      <xi:include href="./jc-number-graphs.ptx" />
+      <xi:include href="./jc-number-sets.ptx" />
     </part>
 
 <part xml:id="part-jc-geometry">
@@ -48,21 +48,21 @@
 
     <part xml:id="part-jc-trigonometry">
       <title>Trigonometry</title>
-      <xi:include href="./trigonometry-chapter.ptx"/>
+      <xi:include href="./jc-trigonometry-ratios-triangles.ptx"/>
     </part>
 
 <part xml:id="part-jc-algebra">
       <title>Algebra and Functions</title>
       <xi:include href="./jc-algebra-outcomes.ptx" />
-      <xi:include href="./algebra-patterns.ptx" />
-      <xi:include href="./algebra-language.ptx" />
-      <xi:include href="./algebra-substitution.ptx" />
-      <xi:include href="./algebra-simplifying.ptx" />
-      <xi:include href="./expanding-brackets.ptx" />
-      <xi:include href="./algebra-factorisation.ptx" />
-      <xi:include href="./algebra-division-fractions.ptx" />
-      <xi:include href="./algebra-equations-inequalities.ptx" />
-      <xi:include href="./algebra-changing-subject.ptx" />
+      <xi:include href="./jc-algebra-patterns.ptx" />
+      <xi:include href="./jc-algebra-language.ptx" />
+      <xi:include href="./jc-algebra-substitution.ptx" />
+      <xi:include href="./jc-algebra-simplifying.ptx" />
+      <xi:include href="./jc-algebra-expanding-brackets.ptx" />
+      <xi:include href="./jc-algebra-factorisation.ptx" />
+      <xi:include href="./jc-algebra-division-fractions.ptx" />
+      <xi:include href="./jc-algebra-equations-inequalities.ptx" />
+      <xi:include href="./jc-algebra-changing-subject.ptx" />
 
       <chapter xml:id="chapter-functions"><title>Functions and Graphs</title><objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Define a function using an input-output rule.</p></li><li><p>Distinguish data points from a mathematical model.</p></li></ol></objectives><introduction><p>Functions describe relationships between quantities and help us investigate real data.</p></introduction>
               <section xml:id="functions-intro"><title>Introduction</title>
@@ -80,7 +80,7 @@
                 <p>A function assigns exactly one output to each input in its domain.</p>
               </section>
             </chapter>
-      <xi:include href="./glossary.ptx"/>
+      <xi:include href="./shared-glossary.ptx"/>
     </part>
 
 <part xml:id="part-jc-statistics">
@@ -118,8 +118,8 @@
     <part xml:id="part-lc-ol-number">
       <title>LC OL · Number</title>
       <xi:include href="./lc-ol-number-outcomes.ptx"/>
-      <xi:include href="./complex-numbers-chapter.ptx"/>
-      <xi:include href="./sequences-chapter.ptx"/>
+      <xi:include href="./lc-ol-number-complex-numbers.ptx"/>
+      <xi:include href="./lc-ol-number-sequences-series.ptx"/>
     </part>
 
     <part xml:id="part-lc-ol-algebra">

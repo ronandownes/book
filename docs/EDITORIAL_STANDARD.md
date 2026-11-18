@@ -64,7 +64,7 @@ These are editorial checks, not student-visible labels that must appear on every
 
 ## Glossary and indexing
 
-- Keep one authoritative mathematical glossary in `source/glossary.ptx`, included in the Appendices part.
+- Keep one authoritative mathematical glossary in `source/shared-glossary.ptx`, included in the Appendices part.
 - Definitions use mathematically precise, learner-friendly language, followed by notation or examples only where useful.
 - New concepts receive stable glossary IDs (`glossary-...`). Use contextual cross-references and `<idx>` tags at first substantive occurrences.
 - Avoid automatically linking every instance of a word. Prefer first-use contextual links, key explanatory sections, and the search/index.

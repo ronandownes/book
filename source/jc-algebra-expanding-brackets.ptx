@@ -328,6 +328,6 @@
 <p>This is an extension, not part of the eight compulsory homework questions. Higher-degree multiplication can be explored later without adding more controls to the main classroom app.</p>
 </section>
 
-  <xi:include href="./expansions-unlike-factors.ptx" />
-  <xi:include href="./expansions-like-factors.ptx" />
+  <xi:include href="./jc-algebra-expansions-unlike-factors.ptx" />
+  <xi:include href="./jc-algebra-expansions-like-factors.ptx" />
 </chapter>

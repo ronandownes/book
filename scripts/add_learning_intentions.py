@@ -17,12 +17,14 @@ DATA = json.loads((ROOT / "learning-intentions.json").read_text(encoding="utf-8"
 CURATED: dict[str, list[str]] = DATA["intentions"]
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 XI = "{http://www.w3.org/2001/XInclude}include"
-SKIP = {"jc-introduction.ptx", "lc-ol-introduction.ptx", "glossary.ptx",
+SKIP = {"jc-introduction.ptx", "lc-ol-introduction.ptx", "shared-glossary.ptx",
         "jc-number-learning-outcomes.ptx", "jc-geometry-learning-outcomes.ptx",
         "jc-algebra-learning-outcomes.ptx", "jc-statistics-learning-outcomes.ptx"}
 SKIP_PREFIXES = ("jc-number-outcomes.ptx", "jc-geometry-outcomes.ptx",
                  "jc-algebra-outcomes.ptx", "jc-statistics-outcomes.ptx",
-                 "lc-ol-")
+                 "lc-ol-statistics-outcomes.ptx", "lc-ol-geometry-outcomes.ptx",
+                 "lc-ol-number-outcomes.ptx", "lc-ol-algebra-outcomes.ptx",
+                 "lc-ol-functions-outcomes.ptx")
 LABEL = re.compile(r"^\s*Learning intentions\s*:\s*", re.I)
 PREFIX = re.compile(r"^\s*By the end of this section,\s*you should be able to\s+", re.I)
 

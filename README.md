@@ -6,6 +6,8 @@ An open, student-centred Mathematics textbook authored in [PreTeXt](https://pret
 
 This repository is the authoritative source. You can edit through GitHub Codespaces or clone it into VS Code on Windows.
 
+Source files use course and strand prefixes, for example `source/jc-algebra-factorisation.ptx`. See [the source file guide](docs/SOURCE_FILES.md) for chapter locations and the filename map.
+
 - Run `python -m pip install -r requirements.txt` to install PreTeXt.
 - Run `pretext build web` to generate the HTML textbook in `output/web`.
 - Run `pretext view web` for a local preview.
