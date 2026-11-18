@@ -137,3 +137,67 @@ a.maths-unifying-outcome:focus-visible {outline:2px solid var(--u-edge);outline-
   #jc-unifying-elements li {background:transparent !important;border:1px solid #777;border-left-width:4px;break-inside:avoid;}
   a.maths-unifying-outcome {background:transparent !important;color:#222 !important;}
 }
+
+/* Continuous, exact-text reference below the six coloured element cards.
+   Outcome links and their separate pages are unchanged. */
+#jc-unifying-complete {
+  margin:1.15rem 0 1.5rem;
+  padding:0;
+  list-style:none;
+  display:block;
+}
+#jc-unifying-complete > li {
+  margin:0 0 1rem;
+  padding:.9rem 1.1rem;
+  border-left:.35rem solid var(--u-edge);
+  background:var(--u-bg);
+  color:var(--u-ink);
+  border-radius:.25rem;
+  list-style:none;
+  break-inside:avoid;
+}
+#jc-unifying-complete > li > p {
+  font-size:1.05em;
+  margin:0 0 .55rem;
+  font-weight:700;
+}
+#jc-unifying-complete > li > p em {font-style:normal;}
+#jc-unifying-complete > li > ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+#jc-unifying-complete > li > ul > li {
+  margin:0;
+  padding:.35rem 0;
+  list-style:none;
+}
+#jc-unifying-complete > li > ul > li + li {
+  border-top:1px solid color-mix(in srgb,var(--u-edge) 27%,transparent);
+}
+#jc-unifying-complete > li > ul > li p {
+  margin:0;
+  line-height:1.52;
+  color:#27343c;
+}
+#jc-unifying-complete > li > ul > li em {
+  font-style:normal;
+  font-weight:700;
+  color:var(--u-ink);
+}
+#jc-unifying-complete > li:nth-child(1){--u-bg:#F9E8EE;--u-edge:#BB6081;--u-ink:#63384C;}
+#jc-unifying-complete > li:nth-child(2){--u-bg:#F1F2F4;--u-edge:#9AA3AD;--u-ink:#47515A;}
+#jc-unifying-complete > li:nth-child(3){--u-bg:#E6F0FB;--u-edge:#437FBF;--u-ink:#244F7B;}
+#jc-unifying-complete > li:nth-child(4){--u-bg:#E6F4E9;--u-edge:#408B60;--u-ink:#265A3A;}
+#jc-unifying-complete > li:nth-child(5){--u-bg:#FBE9E8;--u-edge:#C66868;--u-ink:#733C42;}
+#jc-unifying-complete > li:nth-child(6){--u-bg:#EDF0F2;--u-edge:#7D8993;--u-ink:#47525C;}
+@media print {
+  #jc-unifying-complete > li {
+    background:transparent !important;
+    color:#111 !important;
+    border:1px solid #888;
+    border-left:4px solid #555;
+    break-inside:avoid;
+  }
+  #jc-unifying-complete > li > ul > li p {color:#111;}
+}

@@ -154,8 +154,8 @@ etree.SubElement(opening, "p").text = (
     "can help students improve their understanding of building blocks and their "
     "ability to make connections within mathematics."
 )
-# A single, compact visual guide is enough. No second set of outcome statements,
-# and no extra chapter or table are introduced.
+# Preserve the compact six-element guide, followed by the full outcomes
+# in one readable place. The same source rows also populate individual pages.
 groups = etree.SubElement(opening, "ul")
 groups.set(ID, "jc-unifying-elements")
 for element, codes in [
@@ -170,11 +170,34 @@ for element, codes in [
     paragraph = etree.SubElement(item, "p")
     etree.SubElement(paragraph, "em").text = element
     paragraph[-1].tail = " — " + codes
+# A full-text reading view directly after the six coloured labels.
+# The curriculum source file remains unchanged; no outcome is transcribed
+# manually here. Retain the individual sections and their established ids.
+heading = etree.SubElement(opening, "p")
+etree.SubElement(heading, "em").text = "Complete Unifying Strand learning outcomes"
 etree.SubElement(opening, "p").text = (
-    "Source: National Council for Curriculum and Assessment, "
-    "Junior Cycle Mathematics Specification (2018), p. 10. "
-    "The complete U.1–U.13 outcomes follow, each on its own page."
+    "All thirteen outcomes are reproduced below, grouped by the six elements. "
+    "They are also available individually from the contents menu for classroom use."
 )
+full = etree.SubElement(opening, "ul")
+full.set(ID, "jc-unifying-complete")
+expected_groups = [
+    ("Building blocks", ["U.1", "U.2", "U.3"]),
+    ("Representation", ["U.4"]),
+    ("Connections", ["U.5", "U.6"]),
+    ("Problem solving", ["U.7", "U.8", "U.9", "U.10"]),
+    ("Generalisation and proof", ["U.11", "U.12"]),
+    ("Communication", ["U.13"]),
+]
+group_map = {code: (index, name) for index, (name, codes) in
+             enumerate(expected_groups) for code in codes}
+group_items = []
+for name, _ in expected_groups:
+    group = etree.SubElement(full, "li")
+    title_p = etree.SubElement(group, "p")
+    etree.SubElement(title_p, "em").text = name
+    items = etree.SubElement(group, "ul")
+    group_items.append(items)
 seen = []
 for row in intro.findall(".//row"):
     cells = row.findall("cell")
@@ -183,16 +206,33 @@ for row in intro.findall(".//row"):
     code = "".join(cells[0].itertext()).strip()
     if not re.fullmatch(r"U\.\d+", code):
         continue
-    section = etree.SubElement(unifying, "section")
-    section.set(ID, "jc-outcomes-unifying-" + code.lower().replace(".", ""))
-    etree.SubElement(section, "title").text = code
+    if code not in group_map:
+        raise ValueError("Unrecognised Unifying Strand learning outcome: " + code)
+    # One canonical paragraph is copied to both reading views.
     para = etree.Element("p")
     para.text = cells[1].text
     for child in cells[1]:
         para.append(deepcopy(child))
+    list_item = etree.SubElement(group_items[group_map[code][0]], "li")
+    list_p = etree.SubElement(list_item, "p")
+    etree.SubElement(list_p, "em").text = code
+    list_p[-1].tail = " — " + (para.text or "")
+    for child in para:
+        list_p.append(deepcopy(child))
+    section = etree.SubElement(unifying, "section")
+    section.set(ID, "jc-outcomes-unifying-" + code.lower().replace(".", ""))
+    etree.SubElement(section, "title").text = code
     section.append(para)
+    # Exact wording check for the continuous and individual copies.
+    if "".join(list_p.itertext()).removeprefix(code + " — ") != "".join(para.itertext()):
+        raise ValueError("Combined U outcome differs from the individual outcome: " + code)
     register(section, code, "Junior Cycle", "Unifying Strand")
     seen.append(code)
+etree.SubElement(opening, "p").text = (
+    "Source: National Council for Curriculum and Assessment, "
+    "Junior Cycle Mathematics Specification (2018), pp. 10–14. "
+    "The source specification is authoritative."
+)
 if seen != [f"U.{n}" for n in range(1, 14)]:
     raise ValueError("Unifying Strand must contain U.1–U.13")
 save(unifying, "jc-unifying-outcomes.ptx")
