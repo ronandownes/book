@@ -148,7 +148,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           root=Path("output/web")
-          tag='<script defer src="quick-links.js?v=1" data-maths-quick-links="abcd"></script>'
+          tag='<script defer src="quick-links.js?v=2" data-maths-quick-links="abcd"></script>'
           updated=0
           for page in root.glob("*.html"):
               html=page.read_text(encoding="utf-8")
