@@ -24,11 +24,13 @@
 
       <preface xml:id="about-the-author">
         <title>About the Author</title>
-        <p>Ronan Downes is a Mathematics teacher based in Limerick, Ireland. He studied physics at NUI Galway and later graduated with an honours degree in Physical Optoelectronics from the University of Essex, before completing a Higher Diploma in Education.</p>
-        <p>After four years teaching in secondary schools, he moved into industry and self-employment, working in telecommunications and multimedia, including photography, video production and web development.</p>
-        <p>A lifelong interest in learning brought him back to university for a Master's degree in Mathematical Modelling at the University of Limerick. He subsequently returned to classroom teaching and later completed a Master's degree in Data Analytics at CCT College Dublin.</p>
-        <p>Programming, computational thinking and mathematical modelling inform his approach to the explanations and interactive resources in this book. He is particularly interested in understanding why mathematical methods work, comparing alternative approaches and considering which are most useful for students.</p>
-        <p>His guiding principle is inspired by a saying commonly attributed to Albert Einstein: <em>Making maths as simple as possible, but not too simple.</em></p>
+        <p>Ronan Downes is a Mathematics teacher based in Limerick, Ireland. He studied Physics at NUI Galway and later graduated with an honours degree in Physical Optoelectronics from the University of Essex. After completing a Higher Diploma in Education, he taught Physics, Mathematics and Science in secondary schools for four years.</p>
+        <p>He then moved into telecommunications, working as a systems engineer and access engineer with Esat Digifone. He later became self-employed in multimedia, including photography, video production and web development.</p>
+        <p>A lifelong interest in learning brought him back to university, where he completed a <url href="https://www.ul.ie/study/postgraduate/mathematical-modelling-msc" visual="Master's degree in Mathematical Modelling"/> at the University of Limerick. He subsequently returned to classroom teaching and later completed a <url href="https://www.cct.ie/course/masters-data-analytics-postgraduate-msc/" visual="Master's degree in Data Analytics"/> at CCT College Dublin. His experience in modelling, programming and computational thinking informs the explanations and interactive resources in this book.</p>
+        <p>Reflecting on his teaching, he writes:</p>
+        <p><em>I have sometimes found textbook explanations unsatisfying because they tell students what to do without fully explaining why. Factorising quadratic expressions, for example, can seem to involve more trial and error than necessary. Through teaching these ideas repeatedly, thinking about them and trying different approaches, I have come to appreciate clearer methods, many of which are already well established.</em></p>
+        <p><em>Completing the square is a particularly important example. The quadratic formula is valuable, but if we use it without examining where it comes from, students can miss the structure of quadratic expressions and the connection between the solutions of an equation and the graph of its associated function. I want students to understand several methods, not merely memorise one.</em></p>
+        <p>His aim is to reduce unnecessary cognitive load without removing the ideas, reasoning and choices that give mathematics its meaning. His guiding principle is inspired by a saying commonly attributed to Albert Einstein: <em>Making maths as simple as possible, but not too simple.</em></p>
       </preface>
 
       <preface xml:id="project-preface">
