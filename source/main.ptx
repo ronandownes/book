@@ -4,16 +4,40 @@
     <title>Irish School Maths</title>
     <subtitle>Bringing the Craft of Mathematics Back to Life</subtitle>
     <frontmatter>
-          <preface xml:id="welcome">
-            <title>Welcome</title>
-            <p><em>All students, not just those headed for science and engineering, should develop a mathematical viewpoint, including critical thinking, problem-solving strategies, and estimation, in addition to computational skills.</em></p>
-            <p>— Katherine Yoshiwara, <url href="https://runestone.academy/ns/books/published/mfg/preface.html" visual="Modeling, Functions, and Graphs, Preface"/>.</p>
-            <p>Mathematics is for everyone. In this book, calculating correctly matters, but so do understanding ideas, choosing methods, estimating, testing claims and explaining why an answer makes sense.</p>
-            <p><url href="https://ronandownes.github.io/maths/" visual="Irish School Maths Apps"/> accompanies this book with interactive activities, explorations and practice.</p>
-            <p>Additional <url href="https://ronandownes.github.io/calculator/resources/" visual="free textbooks and maths resources"/> are collected on a separate page, including links to Desmos, GeoGebra and open textbooks. These supplement, rather than replace, your own course.</p>
-            <p>This book is designed to help you learn mathematics, not merely revise it. Explore the questions, make predictions, test ideas, and try the exercises before revealing answers. In multiple-choice questions, your first selection is checked immediately and then locked, so read each option before choosing.</p>
-            <p>This edition contains six Junior Cycle areas, TY Maths and Leaving Certificate Ordinary Level Maths.</p>
-          </preface>
+      <bibinfo>
+        <author>
+          <personname>Ronan Downes</personname>
+        </author>
+      </bibinfo>
+      <titlepage>
+        <titlepage-items/>
+      </titlepage>
+
+      <preface xml:id="welcome">
+        <title>Welcome</title>
+        <p><em>All students, not just those headed for science and engineering, should develop a mathematical viewpoint, including critical thinking, problem-solving strategies, and estimation, in addition to computational skills.</em></p>
+        <p>— Katherine Yoshiwara, <url href="https://runestone.academy/ns/books/published/mfg/preface.html" visual="Modeling, Functions, and Graphs, Preface"/>.</p>
+        <p>Mathematics is for everyone. Calculating correctly matters, but so do understanding ideas, choosing methods, estimating, making connections, testing claims and explaining why an answer makes sense.</p>
+        <p><em>Irish School Maths</em> is an evolving collection of explanations, examples, investigations, exercises and classroom resources. The aim is not simply to deliver content, but to make mathematics something students can explore, understand and use.</p>
+        <p>The <url href="https://ronandownes.github.io/maths/" visual="Maths Apps"/>, <url href="https://ronandownes.github.io/calculator/" visual="calculators"/> and <url href="https://ronandownes.github.io/pastpapers/" visual="past papers"/> are companions to the book. Further <url href="https://ronandownes.github.io/calculator/resources/" visual="free textbooks and mathematics resources"/> are also collected separately.</p>
+      </preface>
+
+      <preface xml:id="for-students">
+        <title>For Students</title>
+        <p>Start with the mathematics you are studying. You do not need to read the whole book from the beginning, or work through all the earlier material before you reach your own course. If you need to revisit a basic idea, follow the contents or a link back to the relevant explanation, then return to where you left off.</p>
+        <p>Try to do more than follow a worked solution. Make a prediction, attempt a question, test an idea, and explain your reasoning. Use the interactive apps, diagrams and exercises to investigate what changes and what stays the same.</p>
+        <p>Learning outcomes help you see what you are aiming to understand. Worked examples show a method; exercises give you the opportunity to make that method your own. When answers are available, use them to check your reasoning rather than to replace it.</p>
+        <p>This is a developing book. Some topics are more complete than others, and the organisation may change as the resource grows.</p>
+      </preface>
+
+      <preface xml:id="for-teachers-course-structure">
+        <title>For Teachers and Course Structure</title>
+        <p>This is an open, developing project, and I would like to work with other teachers. If you start using the book, please tell me what works, what needs improving and what you would like to see added. Explanations, classroom investigations, worked examples, worksheets, assessments, interactive activities and other good teaching materials are all welcome for discussion. With agreement and appropriate credit, worthwhile contributions can become part of the project. You can <url href="https://github.com/ronandownes/book/issues" visual="start a conversation on the project's GitHub page"/>.</p>
+        <p>For now, I am keeping the structure deliberately simple. Material is grouped chiefly by course and mathematical strand, rather than arranged as a prescribed chronological teaching sequence. I recognise that there are pedagogical arguments for other arrangements, and that students do not always learn topics in a neat strand-by-strand order. Nevertheless, I would rather use the contents menu to navigate between topics than make the menu itself a record of one particular teaching sequence. Teachers can teach in the order that suits their students, making connections across strands as they go.</p>
+        <p>The structure is not fixed. It is open to discussion and can change as the project develops. My preference is for useful, descriptive titles. Labels such as <q>Algebra 1</q>, <q>Algebra 2</q> and <q>Algebra 3</q> tell a reader very little about what is inside. Where broad distinctions are helpful, established descriptions such as <em>elementary algebra</em>, <em>intermediate algebra</em> and <em>advanced algebra</em> communicate more; within those areas, titles such as <em>Expanding Brackets</em>, <em>Factorisation</em>, <em>Equations</em> and <em>Functions</em> are more informative still. The same principle applies to geometry and other areas of mathematics.</p>
+        <p>Keeping the material together also allows a student working at a higher level to go straight to the relevant topic without being led through elementary work, while retaining an easy route back to earlier Junior Cycle ideas when they are needed. The book can be divided into separate course editions later if that becomes useful, without giving up those connections.</p>
+        <p>These pages are resources for teaching and learning, not a substitute for professional judgement about sequencing, differentiation or the needs of an individual class. I welcome suggestions, corrections and contributions.</p>
+      </preface>
     </frontmatter>
 
 <part xml:id="part-jc-introduction">
