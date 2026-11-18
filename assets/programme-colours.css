@@ -80,3 +80,60 @@ a.maths-chapter-link:focus-visible {
     background:transparent !important;
   }
 }
+
+/* Unifying Strand: one colour per element, not one more level of contents.
+   Gentle pastels remain distinguishable in print and in the left sidebar. */
+.maths-unifying-blocks { --u-bg:#F9E8EE; --u-edge:#BB6081; --u-ink:#63384C; }
+.maths-unifying-representation { --u-bg:#F1F2F4; --u-edge:#9AA3AD; --u-ink:#47515A; }
+.maths-unifying-connections { --u-bg:#E6F0FB; --u-edge:#437FBF; --u-ink:#244F7B; }
+.maths-unifying-problems { --u-bg:#E6F4E9; --u-edge:#408B60; --u-ink:#265A3A; }
+.maths-unifying-proof { --u-bg:#FBE9E8; --u-edge:#C66868; --u-ink:#733C42; }
+.maths-unifying-communication { --u-bg:#EDF0F2; --u-edge:#7D8993; --u-ink:#47525C; }
+
+/* Chapter introduction: six colour-coded element cards, not a labelled table. */
+#jc-unifying-elements {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.7rem;
+  list-style:none;
+  padding:0;
+  margin:1rem 0 1.3rem;
+}
+#jc-unifying-elements li {
+  margin:0;
+  padding:.85rem 1rem;
+  border-left:.32rem solid var(--u-edge);
+  border-radius:.3rem;
+  background:var(--u-bg);
+  color:var(--u-ink);
+  list-style:none;
+  min-width:0;
+}
+#jc-unifying-elements li p {margin:0;line-height:1.4;}
+#jc-unifying-elements li em {font-style:normal;font-weight:700;}
+#jc-unifying-elements li:nth-child(1) {--u-bg:#F9E8EE;--u-edge:#BB6081;--u-ink:#63384C;}
+#jc-unifying-elements li:nth-child(2) {--u-bg:#F1F2F4;--u-edge:#9AA3AD;--u-ink:#47515A;}
+#jc-unifying-elements li:nth-child(3) {--u-bg:#E6F0FB;--u-edge:#437FBF;--u-ink:#244F7B;}
+#jc-unifying-elements li:nth-child(4) {--u-bg:#E6F4E9;--u-edge:#408B60;--u-ink:#265A3A;}
+#jc-unifying-elements li:nth-child(5) {--u-bg:#FBE9E8;--u-edge:#C66868;--u-ink:#733C42;}
+#jc-unifying-elements li:nth-child(6) {--u-bg:#EDF0F2;--u-edge:#7D8993;--u-ink:#47525C;}
+
+/* The official outcome pages and existing U.1–U.13 navigation retain their ids. */
+a.maths-unifying-outcome {
+  display:block;
+  padding:.27em .55em !important;
+  background:var(--u-bg) !important;
+  color:var(--u-ink) !important;
+  border-left:4px solid var(--u-edge) !important;
+}
+a.maths-unifying-outcome:hover {filter:brightness(.965);}
+a.maths-unifying-outcome:focus-visible {outline:2px solid var(--u-edge);outline-offset:-2px;}
+
+@media(max-width:700px) {
+  #jc-unifying-elements {grid-template-columns:1fr;}
+}
+@media print {
+  #jc-unifying-elements {gap:.45rem;}
+  #jc-unifying-elements li {background:transparent !important;border:1px solid #777;border-left-width:4px;break-inside:avoid;}
+  a.maths-unifying-outcome {background:transparent !important;color:#222 !important;}
+}

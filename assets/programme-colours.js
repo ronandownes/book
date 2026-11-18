@@ -37,6 +37,15 @@
       catch { return; }
       const part = partTargets[file];
       const chapter = chapterTargets[file];
+      // Colour the existing U.1–U.13 links without adding extra navigation levels.
+      const uMatch = /^jc-outcomes-unifying-u(\d{1,2})\.html$/.exec(file);
+      if (uMatch) {
+        const n = Number(uMatch[1]);
+        const group = n <= 3 ? "blocks" : n === 4 ? "representation"
+          : n <= 6 ? "connections" : n <= 10 ? "problems"
+          : n <= 12 ? "proof" : "communication";
+        link.classList.add("maths-unifying-outcome", "maths-unifying-"+group);
+      }
       if (part) {
         if (!link.classList.contains("maths-programme-link")) {
           link.classList.add("maths-programme-link", "maths-programme-"+part);

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Build navigable, source-only learning-outcome pages for JC and LC Ordinary Level.
 
-All 55 official outcomes are retained. No slides, teaching remarks, examples,
-editorial introductions or injected interactivity.
+All 55 official outcomes are retained. The NCCA's opening explanation is
+included for the Unifying Strand; individual outcome statements remain unchanged.
+No slides, teaching remarks, examples or injected interactivity.
 """
 from copy import deepcopy
 from pathlib import Path
@@ -132,22 +133,47 @@ unifying = etree.Element("chapter")
 unifying.set(ID, "jc-outcomes-unifying")
 etree.SubElement(unifying, "title").text = "Unifying Strand"
 opening = etree.SubElement(unifying, "introduction")
+# Source: NCCA, Junior Cycle Mathematics Specification (2018), p. 10.
+# This is the introductory explanation supplied with the six elements, not
+# a duplicate listing of the 13 official outcome statements.
 etree.SubElement(opening, "p").text = (
-    "The Unifying Strand runs through every Junior Cycle mathematics topic. "
-    "Rather than being a separate collection of topics, its 13 learning outcomes "
-    "underpin the ideas, procedures and reasoning developed throughout the course."
+    "This strand permeates all of the contextual strands and is composed of the "
+    "six elements of the specification, which are shown below."
 )
 etree.SubElement(opening, "p").text = (
-    "Its six connected elements are building blocks (U.1–U.3), representation (U.4), "
-    "connections (U.5–U.6), problem solving (U.7–U.10), generalisation and proof "
-    "(U.11–U.12), and communication (U.13). They develop together: students can "
-    "use procedures, represent ideas, explore connections, solve problems and "
-    "explain their reasoning within the same task."
+    "There is no specific content linked to this strand; rather, its learning "
+    "outcomes underpin the rest of the specification. Each learning outcome in "
+    "this strand is applicable to all of the activities and content of the other "
+    "four strands—for example, students should be able to draw on all of their "
+    "mathematical knowledge and skills to solve a problem or to communicate mathematics."
 )
 etree.SubElement(opening, "p").text = (
-    "The official U.1–U.13 learning outcomes are listed individually below. "
-    "Revisit these skills whenever you encounter a new topic or need to strengthen "
-    "a mathematical foundation."
+    "Furthermore, the elements of this strand are interdependent, so that "
+    "students should develop the different skills associated with each element "
+    "in tandem rather than in isolation—for example, engaging in problem-solving "
+    "can help students improve their understanding of building blocks and their "
+    "ability to make connections within mathematics."
+)
+# A single, compact visual guide is enough. No second set of outcome statements,
+# and no extra chapter or table are introduced.
+groups = etree.SubElement(opening, "ul")
+groups.set(ID, "jc-unifying-elements")
+for element, codes in [
+    ("Building blocks", "U.1–U.3"),
+    ("Representation", "U.4"),
+    ("Connections", "U.5–U.6"),
+    ("Problem solving", "U.7–U.10"),
+    ("Generalisation and proof", "U.11–U.12"),
+    ("Communication", "U.13"),
+]:
+    item = etree.SubElement(groups, "li")
+    paragraph = etree.SubElement(item, "p")
+    etree.SubElement(paragraph, "em").text = element
+    paragraph[-1].tail = " — " + codes
+etree.SubElement(opening, "p").text = (
+    "Source: National Council for Curriculum and Assessment, "
+    "Junior Cycle Mathematics Specification (2018), p. 10. "
+    "The complete U.1–U.13 outcomes follow, each on its own page."
 )
 seen = []
 for row in intro.findall(".//row"):
