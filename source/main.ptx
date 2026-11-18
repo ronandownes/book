@@ -112,13 +112,8 @@
     </part>
 
 <part xml:id="part-jc-geometry">
-      <title>Geometry</title>
+      <title>Geometry and Trigonometry</title>
       <xi:include href="./jc-geometry-outcomes.ptx" />
-
-    </part>
-
-    <part xml:id="part-jc-trigonometry">
-      <title>Trigonometry</title>
       <xi:include href="./jc-trigonometry-ratios-triangles.ptx"/>
     </part>
 
