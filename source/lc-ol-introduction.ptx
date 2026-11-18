@@ -6,11 +6,32 @@
     <p>Learning outcomes describe the knowledge, understanding, skills and values students should be able to demonstrate.</p>
     <p>The Ordinary Level learning outcomes are presented in five course Parts, in syllabus order. Each Part starts with the complete learning outcomes.</p>
     <p>Across the five strands, students should be able to explore patterns, explain findings, justify conclusions, communicate mathematics clearly and apply suitable methods in familiar and unfamiliar situations.</p>
+    <p><em>Source:</em> <url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" visual="Leaving Certificate Mathematics Syllabus (for examination from 2015)"/>. The published syllabus remains the authority for mathematical notation and scope.</p>
   </section>
 
+  <section xml:id="lc-ol-marking-schemes">
+    <title>Official Marking Schemes (2015–2025)</title>
+    <p>These links open the State Examinations Commission PDFs for Leaving Certificate Mathematics at Ordinary Level in English.</p>
+    <ul>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2025/LC003GLP000EV.pdf" visual="2025 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2024/LC003GLP000EV.pdf" visual="2024 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2023/LC003GLP000EV.pdf" visual="2023 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2022/LC003GLP000EV.pdf" visual="2022 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2021/LC003GLP000EV.pdf" visual="2021 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2020/LC003GLP000EV.pdf" visual="2020 marking scheme (November written exams) (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2019/LC003GLP000EV.pdf" visual="2019 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2018/LC003GLP000EV.pdf" visual="2018 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2017/LC003GLP000EV.pdf" visual="2017 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2016/LC003GLP000EV.pdf" visual="2016 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2015/LC003GLP000EV.pdf" visual="2015 marking scheme (PDF)"/></p></li>
+    </ul>
+    <p>The 2020 scheme is for the written examinations held in November 2020. The 2021 scheme is listed separately.</p>
+  </section>
 
-
-
-
-  <p><em>Source:</em> <url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" visual="Leaving Certificate Mathematics Syllabus (for examination from 2015)"/>. The published syllabus remains the authority for mathematical notation and scope.</p>
+  <section xml:id="lc-ol-opening-and-saving-pdfs">
+    <title>Opening and Saving PDFs in Chrome</title>
+    <p>If the scheme opens in Chrome, you can read it in the PDF viewer. To keep a copy on your device, select the Download button in the viewer.</p>
+    <p>To change the default for the Chrome profile you are using, paste <c>chrome://settings/content/pdfDocuments</c> into the address bar. Select <em>Open PDFs in Chrome</em> to read them in the browser or <em>Download PDFs</em> to save them automatically. This setting applies to PDF links across websites.</p>
+    <p>To see or change the save location, go to Chrome Settings and select <em>Downloads</em>. You can also turn on <em>Ask where to save each file before downloading</em>.</p>
+  </section>
 </chapter>

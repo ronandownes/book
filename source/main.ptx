@@ -104,9 +104,13 @@
       <xi:include href="./ty/number-theory-projects.ptx"/>
     </part>
 
+    <part xml:id="part-lc-ol-introduction">
+      <title>Leaving Cert Ordinary Level Maths Introduction</title>
+      <xi:include href="./lc-ol-introduction.ptx"/>
+    </part>
+
     <part xml:id="part-lc-ol-statistics">
       <title>LC OL · Statistics and Probability</title>
-      <xi:include href="./lc-ol-introduction.ptx"/>
       <xi:include href="./lc-ol-statistics-outcomes.ptx"/>
     </part>
 
