@@ -9,6 +9,7 @@
     "part-jc-trigonometry.html":"trigonometry",
     "part-jc-algebra.html":"algebra",
     "part-jc-statistics.html":"statistics",
+    "part-jc-assessment.html":"assessment",
     "part-transition-year.html":"ty",
     "part-lc-ol-introduction.html":"intro",
     "part-lc-ol-statistics.html":"lc-statistics",
