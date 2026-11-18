@@ -130,8 +130,25 @@ for key, group, count in [
 intro = etree.parse(str(ROOT / "jc-introduction.ptx"))
 unifying = etree.Element("chapter")
 unifying.set(ID, "jc-outcomes-unifying")
-etree.SubElement(unifying, "title").text = "Learning Outcomes"
-listing = etree.SubElement(etree.SubElement(unifying, "introduction"), "ol")
+etree.SubElement(unifying, "title").text = "Unifying Strand"
+opening = etree.SubElement(unifying, "introduction")
+etree.SubElement(opening, "p").text = (
+    "The Unifying Strand runs through every Junior Cycle mathematics topic. "
+    "Rather than being a separate collection of topics, its 13 learning outcomes "
+    "underpin the ideas, procedures and reasoning developed throughout the course."
+)
+etree.SubElement(opening, "p").text = (
+    "Its six connected elements are building blocks (U.1–U.3), representation (U.4), "
+    "connections (U.5–U.6), problem solving (U.7–U.10), generalisation and proof "
+    "(U.11–U.12), and communication (U.13). They develop together: students can "
+    "use procedures, represent ideas, explore connections, solve problems and "
+    "explain their reasoning within the same task."
+)
+etree.SubElement(opening, "p").text = (
+    "The official U.1–U.13 learning outcomes are listed individually below. "
+    "Revisit these skills whenever you encounter a new topic or need to strengthen "
+    "a mathematical foundation."
+)
 seen = []
 for row in intro.findall(".//row"):
     cells = row.findall("cell")
@@ -140,8 +157,6 @@ for row in intro.findall(".//row"):
     code = "".join(cells[0].itertext()).strip()
     if not re.fullmatch(r"U\.\d+", code):
         continue
-    summary = etree.SubElement(listing, "li")
-    etree.SubElement(summary, "p").text = code
     section = etree.SubElement(unifying, "section")
     section.set(ID, "jc-outcomes-unifying-" + code.lower().replace(".", ""))
     etree.SubElement(section, "title").text = code
@@ -149,7 +164,6 @@ for row in intro.findall(".//row"):
     para.text = cells[1].text
     for child in cells[1]:
         para.append(deepcopy(child))
-    summary.append(deepcopy(para))
     section.append(para)
     register(section, code, "Junior Cycle", "Unifying Strand")
     seen.append(code)

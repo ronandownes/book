@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="jc-cba-assessment">
+  <title>CBA and Assessment</title>
+  <introduction>
+    <p>Assessment in Junior Cycle Mathematics is not limited to finding the correct answer. Investigating, justifying, communicating and reflecting on mathematical ideas are all important. This chapter brings the two Classroom-Based Assessments (CBAs) together with everyday approaches to assessment and feedback.</p>
+    <p>The official <url href="https://www.curriculumonline.ie/junior-cycle/junior-cycle-subjects/mathematics/assessment-and-reporting/" visual="NCCA assessment and reporting guidance"/> is the reference for current CBA requirements and arrangements.</p>
+  </introduction>
+  <section xml:id="jc-cba1-mathematical-investigation">
+    <title>CBA 1 — Mathematical Investigation</title>
+    <p>Begin with a mathematical question worth exploring. Define the problem, make assumptions where necessary, break it into manageable parts, and use mathematical reasoning to investigate possible solutions. Interpret the result in its original context and communicate the choices made along the way.</p>
+    <p>A strong investigation records not only an answer but also the reasoning, representations, difficulties and refinements that led to it.</p>
+  </section>
+  <section xml:id="jc-cba2-statistical-investigation">
+    <title>CBA 2 — Statistical Investigation</title>
+    <p>Begin with a question that can be investigated using data. Plan how to gather appropriate evidence, consider bias and variability, organise the data, choose suitable visual and numerical summaries, and draw conclusions supported by the analysis.</p>
+    <p>The final report should explain the question, methods, findings and limitations in clear mathematical language.</p>
+  </section>
+  <section xml:id="jc-assessment-feedback">
+    <title>Assessment, Feedback and Reflection</title>
+    <p>Assessment for learning can take place through questioning, discussion, observation, short written tasks, worked examples, investigations and student explanations. Feedback should help students identify what they understand, what needs attention and what useful action to take next.</p>
+    <p>Return to the Unifying Strand when reviewing work: accuracy and fluency matter, but so do representations, connections, problem solving, proof and communication.</p>
+  </section>
+</chapter>

@@ -1,4 +1,4 @@
-/* Six Junior Cycle subject colours, a neutral Introduction, TY and five LC OL companion palettes. */
+/* Junior Cycle strand colours, Unifying Strand, assessment, TY and LC OL companion palettes. */
 .maths-programme-intro{--maths-part-bg:#31556C;--maths-part-accent:#BBD8E7;--maths-chapter-bg:#E8F1F6;--maths-chapter-ink:#23485D;--maths-chapter-edge:#9CBFD4;}
 
 .maths-programme-number{--maths-part-bg:#176946;--maths-part-accent:#B1E6C5;--maths-chapter-bg:#E1F1E8;--maths-chapter-ink:#185039;--maths-chapter-edge:#83BB99;}
@@ -7,6 +7,7 @@
 .maths-programme-algebra{--maths-part-bg:#70408C;--maths-part-accent:#E1C5F1;--maths-chapter-bg:#F0E7F6;--maths-chapter-ink:#58356F;--maths-chapter-edge:#B99BD0;}
 .maths-programme-functions{--maths-part-bg:#973E6C;--maths-part-accent:#F3C8DE;--maths-chapter-bg:#F8E8F1;--maths-chapter-ink:#753151;--maths-chapter-edge:#DBA4BD;}
 .maths-programme-statistics{--maths-part-bg:#915916;--maths-part-accent:#F6DAAA;--maths-chapter-bg:#FBF1DF;--maths-chapter-ink:#694311;--maths-chapter-edge:#D6B37B;}
+.maths-programme-assessment{--maths-part-bg:#5C6672;--maths-part-accent:#D4DBE1;--maths-chapter-bg:#EBEFF2;--maths-chapter-ink:#3C4956;--maths-chapter-edge:#B0BDC7;}
 .maths-programme-ty{--maths-part-bg:#414A83;--maths-part-accent:#CAD2FA;--maths-chapter-bg:#EBEEFA;--maths-chapter-ink:#333B6B;--maths-chapter-edge:#A3B0DF;}
 .maths-programme-lc-statistics{--maths-part-bg:#28567A;--maths-part-accent:#BBDCF1;--maths-chapter-bg:#E5F0F8;--maths-chapter-ink:#214861;--maths-chapter-edge:#9EC6DF;}
 .maths-programme-lc-geometry{--maths-part-bg:#236B73;--maths-part-accent:#BBE7E6;--maths-chapter-bg:#E2F2F1;--maths-chapter-ink:#1C565C;--maths-chapter-edge:#97CBCA;}

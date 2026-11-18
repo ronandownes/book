@@ -41,8 +41,7 @@
     </frontmatter>
 
 <part xml:id="part-jc-introduction">
-      <title>JC Maths Introduction</title>
-      <xi:include href="./jc-introduction.ptx"/>
+      <title>JC Maths — Unifying Strand</title>
       <xi:include href="./jc-unifying-outcomes.ptx"/>
     </part>
 
@@ -119,6 +118,11 @@
                 </exercise>
               </section>
             </chapter>
+    </part>
+
+    <part xml:id="part-jc-assessment">
+      <title>CBA and Assessment</title>
+      <xi:include href="./jc-cba-assessment.ptx"/>
     </part>
 
     <part xml:id="part-transition-year">
