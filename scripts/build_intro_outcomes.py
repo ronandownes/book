@@ -273,7 +273,13 @@ def correct_junior_index_notation(paragraphs: list[etree._Element]) -> list[etre
     replaced = False
     for p in paragraphs:
         raw = compact("".join(p.itertext())).lower()
-        if not replaced and "explore numbers written as" in raw:
+        if raw.startswith("a)") and "represent the operations of addition" in raw:
+            # Keep word spaces outside the source emphasis: PreTeXt trims
+            # whitespace inside inline alerts around the number-set symbols.
+            fixed.append(para(
+                r"<alert>a)</alert> Represent the operations of addition, subtraction, multiplication, and division in <m>\mathbb{N}</m>, <m>\mathbb{Z}</m>, and <m>\mathbb{Q}</m> using models including the number line, decomposition, and accumulating groups of equal size."
+            ))
+        elif not replaced and "explore numbers written as" in raw:
             fixed.extend([
                 para(r"<alert>c)</alert> Explore numbers written as <m>a^b</m> (in index form) so that they can:"),
                 para("i. Flexibly translate between whole numbers and index representation of numbers."),
