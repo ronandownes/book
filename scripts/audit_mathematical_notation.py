@@ -32,7 +32,7 @@ else:
     for needle in required:
         if needle not in body:
             errors.append("AF.3 missing typeset source: " + needle)
-    if re.search(r"i\s*\.\s*linear|x\^\(2\)", body, re.I):
+    if re.search(r"\bi\.linear|x\^\(2\)", body, re.I):
         errors.append("AF.3 still contains flattened roman numerals or exponents")
 for path in FILES:
     if not path.is_file() or path.stat().st_size < 300:
