@@ -210,6 +210,7 @@ def junior():
                 extras.append(p)
             if key == "number" and code == "N.1":
                 extras = correct_junior_index_notation(extras)
+            extras = restore_junior_math(code, extras)
             rows.append((code, compact(part.findtext("title") or ""), [main, *extras]))
         wanted = [prefix+"."+str(i) for i in range(1,expected+1)]
         actual = [r[0] for r in rows]
@@ -308,6 +309,90 @@ def correct_junior_index_notation(paragraphs: list[etree._Element]) -> list[etre
             raise RuntimeError("JC N.1(c) missing " + needle)
     return fixed
 
+
+
+def restore_junior_math(code: str, paragraphs: list[etree._Element]) -> list[etree._Element]:
+    """Restore flattened NCCA notation as genuine PreTeXt inline mathematics.
+
+    The printed JC specification (2018, pp. 15–19) is authoritative here.
+    The HTML extraction combines Roman subparts and loses fraction structure,
+    superscripts, subscripts and symbols.  Curated repairs preserve outcome
+    coverage and the printed emphasis distinguishing Higher Level material.
+    """
+    source = compact(" ".join("".join(p.itertext()) for p in paragraphs)).lower()
+    restored = {
+        "AF.3": [
+            para("<alert>a)</alert> Add, subtract and simplify:"),
+            para(r"i. Linear expressions in one or more variables with coefficients in <m>\mathbb{Q}</m>."),
+            para(r"ii. Quadratic expressions in one variable with coefficients in <m>\mathbb{Z}</m>."),
+            para(r"iii. <alert>Expressions of the form <m>\frac{a}{bx+c}</m>, where <m>a,b,c\in\mathbb{Z}</m>.</alert>"),
+            para("<alert>b)</alert> Multiply expressions of the form:"),
+            para(r"i. <m>a(bx+cy+d)</m>; <m>a(bx^2+cx+d)</m>; and <m>ax(bx^2+cx+d)</m>, where <m>a,b,c,d\in\mathbb{Z}</m>."),
+            para(r"ii. <m>(ax+b)(cx+d)</m> <alert>and <m>(ax+b)(cx^2+dx+e)</m></alert>, where <m>a,b,c,d,e\in\mathbb{Z}</m>."),
+            para("<alert>c)</alert> Divide quadratic <alert>and cubic expressions</alert> by linear expressions, where all coefficients are integers and there is no remainder."),
+            para("d) Flexibly convert between the factorised and expanded forms of algebraic expressions of the form:"),
+            para(r"i. <m>axy</m>, where <m>a\in\mathbb{Z}</m>."),
+            para(r"ii. <m>axy+byz</m>, where <m>a,b\in\mathbb{Z}</m>."),
+            para(r"iii. <m>sx-ty+tx-sy</m>, where <m>s,t\in\mathbb{Z}</m>."),
+            para(r"iv. <m>dx^2+bx</m>; <m>x^2+bx+c</m>; <alert>and <m>ax^2+bx+c</m></alert>, where <m>b,c,d\in\mathbb{Z}</m> <alert>and <m>a\in\mathbb{N}</m></alert>."),
+            para(r"v. <m>x^2-a^2</m> <alert>and <m>a^2x^2-b^2y^2</m></alert>, where <m>a,b\in\mathbb{Z}</m>."),
+        ],
+        "AF.4": [
+            para(r"a) Linear equations in one variable with coefficients in <m>\mathbb{Q}</m> and solutions in <m>\mathbb{Z}</m> <alert>or in <m>\mathbb{Q}</m></alert>."),
+            para(r"b) Quadratic equations in one variable with coefficients and solutions in <m>\mathbb{Z}</m> <alert>or coefficients in <m>\mathbb{Q}</m> and solutions in <m>\mathbb{R}</m></alert>."),
+            para(r"c) Simultaneous linear equations in two variables with coefficients and solutions in <m>\mathbb{Z}</m> <alert>or in <m>\mathbb{Q}</m></alert>."),
+            para(r"d) Linear inequalities in one variable of the form <m>g(x)\lt k</m>, and graph the solution sets on the number line for <m>x\in\mathbb{N},\mathbb{Z},\mathbb{R}</m>."),
+        ],
+        "AF.7": [
+            para("a) Demonstrate understanding of the concept of a function."),
+            para(r"b) Represent and interpret functions in different ways—graphically (for <m>x\in\mathbb{N},\mathbb{Z},\mathbb{R}</m>, [continuous functions only], as appropriate), diagrammatically, in words, and algebraically—using the language and notation of functions (domain, range, co-domain, <m>f(x)=</m>, <m>f:x\mapsto</m>, and <m>y=</m>) (drawing the graph of a function given its algebraic expression is limited to linear and quadratic functions at OL)."),
+            para(r"c) Use graphical methods to find and interpret approximate solutions of equations such as <m>f(x)=g(x)</m> <alert>and approximate solution sets of inequalities such as <m>f(x)\lt g(x)</m></alert>."),
+            para("d) Make connections between the shape of a graph and the story of a phenomenon, including identifying and interpreting maximum and minimum points."),
+        ],
+    }
+    if code in restored:
+        guard = {
+            "AF.3": ("add, subtract and simplify", "multiply expressions of the form", "divide quadratic", "flexibly convert"),
+            "AF.4": ("linear equations", "quadratic equations", "simultaneous", "linear inequalities"),
+            "AF.7": ("understanding of the concept", "represent and interpret", "graphical methods", "make connections"),
+        }[code]
+        if any(token not in source for token in guard):
+            raise RuntimeError("Unexpected NCCA website text in " + code + "; refusing to replace it")
+        return restored[code]
+
+    # These single subparts have typesetting problems on the NCCA HTML page.
+    # Change only the affected subpart, leaving all other wording intact.
+    fixed = []
+    for p in paragraphs:
+        text = compact("".join(p.itertext())).lower()
+        if code == "GT.5" and text.startswith("c)") and "equation of a line" in text:
+            fixed.append(para(
+                r"c) Find and interpret the equation of a line in the form "
+                r"<m>y=mx+c</m>; <m>y-y_1=m(x-x_1)</m>; "
+                r"<alert>and <m>ax+by+c=0</m></alert> "
+                r"(for <m>a,b,c,m,x_1,y_1\in\mathbb{Q}</m>); including finding "
+                r"the slope, the <m>y</m>-intercept, and other points on the line."
+            ))
+        elif code == "N.1" and text.startswith("f)") and "decimal form" in text:
+            fixed.append(para(
+                r"f) Convert the number <m>p</m> in decimal form to the form "
+                r"<m>a\times10^n</m>, where <m>1\le a\lt10</m>, "
+                r"<m>n\in\mathbb{Z}</m>, <m>p\in\mathbb{Q}</m>, "
+                r"and <m>p\ge1</m> <alert>(and <m>0\lt p\lt1</m>)</alert>."
+            ))
+        elif code == "N.5" and text.startswith("c)") and "set notation" in text:
+            fixed.append(para(
+                r"c) Use and understand suitable set notation and terminology, "
+                r"including null set, <m>\varnothing</m>, subset, complement, "
+                r"element, <m>\in</m>, universal set, cardinal number, "
+                r"<m>\#</m>, intersection, <m>\cap</m>, union, <m>\cup</m>, "
+                r"set difference, <m>\setminus</m>, <m>\mathbb{N}</m>, "
+                r"<m>\mathbb{Z}</m>, <m>\mathbb{Q}</m>, <m>\mathbb{R}</m>, "
+                r"and <m>\mathbb{R}\setminus\mathbb{Q}</m>."
+            ))
+        else:
+            fixed.append(p)
+    return fixed
 
 def correct_lc_formulas(code: str, paragraphs: list[etree._Element]) -> list[etree._Element]:
     """Repair formulas that a two-dimensional PDF cannot convert to plain text.
