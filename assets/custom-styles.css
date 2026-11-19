@@ -106,3 +106,22 @@ main .objectives > .heading > .title,
     break-inside: avoid;
   }
 }
+
+/* The first paragraph in each official quotation is a visible title.
+   This remains legible even when the PreTeXt theme suppresses
+   the optional <blockquote><title> tag. */
+main blockquote[id^="jc-outcomes-geometry-"] > .para:first-of-type,
+.ptx-content blockquote[id^="jc-outcomes-geometry-"] > .para:first-of-type {
+  font-weight: 800;
+  font-size: 1.1em;
+  color: #154f83 !important;
+  padding-bottom: .42rem;
+  margin-bottom: .65rem;
+  border-bottom: 1px solid #bad7ec;
+}
+/* Chapter titles link straight to the outcome, so do not repeat an
+   extra Introduction entry underneath these two chapters. */
+#ptx-toc-group-chapter-gt3-synthetic-geometry > li.toc-introduction,
+#ptx-toc-group-chapter-trigonometry > li.toc-introduction {
+  display: none !important;
+}
