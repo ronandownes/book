@@ -21,6 +21,13 @@
     <p>Other essential terms include collinear, midpoint, bisector, transversal, congruent triangles, similar triangles, chord, tangent and cyclic quadrilateral. Each should be learned with a labelled diagram and a clear counterexample where appropriate.</p>
   </section>
 
+  <section xml:id="appendix-b-all-definitions">
+    <title>Definitions and terminology index</title>
+    <p>Appendix B has 46 numbered definitions, from segments and collinear points to the orthocentre of a triangle. Short, grouped explanations of all 46 are in <xref ref="gt3-defined-terms-1"/> and <xref ref="gt3-defined-terms-2"/>. The official document remains the source for exact definitions.</p>
+    <p>Its nine explicitly undefined terms are: angle, degree, length, line, plane, point, ray, real number and set. See <xref ref="gt3-undefined-terms"/> for a student-friendly explanation of why these ideas are treated as starting points.</p>
+    <p>Definitions 42–46 concern tangents, circumcircles, incircles, medians, centroids and orthocentres. Those items connect the Junior Cycle vocabulary to Leaving Certificate constructions.</p>
+  </section>
+
   <section xml:id="appendix-b-axioms">
     <title>The five axioms</title>
     <p>An <term>axiom</term> is an agreed starting assumption for a mathematical system. An axiom is not a conclusion established by a proof within that system.</p>
@@ -72,6 +79,7 @@
       <li><p><alert>Corollary 3.</alert> An angle standing on a semicircle is a right angle.</p></li>
       <li><p><alert>Corollary 4.</alert> If an inscribed angle is a right angle, its corresponding chord is a diameter.</p></li>
       <li><p><alert>Corollary 5.</alert> The opposite interior angles of a cyclic quadrilateral are supplementary.</p></li>
+      <li><p><alert>Corollary 6.</alert> If two circles have a common tangent at the same point, the two centres and the point of contact are collinear.</p></li>
     </ul>
     <p>Distinguish <m>P\implies Q</m> from <m>Q\implies P</m>. A true statement does not automatically have a true converse.</p>
   </section>
