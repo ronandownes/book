@@ -90,6 +90,10 @@ def chapter_from_table(path, course, group, expected, section_id):
             outcome = etree.Element("blockquote")
             outcome.set(ID, prefix + "-" + slug)
             etree.SubElement(outcome, "title").text = "Learning Outcome — " + code
+            # PreTeXt HTML omits the optional blockquote title in this theme;
+            # make the label visible without altering the official statements.
+            heading = etree.SubElement(outcome, "p")
+            etree.SubElement(heading, "alert").text = "Learning Outcome — " + code
             append_official(outcome, official)
             etree.SubElement(outcome, "attribution").text = "NCCA Junior Cycle Mathematics specification"
             save(outcome, "jc-geometry-" + slug + "-outcome.ptx")
