@@ -11,7 +11,7 @@
 <section xml:id="trig-intro">
 <title>Right-angled triangles</title>
 <objectives><title>Learning Intentions</title><introduction><p>After studying this section, you should be able to:</p></introduction><ol><li><p>Identify the opposite, adjacent and hypotenuse relative to a marked acute angle.</p></li><li><p>Choose sine, cosine or tangent from the sides being compared.</p></li><li><p>Calculate an unknown length and justify the chosen ratio.</p></li></ol></objectives>
-<p><em>Linked learning outcome:</em> <xref ref="jc-outcomes-geometry-gt4"/>.</p>
+<p><em>Linked learning outcome:</em> <xref ref="jc-outcomes-geometry-gt4" text="title"/>.</p>
 <p>From the marked angle, name the sides: the <term>opposite</term> side is across from <m>\theta</m>; the <term>adjacent</term> side is the shorter side touching <m>\theta</m>; the <term>hypotenuse</term> is opposite the right angle. The diagrams use red for opposite, blue for adjacent and green for hypotenuse.</p>
 <figure xml:id="trig-included-angle-diagrams">
 <caption>Read the included angle between the two sides in each ratio. The colour of that angle matches the side opposite it: unmarked angle and adjacent side are blue; marked angle and opposite side are red; right angle and hypotenuse are green.</caption>
@@ -41,7 +41,7 @@
 <section xml:id="trig-nine-families">
 <title>Nine question families</title>
 <objectives><title>Learning Intentions</title><introduction><p>After studying this section, you should be able to:</p></introduction><ol><li><p>Find an unknown numerator or denominator side from a known acute angle.</p></li><li><p>Find an acute angle using the inverse sine, cosine or tangent function.</p></li><li><p>Check units, calculator mode and rounding for each answer.</p></li></ol></objectives>
-<p><em>Linked learning outcome:</em> <xref ref="jc-outcomes-geometry-gt4"/>.</p>
+<p><em>Linked learning outcome:</em> <xref ref="jc-outcomes-geometry-gt4" text="title"/>.</p>
 <p>Each ratio has three families: find the numerator side, find the denominator side, or find the marked angle. Each bank keeps that structure while the values change. This makes the visual cue familiar, so attention can move from recognising the included angle to choosing the algebraic step.</p>
 <ol>
 <li><p><em>Sine: find opposite.</em> Given <m>\theta=33^\circ</m> and <m>h=11</m>, find <m>o=x</m>.</p><me>\sin 33^\circ=\frac{x}{11},\qquad x=11\sin 33^\circ\approx 6.0</me></li>
