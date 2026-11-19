@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appendix xml:id="appendix-a-formulae-tables">
+  <title>Formulae and Tables</title>
+  <introduction>
+    <p>This reference explains how to use the Formulae and Tables booklet during mathematics study. It does not replace the booklet supplied in a State examination.</p>
+    <p>For examination arrangements and the authorised booklet, consult the <url href="https://www.examinations.ie/" visual="State Examinations Commission"/>.</p>
+  </introduction>
+  <section xml:id="appendix-a-using-tables">
+    <title>Using formulae effectively</title>
+    <p>Find the relevant formula, identify what each symbol denotes, check the units, substitute carefully and decide whether your answer is reasonable. A formula is a relationship to understand, not simply an instruction to insert numbers.</p>
+    <p>When revising, practise locating the formula in the booklet before working through the calculation. Not every relationship used in school mathematics is necessarily supplied in the booklet.</p>
+  </section>
+</appendix>
