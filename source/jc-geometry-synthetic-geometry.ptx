@@ -93,7 +93,7 @@
 
 
   <section xml:id="gt3-defined-terms-2">
-    <title>Definitions 19–41 — Shapes, similarity and circles</title>
+    <title>Definitions 19–46 — Shapes, similarity and circles</title>
     <objectives><title>Learning Intentions</title><ul>
       <li><p>Distinguish congruent and similar triangles.</p></li>
       <li><p>Identify and classify triangles, quadrilaterals and circles.</p></li>
@@ -131,6 +131,15 @@
       <li><p><alert>40.</alert> Circle vocabulary includes centre, radius, diameter, chord, arc, sector, semicircle, disc and circumference.</p></li>
       <li><p><alert>41.</alert> A <term>cyclic quadrilateral</term> has all four vertices on a circle.</p></li>
     </ul>
+    <p><alert>Definitions 42–46: tangents and special triangle points</alert></p>
+    <ul>
+      <li><p><alert>42.</alert> A <term>tangent</term> is a line meeting a circle at exactly one point, the <term>point of contact</term>.</p></li>
+      <li><p><alert>43.</alert> A <term>circumcircle</term> passes through the vertices of a triangle; its centre is the <term>circumcentre</term>.</p></li>
+      <li><p><alert>44.</alert> An <term>incircle</term> lies inside a triangle and touches all three sides; its centre is the <term>incentre</term>.</p></li>
+      <li><p><alert>45.</alert> A <term>median</term> joins a vertex to the midpoint of the opposite side; all three medians meet at the <term>centroid</term>.</p></li>
+      <li><p><alert>46.</alert> The <term>orthocentre</term> is where the three altitudes of a triangle meet.</p></li>
+    </ul>
+    <p>The final entries extend the reference beyond the basic Junior Cycle vocabulary. Course requirements must be checked against the correct level.</p>
     <p>These are concise explanations of the numbered definitions, not exact quotations. For the official wording and diagrams, consult <xref ref="appendix-b-geometry"/>.</p>
     <exercise xml:id="gt3-shape-definitions-check">
       <statement><p>Using only the definitions, explain why every square is a rectangle but not every rectangle is a square.</p></statement>
