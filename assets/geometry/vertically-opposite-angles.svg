@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" role="img" aria-labelledby="title desc">
+<title id="title">Vertically opposite angles</title>
+<desc id="desc">Two straight lines B-A-C and D-A-E cross at A. Matching arcs mark angles BAD and CAE.</desc>
+<rect width="560" height="300" fill="#fff"/>
+<g stroke="#1f2937" stroke-width="2.6" stroke-linecap="round" fill="none">
+  <line x1="70" y1="52" x2="490" y2="248"/>
+  <line x1="70" y1="248" x2="490" y2="52"/>
+</g>
+<g fill="none" stroke="#0d9488" stroke-width="4" stroke-linecap="round">
+  <path d="M246 134 Q214 150 246 166"/>
+  <path d="M314 134 Q346 150 314 166"/>
+</g>
+<g font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#111827">
+ <text x="46" y="45">B</text><text x="500" y="258">C</text>
+ <text x="47" y="267">D</text><text x="501" y="45">E</text>
+ <text x="280" y="174">A</text>
+</g>
+<g font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="22" fill="#0f766e">
+ <text x="203" y="157">α</text><text x="344" y="157">α</text>
+</g>
+</svg>
