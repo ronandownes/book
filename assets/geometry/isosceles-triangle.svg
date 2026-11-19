@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 330" role="img" aria-labelledby="title desc">
+<title id="title">Isosceles triangle and its equal base angles</title>
+<desc id="desc">Triangle ABC with AB equal in length to AC as indicated by single matching ticks. Equal arcs mark angles B and C.</desc>
+<rect width="560" height="330" fill="white"/>
+<g stroke="#1f2937" stroke-width="2.6" fill="none" stroke-linejoin="round">
+ <path d="M280 43 L108 280 L452 280 Z"/>
+</g>
+<g stroke="#0d9488" stroke-width="3.8" stroke-linecap="round">
+ <line x1="181" y1="148" x2="196" y2="158"/>
+ <line x1="364" y1="158" x2="379" y2="148"/>
+</g>
+<g stroke="#2563eb" fill="none" stroke-width="3.3">
+ <path d="M147 280 Q149 265 135 243"/>
+ <path d="M413 280 Q411 265 425 243"/>
+</g>
+<g font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#111827">
+ <text x="270" y="29">A</text><text x="77" y="306">B</text><text x="457" y="306">C</text>
+</g>
+</svg>
