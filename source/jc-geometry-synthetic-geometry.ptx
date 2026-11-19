@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chapter-gt3-synthetic-geometry">
+  <title>GT.3 — Synthetic Geometry</title>
+  <introduction>
+    <p>Synthetic geometry studies points, lines, angles and figures through definitions, diagrams and logical argument. We begin with familiar constructions and observations, then learn how an axiom or a theorem justifies a conclusion. Drawing accurately can help us discover a result; a proof explains why it must hold.</p>
+    <p>The official <xref ref="jc-outcomes-geometry-gt3"/> is reproduced immediately below. Its numbered clauses retain the distinction between Ordinary and Higher Level. Our explanations and worked examples come afterwards; they are not part of the official wording.</p>
+    <p>The full Irish geometry reference is <xref ref="appendix-b-geometry"/>. It gives a numbered index and a direct link to the official NCCA document, which remains authoritative for statements and required proofs.</p>
+  </introduction>
+
+  <xi:include href="./jc-geometry-gt3-outcome.ptx"/>
+
+  <section xml:id="gt3-language-and-notation">
+    <title>Points, lines, rays and angles</title>
+    <objectives>
+      <title>Learning Intentions</title>
+      <introduction><p>After studying this section, you should be able to:</p></introduction>
+      <ol>
+        <li><p>Distinguish a line, segment and ray, and use geometrical notation carefully.</p></li>
+        <li><p>Identify the vertex and arms of an angle and interpret a labelled diagram.</p></li>
+        <li><p>Explain the difference between a measured observation and a deductive conclusion.</p></li>
+      </ol>
+    </objectives>
+    <p><em>Linked learning outcome:</em> <xref ref="jc-outcomes-geometry-gt3"/>.</p>
+    <p>Points such as <m>A</m>, <m>B</m> and <m>C</m> indicate positions. The line <m>AB</m> continues without end in both directions. The segment <m>[AB]</m> has endpoints <m>A</m> and <m>B</m>. The ray <m>[AB</m> begins at <m>A</m> and passes through <m>B</m>.</p>
+    <p>The length <m>|AB|</m> is a number. The angle <m>\angle BAC</m> has vertex <m>A</m>, because <m>A</m> is the middle letter. The measure of that angle can be written <m>|\angle BAC|</m>. We often speak simply of an angle being equal to another, when we mean equal in measure.</p>
+    <p><term>Collinear</term> points lie on the same line. <term>Perpendicular</term> lines meet at a right angle. <term>Parallel</term> lines lie in the same plane and do not meet; in the formal geometry of Appendix B coincident lines are also counted as parallel.</p>
+    <exercise xml:id="gt3-notation-check">
+      <statement><p>In <m>\triangle ABC</m>, write the angle at <m>C</m> with three letters. Name the side opposite <m>C</m> and write its length.</p></statement>
+      <answer><p>The angle is <m>\angle ACB</m>, the opposite side is <m>[AB]</m>, and its length is <m>|AB|</m>.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="gt3-axioms-theorems-proof">
+    <title>Definitions, axioms, theorems and proof</title>
+    <objectives>
+      <title>Learning Intentions</title>
+      <introduction><p>After studying this section, you should be able to:</p></introduction>
+      <ol>
+        <li><p>Distinguish an undefined term, a definition, an axiom, a theorem and a corollary.</p></li>
+        <li><p>Explain why checking several examples is not a general proof.</p></li>
+        <li><p>Justify each step of an argument using an established fact.</p></li>
+      </ol>
+    </objectives>
+    <p><em>Linked learning outcome:</em> <xref ref="jc-outcomes-geometry-gt3"/>.</p>
+    <p>A <term>definition</term> establishes what a word means. An <term>axiom</term> is accepted without proof within the chosen system. A <term>theorem</term> is established by a chain of valid arguments from axioms, definitions or earlier theorems. A <term>corollary</term> is a consequence of another result.</p>
+    <p>The official geometry uses five explicitly stated axioms: two points determine a line; the ruler axiom; the protractor axiom; triangle congruence (SAS, ASA and SSS); and the axiom of parallels. Their full statements are in <xref ref="appendix-b-axioms"/>.</p>
+    <p>Suppose you draw and measure fifty triangles and find that their angles add to <m>180^\circ</m>. That is evidence for a conjecture, but it is not a proof for every triangle. To prove a statement, take an arbitrary figure and justify the conclusion without relying on a particular measured diagram.</p>
+    <p><em>Proof language:</em> Start with what is given, state what must be proved, add any permitted construction, and cite each relevant definition, axiom or established theorem. Never assume the result you are trying to prove.</p>
+    <exercise xml:id="gt3-conjecture-or-proof">
+      <statement><p>A student measures five pairs of vertically opposite angles and finds them equal. Has the student proved they are equal for every pair of intersecting lines? Explain.</p></statement>
+      <answer><p>No. Measurements support the conjecture, but a general proof must apply to any pair of intersecting lines. See the next section.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="gt3-theorem-1">
+    <title>Theorem 1 — Vertically opposite angles</title>
+    <objectives>
+      <title>Learning Intentions</title>
+      <introduction><p>After studying this section, you should be able to:</p></introduction>
+      <ol>
+        <li><p>Identify vertically opposite and supplementary angles.</p></li>
+        <li><p>State Theorem 1 and construct a proof from the straight-angle property.</p></li>
+      </ol>
+    </objectives>
+    <p><em>Linked learning outcome:</em> <xref ref="jc-outcomes-geometry-gt3"/>.</p>
+    <figure xml:id="figure-gt3-vertically-opposite">
+      <caption>Two lines intersecting at <m>A</m>; the opposite angles <m>\angle BAD</m> and <m>\angle CAE</m> are marked with matching arcs. An original vector diagram following the arrangement in Appendix B, Figure 1.</caption>
+      <image source="geometry/vertically-opposite-angles.svg" width="85%">
+        <description>Two straight lines cross at A. B and C are opposite endpoints on one line; D and E are opposite endpoints on the other. Matching teal arcs identify the left and right vertically opposite angles.</description>
+      </image>
+    </figure>
+    <p><alert>Theorem 1.</alert> Vertically opposite angles are equal in measure.</p>
+    <p><em>Proof.</em> Because <m>B,A,C</m> lie on a straight line and <m>D,A,E</m> lie on another straight line,</p>
+    <me>|\angle BAD|+|\angle BAE|=180^\circ</me>
+    <me>|\angle CAE|+|\angle BAE|=180^\circ.</me>
+    <p>Subtract the shared angle <m>|\angle BAE|</m> from each equation. Therefore</p>
+    <me>|\angle BAD|=|\angle CAE|.</me>
+    <p>This proves the result without measuring either angle. The argument works for any two intersecting straight lines.</p>
+    <exercise xml:id="gt3-theorem-1-exercise">
+      <statement><p>Two straight lines intersect. One angle measures <m>37^\circ</m>. Find its vertically opposite angle and the two adjacent angles, giving a reason for each result.</p></statement>
+      <answer><p>The vertically opposite angle is <m>37^\circ</m> by Theorem 1. Each adjacent angle measures <m>143^\circ</m>, since supplementary angles add to <m>180^\circ</m>.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="gt3-theorem-2">
+    <title>Theorem 2 — Isosceles triangles</title>
+    <objectives>
+      <title>Learning Intentions</title>
+      <introduction><p>After studying this section, you should be able to:</p></introduction>
+      <ol>
+        <li><p>Identify the equal sides and base angles of an isosceles triangle.</p></li>
+        <li><p>Use triangle congruence to prove Theorem 2.</p></li>
+        <li><p>Distinguish a theorem from its converse.</p></li>
+      </ol>
+    </objectives>
+    <p><em>Linked learning outcome:</em> <xref ref="jc-outcomes-geometry-gt3"/>.</p>
+    <figure xml:id="figure-gt3-isosceles">
+      <caption>An isosceles triangle <m>ABC</m> with <m>|AB|=|AC|</m>, showing matching side ticks and base-angle arcs. Original vector diagram.</caption>
+      <image source="geometry/isosceles-triangle.svg" width="75%">
+        <description>Triangle ABC has A at the top and a horizontal base BC. Equal tick marks on AB and AC identify the equal sides; equal curved marks identify the angles at B and C.</description>
+      </image>
+    </figure>
+    <p><alert>Theorem 2.</alert> In an isosceles triangle the angles opposite equal sides are equal. Conversely, if two angles of a triangle are equal, then the opposite sides are equal.</p>
+    <p><em>Proof of the first direction.</em> Suppose <m>|AB|=|AC|</m>. Compare <m>\triangle ABC</m> with the same triangle written in the reverse vertex order, <m>\triangle ACB</m>. We have <m>|AB|=|AC|</m>, <m>|\angle BAC|=|\angle CAB|</m>, and <m>|AC|=|AB|</m>. By SAS, the two labelled triangles are congruent. Corresponding angles at <m>B</m> and <m>C</m> are equal.</p>
+    <p><em>Converse.</em> If the base angles are equal, ASA establishes the same congruence, so the opposite side lengths are equal.</p>
+    <exercise xml:id="gt3-isosceles-exercise">
+      <statement><p>An isosceles triangle has equal base angles, each measuring <m>68^\circ</m>. Find the apex angle and justify your calculation.</p></statement>
+      <answer><p><m>180^\circ-68^\circ-68^\circ=44^\circ</m>, by Theorem 4 (the triangle angle-sum theorem).</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="gt3-theorems-3-4">
+    <title>Parallel lines and the triangle angle sum</title>
+    <objectives>
+      <title>Learning Intentions</title>
+      <introduction><p>After studying this section, you should be able to:</p></introduction>
+      <ol>
+        <li><p>Use the alternate-angle theorem and state its converse.</p></li>
+        <li><p>Explain why the interior angles of a triangle add to <m>180^\circ</m>.</p></li>
+        <li><p>Use the theorem to find missing angles, giving reasons.</p></li>
+      </ol>
+    </objectives>
+    <p><em>Linked learning outcome:</em> <xref ref="jc-outcomes-geometry-gt3"/>.</p>
+    <p><alert>Theorem 3 — Alternate angles.</alert> When a transversal cuts two lines, equal alternate angles imply that the lines are parallel. Conversely, parallel lines produce equal alternate angles. A full statement includes the position of the two angles relative to the transversal.</p>
+    <p><alert>Theorem 4 — Triangle angle sum.</alert> The three interior angles of every triangle add to <m>180^\circ</m>.</p>
+    <figure xml:id="figure-gt3-triangle-angle-sum">
+      <caption>Draw a line through <m>A</m> parallel to <m>BC</m>. The alternate angles make the three interior angles visible together along a straight line. Original vector diagram based on the configuration in Appendix B, Figure 7.</caption>
+      <image source="geometry/triangle-angle-sum.svg" width="90%">
+        <description>Triangle ABC with horizontal base BC. The line DAE through the apex A is parallel to BC. The three angles at A along the top line correspond to the three angles of the triangle.</description>
+      </image>
+    </figure>
+    <p><em>Proof of Theorem 4.</em> Take any triangle <m>ABC</m>. Draw a line <m>DE</m> through <m>A</m> parallel to <m>BC</m>. By the alternate-angle theorem, <m>|\angle DAB|=|\angle ABC|</m> and <m>|\angle CAE|=|\angle ACB|</m>. The three angles along the straight line <m>DE</m> sum to <m>180^\circ</m>. Hence</p>
+    <me>|\angle ABC|+|\angle BAC|+|\angle ACB|=180^\circ.</me>
+    <p>The same proof applies to every non-degenerate triangle. It is not restricted to the shape or measurements of the diagram.</p>
+    <exercise xml:id="gt3-triangle-sum-exercise">
+      <statement><p>In <m>\triangle ABC</m>, <m>|\angle A|=48^\circ</m> and <m>|\angle B|=67^\circ</m>. Find <m>|\angle C|</m> and identify the theorem used.</p></statement>
+      <answer><p><m>|\angle C|=65^\circ</m>, by Theorem 4.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="gt3-further-theorems-constructions">
+    <title>Further theorems and constructions</title>
+    <objectives>
+      <title>Learning Intentions</title>
+      <introduction><p>After studying this section, you should be able to:</p></introduction>
+      <ol>
+        <li><p>Find a numbered theorem or construction in the geometry reference.</p></li>
+        <li><p>Distinguish a theorem's use from a requirement to reproduce its formal proof.</p></li>
+        <li><p>Record a valid construction clearly with the necessary arcs, lines and labels.</p></li>
+      </ol>
+    </objectives>
+    <p><em>Linked learning outcome:</em> <xref ref="jc-outcomes-geometry-gt3"/>.</p>
+    <p>Continue with the theorems on exterior angles, triangle inequalities, parallelograms, similarity, Pythagoras and circles. Use <xref ref="appendix-b-theorems"/> to find each result by its official number, and <xref ref="appendix-b-constructions"/> for the construction list.</p>
+    <p>In the official Appendix B, separate sections specify what must be studied at Junior Cycle Ordinary Level, Junior Cycle Higher Level and the Leaving Certificate levels. A theorem can be needed for solving problems even when its formal proof is not examinable. Check the stated requirements rather than assuming every printed proof must be learned verbatim.</p>
+    <exercise xml:id="gt3-further-proof-question">
+      <statement><p>Explain the difference between knowing how to use the Pythagorean theorem and knowing how to prove it. Which theorem number is Pythagoras in Appendix B?</p></statement>
+      <answer><p>Using the theorem applies the relation in a right-angled triangle. Proving it establishes why that relation always holds from accepted geometric facts. Pythagoras is Theorem 14 in Appendix B.</p></answer>
+    </exercise>
+  </section>
+</chapter>
