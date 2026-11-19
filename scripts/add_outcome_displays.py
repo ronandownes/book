@@ -2,7 +2,7 @@
 """Validate official wording and independently navigable outcome pages.
 
 All 55 official statements remain in the book. The six geometry outcomes
-appear in their overview; GT.3 and GT.4 have separate teaching-chapter pages.
+appear in their overview and all six dedicated GT chapter openings.
 """
 from pathlib import Path
 import json
@@ -57,7 +57,7 @@ for item in entries:
 for part in book.findall(".//part"):
     for chapter in part.findall("chapter"):
         children = chapter.findall("section")
-        if not children or chapter.findtext("title") != "Learning Outcomes":
+        if not children or "Learning Outcomes" not in (chapter.findtext("title") or ""):
             continue
         if any(node.tag in {"remark", "figure", "interactive"} for node in chapter.iter()):
             raise ValueError("Non-official content in " + (chapter.get("{http://www.w3.org/XML/1998/namespace}id") or "?"))
@@ -77,24 +77,44 @@ if len(listed) != 6:
 for code in range(1, 7):
     if f"GT.{code}" not in "".join(listed[code - 1].itertext()):
         raise ValueError(f"Missing GT.{code} official statement")
-for chapter_id, code in (("chapter-gt3-synthetic-geometry", "gt3"),
-                         ("chapter-trigonometry", "gt4")):
-    chapter = book.xpath(".//chapter[@xml:id=$target]", target=chapter_id,
-                         namespaces={"xml": "http://www.w3.org/XML/1998/namespace"})
-    if len(chapter) != 1:
-        raise ValueError("Teaching chapter missing: " + chapter_id)
-    introduction = chapter[0].find("introduction")
+# Verify every character and inline annotation in the official statements
+# is obtained from one source, with no second hand-authored transcription.
+chapters = {
+    1: "chapter-gt1-measurement",
+    2: "chapter-gt2-shapes-solids",
+    3: "chapter-gt3-synthetic-geometry",
+    4: "chapter-trigonometry",
+    5: "chapter-gt5-coordinate-plane",
+    6: "chapter-gt6-transformations",
+}
+
+def exact_xml(element):
+    return (
+        etree.QName(element).localname,
+        element.text,
+        tuple(sorted(element.attrib.items())),
+        tuple((exact_xml(child), child.tail) for child in element),
+    )
+
+for number, chapter_id in chapters.items():
+    found = book.xpath(".//chapter[@xml:id=$target]", target=chapter_id,
+                       namespaces={"xml": "http://www.w3.org/XML/1998/namespace"})
+    if len(found) != 1:
+        raise ValueError(f"Expected exactly one GT.{number} chapter")
+    introduction = found[0].find("introduction")
     if introduction is None:
-        raise ValueError("Missing chapter introduction: " + chapter_id)
+        raise ValueError(f"Missing GT.{number} introduction")
     blocks = [child for child in introduction if child.tag != "title"]
     if not blocks or blocks[0].tag != "blockquote":
-        raise ValueError("Official learning outcome must open " + chapter_id)
-    if blocks[0].get("{http://www.w3.org/XML/1998/namespace}id") != "jc-outcomes-geometry-" + code:
-        raise ValueError("Official learning outcome ID missing in " + chapter_id)
-    if len(blocks[0].findall("p")) < 2:
-        raise ValueError("Official learning outcome empty in " + chapter_id)
-    if chapter_id == "chapter-gt3-synthetic-geometry":
-        sections = chapter[0].findall("section")
-        if any(section.find("objectives") is None for section in sections):
-            raise ValueError("Some GT.3 teaching sections lack Learning Intentions")
-print("Verified 55 official outcomes, 49 standalone pages, blue opening outcomes and section intentions.")
+        raise ValueError(f"GT.{number} must open with the official outcome")
+    quote = blocks[0]
+    if quote.get("{http://www.w3.org/XML/1998/namespace}id") != f"jc-outcomes-geometry-gt{number}":
+        raise ValueError(f"Incorrect GT.{number} quotation ID")
+    source_p = listed[number - 1].findall("p")[1:]
+    quoted_p = quote.findall("p")[1:]
+    if not source_p or list(map(exact_xml, source_p)) != list(map(exact_xml, quoted_p)):
+        raise ValueError(f"GT.{number} statement differs from the overview: NOT verbatim")
+    if number == 3 and any(sec.find("objectives") is None for sec in found[0].findall("section")):
+        raise ValueError("GT.3 teaching section missing Learning Intentions")
+
+print("Validated all 55 official outcomes, 49 standalone pages and six verbatim GT chapter quotations.")
