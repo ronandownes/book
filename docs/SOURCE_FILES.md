@@ -24,26 +24,36 @@ Graphs and Events and Counting chapters currently have their text in that file.
 Source filenames do not set printed chapter numbers or public page addresses:
 preserve the existing `xml:id` values when editing.
 
-## Geometry and Trigonometry (GT.3 and GT.4)
+## Geometry and Trigonometry: one source, six GT chapters
 
-The main book includes `source/jc-geometry-outcomes.ptx` as the single
-complete official GT.1–GT.6 overview, followed by
-`source/jc-geometry-synthetic-geometry.ptx` (GT.3) and
-`source/jc-trigonometry-ratios-triangles.ptx` (GT.4).
-The last file retains its filename and its stable chapter ID.
+The official NCCA source data is processed by `scripts/build_intro_outcomes.py`
+into a six-outcome table and by `scripts/build_outcome_pages.py` into
+the `source/jc-geometry-outcomes.ptx` chapter with the single complete
+**GT Learning Outcomes** overview.
 
-The outcome generator creates `jc-geometry-gt3-outcome.ptx` and
-`jc-geometry-gt4-outcome.ptx` as native, titled blockquotes at the very
-start of the chapter introductions. These blue blocks preserve the official
-GT.3 and GT.4 wording and IDs; separate purple `objectives` give the
-teaching sections their Learning Intentions. They do not add a new
-numbered section to the contents menu. Do not edit the
-generated outcome files: update the generator, not the official wording.
+**Never type an official learning outcome into a teaching chapter.** The
+same generator writes all six `source/jc-geometry-gtN-outcome.ptx` quotations
+directly from that authoritative table. Each GT chapter uses an
+`xi:include` of its quotation inside its introduction. This guarantees
+the text in the overview and chapter opening is identical; the HTML
+build validator compares every official paragraph and inline annotation.
 
-The GT.3 chapter uses original, editable SVGs in `assets/geometry/`.
-Older direct GT.1, GT.2, GT.5 and GT.6 URLs redirect to the overview;
-old GT.3 and GT.4 URLs redirect to the blue learning-outcome boxes in the
-respective chapters.
+The main book orders these six chapters after the overview:
+
+- GT.1: `jc-geometry-gt1-measurement.ptx`
+- GT.2: `jc-geometry-gt2-shapes-solids.ptx`
+- GT.3: `jc-geometry-synthetic-geometry.ptx`
+- GT.4: `jc-trigonometry-ratios-triangles.ptx`
+- GT.5: `jc-geometry-gt5-coordinate-plane.ptx`
+- GT.6: `jc-geometry-gt6-transformations.ptx`
+
+GT.1, GT.2, GT.5 and GT.6 are intentionally minimal teaching-chapter
+shells containing the exact official outcome, ready for future lessons.
+GT.3 and GT.4 retain their existing teaching material. The blue
+learning-outcome quotation is distinct from purple, author-written
+`objectives` (Learning Intentions). No separate numbered GT outcome
+sections clutter the table of contents. The older GT outcome URLs
+redirect to the corresponding chapter introductions.
 
 ## Learning outcomes and publishing
 
