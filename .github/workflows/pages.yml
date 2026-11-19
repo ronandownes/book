@@ -225,10 +225,14 @@ jobs:
                   raise SystemExit("Incomplete full-text learning outcomes in " + chapter)
           print("Validated all 10 complete-text outcome chapters.")
           PY
-      - name: Complete and verify all 55 JC and LC OL outcome displays
+      - name: Validate complete official outcomes and independent outcome pages
         run: |
           set -euo pipefail
           python scripts/add_outcome_displays.py
+      - name: Preserve legacy GT.1 GT.2 GT.5 GT.6 outcome links
+        run: |
+          set -euo pipefail
+          python scripts/redirect_old_gt_outcomes.py
       - name: Verify JC strand structure, TY and five LC OL Parts
         run: |
           set -euo pipefail
@@ -256,6 +260,8 @@ jobs:
              "jc-outcomes-geometry.html","jc-outcomes-algebra.html",
              "jc-outcomes-statistics.html","sets-domain-codomain.html",
              "chapter-functions.html","chapter-glossary.html","chapter-ty-programme.html",
+             "chapter-gt3-synthetic-geometry.html","chapter-trigonometry.html",
+             "jc-outcomes-geometry-gt3.html","jc-outcomes-geometry-gt4.html",
              "lc-ol-introduction.html","lc-ol-statistics-outcomes.html",
              "lc-ol-geometry-outcomes.html","lc-ol-number-outcomes.html",
              "lc-ol-algebra-outcomes.html","lc-ol-functions-outcomes.html",
