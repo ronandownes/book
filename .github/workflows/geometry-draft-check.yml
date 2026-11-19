@@ -49,6 +49,7 @@ jobs:
       - name: Redirect old outcome URLs and check all curriculum text
         run: |
           set -euo pipefail
+          python scripts/open_gt_chapters_directly.py
           python scripts/redirect_old_gt_outcomes.py
           python scripts/add_outcome_displays.py
           python - <<'PY'
@@ -60,7 +61,7 @@ jobs:
           if len(ids) != len(set(ids)): raise SystemExit('Duplicate xml:id')
           for chapter, code in [('chapter-gt3-synthetic-geometry','gt3'),
                                 ('chapter-trigonometry','gt4')]:
-              page = Path('output/web') / (chapter+'.html')
+              page = Path('output/web') / (chapter+'-2.html')
               if not page.is_file(): raise SystemExit('Missing chapter HTML: '+str(page))
               tree = html.fromstring(page.read_text(encoding='utf-8'))
               text = page.read_text(encoding='utf-8')
