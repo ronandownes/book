@@ -17,9 +17,9 @@ for number in range(1, 7):
     if old.exists():
         raise SystemExit(f"Old page unexpectedly still exists: {old}")
     if number == 3:
-        url = "chapter-gt3-synthetic-geometry.html#jc-outcomes-geometry-gt3"
+        url = "chapter-gt3-synthetic-geometry-2.html#jc-outcomes-geometry-gt3"
     elif number == 4:
-        url = "chapter-trigonometry.html#jc-outcomes-geometry-gt4"
+        url = "chapter-trigonometry-2.html#jc-outcomes-geometry-gt4"
     else:
         url = f"jc-outcomes-geometry.html#jc-geometry-overview-gt{number}"
     name = f"GT.{number}"
