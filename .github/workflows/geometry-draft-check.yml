@@ -1,0 +1,77 @@
+name: Validate GT.3 geometry draft (no publishing)
+
+on:
+  push:
+    branches: [draft/appendix-b-geometry-20261119]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout draft
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PreTeXt and build dependencies
+        run: python -m pip install -r requirements.txt requests beautifulsoup4 pymupdf lxml
+      - name: Download syllabus and necessary source pictures
+        run: |
+          set -euo pipefail
+          mkdir -p assets/syllabus assets/cicadas
+          curl --fail --location --retry 3 --silent --show-error \
+            "https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" \
+            --output assets/syllabus/LC_Mathematics_Syllabus_2015.pdf
+          curl --fail --location --retry 3 --silent --show-error \
+            "https://upload.wikimedia.org/wikipedia/commons/a/a9/Riley%27s_13-Year_Cicada_Magicicada_tredecim_JG.jpg" \
+            --output assets/cicadas/magicicada-tredecim-2024.jpg
+          curl --fail --location --retry 3 --silent --show-error \
+            "https://upload.wikimedia.org/wikipedia/commons/8/8e/Magicicada_septendecim-mating.jpg" \
+            --output assets/cicadas/magicicada-septendecim-2024.jpg
+          curl --fail --location --retry 3 --silent --show-error \
+            "https://upload.wikimedia.org/wikipedia/commons/9/9e/Periodical_cicadas_in_a_tree.jpg" \
+            --output assets/cicadas/periodical-cicadas-tree-2024.jpg
+      - name: Build generated curriculum material
+        run: |
+          set -euo pipefail
+          python scripts/build_intro_outcomes.py
+          python scripts/build_outcome_pages.py
+          python scripts/audit_mathematical_notation.py
+          python scripts/add_learning_intentions.py
+          python scripts/fetch_ty_news_photos.py
+      - name: Build PreTeXt HTML
+        run: pretext build web
+      - name: Redirect old outcome URLs and check all curriculum text
+        run: |
+          set -euo pipefail
+          python scripts/redirect_old_gt_outcomes.py
+          python scripts/add_outcome_displays.py
+          python - <<'PY'
+          from pathlib import Path
+          from lxml import etree, html
+          root = etree.parse('source/main.ptx')
+          root.xinclude()
+          ids = root.xpath('//@xml:id', namespaces={'xml':'http://www.w3.org/XML/1998/namespace'})
+          if len(ids) != len(set(ids)): raise SystemExit('Duplicate xml:id')
+          for chapter, code in [('chapter-gt3-synthetic-geometry','gt3'),
+                                ('chapter-trigonometry','gt4')]:
+              page = Path('output/web') / (chapter+'.html')
+              if not page.is_file(): raise SystemExit('Missing chapter HTML: '+str(page))
+              tree = html.fromstring(page.read_text(encoding='utf-8'))
+              b = tree.get_element_by_id('jc-outcomes-geometry-'+code, None)
+              if b is None: raise SystemExit('Missing opening Learning Outcome: '+code)
+              if 'Learning Outcome' not in b.text_content(): raise SystemExit('Missing heading: '+code)
+          for p in ['assets/geometry/isosceles-triangle.svg',
+                    'assets/geometry/vertically-opposite-angles.svg',
+                    'assets/geometry/triangle-angle-sum.svg']:
+              etree.parse(p)
+          for number in range(1,7):
+              if not Path(f'output/web/jc-outcomes-geometry-gt{number}.html').exists():
+                  raise SystemExit('Missing old GT redirect')
+          print('Draft passes build and Geometry structure checks.')
+          PY
