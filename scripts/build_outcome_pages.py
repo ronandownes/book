@@ -75,6 +75,8 @@ def chapter_from_table(path, course, group, expected, section_id):
             raise ValueError("Empty official outcome " + code)
 
         entry = etree.SubElement(listing, "li")
+        if course == "Junior Cycle" and group == "Geometry and Trigonometry":
+            entry.set(ID, "jc-geometry-overview-" + slug)
         label = etree.SubElement(entry, "p")
         etree.SubElement(label, "alert").text = code + (" — " + heading if heading else "")
         append_official(entry, official)
