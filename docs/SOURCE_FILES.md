@@ -33,13 +33,17 @@ complete official GT.1–GT.6 overview, followed by
 The last file retains its filename and its stable chapter ID.
 
 The outcome generator creates `jc-geometry-gt3-outcome.ptx` and
-`jc-geometry-gt4-outcome.ptx` as the first sections of the two teaching
-chapters. These sections preserve the old public IDs. Do not edit the
+`jc-geometry-gt4-outcome.ptx` as native, titled blockquotes at the very
+start of the chapter introductions. These blue blocks preserve the official
+GT.3 and GT.4 wording and IDs; separate purple `objectives` give the
+teaching sections their Learning Intentions. They do not add a new
+numbered section to the contents menu. Do not edit the
 generated outcome files: update the generator, not the official wording.
 
 The GT.3 chapter uses original, editable SVGs in `assets/geometry/`.
-Older direct GT.1, GT.2, GT.5 and GT.6 URLs redirect to the corresponding
-items in the single official overview until teaching chapters are ready.
+Older direct GT.1, GT.2, GT.5 and GT.6 URLs redirect to the overview;
+old GT.3 and GT.4 URLs redirect to the blue learning-outcome boxes in the
+respective chapters.
 
 ## Learning outcomes and publishing
 
