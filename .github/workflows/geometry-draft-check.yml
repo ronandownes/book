@@ -59,24 +59,23 @@ jobs:
           root.xinclude()
           ids = root.xpath('//@xml:id', namespaces={'xml':'http://www.w3.org/XML/1998/namespace'})
           if len(ids) != len(set(ids)): raise SystemExit('Duplicate xml:id')
-          for chapter, code in [('chapter-gt3-synthetic-geometry','gt3'),
-                                ('chapter-trigonometry','gt4')]:
-              page = Path('output/web') / (chapter+'-2.html')
-              if not page.is_file(): raise SystemExit('Missing chapter HTML: '+str(page))
-              tree = html.fromstring(page.read_text(encoding='utf-8'))
-              text = page.read_text(encoding='utf-8')
-              for token in ('jc-outcomes-geometry-'+code, 'Learning Outcome', 'blockquote'):
-                  i = text.find(token)
-                  print('HTML inspection',chapter,token,i, repr(text[max(0,i-250):i+650] if i >= 0 else 'ABSENT'))
-              matches = []
-              for other in Path('output/web').glob('*.html'):
-                  page_text = other.read_text(encoding='utf-8')
-                  if 'NCCA Junior Cycle Mathematics specification' in page_text or 'The blue block above is the official' in page_text:
-                      matches.append((other.name, 'NCCA Junior Cycle Mathematics specification' in page_text, 'The blue block above is the official' in page_text))
-              print('OUTCOME PAGE LOCATIONS', matches[:30])
-              b = tree.get_element_by_id('jc-outcomes-geometry-'+code, None)
-              if b is None: raise SystemExit('Missing opening Learning Outcome: '+code)
-              if 'Learning Outcome' not in b.text_content(): raise SystemExit('Missing heading: '+code)
+          chapters = {
+              1: 'chapter-gt1-measurement',
+              2: 'chapter-gt2-shapes-solids',
+              3: 'chapter-gt3-synthetic-geometry',
+              4: 'chapter-trigonometry',
+              5: 'chapter-gt5-coordinate-plane',
+              6: 'chapter-gt6-transformations'
+          }
+          for n, chapter in chapters.items():
+              pages = [p for p in (Path('output/web') / (chapter+'-2.html'),
+                                   Path('output/web') / (chapter+'.html'))
+                       if p.exists() and f'id="jc-outcomes-geometry-gt{n}"' in p.read_text(encoding='utf-8')]
+              if len(pages) != 1: raise SystemExit(f'GT.{n}: missing or duplicated official chapter outcome')
+              doc = html.fromstring(pages[0].read_text(encoding='utf-8'))
+              block = doc.get_element_by_id('jc-outcomes-geometry-gt'+str(n), None)
+              if block is None or f'Learning Outcome — GT.{n}' not in block.text_content():
+                  raise SystemExit(f'GT.{n}: missing visible official learning-outcome heading')
           for p in ['assets/geometry/isosceles-triangle.svg',
                     'assets/geometry/vertically-opposite-angles.svg',
                     'assets/geometry/triangle-angle-sum.svg']:
