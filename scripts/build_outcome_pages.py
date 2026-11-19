@@ -262,10 +262,15 @@ expected = {
     ]
     for n in range(1, count + 1)
 }
+# Every official outcome is present in the book. Geometry has one
+# complete six-outcome overview and two opening quotations, rather than
+# six extra standalone pages. Those six codes must not appear in the
+# independent-page manifest.
+expected -= {f"GT.{n}" for n in range(1, 7)}
 actual = [entry["code"] for entry in manifest["pages"]]
-if len(actual) != 55 or set(actual) != expected or len(set(actual)) != 55:
-    raise ValueError("Expected 55 distinct, source-only outcome pages")
+if len(actual) != 49 or set(actual) != expected or len(set(actual)) != 49:
+    raise ValueError("Expected 49 unique standalone outcome pages; all 55 official outcomes remain in the book")
 (ROOT / "learning-outcomes-pages.json").write_text(
     json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8"
 )
-print("Generated 55 source-only outcomes in navigable chapters.")
+print("Generated 49 independent outcome pages, plus six official GT statements in the Geometry overview.")
