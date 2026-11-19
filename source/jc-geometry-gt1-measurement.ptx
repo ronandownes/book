@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chapter-gt1-measurement">
+  <title>GT.1 — Units of Measure and Time</title>
+  <introduction>
+    <title>GT.1 — Units of Measure and Time</title>
+    <xi:include href="./jc-geometry-gt1-outcome.ptx"/>
+  </introduction>
+</chapter>
