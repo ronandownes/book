@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 355" role="img" aria-labelledby="title desc">
+<title id="title">Triangle angle sum through a parallel line</title>
+<desc id="desc">Triangle ABC with BC horizontal, and the horizontal line D-A-E through its top vertex A, parallel to BC. Alternate angles connect the base angles to two parts of the straight angle at A.</desc>
+<rect width="600" height="355" fill="#fff"/>
+<g fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+ <line x1="64" y1="94" x2="536" y2="94"/>
+ <path d="M300 94 L143 310 L457 310 Z"/>
+</g>
+<g fill="none" stroke="#2563eb" stroke-width="3.6" stroke-linecap="round">
+ <path d="M252 94 A48 48 0 0 0 272 133"/>
+ <path d="M171 310 A28 28 0 0 0 158 289"/>
+</g>
+<g fill="none" stroke="#0d9488" stroke-width="3.6" stroke-linecap="round">
+ <path d="M348 94 A48 48 0 0 1 328 133"/>
+ <path d="M442 289 A28 28 0 0 0 429 310"/>
+</g>
+<g fill="none" stroke="#b45309" stroke-width="3.5"><path d="M272 133 Q300 149 328 133"/></g>
+<g font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#111827">
+ <text x="42" y="86">D</text><text x="292" y="81">A</text><text x="540" y="86">E</text>
+ <text x="121" y="337">B</text><text x="462" y="337">C</text>
+</g>
+<g font-family="Georgia, 'Times New Roman', serif" font-size="18" font-style="italic">
+ <text x="228" y="125" fill="#2563eb">β</text>
+ <text x="363" y="125" fill="#0d9488">γ</text>
+ <text x="293" y="151" fill="#b45309">α</text>
+</g>
+<g font-family="Arial, sans-serif" font-size="14" fill="#526273">
+ <text x="273" y="337">DE ∥ BC</text>
+</g>
+</svg>
