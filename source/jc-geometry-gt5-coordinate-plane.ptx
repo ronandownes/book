@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chapter-gt5-coordinate-plane">
+  <title>GT.5 — The Co-ordinate Plane</title>
+  <introduction>
+    <title>GT.5 — The Co-ordinate Plane</title>
+    <xi:include href="./jc-geometry-gt5-outcome.ptx"/>
+  </introduction>
+</chapter>
