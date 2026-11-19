@@ -167,5 +167,9 @@
       <title>LC OL · Functions</title>
       <xi:include href="./lc-ol-functions-outcomes.ptx"/>
     </part>
+    <backmatter>
+      <xi:include href="./appendix-a-formulae-tables.ptx"/>
+      <xi:include href="./appendix-b-geometry.ptx"/>
+    </backmatter>
   </book>
 </pretext>
