@@ -2,6 +2,7 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chapter-gt3-synthetic-geometry">
   <title>GT.3 — Synthetic Geometry</title>
   <introduction>
+  <title>GT.3 — Synthetic Geometry</title>
   <xi:include href="./jc-geometry-gt3-outcome.ptx"/>
 <p>This chapter develops the definitions, axioms, theorems and proof skills required for GT.3. The blue block above is the official learning outcome; the purple lists in each section are our practical learning intentions.</p>
     <p>Synthetic geometry studies points, lines, angles and figures through definitions, diagrams and logical argument. We begin with familiar constructions and observations, then learn how an axiom or a theorem justifies a conclusion. Drawing accurately can help us discover a result; a proof explains why it must hold.</p>
