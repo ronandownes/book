@@ -229,7 +229,7 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/add_outcome_displays.py
-      - name: Preserve legacy GT.1 GT.2 GT.5 GT.6 outcome links
+      - name: Preserve all six legacy GT outcome links
         run: |
           set -euo pipefail
           python scripts/redirect_old_gt_outcomes.py
