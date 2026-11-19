@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appendix xml:id="appendix-b-geometry">
+  <title>Geometry for Post-primary School Mathematics</title>
+  <introduction>
+    <p>This is a navigable, student-facing guide to the geometry used in Irish post-primary mathematics. It is organised around the numbered definitions, axioms, theorems, corollaries and constructions of the official document known as <em>Appendix B</em>.</p>
+    <p>The descriptions below are explanatory summaries, not verbatim reproductions of the NCCA document. For authoritative statements, proofs, diagrams, numbering and level requirements, use the <url href="https://curriculumonline.ie/getmedia/ed7de7ab-2376-44f0-9c7c-b511e470c0a7/Appendix_B_English.pdf" visual="official Appendix B PDF"/>. The learning outcomes themselves are shown under <xref ref="jc-outcomes-geometry-gt3"/>.</p>
+    <p>One useful route through this material is: basic objects and notation; axioms; reasoning with angles and triangles; parallel lines; quadrilaterals and similarity; circles; constructions; and proofs.</p>
+  </introduction>
+
+  <section xml:id="appendix-b-objects">
+    <title>Basic objects and notation</title>
+    <p>A <term>point</term> marks a position; a <term>line</term> extends in both directions; a <term>segment</term> has two endpoints; a <term>ray</term> has one endpoint and continues in one direction. These distinctions matter when writing a proof.</p>
+    <ul>
+      <li><p><m>[AB]</m>: the segment with endpoints <m>A</m> and <m>B</m>.</p></li>
+      <li><p><m>|AB|</m>: the distance between the two points, or the length of their segment.</p></li>
+      <li><p><m>\angle ABC</m>: an angle whose vertex is <m>B</m>; the middle letter identifies the vertex.</p></li>
+      <li><p><m>\triangle ABC</m>: the triangle with vertices <m>A</m>, <m>B</m> and <m>C</m>.</p></li>
+      <li><p><m>l\parallel m</m>: the lines <m>l</m> and <m>m</m> are parallel.</p></li>
+      <li><p><m>l\perp m</m>: the lines <m>l</m> and <m>m</m> are perpendicular.</p></li>
+    </ul>
+    <p>Other essential terms include collinear, midpoint, bisector, transversal, congruent triangles, similar triangles, chord, tangent and cyclic quadrilateral. Each should be learned with a labelled diagram and a clear counterexample where appropriate.</p>
+  </section>
+
+  <section xml:id="appendix-b-axioms">
+    <title>The five axioms</title>
+    <p>An <term>axiom</term> is an agreed starting assumption for a mathematical system. An axiom is not a conclusion established by a proof within that system.</p>
+    <ol>
+      <li><p><alert>Axiom 1 — Two points.</alert> Distinct points determine one line.</p></li>
+      <li><p><alert>Axiom 2 — Ruler.</alert> The positions of points along a line are compatible with the measurement and addition of distances.</p></li>
+      <li><p><alert>Axiom 3 — Protractor.</alert> Angles can be measured in degrees, and a ray can be located by a specified angle on a chosen side.</p></li>
+      <li><p><alert>Axiom 4 — Triangle congruence.</alert> The SAS, ASA and SSS tests may be used to establish congruence of triangles.</p></li>
+      <li><p><alert>Axiom 5 — Parallels.</alert> For a line and a specified point, there is exactly one parallel through that point.</p></li>
+    </ol>
+    <p>These are condensed teaching descriptions. Consult the official document before quoting an axiom as part of a formal proof.</p>
+  </section>
+
+  <section xml:id="appendix-b-theorems">
+    <title>Theorems 1–21: reference index</title>
+    <p>A <term>theorem</term> is a result justified from accepted starting points and previously established results. The numbering here follows Appendix B rather than the order in which the topics must be taught.</p>
+    <ol>
+      <li><p><alert>Theorem 1.</alert> Vertically opposite angles have the same measure.</p></li>
+      <li><p><alert>Theorem 2.</alert> The base angles of an isosceles triangle are equal; the converse is also studied.</p></li>
+      <li><p><alert>Theorem 3.</alert> Parallel lines and equal alternate angles: both directions of the relationship.</p></li>
+      <li><p><alert>Theorem 4.</alert> The three interior angles of a triangle have a total of <m>180^\circ</m>.</p></li>
+      <li><p><alert>Theorem 5.</alert> Corresponding angles and parallel lines: an if-and-only-if relationship.</p></li>
+      <li><p><alert>Theorem 6.</alert> An exterior angle of a triangle equals the sum of the two non-adjacent interior angles.</p></li>
+      <li><p><alert>Theorem 7.</alert> In a triangle, larger sides face larger angles, and conversely.</p></li>
+      <li><p><alert>Theorem 8.</alert> The sum of the lengths of two sides of a triangle exceeds the third length.</p></li>
+      <li><p><alert>Theorem 9.</alert> The opposite sides and opposite angles of a parallelogram are equal.</p></li>
+      <li><p><alert>Theorem 10.</alert> The diagonals of a parallelogram bisect one another.</p></li>
+      <li><p><alert>Theorem 11.</alert> Equal intercepts between parallel lines on one transversal correspond to equal intercepts on another.</p></li>
+      <li><p><alert>Theorem 12.</alert> A line parallel to a triangle side divides the other two sides in corresponding ratios.</p></li>
+      <li><p><alert>Theorem 13.</alert> The corresponding sides of similar triangles are proportional.</p></li>
+      <li><p><alert>Theorem 14.</alert> Pythagoras' theorem for right-angled triangles.</p></li>
+      <li><p><alert>Theorem 15.</alert> The converse of Pythagoras' theorem.</p></li>
+      <li><p><alert>Theorem 16.</alert> For a fixed triangle, the product of a selected base and its corresponding height is independent of the selected base.</p></li>
+      <li><p><alert>Theorem 17.</alert> A diagonal separates a parallelogram into regions of equal area.</p></li>
+      <li><p><alert>Theorem 18.</alert> The area of a parallelogram is its base multiplied by the corresponding height.</p></li>
+      <li><p><alert>Theorem 19.</alert> An angle at the centre of a circle is twice an angle at the circumference standing on the same arc, subject to the configuration.</p></li>
+      <li><p><alert>Theorem 20.</alert> The radius to a tangent point is perpendicular to the tangent, together with the converse.</p></li>
+      <li><p><alert>Theorem 21.</alert> A perpendicular from the centre to a chord bisects it; the chord's perpendicular bisector passes through the centre.</p></li>
+    </ol>
+    <p>Where the full theorem has hypotheses or multiple parts, this index is deliberately shorter. Use the <url href="https://curriculumonline.ie/getmedia/ed7de7ab-2376-44f0-9c7c-b511e470c0a7/Appendix_B_English.pdf#page=11" visual="official theorem descriptions and proofs"/> when checking exact conditions.</p>
+  </section>
+
+  <section xml:id="appendix-b-corollaries">
+    <title>Corollaries, converses and proof language</title>
+    <p>A <term>corollary</term> follows directly from a theorem. A <term>converse</term> reverses the direction of an implication; it must be justified separately unless both directions have been established.</p>
+    <ul>
+      <li><p><alert>Corollary 1.</alert> A diagonal of a parallelogram forms two congruent triangles.</p></li>
+      <li><p><alert>Corollary 2.</alert> Inscribed angles standing on the same arc have equal measure.</p></li>
+      <li><p><alert>Corollary 3.</alert> An angle standing on a semicircle is a right angle.</p></li>
+      <li><p><alert>Corollary 4.</alert> If an inscribed angle is a right angle, its corresponding chord is a diameter.</p></li>
+      <li><p><alert>Corollary 5.</alert> The opposite interior angles of a cyclic quadrilateral are supplementary.</p></li>
+    </ul>
+    <p>Distinguish <m>P\implies Q</m> from <m>Q\implies P</m>. A true statement does not automatically have a true converse.</p>
+  </section>
+
+  <section xml:id="appendix-b-constructions">
+    <title>Constructions 1–22: reference index</title>
+    <p>Use the permitted instruments and justify why the constructed figure has the required property. In Junior Cycle, constructions 1–15 are specified, with numbers 3 and 7 at Higher Level only. The additional Leaving Certificate constructions are distinguished below. The official specification is the authority for examination requirements.</p>
+    <ol>
+      <li><p>Bisect an angle with compass and straightedge.</p></li>
+      <li><p>Construct the perpendicular bisector of a segment.</p></li>
+      <li><p>Construct a perpendicular through a point off the given line (JC Higher Level).</p></li>
+      <li><p>Construct a perpendicular through a point on the given line.</p></li>
+      <li><p>Draw a parallel to a specified line through a given point.</p></li>
+      <li><p>Divide a segment into two or three equal parts without measuring.</p></li>
+      <li><p>Divide a segment into an arbitrary number of equal parts without measuring (JC Higher Level).</p></li>
+      <li><p>Mark a segment of specified length along a ray.</p></li>
+      <li><p>Construct an angle of specified size from a ray.</p></li>
+      <li><p>Construct a triangle from three side lengths (SSS).</p></li>
+      <li><p>Construct a triangle from two sides and the included angle (SAS).</p></li>
+      <li><p>Construct a triangle from two angles and the included side (ASA).</p></li>
+      <li><p>Construct a right-angled triangle using the hypotenuse and another side.</p></li>
+      <li><p>Construct a right-angled triangle using a side and an acute angle.</p></li>
+      <li><p>Construct a rectangle using its two side lengths.</p></li>
+      <li><p>Construct a triangle's circumcentre and circumcircle (additional Leaving Certificate).</p></li>
+      <li><p>Construct a triangle's incentre and incircle (additional Leaving Certificate).</p></li>
+      <li><p>Construct a <m>60^\circ</m> angle without a protractor or set square (additional Leaving Certificate).</p></li>
+      <li><p>Construct the tangent to a circle at a point on it (additional Leaving Certificate).</p></li>
+      <li><p>Construct a parallelogram from side lengths and angle data (additional Leaving Certificate).</p></li>
+      <li><p>Construct the centroid of a triangle (additional Leaving Certificate).</p></li>
+      <li><p>Construct the orthocentre of a triangle (Leaving Certificate Higher Level).</p></li>
+    </ol>
+    <p><url href="https://curriculumonline.ie/getmedia/ed7de7ab-2376-44f0-9c7c-b511e470c0a7/Appendix_B_English.pdf#page=42" visual="Open the original numbered construction list"/>.</p>
+  </section>
+
+  <section xml:id="appendix-b-proof">
+    <title>From an observation to a proof</title>
+    <p>Drawing and measuring several triangles may suggest that their angles always add to <m>180^\circ</m>. That is useful evidence for a conjecture, but it is not a deductive proof for every triangle.</p>
+    <p>For a proof, take an arbitrary triangle <m>ABC</m>. Draw the line through <m>A</m> parallel to <m>BC</m>. Alternate-angle relationships identify two angles on this line with the angles at <m>B</m> and <m>C</m>. Together with the angle at <m>A</m>, they form a straight angle. Therefore</p>
+    <me>\angle A+\angle B+\angle C=180^\circ.</me>
+    <p>The conclusion is general because the triangle was arbitrary and every step rests on an accepted geometrical fact.</p>
+    <exercise xml:id="appendix-b-proof-exercise-one">
+      <statement><p>Give one example showing why the converse of a true mathematical implication may be false.</p></statement>
+      <answer><p>Every square is a rectangle, but not every rectangle is a square.</p></answer>
+    </exercise>
+    <exercise xml:id="appendix-b-proof-exercise-two">
+      <statement><p>In triangle <m>ABC</m>, suppose <m>\angle A=48^\circ</m> and <m>\angle B=67^\circ</m>. Find <m>\angle C</m>, naming the result that justifies the calculation.</p></statement>
+      <answer><p><m>\angle C=65^\circ</m>, by Theorem 4 (the triangle angle-sum theorem).</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="appendix-b-course-levels">
+    <title>What to study at each level</title>
+    <p>The reference contains more geometry than any single level requires. In particular, the numbering of constructions and theorems is not a recommendation to teach them chronologically.</p>
+    <p>For Junior Cycle, consult outcome <xref ref="jc-outcomes-geometry-gt3"/> together with sections 9 and 10 of the official Appendix B. For Leaving Certificate, consult the appropriate syllabus and sections 11–13 of Appendix B. Do not infer examination requirements from this summary index alone.</p>
+    <p>Source acknowledgement: National Council for Curriculum and Assessment (NCCA), <em>Geometry for Post-primary School Mathematics</em>, published as Appendix B to the Junior Cycle Mathematics specification. Copyright remains with the NCCA.</p>
+  </section>
+</appendix>
