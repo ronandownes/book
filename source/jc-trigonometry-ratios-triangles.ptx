@@ -2,6 +2,7 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chapter-trigonometry">
 <title>GT.4 — Trigonometric Ratios</title>
 <introduction>
+<title>GT.4 — Trigonometric Ratios</title>
   <xi:include href="./jc-geometry-gt4-outcome.ptx"/>
 <p>The blue block above is the official GT.4 learning outcome. Each teaching section then gives its own learning intentions in purple.</p>
 <p>This chapter focuses on ratios in right-angled triangles; its final two sections contain optional mathematical extensions beyond the requirements of GT.4.</p>
