@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Validate 55 official, native HTML learning-outcome pages.
+"""Validate official wording and independently navigable outcome pages.
 
-No injected presentation scripts, teaching remarks or editorial examples.
+All 55 official statements remain in the book. The six geometry outcomes
+appear in their overview; GT.3 and GT.4 have separate teaching-chapter pages.
 """
 from pathlib import Path
 import json
@@ -12,8 +13,8 @@ manifest = json.loads(
     Path("source/learning-outcomes-pages.json").read_text(encoding="utf-8")
 )
 entries = manifest["pages"]
-if len(entries) != 55:
-    raise ValueError("Exactly 55 outcomes/topics are required")
+if len(entries) != 51:
+    raise ValueError("Exactly 51 independent outcome pages are expected; all 55 official outcomes must remain in the book")
 
 groups = {}
 for item in entries:
@@ -63,4 +64,22 @@ for part in book.findall(".//part"):
         intro = chapter.find("introduction")
         if intro is None or intro.find("ol") is None:
             raise ValueError("Missing complete-text overview in " + (chapter.get("{http://www.w3.org/XML/1998/namespace}id") or "?"))
-print("Verified 55 raw outcomes and chapter navigation: no remarks, examples or slides.")
+# The GT.1–GT.6 statements occur in full in the overview, but not as six
+# redundant nested pages. GT.3 and GT.4 preserve their original section ids.
+geometry = book.xpath(".//chapter[@xml:id='jc-outcomes-geometry']", namespaces={"xml": "http://www.w3.org/XML/1998/namespace"})
+if len(geometry) != 1:
+    raise ValueError("Geometry learning-outcome overview missing")
+if geometry[0].findall("section"):
+    raise ValueError("Geometry overview must not repeat its six outcomes as sections")
+listed = geometry[0].findall("./introduction/ol/li")
+if len(listed) != 6:
+    raise ValueError("All six GT outcomes must remain readable in the overview")
+for code in range(1, 7):
+    if f"GT.{code}" not in "".join(listed[code - 1].itertext()):
+        raise ValueError(f"Missing GT.{code} official statement")
+for chapter_id in ("chapter-gt3-synthetic-geometry", "chapter-trigonometry"):
+    chapter = book.xpath(".//chapter[@xml:id=$target]", target=chapter_id,
+                         namespaces={"xml": "http://www.w3.org/XML/1998/namespace"})
+    if len(chapter) != 1:
+        raise ValueError("Teaching chapter missing: " + chapter_id)
+print("Verified all 55 official outcomes, 51 standalone pages and the new GT.3/GT.4 chapters.")
