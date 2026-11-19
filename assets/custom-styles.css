@@ -57,3 +57,52 @@
   .objectives > h2::before,
   .objectives > h3::before { flex-basis: 0.6rem; }
 }
+
+/* Reusable official learning outcome style.
+   Authoritative curriculum wording is rendered in a native PreTeXt
+   <blockquote> with an id beginning "jc-outcomes-geometry-".
+   Unlike section objectives, this is a clearly identified quotation. */
+main blockquote[id^="jc-outcomes-geometry-"],
+.ptx-content blockquote[id^="jc-outcomes-geometry-"],
+main #jc-outcomes-geometry-gt3,
+main #jc-outcomes-geometry-gt4 {
+  display: block;
+  box-sizing: border-box;
+  background: #eaf4ff !important;
+  color: #16334b !important;
+  border: 1px solid #9ec9e7 !important;
+  border-left: 5px solid #176aa6 !important;
+  border-radius: .4rem !important;
+  box-shadow: none !important;
+  padding: 1rem 1.15rem !important;
+  margin: .65rem 0 1.25rem !important;
+  max-width: 100%;
+}
+main blockquote[id^="jc-outcomes-geometry-"] .title,
+main blockquote[id^="jc-outcomes-geometry-"] .heading,
+main blockquote[id^="jc-outcomes-geometry-"] > h2,
+main blockquote[id^="jc-outcomes-geometry-"] > h3,
+main #jc-outcomes-geometry-gt3 .title,
+main #jc-outcomes-geometry-gt4 .title {
+  color: #154f83 !important;
+  font-weight: 750 !important;
+  background: transparent !important;
+  margin-top: 0 !important;
+}
+main blockquote[id^="jc-outcomes-geometry-"] p,
+main #jc-outcomes-geometry-gt3 p,
+main #jc-outcomes-geometry-gt4 p {
+  color: #16334b !important;
+  line-height: 1.55;
+}
+main .objectives > .heading > .title,
+.ptx-content .objectives > .heading > .title {
+  color: #532c79 !important;
+}
+@media print {
+  main blockquote[id^="jc-outcomes-geometry-"] {
+    background: #f3f7fb !important;
+    border-color: #738ca0 !important;
+    break-inside: avoid;
+  }
+}
