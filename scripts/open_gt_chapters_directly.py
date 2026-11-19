@@ -1,26 +1,37 @@
 #!/usr/bin/env python3
-"""Open GT.3 and GT.4 directly at their official learning outcomes.
+"""Link the six GT chapter names straight to their official outcomes.
 
-PreTeXt normally creates a chapter landing page and a separate
-Introduction page. Redirect the landing URL and rewrite navigation
-links so readers reach the blue outcome immediately. No source XML
-or other chapters are changed.
+PreTeXt can generate separate chapter landing and Introduction pages.
+Find the actual page containing the generated, verbatim learning outcome
+instead of assuming a particular suffix. The old landing URLs redirect.
+No curriculum text is rewritten.
 """
 from pathlib import Path
 
 site = Path("output/web")
-destinations = {
-    "chapter-gt3-synthetic-geometry.html":
-        "chapter-gt3-synthetic-geometry-2.html",
-    "chapter-trigonometry.html":
-        "chapter-trigonometry-2.html",
+chapters = {
+    1: "chapter-gt1-measurement",
+    2: "chapter-gt2-shapes-solids",
+    3: "chapter-gt3-synthetic-geometry",
+    4: "chapter-trigonometry",
+    5: "chapter-gt5-coordinate-plane",
+    6: "chapter-gt6-transformations",
 }
 
-for old_name, new_name in destinations.items():
+destinations = {}
+for number, slug in chapters.items():
+    old_name = slug + ".html"
     old = site / old_name
-    new = site / new_name
-    if not old.exists() or not new.exists():
-        raise SystemExit(f"Missing chapter pages: {old_name} or {new_name}")
+    if not old.is_file():
+        raise SystemExit("Missing GT chapter landing page: " + old_name)
+    outcome_id = f'id="jc-outcomes-geometry-gt{number}"'
+    candidates = [p for p in (site / f"{slug}-2.html", old)
+                  if p.is_file() and outcome_id in p.read_text(encoding="utf-8")]
+    if len(candidates) != 1:
+        raise SystemExit(f"Cannot uniquely locate GT.{number} outcome in chapter HTML")
+    destination = candidates[0].name
+    if destination != old_name:
+        destinations[old_name] = destination
 
 edited = 0
 for page in site.glob("*.html"):
@@ -40,8 +51,8 @@ for old_name, new_name in destinations.items():
         tag = (f'<meta http-equiv="refresh" content="0;url={new_name}" '
                f'{marker} />')
         if "</head>" not in content:
-            raise SystemExit(f"Invalid chapter page: {old_name}")
+            raise SystemExit("Invalid chapter landing page: " + old_name)
         old.write_text(content.replace("</head>", f"  {tag}\n</head>", 1),
                        encoding="utf-8")
-    print(f"Direct entry: {old_name} → {new_name}")
-print(f"Rewrote direct GT chapter links across {edited} PreTeXt pages.")
+    print(f"Direct GT entry: {old_name} -> {new_name}")
+print(f"Updated {edited} HTML pages with direct GT chapter links.")
