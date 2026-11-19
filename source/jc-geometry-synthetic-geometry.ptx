@@ -30,6 +30,67 @@
     </exercise>
   </section>
 
+
+  <section xml:id="gt3-undefined-terms">
+    <title>The nine undefined terms</title>
+    <objectives><title>Learning Intentions</title><ul>
+      <li><p>Identify the nine undefined terms in Appendix B.</p></li>
+      <li><p>Explain the difference between an undefined term and a defined term.</p></li>
+    </ul></objectives>
+    <p><em>Undefined</em> does not mean mysterious. Every mathematical system needs a few starting ideas, which we describe informally rather than trying to define using other words.</p>
+    <p><alert>Appendix B gives exactly nine undefined terms:</alert></p>
+    <ul>
+      <li><p><term>Point</term> — a position without size.</p></li>
+      <li><p><term>Line</term> — straight and extending indefinitely in both directions.</p></li>
+      <li><p><term>Plane</term> — the flat setting for our geometry.</p></li>
+      <li><p><term>Ray</term> — a half-line starting at one point.</p></li>
+      <li><p><term>Angle</term> — an idea represented by a vertex and two arms.</p></li>
+      <li><p><term>Degree</term> — a measure of angle.</p></li>
+      <li><p><term>Length</term> — the measure of the extent of a segment.</p></li>
+      <li><p><term>Real number</term> — a number on the real number line.</p></li>
+      <li><p><term>Set</term> — a collection of objects.</p></li>
+    </ul>
+    <p>Those short descriptions are <em>not</em> formal definitions. For example, a <term>segment</term> and a <term>midpoint</term> are <em>defined</em> using these more basic ideas.</p>
+    <exercise xml:id="gt3-undefined-check">
+      <statement><p>Is <em>midpoint</em> an undefined term? Explain using the ideas needed to define it.</p></statement>
+      <answer><p>No. A midpoint is a point on a segment whose distances to its endpoints are equal.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="gt3-defined-terms-1">
+    <title>Definitions 1–18 — Lines, distance and angles</title>
+    <objectives><title>Learning Intentions</title><ul>
+      <li><p>Read the notation for lines, segments, rays and lengths.</p></li>
+      <li><p>Classify angles and use the language of bisectors and perpendicularity.</p></li>
+    </ul></objectives>
+    <p>These brief explanations follow the numbered definitions in Appendix B. Learn each with a labelled diagram rather than as an isolated list.</p>
+    <p><alert>Definitions 1–5: points and distances</alert></p>
+    <ul>
+      <li><p><alert>1.</alert> A segment <m>[AB]</m> joins two endpoints; a ray <m>[AB</m> starts at <m>A</m> and passes through <m>B</m>.</p></li>
+      <li><p><alert>2.</alert> Points are <term>collinear</term> when they lie on one straight line.</p></li>
+      <li><p><alert>3.</alert> A triangle is formed by three non-collinear points and their joining segments.</p></li>
+      <li><p><alert>4.</alert> <m>|AB|</m> is the distance between <m>A</m> and <m>B</m>, and the length of <m>[AB]</m>.</p></li>
+      <li><p><alert>5.</alert> The midpoint <m>M</m> of <m>[AB]</m> satisfies <m>|AM|=|MB|</m>.</p></li>
+    </ul>
+    <p><alert>Definitions 6–18: angles</alert></p>
+    <ul>
+      <li><p><alert>6.</alert> A set is <term>convex</term> if the whole segment joining any two of its points stays inside it.</p></li>
+      <li><p><alert>7–11.</alert> The five angle types are <term>null</term> (<m>0^\circ</m>), <term>ordinary</term> (between <m>0^\circ</m> and <m>180^\circ</m>), <term>straight</term> (<m>180^\circ</m>), <term>reflex</term> (between <m>180^\circ</m> and <m>360^\circ</m>) and <term>full</term> (<m>360^\circ</m>).</p></li>
+      <li><p><alert>12.</alert> <m>\angle BAC</m> names the angle whose vertex is <m>A</m>.</p></li>
+      <li><p><alert>13.</alert> An angle bisector divides an angle into two angles of equal measure.</p></li>
+      <li><p><alert>14.</alert> A right angle measures <m>90^\circ</m>.</p></li>
+      <li><p><alert>15.</alert> An acute angle is less than <m>90^\circ</m>; an ordinary obtuse angle is greater than <m>90^\circ</m>.</p></li>
+      <li><p><alert>16.</alert> Supplementary angles add to <m>180^\circ</m>.</p></li>
+      <li><p><alert>17.</alert> Perpendicular lines meet at a right angle.</p></li>
+      <li><p><alert>18.</alert> Vertically opposite angles are the non-adjacent angles made by two intersecting lines.</p></li>
+    </ul>
+    <p><alert>Useful distinction:</alert> <m>[AB]</m> denotes a geometrical segment; <m>|AB|</m> denotes its numerical length.</p>
+    <exercise xml:id="gt3-angle-types-check">
+      <statement><p>Classify angles measuring <m>0^\circ</m>, <m>65^\circ</m>, <m>180^\circ</m>, <m>240^\circ</m>, and <m>360^\circ</m>.</p></statement>
+      <answer><p>Null, ordinary (acute), straight, reflex and full, respectively.</p></answer>
+    </exercise>
+  </section>
+
   <section xml:id="gt3-axioms-theorems-proof">
     <title>Definitions, axioms, theorems and proof</title>
     <objectives>
