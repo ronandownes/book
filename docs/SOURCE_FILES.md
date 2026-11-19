@@ -7,7 +7,7 @@ strand and topic. Existing TY chapter files remain under `source/ty/`.
 | --- | --- |
 | `jc-number-` | Junior Cycle Number |
 | `jc-algebra-` | Junior Cycle Algebra and Functions |
-| `jc-geometry-` | Junior Cycle Geometry learning outcomes |
+| `jc-geometry-` | Junior Cycle GT learning outcomes, GT.3 Synthetic Geometry chapter and generated GT.3/GT.4 outcome sections |
 | `jc-trigonometry-` | Junior Cycle Trigonometry |
 | `jc-statistics-` | Junior Cycle Statistics and Probability learning outcomes |
 | `lc-ol-number-` | Leaving Certificate Ordinary Level Number |
@@ -23,6 +23,23 @@ For example, edit `source/jc-algebra-factorisation.ptx` for Factorisation,
 Graphs and Events and Counting chapters currently have their text in that file.
 Source filenames do not set printed chapter numbers or public page addresses:
 preserve the existing `xml:id` values when editing.
+
+## Geometry and Trigonometry (GT.3 and GT.4)
+
+The main book includes `source/jc-geometry-outcomes.ptx` as the single
+complete official GT.1–GT.6 overview, followed by
+`source/jc-geometry-synthetic-geometry.ptx` (GT.3) and
+`source/jc-trigonometry-ratios-triangles.ptx` (GT.4).
+The last file retains its filename and its stable chapter ID.
+
+The outcome generator creates `jc-geometry-gt3-outcome.ptx` and
+`jc-geometry-gt4-outcome.ptx` as the first sections of the two teaching
+chapters. These sections preserve the old public IDs. Do not edit the
+generated outcome files: update the generator, not the official wording.
+
+The GT.3 chapter uses original, editable SVGs in `assets/geometry/`.
+Older direct GT.1, GT.2, GT.5 and GT.6 URLs redirect to the corresponding
+items in the single official overview until teaching chapters are ready.
 
 ## Learning outcomes and publishing
 
