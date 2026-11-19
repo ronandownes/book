@@ -1,37 +1,44 @@
 #!/usr/bin/env python3
-"""Keep all six historic GT outcome URLs working after the navigation change.
+"""Preserve all six former GT.1–GT.6 section URLs as redirects.
 
-All six statements remain in the official overview. GT.3 and GT.4 now
-also occur at the top of their corresponding teaching chapters.
+Official text exists in one canonical source and appears in the overview
+and chapter openings; the old individual GT sections are not regenerated.
 """
 from html import escape
 from pathlib import Path
 
 site = Path("output/web")
-target = site / "jc-outcomes-geometry.html"
-if not target.is_file():
-    raise SystemExit("Missing Geometry outcomes overview; refusing redirects.")
+if not (site / "jc-outcomes-geometry.html").is_file():
+    raise SystemExit("Missing GT outcome overview")
 
-for number in range(1, 7):
+chapters = {
+    1: "chapter-gt1-measurement",
+    2: "chapter-gt2-shapes-solids",
+    3: "chapter-gt3-synthetic-geometry",
+    4: "chapter-trigonometry",
+    5: "chapter-gt5-coordinate-plane",
+    6: "chapter-gt6-transformations",
+}
+for number, slug in chapters.items():
     old = site / f"jc-outcomes-geometry-gt{number}.html"
     if old.exists():
-        raise SystemExit(f"Old page unexpectedly still exists: {old}")
-    if number == 3:
-        url = "chapter-gt3-synthetic-geometry-2.html#jc-outcomes-geometry-gt3"
-    elif number == 4:
-        url = "chapter-trigonometry-2.html#jc-outcomes-geometry-gt4"
-    else:
-        url = f"jc-outcomes-geometry.html#jc-geometry-overview-gt{number}"
-    name = f"GT.{number}"
+        raise SystemExit(f"Redundant individual GT page unexpectedly still exists: {old}")
+    needle = f'id="jc-outcomes-geometry-gt{number}"'
+    pages = [p for p in (site / f"{slug}-2.html", site / f"{slug}.html")
+             if p.is_file() and needle in p.read_text(encoding="utf-8")]
+    if len(pages) != 1:
+        raise SystemExit(f"Cannot locate exact GT.{number} chapter learning outcome")
+    url = pages[0].name + f"#jc-outcomes-geometry-gt{number}"
+    label = f"GT.{number}"
     old.write_text(
         "<!doctype html>\n"
         '<html lang="en"><head><meta charset="utf-8">\n'
-        f'<title>{escape(name)} learning outcome</title>\n'
+        f'<title>{escape(label)} learning outcome</title>\n'
         f'<meta http-equiv="refresh" content="0;url={escape(url, quote=True)}">\n'
         f'<link rel="canonical" href="{escape(url, quote=True)}">\n'
-        '</head><body>\n'
-        f'<p>{escape(name)} has moved to the <a href="{escape(url, quote=True)}">appropriate Geometry and Trigonometry learning outcome</a>.</p>\n'
-        '</body></html>\n',
+        "</head><body>\n"
+        f'<p><a href="{escape(url, quote=True)}">Open {escape(label)} learning outcome</a>.</p>\n'
+        "</body></html>\n",
         encoding="utf-8",
     )
-    print(f"Redirected {old.name} to {url}")
+    print(f"Legacy {label} link -> {url}")
