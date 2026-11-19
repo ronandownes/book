@@ -84,11 +84,14 @@ for chapter_id, code in (("chapter-gt3-synthetic-geometry", "gt3"),
     if len(chapter) != 1:
         raise ValueError("Teaching chapter missing: " + chapter_id)
     introduction = chapter[0].find("introduction")
-    if introduction is None or len(introduction) == 0 or introduction[0].tag != "blockquote":
+    if introduction is None:
+        raise ValueError("Missing chapter introduction: " + chapter_id)
+    blocks = [child for child in introduction if child.tag != "title"]
+    if not blocks or blocks[0].tag != "blockquote":
         raise ValueError("Official learning outcome must open " + chapter_id)
-    if introduction[0].get("{http://www.w3.org/XML/1998/namespace}id") != "jc-outcomes-geometry-" + code:
+    if blocks[0].get("{http://www.w3.org/XML/1998/namespace}id") != "jc-outcomes-geometry-" + code:
         raise ValueError("Official learning outcome ID missing in " + chapter_id)
-    if not introduction[0].findall("p"):
+    if len(blocks[0].findall("p")) < 2:
         raise ValueError("Official learning outcome empty in " + chapter_id)
     if chapter_id == "chapter-gt3-synthetic-geometry":
         sections = chapter[0].findall("section")
