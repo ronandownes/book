@@ -75,8 +75,12 @@
 <part xml:id="part-jc-geometry">
       <title>Geometry and Trigonometry</title>
       <xi:include href="./jc-geometry-outcomes.ptx" />
+      <xi:include href="./jc-geometry-gt1-measurement.ptx"/>
+      <xi:include href="./jc-geometry-gt2-shapes-solids.ptx"/>
       <xi:include href="./jc-geometry-synthetic-geometry.ptx"/>
       <xi:include href="./jc-trigonometry-ratios-triangles.ptx"/>
+      <xi:include href="./jc-geometry-gt5-coordinate-plane.ptx"/>
+      <xi:include href="./jc-geometry-gt6-transformations.ptx"/>
     </part>
 
 <part xml:id="part-jc-algebra">
