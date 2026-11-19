@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="chapter-gt2-shapes-solids">
+  <title>GT.2 — 2D Shapes and 3D Solids</title>
+  <introduction>
+    <title>GT.2 — 2D Shapes and 3D Solids</title>
+    <xi:include href="./jc-geometry-gt2-outcome.ptx"/>
+  </introduction>
+</chapter>
