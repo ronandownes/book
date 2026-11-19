@@ -3,7 +3,7 @@
   <title>Geometry for Post-primary School Mathematics</title>
   <introduction>
     <p>This is a navigable, student-facing guide to the geometry used in Irish post-primary mathematics. It is organised around the numbered definitions, axioms, theorems, corollaries and constructions of the official document known as <em>Appendix B</em>.</p>
-    <p>The descriptions below are explanatory summaries, not verbatim reproductions of the NCCA document. For authoritative statements, proofs, diagrams, numbering and level requirements, use the <url href="https://curriculumonline.ie/getmedia/ed7de7ab-2376-44f0-9c7c-b511e470c0a7/Appendix_B_English.pdf" visual="official Appendix B PDF"/>. The learning outcomes themselves are shown under <xref ref="jc-outcomes-geometry-gt3"/>.</p>
+    <p>The descriptions below are explanatory summaries, not verbatim reproductions of the NCCA document. For authoritative statements, proofs, diagrams, numbering and level requirements, use the <url href="https://curriculumonline.ie/getmedia/ed7de7ab-2376-44f0-9c7c-b511e470c0a7/Appendix_B_English.pdf" visual="official Appendix B PDF"/>. The learning outcomes themselves are shown under <xref ref="jc-outcomes-geometry-gt3" text="title"/>.</p>
     <p>One useful route through this material is: basic objects and notation; axioms; reasoning with angles and triangles; parallel lines; quadrilaterals and similarity; circles; constructions; and proofs.</p>
   </introduction>
 
@@ -133,7 +133,7 @@
   <section xml:id="appendix-b-course-levels">
     <title>What to study at each level</title>
     <p>The reference contains more geometry than any single level requires. In particular, the numbering of constructions and theorems is not a recommendation to teach them chronologically.</p>
-    <p>For Junior Cycle, consult outcome <xref ref="jc-outcomes-geometry-gt3"/> together with sections 9 and 10 of the official Appendix B. For Leaving Certificate, consult the appropriate syllabus and sections 11–13 of Appendix B. Do not infer examination requirements from this summary index alone.</p>
+    <p>For Junior Cycle, consult outcome <xref ref="jc-outcomes-geometry-gt3" text="title"/> together with sections 9 and 10 of the official Appendix B. For Leaving Certificate, consult the appropriate syllabus and sections 11–13 of Appendix B. Do not infer examination requirements from this summary index alone.</p>
     <p>Source acknowledgement: National Council for Curriculum and Assessment (NCCA), <em>Geometry for Post-primary School Mathematics</em>, published as Appendix B to the Junior Cycle Mathematics specification. Copyright remains with the NCCA.</p>
   </section>
 </appendix>
