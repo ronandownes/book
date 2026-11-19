@@ -91,6 +91,76 @@
     </exercise>
   </section>
 
+
+  <section xml:id="gt3-defined-terms-2">
+    <title>Definitions 19–41 — Shapes, similarity and circles</title>
+    <objectives><title>Learning Intentions</title><ul>
+      <li><p>Distinguish congruent and similar triangles.</p></li>
+      <li><p>Identify and classify triangles, quadrilaterals and circles.</p></li>
+      <li><p>Understand the geometric vocabulary used in proofs.</p></li>
+    </ul></objectives>
+    <p><alert>Definitions 19–26: triangles and parallel lines</alert></p>
+    <ul>
+      <li><p><alert>19.</alert> <term>Congruent triangles</term> have equal corresponding sides and angles.</p></li>
+      <li><p><alert>20.</alert> A <term>right-angled triangle</term> has a right angle; its opposite side is the hypotenuse.</p></li>
+      <li><p><alert>21.</alert> <term>Isosceles</term> means two equal sides; <term>equilateral</term> means three; <term>scalene</term> means none.</p></li>
+      <li><p><alert>22.</alert> <term>Parallel lines</term> are coincident or do not meet (the formal Appendix B definition).</p></li>
+      <li><p><alert>23.</alert> A <term>transversal</term> is a line meeting both of two given lines.</p></li>
+      <li><p><alert>24.</alert> <term>Alternate angles</term> lie on opposite sides of a transversal in the specified arrangement.</p></li>
+      <li><p><alert>25.</alert> <term>Corresponding angles</term> occupy corresponding positions relative to two lines and their transversal.</p></li>
+      <li><p><alert>26.</alert> An <term>exterior angle</term> is formed by extending a triangle side; the other two interior angles are its <term>interior opposite angles</term>.</p></li>
+    </ul>
+    <p><alert>Definitions 27–36: polygons and similarity</alert></p>
+    <ul>
+      <li><p><alert>27.</alert> The <term>perpendicular bisector</term> passes through a segment's midpoint at right angles to it.</p></li>
+      <li><p><alert>28.</alert> A <term>polygon</term> is a closed plane figure made from straight sides that do not cross.</p></li>
+      <li><p><alert>29.</alert> A <term>quadrilateral</term> is a polygon with four vertices.</p></li>
+      <li><p><alert>30.</alert> A <term>rectangle</term> has four right angles.</p></li>
+      <li><p><alert>31.</alert> A <term>rhombus</term> has four equal sides.</p></li>
+      <li><p><alert>32.</alert> A <term>square</term> is both a rectangle and a rhombus.</p></li>
+      <li><p><alert>33.</alert> An <term>equilateral polygon</term> has equal sides; a <term>regular polygon</term> has equal sides and equal angles.</p></li>
+      <li><p><alert>34.</alert> A <term>parallelogram</term> has two pairs of parallel opposite sides.</p></li>
+      <li><p><alert>35.</alert> <term>Similar triangles</term> have equal corresponding angles.</p></li>
+      <li><p><alert>36.</alert> A point divides a segment in ratio <m>s:t</m> when the two resulting lengths have that ratio.</p></li>
+    </ul>
+    <p><alert>Definitions 37–41: area and circles</alert></p>
+    <ul>
+      <li><p><alert>37.</alert> Choosing a triangle's base determines the opposite <term>apex</term> and the perpendicular <term>height</term>.</p></li>
+      <li><p><alert>38.</alert> Triangle area is <m>\frac12</m> times the base length times its corresponding height.</p></li>
+      <li><p><alert>39.</alert> A parallelogram's height is the perpendicular distance between the lines containing its opposite sides.</p></li>
+      <li><p><alert>40.</alert> Circle vocabulary includes centre, radius, diameter, chord, arc, sector, semicircle, disc and circumference.</p></li>
+      <li><p><alert>41.</alert> A <term>cyclic quadrilateral</term> has all four vertices on a circle.</p></li>
+    </ul>
+    <p>These are concise explanations of the numbered definitions, not exact quotations. For the official wording and diagrams, consult <xref ref="appendix-b-geometry"/>.</p>
+    <exercise xml:id="gt3-shape-definitions-check">
+      <statement><p>Using only the definitions, explain why every square is a rectangle but not every rectangle is a square.</p></statement>
+      <answer><p>A square has four right angles, so it is a rectangle. A rectangle does not have to have four equal sides, so the converse is false.</p></answer>
+    </exercise>
+  </section>
+
+  <section xml:id="gt3-five-axioms">
+    <title>The five axioms</title>
+    <objectives><title>Learning Intentions</title><ul>
+      <li><p>Identify each of the five axioms by name and purpose.</p></li>
+      <li><p>Know the three congruence conditions SAS, ASA and SSS.</p></li>
+      <li><p>Recognise when an argument uses an axiom rather than a theorem.</p></li>
+    </ul></objectives>
+    <p>An <term>axiom</term> is a statement we accept as a starting point. We do not prove it using other results from our geometry. The five axioms, in the order used in Appendix B, are:</p>
+    <ol>
+      <li><p><alert>Axiom 1 — Two points.</alert> Exactly one straight line passes through any two distinct points.</p></li>
+      <li><p><alert>Axiom 2 — Ruler.</alert> Distances are non-negative and symmetric; lengths add along a segment; a specified non-negative distance can be marked uniquely along a given ray.</p></li>
+      <li><p><alert>Axiom 3 — Protractor.</alert> Straight angles measure <m>180^\circ</m>. An angle of a specified size determines a unique ray on each side of a line, and measures of adjacent parts add.</p></li>
+      <li><p><alert>Axiom 4 — Triangle congruence.</alert> <term>SAS</term> (two sides and their included angle), <term>ASA</term> (two angles and their included side), or <term>SSS</term> (three sides) establishes that two triangles are congruent when the corresponding data agree.</p></li>
+      <li><p><alert>Axiom 5 — Parallels.</alert> Through a given point there is exactly one line parallel to a given line.</p></li>
+    </ol>
+    <p>These are short student-friendly accounts, not replacements for the precise axioms. In particular, Axioms 2 and 3 contain several clauses. See <xref ref="appendix-b-axioms"/> for reference.</p>
+    <exercise xml:id="gt3-axiom-test">
+      <statement><p>Two triangles have two corresponding sides equal and the included angles equal. Which axiom justifies their congruence?</p></statement>
+      <answer><p>Axiom 4, using the SAS congruence condition.</p></answer>
+    </exercise>
+  </section>
+
+
   <section xml:id="gt3-axioms-theorems-proof">
     <title>Definitions, axioms, theorems and proof</title>
     <objectives>
