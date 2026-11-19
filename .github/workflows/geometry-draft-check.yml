@@ -67,6 +67,12 @@ jobs:
               for token in ('jc-outcomes-geometry-'+code, 'Learning Outcome', 'blockquote'):
                   i = text.find(token)
                   print('HTML inspection',chapter,token,i, repr(text[max(0,i-250):i+650] if i >= 0 else 'ABSENT'))
+              matches = []
+              for other in Path('output/web').glob('*.html'):
+                  page_text = other.read_text(encoding='utf-8')
+                  if 'NCCA Junior Cycle Mathematics specification' in page_text or 'The blue block above is the official' in page_text:
+                      matches.append((other.name, 'NCCA Junior Cycle Mathematics specification' in page_text, 'The blue block above is the official' in page_text))
+              print('OUTCOME PAGE LOCATIONS', matches[:30])
               b = tree.get_element_by_id('jc-outcomes-geometry-'+code, None)
               if b is None: raise SystemExit('Missing opening Learning Outcome: '+code)
               if 'Learning Outcome' not in b.text_content(): raise SystemExit('Missing heading: '+code)
