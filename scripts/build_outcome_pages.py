@@ -2,8 +2,9 @@
 """Build official learning-outcome overviews and navigable reference pages.
 
 All 55 official outcomes remain in the book, but only 49 are standalone
-outcome pages. All six GT outcomes occur in the overview; GT.3 and GT.4 also
-have styled learning-outcome quotations inside their teaching chapters.
+outcome pages. All six GT outcomes occur in the GT overview; each GT chapter includes
+its own generated, identically worded learning-outcome block. No outcome
+statement is authored a second time.
 """
 from copy import deepcopy
 from pathlib import Path
@@ -42,9 +43,9 @@ def append_official(parent, paragraphs):
 def chapter_from_table(path, course, group, expected, section_id):
     """Create the authoritative overview and optional individual outcome pages.
 
-    Geometry keeps all six statements in its overview, with GT.3 and GT.4
-    generated as official quotations at the top of teaching chapters instead
-    of duplicated numbered sections underneath the overview.
+    Geometry keeps all six statements in its overview, with each GT outcome
+    generated from that same authoritative source as a blue quotation in
+    the relevant teaching chapter. No duplicate source is maintained.
     Other strands retain their original individual outcome sections.
     """
     original = etree.parse(str(path)).getroot()
@@ -53,7 +54,7 @@ def chapter_from_table(path, course, group, expected, section_id):
         raise ValueError(f"{group}: expected {expected} outcomes, got {len(rows)}")
     chapter = etree.Element("chapter")
     chapter.set(ID, section_id)
-    etree.SubElement(chapter, "title").text = "Learning Outcomes"
+    etree.SubElement(chapter, "title").text = ("GT Learning Outcomes" if group == "Geometry and Trigonometry" and course == "Junior Cycle" else "Learning Outcomes")
     introduction = etree.SubElement(chapter, "introduction")
     listing = etree.SubElement(introduction, "ol")
     codes = []
@@ -81,12 +82,11 @@ def chapter_from_table(path, course, group, expected, section_id):
         etree.SubElement(label, "alert").text = code + (" — " + heading if heading else "")
         append_official(entry, official)
 
-        # All six Geometry outcomes appear in the overview only once.
-        # The GT.3 and GT.4 teaching chapters begin with an original,
-        # NCCA-worded learning-outcome blockquote (not a second numbered
-        # teaching section). Other strands keep their individual pages.
+        # One authoritative table: clone its complete official paragraphs
+        # into the overview and generate a quotation for each GT chapter.
+        # There is no separately hand-transcribed chapter outcome.
         geometry = course == "Junior Cycle" and group == "Geometry and Trigonometry"
-        if geometry and code in ("GT.3", "GT.4"):
+        if geometry:
             outcome = etree.Element("blockquote")
             outcome.set(ID, prefix + "-" + slug)
             etree.SubElement(outcome, "title").text = "Learning Outcome — " + code
@@ -267,9 +267,8 @@ expected = {
     for n in range(1, count + 1)
 }
 # Every official outcome is present in the book. Geometry has one
-# complete six-outcome overview and two opening quotations, rather than
-# six extra standalone pages. Those six codes must not appear in the
-# independent-page manifest.
+# complete six-outcome overview and six generated opening quotations.
+# Those six codes must not appear in the independent-page manifest.
 expected -= {f"GT.{n}" for n in range(1, 7)}
 actual = [entry["code"] for entry in manifest["pages"]]
 if len(actual) != 49 or set(actual) != expected or len(set(actual)) != 49:
