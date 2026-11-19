@@ -75,6 +75,7 @@
 <part xml:id="part-jc-geometry">
       <title>Geometry and Trigonometry</title>
       <xi:include href="./jc-geometry-outcomes.ptx" />
+      <xi:include href="./jc-geometry-synthetic-geometry.ptx"/>
       <xi:include href="./jc-trigonometry-ratios-triangles.ptx"/>
     </part>
 
