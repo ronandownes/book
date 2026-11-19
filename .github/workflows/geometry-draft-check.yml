@@ -63,6 +63,10 @@ jobs:
               page = Path('output/web') / (chapter+'.html')
               if not page.is_file(): raise SystemExit('Missing chapter HTML: '+str(page))
               tree = html.fromstring(page.read_text(encoding='utf-8'))
+              text = page.read_text(encoding='utf-8')
+              for token in ('jc-outcomes-geometry-'+code, 'Learning Outcome', 'blockquote'):
+                  i = text.find(token)
+                  print('HTML inspection',chapter,token,i, repr(text[max(0,i-250):i+650] if i >= 0 else 'ABSENT'))
               b = tree.get_element_by_id('jc-outcomes-geometry-'+code, None)
               if b is None: raise SystemExit('Missing opening Learning Outcome: '+code)
               if 'Learning Outcome' not in b.text_content(): raise SystemExit('Missing heading: '+code)
