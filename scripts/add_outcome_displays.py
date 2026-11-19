@@ -13,8 +13,8 @@ manifest = json.loads(
     Path("source/learning-outcomes-pages.json").read_text(encoding="utf-8")
 )
 entries = manifest["pages"]
-if len(entries) != 51:
-    raise ValueError("Exactly 51 independent outcome pages are expected; all 55 official outcomes must remain in the book")
+if len(entries) != 49:
+    raise ValueError("Exactly 49 independent outcome pages are expected; all 55 official outcomes must remain in the book")
 
 groups = {}
 for item in entries:
@@ -77,9 +77,21 @@ if len(listed) != 6:
 for code in range(1, 7):
     if f"GT.{code}" not in "".join(listed[code - 1].itertext()):
         raise ValueError(f"Missing GT.{code} official statement")
-for chapter_id in ("chapter-gt3-synthetic-geometry", "chapter-trigonometry"):
+for chapter_id, code in (("chapter-gt3-synthetic-geometry", "gt3"),
+                         ("chapter-trigonometry", "gt4")):
     chapter = book.xpath(".//chapter[@xml:id=$target]", target=chapter_id,
                          namespaces={"xml": "http://www.w3.org/XML/1998/namespace"})
     if len(chapter) != 1:
         raise ValueError("Teaching chapter missing: " + chapter_id)
-print("Verified all 55 official outcomes, 51 standalone pages and the new GT.3/GT.4 chapters.")
+    introduction = chapter[0].find("introduction")
+    if introduction is None or len(introduction) == 0 or introduction[0].tag != "blockquote":
+        raise ValueError("Official learning outcome must open " + chapter_id)
+    if introduction[0].get("{http://www.w3.org/XML/1998/namespace}id") != "jc-outcomes-geometry-" + code:
+        raise ValueError("Official learning outcome ID missing in " + chapter_id)
+    if not introduction[0].findall("p"):
+        raise ValueError("Official learning outcome empty in " + chapter_id)
+    if chapter_id == "chapter-gt3-synthetic-geometry":
+        sections = chapter[0].findall("section")
+        if any(section.find("objectives") is None for section in sections):
+            raise ValueError("Some GT.3 teaching sections lack Learning Intentions")
+print("Verified 55 official outcomes, 49 standalone pages, blue opening outcomes and section intentions.")
