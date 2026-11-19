@@ -3,7 +3,7 @@
   <title>GT.3 — Synthetic Geometry</title>
   <introduction>
   <xi:include href="./jc-geometry-gt3-outcome.ptx"/>
-<p>This chapter develops the definitions, axioms, theorems and proof skills required for GT.3. The blue block below is the official learning outcome; the purple lists in each section are our practical learning intentions.</p>
+<p>This chapter develops the definitions, axioms, theorems and proof skills required for GT.3. The blue block above is the official learning outcome; the purple lists in each section are our practical learning intentions.</p>
     <p>Synthetic geometry studies points, lines, angles and figures through definitions, diagrams and logical argument. We begin with familiar constructions and observations, then learn how an axiom or a theorem justifies a conclusion. Drawing accurately can help us discover a result; a proof explains why it must hold.</p>
     <p>The official outcome above is reproduced directly from the specification. The teaching explanations and examples that follow are separate from that wording.</p>
     <p>The full Irish geometry reference is <xref ref="appendix-b-geometry"/>. It gives a numbered index and a direct link to the official NCCA document, which remains authoritative for statements and required proofs.</p>
