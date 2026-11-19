@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Build navigable, source-only learning-outcome pages for JC and LC Ordinary Level.
+"""Build official learning-outcome overviews and navigable reference pages.
 
-All 55 official outcomes are retained. The NCCA's opening explanation is
-included for the Unifying Strand; individual outcome statements remain unchanged.
-No slides, teaching remarks, examples or injected interactivity.
+All 55 official outcomes remain in the book, but only 51 have individual
+pages: GT.1, GT.2, GT.5 and GT.6 are held in the geometry overview pending
+dedicated teaching chapters. Official statements remain unchanged.
 """
 from copy import deepcopy
 from pathlib import Path
@@ -40,11 +40,12 @@ def append_official(parent, paragraphs):
         raise ValueError("Official outcome transcription changed")
 
 def chapter_from_table(path, course, group, expected, section_id):
-    """Turn a source table into a Learning Outcomes chapter and numbered sections.
+    """Create the authoritative overview and optional individual outcome pages.
 
-    Preserve the previously published overview URL as the chapter id.
-    The source table is read only; its official paragraphs are duplicated into
-    an unabridged chapter overview and into each individual section.
+    Geometry keeps all six statements in its overview, with GT.3 and GT.4
+    provided as generated sections of their *teaching* chapters instead of
+    duplicating all six underneath the overview in the contents menu.
+    Other strands retain their original individual outcome sections.
     """
     original = etree.parse(str(path)).getroot()
     rows = original.findall(".//tabular/row")[1:]
@@ -78,18 +79,27 @@ def chapter_from_table(path, course, group, expected, section_id):
         etree.SubElement(label, "alert").text = code + (" — " + heading if heading else "")
         append_official(entry, official)
 
-        section = etree.SubElement(chapter, "section")
-        section.set(ID, prefix + "-" + slug)
-        etree.SubElement(section, "title").text = code + (" — " + heading if heading else "")
-        append_official(section, official)
-        # Keep the official GT.3 wording intact. Add navigation separately.
-        if course == "Junior Cycle" and code == "GT.3":
-            navigation = etree.SubElement(section, "p")
-            navigation.text = "Geometry reference: "
-            link = etree.SubElement(navigation, "xref")
-            link.set("ref", "appendix-b-geometry")
-            link.tail = " (definitions, axioms, theorems, corollaries and constructions)."
-        register(section, code, course, group)
+        # GT.1–GT.6 appear once in their complete overview. Teaching
+        # chapters carry the official GT.3 and GT.4 statements as their
+        # first sections, preserving the previously published section IDs.
+        # The remaining GT outcomes stay in the overview until their
+        # substantive teaching chapters are written.
+        geometry = course == "Junior Cycle" and group == "Geometry and Trigonometry"
+        if not geometry or code in ("GT.3", "GT.4"):
+            section_parent = etree.Element("holder") if geometry else chapter
+            section = etree.SubElement(section_parent, "section")
+            section.set(ID, prefix + "-" + slug)
+            etree.SubElement(section, "title").text = code + (" — " + heading if heading else "")
+            append_official(section, official)
+            if geometry and code == "GT.3":
+                navigation = etree.SubElement(section, "p")
+                navigation.text = "Geometry reference: "
+                link = etree.SubElement(navigation, "xref")
+                link.set("ref", "appendix-b-geometry")
+                link.tail = " (definitions, axioms, theorems, corollaries and constructions)."
+            if geometry:
+                save(section, "jc-geometry-" + slug + "-outcome.ptx")
+            register(section, code, course, group)
         codes.append(code)
     if len(codes) != expected or len(set(codes)) != expected:
         raise ValueError("Missing or duplicate outcomes in " + group)
