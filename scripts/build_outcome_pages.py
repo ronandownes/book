@@ -82,6 +82,13 @@ def chapter_from_table(path, course, group, expected, section_id):
         section.set(ID, prefix + "-" + slug)
         etree.SubElement(section, "title").text = code + (" — " + heading if heading else "")
         append_official(section, official)
+        # Keep the official GT.3 wording intact. Add navigation separately.
+        if course == "Junior Cycle" and code == "GT.3":
+            navigation = etree.SubElement(section, "p")
+            navigation.text = "Geometry reference: "
+            link = etree.SubElement(navigation, "xref")
+            link.set("ref", "appendix-b-geometry")
+            link.tail = " (definitions, axioms, theorems, corollaries and constructions)."
         register(section, code, course, group)
         codes.append(code)
     if len(codes) != expected or len(set(codes)) != expected:
