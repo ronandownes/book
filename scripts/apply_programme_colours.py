@@ -67,7 +67,7 @@ def main() -> None:
     (ROOT / "programme-colours.css").write_text(css, encoding="utf-8")
     (ROOT / "programme-colours.js").write_text(js, encoding="utf-8")
     # Asset version changed to invalidate previously cached CSS and JavaScript.
-    style_tag = '<link rel="stylesheet" href="programme-colours.css?v=4" data-maths-programme="colour"/>'
+    style_tag = '<link rel="stylesheet" href="programme-colours.css?v=5" data-maths-programme="colour"/>'
     script_tag = '<script defer src="programme-colours.js?v=3" data-maths-programme="colour"></script>'
     changed = 0
     for page in ROOT.glob("*.html"):
@@ -85,7 +85,7 @@ def main() -> None:
     if not changed:
         raise RuntimeError("No textbook HTML pages received the programme colour assets.")
     print(f"Colour mapping: {len(chapters)} chapters in {len(PARTS)} parts; annotated {changed} pages.")
-    print("Part colours: saturated. Chapter colours: matching pastel. Section colours: unmodified white.")
+    print("Part colours: gentle pastel rose, mint and blue. Chapters: lighter shades. Sections: unmodified white.")
 
 if __name__ == "__main__":
     main()
