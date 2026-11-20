@@ -16,11 +16,24 @@
       <preface xml:id="welcome">
         <title>Welcome</title>
         <p>Welcome to <em>Irish School Maths</em>, a free, interactive mathematics book for students from First Year to Sixth Year, whatever course or level you are studying.</p>
-        <p><em>My promise to you is that you will be supported and challenged, whatever your strengths, your starting point or the difficulties you may encounter.</em> I want to make mathematics as accessible and enjoyable as possible, whether you prefer reading, listening, watching, exploring diagrams, using interactive applications or testing your understanding through quizzes.</p>
-        <p>Mathematics is a cumulative subject. New ideas build on earlier ones, and sometimes a small gap in your understanding can make an entire topic unnecessarily difficult. I've often seen students working extremely hard when a short diagnostic test revealed that they simply needed to revisit an earlier idea. That's why I want each chapter to help you check your prerequisite knowledge and take you directly to the explanations and activities you need.</p>
-        <p>Mathematics is also a subject of extraordinary connections. I'll do my best to reveal those connections, but ultimately you're on your own learning journey. As your understanding grows, you'll build your own mathematical <em>schema</em>: a personal, organised understanding of ideas, methods and relationships. My job is to give you the tools to make that journey easier, with the right explanations, examples, activities and quizzes when you need them. Quizzes aren't simply there to test what you've learned; <em>they're part of how you learn.</em></p>
-        <p>I particularly want you to take <em>mathematical literacy</em> seriously. Mathematics is not just about calculations. Indeed, I would argue that the calculations are often the easiest part. Understanding mathematical language, interpreting questions, explaining your reasoning and communicating ideas are every bit as important. Please engage with the reading, writing and explanation activities, not just the numerical exercises. They are an essential part of becoming mathematically confident and capable.</p>
-        <p>Above all, I hope you'll discover the enjoyment that comes from understanding mathematics deeply, recognising its connections and making that understanding your own.</p>
+        <p><em>My promise to you is that you will be both supported and challenged</em>, whatever your strengths, your starting point or the difficulties you may encounter. I'll do my best to make mathematics as clear, accessible and enjoyable as possible. If reading is difficult, I want you to be able to listen, watch or explore visually. If you struggle to concentrate or get started, I want to help you through clear explanations, manageable steps and engaging activities. And if you find mathematics easy, I want to challenge you with investigations, projects, unfamiliar problems and opportunities to explore ideas well beyond your current course.</p>
+        <p>Mathematics is a cumulative subject. New ideas build on earlier ones, and sometimes a small gap in your understanding can make an entire topic seem terribly difficult. I'll help you identify those gaps through diagnostic questions, revisit earlier learning and develop the knowledge you need to move forward. You'll find worked examples, interactive applications, quizzes and opportunities to assess your own understanding. These aren't simply ways to test your learning; they're part of the learning itself.</p>
+        <p><em>Discovering the joy of mathematics</em></p>
+        <p>After many years of teaching mathematics, one of my greatest pleasures is still returning to an idea I thought I understood, exploring it further and refusing to let go until it becomes beautifully, almost ridiculously simple.</p>
+        <p>That's what I'd love you to experience. <em>Don't settle for 80%, or even a high mark, if there's still something you don't understand.</em> Be curious. Ask questions. Explore different methods. Keep going until you really understand.</p>
+        <p>Mathematics is wonderfully multifaceted. It's logical, creative, visual, linguistic and, yes, artistic. There's a particular satisfaction in its logic and consistency. But mathematics is much more than calculations and correct answers. Learning to read its language, communicate your reasoning and recognise the relationships between ideas is just as important.</p>
+        <p>Over time, I hope you'll be able to look at an equation and imagine its graph without even putting pencil to paper. You'll begin to recognise familiar structures, make predictions and see connections between geometry, algebra, number theory, statistics and other branches of mathematics.</p>
+        <p>And sometimes those connections are extraordinary.</p>
+        <p>You might think I'm a little crazy putting an equation in a welcome note, but look at this:</p>
+        <me>\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\cdots=\frac{\pi^2}{6}</me>
+        <p>On the left, we have the reciprocals of perfect squares. Each term becomes smaller and smaller. We're adding infinitely many terms, yet their sum approaches a finite value.</p>
+        <p>And look what's on the right. <em>π!</em> The number we associate with circles and geometry. What's it doing here, in a sum involving whole numbers and their squares?</p>
+        <p><em>OMG!</em></p>
+        <p>Nearly 300 years ago, Leonhard Euler proved this remarkable relationship. Mathematics is full of beautiful discoveries like this, and I want to share them with you.</p>
+        <p>My hope is that, by the time you've explored mathematics with me, you'll look at an equation like this and see something fascinating, perhaps even beautiful.</p>
+        <p>I'll do my best to give you clear, carefully designed diagrams, different ways to access the mathematics, meaningful challenges and the freedom to follow your curiosity. Whether you're revisiting fractions or exploring ideas from Leaving Certificate while still in Junior Cycle, I'll help you find your way.</p>
+        <p><em>Come with me. Let's keep going until the difficult becomes simple, the unfamiliar becomes familiar, and the connections begin to reveal themselves.</em></p>
+        <p>Let's discover the craft of mathematics — and enjoy a few OMG moments along the way.</p>
         <p><em>Ronan Downes</em></p>
       </preface>
 
@@ -31,13 +44,6 @@
         <p>When students encounter more than one sound method, they can compare approaches and exercise mathematical judgement. The worked examples, investigations, exercises and interactive tools in this book are intended to encourage that independence, while providing accessible routes back to foundational knowledge when needed.</p>
         <p>Transition Year should offer something different from simply repeating Junior Cycle or teaching Leaving Certificate topics in advance. The <url href="https://www.curriculumonline.ie/senior-cycle/transition-year/" visual="2024 Transition Year Programme Statement"/> emphasises flexible, student-centred learning across personal growth, being a learner, civic and community engagement, and career exploration. In that spirit, the TY mathematics material will focus on investigations, modelling, real-world questions, collaboration and student choice.</p>
         <p>The book is published using <em>PreTeXt</em>, which supports structured digital reading, accessible mathematical content and print formats. It is a work in progress and will continue to develop as the materials are used and improved.</p>
-      </preface>
-
-      <preface xml:id="for-students">
-        <title>For Students</title>
-        <p>Start with the mathematics you are studying. You do not have to begin at page one. If an earlier idea needs revisiting, follow a link or use the contents to find it, then return to your current work.</p>
-        <p>Try to do more than copy a worked solution. Predict, attempt, test and explain. Use diagrams, examples, interactive apps and exercises to discover what changes, what stays the same and why a method works.</p>
-        <p>Use learning intentions to see what you are aiming for, and answers to check your reasoning rather than replace it. The goal is to become steadily more capable of working things out for yourself.</p>
       </preface>
 
       <preface xml:id="about-the-author">
