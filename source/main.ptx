@@ -27,12 +27,10 @@
       </preface>
 
       <preface xml:id="project-preface">
-        <title>Preface</title>
-        <p>To my teaching colleagues: we all know the challenge of bringing technology into a busy classroom. There are lessons to prepare, courses to cover and students with very different starting points, interests and needs. This book is not intended to replace your prescribed textbook or tell you how to teach. It's a free additional resource that I hope you'll feel comfortable sharing with your students.</p>
-        <p>My aim is to make good mathematical learning easier to access. A student can read an explanation, explore a dynamic graph or interactive application, follow a worked example, revisit a prerequisite or try a quiz with feedback. Questions that ask students to interpret, explain and communicate mathematics matter just as much as routine calculations. These activities can support assessment for learning, mathematical literacy, independent study and revision, both in and out of class.</p>
-        <p>We want students to become more independent, but they cannot always depend on us to identify exactly what they should do next. Nor will the same homework assignment suit everyone equally well. Clear topic navigation, prerequisite links, diagnostic questions and opportunities for extension can help students make more informed choices about their learning, while still benefiting from our guidance. Students ready to go beyond the syllabus should find room for investigations, problem-solving, Transition Year projects and Junior Cycle Classroom-Based Assessments.</p>
-        <p>Mathematics is not only a collection of procedures. Understanding principles, comparing methods, recognising connections and communicating reasoning are all part of becoming proficient. I hope the book gives you useful ways to develop these alongside practice and fluency, without adding unnecessarily to your workload.</p>
-        <p>This is an evolving project, and I'd particularly welcome feedback from fellow teachers: a correction, an alternative explanation, a classroom observation or a contribution that could make the resource better. Even if you use just one quiz, one diagram or one interactive activity, I hope it benefits your students.</p>
+        <title>To the Teacher</title>
+        <p><em>Irish School Maths</em> is free, openly developed and very much a work in progress. There's still plenty to add and improve, and you may find some topics incomplete.</p>
+        <p>I'd love to hear what you think — what works, what doesn't, or what you would like to see included. Please feel free to share the book, its interactive activities and quizzes with your students. I hope it helps them explore mathematics and find their own way through it.</p>
+        <p><em>Ronan Downes</em></p>
       </preface>
 
       <preface xml:id="about-the-author">
