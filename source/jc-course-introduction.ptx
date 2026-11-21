@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="jc-course-introduction">
+  <title>Introduction to Junior Cycle Mathematics</title>
+  <introduction>
+    <p>Welcome to Junior Cycle Mathematics. This free, developing book combines explanations, diagrams, printable exercises and interactive mathematics. Its purpose is to make mathematics accessible without removing the reasoning and challenge that make it worthwhile.</p>
+    <p>The course is not simply a list of techniques. We learn to understand ideas, choose methods, investigate patterns, explain results and solve unfamiliar problems. The Unifying Strand connects all four contextual strands.</p>
+  </introduction>
+  <section xml:id="jc-how-we-learn"><title>How We Learn Mathematics</title>
+    <p>We begin with what students already know, introduce new ideas clearly, connect different representations and provide opportunities to practise, explain and retrieve what has been learned. Worked examples make methods visible; partially completed examples provide support; independent questions gradually remove that support.</p>
+    <p>Understanding and fluency develop together. We use explicit explanations, carefully sequenced examples, feedback, discussion, investigation and spaced review as appropriate to the mathematical idea and the learner.</p>
+    <p>A mistake is useful information. Identify which step failed, explain why, correct it and check the revised solution.</p>
+  </section>
+  <section xml:id="jc-workbook-approach"><title>Workbooks, Scaffolding and Independence</title>
+    <p>Many exercises are presented in a printable workbook format with questions already written and suitable space for working, similar to the answer spaces students encounter in examinations. Students can spend more time reasoning and less time copying instructions or setting out pages.</p>
+    <p>Some questions contain diagrams, starting steps or prompts; later questions remove these supports. Students also practise drawing, labelling, organising and communicating complete solutions independently. A scaffold is temporary assistance, not a substitute for mathematical thinking.</p>
+    <p>Interactive tools, calculators and dynamic representations support exploration and checking when appropriate. They do not replace the need to explain or justify a result.</p>
+  </section>
+  <section xml:id="jc-problem-solving-intro"><title>Problem Solving and Mathematical Reasoning</title>
+    <p>First understand the question and identify what is known and what must be found. Represent the situation, select a strategy, carry it out, interpret the result and check whether it is reasonable. Sometimes a diagram, table, simpler example or different representation reveals the way forward.</p>
+    <p>There may be more than one valid method. Comparing methods, explaining assumptions and testing generalisations helps us understand mathematics rather than memorise isolated rules.</p>
+    <p>The six elements of the <xref ref="jc-outcomes-unifying" text="title"/> are building blocks, representation, connections, problem solving, generalisation and proof, and communication. Their thirteen official learning outcomes can be studied together or accessed individually from the contents panel.</p>
+  </section>
+  <section xml:id="jc-assessment-intro"><title>Assessment, CBAs and Examinations</title>
+    <p>Assessment takes many forms: questioning, classwork, homework, quizzes, investigations, discussion, feedback and examinations. These provide evidence of what has been understood and what needs further work.</p>
+    <p>Classroom-Based Assessments develop investigation, reasoning and communication. The specification describes mathematical and statistical investigations. The requirements for particular examination cohorts may differ, so consult the <url href="https://www.curriculumonline.ie/junior-cycle/junior-cycle-subjects/mathematics/assessment-and-reporting/" visual="current official assessment arrangements"/> before planning a CBA.</p>
+    <p>Exam-style practice appears throughout the book, including questions that require complete independent working. We prepare for assessment by learning mathematics thoroughly, not by treating the examination as the only purpose of learning.</p>
+  </section>
+  <section xml:id="jc-strands-intro"><title>Junior Cycle Mathematics Strands</title>
+    <p>The <xref ref="jc-outcomes-unifying" text="title"/> runs through all four contextual strands. The curriculum's official learning outcomes are the reference point for the teaching chapters and their learning intentions.</p>
+    <ul>
+      <li><p><xref ref="jc-outcomes-unifying" text="title"/> — thirteen outcomes, U.1–U.13, grouped into six elements.</p></li>
+      <li><p><xref ref="jc-outcomes-number" text="title"/> — number systems, operations, patterns and sets.</p></li>
+      <li><p><xref ref="jc-outcomes-geometry" text="title"/> — measurement, geometry, proof and trigonometry.</p></li>
+      <li><p><xref ref="jc-outcomes-algebra" text="title"/> — expressions, equations, relationships and functions.</p></li>
+      <li><p><xref ref="jc-outcomes-statistics" text="title"/> — probability, data and statistical investigation.</p></li>
+    </ul>
+    <p>These links lead to the official learning-outcome displays; they are not independent rewritten versions of the curriculum.</p>
+    <p><url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf" visual="Read the original NCCA Junior Cycle Mathematics Specification"/> to check the authoritative published wording, notation and level distinctions.</p>
+  </section>
+  <section xml:id="jc-using-resources"><title>Using This Book</title>
+    <p>Read the learning outcome and learning intention, check any prerequisites, study the examples and then try the questions. Use diagrams and applications to explore ideas; return to earlier material when a connection is unclear. Revisit questions later without looking at the solution.</p>
+    <p>The contents panel lets you open the parts, chapters and sections you need. Follow the curriculum links for an overview, then return to a teaching chapter for explanations and practice.</p>
+  </section>
+</chapter>
