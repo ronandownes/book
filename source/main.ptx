@@ -147,6 +147,12 @@
         <definition xml:id="definition-random-experiment"><title>Random (Stochastic) Experiment</title><statement><p>In a <term>random experiment</term>, we cannot be certain what the next result will be. We may still know all the possible results. <term>Stochastic</term> is another mathematical word for random.</p></statement></definition>
         <p><em>Does random mean 50–50?</em> No. A fair coin has two equally likely outcomes, heads and tails. But two possible outcomes do not always have equal chances. Think of whether it will rain tomorrow: rain and no rain are two possibilities, but that does not mean each has a 50% chance.</p>
         <p><em>Remember:</em> Random does not mean that anything is possible. A standard six-sided die cannot show a nine.</p>
+        <p><em>What are we generating?</em> Each time you roll the die, you add another result to a <term>sequence</term>. The sequence records both the order of the rolls and any repeated numbers.</p>
+        <example xml:id="example-roll-sequence-set"><title>A Sequence Is Not the Same as a Set</title>
+          <p>Suppose seven rolls give <m>2,2,3,3,4,6,1</m>. This is a sequence of seven results. The corresponding set of observed values is <m>A=\{1,2,3,4,6\}</m>. In a set, each value is written only once, and order does not matter.</p>
+          <p>Why must a result repeat if we roll a six-sided die seven times? There are only six different faces, so seven results cannot all be different. At least one face must occur more than once.</p>
+          <p>We <em>can</em> turn the observed results into a set, but then we lose the order and the repetitions. The sample space for a single roll remains <m>S=\{1,2,3,4,5,6\}</m>, even if some numbers have not yet appeared.</p>
+        </example>
       </section>
       <section xml:id="sample-spaces-definition">
         <title>Outcomes and Sample Spaces</title>
