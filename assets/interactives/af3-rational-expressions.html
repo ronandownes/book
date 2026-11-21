@@ -85,6 +85,7 @@ function equivalent(ans,want){
 let mode='practice',graded=false;
 const root=document.getElementById('questions');
 function render(){
+ graded=false;
  root.innerHTML='';
  items.forEach((q,i)=>{
  const d=document.createElement('section');d.className='q';
