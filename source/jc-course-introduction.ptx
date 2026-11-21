@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="jc-course-introduction">
   <title>Introduction to Junior Cycle Mathematics</title>
-  <introduction>
-    <p>Welcome to Junior Cycle Mathematics. This free, developing book combines explanations, diagrams, printable exercises and interactive mathematics. Its purpose is to make mathematics accessible without removing the reasoning and challenge that make it worthwhile.</p>
-    <p>The course is not simply a list of techniques. We learn to understand ideas, choose methods, investigate patterns, explain results and solve unfamiliar problems. The Unifying Strand connects all four contextual strands.</p>
-  </introduction>
+  <section xml:id="jc-course-overview"><title>Introduction and Learning Outcomes</title>
+    <p>Junior Cycle Mathematics is organised around the Unifying Strand and four contextual strands. Their official learning outcomes tell us what students are expected to learn.</p>
+    <p><em>Start here:</em> use the links below to read the learning outcomes for each strand. These link to the existing curriculum text; they do not create a second copy.</p>
+    <ul>
+      <li><p><xref ref="jc-outcomes-unifying" text="title"/> — the thirteen U.1–U.13 learning outcomes, organised into six elements.</p></li>
+      <li><p><xref ref="jc-outcomes-number" text="title"/> — Number.</p></li>
+      <li><p><xref ref="jc-outcomes-geometry" text="title"/> — Geometry and Trigonometry.</p></li>
+      <li><p><xref ref="jc-outcomes-algebra" text="title"/> — Algebra and Functions.</p></li>
+      <li><p><xref ref="jc-outcomes-statistics" text="title"/> — Statistics and Probability.</p></li>
+    </ul>
+    <p>The Unifying Strand connects all four contextual strands: building blocks, representation, connections, problem solving, generalisation and proof, and communication.</p>
+    <p>This free, developing book combines explanations, diagrams, worked examples, printable exercises and interactive mathematics. It aims to make ideas accessible without removing the reasoning and challenge.</p>
+  </section>
   <section xml:id="jc-how-we-learn"><title>How We Learn Mathematics</title>
     <p>We begin with what students already know, introduce new ideas clearly, connect different representations and provide opportunities to practise, explain and retrieve what has been learned. Worked examples make methods visible; partially completed examples provide support; independent questions gradually remove that support.</p>
     <p>Understanding and fluency develop together. We use explicit explanations, carefully sequenced examples, feedback, discussion, investigation and spaced review as appropriate to the mathematical idea and the learner.</p>
