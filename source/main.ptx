@@ -165,7 +165,19 @@
         <definition xml:id="definition-sample-space"><title>Sample Space</title><statement><p>The <term>sample space</term> is the set of all possible outcomes of a random experiment. We often denote it by <m>S</m>.</p></statement></definition>
         <example xml:id="example-coin-once"><title>Tossing a Coin</title><p>Let <m>H</m> mean heads and <m>T</m> mean tails. The sample space for one toss is <m>S=\{H,T\}</m>.</p></example>
         <example xml:id="example-die-once"><title>Rolling a Die</title><p>For one roll of a standard six-sided die, <m>S=\{1,2,3,4,5,6\}</m>.</p></example>
-        <example xml:id="example-card-once"><title>Choosing a Card</title><p>For one card drawn from a standard 52-card deck, each distinct card is an outcome. A card can be identified by its suit and rank. There are 52 outcomes, not just four suits or thirteen ranks.</p></example>
+        <example xml:id="example-card-once"><title>Make a Playing Card from Two Random Numbers</title>
+          <p>A die has one property that we record: its face value. A playing card has two properties that identify it: <term>value</term> and <term>suit</term>. We do not need a real deck to investigate the 52 possible cards.</p>
+          <p>Generate the first random integer from <m>1</m> to <m>13</m>. It represents the card's value: <m>1</m> is ace, <m>2</m> through <m>10</m> are numbered cards, <m>11</m> is jack, <m>12</m> is queen, and <m>13</m> is king.</p>
+          <p>Generate a second random integer from <m>1</m> to <m>4</m>. In alphabetical order the suits are <m>1</m> clubs, <m>2</m> diamonds, <m>3</m> hearts, and <m>4</m> spades.</p>
+          <p>For example, the ordered pair <m>(7,3)</m> means the seven of hearts. The first number always gives the value; the second always gives the suit.</p>
+          <figure xml:id="figure-card-random-pair"><caption>Generate two random numbers to create a playing card.</caption>
+            <interactive xml:id="interactive-card-random-pair" iframe="https://ronandownes.github.io/apps/apps/probability/card-from-two-numbers/index.html" width="100%" aspect="3:1"/>
+          </figure>
+          <p>There are <m>13</m> choices for the value and <m>4</m> for the suit. Each pair identifies one card, giving <m>13\cdot4=52</m> possible outcomes. A two-way table could show the 13 values across its columns and the four suits down its rows.</p>
+          <p><em>Investigate:</em> Generate ten cards. Can the same card appear again? Why? This app samples <em>with replacement</em>: it generates each pair afresh rather than removing a card from a physical deck.</p>
+          <p><em>Calculator challenge:</em> If your calculator can generate random integers, make one from 1 to 13 and another from 1 to 4. Translate the pair into a card. The exact key sequence depends on your calculator model.</p>
+          <p>The two generated numbers are independent in this model. Card colour is different: it is determined by suit, so colour and suit are not independent.</p>
+        </example>
         <p>The outcomes in a sample space need not be equally likely.</p>
       </section>
       <section xml:id="sample-spaces-trees">
