@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-rational-sums">
+  <title>Adding and Subtracting Rational Expressions</title>
+  <introduction>
+    <p><em>AF3(a)(iii), Higher Level.</em> First revise ordinary fractions, linear expressions, multiplication of two brackets, and finding a lowest common denominator (LCD). The curriculum lists this outcome before bracket multiplication, but you may find it easier to study multiplication first.</p>
+    <p>The denominators must not be zero. Where two linear denominators have a common factor, use the <em>lowest</em> common denominator rather than multiplying them unnecessarily.</p>
+  </introduction>
+  <section xml:id="rational-combine-method">
+    <title>One fraction before attempting an equation</title>
+    <p>To add or subtract fractions, give them a common denominator. Multiplying two denominators always provides a common denominator when both are non-zero, but it need not give the lowest one.</p>
+    <me>\dfrac{a}{b}+\dfrac{c}{d}=\dfrac{ad+bc}{bd},\quad b\ne0,\ d\ne0.</me>
+    <p>We are <em>not cross-multiplying an equation</em> here. We are building an equivalent single rational expression. Cross-multiplication applies later when two rational expressions are set equal.</p>
+    <example xml:id="rational-common-factors">
+      <title>Find the smaller denominator first</title>
+      <statement><me>\dfrac{2}{2x+2}+\dfrac{3}{x+1},\quad x\ne-1.</me></statement>
+      <solution>
+        <me>\dfrac{2}{2(x+1)}+\dfrac{3}{x+1}=\dfrac{1}{x+1}+\dfrac{3}{x+1}=\dfrac{4}{x+1}.</me>
+        <p>The common factor <m>x+1</m> makes this much shorter than multiplying the original denominators.</p>
+      </solution>
+    </example>
+    <example xml:id="rational-two-linear-denominators">
+      <title>Two unlike linear denominators</title>
+      <statement><me>\dfrac{1}{x-1}+\dfrac{1}{x+1},\quad x\ne-1,1.</me></statement>
+      <solution><me>\dfrac{(x+1)+(x-1)}{(x-1)(x+1)}=\dfrac{2x}{x^2-1}.</me></solution>
+    </example>
+  </section>
+  <section xml:id="rational-six-practice">
+    <title>Six questions: add, subtract and simplify</title>
+    <p>Complete all six. The odd-numbered exercises have worked solutions, while the even-numbered exercises have answers for checking. State any excluded values of <m>x</m>.</p>
+    <exercise xml:id="rational-six-1"><statement><p>Add.</p><me>\dfrac{1}{x-1}+\dfrac{1}{x+1}</me></statement><solution><me>\dfrac{(x+1)+(x-1)}{(x-1)(x+1)}=\dfrac{2x}{x^2-1},\quad x\ne-1,1.</me></solution></exercise>
+    <exercise xml:id="rational-six-2"><statement><p>Subtract.</p><me>\dfrac{3}{2x+1}-\dfrac{1}{2x+1}</me></statement><answer><p><m>\dfrac{2}{2x+1}</m>, with <m>x\ne-\dfrac12</m>.</p></answer></exercise>
+    <exercise xml:id="rational-six-3"><statement><p>Subtract.</p><me>\dfrac{2}{x-3}-\dfrac{2}{x+3}</me></statement><solution><me>\dfrac{2(x+3)-2(x-3)}{(x-3)(x+3)}=\dfrac{12}{x^2-9},\quad x\ne-3,3.</me></solution></exercise>
+    <exercise xml:id="rational-six-4"><statement><p>Add; look for a common factor.</p><me>\dfrac{2}{2x+2}+\dfrac{3}{x+1}</me></statement><answer><p><m>\dfrac{4}{x+1}</m>, with <m>x\ne-1</m>.</p></answer></exercise>
+    <exercise xml:id="rational-six-5"><statement><p>Add.</p><me>\dfrac{2}{x+1}+\dfrac{3}{x-1}</me></statement><solution><me>\dfrac{2(x-1)+3(x+1)}{(x+1)(x-1)}=\dfrac{5x+1}{x^2-1},\quad x\ne-1,1.</me></solution></exercise>
+    <exercise xml:id="rational-six-6"><statement><p>Subtract.</p><me>\dfrac{1}{x-2}-\dfrac{1}{x+2}</me></statement><answer><p><m>\dfrac{4}{x^2-4}</m>, with <m>x\ne-2,2</m>.</p></answer></exercise>
+  </section>
+  <section xml:id="rational-equation-extension">
+    <title>Extension: from a sum to a quadratic equation</title>
+    <p><em>AF4 connection.</em> You can cross-multiply when you have an equation between two fractions and have checked that neither denominator is zero.</p>
+    <example xml:id="rational-quadratic-example">
+      <title>An equation with two exact solutions</title>
+      <statement><me>\dfrac{1}{x-1}+\dfrac{1}{x+1}=\dfrac43</me></statement>
+      <solution>
+        <p>Exclude <m>x=-1,1</m>. Combine the left side, then cross-multiply:</p>
+        <me>\begin{aligned}\dfrac{2x}{x^2-1}&amp;=\dfrac43\\6x&amp;=4(x^2-1)\\0&amp;=2(2x+1)(x-2).\end{aligned}</me>
+        <p>The solutions <m>x=2</m> and <m>x=-\dfrac12</m> both satisfy the original equation. Always check for excluded roots.</p>
+      </solution>
+    </example>
+    <exercise xml:id="rational-equation-try">
+      <statement><p>Investigate <m>\dfrac{1}{x-1}-\dfrac{1}{x+1}=\dfrac23</m>. Combine, cross-multiply, solve, and check restrictions.</p></statement>
+      <solution><p><m>\dfrac{2}{x^2-1}=\dfrac23</m> gives <m>x^2-1=3</m>, hence <m>x=-2</m> or <m>x=2</m>. Both are allowed because <m>x\ne-1,1</m>.</p></solution>
+    </exercise>
+  </section>
+</chapter>
