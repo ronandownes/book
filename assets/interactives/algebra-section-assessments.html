@@ -72,9 +72,24 @@ var formula=[
 ["Make m the subject of E=mc².",["E/c²","Ec²","E/(2c)","c²/E"],0,"Divide by c squared."],
 ["Make b the subject of A=(B+b)h/2.",["2A/h−B","2Ah−B","A/(2h)−B","B−2A/h"],0,"Multiply by two, divide by height, subtract B."]
 ];
+var identity=[
+["Which equation is true for every real x?",["3(x+2)=3x+6","x+2=7","x²=4","x=3"],0,"The distributive law holds for every x."],
+["Which equation is true only when x=5?",["x+2=7","3(x+1)=3x+3","x+x=2x","x−x=0"],0,"Subtracting 2 gives x=5."],
+["Which values make x²=x true?",["x=0 or x=1","Every x","Only x=1","Only x=−1"],0,"Factor x²−x=x(x−1)."],
+["Which statement is an identity?",["x+3=3+x","x+3=9","x²=9","2x=8"],0,"Addition is commutative."],
+["Which equation has no real solution?",["x²+1=0","x²−1=0","x²=0","x+1=0"],0,"A real square cannot be negative."],
+["What solves 2x+5=3x+3?",["x=2","x=−2","x=8","Every x"],0,"Collect the x terms on one side."],
+["For x≠0, which statement is always true?",["x/x=1","x/x=x","x/x=0","x/x=−1"],0,"A non-zero quantity divided by itself is 1."],
+["Which is an identity?",["3(x−1)=3x−3","3x−1=3","3x−3=0","3x=3"],0,"Expanding the bracket confirms it."],
+["Which holds for all real x?",["x²−4=(x−2)(x+2)","x²=4","x²−4=0","x−2=0"],0,"The conjugate factors form a difference of squares."],
+["Which is the correct square identity?",["(x−1)²=x²−2x+1","(x−1)²=x²−1","(x−1)²=x²+2x+1","(x−1)²=x²+1"],0,"Include the doubled cross-product."],
+["What is an equation?",["A claim that two expressions are equal","Any expression with x","Any product of brackets","A polynomial of degree two"],0,"Equality relates two expressions."],
+["Which expression is equivalent to 2(x+4) for every x?",["2x+8","2x+4","x+8","2x+6"],0,"Distribute to both terms."]
+];
 function make(k){
+ if(skill==="af2"||skill==="af3"){var old=skill,seq=old==="af2"?["vocabulary","substitute","identity","vocabulary","substitute","identity"]:["linear","polynomial","monomial","quadratic","factor","rational"];skill=seq[k%6];var exercise=make(k);skill=old;return exercise;}
  var a=2+k%4,b=1+k%5,c=2+(k*3)%5,d=1+(2*k)%4,s=k%3===0?-1:1,add=k%2===0;
- if(skill==="vocabulary"||skill==="law"||skill==="formula"||skill==="identity"){var bank=skill==="vocabulary"?vocabulary:skill==="formula"?formula:law;var row=bank[k%12];return choice(row[0],row[1],row[2],row[3]);}
+ if(skill==="vocabulary"||skill==="law"||skill==="formula"||skill==="identity"){var bank=skill==="vocabulary"?vocabulary:skill==="formula"?formula:skill==="identity"?identity:law;var row=bank[k%12];return choice(row[0],row[1],row[2],row[3]);}
  if(skill==="pattern"){var start=a+3,step=b,n=5+k%5;return question("Sequence: "+[start,start+step,start+2*step,start+3*step].join(", ")+". Find term "+n+".",String(start+(n-1)*step),"Start with "+start+" and add "+(n-1)+" lots of "+step+".");}
  if(skill==="substitute"){var x=k%2===0?-(1+k%4):2+k%3;return question("Find "+a+"x² "+fmt(s*b)+"x + "+c+" when x="+x+".",String(a*x*x+s*b*x+c),"Substitute "+x+" and square before multiplying.");}
  if(skill==="linear"||skill==="polynomial"||skill==="simplify"){
