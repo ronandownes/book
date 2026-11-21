@@ -44,7 +44,8 @@
     </frontmatter>
 
 <part xml:id="part-jc-introduction">
-      <title>JC Maths — Unifying Strand</title>
+      <title>Introduction to Junior Cycle Mathematics</title>
+      <xi:include href="./jc-course-introduction.ptx"/>
       <xi:include href="./jc-unifying-outcomes.ptx"/>
     </part>
 
