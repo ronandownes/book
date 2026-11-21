@@ -135,7 +135,7 @@
         <p>Imagine a machine with an input and an output. Put in the number <m>3</m> and let the machine square it. Out comes <m>9</m>. Try <m>3</m> again: the output is still <m>9</m>. We can predict the answer every time.</p>
         <p>Now imagine rolling a die. We know that the answer will be one of <m>1,2,3,4,5,6</m>, but can you tell which number will come up next? Try it and see.</p>
         <figure xml:id="figure-roll-a-die"><caption>Predict the next result, then roll the die. Each face has the usual dots.</caption>
-          <interactive xml:id="interactive-roll-a-die" iframe="https://ronandownes.github.io/apps/apps/probability/roll-a-die/index.html" width="100%" aspect="3:2"/>
+          <interactive xml:id="interactive-roll-a-die" iframe="https://ronandownes.github.io/apps/apps/probability/roll-a-die/index.html" width="100%" aspect="2:1"/>
         </figure>
         <p>Or toss a coin. Will you get heads or tails? You know the two possibilities, but not which one will happen on the next toss.</p>
         <example xml:id="example-random-deterministic"><title>Predict the Output</title>
