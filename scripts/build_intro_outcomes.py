@@ -323,8 +323,8 @@ def restore_junior_math(code: str, paragraphs: list[etree._Element]) -> list[etr
     restored = {
         "AF.3": [
             para("<alert>a)</alert> Add, subtract and simplify:"),
-            para(r"i. Linear expressions in one or more variables with coefficients in <m>\mathbb{Q}</m>."),
-            para(r"ii. Quadratic expressions in one variable with coefficients in <m>\mathbb{Z}</m>."),
+            para(r"i. Linear expressions in one or more variables with coefficients in <m>\;\mathbb{Q}</m>."),
+            para(r"ii. Quadratic expressions in one variable with coefficients in <m>\;\mathbb{Z}</m>."),
             para(r"iii. <alert>Expressions of the form <m>\frac{a}{bx+c}</m>, where <m>a,b,c\in\mathbb{Z}</m>.</alert>"),
             para("<alert>b)</alert> Multiply expressions of the form:"),
             para(r"i. <m>a(bx+cy+d)</m>; <m>a(bx^2+cx+d)</m>; and <m>ax(bx^2+cx+d)</m>, where <m>a,b,c,d\in\mathbb{Z}</m>."),
