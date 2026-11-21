@@ -51,8 +51,8 @@ overrides = {
 # Outcome material remains exactly as written; activities are attached in the generated HTML only.
 outcomes = {
     1: ("Patterns and Generalisation", "pattern"),
-    2: ("Expressions, Equations and Substitution", "substitute"),
-    3: ("Operations, Polynomials and Rational Expressions", "polynomial"),
+    2: ("Expressions, Equations and Substitution", "af2"),
+    3: ("Operations, Polynomials and Rational Expressions", "af3"),
     4: ("Solving Equations and Inequalities", "equations"),
     5: ("Quadratics from Integer Roots", "roots"),
     6: ("Changing the Subject of a Formula", "formula"),
