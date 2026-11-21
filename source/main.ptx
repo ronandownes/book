@@ -107,15 +107,83 @@
 <part xml:id="part-jc-statistics">
       <title>Statistics and Probability</title>
       <xi:include href="./jc-statistics-outcomes.ptx" />
-<chapter xml:id="chapter-probability"><title>Events and Counting</title><objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Use the fundamental counting principle.</p></li><li><p>Explain why the counting rule applies.</p></li></ol></objectives><introduction><p>Probability begins with a precise account of possible outcomes.</p></introduction>
-              <section xml:id="probability-fcp"><title>The Fundamental Counting Principle</title>
-                <p>When the first choice has <m>m</m> possibilities and the second has <m>n</m> possibilities, every combination of choices gives <m>mn</m> possibilities.</p>
-                <exercise xml:id="exercise-fcp">
-                  <statement><p>How many two-character codes can be formed from three choices for the first character and four for the second, if every pair is allowed?</p></statement>
-                  <answer><p><m>3\cdot4=12</m>.</p></answer>
-                </exercise>
-              </section>
-            </chapter>
+<chapter xml:id="chapter-probability">
+      <title>Sample Spaces</title>
+      <introduction>
+        <p><em>What can happen?</em> Before calculating probabilities, we need to identify the possible outcomes of an experiment.</p>
+      </introduction>
+      <section xml:id="sample-spaces-learning-outcome">
+        <title>Learning Outcome</title>
+        <p><em>(a)</em> Generate a sample space for an experiment in a systematic way, including tree diagrams for successive events and two-way tables for independent events.</p>
+      </section>
+      <section xml:id="sample-spaces-intentions">
+        <title>Learning Intentions and Prerequisites</title>
+        <objectives><title>Learning Intentions</title><introduction><p>By the end of this chapter, you should be able to:</p></introduction>
+          <ol>
+            <li><p>Distinguish deterministic experiments from random (stochastic) experiments.</p></li>
+            <li><p>Identify outcomes and write sample spaces using set notation.</p></li>
+            <li><p>Generate sample spaces systematically using lists, tree diagrams and two-way tables.</p></li>
+            <li><p>Explain when each representation is useful.</p></li>
+          </ol>
+        </objectives>
+        <p><em>Prerequisites.</em> You should be able to count systematically, multiply whole numbers, read tables and recognise simple sets. Ordered pairs are helpful but will be explained when needed.</p>
+        <p><em>For later probability calculations:</em> revise adding, multiplying and simplifying fractions, and entering fractions on your calculator. These skills are not needed to begin listing outcomes.</p>
+      </section>
+      <section xml:id="sample-spaces-experiments">
+        <title>Random and Deterministic Experiments</title>
+        <definition xml:id="definition-deterministic-experiment"><title>Deterministic Experiment</title><statement><p>An experiment is <term>deterministic</term> when its outcome is determined by its initial conditions and the rules governing it.</p></statement></definition>
+        <definition xml:id="definition-random-experiment"><title>Random (Stochastic) Experiment</title><statement><p>A <term>random experiment</term> has an outcome that cannot be predicted with certainty beforehand, although its possible outcomes may be known. The word <term>stochastic</term> means involving randomness.</p></statement></definition>
+        <example xml:id="example-random-deterministic"><title>Which experiments are random?</title><p>Calculating <m>7\times 8</m> is deterministic: the result is always <m>56</m>. Tossing a coin or rolling a die is random: we know the possible outcomes but cannot be certain which one will occur.</p></example>
+        <p>Random does not mean that anything is possible. A standard six-sided die cannot show a nine.</p>
+      </section>
+      <section xml:id="sample-spaces-definition">
+        <title>Outcomes and Sample Spaces</title>
+        <definition xml:id="definition-outcome"><title>Outcome</title><statement><p>An <term>outcome</term> is one possible result of an experiment.</p></statement></definition>
+        <definition xml:id="definition-sample-space"><title>Sample Space</title><statement><p>The <term>sample space</term> is the set of all possible outcomes of a random experiment. We often denote it by <m>S</m>.</p></statement></definition>
+        <example xml:id="example-coin-once"><title>Tossing a Coin</title><p>Let <m>H</m> mean heads and <m>T</m> mean tails. The sample space for one toss is <m>S=\{H,T\}</m>.</p></example>
+        <example xml:id="example-die-once"><title>Rolling a Die</title><p>For one roll of a standard six-sided die, <m>S=\{1,2,3,4,5,6\}</m>.</p></example>
+        <example xml:id="example-card-once"><title>Choosing a Card</title><p>For one card drawn from a standard 52-card deck, each distinct card is an outcome. A card can be identified by its suit and rank. There are 52 outcomes, not just four suits or thirteen ranks.</p></example>
+        <p>The outcomes in a sample space need not be equally likely.</p>
+      </section>
+      <section xml:id="sample-spaces-trees">
+        <title>Successive Stages and Tree Diagrams</title>
+        <definition xml:id="definition-tree-diagram"><title>Tree Diagram</title><statement><p>A <term>tree diagram</term> is a branching diagram showing possible outcomes at successive stages of an experiment.</p></statement></definition>
+        <example xml:id="example-two-tosses"><title>Two Coin Tosses</title>
+          <p>Toss a coin twice. On the first toss we may get <m>H</m> or <m>T</m>. Each of these branches splits into <m>H</m> or <m>T</m> on the second toss.</p>
+          <pre>Start
+  H
+    H  → HH
+    T  → HT
+  T
+    H  → TH
+    T  → TT</pre>
+          <p>Hence <m>S=\{HH,HT,TH,TT\}</m>. The order matters: <m>HT</m> and <m>TH</m> are different outcomes.</p>
+        </example>
+        <p>Tree diagrams are useful even when successive stages are dependent, such as drawing cards without replacement.</p>
+      </section>
+      <section xml:id="sample-spaces-two-way">
+        <title>Two-Way Tables</title>
+        <definition xml:id="definition-two-way-table"><title>Two-Way Table</title><statement><p>A <term>two-way table</term> organises outcomes by two variables, characteristics or stages.</p></statement></definition>
+        <example xml:id="example-two-tosses-table"><title>Two Coin Tosses in a Table</title>
+          <table><title>First toss (rows) and second toss (columns)</title><tabular>
+            <row><cell>First / Second</cell><cell>H</cell><cell>T</cell></row>
+            <row><cell>H</cell><cell>HH</cell><cell>HT</cell></row>
+            <row><cell>T</cell><cell>TH</cell><cell>TT</cell></row>
+          </tabular></table>
+          <p>The table gives the same sample space as the tree diagram: <m>S=\{HH,HT,TH,TT\}</m>.</p>
+        </example>
+        <example xml:id="example-card-classification"><title>One Card, Two Characteristics</title>
+          <p>Choose one card. We may classify it by suit (hearts, diamonds, clubs or spades) and rank (ace, 2 through 10, jack, queen or king). A two-way table would have four suit rows and thirteen rank columns, giving one distinct card in each cell.</p>
+        </example>
+        <p>A two-way table does not require independent events: it can represent dependent or independent events. Independence concerns probabilities, not the shape of the table. We will study this distinction later.</p>
+      </section>
+      <section xml:id="sample-spaces-practice">
+        <title>Check Your Understanding</title>
+        <exercise xml:id="exercise-sample-spaces-classify"><statement><p>Classify each as deterministic or random: (a) calculating <m>9+4</m>; (b) rolling a die; (c) selecting a card from a shuffled deck without looking.</p></statement><answer><p>(a) Deterministic; (b) random; (c) random.</p></answer></exercise>
+        <exercise xml:id="exercise-sample-spaces-three-tosses"><statement><p>List the sample space for three successive coin tosses. Check that you have not omitted any outcomes.</p></statement><answer><p><m>S=\{HHH,HHT,HTH,HTT,THH,THT,TTH,TTT\}</m>.</p></answer></exercise>
+        <exercise xml:id="exercise-sample-spaces-two-dice"><statement><p>Draw a two-way table for rolling two standard dice. How many ordered outcomes are possible?</p></statement><answer><p>Six rows and six columns give 36 ordered outcomes.</p></answer></exercise>
+      </section>
+    </chapter>
     </part>
 
     <part xml:id="part-jc-assessment">
