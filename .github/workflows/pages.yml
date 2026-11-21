@@ -141,6 +141,12 @@ jobs:
           test -s output/web/functions-intro.html
           grep -q 'fertility-literacy.html' output/web/functions-intro.html
           test -s output/web/interactives/fertility-literacy.html
+      - name: Copy AF3 rational-expression quiz into Book
+        run: |
+          set -euo pipefail
+          mkdir -p output/web/interactives
+          cp assets/interactives/af3-rational-expressions.html output/web/interactives/af3-rational-expressions.html
+          test -s output/web/interactives/af3-rational-expressions.html
       - name: Add A B C PP shortcuts to PreTeXt toolbar
         run: |
           set -euo pipefail
