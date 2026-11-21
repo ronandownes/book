@@ -132,10 +132,18 @@
       </section>
       <section xml:id="sample-spaces-experiments">
         <title>Random and Deterministic Experiments</title>
-        <definition xml:id="definition-deterministic-experiment"><title>Deterministic Experiment</title><statement><p>An experiment is <term>deterministic</term> when its outcome is determined by its initial conditions and the rules governing it.</p></statement></definition>
-        <definition xml:id="definition-random-experiment"><title>Random (Stochastic) Experiment</title><statement><p>A <term>random experiment</term> has an outcome that cannot be predicted with certainty beforehand, although its possible outcomes may be known. The word <term>stochastic</term> means involving randomness.</p></statement></definition>
-        <example xml:id="example-random-deterministic"><title>Which experiments are random?</title><p>Calculating <m>7\times 8</m> is deterministic: the result is always <m>56</m>. Tossing a coin or rolling a die is random: we know the possible outcomes but cannot be certain which one will occur.</p></example>
-        <p>Random does not mean that anything is possible. A standard six-sided die cannot show a nine.</p>
+        <p>Imagine a machine with an input and an output. Put in the number <m>3</m> and let the machine square it. Out comes <m>9</m>. Try <m>3</m> again: the output is still <m>9</m>. We can predict the answer every time.</p>
+        <p>Now imagine rolling a die. We know that the answer will be one of <m>1,2,3,4,5,6</m>, but can you tell which number will come up next? Try it and see.</p>
+        <p>Or toss a coin. Will you get heads or tails? You know the two possibilities, but not which one will happen on the next toss.</p>
+        <example xml:id="example-random-deterministic"><title>Predict the Output</title>
+          <p><em>Predict:</em> What happens when we square <m>4</m>? What might happen when we roll a die?</p>
+          <p><em>Try:</em> Square <m>4</m> twice. Then roll a die several times. Record what happens.</p>
+          <p><em>Notice:</em> Squaring <m>4</m> always gives <m>16</m>. The die may give different numbers. We can list the possible results, but cannot be certain which will appear next.</p>
+        </example>
+        <definition xml:id="definition-deterministic-experiment"><title>Deterministic Experiment</title><statement><p>A <term>deterministic experiment</term> has a predictable result when we know the starting conditions and the rule being used. The same input, under the same conditions, gives the same output.</p></statement></definition>
+        <definition xml:id="definition-random-experiment"><title>Random (Stochastic) Experiment</title><statement><p>In a <term>random experiment</term>, we cannot be certain what the next result will be. We may still know all the possible results. <term>Stochastic</term> is another mathematical word for random.</p></statement></definition>
+        <p><em>Does random mean 50–50?</em> No. A fair coin has two equally likely outcomes, heads and tails. But two possible outcomes do not always have equal chances. Think of whether it will rain tomorrow: rain and no rain are two possibilities, but that does not mean each has a 50% chance.</p>
+        <p><em>Remember:</em> Random does not mean that anything is possible. A standard six-sided die cannot show a nine.</p>
       </section>
       <section xml:id="sample-spaces-definition">
         <title>Outcomes and Sample Spaces</title>
