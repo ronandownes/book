@@ -10,21 +10,9 @@
     <p>Understanding and fluency develop together. We use explicit explanations, carefully sequenced examples, feedback, discussion, investigation and spaced review as appropriate to the mathematical idea and the learner.</p>
     <p>A mistake is useful information. Identify which step failed, explain why, correct it and check the revised solution.</p>
   </section>
-  <section xml:id="jc-notation-wall"><title>Mathematical Language and Notation Wall</title>
-    <p>Mathematics has its own language. Just as arithmetic uses symbols for addition, subtraction, multiplication and division, sets use symbols for membership, relationships and operations. You do not have to memorise everything today. Look at the symbols now; we will discover their precise meanings as we need them.</p>
-    <table xml:id="jc-sets-notation-preview"><title>A first look at the language of sets</title><tabular>
-      <row><cell><m>\{\ \}</m></cell><cell>Braces used to list the elements of a set</cell></row>
-      <row><cell><m>\in</m></cell><cell>Is an element of</cell></row>
-      <row><cell><m>\notin</m></cell><cell>Is not an element of</cell></row>
-      <row><cell><m>\subseteq</m></cell><cell>Is a subset of</cell></row>
-      <row><cell><m>\cup</m></cell><cell>Union</cell></row>
-      <row><cell><m>\cap</m></cell><cell>Intersection</cell></row>
-      <row><cell><m>\setminus</m></cell><cell>Difference</cell></row>
-      <row><cell><m>\triangle</m></cell><cell>Symmetric difference</cell></row>
-      <row><cell><m>\varnothing</m></cell><cell>Empty set</cell></row>
-    </tabular></table>
-    <p><em>Representation:</em> A set can be described in words, listed, specified by a rule or represented in a Venn diagram. For example, the integers can be listed compactly as <m>\mathbb{Z}=\{0,\pm1,\pm2,\pm3,\ldots\}</m>. The rational numbers are described by a rule: <m>\mathbb{Q}=\left\{\frac{p}{q}\mid p,q\in\mathbb{Z},\ q\ne0\right\}</m>. You will meet these examples again in the Sets chapter, where we will explore them carefully.</p>
-    <p><em>Reference:</em> Page 23 of <em>Formulae and Tables</em> contains the official sets-and-logic notation and number-set definitions. Get used to consulting it as you learn. The notation wall is a preview, not a test.</p>
+  <section xml:id="jc-notation-wall"><title>Mathematical Language</title>
+    <p>Mathematics uses symbols, diagrams and precise language to communicate ideas. You will meet unfamiliar notation as you progress through the course. You do not need to memorise every symbol before beginning: each will be introduced in the chapter where it is used.</p>
+    <p>For example, sets can be represented by a list or a diagram. We will explore these representations in <xref ref="chapter-sets" text="title"/>.</p>
   </section>
   <section xml:id="jc-workbook-approach"><title>Workbooks, Scaffolding and Independence</title>
     <p>Many exercises are presented in a printable workbook format with questions already written and suitable space for working, similar to the answer spaces students encounter in examinations. Students can spend more time reasoning and less time copying instructions or setting out pages.</p>
