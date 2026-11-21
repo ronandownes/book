@@ -147,6 +147,12 @@ jobs:
           mkdir -p output/web/interactives
           cp assets/interactives/af3-rational-expressions.html output/web/interactives/af3-rational-expressions.html
           test -s output/web/interactives/af3-rational-expressions.html
+      - name: Copy Algebra section quiz and test application
+        run: |
+          set -euo pipefail
+          mkdir -p output/web/interactives
+          cp assets/interactives/algebra-section-assessments.html output/web/interactives/algebra-section-assessments.html
+          test -s output/web/interactives/algebra-section-assessments.html
       - name: Add A B C PP shortcuts to PreTeXt toolbar
         run: |
           set -euo pipefail
@@ -235,6 +241,10 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/add_outcome_displays.py
+      - name: Attach Algebra and Functions quizzes and tests
+        run: |
+          set -euo pipefail
+          python scripts/attach_af_assessments.py
       - name: Verify JC strand structure, TY and five LC OL Parts
         run: |
           set -euo pipefail
