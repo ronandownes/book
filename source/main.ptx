@@ -80,9 +80,11 @@
       <xi:include href="./jc-algebra-language.ptx" />
       <xi:include href="./jc-algebra-substitution.ptx" />
       <xi:include href="./jc-algebra-simplifying.ptx" />
+      <xi:include href="./jc-algebra-polynomial-display.ptx" />
       <xi:include href="./jc-algebra-expanding-brackets.ptx" />
       <xi:include href="./jc-algebra-factorisation.ptx" />
       <xi:include href="./jc-algebra-division-fractions.ptx" />
+      <xi:include href="./jc-algebra-rational-practice.ptx" />
       <xi:include href="./jc-algebra-equations-inequalities.ptx" />
       <xi:include href="./jc-algebra-changing-subject.ptx" />
 
