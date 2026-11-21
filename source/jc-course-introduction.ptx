@@ -19,6 +19,16 @@
     <p>Understanding and fluency develop together. We use explicit explanations, carefully sequenced examples, feedback, discussion, investigation and spaced review as appropriate to the mathematical idea and the learner.</p>
     <p>A mistake is useful information. Identify which step failed, explain why, correct it and check the revised solution.</p>
   </section>
+  <section xml:id="jc-specialisation-generalisation"><title>Start Simple, Then Generalise</title>
+    <p>When a mathematical problem seems complicated, ask: <em>What is the simplest meaningful case?</em> A special case is a version of a problem in which some conditions have been fixed or simplified. A trivial case may offer little insight, but a carefully chosen simple case can reveal an important pattern.</p>
+    <p>Try changing just one feature at a time. First understand the structure; then relax the restrictions, make a conjecture and test whether it remains true.</p>
+    <p>For example, begin with linear factors whose coefficients have magnitude one. Three sign patterns reveal three useful identities:</p>
+    <md>(x+1)^2=x^2+2x+1</md>
+    <md>(x-1)^2=x^2-2x+1</md>
+    <md>(x+1)(x-1)=x^2-1</md>
+    <p>Now replace the constant <m>1</m> by <m>a</m>, or change the coefficient of <m>x</m>. What stays the same? What changes? Why? Compare <m>(x+3)^2</m> with <m>(3x+1)^2</m>; in particular, investigate where each expression is zero.</p>
+    <p>This is the movement between <term>specialisation</term> and <term>generalisation</term>: explore illuminating examples, notice what survives, and justify a general statement. A few examples can suggest a conjecture, but they do not by themselves prove it.</p>
+  </section>
   <section xml:id="jc-notation-wall"><title>Mathematical Language</title>
     <p>Mathematics uses symbols, diagrams and precise language to communicate ideas. You will meet unfamiliar notation as you progress through the course. You do not need to memorise every symbol before beginning: each will be introduced in the chapter where it is used.</p>
     <p>For example, sets can be represented by a list or a diagram. We will explore these representations in <xref ref="chapter-sets" text="title"/>.</p>
