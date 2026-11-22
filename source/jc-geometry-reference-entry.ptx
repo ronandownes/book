@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="jc-geometry-reference-entry">
+  <title>Geometry Reference — Appendix B</title>
+  <introduction>
+    <p>Geometry has a formal language. The shared reference for the definitions, axioms and theorems is <xref ref="geometry-appendix-b" text="title"/> in the appendices of this book. Consult it whenever a lesson calls for a precise definition or result.</p>
+    <p><em>Current status:</em> Appendix B is being transcribed and checked; only its opening material is available so far.</p>
+  </introduction>
+  <section xml:id="jc-geometry-reference-start">
+    <title>Definitions and axioms</title>
+    <p><xref ref="geometry-app-b-axiom-1" text="title"/>: the two-points axiom.</p>
+    <p><xref ref="geometry-app-b-definition-2" text="title"/>: collinear points.</p>
+    <p><xref ref="geometry-app-b-definition-3" text="title"/>: triangles.</p>
+    <p><xref ref="geometry-app-b-definition-5" text="title"/>: midpoints.</p>
+    <p><xref ref="geometry-app-b-angles" text="title"/>: angles.</p>
+  </section>
+</chapter>
