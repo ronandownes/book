@@ -106,8 +106,9 @@
   function entryInDocument(doc,slug) {
     const node = doc.getElementById("glossary-"+slug);
     if (!node) return null;
-    const paragraph = extractDefinition(node);
-    return paragraph ? {title:entryTitle(node,slug),paragraph} : null;
+    const root = extractDefinition(node) ? node : (node.closest("dt, dd, li.glossary-item, .glossary-item, .gi") || node.parentElement);
+    const paragraph = extractDefinition(root);
+    return paragraph ? {title:entryTitle(root,slug),paragraph} : null;
   }
   let glossaryLoad = null;
   async function getEntry(slug) {
@@ -122,12 +123,12 @@
     return entryInDocument(await glossaryLoad,slug);
   }
   function typesetMath(element) {
-    if (window.MathJax?.typesetPromise) window.MathJax.typesetPromise([element]).catch(()=>{});
+    if (!element.querySelector("mjx-container") && window.MathJax?.typesetPromise) window.MathJax.typesetPromise([element]).catch(()=>{});
   }
   function copyDefinition(node) {
     const clone=node.cloneNode(true);
     // Render the source's math anew rather than copying MathJax layout artefacts.
-    clone.querySelectorAll("mjx-container").forEach(n=>n.remove());
+    // Retain already-rendered maths when copying from the source page.
     return clone;
   }
   function showDefinition(slug,entry,trigger) {
@@ -146,7 +147,7 @@
     const {slug,entry}=active;
     const panels=data[slug];
     if (!panels) return;
-    summary.close();
+    if (summary.open) summary.close();
     frayer.querySelector(".frayer-title").textContent=entry.title;
     const box=frayer.querySelector(".frayer-definition-content");
     box.replaceChildren(copyDefinition(entry.paragraph));
@@ -176,8 +177,9 @@
   // Keep the complete alphabetical glossary readable. Clicking a term opens
   // its *definition*, and only the separate button opens a Frayer diagram.
   for(const slug of Object.keys(data)) {
-    const root=document.getElementById("glossary-"+slug);
-    if(!root)continue;
+    const node=document.getElementById("glossary-"+slug);
+    if(!node)continue;
+    const root=extractDefinition(node) ? node : (node.closest("dt, dd, li.glossary-item, .glossary-item, .gi") || node.parentElement);
     const paragraph=extractDefinition(root);
     if(!paragraph)continue;
     root.classList.add("frayer-entry");
@@ -218,6 +220,23 @@
     if(!match || !Object.hasOwn(data,match[1]))return;
     e.preventDefault();
     start(match[1],a,url.href);
+  });
+  // Explicitly marked PreTeXt terminology can also open the quick glossary.
+  // Only exact known terms are enhanced; arbitrary words remain untouched.
+  const byTitle=new Map(Object.keys(data).map(slug=>[slug.replace(/-/g," "),slug]));
+  document.querySelectorAll("em.terminology, span.terminology, em.term, span.term").forEach(node=>{
+    if(node.closest("a, button, dialog, .frayer-entry"))return;
+    const name=node.textContent.trim().toLowerCase().replace(/[.,;:]+$/,"");
+    const slug=byTitle.get(name);
+    if(!slug)return;
+    node.classList.add("glossary-term-inline");
+    node.tabIndex=0;
+    node.setAttribute("role","button");
+    node.setAttribute("aria-label","Read glossary definition for "+name);
+    node.addEventListener("click",()=>start(slug,node));
+    node.addEventListener("keydown",e=>{
+      if(e.key==="Enter"||e.key===" "){e.preventDefault();start(slug,node);}
+    });
   });
   document.documentElement.dataset.frayerMounted=String(mounted);
 })();
