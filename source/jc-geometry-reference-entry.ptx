@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="jc-geometry-reference-entry">
+  <title>Geometry Reference: Appendix B</title>
+  <introduction>
+    <p>The formal definitions, axioms, theorems, corollaries and constructions used in this book belong to one shared geometry reference: <xref ref="geometry-appendix-b" text="title"/>. This appendix is part of the book and can be consulted from Junior Cycle and Leaving Certificate lessons alike.</p>
+    <p>Use the links to find a precise statement; then return to the teaching chapter for diagrams, investigations, applications and exercises. The authoritative statement is stored once, not independently rewritten in every chapter.</p>
+    <p><em>Editorial status:</em> The linked appendix is a draft transcription currently covering the opening definitions and axioms only. It is not yet the complete official Appendix B.</p>
+  </introduction>
+  <section xml:id="jc-geometry-reference-start"><title>Start with the foundations</title>
+    <p><xref ref="geometry-app-b-axiom-1" text="title"/> establishes the two-points axiom.</p>
+    <p><xref ref="geometry-app-b-definition-2" text="title"/> introduces collinearity.</p>
+    <p><xref ref="geometry-app-b-definition-3" text="title"/> introduces triangles.</p>
+    <p><xref ref="geometry-app-b-definition-5" text="title"/> defines a midpoint.</p>
+    <p><xref ref="geometry-app-b-angles" text="title"/> introduces the formal classification of angles.</p>
+  </section>
+</chapter>
