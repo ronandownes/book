@@ -55,52 +55,52 @@
     "variable":["Symbol for an unknown or changing quantity.","x in y=2x+3","The 3 is a constant term"],
     "volume":["Three-dimensional space occupied; cubic units.","Cuboid 2×3×4 cm: 24 cm³","24 cm² describes an area"]
   };
-  const items = Object.entries(data);
+
+  // The concise canonical definition is always visible on the glossary page.
+  // Clicking a term opens its richer Frayer diagram in the same page.
   const escapeText = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const modal = document.createElement("dialog");
   modal.className = "frayer-dialog";
   modal.setAttribute("aria-label", "Frayer diagram");
-  modal.innerHTML = '<div class="frayer-inner"><div class="frayer-top"><span>MATHEMATICAL GLOSSARY · FRAYER DIAGRAM</span><button class="frayer-close" type="button" aria-label="Close diagram">×</button></div><h2 class="frayer-title"></h2><div class="frayer-grid"></div><p class="frayer-note">Compare the examples with the non-examples. What feature makes the difference?</p></div>';
+  modal.innerHTML = '<div class="frayer-inner"><div class="frayer-top"><span>FRAYER GLOSSARY · EXPLORE THE CONCEPT</span><button class="frayer-close" type="button" aria-label="Close Frayer diagram">×</button></div><h2 class="frayer-title"></h2><div class="frayer-definition"><h3>Definition</h3><div class="frayer-definition-content"></div></div><div class="frayer-grid"><section class="frayer-cell"><h3>Characteristics</h3><p></p></section><section class="frayer-cell"><h3>Examples</h3><p></p></section><section class="frayer-cell"><h3>Non-examples</h3><p></p></section></div><p class="frayer-note">What do the examples have in common? Why do the non-examples not qualify?</p></div>';
   document.body.append(modal);
   const close = modal.querySelector(".frayer-close");
   close.addEventListener("click", () => modal.close());
-  modal.addEventListener("click", e => {if (e.target === modal) modal.close();});
-  function openDiagram(title, definition, panels) {
+  modal.addEventListener("click", e => { if (e.target === modal) modal.close(); });
+  function openDiagram(title, definitionNode, panels) {
     modal.querySelector(".frayer-title").textContent = title;
-    const cells = [
-      ["Definition",definition],
-      ["Characteristics",panels[0]],
-      ["Examples",panels[1]],
-      ["Non-examples",panels[2]]
-    ];
-    modal.querySelector(".frayer-grid").innerHTML = cells.map(([heading,body],i)=>
-      '<section class="frayer-cell"><h3>'+escapeText(heading)+'</h3><p>'+escapeText(body)+'</p></section>').join("");
-    if (typeof modal.showModal === "function") modal.showModal(); else modal.setAttribute("open","");
+    // Clone, rather than transcribe, PreTeXt math: the original is the only source.
+    const destination = modal.querySelector(".frayer-definition-content");
+    destination.replaceChildren(definitionNode.cloneNode(true));
+    modal.querySelectorAll(".frayer-cell p").forEach((p,i) => { p.textContent = panels[i]; });
+    if (!modal.open) modal.showModal();
     close.focus();
   }
   let mounted = 0;
-  for (const [slug,panels] of items) {
+  for (const [slug,panels] of Object.entries(data)) {
     const element = document.getElementById("glossary-"+slug);
     if (!element) continue;
-    const heading = element.querySelector(".title, dt, .heading, h3, h4, strong, b");
     const paragraph = element.querySelector("p");
+    if (!paragraph) continue;
+    const heading = element.querySelector(".heading .title, .heading, dt, .title, h3, h4, strong, b");
     const title = (heading?.textContent || slug.replace(/-/g," ")).trim().replace(/\.$/,"");
-    const definition = paragraph?.textContent?.trim() || "";
-    if (!definition) continue;
+    element.classList.add("frayer-entry");
     const button = document.createElement("button");
     button.type = "button";
     button.className = "frayer-trigger";
-    button.textContent = "Frayer diagram";
-    button.setAttribute("aria-label","Open Frayer diagram for "+title);
-    button.addEventListener("click",()=>openDiagram(title,definition,panels));
-    if (paragraph) paragraph.after(button); else element.append(button);
-    if (heading) {
+    button.textContent = "Explore Frayer diagram";
+    button.setAttribute("aria-label", "Explore Frayer diagram for "+title);
+    button.addEventListener("click", () => openDiagram(title,paragraph,panels));
+    paragraph.insertAdjacentElement("afterend",button);
+    if (heading && !heading.closest("a")) {
       heading.classList.add("frayer-clickable-title");
-      heading.tabIndex = 0;
       heading.setAttribute("role","button");
-      heading.setAttribute("aria-label","Open Frayer diagram for "+title);
-      heading.addEventListener("click",e=>{if(e.target.closest("a")) return;openDiagram(title,definition,panels);});
-      heading.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openDiagram(title,definition,panels);}});
+      heading.tabIndex = 0;
+      heading.setAttribute("aria-label","Explore Frayer diagram for "+title);
+      heading.addEventListener("click", e => { if (!e.target.closest("a")) openDiagram(title,paragraph,panels); });
+      heading.addEventListener("keydown",e => {
+        if (e.key==="Enter"||e.key===" ") { e.preventDefault(); openDiagram(title,paragraph,panels); }
+      });
     }
     mounted++;
   }
