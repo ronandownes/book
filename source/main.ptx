@@ -91,6 +91,7 @@
 <part xml:id="part-jc-geometry">
       <title>Geometry and Trigonometry</title>
       <xi:include href="./jc-geometry-outcomes.ptx" />
+      <xi:include href="./jc-geometry-reference-entry.ptx" />
       <xi:include href="./jc-trigonometry-ratios-triangles.ptx"/>
     </part>
 
@@ -285,5 +286,8 @@
       <title>LC OL · Functions</title>
       <xi:include href="./lc-ol-functions-outcomes.ptx"/>
     </part>
+    <backmatter>
+      <xi:include href="./appendix-b-geometry.ptx"/>
+    </backmatter>
   </book>
 </pretext>
