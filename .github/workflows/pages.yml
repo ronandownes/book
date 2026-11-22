@@ -69,6 +69,12 @@ jobs:
           grep -q '<objectives>' source/jc-algebra-language.ptx
       - name: Retrieve openly licensed TY photographs
         run: python scripts/fetch_ty_news_photos.py
+      - name: Generate complete Appendix B inside PreTeXt
+        run: |
+          set -euo pipefail
+          python scripts/build_appendix_b_pretext.py
+          test "$(find assets/geometry-appendix-b -name 'official-page-*.svg' | wc -l)" -eq 50
+          test "$(find source/appendix-b-native -name '*.ptx' | wc -l)" -eq 19
       - name: Build web textbook
         run: pretext build web
       - name: Publish complete Appendix B vector reference
