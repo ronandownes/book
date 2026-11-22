@@ -267,7 +267,7 @@ jobs:
                   raise SystemExit("Missing colour design on "+x)
           print("Verified the JC Unifying Strand, four content Parts (including Geometry and Trigonometry), CBA and Assessment, TY and LC Ordinary Level Parts.")
           PY
-      - name: Enable glossary-first definitions with optional Frayer diagrams
+      - name: Enable one-click mathematical glossary popups
         run: |
           set -euo pipefail
           node --check assets/frayer-glossary.js
@@ -282,8 +282,8 @@ jobs:
           for term in ("glossary-linear-expression", "glossary-like-terms", "glossary-bracket"):
               if term not in glossary.read_text(encoding="utf-8"):
                   raise SystemExit("Missing glossary term: " + term)
-          css = '<link rel="stylesheet" href="frayer-glossary.css?v=3" data-frayer-glossary="true"/>'
-          js = '<script defer src="frayer-glossary.js?v=3" data-frayer-glossary="true"></script>'
+          css = '<link rel="stylesheet" href="frayer-glossary.css?v=4" data-frayer-glossary="true"/>'
+          js = '<script defer src="frayer-glossary.js?v=4" data-frayer-glossary="true"></script>'
           count=0
           for page in root.glob("*.html"):
               html=page.read_text(encoding="utf-8")
@@ -297,7 +297,7 @@ jobs:
               count+=1
           if count < 50:
               raise SystemExit("Glossary enhancement reached too few HTML pages: " + str(count))
-          print("Quick glossary and optional Frayer diagrams enabled on",count,"pages.")
+          print("Mathematical glossary popups enabled on",count,"pages.")
           PY
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
