@@ -267,6 +267,31 @@ jobs:
                   raise SystemExit("Missing colour design on "+x)
           print("Verified the JC Unifying Strand, four content Parts (including Geometry and Trigonometry), CBA and Assessment, TY and LC Ordinary Level Parts.")
           PY
+      - name: Enable clickable Frayer Diagram Glossary
+        run: |
+          set -euo pipefail
+          node --check assets/frayer-glossary.js
+          cp assets/frayer-glossary.js output/web/frayer-glossary.js
+          cp assets/frayer-glossary.css output/web/frayer-glossary.css
+          python - <<'PY'
+          from pathlib import Path
+          page = Path("output/web/chapter-glossary.html")
+          if not page.is_file():
+              raise SystemExit("Glossary HTML page missing")
+          html = page.read_text(encoding="utf-8")
+          for term in ("glossary-linear-expression", "glossary-like-terms", "glossary-bracket"):
+              if term not in html:
+                  raise SystemExit("Missing glossary entry: " + term)
+          css = '<link rel="stylesheet" href="frayer-glossary.css?v=1" data-frayer-glossary="true"/>'
+          js = '<script defer src="frayer-glossary.js?v=1" data-frayer-glossary="true"></script>'
+          if "</head>" not in html or "</body>" not in html:
+              raise SystemExit("Unexpected glossary HTML structure")
+          if 'data-frayer-glossary="true"' not in html:
+              html = html.replace("</head>", "  " + css + "\n</head>", 1)
+              html = html.replace("</body>", "  " + js + "\n</body>", 1)
+              page.write_text(html, encoding="utf-8")
+          print("Frayer Diagram Glossary injected into native glossary page")
+          PY
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
