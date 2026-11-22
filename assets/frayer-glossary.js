@@ -140,6 +140,7 @@
     heading.setAttribute("aria-label","Read more about "+entry.title);
     heading.addEventListener("click",e=>{
       e.preventDefault();
+      e.stopPropagation();
       openTerm(slug,heading);
     });
     heading.addEventListener("keydown",e=>{
