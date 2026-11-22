@@ -56,53 +56,168 @@
     "volume":["Three-dimensional space occupied; cubic units.","Cuboid 2×3×4 cm: 24 cm³","24 cm² describes an area"]
   };
 
-  // The concise canonical definition is always visible on the glossary page.
-  // Clicking a term opens its richer Frayer diagram in the same page.
-  const escapeText = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  const modal = document.createElement("dialog");
-  modal.className = "frayer-dialog";
-  modal.setAttribute("aria-label", "Frayer diagram");
-  modal.innerHTML = '<div class="frayer-inner"><div class="frayer-top"><span>FRAYER GLOSSARY · EXPLORE THE CONCEPT</span><button class="frayer-close" type="button" aria-label="Close Frayer diagram">×</button></div><h2 class="frayer-title"></h2><div class="frayer-definition"><h3>Definition</h3><div class="frayer-definition-content"></div></div><div class="frayer-grid"><section class="frayer-cell"><h3>Characteristics</h3><p></p></section><section class="frayer-cell"><h3>Examples</h3><p></p></section><section class="frayer-cell"><h3>Non-examples</h3><p></p></section></div><p class="frayer-note">What do the examples have in common? Why do the non-examples not qualify?</p></div>';
-  document.body.append(modal);
-  const close = modal.querySelector(".frayer-close");
-  close.addEventListener("click", () => modal.close());
-  modal.addEventListener("click", e => { if (e.target === modal) modal.close(); });
-  function openDiagram(title, definitionNode, panels) {
-    modal.querySelector(".frayer-title").textContent = title;
-    // Clone, rather than transcribe, PreTeXt math: the original is the only source.
-    const destination = modal.querySelector(".frayer-definition-content");
-    destination.replaceChildren(definitionNode.cloneNode(true));
-    modal.querySelectorAll(".frayer-cell p").forEach((p,i) => { p.textContent = panels[i]; });
-    if (!modal.open) modal.showModal();
-    close.focus();
+
+  // Progressive disclosure: a quick glossary definition comes before the
+  // optional Frayer view. The PreTeXt glossary is the only canonical definition.
+  const summary = document.createElement("dialog");
+  summary.className = "glossary-quick-dialog";
+  summary.setAttribute("aria-label", "Glossary definition");
+  summary.innerHTML = '<div class="glossary-quick-inner"><div class="glossary-quick-top"><span>MATHEMATICAL GLOSSARY</span><button class="glossary-quick-close" type="button" aria-label="Close definition">×</button></div><h2 class="glossary-quick-title"></h2><div class="glossary-quick-definition"></div><div class="glossary-quick-actions"><button class="glossary-quick-explore" type="button">Explore Frayer diagram</button><button class="glossary-quick-done" type="button">That's enough</button></div></div>';
+  document.body.append(summary);
+  const frayer = document.createElement("dialog");
+  frayer.className = "frayer-dialog";
+  frayer.setAttribute("aria-label", "Frayer diagram");
+  frayer.innerHTML = '<div class="frayer-inner"><div class="frayer-top"><span>EXPLORE THE CONCEPT · FRAYER DIAGRAM</span><button class="frayer-close" type="button" aria-label="Close Frayer diagram">×</button></div><h2 class="frayer-title"></h2><div class="frayer-definition"><h3>Definition</h3><div class="frayer-definition-content"></div></div><div class="frayer-grid"><section class="frayer-cell"><h3>Characteristics</h3><p></p></section><section class="frayer-cell"><h3>Examples</h3><p></p></section><section class="frayer-cell"><h3>Non-examples</h3><p></p></section></div><div class="frayer-footer"><button class="frayer-back" type="button">← Back to definition</button></div><p class="frayer-note">What do the examples have in common? Why do the non-examples not qualify?</p></div>';
+  document.body.append(frayer);
+
+  let active = null;
+  let lastTrigger = null;
+  const quickClose = summary.querySelector(".glossary-quick-close");
+  const frayerClose = frayer.querySelector(".frayer-close");
+  const closeSummary = () => summary.close();
+  quickClose.addEventListener("click", closeSummary);
+  summary.querySelector(".glossary-quick-done").addEventListener("click", closeSummary);
+  summary.addEventListener("click",e=>{if(e.target===summary)closeSummary();});
+  frayerClose.addEventListener("click",()=>frayer.close());
+  frayer.addEventListener("click",e=>{if(e.target===frayer)frayer.close();});
+  summary.addEventListener("close",()=>{if(!frayer.open&&lastTrigger?.isConnected)lastTrigger.focus({preventScroll:true});});
+  frayer.addEventListener("close",()=>{if(!summary.open&&lastTrigger?.isConnected)lastTrigger.focus({preventScroll:true});});
+
+  const titles = new Map();
+  function extractDefinition(root) {
+    if (!root) return null;
+    // PreTeXt output may put the xml:id on an entry wrapper or on <dt>.
+    if (root.matches("p")) return root;
+    const inside = root.querySelector("dd p, p, dd, .description");
+    if (inside) return inside;
+    if (root.matches("dt")) {
+      const dd = root.nextElementSibling;
+      if (dd?.matches("dd")) return dd.querySelector("p") || dd;
+    }
+    const next = root.nextElementSibling;
+    if (next?.matches("dd")) return next.querySelector("p") || next;
+    return null;
   }
-  let mounted = 0;
-  for (const [slug,panels] of Object.entries(data)) {
-    const element = document.getElementById("glossary-"+slug);
-    if (!element) continue;
-    const paragraph = element.querySelector("p");
-    if (!paragraph) continue;
-    const heading = element.querySelector(".heading .title, .heading, dt, .title, h3, h4, strong, b");
-    const title = (heading?.textContent || slug.replace(/-/g," ")).trim().replace(/\.$/,"");
-    element.classList.add("frayer-entry");
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "frayer-trigger";
-    button.textContent = "Explore Frayer diagram";
-    button.setAttribute("aria-label", "Explore Frayer diagram for "+title);
-    button.addEventListener("click", () => openDiagram(title,paragraph,panels));
+  function entryTitle(root,slug) {
+    if (!root) return slug.replace(/-/g," ");
+    const heading = root.matches("dt")?root:root.querySelector(".heading .title, dt, .title, h3, h4, strong, b");
+    return (heading?.textContent||slug.replace(/-/g," ")).trim().replace(/\.$/,"");
+  }
+  function entryInDocument(doc,slug) {
+    const node = doc.getElementById("glossary-"+slug);
+    if (!node) return null;
+    const paragraph = extractDefinition(node);
+    return paragraph ? {title:entryTitle(node,slug),paragraph} : null;
+  }
+  let glossaryLoad = null;
+  async function getEntry(slug) {
+    const local = entryInDocument(document,slug);
+    if (local) return local;
+    if (!glossaryLoad) {
+      glossaryLoad = fetch("chapter-glossary.html", {credentials:"same-origin"})
+        .then(r=>{if(!r.ok)throw new Error("Glossary unavailable");return r.text();})
+        .then(html=>new DOMParser().parseFromString(html,"text/html"))
+        .catch(e=>{glossaryLoad=null;throw e;});
+    }
+    return entryInDocument(await glossaryLoad,slug);
+  }
+  function typesetMath(element) {
+    if (window.MathJax?.typesetPromise) window.MathJax.typesetPromise([element]).catch(()=>{});
+  }
+  function copyDefinition(node) {
+    const clone=node.cloneNode(true);
+    // Render the source's math anew rather than copying MathJax layout artefacts.
+    clone.querySelectorAll("mjx-container").forEach(n=>n.remove());
+    return clone;
+  }
+  function showDefinition(slug,entry,trigger) {
+    active={slug,entry};
+    lastTrigger=trigger||document.activeElement;
+    summary.querySelector(".glossary-quick-title").textContent=entry.title;
+    const box=summary.querySelector(".glossary-quick-definition");
+    box.replaceChildren(copyDefinition(entry.paragraph));
+    if (frayer.open) frayer.close();
+    if (!summary.open) summary.showModal();
+    typesetMath(box);
+    quickClose.focus();
+  }
+  function showFrayer() {
+    if (!active) return;
+    const {slug,entry}=active;
+    const panels=data[slug];
+    if (!panels) return;
+    summary.close();
+    frayer.querySelector(".frayer-title").textContent=entry.title;
+    const box=frayer.querySelector(".frayer-definition-content");
+    box.replaceChildren(copyDefinition(entry.paragraph));
+    frayer.querySelectorAll(".frayer-cell p").forEach((p,i)=>{p.textContent=panels[i];});
+    if(!frayer.open)frayer.showModal();
+    typesetMath(box);
+    frayerClose.focus();
+  }
+  summary.querySelector(".glossary-quick-explore").addEventListener("click",showFrayer);
+  frayer.querySelector(".frayer-back").addEventListener("click",()=>{
+    if(!active)return;
+    frayer.close();
+    showDefinition(active.slug,active.entry,lastTrigger);
+  });
+  async function start(slug,trigger,fallbackHref) {
+    if (!Object.hasOwn(data,slug)) return;
+    try {
+      const entry=await getEntry(slug);
+      if (!entry) throw new Error("No glossary definition for "+slug);
+      showDefinition(slug,entry,trigger);
+    } catch (e) {
+      console.warn("Glossary definition could not open",e);
+      if(fallbackHref) window.location.assign(fallbackHref);
+    }
+  }
+  let mounted=0;
+  // Keep the complete alphabetical glossary readable. Clicking a term opens
+  // its *definition*, and only the separate button opens a Frayer diagram.
+  for(const slug of Object.keys(data)) {
+    const root=document.getElementById("glossary-"+slug);
+    if(!root)continue;
+    const paragraph=extractDefinition(root);
+    if(!paragraph)continue;
+    root.classList.add("frayer-entry");
+    const heading=root.matches("dt")?root:root.querySelector(".heading .title, dt, .title, h3, h4, strong, b");
+    const button=document.createElement("button");
+    button.type="button";
+    button.className="frayer-trigger";
+    button.textContent="Explore Frayer diagram";
+    button.setAttribute("aria-label","Explore Frayer diagram for "+entryTitle(root,slug));
+    button.addEventListener("click",()=>{
+      const entry=entryInDocument(document,slug);
+      if(!entry)return;
+      active={slug,entry};
+      lastTrigger=button;
+      showFrayer();
+    });
     paragraph.insertAdjacentElement("afterend",button);
-    if (heading && !heading.closest("a")) {
+    if(heading&&!heading.closest("a")) {
       heading.classList.add("frayer-clickable-title");
+      heading.tabIndex=0;
       heading.setAttribute("role","button");
-      heading.tabIndex = 0;
-      heading.setAttribute("aria-label","Explore Frayer diagram for "+title);
-      heading.addEventListener("click", e => { if (!e.target.closest("a")) openDiagram(title,paragraph,panels); });
-      heading.addEventListener("keydown",e => {
-        if (e.key==="Enter"||e.key===" ") { e.preventDefault(); openDiagram(title,paragraph,panels); }
+      heading.setAttribute("aria-label","Read glossary definition for "+entryTitle(root,slug));
+      heading.addEventListener("click",e=>{if(!e.target.closest("a"))start(slug,heading);});
+      heading.addEventListener("keydown",e=>{
+        if(e.key==="Enter"||e.key===" "){e.preventDefault();start(slug,heading);}
       });
     }
     mounted++;
   }
-  document.documentElement.dataset.frayerMounted = String(mounted);
+  // Where textbook hyperlinks already point to glossary entries, offer
+  // an in-page definition first, with ordinary navigation as a fallback.
+  document.addEventListener("click",e=>{
+    const a=e.target.closest("a[href]");
+    if(!a)return;
+    const url=new URL(a.href,document.baseURI);
+    if(url.origin!==window.location.origin || !url.pathname.endsWith("/chapter-glossary.html"))return;
+    const match=url.hash.match(/^#glossary-([a-z0-9-]+)$/i);
+    if(!match || !Object.hasOwn(data,match[1]))return;
+    e.preventDefault();
+    start(match[1],a,url.href);
+  });
+  document.documentElement.dataset.frayerMounted=String(mounted);
 })();
