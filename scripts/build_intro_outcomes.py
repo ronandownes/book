@@ -323,8 +323,8 @@ def restore_junior_math(code: str, paragraphs: list[etree._Element]) -> list[etr
     restored = {
         "AF.3": [
             para("<alert>a)</alert> Add, subtract and simplify:"),
-            para(r"i. Linear expressions in one or more variables with coefficients in&#160;<m>\mathbb{Q}</m>."),
-            para(r"ii. Quadratic expressions in one variable with coefficients in&#160;<m>\mathbb{Z}</m>."),
+            para(r"i. Linear expressions in one or more variables with coefficients in <m>\\;\\mathbb{Q}</m>."),
+            para(r"ii. Quadratic expressions in one variable with coefficients in <m>\\;\\mathbb{Z}</m>."),
             para(r"iii. <alert>Expressions of the form <m>\frac{a}{bx+c}</m>, where <m>a,b,c\in\mathbb{Z}</m>.</alert>"),
             para("<alert>b)</alert> Multiply expressions of the form:"),
             para(r"i. <m>a(bx+cy+d)</m>; <m>a(bx^2+cx+d)</m>; and <m>ax(bx^2+cx+d)</m>, where <m>a,b,c,d\in\mathbb{Z}</m>."),
@@ -338,9 +338,9 @@ def restore_junior_math(code: str, paragraphs: list[etree._Element]) -> list[etr
             para(r"v. <m>x^2-a^2</m> <alert>and <m>a^2x^2-b^2y^2</m></alert>, where <m>a,b\in\mathbb{Z}</m>."),
         ],
         "AF.4": [
-            para(r"a) Linear equations in one variable with coefficients in&#160;<m>\mathbb{Q}</m> and solutions in&#160;<m>\mathbb{Z}</m> <alert>or in&#160;<m>\mathbb{Q}</m></alert>."),
-            para(r"b) Quadratic equations in one variable with coefficients and solutions in&#160;<m>\mathbb{Z}</m> <alert>or coefficients in&#160;<m>\mathbb{Q}</m> and solutions in&#160;<m>\mathbb{R}</m></alert>."),
-            para(r"c) Simultaneous linear equations in two variables with coefficients and solutions in&#160;<m>\mathbb{Z}</m> <alert>or in&#160;<m>\mathbb{Q}</m></alert>."),
+            para(r"a) Linear equations in one variable with coefficients in <m>\\;\\mathbb{Q}</m> and solutions in <m>\\;\\mathbb{Z}</m> <alert>or in <m>\\;\\mathbb{Q}</m></alert>."),
+            para(r"b) Quadratic equations in one variable with coefficients and solutions in <m>\\;\\mathbb{Z}</m> <alert>or coefficients in <m>\\;\\mathbb{Q}</m> and solutions in <m>\\;\\mathbb{R}</m></alert>."),
+            para(r"c) Simultaneous linear equations in two variables with coefficients and solutions in <m>\\;\\mathbb{Z}</m> <alert>or in <m>\\;\\mathbb{Q}</m></alert>."),
             para(r"d) Linear inequalities in one variable of the form <m>g(x)\lt k</m>, and graph the solution sets on the number line for <m>x\in\mathbb{N},\mathbb{Z},\mathbb{R}</m>."),
         ],
         "AF.7": [
