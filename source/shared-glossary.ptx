@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xml:id="chapter-glossary">
+<appendix xml:id="chapter-glossary">
  <title>Mathematical Glossary</title>
  <glossary xml:id="glossary-mathematics">
  <title>Definitions</title>
@@ -55,4 +55,4 @@
   <gi xml:id="glossary-variable"><title>variable</title><p>A symbol used to represent a quantity whose value may change or may be unknown.</p></gi>
   <gi xml:id="glossary-volume"><title>volume</title><p>The amount of three-dimensional space occupied by an object, measured in cubic units.</p></gi>
  </glossary>
-</chapter>
+</appendix>
