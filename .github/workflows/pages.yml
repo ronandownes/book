@@ -76,7 +76,7 @@ jobs:
           set -euo pipefail
           python scripts/publish_complete_geometry_appendix.py
           test -s output/web/geometry-appendix-b-complete.html
-          test "$(find output/web/geometry-appendix-b-vectors -name '*.svg' | wc -l)" -eq 49
+          test "$(find output/web/geometry-appendix-b-vectors -name '*.svg' | wc -l)" -eq 50
       - name: Add TY story and number theory classroom displays
         run: |
           set -euo pipefail
