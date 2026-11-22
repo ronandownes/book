@@ -24,3 +24,22 @@
 .frayer-note{font:italic .94rem/1.5 system-ui,sans-serif;text-align:center;color:#455b68;margin:1rem .5rem 0}
 @media(max-width:700px){.frayer-grid{grid-template-columns:1fr}.frayer-cell{min-height:auto}.frayer-trigger{margin-left:.4rem}}
 @media print{.frayer-dialog,.frayer-trigger{display:none!important}}
+
+/* Stage 1: an unobtrusive, readable glossary definition. */
+.glossary-quick-dialog{width:min(630px,calc(100vw - 1.5rem));max-width:630px;max-height:calc(100dvh - 2rem);padding:0;border:1px solid #8095a8;border-radius:14px;background:#fff;color:#1e3343;box-shadow:0 12px 45px #152b4055;overflow:auto}
+.glossary-quick-dialog::backdrop{background:#13233380;backdrop-filter:blur(2px)}
+.glossary-quick-inner{padding:clamp(1.1rem,3vw,2rem);font:1rem/1.5 system-ui,sans-serif}
+.glossary-quick-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;font:700 .77rem/1.3 system-ui,sans-serif;letter-spacing:.07em;color:#305b77}
+.glossary-quick-close{border:1px solid #9cadb9;background:#fff;border-radius:50%;color:#213f54;width:2.2rem;height:2.2rem;font:1.55rem/1 system-ui,sans-serif;cursor:pointer}
+.glossary-quick-title{margin:.7rem 0 .65rem;font:700 clamp(1.35rem,3vw,1.95rem)/1.2 system-ui,sans-serif;color:#193d57}
+.glossary-quick-definition,.glossary-quick-definition p{font:1.17rem/1.6 system-ui,sans-serif;margin:0!important}
+.glossary-quick-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.45rem}
+.glossary-quick-explore,.glossary-quick-done,.frayer-back{padding:.57rem .9rem;border:1px solid #306c92;border-radius:9px;font:600 .91rem system-ui,sans-serif;cursor:pointer}
+.glossary-quick-explore{background:#275f83;color:white}
+.glossary-quick-done,.frayer-back{background:white;color:#245b7b}
+.glossary-quick-explore:hover,.glossary-quick-explore:focus-visible{background:#17435f}
+.glossary-quick-done:hover,.frayer-back:hover{background:#eef5f9}
+.frayer-footer{display:flex;justify-content:flex-start;margin-top:1rem}
+.glossary-term-inline{cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
+.glossary-term-inline:focus-visible{outline:3px solid #267aa8;outline-offset:2px}
+@media print{.glossary-quick-dialog{display:none!important}}
