@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="chapter-mathematical-structure">
+  <title>How Mathematics Is Built</title>
+  <introduction>
+    <p>Mathematics is more than a collection of methods. It is a connected system of concepts, precise language, assumptions and logical deductions. When we study a result, we should know what it depends on, what it proves, and what we may deduce from it.</p>
+    <p>The official geometry reference makes this structure especially clear. Its <xref ref="geometry-appendix-b" text="title"/> is part of this book, not a separate website. The same habits of careful definition, reasoning and proof apply to Number, Algebra, Functions, Statistics and Probability.</p>
+  </introduction>
+  <section xml:id="math-structure-vocabulary">
+    <title>The Vocabulary of Mathematical Reasoning</title>
+    <p>These are explanations of mathematical roles, not replacements for the formal numbered definitions in Appendix B.</p>
+    <table xml:id="math-structure-roles">
+      <title>What kind of statement are we reading?</title>
+      <tabular>
+        <row><cell><em>Type</em></cell><cell><em>Role in mathematics</em></cell><cell><em>What to ask</em></cell></row>
+        <row><cell>Undefined or primitive term</cell><cell>A starting concept which the chosen formal system does not define using earlier terms.</cell><cell>What properties are assumed?</cell></row>
+        <row><cell>Definition</cell><cell>Fixes the precise meaning of a term using accepted concepts.</cell><cell>Does the object satisfy the definition?</cell></row>
+        <row><cell>Axiom or postulate</cell><cell>A statement accepted without proof within the chosen mathematical system.</cell><cell>Which consequences follow from it?</cell></row>
+        <row><cell>Conjecture</cell><cell>A claim proposed for investigation, but not yet proved.</cell><cell>Can we prove it or find a counterexample?</cell></row>
+        <row><cell>Proposition or theorem</cell><cell>A statement established by a valid proof from accepted premises.</cell><cell>What earlier results does the proof use?</cell></row>
+        <row><cell>Lemma</cell><cell>A proved result especially useful in proving another result.</cell><cell>What larger proof does it support?</cell></row>
+        <row><cell>Corollary</cell><cell>A result following readily from an established theorem.</cell><cell>What theorem gives it?</cell></row>
+        <row><cell>Converse</cell><cell>Reverses the implication in another statement; it needs its own justification.</cell><cell>Does the reversed claim actually hold?</cell></row>
+        <row><cell>Counterexample</cell><cell>A single valid instance disproving a universally quantified claim.</cell><cell>Which assumption or conclusion fails?</cell></row>
+        <row><cell>Proof</cell><cell>A logically valid argument establishing a claimed result.</cell><cell>Why is every step justified?</cell></row>
+      </tabular>
+    </table>
+  </section>
+  <section xml:id="math-structure-dependencies">
+    <title>From Starting Terms to New Results</title>
+    <p>The basic dependency pattern is:</p>
+    <md>\text{primitive terms and axioms}\longrightarrow\text{definitions and proved results}\longrightarrow\text{new theorems and applications}.</md>
+    <p>The arrows describe logical dependence, not an inflexible teaching order. Investigations, diagrams, experimentation and technology may help us discover a claim; a formal proof is what establishes it as a theorem.</p>
+    <p>As an example, the formal geometry reference begins with <xref ref="geometry-app-b-axiom-1" text="title"/> and introduces collinear points in <xref ref="geometry-app-b-definition-2" text="title"/>. Later results use these foundations rather than redefining them.</p>
+  </section>
+  <section xml:id="math-structure-implication">
+    <title>A Theorem Is Not Automatically Its Converse</title>
+    <p>Suppose a statement has the form <m>P\Rightarrow Q</m>. Its converse is <m>Q\Rightarrow P</m>. Proving the first does not establish the second.</p>
+    <example xml:id="math-structure-converse-example">
+      <title>A Simple Counterexample</title>
+      <statement><p>If an integer is divisible by <m>4</m>, then it is even. Its converse claims: if an integer is even, it is divisible by <m>4</m>. The converse is false, because <m>6</m> is even but is not divisible by <m>4</m>.</p></statement>
+    </example>
+    <p>A mathematical assertion must be read with its precise assumptions. When the converse is valid, it deserves its own proof or an equivalent argument.</p>
+  </section>
+  <section xml:id="math-structure-pretext-environments">
+    <title>How This Book Displays Mathematical Ideas</title>
+    <p>The book uses distinct semantic environments for <term>definition</term>, <term>axiom</term>, <term>theorem</term>, <term>proposition</term>, <term>lemma</term>, <term>corollary</term>, <term>proof</term>, <term>example</term>, and <term>exercise</term> where appropriate. A proof is not merely a blue box, nor is a theorem simply a bold paragraph: their roles must remain visible in navigation, cross-references and accessible text.</p>
+    <p>Each official geometry statement has one canonical home in <xref ref="geometry-appendix-b" text="title"/>. A lesson may refer to it or explain it with a diagram or app, but should not create a competing official wording. Consult <xref ref="chapter-glossary" text="title"/> for the book's general mathematical vocabulary.</p>
+  </section>
+  <section xml:id="math-structure-source-levels">
+    <title>Levels of Rigour</title>
+    <p>The geometry reference distinguishes three levels: a fully rigorous account for advanced readers, a semiformal level suitable for many secondary students, and an informal level suited to younger learners. Different levels of explanation are legitimate, but we must not confuse illustrative evidence with deductive proof.</p>
+    <p>See the opening sections of <xref ref="geometry-appendix-b" text="title"/> as its transcription is completed and verified.</p>
+  </section>
+</chapter>
