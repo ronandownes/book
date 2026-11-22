@@ -14,59 +14,47 @@
       </titlepage>
 
       <preface xml:id="welcome">
-        <title>Welcome to the Student</title>
-        <p><em>Welcome. This website is for you.</em></p>
+        <title>Welcome to You, the Student</title>
+        <p><em>This website is for you.</em></p>
         <p>I've been teaching mathematics for many years, and I love it. I want to share that enthusiasm with you. Whether you find maths easy, difficult, exciting or frustrating, you're welcome here.</p>
-        <p>I want you to get the best grades you possibly can. But more importantly, I want you to understand mathematics, think critically, solve unfamiliar problems and develop skills you'll take with you into Senior Cycle, third-level education, work and life.</p>
-
+        <p>I want you to get the best grades you possibly can. But I want more for you than examination results: the confidence to think critically, communicate, tackle unfamiliar problems and carry what you've learned into Senior Cycle, further study, work and life.</p>
         <section xml:id="welcome-jump-right-in">
           <title>Jump Right In</title>
-          <p>There's one sentence I'd love you to leave behind: <em>“We haven't done that yet.”</em></p>
-          <p><em>Well, let's do it now!</em></p>
-          <p>We don't have to wait for a particular chapter to use a graph, a diagram, a function or an interesting mathematical idea. If a picture helps us understand something, I'll show you the picture. If a graph makes things clearer, we'll draw the graph. And if something looks interesting, let's explore it.</p>
-          <p>The same goes for questions such as “Is this Higher Level or Ordinary Level?” and “Will this be on the exam?” Of course your examinations matter, and I'll help you prepare for them. But I don't want examination boundaries deciding how far your curiosity can take you.</p>
+          <p>There's one sentence I'd love you to leave behind: <em>“We haven't done that yet.”</em> Well, let's do it now!</p>
+          <p>I'm not going to wait for a chapter called “Graphs” before showing you a graph. If a function, a diagram or a different way of seeing a problem helps us, we'll use it straight away. We'll begin with something you can understand and build from there.</p>
+          <p>I'll help you prepare for your examinations, but I don't want questions such as “Is this Higher Level or Ordinary Level?” or “Will this be on the exam?” to set the limits of your curiosity.</p>
         </section>
-
         <section xml:id="welcome-full-circle">
           <title>Full Circle Maths</title>
-          <p>Here's something wonderful about mathematics: we can often start at different points and find our way around the same ideas.</p>
-          <p>Multiplication and division are connected. Expanding brackets and factorising are two directions of the same journey. We can move between numbers, algebra, graphs, diagrams and words, discovering connections along the way.</p>
-          <p>Sometimes one direction is easier than the other. So why not begin with the easier direction and see what it teaches us?</p>
-          <p><em>Around and around we go, understanding a little more each time.</em> That's the idea behind <em>Full Circle Maths</em>.</p>
-          <p>We'll also discover the importance of starting with simple, special cases before exploring more general situations. We'll learn to distinguish a useful trick or method from the mathematical principle that explains why it works.</p>
-          <p>I want you to understand mathematics so well that you can explain it yourself, using its language with confidence.</p>
+          <p>Much of mathematics is about moving from one form of an idea to another and finding our way back again. We can start almost anywhere on that circle.</p>
+          <p>Think of multiplication and division, or expanding brackets and factorising: one direction often helps us understand the other. And sometimes the journey takes a surprising turn.</p>
+          <p>Squaring 2 gives 4. But ask, “Which real numbers have square 4?” and there are two answers: 2 and -2. Working backwards has given us a branch! The inverse relation has more than one possible value, so it isn't an ordinary single-valued inverse function unless we restrict the domain. There's a mathematical name for that distinction, and we'll learn it together.</p>
+          <p><em>Around and around we go, seeing something new each time.</em> That's what I mean by <em>Full Circle Maths</em>.</p>
+          <p>We'll start with simple special cases, look for patterns and then explore what is true in general. We'll be careful not to mistake a special case for a general rule. We'll also distinguish a useful strategy or shortcut from the fundamental mathematical principle that makes it work.</p>
         </section>
-
+        <section xml:id="welcome-language">
+          <title>Learn to Speak Mathematics</title>
+          <p>We can start with a real-world problem, explain it in everyday language, draw it and work towards a solution. Then we can discover the precise mathematical words and symbols that let us express a big idea clearly and concisely.</p>
+          <p>Words such as <em>symmetry</em>, <em>discrete</em>, <em>point</em> and <em>function</em> are tools for thinking, not vocabulary to memorise without understanding.</p>
+          <p>I want you to become comfortable explaining a mathematical idea aloud, drawing your own representation and discussing your reasoning without needing a textbook open in front of you. I want the language of mathematics to become yours.</p>
+        </section>
         <section xml:id="welcome-make-the-question">
           <title>Make Up the Question</title>
-          <p>Why must we always begin with a question and search for the answer?</p>
-          <p>Let's sometimes begin with an answer and <em>make up the question</em>.</p>
-          <p>Change a number. Change a condition. Draw a different diagram. Ask what happens if something stays the same, or if something changes.</p>
-          <p>I'll give you plenty of examination-style questions, investigations, quizzes and interactive activities. But I want you to become someone who can ask good questions too.</p>
-          <p>You'll learn mathematics through problem-solving, not just practise problem-solving after learning a collection of rules.</p>
+          <p>Why must we always begin with a question and search for an answer? Sometimes we'll begin with an answer and <em>make up the question</em>.</p>
+          <p>Change the numbers. Change the conditions. Invent a diagram. Ask what stays the same, what changes and why. Make your own problems and challenge yourself to solve them in more than one way.</p>
+          <p>Examination-style questions will be starting points for exploration, not just exercises at the end. We'll learn mathematics <em>through</em> problem-solving, not wait until we've memorised procedures before we begin.</p>
         </section>
-
         <section xml:id="welcome-learn-to-learn">
           <title>Learn How to Learn</title>
-          <p>I'll help you build on what you already know, make difficult ideas more manageable and avoid unnecessary mental overload. We'll use diagrams, examples, technology and different ways of looking at the same problem.</p>
-          <p>You'll learn to choose useful strategies, organise your thinking, check your understanding and recognise when you need another approach.</p>
-          <p>These are learning skills that will serve you well beyond mathematics.</p>
-          <p>I'll provide the opportunities, explanations and resources. You bring your curiosity, creativity and willingness to explore.</p>
-          <p>I hope you'll sometimes become so absorbed in what you're doing that you'll hardly notice how much you're learning.</p>
-          <p><em>This is your learning. Make the most of it.</em></p>
-          <p><em>Let's jump right in.</em></p>
+          <p>Calculating accurately and using procedures matter, but mathematical proficiency is much more than that. We'll develop five connected strengths: <em>conceptual understanding</em>, <em>procedural fluency</em>, <em>strategic competence</em>, <em>adaptive reasoning</em> and <em>productive disposition</em> — believing mathematics makes sense and that you can learn it.</p>
+          <p>We'll use diagrams, graphs, words, symbols and technology to make ideas visible. I'll help you build on what you know, manage the mental effort of learning, select strategies, check your understanding and gradually become an independent learner.</p>
+          <p>I'll bring the explanations, activities, investigations and opportunities. You bring your curiosity, creativity and willingness to try. I hope you'll sometimes get so absorbed in an idea that you'll hardly notice how much you're learning.</p>
+          <p><em>This is your learning. Let's jump right in.</em></p>
           <p><em>Ronan Downes</em></p>
         </section>
       </preface>
 
-      <preface xml:id="project-preface">
-        <title>To the Teacher</title>
-        <p><em>Irish School Maths</em> is free, openly developed and very much a work in progress. There's still plenty to add and improve, and you may find some topics incomplete.</p>
-        <p>I'd love to hear what you think — what works, what doesn't, or what you would like to see included. Please feel free to share the book, its interactive activities and quizzes with your students. I hope it helps them explore mathematics and find their own way through it.</p>
-        <p><em>Ronan Downes</em></p>
-      </preface>
-
-      <preface xml:id="about-the-author">
+<preface xml:id="about-the-author">
         <title>About the Author</title>
         <p>Ronan Downes is a Mathematics teacher based in Limerick, Ireland. He studied Physics at NUI Galway and later graduated with an honours degree in Physical Optoelectronics from the University of Essex. After completing a Higher Diploma in Education, he taught Physics, Mathematics and Science in secondary schools for four years.</p>
         <p>He then moved into telecommunications, working as a systems engineer and access engineer with Esat Digifone. He later became self-employed in multimedia, including photography, video production and web development.</p>
