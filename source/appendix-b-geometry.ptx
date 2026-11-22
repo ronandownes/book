@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<appendix xml:id="geometry-appendix-b">
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="geometry-appendix-b">
   <title>Geometry for Post-primary School Mathematics</title>
   <introduction>
-    <p>This is Appendix B of the official Junior Cycle Mathematics specification. It is the single reference location for the formal geometry material used throughout this book. The numbered definitions below are only an initial transcription and are not yet a verified complete native PreTeXt edition. For the complete original Appendix B, including every mathematical diagram and all later theorems and proofs, use the full illustrated source edition: <url href="geometry-appendix-b-complete.html" visual="Open the complete illustrated Appendix B (49 pages)"/>. The full source edition preserves the original pages as scalable vector graphics.</p>
+    <p>This is Appendix B of the official Junior Cycle Mathematics specification. It is the single reference location for the formal geometry material used throughout this book. The numbered definitions below are only an initial transcription and are not yet a verified complete native PreTeXt edition. For the complete original Appendix B, including every mathematical diagram and all later theorems and proofs, use the full illustrated source edition: <url href="geometry-appendix-b-complete.html" visual="Open the complete illustrated Appendix B (50 pages)"/>. The full source edition preserves the original pages as scalable vector graphics.</p>
   </introduction>
+  <!-- Complete source pages in original order, with original vector diagrams. -->
+  <xi:include href="./appendix-b-native/at-a-glance.ptx"/>
+  <xi:include href="./appendix-b-native/introduction.ptx"/>
+  <xi:include href="./appendix-b-native/system-guiding-principles.ptx"/>
+  <xi:include href="./appendix-b-native/level-two-account.ptx"/>
+  <xi:include href="./appendix-b-native/terms.ptx"/>
+  <xi:include href="./appendix-b-native/theory.ptx"/>
+  <xi:include href="./appendix-b-native/length-distance.ptx"/>
+  <xi:include href="./appendix-b-native/angles.ptx"/>
+  <xi:include href="./appendix-b-native/degrees.ptx"/>
+  <xi:include href="./appendix-b-native/congruent-triangles.ptx"/>
+  <xi:include href="./appendix-b-native/parallels.ptx"/>
+  <xi:include href="./appendix-b-native/perpendicular-quadrilaterals.ptx"/>
+  <xi:include href="./appendix-b-native/ratios-similarity.ptx"/>
+  <xi:include href="./appendix-b-native/constructions.ptx"/>
+  <xi:include href="./appendix-b-native/teaching.ptx"/>
+  <xi:include href="./appendix-b-native/jcol.ptx"/>
+  <xi:include href="./appendix-b-native/jchl.ptx"/>
+  <xi:include href="./appendix-b-native/leaving-certificate.ptx"/>
+  <xi:include href="./appendix-b-native/copyright.ptx"/>
+  <!-- Early semantic draft retained for existing cross-references. -->
   <section xml:id="geometry-app-b-theory">
     <title>The Theory</title>
     <p>Line is short for straight line. Take a fixed plane, once and for all, and consider just lines that lie in it. The plane and the lines are sets of points. Each line is a subset of the plane, i.e. each element of a line is a point of the plane. Each line is endless, extending forever in both directions. Each line has infinitely-many points. The points on a line can be taken to be ordered along the line in a natural way. As a consequence, given any three distinct points on a line, exactly one of them lies between the other two. Points that are not on a given line can be said to be on one or other side of the line. The sides of a line are sometimes referred to as half-planes.</p>
