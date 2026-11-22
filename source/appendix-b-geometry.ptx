@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appendix xml:id="geometry-appendix-b">
+  <title>Geometry for Post-primary School Mathematics</title>
+  <introduction>
+    <p>This is Appendix B of the official Junior Cycle Mathematics specification. It is the single reference location for the formal geometry material used throughout this book. This is a working transcription of the opening portion only. It has not yet undergone complete line-by-line verification against the official source; the remainder, including all later theorems, proofs, constructions and diagrams, is still to be added.</p>
+  </introduction>
+  <section xml:id="geometry-app-b-theory">
+    <title>The Theory</title>
+    <p>Line is short for straight line. Take a fixed plane, once and for all, and consider just lines that lie in it. The plane and the lines are sets of points. Each line is a subset of the plane, i.e. each element of a line is a point of the plane. Each line is endless, extending forever in both directions. Each line has infinitely-many points. The points on a line can be taken to be ordered along the line in a natural way. As a consequence, given any three distinct points on a line, exactly one of them lies between the other two. Points that are not on a given line can be said to be on one or other side of the line. The sides of a line are sometimes referred to as half-planes.</p>
+    <p>Notation 1. We denote points by roman capital letters A, B, C, etc., and lines by lower-case roman letters l, m, n, etc.</p>
+    <p>Axioms are statements we will accept as true.</p>
+    <paragraphs xml:id="geometry-app-b-axiom-1">
+      <title>Axiom 1 (Two Points Axiom)</title>
+      <p>There is exactly one line through any two given points. (We denote the line through A and B by AB.)</p>
+    </paragraphs>
+    <paragraphs xml:id="geometry-app-b-definition-1">
+      <title>Definition 1</title>
+      <p>The line segment [AB] is the part of the line AB between A and B (including the endpoints). The point A divides the line AB into two pieces, called rays. The point A lies between all points of one ray and all points of the other. We denote the ray that starts at A and passes through B by [AB. Rays are sometimes referred to as half-lines.</p>
+    </paragraphs>
+    <p>Three points usually determine three different lines.</p>
+    <paragraphs xml:id="geometry-app-b-definition-2"><title>Definition 2</title>
+      <p>If three or more points lie on a single line, we say they are collinear.</p>
+    </paragraphs>
+    <paragraphs xml:id="geometry-app-b-definition-3"><title>Definition 3</title>
+      <p>Let A, B and C be points that are not collinear. The triangle ∆ABC is the piece of the plane enclosed by the three line segments [AB], [BC] and [CA]. The segments are called its sides, and the points are called its vertices (singular vertex).</p>
+    </paragraphs>
+  </section>
+  <section xml:id="geometry-app-b-length-distance"><title>Length and Distance</title>
+    <p>We denote the set of all real numbers by <m>\mathbb{R}</m>.</p>
+    <paragraphs xml:id="geometry-app-b-definition-4"><title>Definition 4</title>
+      <p>We denote the distance between the points A and B by <m>|AB|</m>. We define the length of the segment [AB] to be <m>|AB|</m>.</p>
+    </paragraphs>
+    <p>We often denote the lengths of the three sides of a triangle by <m>a</m>, <m>b</m>, and <m>c</m>. The usual thing for a triangle ∆ABC is to take <m>a=|BC|</m>, i.e. the length of the side opposite the vertex A, and similarly <m>b=|CA|</m> and <m>c=|AB|</m>.</p>
+    <paragraphs xml:id="geometry-app-b-axiom-2"><title>Axiom 2 (Ruler Axiom)</title>
+      <p>The distance between points has the following properties:</p>
+      <ol>
+        <li><p>the distance <m>|AB|</m> is never negative;</p></li>
+        <li><p><m>|AB|=|BA|</m>;</p></li>
+        <li><p>if C lies on AB, between A and B, then <m>|AB|=|AC|+|CB|</m>;</p></li>
+        <li><p>(marking off a distance) given any ray from A, and given any real number <m>k\geq 0</m>, there is a unique point B on the ray whose distance from A is <m>k</m>.</p></li>
+      </ol>
+    </paragraphs>
+    <paragraphs xml:id="geometry-app-b-definition-5"><title>Definition 5</title>
+      <p>The midpoint of the segment [AB] is the point M of the segment with <m>|AM|=|MB|=\frac{|AB|}{2}</m>.</p>
+    </paragraphs>
+  </section>
+  <section xml:id="geometry-app-b-angles"><title>Angles</title>
+    <paragraphs xml:id="geometry-app-b-definition-6"><title>Definition 6</title>
+      <p>A subset of the plane is convex if it contains the whole segment that connects any two of its points.</p>
+    </paragraphs>
+    <p>For example, one side of any line is a convex set, and triangles are convex sets.</p>
+    <p>We do not define the term angle formally. Instead we say: There are things called angles. To each angle is associated:</p>
+    <ol><li><p>a unique point A, called its vertex;</p></li>
+    <li><p>two rays [AB and [AC, both starting at the vertex, and called the arms of the angle;</p></li>
+    <li><p>a piece of the plane called the inside of the angle.</p></li></ol>
+    <p>An angle is either a null angle, an ordinary angle, a straight angle, a reflex angle or a full angle. Unless otherwise specified, you may take it that any angle we talk about is an ordinary angle.</p>
+    <paragraphs xml:id="geometry-app-b-definition-7"><title>Definition 7</title><p>An angle is a null angle if its arms coincide with one another and its inside is the empty set.</p></paragraphs>
+    <paragraphs xml:id="geometry-app-b-definition-8"><title>Definition 8</title><p>An angle is an ordinary angle if its arms are not on one line, and its inside is a convex set.</p></paragraphs>
+    <paragraphs xml:id="geometry-app-b-definition-9"><title>Definition 9</title><p>An angle is a straight angle if its arms are the two halves of one line, and its inside is one of the sides of that line.</p></paragraphs>
+    <paragraphs xml:id="geometry-app-b-definition-10"><title>Definition 10</title><p>An angle is a reflex angle if its arms are not on one line, and its inside is not a convex set.</p></paragraphs>
+    <paragraphs xml:id="geometry-app-b-definition-11"><title>Definition 11</title><p>An angle is a full angle if its arms coincide with one another and its inside is the rest of the plane.</p></paragraphs>
+  </section>
+</appendix>
