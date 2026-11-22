@@ -59,6 +59,7 @@
 <part xml:id="part-jc-geometry">
       <title>Geometry and Trigonometry</title>
       <xi:include href="./jc-geometry-outcomes.ptx" />
+      <xi:include href="./jc-geometry-reference-entry.ptx" />
       <xi:include href="./jc-trigonometry-ratios-triangles.ptx"/>
     </part>
 
@@ -91,7 +92,7 @@
                 <p>A function assigns exactly one output to each input in its domain.</p>
               </section>
             </chapter>
-      <xi:include href="./shared-glossary.ptx"/>
+
     </part>
 
 <part xml:id="part-jc-statistics">
@@ -253,5 +254,9 @@
       <title>LC OL · Functions</title>
       <xi:include href="./lc-ol-functions-outcomes.ptx"/>
     </part>
+    <backmatter>
+      <xi:include href="./shared-glossary.ptx"/>
+      <xi:include href="./appendix-b-geometry.ptx"/>
+    </backmatter>
   </book>
 </pretext>
