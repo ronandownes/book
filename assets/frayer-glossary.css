@@ -1,45 +1,24 @@
-/* Frayer Glossary: read the definition instantly; click to explore deeper. */
-.frayer-entry{margin-bottom:1.1rem}
-.frayer-entry > p{font-size:1.06em;line-height:1.56}
-.frayer-trigger{display:inline-flex;align-items:center;margin:.25rem 0 .45rem 3.2rem;padding:.28rem .72rem;border:1px solid #8aa9bf;border-radius:999px;background:#f3f8fb;color:#185278;font:600 .8rem system-ui,sans-serif;cursor:pointer}
-.frayer-trigger:hover,.frayer-trigger:focus-visible{background:#dceef8;outline-offset:3px}
+/* Mathematical glossary: click the term for one accessible, definition-first popup. */
 .frayer-clickable-title{cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:.2em}
-.frayer-clickable-title:focus-visible{outline:3px solid #267aa8;outline-offset:3px}
-.frayer-dialog{width:min(940px,calc(100vw - 1.5rem));max-width:940px;max-height:calc(100dvh - 2rem);padding:0;border:1px solid #7794a6;border-radius:14px;background:#fff;color:#182c37;box-shadow:0 12px 55px #14283f55;overflow:auto}
-.frayer-dialog::backdrop{background:#132333aa;backdrop-filter:blur(3px)}
-.frayer-inner{padding:clamp(1rem,3vw,2rem);font:1rem/1.52 system-ui,sans-serif}
-.frayer-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:#315870;font-size:.76rem;font-weight:700;letter-spacing:.075em}
-.frayer-close{border:1px solid #90a5b3;border-radius:50%;background:white;color:#1b3b4e;width:2.2rem;height:2.2rem;font-size:1.6rem;cursor:pointer}
-.frayer-title{font:700 clamp(1.6rem,3.5vw,2.5rem)/1.2 system-ui,sans-serif;text-align:center;margin:.65rem 0 1.15rem}
-.frayer-definition{border:2px solid #29638a;border-left:7px solid #29638a;border-radius:9px;background:#f1f7fb;padding:1rem 1.3rem;margin:0 0 .8rem}
-.frayer-definition h3{font:700 .91rem system-ui,sans-serif;letter-spacing:.045em;text-transform:uppercase;color:#174d71;margin:0 0 .55rem}
-.frayer-definition-content,.frayer-definition-content p{font-size:clamp(1.15rem,2vw,1.4rem)!important;line-height:1.6!important;margin:0!important}
-.frayer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
-.frayer-cell{min-height:170px;border:1.5px solid #92acbc;border-radius:9px;background:#f6fafc;padding:1rem}
+.frayer-clickable-title:hover{color:#17577a}
+.frayer-clickable-title:focus-visible,.glossary-term-inline:focus-visible{outline:3px solid #267aa8;outline-offset:3px}
+.glossary-term-inline{cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
+.frayer-dialog{width:min(940px,calc(100vw - 1.5rem));max-width:940px;max-height:calc(100dvh - 2rem);padding:0;border:1px solid #7997aa;border-radius:14px;background:#fff;color:#183044;box-shadow:0 12px 55px #14283f55;overflow:auto}
+.frayer-dialog::backdrop{background:#13233394;backdrop-filter:blur(3px)}
+.frayer-inner{padding:clamp(1.1rem,3vw,2rem);font:1rem/1.52 system-ui,sans-serif}
+.frayer-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;color:#345c74;font:700 .76rem/1.4 system-ui,sans-serif;letter-spacing:.08em}
+.frayer-close{border:1px solid #91a7b6;border-radius:50%;background:white;color:#1b3b4e;width:2.4rem;height:2.4rem;font:1.7rem/1 system-ui,sans-serif;cursor:pointer}
+.frayer-close:hover,.frayer-close:focus-visible{background:#eaf3f9;outline-offset:3px}
+.frayer-title{font:700 clamp(1.5rem,3.5vw,2.45rem)/1.2 system-ui,sans-serif;text-align:left;margin:.55rem 0 1.15rem}
+.frayer-definition{border:2px solid #29638a;border-left:7px solid #29638a;border-radius:10px;background:#f1f7fb;padding:1.15rem 1.35rem;margin:0 0 .9rem}
+.frayer-definition h3{font:700 .87rem/1.4 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:#174d71;margin:0 0 .65rem}
+.frayer-definition-content,.frayer-definition-content p{font:clamp(1.12rem,2vw,1.35rem)/1.6 system-ui,sans-serif;margin:0!important}
+.frayer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem}
+.frayer-cell{min-height:160px;border:1.5px solid #92acbc;border-radius:9px;background:#f6fafc;padding:1rem 1.05rem}
 .frayer-cell:nth-child(1){border-color:#79a49a;background:#f4faf7}
 .frayer-cell:nth-child(2){border-color:#7d9dc2;background:#f4f7fc}
 .frayer-cell:nth-child(3){border-color:#c39b9b;background:#fcf6f6}
-.frayer-cell h3{font:700 .85rem/1.4 system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;margin:0 0 .65rem;color:#29495e}
-.frayer-cell p{font:1.07rem/1.5 system-ui,sans-serif;margin:0;white-space:pre-line;overflow-wrap:anywhere}
-.frayer-note{font:italic .94rem/1.5 system-ui,sans-serif;text-align:center;color:#455b68;margin:1rem .5rem 0}
-@media(max-width:700px){.frayer-grid{grid-template-columns:1fr}.frayer-cell{min-height:auto}.frayer-trigger{margin-left:.4rem}}
-@media print{.frayer-dialog,.frayer-trigger{display:none!important}}
-
-/* Stage 1: an unobtrusive, readable glossary definition. */
-.glossary-quick-dialog{width:min(630px,calc(100vw - 1.5rem));max-width:630px;max-height:calc(100dvh - 2rem);padding:0;border:1px solid #8095a8;border-radius:14px;background:#fff;color:#1e3343;box-shadow:0 12px 45px #152b4055;overflow:auto}
-.glossary-quick-dialog::backdrop{background:#13233380;backdrop-filter:blur(2px)}
-.glossary-quick-inner{padding:clamp(1.1rem,3vw,2rem);font:1rem/1.5 system-ui,sans-serif}
-.glossary-quick-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;font:700 .77rem/1.3 system-ui,sans-serif;letter-spacing:.07em;color:#305b77}
-.glossary-quick-close{border:1px solid #9cadb9;background:#fff;border-radius:50%;color:#213f54;width:2.2rem;height:2.2rem;font:1.55rem/1 system-ui,sans-serif;cursor:pointer}
-.glossary-quick-title{margin:.7rem 0 .65rem;font:700 clamp(1.35rem,3vw,1.95rem)/1.2 system-ui,sans-serif;color:#193d57}
-.glossary-quick-definition,.glossary-quick-definition p{font:1.17rem/1.6 system-ui,sans-serif;margin:0!important}
-.glossary-quick-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.45rem}
-.glossary-quick-explore,.glossary-quick-done,.frayer-back{padding:.57rem .9rem;border:1px solid #306c92;border-radius:9px;font:600 .91rem system-ui,sans-serif;cursor:pointer}
-.glossary-quick-explore{background:#275f83;color:white}
-.glossary-quick-done,.frayer-back{background:white;color:#245b7b}
-.glossary-quick-explore:hover,.glossary-quick-explore:focus-visible{background:#17435f}
-.glossary-quick-done:hover,.frayer-back:hover{background:#eef5f9}
-.frayer-footer{display:flex;justify-content:flex-start;margin-top:1rem}
-.glossary-term-inline{cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
-.glossary-term-inline:focus-visible{outline:3px solid #267aa8;outline-offset:2px}
-@media print{.glossary-quick-dialog{display:none!important}}
+.frayer-cell h3{font:700 .84rem/1.4 system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;margin:0 0 .65rem;color:#29495e}
+.frayer-cell p{font:1.06rem/1.52 system-ui,sans-serif;margin:0;white-space:pre-line;overflow-wrap:anywhere}
+@media(max-width:690px){.frayer-grid{grid-template-columns:1fr}.frayer-cell{min-height:auto}.frayer-title{text-align:center}}
+@media print{.frayer-dialog{display:none!important}.frayer-clickable-title{text-decoration:none!important}}
