@@ -11,6 +11,7 @@
     <title>Introduction</title>
     <introduction><p>Numbers help us describe quantities, positions, measurements and patterns. A number is not the same as the symbol used to write it. For example, twelve objects can be represented by 12, by a diagram of twelve dots, or by an expression such as 3 × 4.</p></introduction>
     <p>The natural numbers are <m>\mathbb{N}=\{1,2,3,\ldots\}</m>. The integers are <m>\mathbb{Z}=\{\ldots,-2,-1,0,1,2,\ldots\}</m>. The rational numbers are quotients of integers <m>\frac{a}{b}</m> with <m>b\ne0</m>. In this book <m>0\notin\mathbb{N}</m>, and <m>\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}</m>.</p>
+    <p><em>One connected family, not isolated topics.</em> Each extension of a number system lets us answer new questions. Natural numbers help us count; including zero and negatives gives integers; ratios of integers give rational numbers; irrational numbers complete the real number line. We can study a number in several of these systems at once. For example, <m>-3=\frac{-3}{1}</m> is both an integer and a rational number. The names identify properties of numbers; they are not walls between chapters.</p>
     <p>Study a number through examples, diagrams, the number line and calculations. Ask whether a result is reasonable before accepting it.</p>
   </section>
   <section xml:id="number-introduction-practice">
