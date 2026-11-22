@@ -35,6 +35,7 @@
 <part xml:id="part-jc-introduction">
       <title>Introduction to Junior Cycle Mathematics</title>
       <xi:include href="./jc-course-introduction.ptx"/>
+      <xi:include href="./jc-mathematical-structure.ptx"/>
       <xi:include href="./jc-unifying-outcomes.ptx"/>
     </part>
 
