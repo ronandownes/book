@@ -14,16 +14,49 @@
       </titlepage>
 
       <preface xml:id="welcome">
-        <title>Welcome</title>
-        <p>Welcome to <em>Irish School Maths</em>, a free, interactive mathematics book for students from First Year to Sixth Year, whatever course or level you are studying.</p>
-        <p><em>My promise is to support and challenge you, whatever your starting point.</em> Mathematics should be something you can read, see, explore and enjoy. You'll find clear explanations, carefully designed diagrams, worked examples, dynamic graphs, interactive applications and quizzes. Where available, audio and video offer further ways in. Instead of simply looking at mathematics on a page, I want you to experiment with it, change things, make predictions and receive useful feedback as you go.</p>
-        <p>Mathematics builds on earlier ideas. Sometimes the difficulty isn't today's topic but something you met years ago. Diagnostic questions and links to prerequisite material are intended to help you find what you need without getting stuck. And if you're ready to go further, follow your curiosity: try a harder investigation, a project or even a glimpse of Leaving Certificate mathematics while you're still in Junior Cycle.</p>
-        <p>Mathematics is more than calculations. Its language, logic, diagrams and connections matter too. One of my greatest pleasures after years of teaching is staying with an idea until something difficult becomes wonderfully simple. <em>Don't settle for a high mark if there's still something you want to understand.</em></p>
-        <p>You might think I'm crazy putting an equation in a welcome. But take a look:</p>
-        <me>\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\cdots=\frac{\pi^2}{6}</me>
-        <p>Infinitely many fractions involving square numbers add up to an expression involving <m>\pi</m> — the number you know from circles. <em>OMG!</em> Leonhard Euler proved this beautiful connection. You don't need to understand it yet. I hope one day you'll look at it and feel the same excitement I do.</p>
-        <p><em>Come with me. Let's discover the craft of mathematics.</em></p>
-        <p><em>Ronan Downes</em></p>
+        <title>Welcome to the Student</title>
+        <p><em>Welcome. This website is for you.</em></p>
+        <p>I've been teaching mathematics for many years, and I love it. I want to share that enthusiasm with you. Whether you find maths easy, difficult, exciting or frustrating, you're welcome here.</p>
+        <p>I want you to get the best grades you possibly can. But more importantly, I want you to understand mathematics, think critically, solve unfamiliar problems and develop skills you'll take with you into Senior Cycle, third-level education, work and life.</p>
+
+        <section xml:id="welcome-jump-right-in">
+          <title>Jump Right In</title>
+          <p>There's one sentence I'd love you to leave behind: <em>“We haven't done that yet.”</em></p>
+          <p><em>Well, let's do it now!</em></p>
+          <p>We don't have to wait for a particular chapter to use a graph, a diagram, a function or an interesting mathematical idea. If a picture helps us understand something, I'll show you the picture. If a graph makes things clearer, we'll draw the graph. And if something looks interesting, let's explore it.</p>
+          <p>The same goes for questions such as “Is this Higher Level or Ordinary Level?” and “Will this be on the exam?” Of course your examinations matter, and I'll help you prepare for them. But I don't want examination boundaries deciding how far your curiosity can take you.</p>
+        </section>
+
+        <section xml:id="welcome-full-circle">
+          <title>Full Circle Maths</title>
+          <p>Here's something wonderful about mathematics: we can often start at different points and find our way around the same ideas.</p>
+          <p>Multiplication and division are connected. Expanding brackets and factorising are two directions of the same journey. We can move between numbers, algebra, graphs, diagrams and words, discovering connections along the way.</p>
+          <p>Sometimes one direction is easier than the other. So why not begin with the easier direction and see what it teaches us?</p>
+          <p><em>Around and around we go, understanding a little more each time.</em> That's the idea behind <em>Full Circle Maths</em>.</p>
+          <p>We'll also discover the importance of starting with simple, special cases before exploring more general situations. We'll learn to distinguish a useful trick or method from the mathematical principle that explains why it works.</p>
+          <p>I want you to understand mathematics so well that you can explain it yourself, using its language with confidence.</p>
+        </section>
+
+        <section xml:id="welcome-make-the-question">
+          <title>Make Up the Question</title>
+          <p>Why must we always begin with a question and search for the answer?</p>
+          <p>Let's sometimes begin with an answer and <em>make up the question</em>.</p>
+          <p>Change a number. Change a condition. Draw a different diagram. Ask what happens if something stays the same, or if something changes.</p>
+          <p>I'll give you plenty of examination-style questions, investigations, quizzes and interactive activities. But I want you to become someone who can ask good questions too.</p>
+          <p>You'll learn mathematics through problem-solving, not just practise problem-solving after learning a collection of rules.</p>
+        </section>
+
+        <section xml:id="welcome-learn-to-learn">
+          <title>Learn How to Learn</title>
+          <p>I'll help you build on what you already know, make difficult ideas more manageable and avoid unnecessary mental overload. We'll use diagrams, examples, technology and different ways of looking at the same problem.</p>
+          <p>You'll learn to choose useful strategies, organise your thinking, check your understanding and recognise when you need another approach.</p>
+          <p>These are learning skills that will serve you well beyond mathematics.</p>
+          <p>I'll provide the opportunities, explanations and resources. You bring your curiosity, creativity and willingness to explore.</p>
+          <p>I hope you'll sometimes become so absorbed in what you're doing that you'll hardly notice how much you're learning.</p>
+          <p><em>This is your learning. Make the most of it.</em></p>
+          <p><em>Let's jump right in.</em></p>
+          <p><em>Ronan Downes</em></p>
+        </section>
       </preface>
 
       <preface xml:id="project-preface">
