@@ -2,7 +2,7 @@
 <appendix xml:id="geometry-appendix-b">
   <title>Geometry for Post-primary School Mathematics</title>
   <introduction>
-    <p>This is Appendix B of the official Junior Cycle Mathematics specification. It is the single reference location for the formal geometry material used throughout this book. This is a working transcription of the opening portion only. It has not yet undergone complete line-by-line verification against the official source; the remainder, including all later theorems, proofs, constructions and diagrams, is still to be added.</p>
+    <p>This is Appendix B of the official Junior Cycle Mathematics specification. It is the single reference location for the formal geometry material used throughout this book. The numbered definitions below are only an initial transcription and are not yet a verified complete native PreTeXt edition. For the complete original Appendix B, including every mathematical diagram and all later theorems and proofs, use the full illustrated source edition: <url href="geometry-appendix-b-complete.html" visual="Open the complete illustrated Appendix B (49 pages)"/>. The full source edition preserves the original pages as scalable vector graphics.</p>
   </introduction>
   <section xml:id="geometry-app-b-theory">
     <title>The Theory</title>
