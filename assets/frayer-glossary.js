@@ -62,7 +62,7 @@
   const summary = document.createElement("dialog");
   summary.className = "glossary-quick-dialog";
   summary.setAttribute("aria-label", "Glossary definition");
-  summary.innerHTML = '<div class="glossary-quick-inner"><div class="glossary-quick-top"><span>MATHEMATICAL GLOSSARY</span><button class="glossary-quick-close" type="button" aria-label="Close definition">×</button></div><h2 class="glossary-quick-title"></h2><div class="glossary-quick-definition"></div><div class="glossary-quick-actions"><button class="glossary-quick-explore" type="button">Explore Frayer diagram</button><button class="glossary-quick-done" type="button">That's enough</button></div></div>';
+  summary.innerHTML = '<div class="glossary-quick-inner"><div class="glossary-quick-top"><span>MATHEMATICAL GLOSSARY</span><button class="glossary-quick-close" type="button" aria-label="Close definition">×</button></div><h2 class="glossary-quick-title"></h2><div class="glossary-quick-definition"></div><div class="glossary-quick-actions"><button class="glossary-quick-explore" type="button">Explore Frayer diagram</button><button class="glossary-quick-done" type="button">Done</button></div></div>';
   document.body.append(summary);
   const frayer = document.createElement("dialog");
   frayer.className = "frayer-dialog";
