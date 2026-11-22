@@ -71,6 +71,12 @@ jobs:
         run: python scripts/fetch_ty_news_photos.py
       - name: Build web textbook
         run: pretext build web
+      - name: Publish complete Appendix B vector reference
+        run: |
+          set -euo pipefail
+          python scripts/publish_complete_geometry_appendix.py
+          test -s output/web/geometry-appendix-b-complete.html
+          test "$(find output/web/geometry-appendix-b-vectors -name '*.svg' | wc -l)" -eq 49
       - name: Add TY story and number theory classroom displays
         run: |
           set -euo pipefail
