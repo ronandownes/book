@@ -3,7 +3,7 @@
 (() => {
   "use strict";
   const resources = [
-    { colour: "red",   short: "A",  label: "Apps",        href: "https://ronandownes.github.io/maths/" },
+    { colour: "red",   short: "A",  label: "Apps",        href: "https://ronandownes.github.io/apps/" },
     { colour: "green", short: "B",  label: "Book",        href: "https://ronandownes.github.io/book/" },
     { colour: "blue",  short: "C",  label: "Calculators", href: "https://ronandownes.github.io/calculator/" },
     { colour: "black", short: "PP", label: "Past Papers", href: "https://ronandownes.github.io/pastpapers/" }
@@ -12,7 +12,7 @@
     const css = document.createElement("link");
     css.rel = "stylesheet";
     css.href = "quick-links.css?v=3";
-    css.setAttribute("data-maths-navigation", "2");
+    css.setAttribute("data-maths-navigation", "3");
     document.head.append(css);
   }
   function makeNavigation(className, ariaLabel) {
