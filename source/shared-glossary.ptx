@@ -30,7 +30,7 @@
   <gi xml:id="glossary-inequality"><title>inequality</title><p>A statement comparing expressions using symbols such as <m>&lt;</m>, <m>&gt;</m>, <m>\leq</m> or <m>\geq</m>.</p></gi>
   <gi xml:id="glossary-intersection"><title>intersection</title><p>The set of elements common to two or more sets.</p></gi>
   <gi xml:id="glossary-like-terms"><title>like terms</title><p>Terms containing the same variable factors raised to the same powers, whose coefficients can be combined.</p></gi>
-  <gi xml:id="glossary-linear-expression"><title>linear expression</title><p>An expression of the form <m>ax+b</m> in one variable with <m>a\neq0</m>.</p></gi>
+  <gi xml:id="glossary-linear-expression"><title>linear expression</title><p>A polynomial expression of degree one in one or more variables. For example, <m>ax+by+c</m>, where at least one of <m>a</m> and <m>b</m> is non-zero. At school level, a constant term is permitted; in stricter terminology this form is called affine.</p></gi>
   <gi xml:id="glossary-mathematical-model"><title>mathematical model</title><p>A mathematical representation of a situation that helps describe, analyse or predict it.</p></gi>
   <gi xml:id="glossary-principle"><title>mathematical principle</title><p>A mathematical rule or relationship that underlies and justifies a procedure.</p></gi>
   <gi xml:id="glossary-mean"><title>mean</title><p>An average formed by dividing the sum of the values by the number of values.</p></gi>
