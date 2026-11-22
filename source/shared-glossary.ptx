@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <appendix xml:id="chapter-glossary">
- <title>Mathematical Glossary</title>
+ <title>Frayer Diagram Glossary</title>
  <glossary xml:id="glossary-mathematics">
- <title>Definitions</title>
+ <title>Definitions and Explorations</title>
   <gi xml:id="glossary-absolute-value"><title>absolute value</title><p>The distance of a number from zero on the number line, never negative.</p></gi>
   <gi xml:id="glossary-algebraic-expression"><title>algebraic expression</title><p>A combination of numbers, variables and operations that represents a value without making a statement of equality.</p></gi>
   <gi xml:id="glossary-algorithm"><title>algorithm</title><p>A precise sequence of steps which, when followed under the stated conditions, completes a calculation or task.</p></gi>
