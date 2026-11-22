@@ -282,8 +282,8 @@ jobs:
           for term in ("glossary-linear-expression", "glossary-like-terms", "glossary-bracket"):
               if term not in html:
                   raise SystemExit("Missing glossary entry: " + term)
-          css = '<link rel="stylesheet" href="frayer-glossary.css?v=1" data-frayer-glossary="true"/>'
-          js = '<script defer src="frayer-glossary.js?v=1" data-frayer-glossary="true"></script>'
+          css = '<link rel="stylesheet" href="frayer-glossary.css?v=2" data-frayer-glossary="true"/>'
+          js = '<script defer src="frayer-glossary.js?v=2" data-frayer-glossary="true"></script>'
           if "</head>" not in html or "</body>" not in html:
               raise SystemExit("Unexpected glossary HTML structure")
           if 'data-frayer-glossary="true"' not in html:
