@@ -15,52 +15,20 @@
 
       <preface xml:id="welcome">
         <title>Welcome to You, the Student</title>
-        <p><em>This website is for you.</em></p>
-        <p>I've been teaching mathematics for many years, and I love it. I want to share that enthusiasm with you. Whether you find maths easy, difficult, exciting or frustrating, you're welcome here.</p>
-        <p>I want you to get the best grades you possibly can. But I want more for you than examination results: the confidence to think critically, communicate, tackle unfamiliar problems and carry what you've learned into Senior Cycle, further study, work and life.</p>
-        <section xml:id="welcome-jump-right-in">
-          <title>Jump Right In</title>
-          <p>There's one sentence I'd love you to leave behind: <em>“We haven't done that yet.”</em> Well, let's do it now!</p>
-          <p>I'm not going to wait for a chapter called “Graphs” before showing you a graph. If a function, a diagram or a different way of seeing a problem helps us, we'll use it straight away. We'll begin with something you can understand and build from there.</p>
-          <p>I'll help you prepare for your examinations, but I don't want questions such as “Is this Higher Level or Ordinary Level?” or “Will this be on the exam?” to set the limits of your curiosity.</p>
-        </section>
-        <section xml:id="welcome-full-circle">
-          <title>Full Circle Maths</title>
-          <p>Much of mathematics is about moving from one form of an idea to another and finding our way back again. We can start almost anywhere on that circle.</p>
-          <p>Think of multiplication and division, or expanding brackets and factorising: one direction often helps us understand the other. And sometimes the journey takes a surprising turn.</p>
-          <p>Squaring 2 gives 4. But ask, “Which real numbers have square 4?” and there are two answers: 2 and -2. Working backwards has given us a branch! The inverse relation has more than one possible value, so it isn't an ordinary single-valued inverse function unless we restrict the domain. There's a mathematical name for that distinction, and we'll learn it together.</p>
-          <p><em>Around and around we go, seeing something new each time.</em> That's what I mean by <em>Full Circle Maths</em>.</p>
-          <p>We'll start with simple special cases, look for patterns and then explore what is true in general. We'll be careful not to mistake a special case for a general rule. We'll also distinguish a useful strategy or shortcut from the fundamental mathematical principle that makes it work.</p>
-        </section>
-        <section xml:id="welcome-language">
-          <title>Learn to Speak Mathematics</title>
-          <p>We can start with a real-world problem, explain it in everyday language, draw it and work towards a solution. Then we can discover the precise mathematical words and symbols that let us express a big idea clearly and concisely.</p>
-          <p>Words such as <em>symmetry</em>, <em>discrete</em>, <em>point</em> and <em>function</em> are tools for thinking, not vocabulary to memorise without understanding.</p>
-          <p>I want you to become comfortable explaining a mathematical idea aloud, drawing your own representation and discussing your reasoning without needing a textbook open in front of you. I want the language of mathematics to become yours.</p>
-        </section>
-        <section xml:id="welcome-make-the-question">
-          <title>Make Up the Question</title>
-          <p>Why must we always begin with a question and search for an answer? Sometimes we'll begin with an answer and <em>make up the question</em>.</p>
-          <p>Change the numbers. Change the conditions. Invent a diagram. Ask what stays the same, what changes and why. Make your own problems and challenge yourself to solve them in more than one way.</p>
-          <p>Examination-style questions will be starting points for exploration, not just exercises at the end. We'll learn mathematics <em>through</em> problem-solving, not wait until we've memorised procedures before we begin.</p>
-        </section>
-        <section xml:id="welcome-learn-to-learn">
-          <title>Learn How to Learn</title>
-          <p>Calculating accurately and using procedures matter, but mathematical proficiency is much more than that. We'll develop five connected strengths: <em>conceptual understanding</em>, <em>procedural fluency</em>, <em>strategic competence</em>, <em>adaptive reasoning</em> and <em>productive disposition</em> — believing mathematics makes sense and that you can learn it.</p>
-          <p>We'll use diagrams, graphs, words, symbols and technology to make ideas visible. I'll help you build on what you know, manage the mental effort of learning, select strategies, check your understanding and gradually become an independent learner.</p>
-          <p>I'll bring the explanations, activities, investigations and opportunities. You bring your curiosity, creativity and willingness to try. I hope you'll sometimes get so absorbed in an idea that you'll hardly notice how much you're learning.</p>
-          <p><em>This is your learning. Let's jump right in.</em></p>
-          <p><em>Ronan Downes</em></p>
-        </section>
+        <p><em>This website is for you.</em> I've taught mathematics for many years, and I love it. Whether you love maths, find it difficult or haven't made up your mind, you're welcome here. I want you to get the best grades you can, but even more I want you to think clearly, ask your own questions and take those skills into whatever you do next.</p>
+        <p><em>Jump right in.</em> There's one sentence I hope you'll leave behind: “We haven't done that yet.” Well, let's do it now! We won't wait for a chapter about graphs before drawing a graph, or for a particular school year before exploring a useful idea. We can start wherever a question takes us.</p>
+        <p><em>Full Circle Maths.</em> So much of mathematics involves moving between connected ideas and finding our way back. Multiplication and division, expanding and factorising: one direction helps us understand the other. Sometimes we discover a branch. Squaring either 2 or -2 gives 4, so working backwards from 4 gives two possible answers. Isn't that fascinating?</p>
+        <p><em>Make up the question.</em> Why always begin with a question and look for the answer? Sometimes let's begin with the answer and invent our own questions. Change the conditions, test a special case, look for a general rule, draw a picture or explain your reasoning aloud. We'll learn to recognise the difference between a handy method and the mathematical principle behind it.</p>
+        <p>Mathematical language is yours to use. We'll move from familiar situations and everyday words to precise ideas such as symmetry, discrete, function and inverse. Procedures and calculations matter, but so do understanding, choosing strategies, reasoning and believing that mathematics makes sense. I'll use diagrams, technology, examples and feedback to make learning manageable, helping you learn how to learn.</p>
+        <p>I'll bring the opportunities and resources. You bring your imagination, curiosity and willingness to try. <em>Let's jump right in.</em></p>
+        <p><em>Ronan Downes</em></p>
       </preface>
 
-<preface xml:id="about-the-author">
+      <preface xml:id="about-the-author">
         <title>About the Author</title>
-        <p>Ronan Downes is a Mathematics teacher based in Limerick, Ireland. He studied Physics at NUI Galway and later graduated with an honours degree in Physical Optoelectronics from the University of Essex. After completing a Higher Diploma in Education, he taught Physics, Mathematics and Science in secondary schools for four years.</p>
-        <p>He then moved into telecommunications, working as a systems engineer and access engineer with Esat Digifone. He later became self-employed in multimedia, including photography, video production and web development.</p>
-        <p>A lifelong interest in learning brought him back to university, where he completed a <url href="https://www.ul.ie/study/postgraduate/mathematical-modelling-msc" visual="Master's degree in Mathematical Modelling"/> at the University of Limerick. He subsequently returned to classroom teaching and later completed a <url href="https://www.cct.ie/course/masters-data-analytics-postgraduate-msc/" visual="Master's degree in Data Analytics"/> at CCT College Dublin. His experience in modelling, programming and computational thinking informs the explanations and interactive resources in this book.</p>
-        <p>He has also worked for many years as an examiner with the State Examinations Commission. That experience has reinforced the importance of teaching students to communicate their mathematical thinking.</p>
-        <p>His aim is to reduce unnecessary cognitive load without removing the ideas, reasoning and choices that give mathematics its meaning. His guiding principle is inspired by a saying commonly attributed to Albert Einstein: <em>Making maths as simple as possible, but not too simple.</em></p>
+        <p>Ronan Downes is an experienced and enthusiastic mathematics teacher who has taught in a wide range of schools and continues to work in education. He has also worked in telecommunications and been self-employed in photography, video production and website design.</p>
+        <p>His interests span mathematics, physics, computer science, data analytics and artificial intelligence. Mathematics offers ways of exploring almost any idea; physics shows how mathematical thinking meets observation, experiment and the discipline of evidence. Computer science makes a website like this possible, while machine learning and AI offer additional tools.</p>
+        <p>What matters most here, though, is teaching and learning. Ronan draws on years of classroom experience, cognitive load theory, Universal Design for Learning and evidence-informed pedagogy to make mathematics accessible, interesting and challenging. He is developing this free resource so that students can investigate, understand, communicate and enjoy mathematics for themselves.</p>
       </preface>
     </frontmatter>
 
