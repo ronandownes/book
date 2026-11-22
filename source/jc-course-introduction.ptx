@@ -45,10 +45,19 @@
     <p>Some questions contain diagrams, starting steps or prompts; later questions remove these supports. Students also practise drawing, labelling, organising and communicating complete solutions independently. A scaffold is temporary assistance, not a substitute for mathematical thinking.</p>
     <p>Interactive tools, calculators and dynamic representations support exploration and checking when appropriate. They do not replace the need to explain or justify a result.</p>
   </section>
-  <section xml:id="jc-problem-solving-intro"><title>Problem Solving and Mathematical Reasoning</title>
-    <p>First understand the question and identify what is known and what must be found. Represent the situation, select a strategy, carry it out, interpret the result and check whether it is reasonable. Sometimes a diagram, table, simpler example or different representation reveals the way forward.</p>
-    <p>There may be more than one valid method. Comparing methods, explaining assumptions and testing generalisations helps us understand mathematics rather than memorise isolated rules.</p>
+  <section xml:id="jc-problem-solving-intro"><title>Problem Solving from the Beginning: Pólya's Four Stages</title>
+    <p>Problem solving is not a chapter to be reached after all the techniques have been taught. It is a way of learning mathematics from the first lesson. Give yourself a chance to explore a question before being shown a complete procedure. Draw a picture, arrange objects, try a small case, build a table, make a graph, use a Venn diagram or write an expression. These are ways of representing and understanding the mathematics, not rewards for finishing a separate topic.</p>
+    <p>George Pólya (1887–1985), a mathematician and influential writer on problem solving, described four useful stages in his 1945 book <em>How to Solve It</em>. You can <url href="https://commons.wikimedia.org/wiki/File:ETH-BIB-Polya,_Georg_(1887-1985)-Portrait-Portr_13887-19-AL.tif" visual="see a historical photograph of George Pólya"/> (ETH Library, public-domain image).</p>
+    <ol>
+      <li><p><em>Understand the problem.</em> What do you know? What are you trying to find or explain? Can you restate it in your own words, draw it or test an example?</p></li>
+      <li><p><em>Devise a plan.</em> Choose a representation or strategy. Could a diagram, graph, table, simpler case, related question or working backwards help?</p></li>
+      <li><p><em>Carry out the plan.</em> Calculate, construct, reason and explain. If your method stops working, change the plan or return to the question.</p></li>
+      <li><p><em>Look back.</em> Does the answer make sense? Can you check it another way, explain it, or change the conditions to discover something more general?</p></li>
+    </ol>
+    <p>These are not four rigid boxes. Thinking moves backwards and forwards. A diagram might clarify a question while you are planning; an unexpected answer might make you reconsider what the question means. The aim is to make the problem-solving process familiar and natural, until you can take increasing charge of it yourself.</p>
+    <p><em>Exploration and explanation belong together.</em> It is valuable to try a problem before being shown the method, but productive struggle need not mean being left to guess indefinitely. Clear teacher modelling, carefully chosen worked examples, feedback and guided practice can help when a new concept or procedure needs explanation. We then return to trying, reasoning and applying it independently.</p>
     <p>The six elements of the <xref ref="jc-outcomes-unifying" text="title"/> are building blocks, representation, connections, problem solving, generalisation and proof, and communication. Their thirteen official learning outcomes can be studied together or accessed individually from the contents panel.</p>
+    <p><em>Further reading:</em> <url href="https://www.utsc.utoronto.ca/learningstrategies/polyas-problem-solving" visual="University of Toronto: Pólya's problem-solving framework"/>.</p>
   </section>
   <section xml:id="jc-assessment-intro"><title>Assessment, CBAs and Examinations</title>
     <p>Assessment takes many forms: questioning, classwork, homework, quizzes, investigations, discussion, feedback and examinations. These provide evidence of what has been understood and what needs further work.</p>
