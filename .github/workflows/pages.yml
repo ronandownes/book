@@ -294,8 +294,8 @@ jobs:
           for term in ("glossary-linear-expression", "glossary-like-terms", "glossary-bracket"):
               if term not in glossary.read_text(encoding="utf-8"):
                   raise SystemExit("Missing glossary term: " + term)
-          css = '<link rel="stylesheet" href="frayer-glossary.css?v=4" data-frayer-glossary="true"/>'
-          js = '<script defer src="frayer-glossary.js?v=4" data-frayer-glossary="true"></script>'
+          css = '<link rel="stylesheet" href="frayer-glossary.css?v=5" data-frayer-glossary="true"/>'
+          js = '<script defer src="frayer-glossary.js?v=5" data-frayer-glossary="true"></script>'
           count=0
           for page in root.glob("*.html"):
               html=page.read_text(encoding="utf-8")
