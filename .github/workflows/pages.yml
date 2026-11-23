@@ -283,6 +283,7 @@ jobs:
         run: |
           set -euo pipefail
           node --check assets/frayer-glossary.js
+          node scripts/audit_glossary_data.js
           cp assets/frayer-glossary.js output/web/frayer-glossary.js
           cp assets/frayer-glossary.css output/web/frayer-glossary.css
           python - <<'PY'
