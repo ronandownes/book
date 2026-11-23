@@ -11,7 +11,8 @@
     <!-- Focus navigation on the current page; visitors can expand/collapse branches. -->
     <tableofcontents focused="yes" preexpanded-levels="1"/>
     <baseurl href="https://ronandownes.github.io/book/"/>
-    <brandlogo source="four-dots.svg" url="https://ronandownes.github.io/book/"/>
+    <!-- Compact site-wide header: retain the book title only. -->
+    <banner subtitle="no" byline="no"/>
     <!-- Native PreTeXt textbook layout; colours align with Maths Apps. -->
     <css theme="default-modern" palette="blue-green" provide-dark-mode="no"/>
   </html>
