@@ -203,6 +203,26 @@ def produce(source_pdf:Path=PDF):
                 p=ET.SubElement(sec,'p'); ET.SubElement(p,'em').text=content
             else:append_text(sec,content)
             words+=len(content.split())
+    # Preserve the first three hand-typeset semantic sections from the original
+    # book. They are editorially cleaner than PDF text extraction, especially
+    # for the Ruler Axiom, mathematical fractions, and notes about angles.
+    manual_path=Path('source/appendix-b-manual-sections.xml')
+    if manual_path.is_file():
+        from copy import deepcopy
+        manual_root=ET.parse(manual_path).getroot()
+        legacy_ids={'theory':'geometry-app-b-theory','length-distance':'geometry-app-b-length-distance','angles':'geometry-app-b-angles'}
+        for slug, original_id in legacy_ids.items():
+            saved=next((node for node in manual_root.findall('section') if node.get(XMLID)==original_id),None)
+            if saved is None:raise RuntimeError('Missing hand-typeset section '+original_id)
+            restored=deepcopy(saved)
+            # Definition 12 follows the original eleven definitions in the
+            # official source; keep it while retaining the hand-typeset text.
+            if slug=='angles':
+                for node in sections[slug].findall('paragraphs'):
+                    if node.get(XMLID)=='geometry-app-b-definition-12':restored.append(deepcopy(node))
+            sections[slug]=restored
+    else:
+        print('WARNING: manual source not present; using PDF-transcribed initial sections')
     append_text(sections['copyright'],'© 2017 Government of Ireland')
     for slug,_ in GROUPS:
         sec=sections[slug];ET.indent(sec,space='  ')
