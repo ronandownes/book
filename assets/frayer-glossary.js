@@ -63,7 +63,7 @@
   const dialog = document.createElement("dialog");
   dialog.className = "frayer-dialog";
   dialog.setAttribute("aria-label","Mathematical glossary");
-  dialog.innerHTML = '<div class="frayer-inner"><div class="frayer-top"><span>MATHEMATICAL GLOSSARY</span><button class="frayer-close" type="button" aria-label="Close definition">×</button></div><h2 class="frayer-title"></h2><div class="frayer-definition"><h3>Definition</h3><div class="frayer-definition-content"></div></div><div class="frayer-grid"><section class="frayer-cell"><h3>Characteristics</h3><p></p></section><section class="frayer-cell"><h3>Examples</h3><p></p></section><section class="frayer-cell"><h3>Non-examples</h3><p></p></section></div></div>';
+  dialog.innerHTML = '<div class="frayer-inner"><div class="frayer-top"><span>MATHEMATICAL GLOSSARY</span><button class="frayer-close" type="button" aria-label="Close definition">×</button></div><h2 class="frayer-title"></h2><div class="frayer-definition"><h3>Definition</h3><div class="frayer-definition-content"></div></div><div class="glossary-visual" hidden></div><div class="frayer-grid"><section class="frayer-cell"><h3>Characteristics</h3><p></p></section><section class="frayer-cell"><h3>Examples</h3><p></p></section><section class="frayer-cell"><h3>Non-examples</h3><p></p></section></div></div>';
   document.body.append(dialog);
   const closeButton = dialog.querySelector(".frayer-close");
   let lastTrigger = null;
@@ -108,7 +108,28 @@
     dialog.querySelector(".frayer-title").textContent=entry.title;
     const definition=dialog.querySelector(".frayer-definition-content");
     definition.replaceChildren(entry.paragraph.cloneNode(true));
-    dialog.querySelectorAll(".frayer-cell p").forEach((p,i)=>{p.textContent=panels[i];});
+    dialog.querySelectorAll(".frayer-cell").forEach((cell,i)=>{
+      const slot=cell.querySelector("p");
+      slot.replaceChildren();
+      const item=panels[i];
+      if(Array.isArray(item)) {
+        const list=document.createElement("ul");
+        list.className="glossary-example-list";
+        for(const text of item) {
+          const li=document.createElement("li");
+          li.textContent=text;
+          list.append(li);
+        }
+        slot.append(list);
+      } else {
+        slot.textContent=item;
+      }
+    });
+    const visual=dialog.querySelector(".glossary-visual");
+    const illustration=(typeof diagramFor==="function")?diagramFor(slug):"";
+    visual.replaceChildren();
+    visual.hidden=!illustration;
+    if(illustration) visual.innerHTML=illustration;
     if(!dialog.open)dialog.showModal();
     if(!definition.querySelector("mjx-container") && window.MathJax?.typesetPromise)
       window.MathJax.typesetPromise([definition]).catch(()=>{});
