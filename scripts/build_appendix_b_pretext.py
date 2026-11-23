@@ -1,65 +1,208 @@
-"""Generate all Appendix B source pages as PreTeXt figure sections before the book build.
+"""Build reusable, native PreTeXt source from official Appendix B (2018 JC specification).
 
-The SVGs preserve original text and original diagrams. This is a source-page
-facsimile within PreTeXt, NOT yet a fully semantic per-theorem transcription.
+No whole-page PDF images: text is transcribed into XML nodes; each geometrical
+figure is a separate vector SVG made from primitive paths in its source drawing.
+This is a machine-assisted first pass requiring mathematical proofreading.
 """
+from __future__ import annotations
+import re
+import unicodedata
 from pathlib import Path
-from urllib.request import Request, urlopen
+from xml.etree import ElementTree as ET
 import fitz
-import xml.etree.ElementTree as ET
 
-URL = "https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf"
-PDF = Path("assets/syllabus/JC_Mathematics_Specification.pdf")
-FIGURES = Path("assets/geometry-appendix-b")
-OUTPUT = Path("source/appendix-b-native")
-PDF.parent.mkdir(parents=True, exist_ok=True)
-FIGURES.mkdir(parents=True, exist_ok=True)
-OUTPUT.mkdir(parents=True, exist_ok=True)
-
-if not PDF.exists():
-    with urlopen(Request(URL, headers={"User-Agent": "Irish School Maths educational reference"}), timeout=120) as response:
-        PDF.write_bytes(response.read())
-doc = fitz.open(PDF)
-if len(doc) != 76 or "Geometry for" not in doc[26].get_text() or "Government of Ireland" not in doc[75].get_text():
-    raise SystemExit("Unexpected specification: stopping rather than publishing incorrect source")
-
-# Pages are numbered as in the parent JC specification. Every page is included exactly once.
-groups = [
-    ("at-a-glance", "At a glance: definitions, axioms, theorems and corollaries", 27, 29),
-    ("introduction", "1 Introduction", 30, 30),
-    ("system-guiding-principles", "2–3 Formal system and guiding principles", 31, 33),
-    ("level-two-account", "4 Outline of the Level 2 Account", 34, 34),
-    ("terms", "5 Terms", 35, 35),
-    ("theory", "6 The Theory", 36, 36),
-    ("length-distance", "6.1 Length and Distance", 37, 37),
-    ("angles", "6.2 Angles", 38, 38),
-    ("degrees", "6.3 Degrees", 39, 39),
-    ("congruent-triangles", "6.4 Congruent Triangles", 40, 41),
-    ("parallels", "6.5 Parallels", 42, 48),
-    ("perpendicular-quadrilaterals", "6.6–6.7 Perpendicular Lines and Quadrilaterals", 49, 51),
-    ("ratios-similarity", "6.8 Ratios and Similarity", 52, 67),
-    ("constructions", "7 Constructions to Study", 68, 69),
-    ("teaching", "8 Teaching Approaches", 70, 71),
-    ("jcol", "9 JCOL Content", 72, 72),
-    ("jchl", "10 Additional Content for JCHL", 73, 73),
-    ("leaving-certificate", "11–13 Leaving Certificate geometry syllabus content", 74, 75),
-    ("copyright", "Source copyright information", 76, 76),
+PDF = Path('assets/syllabus/JC_Mathematics_Specification.pdf')
+OUT = Path('source/appendix-b-native')
+FIG = Path('assets/geometry-appendix-b')
+XMLID = '{http://www.w3.org/XML/1998/namespace}id'
+GROUPS = [
+ ('at-a-glance','At a glance: Definitions, Axioms, Theorems and Corollaries'),
+ ('introduction','1 Introduction'),
+ ('formal-system','2 The System of Geometry'),
+ ('guiding-principles','3 Guiding Principles'),
+ ('level-two-account','4 Outline of the Level 2 Account'),
+ ('terms','5 Terms'),
+ ('theory','6 The Theory'),
+ ('length-distance','6.1 Length and Distance'),
+ ('angles','6.2 Angles'),
+ ('degrees','6.3 Degrees'),
+ ('congruent-triangles','6.4 Congruent Triangles'),
+ ('parallels','6.5 Parallels'),
+ ('perpendicular-lines','6.6 Perpendicular Lines'),
+ ('quadrilaterals','6.7 Quadrilaterals and Parallelograms'),
+ ('ratios-similarity','6.8 Ratios and Similarity'),
+ ('pythagoras','6.9 Pythagoras'),
+ ('area','6.10 Area'),
+ ('circles','6.11 Circles'),
+ ('special-triangle-points','6.12 Special Triangle Points'),
+ ('constructions','7 Constructions to Study'),
+ ('teaching','8 Teaching Approaches'),
+ ('jcol','9 JCOL Content'),
+ ('jchl','10 Additional Content for JCHL'),
+ ('lcfl','11 Syllabus for LCFL'),
+ ('lcol','12 Syllabus for LCOL'),
+ ('lchl','13 Syllabus for LCHL'),
+ ('copyright','Source copyright information'),
 ]
-assert [n for _,_,a,b in groups for n in range(a,b+1)] == list(range(27,77))
+SECTION_FROM_NUMBER = {
+ '1':'introduction','2':'formal-system','3':'guiding-principles',
+ '4':'level-two-account','5':'terms','6':'theory','6.1':'length-distance',
+ '6.2':'angles','6.3':'degrees','6.4':'congruent-triangles',
+ '6.5':'parallels','6.6':'perpendicular-lines','6.7':'quadrilaterals',
+ '6.8':'ratios-similarity','6.9':'pythagoras','6.10':'area',
+ '6.11':'circles','6.12':'special-triangle-points',
+ '7':'constructions','8':'teaching','9':'jcol','10':'jchl',
+ '11':'lcfl','12':'lcol','13':'lchl',
+}
 
-for slug, title, first, last in groups:
-    root = ET.Element("section", {"{http://www.w3.org/XML/1998/namespace}id": "geometry-b-source-"+slug})
-    ET.SubElement(root, "title").text = title
-    for n in range(first, last+1):
-        page = doc[n-1]
-        svg = page.get_svg_image(text_as_path=False)
-        svgpath = FIGURES / f"official-page-{n}.svg"
-        svgpath.write_text(svg, encoding="utf-8")
-        figure = ET.SubElement(root, "figure", {"{http://www.w3.org/XML/1998/namespace}id": f"geometry-b-page-{n}"})
-        ET.SubElement(figure, "caption").text = f"Official Appendix B, source page {n}"
-        ET.SubElement(figure, "image", {"source": f"geometry-appendix-b/official-page-{n}.svg", "width": "100%"})
-    ET.ElementTree(root).write(OUTPUT / (slug+".ptx"), encoding="unicode", xml_declaration=True)
+LABEL = re.compile(r'^(Definition|Axiom|Theorem|Proposition|Corollary|Notation|Remark|Construction)\s+(\d+)\b\s*(?:\(([^)]*)\))?\s*[.:]?\s*(.*)$',re.I|re.S)
+PROOF = re.compile(r'^(Proof|Converse)\.\s*(.*)$', re.S)
+HEADING = re.compile(r'^(\d+(?:\.\d+)?)\s+([A-Z][^\n]{2,120})$')
+FIGURE = re.compile(r'^Figure\s+(\d+)\.?$',re.I)
+TITLE = re.compile(r'^\d+(?:\.\d+)?\s+[A-Z][^\n]{2,100}$')
+MATH_TOKEN = re.compile(r"(?<![A-Za-z|])(?:∆[A-Z′']+|∠[A-Z′']+|\|(?:∠|∆)?[A-Z′']+\|(?!\|)|\b\d+◦|ℝ)")
 
-assert len(list(FIGURES.glob("official-page-*.svg"))) == 50
-assert len(list(OUTPUT.glob("*.ptx"))) == len(groups)
-print("Appendix B: generated 50 vector pages in",len(groups),"native PreTeXt sections")
+
+def tidy(block: str) -> str:
+    s=unicodedata.normalize('NFKC',block)
+    s=s.replace('−','−').replace('∆','∆').replace('∠','∠')
+    # Unwrap wrapped prose, but retain genuine hyphens in compound words.
+    s=re.sub(r'(?<=\w)-\s*\n\s*(?=[a-z])','',s)
+    s=re.sub(r'\s*\n\s*',' ',s)
+    s=re.sub(r'\s+',' ',s).strip()
+    return s
+
+
+def latex_symbol(s: str) -> str:
+    s=s.replace('∆',r'\triangle ').replace('∠',r'\angle ')
+    s=s.replace('′',"'").replace('◦',r'^\circ').replace('ℝ',r'\mathbb{R}')
+    return s
+
+
+def append_text(parent: ET.Element, txt: str) -> None:
+    """Embed clearly identified mathematical tokens as real PreTeXt inline maths."""
+    p=ET.SubElement(parent,'p')
+    pos=0; tail_to=None
+    for match in MATH_TOKEN.finditer(txt):
+        before=txt[pos:match.start()]
+        if tail_to is None: p.text=(p.text or '')+before
+        else: tail_to.tail=(tail_to.tail or '')+before
+        tail_to=ET.SubElement(p,'m');tail_to.text=latex_symbol(match.group())
+        pos=match.end()
+    if tail_to is None: p.text=(p.text or '')+txt[pos:]
+    else: tail_to.tail=(tail_to.tail or '')+txt[pos:]
+
+
+def num(v): return f'{v:.2f}'.rstrip('0').rstrip('.')
+
+def point(p):return f'{num(p.x)},{num(p.y)}'
+
+
+def draw_svg(page: fitz.Page, index: int, caption_y:float) -> bool:
+    """Recompose ONLY the diagram from separate vector drawing commands, not a page image."""
+    items=[]; bounds=None
+    for d in page.get_drawings():
+        box=d['rect']
+        if not(185 <=box.x0 and box.x1<=480 and caption_y-210<=box.y0 and box.y1<=caption_y-7):continue
+        if box.width<0.5 or box.height<0.5:continue
+        # Reject long typesetting rules, e.g. fraction bars far outside diagram.
+        if box.width>180 and box.height<1:continue
+        path=[]
+        for part in d['items']:
+            t=part[0]
+            if t=='l':path.append('M '+point(part[1])+' L '+point(part[2]))
+            elif t=='c':path.append('M '+point(part[1])+' C '+' '.join(point(x) for x in part[2:5]))
+            elif t=='re':
+                r=part[1];path.append(f'M {num(r.x0)},{num(r.y0)} H {num(r.x1)} V {num(r.y1)} H {num(r.x0)} Z')
+            elif t=='qu':
+                q=part[1];path.append('M '+point(q.ul)+' L '+point(q.ur)+' L '+point(q.lr)+' L '+point(q.ll)+' Z')
+        if not path:continue
+        stroke=d.get('color');fill=d.get('fill')
+        def col(c):return 'rgb('+','.join(str(round(255*n)) for n in c)+')' if c else 'none'
+        a={'d':' '.join(path),'stroke':col(stroke),'fill':col(fill),'stroke-width':num(d.get('width') or 0.5),'stroke-linecap':'round','stroke-linejoin':'round'}
+        if d.get('closePath'):a['d']+=' Z'
+        items.append(a)
+        bounds=box if bounds is None else bounds|box
+    if not items:return False
+    pad=12; b=bounds+(-pad,-pad,pad,pad)
+    svg=ET.Element('svg',{'xmlns':'http://www.w3.org/2000/svg','viewBox':f'{num(b.x0)} {num(b.y0)} {num(b.width)} {num(b.height)}','role':'img','aria-label':f'Geometrical diagram, Figure {index}'})
+    for attrs in items:ET.SubElement(svg,'path',attrs)
+    FIG.mkdir(parents=True,exist_ok=True)
+    ET.ElementTree(svg).write(FIG/f'figure-{index:02d}.svg',encoding='unicode',xml_declaration=True)
+    return True
+
+
+def blocks_from_page(page:fitz.Page):
+    for x0,y0,x1,y1,raw,*_ in page.get_text('blocks',sort=True):
+        # Main column only. Exclude page numbers and repeated side matter.
+        if x0<135 or y0<105 or y0>760:continue
+        s=tidy(raw)
+        if s:yield (x0,y0,x1,y1,s)
+
+
+def produce(source_pdf:Path=PDF):
+    doc=fitz.open(source_pdf)
+    if len(doc)==76:
+        assert 'Geometry for' in doc[26].get_text(), 'Unexpected official PDF layout'
+        pages=[(n,doc[n-1]) for n in range(27,77)]
+    elif len(doc)==50:
+        pages=[(n,doc[n-27]) for n in range(27,77)]
+    else:raise ValueError('Expected 50-page appendix or 76-page specification')
+    OUT.mkdir(parents=True,exist_ok=True);FIG.mkdir(parents=True,exist_ok=True)
+    sections={slug:ET.Element('section',{XMLID:'geometry-b-source-'+slug}) for slug,_ in GROUPS}
+    for slug,title in GROUPS:ET.SubElement(sections[slug],'title').text=title
+    current='at-a-glance'; used=set(); figures=set();count=0;words=0
+    for n,pg in pages:
+        if n==76:current='copyright'
+        for x0,y0,x1,y1,content in blocks_from_page(pg):
+            h=HEADING.match(content)
+            if h and h.group(1) in SECTION_FROM_NUMBER and n>=30 and x0 < 149:
+                target=SECTION_FROM_NUMBER[h.group(1)]
+                # Prevent page-numbered index rows being mistaken for headings.
+                if n>=30:
+                    if current!=target:current=target
+                    else:continue
+                    continue
+            sec=sections[current]
+            m=FIGURE.fullmatch(content)
+            if m:
+                k=int(m.group(1))
+                if k not in figures and draw_svg(pg,k,y0):
+                    fig=ET.SubElement(sec,'figure',{XMLID:f'geometry-b-figure-{k:02d}'})
+                    ET.SubElement(fig,'caption').text=f'Figure {k}. Geometry diagram.'
+                    ET.SubElement(fig,'image',{'source':f'geometry-appendix-b/figure-{k:02d}.svg','width':'75%'})
+                    figures.add(k)
+                else:append_text(sec,content)
+                continue
+            match=None if current=='at-a-glance' else LABEL.match(content)
+            if match and len(content)<1800:
+                kind,ident,qualifier,remainder=match.groups()
+                label=kind.title()+f' {ident}'+(f' ({qualifier})' if qualifier else '')
+                attrs={}
+                if kind.lower() in {'definition','axiom','theorem','corollary','proposition'}:
+                    identifier=f'geometry-app-b-{kind.lower()}-{ident}'
+                    if identifier not in used:attrs[XMLID]=identifier;used.add(identifier)
+                el=ET.SubElement(sec,'paragraphs',attrs)
+                ET.SubElement(el,'title').text=label
+                if remainder:append_text(el,remainder)
+                count+=1
+            elif current!='at-a-glance' and PROOF.match(content):
+                mm=PROOF.match(content)
+                el=ET.SubElement(sec,'paragraphs')
+                ET.SubElement(el,'title').text=mm.group(1)
+                if mm.group(2):append_text(el,mm.group(2))
+                count+=1
+            elif h and not (current=='at-a-glance') and n>=30:
+                p=ET.SubElement(sec,'p'); ET.SubElement(p,'em').text=content
+            else:append_text(sec,content)
+            words+=len(content.split())
+    append_text(sections['copyright'],'© 2017 Government of Ireland')
+    for slug,_ in GROUPS:
+        sec=sections[slug];ET.indent(sec,space='  ')
+        ET.ElementTree(sec).write(OUT/f'{slug}.ptx',encoding='unicode',xml_declaration=True)
+    print('Native sections:',len(GROUPS),'labelled statements:',count,'text words:',words)
+    print('Reusable, isolated figures:',len(figures), sorted(figures))
+    if len(figures)!=31 or words<7000:raise RuntimeError('Incomplete conversion')
+    for filename in OUT.glob('*.ptx'):ET.parse(filename)
+
+if __name__=='__main__':produce()
