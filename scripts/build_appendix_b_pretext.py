@@ -155,7 +155,8 @@ def produce(source_pdf:Path=PDF):
         pages=[(n,doc[n-27]) for n in range(27,77)]
     else:raise ValueError('Expected 50-page appendix or 76-page specification')
     OUT.mkdir(parents=True,exist_ok=True);FIG.mkdir(parents=True,exist_ok=True)
-    sections={slug:ET.Element('section',{XMLID:'geometry-b-source-'+slug}) for slug,_ in GROUPS}
+    legacy_section_ids={'theory':'geometry-app-b-theory','length-distance':'geometry-app-b-length-distance','angles':'geometry-app-b-angles'}
+    sections={slug:ET.Element('section',{XMLID:legacy_section_ids.get(slug,'geometry-b-source-'+slug)}) for slug,_ in GROUPS}
     for slug,title in GROUPS:ET.SubElement(sections[slug],'title').text=title
     current='at-a-glance'; used=set(); figures=set();count=0;words=0
     for n,pg in pages:
