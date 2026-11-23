@@ -10,6 +10,7 @@ import unicodedata
 from pathlib import Path
 from xml.etree import ElementTree as ET
 import fitz
+from urllib.request import Request, urlopen
 
 PDF = Path('assets/syllabus/JC_Mathematics_Specification.pdf')
 OUT = Path('source/appendix-b-native')
@@ -141,6 +142,11 @@ def blocks_from_page(page:fitz.Page):
 
 
 def produce(source_pdf:Path=PDF):
+    if not source_pdf.exists():
+        source_pdf.parent.mkdir(parents=True,exist_ok=True)
+        url='https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf'
+        req=Request(url,headers={'User-Agent':'Full Cycle Maths educational reference'})
+        with urlopen(req,timeout=120) as response:source_pdf.write_bytes(response.read())
     doc=fitz.open(source_pdf)
     if len(doc)==76:
         assert 'Geometry for' in doc[26].get_text(), 'Unexpected official PDF layout'
