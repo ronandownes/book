@@ -22,3 +22,27 @@
 .frayer-cell p{font:1.06rem/1.52 system-ui,sans-serif;margin:0;white-space:pre-line;overflow-wrap:anywhere}
 @media(max-width:690px){.frayer-grid{grid-template-columns:1fr}.frayer-cell{min-height:auto}.frayer-title{text-align:center}}
 @media print{.frayer-dialog{display:none!important}.frayer-clickable-title{text-decoration:none!important}}
+
+/* Individual examples and non-examples, not semicolon-separated prose. */
+.frayer-cell .glossary-example-list{list-style:disc;margin:0;padding-left:1.3rem;display:grid;gap:.55rem}
+.frayer-cell .glossary-example-list li{font:1rem/1.47 system-ui,sans-serif;overflow-wrap:anywhere;padding-left:.15rem}
+.frayer-cell:has(.glossary-example-list){min-height:0}
+.glossary-visual[hidden]{display:none!important}
+.glossary-visual{margin:.6rem 0 1.1rem;padding:.7rem;border:1px solid #c6d8e3;border-radius:11px;background:#fbfdff}
+.glossary-visual figure{margin:0;min-width:0;text-align:center}
+.glossary-visual svg{display:block;width:100%;height:auto;max-height:220px}
+.glossary-visual svg text{font:15px system-ui,sans-serif;fill:#234b65}
+.glossary-visual figcaption{margin:.35rem .2rem 0;font:1rem/1.5 system-ui,sans-serif;color:#24495e}
+.glossary-visual figcaption strong{font-weight:700}
+.glossary-visual figcaption span{display:block}
+.glossary-visual figcaption small{display:block;color:#526a7a;margin-top:.35rem;line-height:1.45}
+.glossary-shape-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem}
+.glossary-shape-grid figure{padding:.45rem;background:#f5f9fb;border-radius:9px}
+.glossary-shape-grid svg{max-height:155px}
+.glossary-simpson{margin:.7rem 0 0!important;padding:.65rem;background:#f4f8fe;border-radius:9px}
+.glossary-simpson svg{max-height:240px}
+.glossary-venn{max-width:530px;margin:.15rem auto!important}
+.glossary-die-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;max-width:360px;margin:1rem auto}
+.glossary-die-grid span{display:flex;align-items:center;justify-content:center;aspect-ratio:1.35;border:2px solid #5c849f;border-radius:9px;background:#f2f8fc;font:bold 1.7rem system-ui,sans-serif}
+@media(max-width:620px){.glossary-shape-grid{grid-template-columns:1fr 1fr}.glossary-shape-grid figure:last-child{grid-column:1/-1;max-width:220px;justify-self:center}.glossary-simpson svg{max-height:210px}}
+@media print{.glossary-visual svg{max-height:200px}}
