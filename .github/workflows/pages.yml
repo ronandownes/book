@@ -1,7 +1,7 @@
 name: Build and publish PreTeXt book
 on:
   push:
-    branches: [main]
+    branches: [main, appendix-b-native-semantic-draft-20261123]
   workflow_dispatch:
 
 permissions:
@@ -318,6 +318,7 @@ jobs:
           path: output/web
 
   deploy:
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
