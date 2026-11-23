@@ -203,6 +203,25 @@ def produce(source_pdf:Path=PDF):
                 p=ET.SubElement(sec,'p'); ET.SubElement(p,'em').text=content
             else:append_text(sec,content)
             words+=len(content.split())
+    # Typeset the four term classifications as reusable native entries;
+    # combine the entry broken by an original printed-page boundary.
+    term_section=sections['terms']
+    term_paragraphs=term_section.findall('p')
+    if len(term_paragraphs)==5 and (term_paragraphs[2].text or '').endswith('reflex'):
+        term_paragraphs[2].text += ' ' + (term_paragraphs[3].text or '')
+        term_section.remove(term_paragraphs[3])
+        term_paragraphs=term_section.findall('p')
+    for item in term_paragraphs:
+        raw=item.text or ''
+        if ':' not in raw:continue
+        heading,definition=raw.split(':',1)
+        if heading not in ('Undefined Terms','Most important Defined Terms','Other Defined terms','Definable terms used without explicit definition'):continue
+        location=list(term_section).index(item)
+        term_section.remove(item)
+        entry=ET.Element('paragraphs',{XMLID:'geometry-b-terms-'+re.sub('[^a-z0-9]+','-',heading.lower()).strip('-')})
+        ET.SubElement(entry,'title').text=heading
+        ET.SubElement(entry,'p').text=definition.strip()
+        term_section.insert(location,entry)
     # Preserve the first three hand-typeset semantic sections from the original
     # book. They are editorially cleaner than PDF text extraction, especially
     # for the Ruler Axiom, mathematical fractions, and notes about angles.
