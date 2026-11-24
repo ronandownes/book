@@ -145,7 +145,7 @@ jobs:
               raise SystemExit("No web pages received automatic-check handling.")
           print(f"Embedded automatic checking in {updated} pages.")
           PY
-      - name: Copy fertility and literacy interactive
+      - name: Copy and verify textbook interactives
         run: |
           set -euo pipefail
           mkdir -p output/web/interactives
@@ -153,6 +153,9 @@ jobs:
           test -s output/web/functions-intro.html
           grep -q 'fertility-literacy.html' output/web/functions-intro.html
           test -s output/web/interactives/fertility-literacy.html
+          cp assets/interactives/similar-triangles.html output/web/interactives/similar-triangles.html
+          test -s output/web/interactives/similar-triangles.html
+          grep -q 'similar-triangles.html' output/web/trig-proportion-and-limits.html
       - name: Add A B C PP shortcuts to PreTeXt toolbar
         run: |
           set -euo pipefail
