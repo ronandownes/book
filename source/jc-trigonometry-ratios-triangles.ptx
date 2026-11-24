@@ -52,7 +52,19 @@
 </section>
 <section xml:id="trig-proportion-and-limits">
 <title>Proportion, change and limits</title>
-<p>For a fixed marked angle, all right-angled triangles with that angle are similar. Their side lengths change by the same scale factor, so each ratio remains constant. For example, if the hypotenuse is held fixed while the marked angle changes,</p>
+<p>Two triangles are <term>similar</term> when they have the same shape: their corresponding angles are equal and their corresponding sides are proportional. They need not be the same size. For a fixed marked angle, all right-angled triangles are similar.</p>
+<p><em>Investigation 1: Change the size, not the shape.</em> Use the scale factor in the interactive triangle below. Begin with opposite side 1 and adjacent side 3. Enlarge the triangle by a factor of 2, then by a factor of 3. The marked angle remains fixed.</p>
+<figure xml:id="trig-similar-triangles-figure">
+<caption>Enlarge a right-angled triangle without changing its angles, or hold its hypotenuse fixed and change the marked angle.</caption>
+<interactive xml:id="trig-similar-triangles-interactive" iframe="https://ronandownes.github.io/book/interactives/similar-triangles.html" width="100%" aspect="3:4"/>
+</figure>
+<p><url href="https://ronandownes.github.io/book/interactives/similar-triangles.html" visual="Open the interactive triangle full screen"/> for classroom projection.</p>
+<p>Notice that the tangent is unchanged:</p>
+<me>\tan\theta=\frac{1}{3}=\frac{2}{6}=\frac{3}{9}.</me>
+<p>In general, enlarging a triangle by a positive scale factor <m>k</m> multiplies all three sides by <m>k</m>. The common factor cancels in each ratio:</p>
+<me>\frac{ko}{kh}=\frac{o}{h},\qquad \frac{ka}{kh}=\frac{a}{h},\qquad \frac{ko}{ka}=\frac{o}{a}.</me>
+<p><em>Investigation 2: Change the shape, not the hypotenuse.</em> Select Angle only in the same app. Change the marked angle and watch the opposite and adjacent sides. What happens to sine, cosine and tangent as the angle gets closer to 90 degrees?</p>
+<p>The graph below describes how the ratios change with the marked angle. It does not describe the size of a triangle: similar triangles of any size give exactly the same point on each graph. If the hypotenuse is held fixed while the marked angle changes,</p>
 <me>o=h\sin\theta,\qquad a=h\cos\theta,\qquad o=a\tan\theta.</me>
 <p>For acute angles, sine increases towards 1, cosine decreases towards 0, and tangent increases. The tangent graph does not turn into a wave in this right-triangle range: it rises without bound as the angle approaches 90 degrees and has a vertical asymptote there.</p>
 <figure xml:id="trig-ratio-graph">
