@@ -10,6 +10,7 @@ from __future__ import annotations
 import re
 import sys
 from pathlib import Path
+from copy import deepcopy
 from lxml import etree
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -400,6 +401,50 @@ def correct_lc_formulas(code: str, paragraphs: list[etree._Element]) -> list[etr
     These particular outcomes have been checked against the source syllabus's
     printed mathematics, not guessed from the clipped extraction.
     """
+    if code in {"2.2", "2.3"}:
+        # Restore the mathematical notation lost during PDF text extraction.
+        # Both the strand overview and topic pages use these same paragraphs.
+        replacements = [
+            (r"\(x\s*[-−]\s*h\)\s*[2²]\s*\+\s*\(y\s*[-−]\s*k\)\s*[2²]\s*=\s*r\s*[2²]", r"(x-h)^2+(y-k)^2=r^2"),
+            (r"\bax\s*\+\s*by\s*\+\s*c\s*=\s*0\b", r"ax+by+c=0"),
+            (r"\(\s*h\s*,\s*k\s*\)", r"(h,k)"),
+            (r"\(\s*0\s*,\s*0\s*\)", r"(0,0)"),
+            (r"\bsin\s*θ", r"\sin\theta"),
+            (r"\bcos\s*θ", r"\cos\theta"),
+            (r"\btan\s*θ", r"\tan\theta"),
+            (r"(?<=values of )θ", r"\theta"),
+            (r"(?<=between the )x\b", r"x"),
+            (r"(?<=and )y(?= co-ordinates)", r"y"),
+            (r"(?<=radius )r\b", r"r"),
+        ]
+        pattern = re.compile("|".join(f"(?P<M{i}>{p})" for i, (p, _) in enumerate(replacements)))
+        fixed = []
+        for p in paragraphs:
+            q = deepcopy(p)
+            # Preserve existing native markup and only repair plain-text spans.
+            for node in list(q.iter()):
+                if node.tag in {"m", "me", "md"} or any(a.tag in {"m", "me", "md"} for a in node.iterancestors()):
+                    continue
+                for attr in ("text", "tail"):
+                    if attr == "tail" and node is q:
+                        continue
+                    raw = getattr(node, attr)
+                    if not raw:
+                        continue
+                    matches = list(pattern.finditer(raw))
+                    if not matches:
+                        continue
+                    setattr(node, attr, raw[:matches[0].start()])
+                    parent = node if attr == "text" else node.getparent()
+                    index = 0 if attr == "text" else parent.index(node) + 1
+                    for i, match in enumerate(matches):
+                        math = etree.Element("m")
+                        math.text = replacements[int(match.lastgroup[1:])][1]
+                        math.tail = raw[match.end():matches[i+1].start() if i+1 < len(matches) else len(raw)]
+                        parent.insert(index, math)
+                        index += 1
+            fixed.append(q)
+        return fixed
     if code == "1.7":
         fixed = []
         for p in paragraphs:
