@@ -9,15 +9,15 @@
 <label><input type="checkbox" id="overlay" checked> Show smaller similar triangles</label> <button type="button" id="reset">Reset</button>
 <svg id="diagram" viewBox="0 0 520 370" role="img" aria-labelledby="diagramTitle"><title id="diagramTitle">Right-angled triangle with labelled sides and angles</title></svg>
 <div class="ratios" aria-live="polite">
-<div class="ratio"><b>Sine</b><div class="math">sin θ = <span class="frac"><span class="op" id="so">1</span><span class="hy" id="sh">√10</span></span></div><span class="decimal" id="sd">≈ 0.316</span></div>
-<div class="ratio"><b>Cosine</b><div class="math">cos θ = <span class="frac"><span class="ad" id="ca">3</span><span class="hy" id="ch">√10</span></span></div><span class="decimal" id="cd">≈ 0.949</span></div>
-<div class="ratio"><b>Tangent</b><div class="math">tan θ = <span class="frac"><span class="op" id="to">1</span><span class="ad" id="ta">3</span></span></div><span class="decimal" id="td">≈ 0.333</span></div>
+<div class="ratio"><b>Sine</b><div class="math">sin θ <span class="relation">=</span> <span class="frac"><span class="op" id="so">1</span><span class="hy" id="sh">√10</span></span></div><span class="decimal" id="sd">≈ 0.316</span></div>
+<div class="ratio"><b>Cosine</b><div class="math">cos θ <span class="relation">=</span> <span class="frac"><span class="ad" id="ca">3</span><span class="hy" id="ch">√10</span></span></div><span class="decimal" id="cd">≈ 0.949</span></div>
+<div class="ratio"><b>Tangent</b><div class="math">tan θ <span class="relation">=</span> <span class="frac"><span class="op" id="to">1</span><span class="ad" id="ta">3</span></span></div><span class="decimal" id="td">≈ 0.333</span></div>
 </div>
 <p id="explanation" class="hint">Enlarge the triangle. All sides multiply by the same scale factor; the marked angle and all three ratios stay the same.</p>
 <div id="comparison"><table class="history"><thead><tr><th>Scale</th><th>Opposite</th><th>Adjacent</th><th>Tangent</th></tr></thead><tbody><tr data-k="1"><td>1</td><td>1</td><td>3</td><td>1/3</td></tr><tr data-k="2"><td>2</td><td>2</td><td>6</td><td>2/6</td></tr><tr data-k="3"><td>3</td><td>3</td><td>9</td><td>3/9</td></tr></tbody></table><p class="hint"><strong>What stays the same?</strong> 1/3 = 2/6 = 3/9. Now investigate sine and cosine.</p></div>
 <script>
 "use strict";
-const $=id=>document.getElementById(id),svg=$("diagram"),NS="http://www.w3.org/2000/svg",initial=Math.atan(1/3),unit=31,baseX=60,baseY=324;
+const $=id=>document.getElementById(id),svg=$("diagram"),NS="http://www.w3.org/2000/svg",initial=Math.atan(1/3),unit=31,baseX=90,baseY=324;
 const colours={o:"#b52630",a:"#165db0",h:"#28783f"};
 let theta=initial,mode="size";
 function node(tag,attrs,txt){const el=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v));if(txt!==undefined)el.textContent=txt;svg.appendChild(el);return el}
@@ -35,14 +35,14 @@ const q=Math.min(13,a*unit*.25,o*unit*.25);
 node("path",{d:"M "+(x-q)+" "+baseY+" v "+(-q)+" h "+q,fill:"none",stroke:"#263746","stroke-width":1.8});
 const r=Math.min(30,h*unit*.34,a*unit*.82);
 node("path",{d:"M "+(baseX+r)+" "+baseY+" A "+r+" "+r+" 0 0 0 "+(baseX+r*Math.cos(theta))+" "+(baseY-r*Math.sin(theta)),fill:"none",stroke:colours.o,"stroke-width":2});
-label(baseX,baseY+21,"θ",colours.o);
+label(baseX-17,baseY+21,"θ",colours.o);
 label((baseX+x)/2,baseY+21,"a = "+astr,colours.a);
 label(x+10,(baseY+y)/2+5,"o = "+ostr,colours.o,"start");
 label((baseX+x)/2-18*Math.sin(theta),(baseY+y)/2-18*Math.cos(theta)-3,"h = "+hstr,colours.h);
 if(a*unit>44&&o*unit>24)label(x-9,baseY-18,"90°","#263746","end");
 $("so").textContent=ostr;$("sh").textContent=hstr;$("ca").textContent=astr;$("ch").textContent=hstr;$("to").textContent=ostr;$("ta").textContent=astr;
 $("sd").textContent="≈ "+Math.sin(theta).toFixed(3);$("cd").textContent="≈ "+Math.cos(theta).toFixed(3);$("td").textContent="≈ "+Math.tan(theta).toFixed(3);
-$("comparison").hidden=!exact;document.querySelectorAll("[data-k]").forEach(tr=>tr.classList.toggle("current",Number(tr.dataset.k)===k));
+document.querySelectorAll(".relation").forEach(el=>el.textContent=exact?"=":"≈");$("comparison").hidden=!exact;document.querySelectorAll("[data-k]").forEach(tr=>tr.classList.toggle("current",Number(tr.dataset.k)===k));
 $("explanation").textContent=exact?"Enlarge the triangle. All sides multiply by the same scale factor; the marked angle and all three ratios stay the same.":"Change the marked angle. The hypotenuse stays fixed, but the opposite and adjacent sides change. Now the ratios change. Side lengths are rounded for display.";
 }
 function setMode(v){mode=v;$("scale").disabled=v==="angle";$("angle").disabled=v==="size";$("overlay").disabled=v==="angle";if(v==="size"){theta=initial;$("angle").value="18.4"}render()}
