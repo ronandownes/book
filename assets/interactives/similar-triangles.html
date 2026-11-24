@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-IE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Similar triangles and trigonometric ratios</title>
+<style>
+*{box-sizing:border-box}body{font:16px/1.45 system-ui,Segoe UI,sans-serif;margin:0;padding:12px;color:#172736;background:#fff}h1{font-size:1.2rem;margin:0 0 8px}p{margin:6px 0 12px}fieldset{border:1px solid #ccd9e2;border-radius:7px;padding:8px 12px;margin:0 0 10px}legend{font-weight:650}label{cursor:pointer}fieldset label{display:inline-block;margin-right:16px}.controls{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}.control{flex:1 1 220px}input[type=range]{width:100%;accent-color:#26783f}button{font:inherit;padding:5px 12px;border:1px solid #9aafbd;border-radius:5px;background:#fff;color:inherit;cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #1764ac;outline-offset:3px}svg{display:block;width:100%;height:auto;max-height:360px;border:1px solid #dbe5eb;border-radius:8px;margin:8px 0;background:white}svg text{font:600 16px system-ui;paint-order:stroke;stroke:white;stroke-width:4;stroke-linejoin:round}svg line,svg path{stroke-linecap:round;stroke-linejoin:round}.ratios{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.ratio{border:1px solid #d7e2e9;border-radius:6px;padding:8px 3px;text-align:center;min-width:0}.ratio b{display:block;font-size:1rem}.math{font:1.15rem Georgia,serif;display:flex;justify-content:center;align-items:center;gap:5px;white-space:nowrap}.frac{display:inline-flex;flex-direction:column;vertical-align:middle;line-height:1.15;min-width:1.3em;text-align:center}.frac span:first-child{border-bottom:1px solid currentColor;padding:0 2px 2px}.frac span:last-child{padding:2px 2px 0}.op{color:#b52630}.ad{color:#165db0}.hy{color:#28783f}.hint{font-size:.9rem}.decimal{font-variant-numeric:tabular-nums;display:block;margin-top:4px}.sub{font-size:.9rem;color:#415568}.history{width:100%;border-collapse:collapse;text-align:center;margin-top:6px}.history td,.history th{padding:4px;border-bottom:1px solid #dbe5eb}.history tr.current{font-weight:bold;background:#edf5ed}[hidden]{display:none!important}@media(max-width:440px){body{padding:7px}.math{font-size:.95rem}.ratio{padding:6px 2px}.ratios{gap:4px}}
+</style></head><body>
+<h1>Similar triangles and trigonometric ratios</h1>
+<fieldset><legend>What will you change?</legend><label><input type="radio" name="mode" value="size" checked> Size only</label><label><input type="radio" name="mode" value="angle"> Angle only</label></fieldset>
+<div class="controls"><div class="control"><label for="scale">Scale factor: <output id="scaleOut">1</output></label><input id="scale" type="range" min="1" max="3" step="1" value="1"></div><div class="control"><label for="angle">Marked angle: <output id="angleOut">18.4°</output></label><input id="angle" type="range" min="1" max="89" step="0.1" value="18.4" disabled></div></div>
+<label><input type="checkbox" id="overlay" checked> Show smaller similar triangles</label> <button type="button" id="reset">Reset</button>
+<svg id="diagram" viewBox="0 0 520 370" role="img" aria-labelledby="diagramTitle"><title id="diagramTitle">Right-angled triangle with labelled sides and angles</title></svg>
+<div class="ratios" aria-live="polite">
+<div class="ratio"><b>Sine</b><div class="math">sin θ = <span class="frac"><span class="op" id="so">1</span><span class="hy" id="sh">√10</span></span></div><span class="decimal" id="sd">≈ 0.316</span></div>
+<div class="ratio"><b>Cosine</b><div class="math">cos θ = <span class="frac"><span class="ad" id="ca">3</span><span class="hy" id="ch">√10</span></span></div><span class="decimal" id="cd">≈ 0.949</span></div>
+<div class="ratio"><b>Tangent</b><div class="math">tan θ = <span class="frac"><span class="op" id="to">1</span><span class="ad" id="ta">3</span></span></div><span class="decimal" id="td">≈ 0.333</span></div>
+</div>
+<p id="explanation" class="hint">Enlarge the triangle. All sides multiply by the same scale factor; the marked angle and all three ratios stay the same.</p>
+<div id="comparison"><table class="history"><thead><tr><th>Scale</th><th>Opposite</th><th>Adjacent</th><th>Tangent</th></tr></thead><tbody><tr data-k="1"><td>1</td><td>1</td><td>3</td><td>1/3</td></tr><tr data-k="2"><td>2</td><td>2</td><td>6</td><td>2/6</td></tr><tr data-k="3"><td>3</td><td>3</td><td>9</td><td>3/9</td></tr></tbody></table><p class="hint"><strong>What stays the same?</strong> 1/3 = 2/6 = 3/9. Now investigate sine and cosine.</p></div>
+<script>
+"use strict";
+const $=id=>document.getElementById(id),svg=$("diagram"),NS="http://www.w3.org/2000/svg",initial=Math.atan(1/3),unit=31,baseX=60,baseY=324;
+const colours={o:"#b52630",a:"#165db0",h:"#28783f"};
+let theta=initial,mode="size";
+function node(tag,attrs,txt){const el=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v));if(txt!==undefined)el.textContent=txt;svg.appendChild(el);return el}
+function line(x1,y1,x2,y2,stroke,w=3){node("line",{x1,y1,x2,y2,stroke,"stroke-width":w})}
+function label(x,y,txt,fill,anchor="middle"){node("text",{x,y,fill,"text-anchor":anchor},txt)}
+function fmt(n){return Number(n.toFixed(2)).toString()}
+function render(){
+const k=Number($("scale").value),exact=mode==="size",h=Math.sqrt(10)*k,a=h*Math.cos(theta),o=h*Math.sin(theta),x=baseX+a*unit,y=baseY-o*unit;
+const astr=exact?String(3*k):fmt(a),ostr=exact?String(k):fmt(o),hstr=k===1?"√10":k+"√10";
+$("scaleOut").textContent=k;$("angleOut").textContent=(theta*180/Math.PI).toFixed(1)+"°";
+svg.replaceChildren();node("title",{id:"diagramTitle"},"Right-angled triangle: adjacent "+astr+", opposite "+ostr+", hypotenuse "+hstr+", marked angle "+$("angleOut").textContent);
+if(exact&&$("overlay").checked){for(let j=1;j<k;j++){const bx=baseX+3*j*unit,by=baseY-j*unit;node("path",{d:"M "+bx+" "+baseY+" V "+by,fill:"none",stroke:"#9caeb9","stroke-width":2,"stroke-dasharray":"5 5"})}}
+line(baseX,baseY,x,baseY,colours.a,4);line(x,baseY,x,y,colours.o,4);line(x,y,baseX,baseY,colours.h,4);
+const q=Math.min(13,a*unit*.25,o*unit*.25);
+node("path",{d:"M "+(x-q)+" "+baseY+" v "+(-q)+" h "+q,fill:"none",stroke:"#263746","stroke-width":1.8});
+const r=Math.min(30,h*unit*.34,a*unit*.82);
+node("path",{d:"M "+(baseX+r)+" "+baseY+" A "+r+" "+r+" 0 0 0 "+(baseX+r*Math.cos(theta))+" "+(baseY-r*Math.sin(theta)),fill:"none",stroke:colours.o,"stroke-width":2});
+label(baseX,baseY+21,"θ",colours.o);
+label((baseX+x)/2,baseY+21,"a = "+astr,colours.a);
+label(x+10,(baseY+y)/2+5,"o = "+ostr,colours.o,"start");
+label((baseX+x)/2-18*Math.sin(theta),(baseY+y)/2-18*Math.cos(theta)-3,"h = "+hstr,colours.h);
+if(a*unit>44&&o*unit>24)label(x-9,baseY-18,"90°","#263746","end");
+$("so").textContent=ostr;$("sh").textContent=hstr;$("ca").textContent=astr;$("ch").textContent=hstr;$("to").textContent=ostr;$("ta").textContent=astr;
+$("sd").textContent="≈ "+Math.sin(theta).toFixed(3);$("cd").textContent="≈ "+Math.cos(theta).toFixed(3);$("td").textContent="≈ "+Math.tan(theta).toFixed(3);
+$("comparison").hidden=!exact;document.querySelectorAll("[data-k]").forEach(tr=>tr.classList.toggle("current",Number(tr.dataset.k)===k));
+$("explanation").textContent=exact?"Enlarge the triangle. All sides multiply by the same scale factor; the marked angle and all three ratios stay the same.":"Change the marked angle. The hypotenuse stays fixed, but the opposite and adjacent sides change. Now the ratios change. Side lengths are rounded for display.";
+}
+function setMode(v){mode=v;$("scale").disabled=v==="angle";$("angle").disabled=v==="size";$("overlay").disabled=v==="angle";if(v==="size"){theta=initial;$("angle").value="18.4"}render()}
+document.querySelectorAll("[name=mode]").forEach(el=>el.addEventListener("change",()=>setMode(el.value)));
+$("scale").addEventListener("input",render);$("overlay").addEventListener("change",render);$("angle").addEventListener("input",()=>{theta=Number($("angle").value)*Math.PI/180;render()});
+$("reset").addEventListener("click",()=>{$("scale").value="1";$("overlay").checked=true;document.querySelector("[value=size]").checked=true;setMode("size")});render();
+</script></body></html>
