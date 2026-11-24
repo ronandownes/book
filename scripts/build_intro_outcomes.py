@@ -401,10 +401,17 @@ def correct_lc_formulas(code: str, paragraphs: list[etree._Element]) -> list[etr
     These particular outcomes have been checked against the source syllabus's
     printed mathematics, not guessed from the clipped extraction.
     """
-    if code in {"2.2", "2.3"}:
+    if code not in {"1.7", "3.2", "4.1", "4.2"}:
         # Restore the mathematical notation lost during PDF text extraction.
         # Both the strand overview and topic pages use these same paragraphs.
         replacements = [
+            (r"\b0\s*<\s*k\s*<\s*1\b", r"0\lt k\lt1"),
+            (r"\bk\s*>\s*1\b", r"k\gt1"),
+            (r"(?<=(?i:scale factor) )k\b", r"k"),
+            (r"\b([a-z])\s*∈\s*[NZQRC]\b", None),
+            (r"[ℕℤℚℝℂ]", None),
+            (r"\b[a-z]\s*(?:≤|≥|≠|<|>)\s*-?\d+(?:\.\d+)?\b", None),
+            (r"\b(?:sin|cos|tan)\s*θ\b", None),
             (r"\(x\s*[-−]\s*h\)\s*[2²]\s*\+\s*\(y\s*[-−]\s*k\)\s*[2²]\s*=\s*r\s*[2²]", r"(x-h)^2+(y-k)^2=r^2"),
             (r"\bax\s*\+\s*by\s*\+\s*c\s*=\s*0\b", r"ax+by+c=0"),
             (r"\(\s*h\s*,\s*k\s*\)", r"(h,k)"),
@@ -439,7 +446,13 @@ def correct_lc_formulas(code: str, paragraphs: list[etree._Element]) -> list[etr
                     index = 0 if attr == "text" else parent.index(node) + 1
                     for i, match in enumerate(matches):
                         math = etree.Element("m")
-                        math.text = replacements[int(match.lastgroup[1:])][1]
+                        latex = replacements[int(match.lastgroup[1:])][1]
+                        if latex is None:
+                            latex = match.group()
+                            latex = re.sub(r"∈\s*([NZQRC])", lambda m: r"\in\mathbb{" + m.group(1) + "}", latex)
+                            for symbol, tex in {"ℕ":r"\mathbb{N}", "ℤ":r"\mathbb{Z}", "ℚ":r"\mathbb{Q}", "ℝ":r"\mathbb{R}", "ℂ":r"\mathbb{C}", "≤":r"\le ", "≥":r"\ge ", "≠":r"\ne ", "<":r"\lt ", ">":r"\gt ", "θ":r"\theta", "sin":r"\sin ", "cos":r"\cos ", "tan":r"\tan "}.items():
+                                latex = latex.replace(symbol, tex)
+                        math.text = latex
                         math.tail = raw[match.end():matches[i+1].start() if i+1 < len(matches) else len(raw)]
                         parent.insert(index, math)
                         index += 1
