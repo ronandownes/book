@@ -245,7 +245,9 @@ jobs:
                       raise SystemExit("Empty placeholder chapter: "+str(chapter.get(xmlid)))
           site=Path("output/web")
           all_parts={p+".html" for p in expected}
-          found={p.name for p in site.glob("part-*.html")}
+          # Course Guide retains its historical URL but is now a frontmatter preface.
+          frontmatter_pages={p.get(xmlid)+".html" for p in doc.findall(".//frontmatter/preface") if p.get(xmlid)}
+          found={p.name for p in site.glob("part-*.html")} - frontmatter_pages
           if all_parts!=found: raise SystemExit("Incorrect published Parts: "+str(sorted(found)))
           required=["jc-outcomes-unifying.html","jc-cba-assessment.html",
              "jc-outcomes-number.html",
