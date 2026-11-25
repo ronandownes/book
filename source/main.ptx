@@ -24,9 +24,20 @@
         <p><em>Ronan Downes</em></p>
       </preface>
 
+      <preface xml:id="teaching-approach">
+        <title>Our Approach to Learning Mathematics</title>
+        <p>Mathematics is cumulative. Misunderstandings developed at almost any stage can undermine much of the learning that follows. Particular attention is therefore paid to the foundations of each topic. My aim is to bring every learner along, smoothing the path without compromising mathematical rigour.</p>
+        <p>The limitations of working memory are a central consideration in the design of this book. The research of Baddeley and Hitch (<xref ref="ref-baddeley-hitch"/>) and Baddeley (<xref ref="ref-baddeley-2012"/>), together with cognitive load theory (<xref ref="ref-sweller-1998"/> and <xref ref="ref-sweller-2019"/>), informs decisions about the sequence in which new concepts, notation and procedures are introduced. We manage unnecessary cognitive demands without removing worthwhile mathematical challenge.</p>
+        <p>For instance, we initially explore many arithmetic and algebraic structures using positive natural numbers, before introducing further complications. The restriction is on the numbers we use, not on the mathematical ideas we explore. A special case must never be mistaken for a general principle.</p>
+        <p>Worked examples, scaffolded exercises and independent practice provide progressively less guidance as understanding develops. Retrieval practice and spaced practice support retention (<xref ref="ref-dunlosky"/>). Pólya's work on problem-solving (<xref ref="ref-polya"/>) informs our emphasis on heuristics, reasoning and choosing suitable methods. The five strands of mathematical proficiency described in <xref ref="ref-adding-it-up"/> remind us that conceptual understanding, procedural fluency, strategic competence, adaptive reasoning and productive disposition develop together.</p>
+        <p>Universal Design for Learning (<xref ref="ref-cast"/>) informs the provision of accessible and flexible routes to learning, including alternative representations and ways to engage with mathematics. Research on multimedia learning (<xref ref="ref-mayer"/>) informs our use of diagrams, interactive applications, video and other digital resources.</p>
+        <p>These concerns are not new. Classical texts by Euler (<xref ref="ref-euler"/>), Wentworth (<xref ref="ref-wentworth"/>) and Boyden (<xref ref="ref-boyden"/>) offer valuable perspectives on developing algebra from its foundations. Wentworth, for example, deliberately confined the first two chapters to positive numbers. This book is informed by these and contemporary perspectives, but is not tied to their approaches. The instructional decisions are my own, informed by research, mathematics and classroom experience.</p>
+        <p>For further reading, see the <xref ref="book-bibliography" text="title"/>.</p>
+      </preface>
+
       <preface xml:id="about-the-author">
         <title>About the Author</title>
-        <p>Ronan Downes is an experienced mathematics teacher who has taught in a wide range of schools and continues to work in education. He has also worked in telecommunications and has been self-employed in photography, video production and web design.</p>
+        <p>Ronan Downes is a mathematics teacher with approximately fifteen years of teaching experience. He has also worked in telecommunications and has been self-employed in photography, video production and web design.</p>
         <p>His interests connect mathematics with physics, computing, data analysis and AI. His teaching draws on classroom experience, thoughtful use of technology, cognitive load theory and Universal Design for Learning. He is developing this website to make mathematics clearer, more accessible and more enjoyable for students.</p>
       </preface>
     </frontmatter>
@@ -307,6 +318,21 @@
     <backmatter>
       <xi:include href="./shared-glossary.ptx"/>
       <xi:include href="./appendix-b-geometry.ptx"/>
+      <references xml:id="book-bibliography">
+        <title>Bibliography</title>
+        <biblio type="raw" xml:id="ref-baddeley-hitch">Baddeley, A. D., and Hitch, G. J. (1974). <title>Working Memory.</title> In G. H. Bower (ed.), The Psychology of Learning and Motivation, 8, 47–89. <url href="https://doi.org/10.1016/S0079-7421(08)60452-1" visual="Read or find this work"/>.</biblio>
+        <biblio type="raw" xml:id="ref-baddeley-2012">Baddeley, A. (2012). <title>Working Memory: Theories, Models, and Controversies.</title> Annual Review of Psychology, 63, 1–29. <url href="https://doi.org/10.1146/annurev-psych-120710-100422" visual="Read or find this work"/>.</biblio>
+        <biblio type="raw" xml:id="ref-sweller-1998">Sweller, J., van Merriënboer, J. J. G., and Paas, F. G. W. C. (1998). <title>Cognitive Architecture and Instructional Design.</title> Educational Psychology Review, 10, 251–296. <url href="https://doi.org/10.1023/A:1022193728205" visual="Read or find this work"/>.</biblio>
+        <biblio type="raw" xml:id="ref-sweller-2019">Sweller, J., van Merriënboer, J. J. G., and Paas, F. (2019). <title>Cognitive Architecture and Instructional Design: 20 Years Later.</title> Educational Psychology Review, 31, 261–292. <url href="https://doi.org/10.1007/s10648-019-09465-5" visual="Read or find this work"/>.</biblio>
+        <biblio type="raw" xml:id="ref-polya">Pólya, G. (1945). <title>How to Solve It.</title> Princeton University Press. <url href="https://press.princeton.edu/books/paperback/9780691164076/how-to-solve-it" visual="Read or find this work"/>.</biblio>
+        <biblio type="raw" xml:id="ref-adding-it-up">National Research Council (2001). Kilpatrick, J., Swafford, J., and Findell, B. (eds.). <title>Adding It Up: Helping Children Learn Mathematics.</title> National Academies Press. <url href="https://doi.org/10.17226/9822" visual="Read or find this work"/>.</biblio>
+        <biblio type="raw" xml:id="ref-dunlosky">Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., and Willingham, D. T. (2013). <title>Improving Students' Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology.</title> Psychological Science in the Public Interest, 14(1), 4–58. <url href="https://doi.org/10.1177/1529100612453266" visual="Read or find this work"/>.</biblio>
+        <biblio type="raw" xml:id="ref-mayer">Mayer, R. E. (2021). <title>Multimedia Learning.</title> 3rd edition. Cambridge University Press. <url href="https://doi.org/10.1017/9781316941355" visual="Read or find this work"/>.</biblio>
+        <biblio type="raw" xml:id="ref-cast">CAST (2024). <title>Universal Design for Learning Guidelines version 3.0.</title> CAST. <url href="https://udlguidelines.cast.org/" visual="Read or find this work"/>.</biblio>
+        <biblio type="raw" xml:id="ref-euler">Euler, L. (1770). <title>Elements of Algebra.</title> Originally published in German as Vollständige Anleitung zur Algebra. <url href="https://link.springer.com/book/10.1007/978-1-4613-8511-0" visual="Read or find this work"/>.</biblio>
+        <biblio type="raw" xml:id="ref-wentworth">Wentworth, G. A. (1894). <title>The First Steps in Algebra.</title> Ginn and Company. <url href="https://www.gutenberg.org/ebooks/36670" visual="Read or find this work"/>.</biblio>
+        <biblio type="raw" xml:id="ref-boyden">Boyden, W. C. (1895). <title>A First Book in Algebra.</title> Silver, Burdett and Company. <url href="https://textbookequity.org/Textbooks/Boyden_Algebra.pdf" visual="Read or find this work"/>.</biblio>
+      </references>
     </backmatter>
   </book>
 </pretext>
