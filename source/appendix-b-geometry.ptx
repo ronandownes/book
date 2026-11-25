@@ -2,83 +2,86 @@
 <appendix xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="geometry-appendix-b">
   <title>Geometry for Post-primary School Mathematics</title>
   <introduction>
-    <p>Below is the complete fifty-page official Appendix B, reproduced in source order as scalable vector pages within this book, including every original drawing, theorem, proof, construction, and syllabus summary. Use the contents to open the individual sections and source pages. This complete source-page edition is not yet a fully semantic PreTeXt transcription of each statement. The final three sections following it are an earlier partial transcription, preserved temporarily so existing links to Definitions 1–11 and Axioms 1–2 continue to work.</p>
+    <p>This reference is being rebuilt as native mathematical markup, with individual definitions, axioms, theorems, proofs and diagrams. The source numbering follows <url href="https://curriculumonline.ie/getmedia/ed7de7ab-2376-44f0-9c7c-b511e470c0a7/Appendix_B_English.pdf" visual="Geometry for Post-primary School Mathematics (NCCA, Appendix B)"/>. The official document remains the authority for exact wording and syllabus requirements.</p>
+    <p><em>Reconstruction status:</em> the opening theory, length, angles and degree measurement are available below, including the first theorem and its proof. The remaining material is not yet transcribed. Full-page facsimiles are deliberately excluded from this semantic edition.</p>
   </introduction>
-  <!-- Complete source pages in original order, with original vector diagrams. -->
-  <xi:include href="./appendix-b-native/at-a-glance.ptx"/>
-  <xi:include href="./appendix-b-native/introduction.ptx"/>
-  <xi:include href="./appendix-b-native/system-guiding-principles.ptx"/>
-  <xi:include href="./appendix-b-native/level-two-account.ptx"/>
-  <xi:include href="./appendix-b-native/terms.ptx"/>
-  <xi:include href="./appendix-b-native/theory.ptx"/>
-  <xi:include href="./appendix-b-native/length-distance.ptx"/>
-  <xi:include href="./appendix-b-native/angles.ptx"/>
-  <xi:include href="./appendix-b-native/degrees.ptx"/>
-  <xi:include href="./appendix-b-native/congruent-triangles.ptx"/>
-  <xi:include href="./appendix-b-native/parallels.ptx"/>
-  <xi:include href="./appendix-b-native/perpendicular-quadrilaterals.ptx"/>
-  <xi:include href="./appendix-b-native/ratios-similarity.ptx"/>
-  <xi:include href="./appendix-b-native/constructions.ptx"/>
-  <xi:include href="./appendix-b-native/teaching.ptx"/>
-  <xi:include href="./appendix-b-native/jcol.ptx"/>
-  <xi:include href="./appendix-b-native/jchl.ptx"/>
-  <xi:include href="./appendix-b-native/leaving-certificate.ptx"/>
-  <xi:include href="./appendix-b-native/copyright.ptx"/>
-  <!-- Early semantic draft retained for existing cross-references. -->
+
+  <section xml:id="geometry-app-b-terms">
+    <title>Starting concepts and terminology</title>
+    <p>Some concepts are taken as starting points rather than formally defined in terms of simpler geometric concepts. Appendix B identifies nine undefined terms: angle, degree, length, line, plane, point, ray, real number and set. An <term>axiom</term><idx>axiom</idx> is a starting assumption, whereas a <term>theorem</term><idx>theorem</idx> is established by deductive reasoning.</p>
+    <p>A definition fixes the meaning of a term. A proof uses accepted assumptions and previously established results. A drawing can help us understand the argument, but measuring a drawing is not a substitute for proof.</p>
+  </section>
   <section xml:id="geometry-app-b-theory">
     <title>The Theory</title>
     <p>Line is short for straight line. Take a fixed plane, once and for all, and consider just lines that lie in it. The plane and the lines are sets of points. Each line is a subset of the plane, i.e. each element of a line is a point of the plane. Each line is endless, extending forever in both directions. Each line has infinitely-many points. The points on a line can be taken to be ordered along the line in a natural way. As a consequence, given any three distinct points on a line, exactly one of them lies between the other two. Points that are not on a given line can be said to be on one or other side of the line. The sides of a line are sometimes referred to as half-planes.</p>
     <p>Notation 1. We denote points by roman capital letters A, B, C, etc., and lines by lower-case roman letters l, m, n, etc.</p>
     <p>Axioms are statements we will accept as true.</p>
-    <paragraphs xml:id="geometry-app-b-axiom-1">
-      <title>Axiom 1 (Two Points Axiom)</title>
-      <p>There is exactly one line through any two given points. (We denote the line through A and B by AB.)</p>
-    </paragraphs>
-    <paragraphs xml:id="geometry-app-b-definition-1">
-      <title>Definition 1</title>
-      <p>The line segment [AB] is the part of the line AB between A and B (including the endpoints). The point A divides the line AB into two pieces, called rays. The point A lies between all points of one ray and all points of the other. We denote the ray that starts at A and passes through B by [AB. Rays are sometimes referred to as half-lines.</p>
-    </paragraphs>
+    <axiom xml:id="geometry-app-b-axiom-1"><title>Axiom 1 (Two Points Axiom)</title><statement><p>There is exactly one line through any two given points. (We denote the line through A and B by AB.)</p></statement></axiom>
+    <definition xml:id="geometry-app-b-definition-1"><title>Definition 1</title><statement><p>The line segment [AB] is the part of the line AB between A and B (including the endpoints). The point A divides the line AB into two pieces, called rays. The point A lies between all points of one ray and all points of the other. We denote the ray that starts at A and passes through B by [AB. Rays are sometimes referred to as half-lines.</p></statement></definition>
     <p>Three points usually determine three different lines.</p>
-    <paragraphs xml:id="geometry-app-b-definition-2"><title>Definition 2</title>
-      <p>If three or more points lie on a single line, we say they are collinear.</p>
-    </paragraphs>
-    <paragraphs xml:id="geometry-app-b-definition-3"><title>Definition 3</title>
-      <p>Let A, B and C be points that are not collinear. The triangle ∆ABC is the piece of the plane enclosed by the three line segments [AB], [BC] and [CA]. The segments are called its sides, and the points are called its vertices (singular vertex).</p>
-    </paragraphs>
+    <definition xml:id="geometry-app-b-definition-2"><title>Definition 2</title><statement><p>If three or more points lie on a single line, we say they are collinear.</p></statement></definition>
+    <definition xml:id="geometry-app-b-definition-3"><title>Definition 3</title><statement><p>Let A, B and C be points that are not collinear. The triangle ∆ABC is the piece of the plane enclosed by the three line segments [AB], [BC] and [CA]. The segments are called its sides, and the points are called its vertices (singular vertex).</p></statement></definition>
   </section>
   <section xml:id="geometry-app-b-length-distance"><title>Length and Distance</title>
     <p>We denote the set of all real numbers by <m>\mathbb{R}</m>.</p>
-    <paragraphs xml:id="geometry-app-b-definition-4"><title>Definition 4</title>
-      <p>We denote the distance between the points A and B by <m>|AB|</m>. We define the length of the segment [AB] to be <m>|AB|</m>.</p>
-    </paragraphs>
+    <definition xml:id="geometry-app-b-definition-4"><title>Definition 4</title><statement><p>We denote the distance between the points A and B by <m>|AB|</m>. We define the length of the segment [AB] to be <m>|AB|</m>.</p></statement></definition>
     <p>We often denote the lengths of the three sides of a triangle by <m>a</m>, <m>b</m>, and <m>c</m>. The usual thing for a triangle ∆ABC is to take <m>a=|BC|</m>, i.e. the length of the side opposite the vertex A, and similarly <m>b=|CA|</m> and <m>c=|AB|</m>.</p>
-    <paragraphs xml:id="geometry-app-b-axiom-2"><title>Axiom 2 (Ruler Axiom)</title>
-      <p>The distance between points has the following properties:</p>
+    <axiom xml:id="geometry-app-b-axiom-2"><title>Axiom 2 (Ruler Axiom)</title><statement><p>The distance between points has the following properties:</p>
       <ol>
         <li><p>the distance <m>|AB|</m> is never negative;</p></li>
         <li><p><m>|AB|=|BA|</m>;</p></li>
         <li><p>if C lies on AB, between A and B, then <m>|AB|=|AC|+|CB|</m>;</p></li>
         <li><p>(marking off a distance) given any ray from A, and given any real number <m>k\geq 0</m>, there is a unique point B on the ray whose distance from A is <m>k</m>.</p></li>
-      </ol>
-    </paragraphs>
-    <paragraphs xml:id="geometry-app-b-definition-5"><title>Definition 5</title>
-      <p>The midpoint of the segment [AB] is the point M of the segment with <m>|AM|=|MB|=\frac{|AB|}{2}</m>.</p>
-    </paragraphs>
+      </ol></statement></axiom>
+    <definition xml:id="geometry-app-b-definition-5"><title>Definition 5</title><statement><p>The midpoint of the segment [AB] is the point M of the segment with <m>|AM|=|MB|=\frac{|AB|}{2}</m>.</p></statement></definition>
   </section>
   <section xml:id="geometry-app-b-angles"><title>Angles</title>
-    <paragraphs xml:id="geometry-app-b-definition-6"><title>Definition 6</title>
-      <p>A subset of the plane is convex if it contains the whole segment that connects any two of its points.</p>
-    </paragraphs>
+    <definition xml:id="geometry-app-b-definition-6"><title>Definition 6</title><statement><p>A subset of the plane is convex if it contains the whole segment that connects any two of its points.</p></statement></definition>
     <p>For example, one side of any line is a convex set, and triangles are convex sets.</p>
     <p>We do not define the term angle formally. Instead we say: There are things called angles. To each angle is associated:</p>
     <ol><li><p>a unique point A, called its vertex;</p></li>
     <li><p>two rays [AB and [AC, both starting at the vertex, and called the arms of the angle;</p></li>
     <li><p>a piece of the plane called the inside of the angle.</p></li></ol>
     <p>An angle is either a null angle, an ordinary angle, a straight angle, a reflex angle or a full angle. Unless otherwise specified, you may take it that any angle we talk about is an ordinary angle.</p>
-    <paragraphs xml:id="geometry-app-b-definition-7"><title>Definition 7</title><p>An angle is a null angle if its arms coincide with one another and its inside is the empty set.</p></paragraphs>
-    <paragraphs xml:id="geometry-app-b-definition-8"><title>Definition 8</title><p>An angle is an ordinary angle if its arms are not on one line, and its inside is a convex set.</p></paragraphs>
-    <paragraphs xml:id="geometry-app-b-definition-9"><title>Definition 9</title><p>An angle is a straight angle if its arms are the two halves of one line, and its inside is one of the sides of that line.</p></paragraphs>
-    <paragraphs xml:id="geometry-app-b-definition-10"><title>Definition 10</title><p>An angle is a reflex angle if its arms are not on one line, and its inside is not a convex set.</p></paragraphs>
-    <paragraphs xml:id="geometry-app-b-definition-11"><title>Definition 11</title><p>An angle is a full angle if its arms coincide with one another and its inside is the rest of the plane.</p></paragraphs>
+    <definition xml:id="geometry-app-b-definition-7"><title>Definition 7</title><statement><p>An angle is a null angle if its arms coincide with one another and its inside is the empty set.</p></statement></definition>
+    <definition xml:id="geometry-app-b-definition-8"><title>Definition 8</title><statement><p>An angle is an ordinary angle if its arms are not on one line, and its inside is a convex set.</p></statement></definition>
+    <definition xml:id="geometry-app-b-definition-9"><title>Definition 9</title><statement><p>An angle is a straight angle if its arms are the two halves of one line, and its inside is one of the sides of that line.</p></statement></definition>
+    <definition xml:id="geometry-app-b-definition-10"><title>Definition 10</title><statement><p>An angle is a reflex angle if its arms are not on one line, and its inside is not a convex set.</p></statement></definition>
+    <definition xml:id="geometry-app-b-definition-11"><title>Definition 11</title><statement><p>An angle is a full angle if its arms coincide with one another and its inside is the rest of the plane.</p></statement></definition>
+      <definition xml:id="geometry-app-b-definition-12"><title>Definition 12 — Angle notation</title><statement><p>For non-collinear points <m>A,B,C</m>, the ordinary angle formed by rays from <m>A</m> through <m>B</m> and <m>C</m> is denoted by <m>\angle BAC</m> or <m>\angle CAB</m>. The middle letter is the vertex. The same notation is used for a straight angle when <m>A</m> lies between <m>B</m> and <m>C</m>. Greek letters may also name angles.</p></statement></definition>
+  </section>
+  <section xml:id="geometry-app-b-degrees"><title>Degrees</title>
+    <p>Use <m>|\angle BAC|</m> for the numerical degree measure of an angle. Distinguish the angle itself from its measure.</p>
+    <axiom xml:id="geometry-app-b-axiom-3"><title>Axiom 3 — Protractor Axiom</title><statement><p>Angle measures lie between <m>0^\circ</m> and <m>360^\circ</m>, with ordinary angles strictly between <m>0^\circ</m> and <m>180^\circ</m>. A straight angle measures <m>180^\circ</m>. Given a ray and an ordinary angle measure, a unique ray on each side of the associated line forms that angle. When <m>D</m> lies inside the ordinary angle <m>\angle BAC</m>,</p><me>|\angle BAC|=|\angle BAD|+|\angle DAC|.</me></statement></axiom>
+    <p>A null angle measures <m>0^\circ</m>, a full angle <m>360^\circ</m>, and the reflex angle associated with an ordinary angle of measure <m>\theta</m> measures <m>360^\circ-\theta</m>.</p>
+    <definition xml:id="geometry-app-b-definition-13"><title>Definition 13 — Angle bisector</title><statement><p>The ray from <m>A</m> through <m>D</m> bisects <m>\angle BAC</m> when it divides the angle into two equal parts:</p><me>|\angle BAD|=|\angle DAC|=\frac{|\angle BAC|}{2}.</me></statement></definition>
+    <definition xml:id="geometry-app-b-definition-14"><title>Definition 14 — Right angle</title><statement><p>A right angle has measure <m>90^\circ</m>.</p></statement></definition>
+    <definition xml:id="geometry-app-b-definition-15"><title>Definition 15 — Acute and obtuse angles</title><statement><p>An ordinary angle is acute when its measure is less than <m>90^\circ</m>, and obtuse when its measure is greater than <m>90^\circ</m>.</p></statement></definition>
+    <definition xml:id="geometry-app-b-definition-16"><title>Definition 16 — Supplementary angles</title><statement><p>When <m>\angle BAC</m> is straight and <m>D</m> is not on line <m>BC</m>, the angles <m>\angle BAD</m> and <m>\angle DAC</m> are supplementary: their measures add to <m>180^\circ</m>.</p></statement></definition>
+    <definition xml:id="geometry-app-b-definition-17"><title>Definition 17 — Perpendicular lines</title><statement><p>Two intersecting lines are perpendicular if they form a right angle at their point of intersection.</p></statement></definition>
+    <definition xml:id="geometry-app-b-definition-18"><title>Definition 18 — Vertically opposite angles</title><statement><p>Suppose two lines <m>BC</m> and <m>DE</m> meet at <m>A</m>, with <m>A</m> between <m>B</m> and <m>C</m> and between <m>D</m> and <m>E</m>. The angles <m>\angle BAD</m> and <m>\angle CAE</m> are vertically opposite.</p></statement></definition>
+    <figure xml:id="geometry-app-b-figure-1"><caption>Two intersecting lines: vertically opposite angles.</caption>
+      <image width="65%"><description>Lines BC and DE intersect at A. B lies to the left, C to the right, D above right and E below left. The opposing angles BAD and CAE are marked with equal arcs.</description><latex-image-code><![CDATA[
+\begin{tikzpicture}[scale=0.9]
+\coordinate (A) at (0,0);
+\coordinate (B) at (-3,0);
+\coordinate (C) at (3,0);
+\coordinate (D) at (2,1.5);
+\coordinate (E) at (-2,-1.5);
+\draw[thick] (B)--(C);
+\draw[thick] (D)--(E);
+\draw (0.65,0) arc[start angle=0,end angle=-143.13,radius=0.65];
+\draw (-0.65,0) arc[start angle=180,end angle=36.87,radius=0.65];
+\fill (A) circle (1.4pt);
+\node[below right] at (A) {$A$};
+\node[left] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[above right] at (D) {$D$};
+\node[below left] at (E) {$E$};
+\end{tikzpicture}
+]]></latex-image-code></image>
+    </figure>
+    <theorem xml:id="geometry-app-b-theorem-1"><title>Theorem 1 — Vertically opposite angles</title><statement><p>Vertically opposite angles are equal in measure.</p></statement><proof><p>In <xref ref="geometry-app-b-figure-1"/>, use the straight angles on lines <m>BC</m> and <m>DE</m> and the angle-addition property of <xref ref="geometry-app-b-axiom-3" text="title"/>.</p><md><mrow>|\angle BAD|+|\angle BAE|&amp;=180^\circ,</mrow><mrow>|\angle CAE|+|\angle BAE|&amp;=180^\circ.</mrow></md><p>Subtracting the common angle measure gives</p><me>|\angle BAD|=|\angle CAE|.</me><p>The same reasoning applies to the other pair of vertically opposite angles.</p></proof></theorem>
+    <definition xml:id="geometry-app-b-definition-19"><title>Definition 19 — Congruent triangles</title><statement><p>Two triangles are congruent when their corresponding side lengths and corresponding angle measures are equal. The order of the vertex names identifies the correspondence.</p></statement></definition>
   </section>
 </appendix>
