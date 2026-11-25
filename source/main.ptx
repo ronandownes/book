@@ -257,6 +257,7 @@
     <part xml:id="part-lc-ol-functions">
       <title>LC OL · Functions</title>
       <xi:include href="./lc-ol-functions-outcomes.ptx"/>
+      <xi:include href="./lc-ol-functions-stationary-points.ptx"/>
     </part>
     <backmatter>
       <xi:include href="./shared-glossary.ptx"/>
