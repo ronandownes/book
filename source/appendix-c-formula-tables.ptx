@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appendix xml:id="formula-tables-appendix-c">
+  <title>Formula Tables</title>
+  <introduction>
+    <p>This English-language reference brings the principal formula tables together at the back of the book. Open a topic from the contents panel, or follow a direct link from a lesson. The topics are divided into short sections so that each can be found and linked independently.</p>
+    <p>These tables support learning and revision. In State examinations, candidates may not use a personal copy of this booklet: a copy is supplied by the superintendent, the examination official who supervises the examination, and is returned at the end.</p>
+    <p>In the geometry tables, capital letters name vertices and the corresponding lower-case letters name opposite side lengths where appropriate. Area symbols refer to the shape shown; in the circle entry, <m>l</m> denotes circumference.</p>
+  </introduction>
+
+  <section xml:id="formula-tables-length-area">
+    <title>Length and Area</title>
+    <p>In the following, <m>A</m> represents the area of the shape in question.</p>
+    <subsection xml:id="formula-parallelogram"><title>Parallelogram</title>
+      <md>A=ah=ab\sin C</md>
+      <p><m>a</m> is the base, <m>h</m> is its perpendicular height, and <m>b</m> is the adjacent side.</p>
+    </subsection>
+    <subsection xml:id="formula-trapezium"><title>Trapezium</title>
+      <md>A=\left(\frac{a+b}{2}\right)h</md>
+      <p><m>a</m> and <m>b</m> are the parallel sides; <m>h</m> is their perpendicular separation.</p>
+    </subsection>
+    <subsection xml:id="formula-circle-disc"><title>Circle and Disc</title>
+      <md>l=2\pi r,\qquad A=\pi r^2</md>
+      <p><m>l</m> is the circumference (the length around the circle); <m>r</m> is the radius; the disc is the region inside the circle.</p>
+    </subsection>
+    <subsection xml:id="formula-arc-sector"><title>Arc and Sector</title>
+      <p>For <m>\theta</m> in radians:</p><md>l=r\theta,\qquad A=\frac12r^2\theta</md>
+      <p>For <m>\theta</m> in degrees:</p><md>l=2\pi r\left(\frac{\theta}{360^\circ}\right),\qquad A=\pi r^2\left(\frac{\theta}{360^\circ}\right)</md>
+      <p>The radian formulae are Leaving Certificate material.</p>
+    </subsection>
+    <subsection xml:id="formula-triangle-area"><title>Triangle Area</title>
+      <md>A=\frac12ah=\frac12ab\sin C</md><md>s=\frac{a+b+c}{2},\qquad A=\sqrt{s(s-a)(s-b)(s-c)}</md>
+      <p>The second area formula is Heron's formula. The perpendicular height is <m>h</m>; <m>s</m> is the semi-perimeter.</p>
+    </subsection>
+  </section>
+
+  <section xml:id="formula-tables-surface-volume">
+    <title>Surface Area and Volume</title>
+    <p>In the following, <m>A</m> represents curved surface area and <m>V</m> represents volume of the solid in question. Base areas are denoted by <m>B</m>.</p>
+    <subsection xml:id="formula-cylinder"><title>Cylinder</title><md>A=2\pi rh,\qquad V=\pi r^2h</md><p><m>r</m> is the radius and <m>h</m> is the perpendicular height.</p></subsection>
+    <subsection xml:id="formula-cone"><title>Cone</title><md>A=\pi rl,\qquad V=\frac13\pi r^2h</md><p><m>l</m> is the slant height; <m>h</m> is the perpendicular height.</p></subsection>
+    <subsection xml:id="formula-sphere"><title>Sphere</title><md>A=4\pi r^2,\qquad V=\frac43\pi r^3</md></subsection>
+    <subsection xml:id="formula-frustum"><title>Frustum of a Cone</title><md>A=\pi(r+R)l,\qquad V=\frac13\pi h(R^2+Rr+r^2)</md><md>l=\sqrt{h^2+(R-r)^2}</md><p><m>R</m> and <m>r</m> are the radii of the parallel circular ends.</p></subsection>
+    <subsection xml:id="formula-prism"><title>Solid of Uniform Cross-section (Prism)</title><md>V=Bh</md><p><m>B</m> is the area of the constant cross-section; <m>h</m> is the perpendicular distance between the ends.</p></subsection>
+    <subsection xml:id="formula-pyramid"><title>Pyramid on Any Base</title><md>V=\frac13Bh</md><p><m>B</m> is the area of the base and <m>h</m> is the perpendicular height.</p></subsection>
+  </section>
+
+  <section xml:id="formula-tables-area-approximation">
+    <title>Area Approximations</title>
+    <p>Divide <m>[a,b]</m> into <m>n</m> equal intervals of width <m>h=(b-a)/n</m>, and let <m>y_j=f(a+jh)</m>.</p>
+    <subsection xml:id="formula-trapezoidal-rule"><title>Trapezoidal Rule</title><md>A\approx\frac h2\left[y_0+2(y_1+y_2+\cdots+y_{n-1})+y_n\right]</md></subsection>
+    <subsection xml:id="formula-simpsons-rule"><title>Simpson's Rule</title><md>A\approx\frac h3\left[y_0+y_n+4(y_1+y_3+\cdots+y_{n-1})+2(y_2+y_4+\cdots+y_{n-2})\right]</md><p><m>n</m> must be even. The coefficients alternate between 4 and 2 for interior ordinates, beginning and ending with coefficient 4.</p></subsection>
+  </section>
+
+  <section xml:id="formula-tables-trigonometry">
+    <title>Trigonometry</title>
+    <subsection xml:id="formula-trigonometric-identities"><title>Identities and Exact Values</title>
+      <md>\tan A=\frac{\sin A}{\cos A},\quad \cot A=\frac{\cos A}{\sin A},\quad \sec A=\frac1{\cos A},\quad \csc A=\frac1{\sin A}</md>
+      <md>\sin^2A+\cos^2A=1,\quad 1+\tan^2A=\sec^2A,\quad 1+\cot^2A=\csc^2A</md>
+      <md>\sin(-A)=-\sin A,\qquad \cos(-A)=\cos A,\qquad \tan(-A)=-\tan A</md>
+      <p>Exact values:</p><md>\begin{array}{c|ccc}A&amp;30^\circ&amp;45^\circ&amp;60^\circ\\\hline\sin A&amp;\frac12&amp;\frac{\sqrt2}{2}&amp;\frac{\sqrt3}{2}\\\cos A&amp;\frac{\sqrt3}{2}&amp;\frac{\sqrt2}{2}&amp;\frac12\\\tan A&amp;\frac1{\sqrt3}&amp;1&amp;\sqrt3\end{array}</md>
+      <md>1\text{ rad}\approx57.296^\circ,\qquad 1^\circ\approx0.01745\text{ rad}</md>
+    </subsection>
+    <subsection xml:id="formula-compound-double-angle"><title>Compound and Double Angles</title>
+      <md>\cos(A\pm B)=\cos A\cos B\mp\sin A\sin B</md><md>\sin(A\pm B)=\sin A\cos B\pm\cos A\sin B</md>
+      <md>\tan(A+B)=\frac{\tan A+\tan B}{1-\tan A\tan B},\qquad \tan(A-B)=\frac{\tan A-\tan B}{1+\tan A\tan B}</md>
+      <md>\sin 2A=2\sin A\cos A,\quad \cos 2A=\cos^2A-\sin^2A=2\cos^2A-1=1-2\sin^2A</md><md>\tan 2A=\frac{2\tan A}{1-\tan^2A}</md>
+    </subsection>
+    <subsection xml:id="formula-products-sums"><title>Products, Sums and Differences</title>
+      <md>2\cos A\cos B=\cos(A+B)+\cos(A-B)</md><md>2\sin A\cos B=\sin(A+B)+\sin(A-B)</md><md>2\sin A\sin B=\cos(A-B)-\cos(A+B)</md><md>2\cos A\sin B=\sin(A+B)-\sin(A-B)</md>
+      <md>\cos A+\cos B=2\cos\frac{A+B}{2}\cos\frac{A-B}{2}</md><md>\cos A-\cos B=-2\sin\frac{A+B}{2}\sin\frac{A-B}{2}</md><md>\sin A+\sin B=2\sin\frac{A+B}{2}\cos\frac{A-B}{2}</md><md>\sin A-\sin B=2\cos\frac{A+B}{2}\sin\frac{A-B}{2}</md>
+    </subsection>
+    <subsection xml:id="formula-triangle-rules"><title>Triangle and Right-triangle Formulae</title>
+      <md>\text{Area}=\frac12ab\sin C,\qquad \frac a{\sin A}=\frac b{\sin B}=\frac c{\sin C}</md><md>a^2=b^2+c^2-2bc\cos A</md>
+      <md>\sin A=\frac ac,\qquad \cos A=\frac bc,\qquad \tan A=\frac ab,\qquad c^2=a^2+b^2</md>
+    </subsection>
+  </section>
+
+  <section xml:id="formula-tables-geometry-vectors">
+    <title>Geometry and Vectors</title>
+    <subsection xml:id="formula-geometry-notation"><title>Geometry Notation</title><tabular><col/><col/><row><cell>Line through <m>A</m> and <m>B</m></cell><cell><m>AB</m></cell></row><row><cell>Line segment from <m>A</m> to <m>B</m></cell><cell><m>[AB]</m></cell></row><row><cell>Distance from <m>A</m> to <m>B</m></cell><cell><m>|AB|</m></cell></row><row><cell>Vector from <m>A</m> to <m>B</m></cell><cell><m>\overrightarrow{AB}</m></cell></row><row><cell>Position vector of <m>A</m></cell><cell><m>\overrightarrow{OA}</m></cell></row></tabular></subsection>
+    <subsection xml:id="formula-vector-operations"><title>Vector Operations and Complex-number Magnitude</title><md>\mathbf u=x_1\mathbf i+y_1\mathbf j,\qquad \mathbf v=x_2\mathbf i+y_2\mathbf j</md><md>|\mathbf u|=\sqrt{x_1^2+y_1^2}</md><md>z=x_1+iy_1\quad\Longrightarrow\quad |z|=\sqrt{x_1^2+y_1^2}</md><md>\mathbf u\cdot\mathbf v=x_1x_2+y_1y_2=|\mathbf u||\mathbf v|\cos\theta</md></subsection>
+  </section>
+
+  <section xml:id="formula-tables-coordinate-geometry">
+    <title>Co-ordinate Geometry</title>
+    <subsection xml:id="formula-coordinate-lines"><title>Lines and Points</title><p>For <m>P(x_1,y_1)</m> and <m>Q(x_2,y_2)</m>:</p><md>m=\frac{y_2-y_1}{x_2-x_1},\qquad PQ=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</md><md>M=\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right),\qquad y-y_1=m(x-x_1),\qquad y=mx+c</md><md>P_{a:b}=\left(\frac{bx_1+ax_2}{a+b},\frac{by_1+ay_2}{a+b}\right)</md><md>\mathcal A=\frac12|x_1y_2-x_2y_1|</md></subsection>
+    <subsection xml:id="formula-coordinate-circles"><title>Distance, Angles and Circles</title><md>d=\frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}\quad\text{from }(x_0,y_0)\text{ to }ax+by+c=0</md><md>\tan\theta=\left|\frac{m_2-m_1}{1+m_1m_2}\right|</md><md>(x-h)^2+(y-k)^2=r^2</md><md>(x_1-h)(x-h)+(y_1-k)(y-k)=r^2</md><p>The last equation is the tangent to the circle at <m>(x_1,y_1)</m>.</p></subsection>
+  </section>
+
+  <section xml:id="formula-tables-algebra">
+    <title>Algebra</title>
+    <subsection xml:id="formula-quadratic-roots"><title>Roots of a Quadratic</title><p>For <m>ax^2+bx+c=0</m>, with <m>a\ne0</m>:</p><md>x=\frac{-b\pm\sqrt{b^2-4ac}}{2a},\qquad \Delta=b^2-4ac</md></subsection>
+    <subsection xml:id="formula-inverse-matrix"><title>Inverse of a Matrix</title><p>If <m>A=\begin{pmatrix}a&amp;b\\c&amp;d\end{pmatrix}</m> and <m>ad-bc\ne0</m>:</p><md>A^{-1}=\frac1{ad-bc}\begin{pmatrix}d&amp;-b\\-c&amp;a\end{pmatrix}</md></subsection>
+    <subsection xml:id="formula-de-moivre"><title>De Moivre's Theorem</title><md>[r(\cos\theta+i\sin\theta)]^n=r^n(\cos n\theta+i\sin n\theta)</md></subsection>
+    <subsection xml:id="formula-binomial-theorem"><title>Binomial Theorem</title><md>(x+y)^n=\sum_{r=0}^n\binom nr x^{n-r}y^r,\qquad \binom nr=\frac{n!}{r!(n-r)!}</md></subsection>
+  </section>
+
+  <section xml:id="formula-tables-indices-logarithms">
+    <title>Indices and Logarithms</title>
+    <subsection xml:id="formula-index-laws"><title>Indices</title><md>a^ma^n=a^{m+n},\quad \frac{a^m}{a^n}=a^{m-n},\quad (a^m)^n=a^{mn}</md><md>(ab)^n=a^nb^n,\quad a^0=1,\quad a^{-n}=\frac1{a^n},\quad a^{1/n}=\sqrt[n]{a}</md></subsection>
+    <subsection xml:id="formula-log-laws"><title>Logarithms</title><md>\log_a(xy)=\log_ax+\log_ay,\quad \log_a\left(\frac xy\right)=\log_ax-\log_ay</md><md>\log_a(x^n)=n\log_ax,\quad \log_a1=0,\quad \log_aa=1</md><md>\log_a x=\frac{\log_bx}{\log_ba}</md></subsection>
+  </section>
+
+  <section xml:id="formula-tables-sequences-series">
+    <title>Sequences and Series</title>
+    <p><m>T_n</m> is the <m>n</m>th term and <m>S_n</m> is the sum of the first <m>n</m> terms.</p>
+    <subsection xml:id="formula-arithmetic-series"><title>Arithmetic Sequence and Series</title><p>First term <m>a</m>, common difference <m>d</m>:</p><md>T_n=a+(n-1)d,\qquad S_n=\frac n2(2a+(n-1)d)=\frac n2(a+T_n)</md></subsection>
+    <subsection xml:id="formula-geometric-series"><title>Geometric Sequence and Series</title><p>First term <m>a</m>, common ratio <m>r</m>:</p><md>T_n=ar^{n-1},\qquad S_n=a\frac{1-r^n}{1-r}\quad(r\ne1),\qquad S_\infty=\frac a{1-r}\quad(|r|&lt;1)</md></subsection>
+  </section>
+
+  <section xml:id="formula-tables-sets-logic">
+    <title>Sets and Logic</title>
+    <subsection xml:id="formula-set-symbols"><title>Set and Number Symbols</title><md>\begin{array}{c|l}A\cap B&amp;\text{intersection}\\A\cup B&amp;\text{union}\\A\setminus B&amp;\text{difference}\\A\triangle B&amp;\text{symmetric difference}\\A\subseteq B&amp;\text{subset}\\x\in A&amp;\text{element of }A\\\varnothing&amp;\text{empty set}\\A^c&amp;\text{complement}\end{array}</md><md>\mathbb N=\{1,2,3,\ldots\},\quad\mathbb Z=\{\ldots,-1,0,1,\ldots\},\quad\mathbb Q=\left\{\frac pq:p,q\in\mathbb Z,\ q\ne0\right\},\quad\mathbb R,\quad\mathbb C</md></subsection>
+    <subsection xml:id="formula-logic-demorgan"><title>Logic Symbols and De Morgan's Laws</title><md>\land\ (\text{AND}),\quad\lor\ (\text{OR}),\quad\neg\ (\text{NOT}),\quad\Rightarrow\ (\text{implies}),\quad\Leftrightarrow\ (\text{equivalent}),\quad\forall,\quad\exists</md><md>\neg(P\land Q)\equiv(\neg P)\lor(\neg Q),\qquad \neg(P\lor Q)\equiv(\neg P)\land(\neg Q)</md><md>(A\cap B)^c=A^c\cup B^c,\qquad (A\cup B)^c=A^c\cap B^c</md></subsection>
+  </section>
+
+  <section xml:id="formula-tables-calculus">
+    <title>Calculus</title>
+    <subsection xml:id="formula-derivatives"><title>Derivatives</title><md>\begin{array}{c|c}f(x)&amp;f'(x)\\\hline x^n&amp;nx^{n-1}\\\ln x&amp;1/x\\e^x&amp;e^x\\a^x&amp;a^x\ln a\\\sin x&amp;\cos x\\\cos x&amp;-\sin x\\\tan x&amp;\sec^2x\end{array}</md></subsection>
+    <subsection xml:id="formula-differentiation-rules"><title>Differentiation Rules</title><md>\frac{d}{dx}(uv)=u\frac{dv}{dx}+v\frac{du}{dx}</md><md>\frac{d}{dx}\left(\frac uv\right)=\frac{v\,du/dx-u\,dv/dx}{v^2},\qquad \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}</md></subsection>
+    <subsection xml:id="formula-integrals"><title>Common Integrals</title><md>\int x^n\,dx=\frac{x^{n+1}}{n+1}+C\ (n\ne-1),\quad \int\frac{dx}{x}=\ln|x|+C</md><md>\int e^x\,dx=e^x+C,\quad \int a^x\,dx=\frac{a^x}{\ln a}+C</md><md>\int\sin x\,dx=-\cos x+C,\quad \int\cos x\,dx=\sin x+C,\quad \int\sec^2x\,dx=\tan x+C</md><md>\int\frac{dx}{1+x^2}=\tan^{-1}x+C,\quad \int\frac{dx}{\sqrt{1-x^2}}=\sin^{-1}x+C</md><md>\int u\,dv=uv-\int v\,du</md></subsection>
+    <subsection xml:id="formula-numerical-calculus"><title>Numerical Methods, Series and Volumes</title><md>x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}</md><md>f(x)=\sum_{r=0}^{\infty}\frac{f^{(r)}(a)}{r!}(x-a)^r,\qquad f(x)=\sum_{r=0}^{\infty}\frac{f^{(r)}(0)}{r!}x^r</md><md>V=\pi\int_a^b y^2\,dx</md></subsection>
+  </section>
+
+  <section xml:id="formula-tables-economics">
+    <title>Economics</title>
+    <subsection xml:id="formula-elasticity"><title>Elasticity</title><md>E_d=\frac{\Delta Q}{\Delta P}\frac{P_1+P_2}{Q_1+Q_2},\quad E_Y=\frac{\Delta Q}{\Delta Y}\frac{Y_1+Y_2}{Q_1+Q_2}</md><md>E_{AB}=\frac{\Delta Q_A}{\Delta P_B}\frac{P_{B1}+P_{B2}}{Q_{A1}+Q_{A2}},\quad E_s=\frac{\Delta Q}{\Delta P}\frac{P_1+P_2}{Q_1+Q_2}</md><p>Subscripts 1 and 2 refer to values before and after a change.</p></subsection>
+    <subsection xml:id="formula-gdp-multipliers"><title>GDP and Multipliers</title><md>Y=C+I+G+(X-M)</md><md>k=\frac1{MPS},\qquad k=\frac1{MPS+MPM},\qquad k=\frac1{MPS+MPM+MPT}</md><p>The multipliers correspond respectively to a closed economy without government, an open economy without government, and an open economy with government. <m>MPS=1-MPC</m>.</p></subsection>
+  </section>
+
+  <section xml:id="formula-tables-financial-mathematics">
+    <title>Financial Mathematics</title>
+    <subsection xml:id="formula-interest-depreciation"><title>Interest, Present Value and Depreciation</title><p>For <m>t</m> equal periods and rate <m>i</m> per period:</p><md>F=P(1+i)^t,\qquad P=\frac{F}{(1+i)^t},\qquad F=P(1-i)^t</md><md>A=\frac{P-S}{t}</md><p>For straight-line depreciation, <m>P</m> is initial value and <m>S</m> is scrap value.</p></subsection>
+    <subsection xml:id="formula-loans-apr"><title>Loan Repayments and APR</title><md>A=P\frac{i(1+i)^t}{(1+i)^t-1}</md><md>\sum_{k=1}^{N}\frac{A_k}{(1+i)^{T_k}}=\sum_{j=1}^{n}\frac{R_j}{(1+i)^{t_j}}</md><p>The APR is the annualised value of <m>i</m> that equates the present values of advances and repayments.</p></subsection>
+    <subsection xml:id="formula-effective-continuous-rates"><title>Effective Annual Rate and Continuous Compounding</title><md>i_{\mathrm{eff}}=\left(1+\frac rm\right)^m-1,\qquad F=Pe^{rt},\qquad i_{\mathrm{eff}}=e^r-1</md><p><m>r</m> is the nominal annual rate and <m>m</m> is the number of compounding periods per year.</p></subsection>
+  </section>
+
+  <section xml:id="formula-tables-statistics-probability">
+    <title>Statistics and Probability</title>
+    <subsection xml:id="formula-summary-statistics"><title>Mean and Standard Deviation</title><md>\bar{x}=\frac1n\sum_{i=1}^n x_i,\qquad \bar{x}=\frac{\sum f_ix_i}{\sum f_i}</md><md>\sigma=\sqrt{\frac1n\sum_{i=1}^n(x_i-\bar{x})^2},\qquad \sigma=\sqrt{\frac{\sum f_i(x_i-\bar{x})^2}{\sum f_i}}</md></subsection>
+    <subsection xml:id="formula-binomial-poisson-normal"><title>Probability Distributions</title><md>P(X=r)=\binom nrp^rq^{n-r},\quad \mu=np,\quad \sigma=\sqrt{npq},\quad q=1-p</md><md>P(X=r)=e^{-\lambda}\frac{\lambda^r}{r!},\quad \mu=\lambda,\quad\sigma=\sqrt\lambda</md><md>f(x)=\frac1{\sigma\sqrt{2\pi}}e^{-\frac12((x-\mu)/\sigma)^2},\qquad Z=\frac{X-\mu}{\sigma}</md></subsection>
+    <subsection xml:id="formula-sampling"><title>Sampling</title><md>s=\sqrt{\frac{\sum(x_i-\bar{x})^2}{n-1}},\qquad \sigma_{\bar{x}}=\frac{\sigma}{\sqrt n},\qquad \sigma_{\hat p}=\sqrt{\frac{\hat p(1-\hat p)}n}</md></subsection>
+  </section>
+
+  <section xml:id="formula-tables-hypothesis-tests">
+    <title>Hypothesis Testing</title>
+    <subsection xml:id="formula-test-statistics"><title>Test Statistics</title>
+      <md>z=\frac{\bar{x}-\mu_0}{\sigma/\sqrt n},\qquad t=\frac{\bar{x}-\mu_0}{s/\sqrt n},\quad \nu=n-1</md>
+      <md>z=\frac{\bar{x}_1-\bar{x}_2}{\sqrt{\sigma_1^2/n_1+\sigma_2^2/n_2}}</md>
+      <md>s_p^2=\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2},\qquad t=\frac{\bar{x}_1-\bar{x}_2}{s_p\sqrt{1/n_1+1/n_2}}</md>
+      <md>\chi^2=\sum_{i=1}^k\frac{(O_i-E_i)^2}{E_i},\quad \nu=k-1-m,\qquad t=r\sqrt{\frac{n-2}{1-r^2}},\quad \nu=n-2</md>
+      <p>The last two expressions are the chi-squared goodness-of-fit statistic and the significance test for Pearson correlation. <m>O_i</m> and <m>E_i</m> are observed and expected frequencies.</p>
+    </subsection>
+  </section>
+
+  <section xml:id="formula-tables-standard-normal">
+    <title>Standard Normal Distribution</title>
+    <subsection xml:id="formula-standard-normal-probabilities"><title>Probabilities</title><md>P(Z\le z)=\Phi(z),\qquad P(Z&gt;z)=1-\Phi(z),\qquad \Phi(-z)=1-\Phi(z)</md><p>The standard normal table gives cumulative probabilities <m>P(Z\le z)</m>. Use symmetry for negative values and complements for upper-tail probabilities.</p></subsection>
+    <subsection xml:id="formula-standard-normal-table"><title>Cumulative Probability Table</title>
+      <table xml:id="standard-normal-table"><title>Selected values of <m>\Phi(z)=P(Z\le z)</m>, to four decimal places</title>
+        <tabular>
+          <col/><col/><col/><col/><col/><col/><col/><col/><col/><col/><col/>
+          <row><cell><m>z</m></cell><cell><m>.00</m></cell><cell><m>.01</m></cell><cell><m>.02</m></cell><cell><m>.03</m></cell><cell><m>.04</m></cell><cell><m>.05</m></cell><cell><m>.06</m></cell><cell><m>.07</m></cell><cell><m>.08</m></cell><cell><m>.09</m></cell></row>
+          <row><cell>0.0</cell><cell>.5000</cell><cell>.5040</cell><cell>.5080</cell><cell>.5120</cell><cell>.5160</cell><cell>.5199</cell><cell>.5239</cell><cell>.5279</cell><cell>.5319</cell><cell>.5359</cell></row>
+          <row><cell>0.1</cell><cell>.5398</cell><cell>.5438</cell><cell>.5478</cell><cell>.5517</cell><cell>.5557</cell><cell>.5596</cell><cell>.5636</cell><cell>.5675</cell><cell>.5714</cell><cell>.5753</cell></row>
+          <row><cell>0.2</cell><cell>.5793</cell><cell>.5832</cell><cell>.5871</cell><cell>.5910</cell><cell>.5948</cell><cell>.5987</cell><cell>.6026</cell><cell>.6064</cell><cell>.6103</cell><cell>.6141</cell></row>
+          <row><cell>0.3</cell><cell>.6179</cell><cell>.6217</cell><cell>.6255</cell><cell>.6293</cell><cell>.6331</cell><cell>.6368</cell><cell>.6406</cell><cell>.6443</cell><cell>.6480</cell><cell>.6517</cell></row>
+          <row><cell>0.4</cell><cell>.6554</cell><cell>.6591</cell><cell>.6628</cell><cell>.6664</cell><cell>.6700</cell><cell>.6736</cell><cell>.6772</cell><cell>.6808</cell><cell>.6844</cell><cell>.6879</cell></row>
+          <row><cell>0.5</cell><cell>.6915</cell><cell>.6950</cell><cell>.6985</cell><cell>.7019</cell><cell>.7054</cell><cell>.7088</cell><cell>.7123</cell><cell>.7157</cell><cell>.7190</cell><cell>.7224</cell></row>
+          <row><cell>0.6</cell><cell>.7257</cell><cell>.7291</cell><cell>.7324</cell><cell>.7357</cell><cell>.7389</cell><cell>.7422</cell><cell>.7454</cell><cell>.7486</cell><cell>.7517</cell><cell>.7549</cell></row>
+          <row><cell>0.7</cell><cell>.7580</cell><cell>.7611</cell><cell>.7642</cell><cell>.7673</cell><cell>.7704</cell><cell>.7734</cell><cell>.7764</cell><cell>.7794</cell><cell>.7823</cell><cell>.7852</cell></row>
+          <row><cell>0.8</cell><cell>.7881</cell><cell>.7910</cell><cell>.7939</cell><cell>.7967</cell><cell>.7995</cell><cell>.8023</cell><cell>.8051</cell><cell>.8078</cell><cell>.8106</cell><cell>.8133</cell></row>
+          <row><cell>0.9</cell><cell>.8159</cell><cell>.8186</cell><cell>.8212</cell><cell>.8238</cell><cell>.8264</cell><cell>.8289</cell><cell>.8315</cell><cell>.8340</cell><cell>.8365</cell><cell>.8389</cell></row>
+          <row><cell>1.0</cell><cell>.8413</cell><cell>.8438</cell><cell>.8461</cell><cell>.8485</cell><cell>.8508</cell><cell>.8531</cell><cell>.8554</cell><cell>.8577</cell><cell>.8599</cell><cell>.8621</cell></row>
+          <row><cell>1.1</cell><cell>.8643</cell><cell>.8665</cell><cell>.8686</cell><cell>.8708</cell><cell>.8729</cell><cell>.8749</cell><cell>.8770</cell><cell>.8790</cell><cell>.8810</cell><cell>.8830</cell></row>
+          <row><cell>1.2</cell><cell>.8849</cell><cell>.8869</cell><cell>.8888</cell><cell>.8907</cell><cell>.8925</cell><cell>.8944</cell><cell>.8962</cell><cell>.8980</cell><cell>.8997</cell><cell>.9015</cell></row>
+          <row><cell>1.3</cell><cell>.9032</cell><cell>.9049</cell><cell>.9066</cell><cell>.9082</cell><cell>.9099</cell><cell>.9115</cell><cell>.9131</cell><cell>.9147</cell><cell>.9162</cell><cell>.9177</cell></row>
+          <row><cell>1.4</cell><cell>.9192</cell><cell>.9207</cell><cell>.9222</cell><cell>.9236</cell><cell>.9251</cell><cell>.9265</cell><cell>.9279</cell><cell>.9292</cell><cell>.9306</cell><cell>.9319</cell></row>
+          <row><cell>1.5</cell><cell>.9332</cell><cell>.9345</cell><cell>.9357</cell><cell>.9370</cell><cell>.9382</cell><cell>.9394</cell><cell>.9406</cell><cell>.9418</cell><cell>.9429</cell><cell>.9441</cell></row>
+          <row><cell>1.6</cell><cell>.9452</cell><cell>.9463</cell><cell>.9474</cell><cell>.9484</cell><cell>.9495</cell><cell>.9505</cell><cell>.9515</cell><cell>.9525</cell><cell>.9535</cell><cell>.9545</cell></row>
+          <row><cell>1.7</cell><cell>.9554</cell><cell>.9564</cell><cell>.9573</cell><cell>.9582</cell><cell>.9591</cell><cell>.9599</cell><cell>.9608</cell><cell>.9616</cell><cell>.9625</cell><cell>.9633</cell></row>
+          <row><cell>1.8</cell><cell>.9641</cell><cell>.9649</cell><cell>.9656</cell><cell>.9664</cell><cell>.9671</cell><cell>.9678</cell><cell>.9686</cell><cell>.9693</cell><cell>.9699</cell><cell>.9706</cell></row>
+          <row><cell>1.9</cell><cell>.9713</cell><cell>.9719</cell><cell>.9726</cell><cell>.9732</cell><cell>.9738</cell><cell>.9744</cell><cell>.9750</cell><cell>.9756</cell><cell>.9761</cell><cell>.9767</cell></row>
+          <row><cell>2.0</cell><cell>.9772</cell><cell>.9778</cell><cell>.9783</cell><cell>.9788</cell><cell>.9793</cell><cell>.9798</cell><cell>.9803</cell><cell>.9808</cell><cell>.9812</cell><cell>.9817</cell></row>
+          <row><cell>2.1</cell><cell>.9821</cell><cell>.9826</cell><cell>.9830</cell><cell>.9834</cell><cell>.9838</cell><cell>.9842</cell><cell>.9846</cell><cell>.9850</cell><cell>.9854</cell><cell>.9857</cell></row>
+          <row><cell>2.2</cell><cell>.9861</cell><cell>.9864</cell><cell>.9868</cell><cell>.9871</cell><cell>.9875</cell><cell>.9878</cell><cell>.9881</cell><cell>.9884</cell><cell>.9887</cell><cell>.9890</cell></row>
+          <row><cell>2.3</cell><cell>.9893</cell><cell>.9896</cell><cell>.9898</cell><cell>.9901</cell><cell>.9904</cell><cell>.9906</cell><cell>.9909</cell><cell>.9911</cell><cell>.9913</cell><cell>.9916</cell></row>
+          <row><cell>2.4</cell><cell>.9918</cell><cell>.9920</cell><cell>.9922</cell><cell>.9925</cell><cell>.9927</cell><cell>.9929</cell><cell>.9931</cell><cell>.9932</cell><cell>.9934</cell><cell>.9936</cell></row>
+          <row><cell>2.5</cell><cell>.9938</cell><cell>.9940</cell><cell>.9941</cell><cell>.9943</cell><cell>.9945</cell><cell>.9946</cell><cell>.9948</cell><cell>.9949</cell><cell>.9951</cell><cell>.9952</cell></row>
+          <row><cell>2.6</cell><cell>.9953</cell><cell>.9955</cell><cell>.9956</cell><cell>.9957</cell><cell>.9959</cell><cell>.9960</cell><cell>.9961</cell><cell>.9962</cell><cell>.9963</cell><cell>.9964</cell></row>
+          <row><cell>2.7</cell><cell>.9965</cell><cell>.9966</cell><cell>.9967</cell><cell>.9968</cell><cell>.9969</cell><cell>.9970</cell><cell>.9971</cell><cell>.9972</cell><cell>.9973</cell><cell>.9974</cell></row>
+          <row><cell>2.8</cell><cell>.9974</cell><cell>.9975</cell><cell>.9976</cell><cell>.9977</cell><cell>.9977</cell><cell>.9978</cell><cell>.9979</cell><cell>.9979</cell><cell>.9980</cell><cell>.9981</cell></row>
+          <row><cell>2.9</cell><cell>.9981</cell><cell>.9982</cell><cell>.9982</cell><cell>.9983</cell><cell>.9984</cell><cell>.9984</cell><cell>.9985</cell><cell>.9985</cell><cell>.9986</cell><cell>.9986</cell></row>
+        </tabular>
+      </table>
+      <p>This first web edition carries the printed draft's tabulated range through <m>z=2.99</m>. The table can be extended as needed without changing its topic link.</p>
+    </subsection>
+  </section>
+</appendix>

@@ -304,6 +304,7 @@
     <backmatter>
       <xi:include href="./shared-glossary.ptx"/>
       <xi:include href="./appendix-b-geometry.ptx"/>
+      <xi:include href="./appendix-c-formula-tables.ptx"/>
     </backmatter>
   </book>
 </pretext>

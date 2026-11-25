@@ -6,6 +6,8 @@
   <common>
     <!-- Show Parts, chapters and sections in the contents panel. -->
     <tableofcontents level="3"/>
+    <!-- Give each section its own HTML page; section-level links stay directly navigable. -->
+    <chunking level="3"/>
   </common>
   <html favicon="simple">
     <!-- Focus navigation on the current page; visitors can expand/collapse branches. -->
