@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="lc-ol-algebra-fundamentals">
+  <title>Fundamentals of Algebra</title>
+  <introduction>
+    <p>Before we learn to manipulate algebra, we should learn to read algebra. We will give particular attention to the distinction between <em>additive structure</em> and <em>multiplicative structure</em>. This distinction underpins almost everything we subsequently do in algebra.</p>
+  </introduction>
+  <section xml:id="lc-ol-fundamentals-notation">
+    <title>The Language and Notation of Algebra</title>
+    <p>Arithmetic and algebra have different conventions.</p>
+    <table><title>Arithmetic and algebra</title><tabular>
+      <row><cell>Arithmetic</cell><cell>Algebra</cell></row>
+      <row><cell><m>23=2\times10+3</m></cell><cell><m>ab=a\times b</m></cell></row>
+      <row><cell><m>35\ne3\times5</m></cell><cell><m>xy=x\times y</m></cell></row>
+      <row><cell><m>2\times7</m></cell><cell><m>2x</m> when <m>x=7</m></cell></row>
+      <row><cell><m>5+5+5</m></cell><cell><m>3x</m> when <m>x=5</m></cell></row>
+      <row><cell><m>5\times5\times5</m></cell><cell><m>x^3</m> when <m>x=5</m></cell></row>
+    </tabular></table>
+    <p>In arithmetic, placing digits beside one another represents <em>place value</em>. In algebra, placing variables beside one another generally represents <em>multiplication</em>.</p>
+    <p>For example, if <m>A=2</m> and <m>B=3</m>, then <m>AB=2\times3=6</m>, not <m>23</m>.</p>
+    <p>This is a substantial conceptual transition that is easily overlooked.</p>
+  </section>
+  <section xml:id="lc-ol-fundamentals-expression">
+    <title>What Is an Expression?</title>
+    <p>An <term>expression</term> is a mathematical combination of numbers, variables and operations that represents a value.</p>
+    <p>For example,</p>
+    <p><me>5,\qquad x,\qquad 3x,\qquad \dfrac{2x}{y},\qquad 3x+7,\qquad x^2-4x+9.</me></p>
+    <p>All of these are expressions. The quotient is defined when <m>y\ne0</m>.</p>
+    <p>An expression does not require multiple terms, nor does it require a variable.</p>
+    <table><title>Expressions, equations and identities</title><tabular>
+      <row><cell>Concept</cell><cell>Example</cell><cell>What we do</cell></row>
+      <row><cell>Expression</cell><cell><m>3x+5</m></cell><cell>Evaluate or simplify</cell></row>
+      <row><cell>Equation</cell><cell><m>3x+5=20</m></cell><cell>Solve</cell></row>
+      <row><cell>Identity</cell><cell><m>2(x+3)\equiv2x+6</m></cell><cell>Establish or verify</cell></row>
+    </tabular></table>
+  </section>
+  <section xml:id="lc-ol-fundamentals-terms-factors">
+    <title>Terms and Factors</title>
+    <figure xml:id="lc-ol-fundamentals-terms-diagram">
+      <caption>One expression, three terms: <m>3xy</m>, <m>5x</m> and <m>-7</m>.</caption>
+      <image width="90%">
+        <description>The expression 3xy + 5x - 7, with blue brackets beneath 3xy, 5x and minus 7, labelled first, second and third term. The negative sign belongs to the third term.</description>
+        <latex-image-code><![CDATA[
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily]
+\node at (5,2.5) {One expression};
+\draw[gray] (1.7,1.85)--(1.7,2.05)--(8.3,2.05)--(8.3,1.85);
+\node[font=\Large] at (2,1.4) {$3xy$};
+\node[font=\Large] at (3.65,1.4) {$+$};
+\node[font=\Large] at (5,1.4) {$5x$};
+\node[font=\Large] at (8,1.4) {$-7$};
+\draw[blue!65!black,thick] (1.1,1.03)--(1.1,.82)--(2.9,.82)--(2.9,1.03);
+\draw[blue!65!black,thick] (4.3,1.03)--(4.3,.82)--(5.7,.82)--(5.7,1.03);
+\draw[blue!65!black,thick] (7.35,1.03)--(7.35,.82)--(8.65,.82)--(8.65,1.03);
+\node[blue!65!black] at (2,.45) {First term};
+\node[blue!65!black] at (5,.45) {Second term};
+\node[blue!65!black] at (8,.45) {Third term};
+\end{tikzpicture}
+]]></latex-image-code>
+      </image>
+    </figure>
+    <figure xml:id="lc-ol-fundamentals-factors-diagram">
+      <caption>One term, three factors.</caption>
+      <image width="85%">
+        <description>The product 3 times x times y, with green brackets underneath each of 3, x and y identifying the three factors.</description>
+        <latex-image-code><![CDATA[
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily]
+\node at (4,2.2) {One term, three factors};
+\node[font=\Large] at (1,1.4) {$3$};
+\node[font=\Large] at (2.5,1.4) {$\times$};
+\node[font=\Large] at (4,1.4) {$x$};
+\node[font=\Large] at (5.5,1.4) {$\times$};
+\node[font=\Large] at (7,1.4) {$y$};
+\foreach \a in {1,4,7}{
+\draw[green!50!black,thick] (\a-.38,1.03)--(\a-.38,.82)--(\a+.38,.82)--(\a+.38,1.03);
+\node[green!50!black] at (\a,.43) {Factor};
+}
+\end{tikzpicture}
+]]></latex-image-code>
+      </image>
+    </figure>
+    <p>The fundamental distinction is:</p>
+    <ul>
+      <li><p><term>Terms</term> are combined by addition or subtraction at the outermost level. Keep the sign with the term.</p></li>
+      <li><p><term>Factors</term> are combined by multiplication.</p></li>
+      <li><p><term>Quotients</term> are formed by division.</p></li>
+    </ul>
+    <p>More precisely, subtraction can be interpreted as addition of a negative term, and division can be interpreted as multiplication by a reciprocal.</p>
+    <p>Consequently,</p>
+    <p><me>\dfrac{6xy}{z}=6\times x\times y\times\dfrac{1}{z},\qquad z\ne0.</me></p>
+    <p>We can regard this as a multiplicative structure involving ordinary factors and reciprocal factors.</p>
+    <p>We distinguish between <em>factors of the numerator</em>, <em>factors of the denominator</em> and <em>reciprocal factors</em>, rather than simply calling everything a factor of the numerator.</p>
+  </section>
+  <section xml:id="lc-ol-fundamentals-structure">
+    <title>Recognising Mathematical Structure</title>
+    <p>Learn to look at an expression and recognise its structure before attempting to manipulate it.</p>
+    <table><title>Recognise the principal structure</title><tabular>
+      <row><cell>Expression</cell><cell>Principal structure</cell></row>
+      <row><cell><m>3xy</m></cell><cell>Product</cell></row>
+      <row><cell><m>3x+5y</m></cell><cell>Sum</cell></row>
+      <row><cell><m>3x-5y</m></cell><cell>Difference</cell></row>
+      <row><cell><m>\dfrac{3x}{5y}</m></cell><cell>Quotient</cell></row>
+      <row><cell><m>3(x+5)</m></cell><cell>Product</cell></row>
+      <row><cell><m>(x+2)(x+3)</m></cell><cell>Product</cell></row>
+      <row><cell><m>x^2+5x+6</m></cell><cell>Sum of three terms</cell></row>
+      <row><cell><m>\dfrac{x+2}{x-3}</m></cell><cell>Quotient</cell></row>
+    </tabular></table>
+    <p>The last four examples are particularly important because brackets allow an entire expression to become a factor. A quotient may similarly contain entire expressions in its numerator and denominator. Denominators must be non-zero.</p>
+    <figure xml:id="lc-ol-fundamentals-expansion-diagram">
+      <caption>Expansion transforms a product into a sum of terms. Factorisation reverses the process.</caption>
+      <image width="90%">
+        <description>The product (x+2)(x+3) branches into its two factors, x+2 and x+3. An expansion arrow leads down to x squared plus 5x plus 6, and a factorisation arrow leads back up.</description>
+        <latex-image-code><![CDATA[
+\begin{tikzpicture}[x=1cm,y=1cm,font=\sffamily]
+\node[font=\Large] at (5,4.5) {$(x+2)(x+3)$};
+\node at (5,4.03) {Product};
+\draw[green!50!black,thick] (5,3.8)--(5,3.5)--(2.5,2.95);
+\draw[green!50!black,thick] (5,3.5)--(7.5,2.95);
+\node[font=\Large] at (2.5,2.65) {$x+2$};
+\node[font=\Large] at (7.5,2.65) {$x+3$};
+\draw[green!50!black,thick] (1.5,2.25)--(3.5,2.25);
+\draw[green!50!black,thick] (6.5,2.25)--(8.5,2.25);
+\node[green!50!black] at (2.5,1.95) {Factor};
+\node[green!50!black] at (7.5,1.95) {Factor};
+\draw[->,thick,blue!65!black] (4.7,1.85)--(4.7,.85) node[midway,left] {Expand};
+\draw[->,thick,green!50!black] (5.3,.85)--(5.3,1.85) node[midway,right] {Factorise};
+\node[font=\Large] at (5,.4) {$x^2+5x+6$};
+\end{tikzpicture}
+]]></latex-image-code>
+      </image>
+    </figure>
+    <p>That is the Full Cycle philosophy applied to algebra.</p>
+  </section>
+  <section xml:id="lc-ol-fundamentals-real-world">
+    <title>Where Do These Operations Arise in the Real World?</title>
+    <p>Multiplication is extraordinarily prevalent when we construct mathematical models relating different quantities. Addition is equally fundamental when we aggregate quantities of the same kind.</p>
+    <table><title>Operations in mathematical models</title><tabular>
+      <row><cell>Real-world quantity</cell><cell>Expression</cell><cell>Structure</cell></row>
+      <row><cell>Area of a rectangle</cell><cell><m>lw</m></cell><cell>Product</cell></row>
+      <row><cell>Volume of a box</cell><cell><m>lwh</m></cell><cell>Product</cell></row>
+      <row><cell>Distance travelled at constant speed</cell><cell><m>vt</m></cell><cell>Product</cell></row>
+      <row><cell>Earnings at a fixed hourly rate</cell><cell><m>rh</m></cell><cell>Product</cell></row>
+      <row><cell>Average speed</cell><cell><m>\dfrac{d}{t}</m></cell><cell>Quotient</cell></row>
+      <row><cell>Density</cell><cell><m>\dfrac{m}{V}</m></cell><cell>Quotient</cell></row>
+      <row><cell>Total expenditure</cell><cell><m>a+b+c</m></cell><cell>Sum</cell></row>
+      <row><cell>Profit</cell><cell><m>R-C</m></cell><cell>Difference</cell></row>
+      <row><cell>Taxi fare (base fare plus distance charge)</cell><cell><m>a+bd</m></cell><cell>Mixed</cell></row>
+      <row><cell>Compound interest (accumulated amount)</cell><cell><m>P(1+r)^t</m></cell><cell>Multiplicative</cell></row>
+    </tabular></table>
+    <p>There is also a beautiful opportunity here to introduce <term>dimensional reasoning</term>.</p>
+    <p>We can multiply length by length to obtain area:</p>
+    <p><me>\mathrm{m}\times\mathrm{m}=\mathrm{m}^2.</me></p>
+    <p>But adding a length to an area is not physically meaningful:</p>
+    <p><me>3\,\mathrm{m}+5\,\mathrm{m}^2.</me></p>
+    <p>This leads naturally into explaining why</p>
+    <p><me>3x+5x=8x</me></p>
+    <p>but</p>
+    <p><me>3x+5x^2</me></p>
+    <p>cannot generally be simplified by collecting like terms.</p>
+    <p><em>Multiplication allows us to construct new kinds of quantities. Addition generally combines compatible quantities.</em></p>
+  </section>
+  <section xml:id="lc-ol-fundamentals-next">
+    <title>Preparing for the Rest of Algebra</title>
+    <p>A variable represents a number that may vary or be unknown. A coefficient is a numerical factor multiplying a variable or its power. A constant is a fixed value. For instance, in <m>4x^2-3x+7</m>, the terms are <m>4x^2</m>, <m>-3x</m> and <m>7</m>; the coefficients are <m>4</m> and <m>-3</m>, and the constant term is <m>7</m>. The index <m>2</m> indicates that <m>x</m> is multiplied by itself.</p>
+    <example><title>Substitution and order of operations</title><p>Evaluate <m>2(x+3)^2-5</m> when <m>x=2</m>.</p><p><md><mrow>2(x+3)^2-5&amp;=2(2+3)^2-5</mrow><mrow>&amp;=2(5)^2-5</mrow><mrow>&amp;=2(25)-5=45.</mrow></md></p><p>Substitute first, evaluate the brackets, apply the index, multiply and then subtract.</p></example>
+    <exercise><statement><p>Identify the signed terms of <m>6xy-4x+9</m>. Identify the factors of the first term.</p></statement><answer><p>Terms: <m>6xy,-4x,9</m>. Factors of <m>6xy</m>: <m>6,x,y</m>.</p></answer></exercise>
+    <exercise><statement><p>Classify <m>5(x-2)</m>, <m>5x-10</m> and <m>\dfrac{x+1}{3x}</m> by their principal structure.</p></statement><answer><p>Product, difference, quotient (with <m>x\ne0</m>).</p></answer></exercise>
+    <exercise><statement><p>A student says that if <m>a=4</m> and <m>b=5</m>, then <m>ab=45</m>. Explain the error.</p></statement><answer><p>Juxtaposition in algebra indicates multiplication: <m>ab=4\times5=20</m>. In arithmetic, <m>45=4\times10+5</m>.</p></answer></exercise>
+    <p>Our proposed teaching progression is:</p>
+    <table><title>Algebra learning sequence</title><tabular>
+      <row><cell>Order</cell><cell>Topic</cell></row>
+      <row><cell>1</cell><cell>Fundamentals of Algebra</cell></row>
+      <row><cell>2</cell><cell>Linear Equations</cell></row>
+      <row><cell>3</cell><cell>Expressions and Like Terms</cell></row>
+      <row><cell>4</cell><cell>Expansion</cell></row>
+      <row><cell>5</cell><cell>Factorisation</cell></row>
+      <row><cell>6</cell><cell>Quadratic Equations</cell></row>
+      <row><cell>7</cell><cell>Simultaneous Equations</cell></row>
+      <row><cell>8</cell><cell>Algebraic Fractions</cell></row>
+      <row><cell>9</cell><cell>Rearranging Formulae</cell></row>
+      <row><cell>10</cell><cell>Inequalities</cell></row>
+    </tabular></table>
+    <p><em>Before students learn to manipulate algebra, they should learn to read algebra.</em></p>
+  </section>
+</chapter>
