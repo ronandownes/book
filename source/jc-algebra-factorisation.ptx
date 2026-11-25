@@ -7,6 +7,19 @@
     <p><em>Common factors first.</em> Examine the terms for a common factor before attempting any other factorisation method. If a non-unit HCF exists, extract it first. For example, <m>24x^2+96x+90=6(4x^2+16x+15)=6(2x+3)(2x+5)</m>. Unless otherwise stated, our subsequent positive-integer trinomial investigations assume that the HCF of the coefficients is 1.</p>
     <p>For teachers: if <m>\gcd(a,b)=\gcd(c,d)=1</m>, the product <m>(ax+b)(cx+d)=Ax^2+Bx+C</m> has <m>\gcd(A,B,C)=1</m>. This is the primitive-polynomial form of Gauss's lemma. Removing common factors first therefore gives a mathematically consistent starting point in both directions.</p>
     <p>Always check a factorisation by expanding the result. A correct answer must reproduce every term of the original expression.</p>
+    <paragraphs xml:id="algebra-factorisation-metacognition"><title>Learning to Learn — Working Backwards</title>
+    <p>Expansion and factorisation are not unrelated skills. Recognising their shared structure helps build a reusable algebraic schema. Working backwards is one of the heuristics explored by Pólya. See <xref ref="problem-solving-heuristics" text="title"/>.</p>
+    <example xml:id="factorisation-polya-example"><title>From an unknown factorisation to a familiar structure</title>
+    <statement><p>Factorise <m>4x^2+15x+9</m>.</p></statement>
+    <solution>
+    <p><em>Understand.</em> The HCF is 1. We seek two linear factors with integer coefficients. Their cross-products must add to 15 and multiply to <m>4\cdot9=36</m>.</p>
+    <p><em>Plan.</em> Search the positive factor pairs of 36: <m>1\cdot36,2\cdot18,3\cdot12,4\cdot9,6\cdot6</m>. The pair 3 and 12 has the required sum.</p>
+    <p><em>Carry out the plan.</em> Split the middle term and group:</p>
+    <me>4x^2+12x+3x+9=4x(x+3)+3(x+3)=(4x+3)(x+3).</me>
+    <p><em>Look back.</em> Expand to check. Why did the product and sum conditions help? Could you reuse the strategy for another positive trinomial? What would change if the middle coefficient were negative?</p>
+    </solution></example>
+    <p>The aim is not only to obtain an answer. It is to recognise a structure and learn how to approach the next unfamiliar problem independently.</p>
+    </paragraphs>
     <p>For a paired expansion and factorisation investigation, begin with <xref ref="af3-01-positive-factors-unit-factor"/>. Recognise the same structure in both directions before moving to more general trinomials.</p>
   </section>
   <section xml:id="af3-factorisation-revisit">
