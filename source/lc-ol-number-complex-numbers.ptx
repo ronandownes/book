@@ -7,10 +7,39 @@
                 <p>For classroom exploration and step-by-step calculations, <url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html" visual="open the standalone Complex Number Calculations app full screen"/>.</p>
               </section>
               
+<section xml:id="complex-notation"><title>Reading complex-number notation</title>
+<p>The bar above a complex number denotes its conjugate. The vertical bars on either side denote its modulus. These are different operations.</p>
+<example><title>Read the symbols directly</title><p><me>\overline{2+3i}=2-3i</me><me>|2+3i|=\sqrt{2^2+3^2}=\sqrt{13}</me></p></example>
+<example><title>Use named complex numbers</title><p>Let <m>z_1=2+3i</m>, <m>z_2=3-4i</m> and <m>z_3=-2+5i</m>.</p><p><me>\overline{z_1}=2-3i,\qquad \overline{z_2}=3+4i,\qquad \overline{z_3}=-2-5i.</me><me>|z_1|=\sqrt{13},\qquad |z_2|=5,\qquad |z_3|=\sqrt{29}.</me></p><p>Squaring the modulus gives <m>|z_2|^2=25</m>, not <m>5</m>. Conjugating a real number leaves it unchanged; the modulus of a negative real number is positive.</p></example>
+<exercise><statement><p>Let <m>z_1=-4+3i</m> and <m>z_2=-6i</m>. Find <m>\overline{z_1}</m>, <m>|z_1|</m>, <m>\overline{z_2}</m> and <m>|z_2|</m>.</p></statement><answer><p><m>-4-3i,\ 5,\ 6i,\ 6</m>.</p></answer></exercise>
+</section>
+<section xml:id="complex-powers-i"><title>Powers of the imaginary unit</title>
+<p>Multiplying by <m>i</m> repeatedly produces a cycle of length four. On the Argand diagram each multiplication is an anticlockwise quarter-turn.</p>
+<p><me>i^0=1,\qquad i^1=i,\qquad i^2=-1,\qquad i^3=-i,\qquad i^4=1.</me></p>
+<p>Since <m>i^4=1</m>, write a non-negative integer exponent as <m>n=4q+r</m>, where <m>r</m> is the remainder on division by four, one of <m>0,1,2,3</m>.</p>
+<p><me>i^n=(i^4)^qi^r=i^r.</me></p>
+<example><title>Reduce the exponent modulo four</title><p><md><mrow>38&amp;=4(9)+2</mrow><mrow>i^{38}&amp;=(i^4)^9i^2=-1.</mrow></md></p><p>Similarly, <m>103=4(25)+3</m>, so <m>i^{103}=-i</m>.</p></example>
+<example><title>Combine the index laws with the cycle</title><p><me>i^5i^7=i^{12}=1</me><me>\dfrac{i^{19}}{i^7}=i^{12}=1.</me></p></example>
+<exercise><statement><p>Simplify <m>i^{17}</m>, <m>i^{52}</m>, <m>i^{63}</m> and <m>i^{2026}</m>.</p></statement><answer><p><m>i,\ 1,\ -i,\ -1</m>.</p></answer></exercise>
+</section>
+<section xml:id="complex-imaginary-products"><title>Multiplying purely imaginary terms</title>
+<p>Multiply the real coefficients, then replace <m>i^2</m> by <m>-1</m>. Thus <m>(ai)(bi)=-ab</m>.</p>
+<example><title>Four sign combinations</title><p><md><mrow>(3i)(4i)&amp;=12i^2=-12</mrow><mrow>(-3i)(-4i)&amp;=12i^2=-12</mrow><mrow>(3i)(-4i)&amp;=-12i^2=12</mrow><mrow>(-3i)(4i)&amp;=-12i^2=12.</mrow></md></p></example>
+<p><em>Same-sign non-zero imaginary terms give a negative real product.</em> Positive times positive is negative; negative times negative is negative. <em>Opposite-sign non-zero imaginary terms give a positive real product.</em> Positive times negative and negative times positive are both positive. A zero factor gives zero.</p>
+<p>Do not confuse these rules with the ordinary multiplication of real numbers. The extra minus sign comes from <m>i^2=-1</m>.</p>
+<exercise><statement><p>Calculate <m>(5i)(2i)</m>, <m>(-5i)(-2i)</m>, <m>(5i)(-2i)</m> and <m>(-5i)(2i)</m>.</p></statement><answer><p><m>-10,-10,10,10</m>.</p></answer></exercise>
+</section>
+<section xml:id="complex-scaling"><title>Multiplying by a real number</title>
+<p>Distribute the real coefficient to both parts of a complex number: <m>k(a+bi)=ka+kbi</m>.</p>
+<example><title>Positive and negative coefficients</title><p><me>3(2-5i)=6-15i</me><me>-2(3+4i)=-6-8i.</me></p></example>
+<p>Multiplying by a negative real number also reverses both coordinates on the Argand diagram.</p>
+<exercise><statement><p>Expand <m>-3(2-4i)</m> and <m>4(-2+3i)</m>.</p></statement><answer><p><m>-6+12i</m> and <m>-8+12i</m>.</p></answer></exercise>
+</section>
 <section xml:id="complex-add-subtract"><title>Addition and subtraction</title>
 <p>Combine the real parts and the imaginary parts separately.</p>
 <example><title>Adding and subtracting</title><p><me>(2+5i)+(2+3i)=4+8i</me><me>(2+5i)-(2+3i)=2i</me></p></example>
-<p><url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#add" visual="Addition app"/> · <url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#subtract" visual="Subtraction app"/> · <url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#scalar" visual="Multiplication by a real number app"/>.</p>
+<example><title>Coefficients on both complex numbers</title><p><md><mrow>2(2+5i)-3(2+3i)&amp;=4+10i-6-9i</mrow><mrow>&amp;=-2+i.</mrow></md></p><p>Let <m>z_1=2+3i</m> and <m>z_2=3-4i</m>.</p><p><md><mrow>2z_1+3z_2&amp;=2(2+3i)+3(3-4i)</mrow><mrow>&amp;=4+6i+9-12i=13-6i.</mrow></md></p></example>
+<exercise><statement><p>Using these values of <m>z_1</m> and <m>z_2</m>, calculate <m>3z_1-2z_2</m>.</p></statement><answer><p><m>17i</m>.</p></answer></exercise><p><url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#add" visual="Addition app"/> · <url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#subtract" visual="Subtraction app"/> · <url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#scalar" visual="Multiplication by a real number app"/>.</p>
 </section>
 <section xml:id="complex-multiply"><title>Multiplication</title>
 <p>Expand the brackets using the distributive law, substitute <m>i^2=-1</m>, then collect like terms.</p>
