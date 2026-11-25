@@ -59,30 +59,6 @@
 }
 
 
-/* Leaving Certificate course colours */
-:root {
-  --full-cycle-lc-ol: #765189;
-  --full-cycle-lc-hl: #4d245e;
-}
-/* Scope to part links in the native PreTeXt contents panel only. */
-:is(#ptx-toc, .ptx-toc) a[href*="part-lc-ol-"] {
-  background-color: var(--full-cycle-lc-ol);
-  color: white;
-}
-:is(#ptx-toc, .ptx-toc) a[href*="part-lc-hl-"] {
-  background-color: var(--full-cycle-lc-hl);
-  color: white;
-}
-:is(#ptx-toc, .ptx-toc) a[href*="part-lc-ol-"]:hover,
-:is(#ptx-toc, .ptx-toc) a[href*="part-lc-hl-"]:hover {
-  text-decoration: underline;
-}
-:is(#ptx-toc, .ptx-toc) a[href*="part-lc-ol-"]:focus-visible,
-:is(#ptx-toc, .ptx-toc) a[href*="part-lc-hl-"]:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: -3px;
-}
-
 /* Four strand colours: stable across JC, LC OL and LC HL. */
 #toc a[href$="part-jc-number.html"],
 .toc a[href$="part-jc-number.html"],
@@ -219,4 +195,59 @@
 .ptx-content #part-lc-hl-statistics > .heading,
 .ptx-content #part-lc-hl-statistics > .heading a {
  background-color: #e5f2e9 !important; color: #214c36 !important; border-left-color: #326b49 !important;
+}
+
+/* Neutral navigation: non-strand parts */
+#toc a[href$="part-transition-year.html"],
+.toc a[href$="part-transition-year.html"],
+.ptx-toc a[href$="part-transition-year.html"],
+#toc [data-id="part-transition-year"] > a,
+.ptx-toc [data-id="part-transition-year"] > a,
+.toc [data-id="part-transition-year"] > a,
+#toc a[href$="part-jc-introduction.html"],
+.toc a[href$="part-jc-introduction.html"],
+.ptx-toc a[href$="part-jc-introduction.html"],
+#toc [data-id="part-jc-introduction"] > a,
+.ptx-toc [data-id="part-jc-introduction"] > a,
+.toc [data-id="part-jc-introduction"] > a,
+#toc a[href$="part-jc-assessment.html"],
+.toc a[href$="part-jc-assessment.html"],
+.ptx-toc a[href$="part-jc-assessment.html"],
+#toc [data-id="part-jc-assessment"] > a,
+.ptx-toc [data-id="part-jc-assessment"] > a,
+.toc [data-id="part-jc-assessment"] > a,
+#toc a[href$="part-lc-ol-introduction.html"],
+.toc a[href$="part-lc-ol-introduction.html"],
+.ptx-toc a[href$="part-lc-ol-introduction.html"],
+#toc [data-id="part-lc-ol-introduction"] > a,
+.ptx-toc [data-id="part-lc-ol-introduction"] > a,
+.toc [data-id="part-lc-ol-introduction"] > a,
+#toc a[href$="part-lc-hl-introduction.html"],
+.toc a[href$="part-lc-hl-introduction.html"],
+.ptx-toc a[href$="part-lc-hl-introduction.html"],
+#toc [data-id="part-lc-hl-introduction"] > a,
+.ptx-toc [data-id="part-lc-hl-introduction"] > a,
+.toc [data-id="part-lc-hl-introduction"] > a {
+  background-color: #e9e7e3 !important;
+  color: #292b30 !important;
+  border-color: #c5c3bf !important;
+}
+.ptx-content a[href$="part-transition-year.html"],
+.ptx-content #part-transition-year > .heading,
+.ptx-content #part-transition-year > .heading a,
+.ptx-content a[href$="part-jc-introduction.html"],
+.ptx-content #part-jc-introduction > .heading,
+.ptx-content #part-jc-introduction > .heading a,
+.ptx-content a[href$="part-jc-assessment.html"],
+.ptx-content #part-jc-assessment > .heading,
+.ptx-content #part-jc-assessment > .heading a,
+.ptx-content a[href$="part-lc-ol-introduction.html"],
+.ptx-content #part-lc-ol-introduction > .heading,
+.ptx-content #part-lc-ol-introduction > .heading a,
+.ptx-content a[href$="part-lc-hl-introduction.html"],
+.ptx-content #part-lc-hl-introduction > .heading,
+.ptx-content #part-lc-hl-introduction > .heading a {
+  background-color: #f3f2ef !important;
+  color: #292b30 !important;
+  border-left-color: #a3a19c !important;
 }
