@@ -1,13 +1,13 @@
-/* Gentle three-colour programme palette: rose, mint and powder blue.
+/* Four consistent strand colours: grey, pink, green and blue. Non-strand parts are neutral.
    Dark labels maintain readable contrast against pastel headings. */
 .maths-programme-intro{--maths-part-bg:#E9F2FB;--maths-part-ink:#264B68;--maths-part-accent:#82A9C7;--maths-chapter-bg:#F5F9FE;--maths-chapter-ink:#264B68;--maths-chapter-edge:#B8CEDF;}
-.maths-programme-number{--maths-part-bg:#E8F4ED;--maths-part-ink:#28513D;--maths-part-accent:#88B79C;--maths-chapter-bg:#F5FAF7;--maths-chapter-ink:#28513D;--maths-chapter-edge:#B9D8C6;}
-.maths-programme-geometry{--maths-part-bg:#E9F2FB;--maths-part-ink:#264B68;--maths-part-accent:#82A9C7;--maths-chapter-bg:#F5F9FE;--maths-chapter-ink:#264B68;--maths-chapter-edge:#B8CEDF;}
+.maths-programme-number{--maths-part-bg:#475569;--maths-part-ink:#fff;--maths-part-accent:#475569;--maths-chapter-bg:#e9edf0;--maths-chapter-ink:#293640;--maths-chapter-edge:#a9b4c0;}
+.maths-programme-geometry{--maths-part-bg:#285e8a;--maths-part-ink:#fff;--maths-part-accent:#285e8a;--maths-chapter-bg:#e6eff8;--maths-chapter-ink:#173f60;--maths-chapter-edge:#a7bed5;}
 .maths-programme-trigonometry{--maths-part-bg:#E9F2FB;--maths-part-ink:#264B68;--maths-part-accent:#82A9C7;--maths-chapter-bg:#F5F9FE;--maths-chapter-ink:#264B68;--maths-chapter-edge:#B8CEDF;}
-.maths-programme-algebra{--maths-part-bg:#FAE9EE;--maths-part-ink:#683A4C;--maths-part-accent:#C88FA3;--maths-chapter-bg:#FDF5F7;--maths-chapter-ink:#683A4C;--maths-chapter-edge:#E3C0CC;}
+.maths-programme-algebra{--maths-part-bg:#963f60;--maths-part-ink:#fff;--maths-part-accent:#963f60;--maths-chapter-bg:#f9e6ed;--maths-chapter-ink:#64283f;--maths-chapter-edge:#d8a8ba;}
 .maths-programme-functions{--maths-part-bg:#FAE9EE;--maths-part-ink:#683A4C;--maths-part-accent:#C88FA3;--maths-chapter-bg:#FDF5F7;--maths-chapter-ink:#683A4C;--maths-chapter-edge:#E3C0CC;}
-.maths-programme-statistics{--maths-part-bg:#E8F4ED;--maths-part-ink:#28513D;--maths-part-accent:#88B79C;--maths-chapter-bg:#F5FAF7;--maths-chapter-ink:#28513D;--maths-chapter-edge:#B9D8C6;}
-.maths-programme-assessment{--maths-part-bg:#EFF2F4;--maths-part-ink:#334957;--maths-part-accent:#9CAEB9;--maths-chapter-bg:#F9FAFB;--maths-chapter-ink:#334957;--maths-chapter-edge:#C8D3DA;}
+.maths-programme-statistics{--maths-part-bg:#326b49;--maths-part-ink:#fff;--maths-part-accent:#326b49;--maths-chapter-bg:#e5f2e9;--maths-chapter-ink:#214c36;--maths-chapter-edge:#a9c9b4;}
+.maths-programme-assessment{--maths-part-bg:#e9e7e3;--maths-part-ink:#292b30;--maths-part-accent:#c5c3bf;--maths-chapter-bg:#f3f2ef;--maths-chapter-ink:#292b30;--maths-chapter-edge:#a3a19c;}
 .maths-programme-ty{--maths-part-bg:#FAE9EE;--maths-part-ink:#683A4C;--maths-part-accent:#C88FA3;--maths-chapter-bg:#FDF5F7;--maths-chapter-ink:#683A4C;--maths-chapter-edge:#E3C0CC;}
 .maths-programme-lc-statistics{--maths-part-bg:#E8F4ED;--maths-part-ink:#28513D;--maths-part-accent:#88B79C;--maths-chapter-bg:#F5FAF7;--maths-chapter-ink:#28513D;--maths-chapter-edge:#B9D8C6;}
 .maths-programme-lc-geometry{--maths-part-bg:#E9F2FB;--maths-part-ink:#264B68;--maths-part-accent:#82A9C7;--maths-chapter-bg:#F5F9FE;--maths-chapter-ink:#264B68;--maths-chapter-edge:#B8CEDF;}

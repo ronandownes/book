@@ -3,19 +3,25 @@
 (() => {
   "use strict";
   const partTargets = {
-    "part-jc-introduction.html":"intro",
+    "part-jc-introduction.html":"assessment",
     "part-jc-number.html":"number",
     "part-jc-geometry.html":"geometry",
     "part-jc-algebra.html":"algebra",
     "part-jc-statistics.html":"statistics",
     "part-jc-assessment.html":"assessment",
-    "part-transition-year.html":"ty",
-    "part-lc-ol-introduction.html":"intro",
-    "part-lc-ol-statistics.html":"lc-statistics",
-    "part-lc-ol-geometry.html":"lc-geometry",
-    "part-lc-ol-number.html":"lc-number",
-    "part-lc-ol-algebra.html":"lc-algebra",
-    "part-lc-ol-functions.html":"lc-functions"
+    "part-transition-year.html":"assessment",
+    "part-lc-ol-introduction.html":"assessment",
+    "part-lc-ol-statistics.html":"statistics",
+    "part-lc-ol-geometry.html":"geometry",
+    "part-lc-ol-number.html":"number",
+    "part-lc-ol-algebra.html":"algebra",
+    "part-lc-ol-functions.html":"algebra",
+    "part-lc-hl-introduction.html":"assessment",
+    "part-lc-hl-statistics.html":"statistics",
+    "part-lc-hl-geometry.html":"geometry",
+    "part-lc-hl-number.html":"number",
+    "part-lc-hl-algebra.html":"algebra",
+    "part-lc-hl-functions.html":"algebra"
   };
   const chapterTargets = __MATHS_CHAPTERS__;
   const tocSelector = "nav, .toc, .ptx-toc, .toc-container, #toc, .toc-items, .toc-item-list, [role='navigation']";

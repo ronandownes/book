@@ -14,19 +14,25 @@ SOURCE = Path("source/main.ptx")
 ASSETS = Path("assets")
 
 PARTS = {
-    "part-jc-introduction": "intro",
+    "part-jc-introduction": "assessment",
     "part-jc-number": "number",
     "part-jc-geometry": "geometry",
     "part-jc-algebra": "algebra",
     "part-jc-statistics": "statistics",
     "part-jc-assessment": "assessment",
-    "part-transition-year": "ty",
-    "part-lc-ol-introduction": "intro",
-    "part-lc-ol-statistics": "lc-statistics",
-    "part-lc-ol-geometry": "lc-geometry",
-    "part-lc-ol-number": "lc-number",
-    "part-lc-ol-algebra": "lc-algebra",
-    "part-lc-ol-functions": "lc-functions",
+    "part-transition-year": "assessment",
+    "part-lc-ol-introduction": "assessment",
+    "part-lc-ol-statistics": "statistics",
+    "part-lc-ol-geometry": "geometry",
+    "part-lc-ol-number": "number",
+    "part-lc-ol-algebra": "algebra",
+    "part-lc-ol-functions": "algebra",
+    "part-lc-hl-introduction": "assessment",
+    "part-lc-hl-statistics": "statistics",
+    "part-lc-hl-geometry": "geometry",
+    "part-lc-hl-number": "number",
+    "part-lc-hl-algebra": "algebra",
+    "part-lc-hl-functions": "algebra",
 }
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 
@@ -53,7 +59,7 @@ def main() -> None:
         raise RuntimeError("Expected chapter HTML files not built: " + ", ".join(missing))
     built_parts = {part.get(XML_ID) for part in doc.getroot().iter("part")}
     if built_parts != set(PARTS):
-        raise RuntimeError(f"Expected JC Unifying Strand, four Junior Cycle content Parts (with Trigonometry under Geometry), assessment, TY and LC OL Parts, found: {sorted(built_parts)}")
+        raise RuntimeError(f"Expected JC Unifying Strand, four Junior Cycle content Parts (with Trigonometry under Geometry), assessment, TY and LC OL and LC HL Parts, found: {sorted(built_parts)}")
     if len(chapters) < 10:
         raise RuntimeError(f"Unexpectedly few published teaching chapters: {len(chapters)}")
 
@@ -67,8 +73,8 @@ def main() -> None:
     (ROOT / "programme-colours.css").write_text(css, encoding="utf-8")
     (ROOT / "programme-colours.js").write_text(js, encoding="utf-8")
     # Asset version changed to invalidate previously cached CSS and JavaScript.
-    style_tag = '<link rel="stylesheet" href="programme-colours.css?v=5" data-maths-programme="colour"/>'
-    script_tag = '<script defer src="programme-colours.js?v=3" data-maths-programme="colour"></script>'
+    style_tag = '<link rel="stylesheet" href="programme-colours.css?v=6" data-maths-programme="colour"/>'
+    script_tag = '<script defer src="programme-colours.js?v=4" data-maths-programme="colour"></script>'
     changed = 0
     for page in ROOT.glob("*.html"):
         text = page.read_text(encoding="utf-8")
@@ -85,7 +91,7 @@ def main() -> None:
     if not changed:
         raise RuntimeError("No textbook HTML pages received the programme colour assets.")
     print(f"Colour mapping: {len(chapters)} chapters in {len(PARTS)} parts; annotated {changed} pages.")
-    print("Part colours: gentle pastel rose, mint and blue. Chapters: lighter shades. Sections: unmodified white.")
+    print("Part colours: grey, pink, mint and blue. Chapters: lighter shades. Sections: unmodified white.")
 
 if __name__ == "__main__":
     main()
