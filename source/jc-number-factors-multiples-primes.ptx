@@ -8,6 +8,34 @@
     </ol></objectives>
   <introduction><p>Factors and multiples reveal the multiplicative structure of integers. Prime factorisation allows systematic calculations.</p></introduction>
 
+  
+<section xml:id="number-multiples-foundations"><title>Recognising Multiples</title>
+<p>Multiplication is a way of counting equal groups. Four groups of three contain twelve objects. We write <m>4\times3=12</m>. Twelve is a multiple of both three and four.</p>
+<definition xml:id="definition-positive-multiple"><statement><p>A positive multiple of a positive whole number is obtained by multiplying it by a positive whole number. Zero is also a multiple, since multiplying by zero gives zero.</p></statement></definition>
+<example><title>Multiples of Four</title><p>Count in fours: <m>4,8,12,16,20,24,28,32,36,40</m>. These are the first ten positive multiples of four.</p></example>
+<exercise><statement><p>Write the first six positive multiples of three. Which are also multiples of two?</p></statement><answer><p>3, 6, 9, 12, 15, 18. The multiples of two are 6, 12 and 18.</p></answer></exercise>
+<warning><title>Make This Mistake for the Last Time</title><p>Do not confuse a factor with a multiple. Since <m>4\times6=24</m>, four is a factor of twenty-four, and twenty-four is a multiple of four.</p></warning>
+</section>
+<section xml:id="number-divisibility-foundations"><title>Recognising Divisibility</title>
+<definition xml:id="definition-divisibility-foundations"><statement><p>A whole number is divisible by a positive whole number if the division leaves no remainder.</p></statement></definition>
+<example><title>Exact Division</title><p><m>24\div4=6</m>, so 24 is divisible by 4. But <m>25=4\times6+1</m>, so 25 is not divisible by 4.</p></example>
+<p>We can often recognise divisibility without carrying out the division.</p>
+<table><title>Useful divisibility rules</title><tabular>
+<row><cell>Divisor</cell><cell>Test</cell><cell>Example</cell></row>
+<row><cell>2</cell><cell>Last digit is even.</cell><cell>138</cell></row>
+<row><cell>3</cell><cell>Sum of digits is divisible by 3.</cell><cell>123: 1+2+3=6.</cell></row>
+<row><cell>4</cell><cell>Number formed by the last two digits is divisible by 4.</cell><cell>316: 16 is divisible by 4.</cell></row>
+<row><cell>5</cell><cell>Last digit is 0 or 5.</cell><cell>145</cell></row>
+<row><cell>9</cell><cell>Sum of digits is divisible by 9.</cell><cell>729: 7+2+9=18.</cell></row>
+<row><cell>10</cell><cell>Last digit is 0.</cell><cell>270</cell></row>
+</tabular></table>
+<example><title>Is 732 Divisible by Three and Four?</title><p>The sum of its digits is <m>7+3+2=12</m>, a multiple of three. The last two digits form 32, a multiple of four. Therefore 732 is divisible by both three and four.</p></example>
+<warning><title>Make This Mistake for the Last Time</title><p>A number ending in four need not be divisible by four. For example, 14 is not divisible by four. Check the last two digits, not just the last digit.</p></warning>
+<exercise><title>Which Statement Is Wrong?</title><statement><p>Exactly one statement below is false. Identify it, explain the error and correct it.</p><ol><li><p>126 is divisible by 3.</p></li><li><p>234 is divisible by 4.</p></li><li><p>175 is divisible by 5.</p></li></ol></statement><solution><p>The second statement is false: 34 is not divisible by four. For instance, 236 is divisible by four because 36 is.</p></solution></exercise>
+<exercise><title>Independent Practice</title><statement><p>For each number, identify which of 2, 3, 4, 5, 9 and 10 divide it exactly: 48, 75, 108, 130, 243, 360.</p></statement><answer><p>48: 2, 3, 4. 75: 3, 5. 108: 2, 3, 4, 9. 130: 2, 5, 10. 243: 3, 9. 360: all six.</p></answer></exercise>
+<aside xml:id="explore-further-divisibility-four"><title>Explore Further (Optional): Why Check the Last Two Digits?</title><p>Every whole number can be written as <m>100q+r</m>, where <m>r</m> is the number formed by its last two digits. Since 100 is divisible by four, only the remainder <m>r</m> matters. This explains the divisibility rule for four.</p></aside>
+</section>
+
   <section xml:id="factors-intro">
     <title>Introduction</title>
     <introduction><p>A factor divides a whole number without a remainder; a multiple is obtained by multiplying it by an integer. A prime number greater than one has exactly two positive factors, 1 and itself.</p></introduction>
@@ -27,4 +55,5 @@
     </exercise>
   <aside xml:id="explore-further-divisor-functions"><title>Explore Further — Counting Prime Factors and Divisors (Optional)</title><p>This enrichment is not required for the examination or compulsory assessment.</p><p>For <m>n=p_1^{a_1}\cdots p_r^{a_r}</m>, the function <m>\Omega(n)=a_1+\cdots+a_r</m> counts prime factors with multiplicity, while <m>\omega(n)=r</m> counts distinct primes. The divisor function is <m>\tau(n)=(a_1+1)\cdots(a_r+1)</m>, because each exponent in a divisor can be chosen independently from zero to its maximum value.</p><p>For example, <m>72=2^3\cdot3^2</m> gives <m>\Omega(72)=5</m>, <m>\omega(72)=2</m> and <m>\tau(72)=12</m>. A sphenic number is the product of three distinct primes, such as <m>30=2\cdot3\cdot5</m>. It has eight positive divisors.</p></aside>
 </section>
+<outcomes><title>Review Your Learning</title><introduction><p>Can you now do each of the following independently?</p></introduction><ol><li><p>Recognise multiples, factors and prime numbers.</p></li><li><p>Test divisibility by 2, 3, 4, 5, 9 and 10.</p></li><li><p>Express a positive integer as a product of prime factors.</p></li><li><p>Calculate the HCF and LCM.</p></li></ol></outcomes>
 </chapter>
