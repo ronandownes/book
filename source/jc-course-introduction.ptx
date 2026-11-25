@@ -57,6 +57,20 @@
     <p>These are not four rigid boxes. Thinking moves backwards and forwards. A diagram might clarify a question while you are planning; an unexpected answer might make you reconsider what the question means. The aim is to make the problem-solving process familiar and natural, until you can take increasing charge of it yourself.</p>
     <p><em>Exploration and explanation belong together.</em> It is valuable to try a problem before being shown the method, but productive struggle need not mean being left to guess indefinitely. Clear teacher modelling, carefully chosen worked examples, feedback and guided practice can help when a new concept or procedure needs explanation. We then return to trying, reasoning and applying it independently.</p>
     <p>The six elements of the <xref ref="jc-outcomes-unifying" text="title"/> are building blocks, representation, connections, problem solving, generalisation and proof, and communication. Their thirteen official learning outcomes can be studied together or accessed individually from the contents panel.</p>
+    <paragraphs xml:id="problem-solving-heuristics"><title>A toolkit for mathematical problem-solving</title>
+<p>A <term>heuristic</term><idx>heuristic</idx> is a useful strategy for making progress when a solution is not immediately apparent. It is not a guarantee of success. Pólya's <xref ref="ref-polya"/> contains a dictionary of such strategies. Throughout this book we will develop and revisit a toolkit of our own, including:</p>
+<ul>
+<li><p><em>Specialise.</em> Investigate a simpler or more manageable case.</p></li>
+<li><p><em>Use analogy.</em> Recall a related problem and adapt its solution.</p></li>
+<li><p><em>Change representation.</em> Draw a diagram, construct a table or express the relationship algebraically.</p></li>
+<li><p><em>Work backwards.</em> Start with the desired result and ask what would make it possible.</p></li>
+<li><p><em>Search systematically.</em> Organise possibilities, use constraints and eliminate impossible cases.</p></li>
+<li><p><em>Look for a pattern.</em> Use examples to form a conjecture, then establish whether it is true.</p></li>
+<li><p><em>Look back and generalise.</em> Check the result, compare methods and ask what can be reused.</p></li>
+</ul>
+<p>Learning to learn, or <term>metacognition</term><idx>metacognition</idx>, includes planning, monitoring and evaluating our own thinking. Ask yourself why you chose a method, whether it is working, what to change if you are stuck and what you could learn from the solution. We will return to these questions throughout the book.</p>
+<p>Our worked examples aim to expose the reasoning behind a solution, not just display its completed calculation. We gradually reduce the guidance as learners develop the knowledge and confidence to make their own decisions.</p>
+</paragraphs>
     <p><em>Further reading:</em> <url href="https://www.utsc.utoronto.ca/learningstrategies/polyas-problem-solving" visual="University of Toronto: Pólya's problem-solving framework"/>.</p>
   </section>
   <section xml:id="jc-assessment-intro"><title>Assessment, CBAs and Examinations</title>
