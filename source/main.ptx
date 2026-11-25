@@ -251,6 +251,7 @@
     <part xml:id="part-lc-ol-algebra">
       <title>LC OL · Algebra</title>
       <xi:include href="./lc-ol-algebra-outcomes.ptx"/>
+      <xi:include href="./lc-ol-algebra-fundamentals.ptx"/>
     </part>
 
     <part xml:id="part-lc-ol-functions">
