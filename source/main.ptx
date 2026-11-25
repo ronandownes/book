@@ -57,6 +57,7 @@
       <xi:include href="./jc-number-sequences.ptx" />
       <xi:include href="./jc-number-graphs.ptx" />
       <xi:include href="./jc-number-sets.ptx" />
+      <xi:include href="./jc-number-rich-investigations.ptx"/>
     </part>
 
 <part xml:id="part-jc-geometry">
