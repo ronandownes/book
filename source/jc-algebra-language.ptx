@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="algebra-vocabulary">
 <title>The Language of Algebra</title>
+<introduction>
+<p>Mathematics is cumulative. Misunderstandings developed here can undermine everything that follows. In this chapter we establish the language and notation that will allow us to recognise algebraic structure, interpret expressions and communicate mathematical ideas accurately.</p>
+<p>Initially we use positive natural numbers wherever appropriate, so that unfamiliar notation and algebraic structure can be understood without introducing additional difficulties prematurely. The restriction is on the numbers we use, not on the mathematical ideas we explore. A special case must never be mistaken for a general principle.</p>
+<p>Later, when we investigate <m>(ax+b)(cx+d)=Ax^2+Bx+C</m>, we will distinguish the distribution of the leading coefficient <m>A=ac</m> from that of the constant term <m>C=bd</m>. Whether a positive integer is a unit, prime or composite is a property of the number itself; whether a factor pair is trivial (one factor is 1) or non-trivial is a property of the chosen factorisation. For example, <m>12=1\cdot12=2\cdot6=3\cdot4</m>. Recognising these structures now prepares us to expand and factorise later.</p>
+<p>See <xref ref="teaching-approach" text="title"/> for the principles informing this approach.</p>
+</introduction>
 <section xml:id="algebra-words">
 <title>Variables, coefficients, constants and terms</title>
 <p>Begin with what the letters describe. Look at the diagrams, make a prediction, and then use the Rectangle Explorer to change the measurements. The definitions will make more sense after the quantities have a meaning.</p>
