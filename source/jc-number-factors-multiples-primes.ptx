@@ -25,5 +25,6 @@
       <statement><p>Find the HCF of 12 and 18.</p></statement>
       <answer><p>The common factors are 1, 2, 3 and 6, so the HCF is 6.</p></answer>
     </exercise>
-  </section>
+  <aside xml:id="explore-further-divisor-functions"><title>Explore Further — Counting Prime Factors and Divisors (Optional)</title><p>This enrichment is not required for the examination or compulsory assessment.</p><p>For <m>n=p_1^{a_1}\cdots p_r^{a_r}</m>, the function <m>\Omega(n)=a_1+\cdots+a_r</m> counts prime factors with multiplicity, while <m>\omega(n)=r</m> counts distinct primes. The divisor function is <m>\tau(n)=(a_1+1)\cdots(a_r+1)</m>, because each exponent in a divisor can be chosen independently from zero to its maximum value.</p><p>For example, <m>72=2^3\cdot3^2</m> gives <m>\Omega(72)=5</m>, <m>\omega(72)=2</m> and <m>\tau(72)=12</m>. A sphenic number is the product of three distinct primes, such as <m>30=2\cdot3\cdot5</m>. It has eight positive divisors.</p></aside>
+</section>
 </chapter>
