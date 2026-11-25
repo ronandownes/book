@@ -17,7 +17,7 @@ DATA = json.loads((ROOT / "learning-intentions.json").read_text(encoding="utf-8"
 CURATED: dict[str, list[str]] = DATA["intentions"]
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 XI = "{http://www.w3.org/2001/XInclude}include"
-SKIP = {"jc-introduction.ptx", "lc-ol-introduction.ptx", "shared-glossary.ptx",
+SKIP = {"jc-unifying-outcomes.ptx", "jc-introduction.ptx", "lc-ol-introduction.ptx", "shared-glossary.ptx",
         "jc-number-learning-outcomes.ptx", "jc-geometry-learning-outcomes.ptx",
         "jc-algebra-learning-outcomes.ptx", "jc-statistics-learning-outcomes.ptx"}
 SKIP_PREFIXES = ("jc-number-outcomes.ptx", "jc-geometry-outcomes.ptx",

@@ -129,7 +129,7 @@ for key, group, count in [
 # The Unifying Strand table is the source; only its original statements are
 # transcribed into the dedicated U.1–U.13 chapter.
 intro = etree.parse(str(ROOT / "jc-introduction.ptx"))
-unifying = etree.Element("chapter")
+unifying = etree.Element("appendix")
 unifying.set(ID, "jc-outcomes-unifying")
 etree.SubElement(unifying, "title").text = "Unifying Strand"
 opening = etree.SubElement(unifying, "introduction")

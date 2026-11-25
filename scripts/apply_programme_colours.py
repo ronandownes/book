@@ -14,20 +14,15 @@ SOURCE = Path("source/main.ptx")
 ASSETS = Path("assets")
 
 PARTS = {
-    "part-jc-introduction": "assessment",
     "part-jc-number": "number",
     "part-jc-geometry": "geometry",
     "part-jc-algebra": "algebra",
     "part-jc-statistics": "statistics",
-    "part-jc-assessment": "assessment",
-    "part-transition-year": "assessment",
-    "part-lc-ol-introduction": "assessment",
     "part-lc-ol-statistics": "statistics",
     "part-lc-ol-geometry": "geometry",
     "part-lc-ol-number": "number",
     "part-lc-ol-algebra": "algebra",
     "part-lc-ol-functions": "algebra",
-    "part-lc-hl-introduction": "assessment",
     "part-lc-hl-statistics": "statistics",
     "part-lc-hl-geometry": "geometry",
     "part-lc-hl-number": "number",
@@ -59,7 +54,7 @@ def main() -> None:
         raise RuntimeError("Expected chapter HTML files not built: " + ", ".join(missing))
     built_parts = {part.get(XML_ID) for part in doc.getroot().iter("part")}
     if built_parts != set(PARTS):
-        raise RuntimeError(f"Expected JC Unifying Strand, four Junior Cycle content Parts (with Trigonometry under Geometry), assessment, TY and LC OL and LC HL Parts, found: {sorted(built_parts)}")
+        raise RuntimeError(f"Expected the active JC, LC OL and LC HL mathematical Parts, found: {sorted(built_parts)}")
     if len(chapters) < 10:
         raise RuntimeError(f"Unexpectedly few published teaching chapters: {len(chapters)}")
 

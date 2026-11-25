@@ -67,27 +67,8 @@ jobs:
           grep -q '<objectives>' source/jc-number-sets.ptx
           grep -q '<objectives>' source/jc-number-representation.ptx
           grep -q '<objectives>' source/jc-algebra-language.ptx
-      - name: Retrieve openly licensed TY photographs
-        run: python scripts/fetch_ty_news_photos.py
-      - name: Generate complete Appendix B inside PreTeXt
-        run: |
-          set -euo pipefail
-          python scripts/build_appendix_b_pretext.py
-          test "$(find assets/geometry-appendix-b -name 'official-page-*.svg' | wc -l)" -eq 50
-          test "$(find source/appendix-b-native -name '*.ptx' | wc -l)" -eq 19
       - name: Build web textbook
         run: pretext build web
-      - name: Publish complete Appendix B vector reference
-        run: |
-          set -euo pipefail
-          python scripts/publish_complete_geometry_appendix.py
-          test -s output/web/geometry-appendix-b-complete.html
-          test "$(find output/web/geometry-appendix-b-vectors -name '*.svg' | wc -l)" -eq 50
-      - name: Add TY story and number theory classroom displays
-        run: |
-          set -euo pipefail
-          node --check assets/ty-display.js
-          python scripts/add_ty_displays.py
       - name: Apply Learning Intentions reading panels
         run: |
           set -euo pipefail
@@ -109,7 +90,7 @@ jobs:
                   html = html.replace("</body>", "  " + js + "\n</body>", 1)
                   page.write_text(html, encoding="utf-8")
               count += 1
-          if count < 65:
+          if count < 50:
               raise SystemExit("Learning Intentions present on only " + str(count) + " pages.")
           print("Published native Learning Intentions on " + str(count) + " pages.")
           PY
@@ -244,7 +225,7 @@ jobs:
         run: |
           set -euo pipefail
           python scripts/add_outcome_displays.py
-      - name: Verify JC, TY, LC Ordinary and Higher Level Parts
+      - name: Verify active JC, LC Ordinary and Higher Level Parts
         run: |
           set -euo pipefail
           python - <<'PY'
@@ -252,7 +233,7 @@ jobs:
           from lxml import etree
           xmlid="{http://www.w3.org/XML/1998/namespace}id"
           doc=etree.parse("source/main.ptx")
-          expected=["part-jc-introduction","part-jc-number","part-jc-geometry","part-jc-algebra","part-jc-statistics","part-jc-assessment","part-transition-year","part-lc-ol-introduction","part-lc-ol-statistics","part-lc-ol-geometry","part-lc-ol-number","part-lc-ol-algebra","part-lc-ol-functions","part-lc-hl-introduction","part-lc-hl-statistics","part-lc-hl-geometry","part-lc-hl-number","part-lc-hl-algebra","part-lc-hl-functions"]
+          expected=["part-jc-number","part-jc-geometry","part-jc-algebra","part-jc-statistics","part-lc-ol-statistics","part-lc-ol-geometry","part-lc-ol-number","part-lc-ol-algebra","part-lc-ol-functions","part-lc-hl-statistics","part-lc-hl-geometry","part-lc-hl-number","part-lc-hl-algebra","part-lc-hl-functions"]
           parts=[p.get(xmlid) for p in doc.findall(".//part")]
           if parts!=expected: raise SystemExit("Wrong Part order: "+str(parts))
           doc.xinclude()
@@ -270,7 +251,7 @@ jobs:
              "jc-outcomes-number.html",
              "jc-outcomes-geometry.html","jc-outcomes-algebra.html",
              "jc-outcomes-statistics.html","sets-domain-codomain.html",
-             "chapter-functions.html","chapter-glossary.html","chapter-ty-programme.html",
+             "chapter-functions.html","chapter-glossary.html",
              "lc-ol-introduction.html","lc-ol-statistics-outcomes.html",
              "lc-ol-geometry-outcomes.html","lc-ol-number-outcomes.html",
              "lc-ol-algebra-outcomes.html","lc-ol-functions-outcomes.html",
@@ -280,7 +261,7 @@ jobs:
           for x in all_parts:
               if 'data-maths-programme="colour"' not in (site/x).read_text(encoding="utf-8"):
                   raise SystemExit("Missing colour design on "+x)
-          print("Verified the JC Unifying Strand, four content Parts (including Geometry and Trigonometry), CBA and Assessment, TY, LC Ordinary Level and Higher Level Parts.")
+          print("Verified the 14 active mathematical Parts and required reference pages.")
           PY
       - name: Enable one-click mathematical glossary popups
         run: |
