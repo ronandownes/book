@@ -82,3 +82,141 @@
   outline: 2px solid currentColor;
   outline-offset: -3px;
 }
+
+/* Four strand colours: stable across JC, LC OL and LC HL. */
+#toc a[href$="part-jc-number.html"],
+.toc a[href$="part-jc-number.html"],
+.ptx-toc a[href$="part-jc-number.html"],
+#toc [data-id="part-jc-number"] > a,
+.ptx-toc [data-id="part-jc-number"] > a,
+#toc a[href$="part-lc-ol-number.html"],
+.toc a[href$="part-lc-ol-number.html"],
+.ptx-toc a[href$="part-lc-ol-number.html"],
+#toc [data-id="part-lc-ol-number"] > a,
+.ptx-toc [data-id="part-lc-ol-number"] > a,
+#toc a[href$="part-lc-hl-number.html"],
+.toc a[href$="part-lc-hl-number.html"],
+.ptx-toc a[href$="part-lc-hl-number.html"],
+#toc [data-id="part-lc-hl-number"] > a,
+.ptx-toc [data-id="part-lc-hl-number"] > a {
+ background-color: #475569 !important; color: #fff !important; border-color: #475569 !important;
+}
+.ptx-content a[href$="part-jc-number.html"],
+.ptx-content #part-jc-number > .heading,
+.ptx-content #part-jc-number > .heading a,
+.ptx-content a[href$="part-lc-ol-number.html"],
+.ptx-content #part-lc-ol-number > .heading,
+.ptx-content #part-lc-ol-number > .heading a,
+.ptx-content a[href$="part-lc-hl-number.html"],
+.ptx-content #part-lc-hl-number > .heading,
+.ptx-content #part-lc-hl-number > .heading a {
+ background-color: #e9edf0 !important; color: #293640 !important; border-left-color: #475569 !important;
+}
+#toc a[href$="part-jc-algebra.html"],
+.toc a[href$="part-jc-algebra.html"],
+.ptx-toc a[href$="part-jc-algebra.html"],
+#toc [data-id="part-jc-algebra"] > a,
+.ptx-toc [data-id="part-jc-algebra"] > a,
+#toc a[href$="part-jc-functions.html"],
+.toc a[href$="part-jc-functions.html"],
+.ptx-toc a[href$="part-jc-functions.html"],
+#toc [data-id="part-jc-functions"] > a,
+.ptx-toc [data-id="part-jc-functions"] > a,
+#toc a[href$="part-lc-ol-algebra.html"],
+.toc a[href$="part-lc-ol-algebra.html"],
+.ptx-toc a[href$="part-lc-ol-algebra.html"],
+#toc [data-id="part-lc-ol-algebra"] > a,
+.ptx-toc [data-id="part-lc-ol-algebra"] > a,
+#toc a[href$="part-lc-ol-functions.html"],
+.toc a[href$="part-lc-ol-functions.html"],
+.ptx-toc a[href$="part-lc-ol-functions.html"],
+#toc [data-id="part-lc-ol-functions"] > a,
+.ptx-toc [data-id="part-lc-ol-functions"] > a,
+#toc a[href$="part-lc-hl-algebra.html"],
+.toc a[href$="part-lc-hl-algebra.html"],
+.ptx-toc a[href$="part-lc-hl-algebra.html"],
+#toc [data-id="part-lc-hl-algebra"] > a,
+.ptx-toc [data-id="part-lc-hl-algebra"] > a,
+#toc a[href$="part-lc-hl-functions.html"],
+.toc a[href$="part-lc-hl-functions.html"],
+.ptx-toc a[href$="part-lc-hl-functions.html"],
+#toc [data-id="part-lc-hl-functions"] > a,
+.ptx-toc [data-id="part-lc-hl-functions"] > a {
+ background-color: #963f60 !important; color: #fff !important; border-color: #963f60 !important;
+}
+.ptx-content a[href$="part-jc-algebra.html"],
+.ptx-content #part-jc-algebra > .heading,
+.ptx-content #part-jc-algebra > .heading a,
+.ptx-content a[href$="part-jc-functions.html"],
+.ptx-content #part-jc-functions > .heading,
+.ptx-content #part-jc-functions > .heading a,
+.ptx-content a[href$="part-lc-ol-algebra.html"],
+.ptx-content #part-lc-ol-algebra > .heading,
+.ptx-content #part-lc-ol-algebra > .heading a,
+.ptx-content a[href$="part-lc-ol-functions.html"],
+.ptx-content #part-lc-ol-functions > .heading,
+.ptx-content #part-lc-ol-functions > .heading a,
+.ptx-content a[href$="part-lc-hl-algebra.html"],
+.ptx-content #part-lc-hl-algebra > .heading,
+.ptx-content #part-lc-hl-algebra > .heading a,
+.ptx-content a[href$="part-lc-hl-functions.html"],
+.ptx-content #part-lc-hl-functions > .heading,
+.ptx-content #part-lc-hl-functions > .heading a {
+ background-color: #f9e6ed !important; color: #64283f !important; border-left-color: #963f60 !important;
+}
+#toc a[href$="part-jc-geometry.html"],
+.toc a[href$="part-jc-geometry.html"],
+.ptx-toc a[href$="part-jc-geometry.html"],
+#toc [data-id="part-jc-geometry"] > a,
+.ptx-toc [data-id="part-jc-geometry"] > a,
+#toc a[href$="part-lc-ol-geometry.html"],
+.toc a[href$="part-lc-ol-geometry.html"],
+.ptx-toc a[href$="part-lc-ol-geometry.html"],
+#toc [data-id="part-lc-ol-geometry"] > a,
+.ptx-toc [data-id="part-lc-ol-geometry"] > a,
+#toc a[href$="part-lc-hl-geometry.html"],
+.toc a[href$="part-lc-hl-geometry.html"],
+.ptx-toc a[href$="part-lc-hl-geometry.html"],
+#toc [data-id="part-lc-hl-geometry"] > a,
+.ptx-toc [data-id="part-lc-hl-geometry"] > a {
+ background-color: #285e8a !important; color: #fff !important; border-color: #285e8a !important;
+}
+.ptx-content a[href$="part-jc-geometry.html"],
+.ptx-content #part-jc-geometry > .heading,
+.ptx-content #part-jc-geometry > .heading a,
+.ptx-content a[href$="part-lc-ol-geometry.html"],
+.ptx-content #part-lc-ol-geometry > .heading,
+.ptx-content #part-lc-ol-geometry > .heading a,
+.ptx-content a[href$="part-lc-hl-geometry.html"],
+.ptx-content #part-lc-hl-geometry > .heading,
+.ptx-content #part-lc-hl-geometry > .heading a {
+ background-color: #e6eff8 !important; color: #173f60 !important; border-left-color: #285e8a !important;
+}
+#toc a[href$="part-jc-statistics.html"],
+.toc a[href$="part-jc-statistics.html"],
+.ptx-toc a[href$="part-jc-statistics.html"],
+#toc [data-id="part-jc-statistics"] > a,
+.ptx-toc [data-id="part-jc-statistics"] > a,
+#toc a[href$="part-lc-ol-statistics.html"],
+.toc a[href$="part-lc-ol-statistics.html"],
+.ptx-toc a[href$="part-lc-ol-statistics.html"],
+#toc [data-id="part-lc-ol-statistics"] > a,
+.ptx-toc [data-id="part-lc-ol-statistics"] > a,
+#toc a[href$="part-lc-hl-statistics.html"],
+.toc a[href$="part-lc-hl-statistics.html"],
+.ptx-toc a[href$="part-lc-hl-statistics.html"],
+#toc [data-id="part-lc-hl-statistics"] > a,
+.ptx-toc [data-id="part-lc-hl-statistics"] > a {
+ background-color: #326b49 !important; color: #fff !important; border-color: #326b49 !important;
+}
+.ptx-content a[href$="part-jc-statistics.html"],
+.ptx-content #part-jc-statistics > .heading,
+.ptx-content #part-jc-statistics > .heading a,
+.ptx-content a[href$="part-lc-ol-statistics.html"],
+.ptx-content #part-lc-ol-statistics > .heading,
+.ptx-content #part-lc-ol-statistics > .heading a,
+.ptx-content a[href$="part-lc-hl-statistics.html"],
+.ptx-content #part-lc-hl-statistics > .heading,
+.ptx-content #part-lc-hl-statistics > .heading a {
+ background-color: #e5f2e9 !important; color: #214c36 !important; border-left-color: #326b49 !important;
+}
