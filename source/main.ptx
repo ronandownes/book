@@ -269,6 +269,52 @@
       <xi:include href="./lc-ol-functions-outcomes.ptx"/>
       <xi:include href="./lc-ol-functions-stationary-points.ptx"/>
     </part>
+    <part xml:id="part-lc-hl-introduction">
+      <title>Leaving Cert Higher Level Maths Introduction</title>
+      <chapter xml:id="lc-hl-introduction"><title>Continuing to Higher Level</title>
+        <p>Higher Level builds upon Ordinary Level. Return to the earlier chapters whenever you need to revise a concept or practise a technique. Higher Level students are expected to achieve the Ordinary Level outcomes as well as the additional Higher Level outcomes.</p>
+        <p>Explore the <url href="https://www.curriculumonline.ie/senior-cycle/senior-cycle-subjects/mathematics/" visual="official Leaving Certificate Mathematics syllabus"/>. The Higher Level teaching material in this part of the book is being developed strand by strand.</p>
+        <p>Begin with <xref ref="lc-hl-calculus"/> or choose a strand from the contents.</p>
+      </chapter>
+    </part>
+
+    <part xml:id="part-lc-hl-statistics">
+      <title>LC HL · Statistics and Probability</title>
+      <chapter xml:id="lc-hl-statistics-introduction"><title>Extending Statistics and Probability</title>
+        <p>Extend your work on probability and data to more advanced models and statistical inference.</p>
+        <p>Revise <xref ref="part-lc-ol-statistics"/> as needed. Higher Level teaching chapters for this strand are in development.</p>
+      </chapter>
+    </part>
+
+    <part xml:id="part-lc-hl-geometry">
+      <title>LC HL · Geometry and Trigonometry</title>
+      <chapter xml:id="lc-hl-geometry-introduction"><title>Extending Geometry and Trigonometry</title>
+        <p>Build on Ordinary Level geometry and trigonometry with further proofs, relationships and applications.</p>
+        <p>Revise <xref ref="part-lc-ol-geometry"/> as needed. Higher Level teaching chapters for this strand are in development.</p>
+      </chapter>
+    </part>
+
+    <part xml:id="part-lc-hl-number">
+      <title>LC HL · Number</title>
+      <chapter xml:id="lc-hl-number-introduction"><title>Extending Number</title>
+        <p>Develop the Ordinary Level number topics further, including complex numbers, sequences and series.</p>
+        <p>Revise <xref ref="part-lc-ol-number"/> as needed. Higher Level teaching chapters for this strand are in development.</p>
+      </chapter>
+    </part>
+
+    <part xml:id="part-lc-hl-algebra">
+      <title>LC HL · Algebra</title>
+      <chapter xml:id="lc-hl-algebra-introduction"><title>Extending Algebra</title>
+        <p>Extend algebraic reasoning, equations, inequalities and manipulation of expressions.</p>
+        <p>Revise <xref ref="part-lc-ol-algebra"/> as needed. Higher Level teaching chapters for this strand are in development.</p>
+      </chapter>
+    </part>
+
+    <part xml:id="part-lc-hl-functions">
+      <title>LC HL · Functions</title>
+      <xi:include href="./lc-hl-functions-calculus.ptx"/>
+    </part>
+
     <backmatter>
       <xi:include href="./shared-glossary.ptx"/>
       <xi:include href="./appendix-b-geometry.ptx"/>
