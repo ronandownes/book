@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="lc-ol-counting">
+  <title>Counting</title>
+  <objectives>
+    <ul>
+      <li><p>Use the Fundamental Principle of Counting to count arrangements.</p></li>
+      <li><p>Calculate factorials and recognise when all objects are distinct.</p></li>
+      <li><p>Count arrangements of some or all of a set of distinct objects, using multiplication or the permutation formula.</p></li>
+    </ul>
+  </objectives>
+  <introduction>
+    <p>This chapter develops the two Ordinary Level outcomes in <xref ref="lc-ol-statistics-1-1"/>. We will learn one general counting principle and see how factorials and permutations follow from it.</p>
+  </introduction>
+  <section xml:id="lc-ol-counting-principle">
+    <title>Fundamental Principle of Counting</title>
+    <objectives><ul><li><p>Count choices with and without repetition.</p></li></ul></objectives>
+    <definition xml:id="lc-ol-fundamental-counting-definition">
+      <title>Fundamental Principle of Counting</title>
+      <idx>Fundamental Principle of Counting</idx>
+      <statement><p>If a task has successive stages, with <m>a</m> choices at the first stage, <m>b</m> choices at the second stage for each first choice, and <m>c</m> choices at the third stage for each earlier pair of choices, the number of possible outcomes is <m>a\times b\times c</m>. The same principle extends to further stages.</p></statement>
+    </definition>
+    <example xml:id="lc-ol-counting-repetition">
+      <title>Repetition allowed</title>
+      <statement><p>How many three-digit codes can be made from the digits 1, 2, 3, 4 and 5 if digits may be repeated?</p></statement>
+      <solution><p>There are five choices for each position.</p><me>\boxed{5}\times\boxed{5}\times\boxed{5}=125</me></solution>
+    </example>
+    <example xml:id="lc-ol-counting-no-repetition">
+      <title>No repetition</title>
+      <statement><p>How many three-digit codes can be made from the same five digits if no digit may be repeated?</p></statement>
+      <solution><p>Once a digit is used, one fewer choice remains.</p><me>\boxed{5}\times\boxed{4}\times\boxed{3}=60</me></solution>
+    </example>
+  </section>
+  <section xml:id="lc-ol-counting-factorials">
+    <title>Arranging all the objects: factorials</title>
+    <objectives><ul><li><p>Count arrangements of distinct objects and use factorial notation.</p></li><li><p>Calculate factorials by multiplication and using a calculator.</p></li></ul></objectives>
+    <definition xml:id="lc-ol-factorial-definition">
+      <title>Factorial</title>
+      <idx>factorial</idx>
+      <statement><p>For a positive integer <m>n</m>, <m>n!</m> (read <em>n factorial</em>) is the product of the integers from <m>n</m> down to 1.</p><me>n!=n(n-1)(n-2)\cdots 1.</me><p>We define <m>0!=1</m>: there is exactly one arrangement of no objects, the empty arrangement.</p></statement>
+    </definition>
+    <example xml:id="lc-ol-factorial-example">
+      <statement><p>In how many different orders can the four letters of CUBE be arranged?</p></statement>
+      <solution><p>All four letters are distinct. There are four positions, with one fewer choice at each step.</p><me>\boxed{4}\times\boxed{3}\times\boxed{2}\times\boxed{1}=4!=24.</me><p>The arrangements do not have to form recognisable words.</p></solution>
+    </example>
+    <p>Each factorial can be obtained from the preceding factorial by multiplying by the next integer: <m>n!=n(n-1)!</m> for <m>n\geq1</m>.</p>
+    <table xml:id="lc-ol-factorial-table">
+      <title>Factorials from 0 to 12</title>
+      <tabular halign="right">
+        <row header="yes"><cell><m>n</m></cell><cell><m>n!</m></cell><cell>Digits</cell></row>
+        <row><cell><m>0</m></cell><cell><m>1</m></cell><cell><m>1</m></cell></row>
+        <row><cell><m>1</m></cell><cell><m>1</m></cell><cell><m>1</m></cell></row>
+        <row><cell><m>2</m></cell><cell><m>2</m></cell><cell><m>1</m></cell></row>
+        <row><cell><m>3</m></cell><cell><m>6</m></cell><cell><m>1</m></cell></row>
+        <row><cell><m>4</m></cell><cell><m>24</m></cell><cell><m>2</m></cell></row>
+        <row><cell><m>5</m></cell><cell><m>120</m></cell><cell><m>3</m></cell></row>
+        <row><cell><m>6</m></cell><cell><m>720</m></cell><cell><m>3</m></cell></row>
+        <row><cell><m>7</m></cell><cell><m>5{,}040</m></cell><cell><m>4</m></cell></row>
+        <row><cell><m>8</m></cell><cell><m>40{,}320</m></cell><cell><m>5</m></cell></row>
+        <row><cell><m>9</m></cell><cell><m>362{,}880</m></cell><cell><m>6</m></cell></row>
+        <row><cell><m>10</m></cell><cell><m>3{,}628{,}800</m></cell><cell><m>7</m></cell></row>
+        <row><cell><m>11</m></cell><cell><m>39{,}916{,}800</m></cell><cell><m>8</m></cell></row>
+        <row><cell><m>12</m></cell><cell><m>479{,}001{,}600</m></cell><cell><m>9</m></cell></row>
+      </tabular>
+    </table>
+    <exercise xml:id="lc-ol-factorial-table-investigation">
+      <title>Build your own factorial table</title>
+      <statement><p>Starting with <m>0!=1</m>, use repeated multiplication (or the calculator's Ans key) to build a factorial table up to <m>12!</m>. Find the first factorial with nine digits.</p></statement>
+      <answer><p><m>12!=479{,}001{,}600</m> is the first factorial with nine digits.</p></answer>
+    </exercise>
+    <p>On the Casio fx-83GT CW or fx-85GT CW, enter 8, open CATALOG, choose Probability, choose Factorial(!), and press EXE. The result is <m>8!=40{,}320</m>. See the <url href="https://support.casio.com/global/en/calc/manual/fx-83GTCW_85GTCW_en/advanced_calculations/probability.html">calculator manual</url>.</p>
+  </section>
+  <section xml:id="lc-ol-counting-mathematical-words">
+    <title>Mathematical words and distinct letters</title>
+    <objectives><ul><li><p>Recognise mathematical vocabulary and distinguish repeated letters from distinct letters.</p></li><li><p>Use factorials to count arrangements of words with distinct letters.</p></li></ul></objectives>
+    <p>The word FUNCTION contains eight letters, but N occurs twice. The eight letters are therefore not all distinct. In contrast, CUBE contains four distinct letters. The formula <m>n!</m> counts arrangements of <em>distinct</em> objects; it cannot directly count the different visible arrangements of FUNCTION.</p>
+    <exercise xml:id="lc-ol-counting-word-investigation">
+      <title>Investigate: mathematical vocabulary</title>
+      <statement>
+        <p>Read each of the following fifteen mathematical words. On paper, cross out each word containing a repeated letter. If you are unsure of a word's mathematical meaning, look it up or discuss it with a partner.</p>
+        <tabular halign="center">
+        <row><cell>prime</cell><cell>function</cell><cell>cube</cell></row>
+        <row><cell>algebra</cell><cell>vector</cell><cell>circle</cell></row>
+        <row><cell>axis</cell><cell>triangle</cell><cell>probability</cell></row>
+        <row><cell>radius</cell><cell>complex</cell><cell>statistics</cell></row>
+        <row><cell>domain</cell><cell>graph</cell><cell>fraction</cell></row>
+        </tabular>
+        <p>For each word that remains:</p>
+        <ol>
+          <li><p>Count its letters.</p></li>
+          <li><p>Write the number of arrangements as a descending product.</p></li>
+          <li><p>Write the same number using factorial notation and evaluate it.</p></li>
+          <li><p>Choose three of these words and explain their mathematical meanings.</p></li>
+        </ol>
+        <p>Extension: find another mathematical word with no repeated letters. What is the longest such word you can find?</p>
+      </statement>
+      <answer><p>Cross out function, algebra, circle, probability, statistics. The remaining words, grouped by length, have the following numbers of arrangements: cube, axis: <m>4!=24</m>; prime, graph: <m>5!=120</m>; vector, radius, domain: <m>6!=720</m>; complex: <m>7!=5{,}040</m>; triangle, fraction: <m>8!=40{,}320</m>.</p></answer>
+    </exercise>
+  </section>
+  <section xml:id="lc-ol-counting-permutations">
+    <title>Arranging some of the objects: permutations</title>
+    <objectives><ul><li><p>Count ordered arrangements of <m>r</m> objects from <m>n</m> distinct objects.</p></li><li><p>Connect descending multiplication to the permutation formula and calculator function.</p></li></ul></objectives>
+    <example xml:id="lc-ol-permutation-example">
+      <statement><p>Eight students are available for three different roles: captain, vice-captain and secretary. How many appointments are possible if no student may hold two roles?</p></statement>
+      <solution><p>There are three positions, so we need three factors.</p><me>\boxed{8}\times\boxed{7}\times\boxed{6}=336.</me></solution>
+    </example>
+    <p>For <m>1\leq r\leq n</m>, start with <m>n</m> and write exactly <m>r</m> descending factors.</p>
+    <me>\underbrace{n(n-1)(n-2)\cdots(n-r+1)}_{r\text{ factors}}.</me>
+    <definition xml:id="lc-ol-permutation-definition">
+      <title>Permutation</title>
+      <idx>permutation</idx>
+      <statement><p>A permutation is an ordered arrangement. The number of arrangements of <m>r</m> objects from <m>n</m> distinct objects, without repetition, is denoted by <m>{}^{n}P_r</m> or <m>nPr</m>, where <m>0\leq r\leq n</m>.</p><me>{}^{n}P_r=\dfrac{n!}{(n-r)!}.</me></statement>
+    </definition>
+    <p>For example, the factors from 5 down to 1 cancel in the following calculation:</p>
+    <me>{}^{8}P_3=\dfrac{8!}{5!}=\dfrac{8\times7\times6\times5!}{5!}=8\times7\times6=336.</me>
+    <p>On the fx-83GT CW or fx-85GT CW, enter 8, open CATALOG, choose Probability, choose Permutation(P), enter 3, and press EXE.</p>
+    <remark>
+      <title>Choosing a method</title>
+      <p>For Ordinary Level, my preferred method is the Fundamental Principle of Counting. With a small number of positions, descending multiplication is usually faster and easier to check, particularly on newer menu-driven calculators. We learn the permutation formula and calculator function as alternatives, not as unrelated rules.</p>
+      <p>For a larger example, arranging 40 objects from 200 distinct objects requires 40 factors, from 200 down to 161. Writing <m>{}^{200}P_{40}=\dfrac{200!}{160!}</m> is much more compact. A calculator may exceed its numerical range for very large factorials or permutations. The formula remains valid.</p>
+      <p>Order matters in these examples. Selecting a group without regard to order is a different problem.</p>
+    </remark>
+    <exercise xml:id="lc-ol-counting-method-practice">
+      <statement><p>Calculate the number of ways to arrange four objects from nine distinct objects. Use descending multiplication first, then check your answer using <m>nPr</m> if your calculator supports it.</p></statement>
+      <answer><p><m>9\times8\times7\times6={}^{9}P_4=3{,}024</m>.</p></answer>
+    </exercise>
+  </section>
+</chapter>
