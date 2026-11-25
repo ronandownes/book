@@ -230,6 +230,7 @@
     <part xml:id="part-lc-ol-statistics">
       <title>LC OL · Statistics and Probability</title>
       <xi:include href="./lc-ol-statistics-outcomes.ptx"/>
+      <xi:include href="./lc-ol-statistics-counting.ptx"/>
     </part>
 
     <part xml:id="part-lc-ol-geometry">
