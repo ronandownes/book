@@ -11,6 +11,7 @@
     <!-- Focus navigation on the current page; visitors can expand/collapse branches. -->
     <tableofcontents focused="yes" preexpanded-levels="1"/>
     <baseurl href="https://ronandownes.github.io/book/"/>
+    <brandlogo source="four-dots.svg" url="https://ronandownes.github.io/book/"/>
     <!-- Display the book title, subtitle and author byline. -->
     <banner subtitle="yes" byline="yes"/>
     <!-- Native PreTeXt textbook layout; colours align with Maths Apps. -->
