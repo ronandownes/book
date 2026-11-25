@@ -4,6 +4,8 @@
   <section xml:id="algebra-factorisation-intro">
     <title>Introduction</title>
     <introduction><p>To factorise an expression is to rewrite it as a product. Factorisation reverses expansion. A common factor can be taken outside brackets; other patterns require recognising how products expand.</p></introduction>
+    <p><em>Common factors first.</em> Examine the terms for a common factor before attempting any other factorisation method. If a non-unit HCF exists, extract it first. For example, <m>24x^2+96x+90=6(4x^2+16x+15)=6(2x+3)(2x+5)</m>. Unless otherwise stated, our subsequent positive-integer trinomial investigations assume that the HCF of the coefficients is 1.</p>
+    <p>For teachers: if <m>\gcd(a,b)=\gcd(c,d)=1</m>, the product <m>(ax+b)(cx+d)=Ax^2+Bx+C</m> has <m>\gcd(A,B,C)=1</m>. This is the primitive-polynomial form of Gauss's lemma. Removing common factors first therefore gives a mathematically consistent starting point in both directions.</p>
     <p>Always check a factorisation by expanding the result. A correct answer must reproduce every term of the original expression.</p>
     <p>For a paired expansion and factorisation investigation, begin with <xref ref="af3-01-positive-factors-unit-factor"/>. Recognise the same structure in both directions before moving to more general trinomials.</p>
   </section>
