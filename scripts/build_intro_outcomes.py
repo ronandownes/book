@@ -401,6 +401,44 @@ def correct_lc_formulas(code: str, paragraphs: list[etree._Element]) -> list[etr
     These particular outcomes have been checked against the source syllabus's
     printed mathematics, not guessed from the clipped extraction.
     """
+    if code == "5.1":
+        # Checked visually against the official syllabus, printed page 43.
+        # Restore entire expressions before the sentence-capitalisation pass.
+        # The original prose is retained; only the mathematical lines are repaired.
+        formulas = [
+            (r"^ax\s*\+\s*b\s*where", r"<m>ax+b</m> where <m>a,b\in\mathbb{Q},\;x\in\mathbb{R}</m>"),
+            (r"^ax\s*[2²]\s*\+", r"<m>ax^2+bx+c</m> where <m>a,b,c\in\mathbb{Z},\;x\in\mathbb{R}</m>"),
+            (r"^ax\s*[3³]\s*\+", r"<m>ax^3+bx^2+cx+d</m> where <m>a,b,c,d\in\mathbb{Z},\;x\in\mathbb{R}</m>"),
+            (r"^ab\s*x\s*where", r"<m>ab^x</m> where <m>a\in\mathbb{N},\;b,x\in\mathbb{R}</m>"),
+        ]
+        fixed = []
+        found = set()
+        for p in paragraphs:
+            raw = compact("".join(p.itertext()))
+            raw = re.sub(r"^[•–]\s*", "", raw)
+            for i, (pattern, replacement) in enumerate(formulas):
+                if re.match(pattern, raw, re.I):
+                    fixed.append(para(replacement))
+                    found.add(i)
+                    break
+            else:
+                if raw.rstrip(".").lower() in ("graph functions of the form", "use graphical methods to find approximate solutions to"):
+                    fixed.append(para(raw.rstrip(".") + ":"))
+                    continue
+                # Wrap complete f(x), g(x), and equations in native inline maths.
+                from xml.sax.saxutils import escape
+                math_pattern = r"\b[fFgG]\s*\(\s*x\s*\)(?:\s*=\s*(?:[fFgG]\s*\(\s*x\s*\)|0|k))?"
+                pieces = []
+                end = 0
+                for match in re.finditer(math_pattern, raw):
+                    pieces.append(escape(raw[end:match.start()]))
+                    pieces.append("<m>" + re.sub(r"\s+", "", match.group()).lower() + "</m>")
+                    end = match.end()
+                pieces.append(escape(raw[end:]))
+                fixed.append(para("".join(pieces)))
+        if found != set(range(4)):
+            raise ValueError("LC 5.1 source layout changed: expected all four function families, found " + str(sorted(found)))
+        return fixed
     if code not in {"1.7", "3.2", "4.1", "4.2"}:
         # Restore the mathematical notation lost during PDF text extraction.
         # Both the strand overview and topic pages use these same paragraphs.

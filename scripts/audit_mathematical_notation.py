@@ -37,6 +37,23 @@ else:
             errors.append("AF.3 missing typeset source: " + needle)
     if re.search(r"\bi\.linear|x\^\(2\)", body, re.I):
         errors.append("AF.3 still contains flattened roman numerals or exponents")
+# Verify both native 5.1 views, including the exponential and lower-case variables.
+functions = etree.parse(str(ROOT / "lc-ol-functions-outcomes.ptx"))
+section = functions.xpath('//*[@xml:id="lc-ol-functions-5-1"]')
+required_functions = [r"ax+b", r"ax^2+bx+c", r"ax^3+bx^2+cx+d", r"ab^x",
+                      r"f(x)=0", r"f(x)=k", r"f(x)=g(x)"]
+if len(section) != 1:
+    errors.append("LC OL 5.1 section missing")
+else:
+    maths = set(section[0].xpath(".//m/text()"))
+    overview = set(functions.xpath("//introduction//m/text()"))
+    for formula in required_functions:
+        if formula not in maths or formula not in overview:
+            errors.append("LC OL 5.1 missing native formula in section or overview: " + formula)
+    for paragraph in section[0].xpath(".//p"):
+        outside = (paragraph.text or "") + "".join(n.tail or "" for n in paragraph)
+        if re.search(r"\b(?:[aA]x[23]|[aA]bx|[fF]\(x\)|[gG]\(x\))", outside):
+            errors.append("LC OL 5.1 flattened notation: " + outside[:100])
 for path in FILES:
     if not path.is_file() or path.stat().st_size < 300:
         errors.append("Missing or empty outcomes: " + path.name)
