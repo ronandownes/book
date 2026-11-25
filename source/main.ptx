@@ -45,17 +45,19 @@
         <p>Ronan Downes is a mathematics teacher with approximately fifteen years of teaching experience. He has also worked in telecommunications and has been self-employed in photography, video production and web design.</p>
         <p>His interests connect mathematics with physics, computing, data analysis and AI. His teaching draws on classroom experience, thoughtful use of technology, cognitive load theory and Universal Design for Learning. He is developing this website to make mathematics clearer, more accessible and more enjoyable for students.</p>
       </preface>
+      <preface xml:id="part-jc-introduction">
+        <title>Course Guide</title>
+        <p>Choose a mathematical strand at the appropriate level from the contents. The four strand colours recur throughout Junior Cycle and Senior Cycle. Return to earlier chapters whenever you need to revisit a concept.</p>
+        <p>Junior Cycle: <xref ref="jc-course-introduction" text="title"/>; <xref ref="chapter-mathematical-structure" text="title"/>; <xref ref="jc-outcomes-unifying" text="title"/>; <xref ref="jc-cba-assessment" text="title"/>.</p>
+        <p xml:id="part-lc-ol-introduction">Leaving Certificate Ordinary Level: <xref ref="lc-ol-introduction" text="title"/>.</p>
+        <p xml:id="part-lc-hl-introduction">Leaving Certificate Higher Level: <xref ref="lc-hl-introduction" text="title"/>.</p>
+      </preface>
     </frontmatter>
 
-<part xml:id="part-jc-introduction">
-      <title>Introduction to Junior Cycle Mathematics</title>
-      <xi:include href="./jc-course-introduction.ptx"/>
-      <xi:include href="./jc-mathematical-structure.ptx"/>
-      <xi:include href="./jc-unifying-outcomes.ptx"/>
-    </part>
+
 
     <part xml:id="part-jc-number">
-      <title>Number</title>
+      <title>JC · Number</title>
       <xi:include href="./jc-number-outcomes.ptx" />
       <xi:include href="./jc-number-representation.ptx" />
       <xi:include href="./jc-number-operations.ptx" />
@@ -74,14 +76,14 @@
     </part>
 
 <part xml:id="part-jc-geometry">
-      <title>Geometry and Trigonometry</title>
+      <title>JC · Geometry and Trigonometry</title>
       <xi:include href="./jc-geometry-outcomes.ptx" />
       <xi:include href="./jc-geometry-reference-entry.ptx" />
       <xi:include href="./jc-trigonometry-ratios-triangles.ptx"/>
     </part>
 
 <part xml:id="part-jc-algebra">
-      <title>Algebra and Functions</title>
+      <title>JC · Algebra and Functions</title>
       <xi:include href="./jc-algebra-outcomes.ptx" />
       <xi:include href="./jc-algebra-patterns.ptx" />
       <xi:include href="./jc-algebra-language.ptx" />
@@ -110,10 +112,17 @@
               </section>
             </chapter>
 
+    
+      <chapter xml:id="jc-cba1-mathematical-investigation">
+    <title>CBA 1 — Mathematical Investigation</title>
+    <p>This investigation is placed here for convenience; it may draw on mathematics from any strand. See <xref ref="jc-cba-assessment" text="title"/> for general assessment guidance.</p>
+    <p>Begin with a mathematical question worth exploring. Define the problem, make assumptions where necessary, break it into manageable parts, and use mathematical reasoning to investigate possible solutions. Interpret the result in its original context and communicate the choices made along the way.</p>
+    <p>A strong investigation records not only an answer but also the reasoning, representations, difficulties and refinements that led to it.</p>
+  </chapter>
     </part>
 
 <part xml:id="part-jc-statistics">
-      <title>Statistics and Probability</title>
+      <title>JC · Statistics and Probability</title>
       <xi:include href="./jc-statistics-outcomes.ptx" />
 <chapter xml:id="chapter-probability">
       <title>Sample Spaces</title>
@@ -226,24 +235,20 @@
         <exercise xml:id="exercise-sample-spaces-two-dice"><statement><p>Draw a two-way table for rolling two standard dice. How many ordered outcomes are possible?</p></statement><answer><p>Six rows and six columns give 36 ordered outcomes.</p></answer></exercise>
       </section>
     </chapter>
+    
+      <chapter xml:id="jc-cba2-statistical-investigation">
+    <title>CBA 2 — Statistical Investigation</title>
+    <p>This investigation connects directly with the statistical enquiry cycle. See <xref ref="jc-cba-assessment" text="title"/> for general assessment guidance.</p>
+    <p>Begin with a question that can be investigated using data. Plan how to gather appropriate evidence, consider bias and variability, organise the data, choose suitable visual and numerical summaries, and draw conclusions supported by the analysis.</p>
+    <p>The final report should explain the question, methods, findings and limitations in clear mathematical language.</p>
+  </chapter>
     </part>
 
-    <part xml:id="part-jc-assessment">
-      <title>CBA and Assessment</title>
-      <xi:include href="./jc-cba-assessment.ptx"/>
-    </part>
+    
 
-    <part xml:id="part-transition-year">
-      <title>TY Maths</title>
-      <xi:include href="./ty-maths-introduction.ptx"/>
-      <xi:include href="./ty/maths-in-the-news.ptx"/>
-      <xi:include href="./ty/number-theory-projects.ptx"/>
-    </part>
+    
 
-    <part xml:id="part-lc-ol-introduction">
-      <title>Leaving Cert Ordinary Level Maths Introduction</title>
-      <xi:include href="./lc-ol-introduction.ptx"/>
-    </part>
+    
 
     <part xml:id="part-lc-ol-statistics">
       <title>LC OL · Statistics and Probability</title>
@@ -274,14 +279,7 @@
       <xi:include href="./lc-ol-functions-outcomes.ptx"/>
       <xi:include href="./lc-ol-functions-stationary-points.ptx"/>
     </part>
-    <part xml:id="part-lc-hl-introduction">
-      <title>Leaving Cert Higher Level Maths Introduction</title>
-      <chapter xml:id="lc-hl-introduction"><title>Continuing to Higher Level</title>
-        <p>Higher Level builds upon Ordinary Level. Return to the earlier chapters whenever you need to revise a concept or practise a technique. Higher Level students are expected to achieve the Ordinary Level outcomes as well as the additional Higher Level outcomes.</p>
-        <p>Explore the <url href="https://www.curriculumonline.ie/senior-cycle/senior-cycle-subjects/mathematics/" visual="official Leaving Certificate Mathematics syllabus"/>. The Higher Level teaching material in this part of the book is being developed strand by strand.</p>
-        <p>Begin with <xref ref="lc-hl-calculus"/> or choose a strand from the contents.</p>
-      </chapter>
-    </part>
+    
 
     <part xml:id="part-lc-hl-statistics">
       <title>LC HL · Statistics and Probability</title>
@@ -321,6 +319,236 @@
     </part>
 
     <backmatter>
+<appendix xml:id="jc-course-introduction">
+  <title>Junior Cycle Guide</title>
+  <section xml:id="jc-course-overview"><title>Complete Learning Outcomes — Start Here</title>
+    <p>Junior Cycle Mathematics is organised around the Unifying Strand and four contextual strands. Their official learning outcomes tell us what students are expected to learn.</p>
+    <p><em>The aim of Junior Cycle Mathematics.</em> The national specification aims to give every student relevant, challenging opportunities to become mathematically proficient for everyday life, Senior Cycle and beyond. It identifies five interconnected components: conceptual understanding, procedural fluency, strategic competence, adaptive reasoning and productive disposition. These belong together throughout the course, not in separate compartments. The official wording belongs in the specification; here we use that aim to guide our teaching and learning.</p>
+    <p><em>Start here:</em> explore all five strands and their complete official learning outcomes. Each link leads to the authoritative curriculum display, including the distinctions between Ordinary Level and additional Higher Level learning. The same outcomes are referenced throughout the teaching chapters, without independent retyping.</p>
+    <ul>
+      <li><p><xref ref="jc-outcomes-unifying" text="title"/> — the thirteen U.1–U.13 learning outcomes, organised into six elements.</p></li>
+      <li><p><xref ref="jc-outcomes-number" text="title"/> — Number.</p></li>
+      <li><p><xref ref="jc-outcomes-geometry" text="title"/> — Geometry and Trigonometry.</p></li>
+      <li><p><xref ref="jc-outcomes-algebra" text="title"/> — Algebra and Functions.</p></li>
+      <li><p><xref ref="jc-outcomes-statistics" text="title"/> — Statistics and Probability.</p></li>
+    </ul>
+    <p>The Unifying Strand connects all four contextual strands: building blocks, representation, connections, problem solving, generalisation and proof, and communication.</p>
+    <p>This free, developing book combines explanations, diagrams, worked examples, printable exercises and interactive mathematics. It aims to make ideas accessible without removing the reasoning and challenge.</p>
+  </section>
+  <section xml:id="jc-how-we-learn"><title>How We Learn Mathematics</title>
+    <p>We begin with what students already know, introduce new ideas clearly, connect different representations and provide opportunities to practise, explain and retrieve what has been learned. Worked examples make methods visible; partially completed examples provide support; independent questions gradually remove that support.</p>
+    <p>Understanding and fluency develop together. We use explicit explanations, carefully sequenced examples, feedback, discussion, investigation and spaced review as appropriate to the mathematical idea and the learner.</p>
+    <p>A mistake is useful information. Identify which step failed, explain why, correct it and check the revised solution.</p>
+  </section>
+  <section xml:id="jc-principles-and-methods"><title>Principles, Methods and Representations</title>
+    <p><em>A core mathematical idea is not the same as a method.</em> A principle tells us what is true and why it is true. A method is a way of using that principle to calculate, investigate or solve a problem. I want you to know the difference, and above all to understand the ideas beneath the procedures.</p>
+    <p>For example, the distributive law explains why expanding brackets works. Expanding and factorising move between equivalent expressions in opposite directions. A diagram, a table, an inline calculation or a stacked display can organise the work, but none of these layouts is itself the underlying mathematical principle.</p>
+    <p>Choosing a representation is not simply a matter of picking whichever one looks nicest. Some tasks involve several decisions, and a carefully arranged two-dimensional display can make those decisions easier to see. In factorisation, for instance, we may need to identify a common factor, decide which terms belong together, consider signs and coefficients, and check that the result expands to the original expression. A table or framed display can make that structure visible instead of squeezing every decision into one long line.</p>
+    <p>I'll introduce representations deliberately, show when each is particularly useful and help you become familiar with them. As you gain fluency, you can move between a visual arrangement, an inline expression and a concise final solution. The goal is not to collect tricks: it is to understand the mathematics, make sound decisions and communicate your reasoning clearly.</p>
+  </section>
+  <section xml:id="jc-specialisation-generalisation"><title>Start Simple, Then Generalise</title>
+    <p>When a mathematical problem seems complicated, ask: <em>What is the simplest meaningful case?</em> A special case is a version of a problem in which some conditions have been fixed or simplified. A trivial case may offer little insight, but a carefully chosen simple case can reveal an important pattern.</p>
+    <p>Try changing just one feature at a time. First understand the structure; then relax the restrictions, make a conjecture and test whether it remains true.</p>
+    <p>For example, begin with linear factors whose coefficients have magnitude one. Three sign patterns reveal three useful identities:</p>
+    <md>(x+1)^2=x^2+2x+1</md>
+    <md>(x-1)^2=x^2-2x+1</md>
+    <md>(x+1)(x-1)=x^2-1</md>
+    <p>Now replace the constant <m>1</m> by <m>a</m>, or change the coefficient of <m>x</m>. What stays the same? What changes? Why? Compare <m>(x+3)^2</m> with <m>(3x+1)^2</m>; in particular, investigate where each expression is zero.</p>
+    <p>This is the movement between <term>specialisation</term> and <term>generalisation</term>: explore illuminating examples, notice what survives, and justify a general statement. A few examples can suggest a conjecture, but they do not by themselves prove it.</p>
+  </section>
+  <section xml:id="jc-notation-wall"><title>Mathematical Language</title>
+    <p>Mathematics uses symbols, diagrams and precise language to communicate ideas. You will meet unfamiliar notation as you progress through the course. You do not need to memorise every symbol before beginning: each will be introduced in the chapter where it is used.</p>
+    <p>For example, sets can be represented by a list or a diagram. We will explore these representations in <xref ref="chapter-sets" text="title"/>.</p>
+  </section>
+  <section xml:id="jc-workbook-approach"><title>Workbooks, Scaffolding and Independence</title>
+    <p>Many exercises are presented in a printable workbook format with questions already written and suitable space for working, similar to the answer spaces students encounter in examinations. Students can spend more time reasoning and less time copying instructions or setting out pages.</p>
+    <p>Some questions contain diagrams, starting steps or prompts; later questions remove these supports. Students also practise drawing, labelling, organising and communicating complete solutions independently. A scaffold is temporary assistance, not a substitute for mathematical thinking.</p>
+    <p>Interactive tools, calculators and dynamic representations support exploration and checking when appropriate. They do not replace the need to explain or justify a result.</p>
+  </section>
+  <section xml:id="jc-problem-solving-intro"><title>Problem Solving from the Beginning: Pólya's Four Stages</title>
+    <p>Problem solving is not a chapter to be reached after all the techniques have been taught. It is a way of learning mathematics from the first lesson. Give yourself a chance to explore a question before being shown a complete procedure. Draw a picture, arrange objects, try a small case, build a table, make a graph, use a Venn diagram or write an expression. These are ways of representing and understanding the mathematics, not rewards for finishing a separate topic.</p>
+    <p>George Pólya (1887–1985), a mathematician and influential writer on problem solving, described four useful stages in his 1945 book <em>How to Solve It</em>. You can <url href="https://commons.wikimedia.org/wiki/File:ETH-BIB-Polya,_Georg_(1887-1985)-Portrait-Portr_13887-19-AL.tif" visual="see a historical photograph of George Pólya"/> (ETH Library, public-domain image).</p>
+    <ol>
+      <li><p><em>Understand the problem.</em> What do you know? What are you trying to find or explain? Can you restate it in your own words, draw it or test an example?</p></li>
+      <li><p><em>Devise a plan.</em> Choose a representation or strategy. Could a diagram, graph, table, simpler case, related question or working backwards help?</p></li>
+      <li><p><em>Carry out the plan.</em> Calculate, construct, reason and explain. If your method stops working, change the plan or return to the question.</p></li>
+      <li><p><em>Look back.</em> Does the answer make sense? Can you check it another way, explain it, or change the conditions to discover something more general?</p></li>
+    </ol>
+    <p>These are not four rigid boxes. Thinking moves backwards and forwards. A diagram might clarify a question while you are planning; an unexpected answer might make you reconsider what the question means. The aim is to make the problem-solving process familiar and natural, until you can take increasing charge of it yourself.</p>
+    <p><em>Exploration and explanation belong together.</em> It is valuable to try a problem before being shown the method, but productive struggle need not mean being left to guess indefinitely. Clear teacher modelling, carefully chosen worked examples, feedback and guided practice can help when a new concept or procedure needs explanation. We then return to trying, reasoning and applying it independently.</p>
+    <p>The six elements of the <xref ref="jc-outcomes-unifying" text="title"/> are building blocks, representation, connections, problem solving, generalisation and proof, and communication. Their thirteen official learning outcomes can be studied together or accessed individually from the contents panel.</p>
+    <paragraphs xml:id="problem-solving-heuristics"><title>A toolkit for mathematical problem-solving</title>
+<p>A <term>heuristic</term><idx>heuristic</idx> is a useful strategy for making progress when a solution is not immediately apparent. It is not a guarantee of success. Pólya's <xref ref="ref-polya"/> contains a dictionary of such strategies. Throughout this book we will develop and revisit a toolkit of our own, including:</p>
+<ul>
+<li><p><em>Specialise.</em> Investigate a simpler or more manageable case.</p></li>
+<li><p><em>Use analogy.</em> Recall a related problem and adapt its solution.</p></li>
+<li><p><em>Change representation.</em> Draw a diagram, construct a table or express the relationship algebraically.</p></li>
+<li><p><em>Work backwards.</em> Start with the desired result and ask what would make it possible.</p></li>
+<li><p><em>Search systematically.</em> Organise possibilities, use constraints and eliminate impossible cases.</p></li>
+<li><p><em>Look for a pattern.</em> Use examples to form a conjecture, then establish whether it is true.</p></li>
+<li><p><em>Look back and generalise.</em> Check the result, compare methods and ask what can be reused.</p></li>
+</ul>
+<p>Learning to learn, or <term>metacognition</term><idx>metacognition</idx>, includes planning, monitoring and evaluating our own thinking. Ask yourself why you chose a method, whether it is working, what to change if you are stuck and what you could learn from the solution. We will return to these questions throughout the book.</p>
+<p>Our worked examples aim to expose the reasoning behind a solution, not just display its completed calculation. We gradually reduce the guidance as learners develop the knowledge and confidence to make their own decisions.</p>
+</paragraphs>
+    <p><em>Further reading:</em> <url href="https://www.utsc.utoronto.ca/learningstrategies/polyas-problem-solving" visual="University of Toronto: Pólya's problem-solving framework"/>.</p>
+  </section>
+  <section xml:id="jc-assessment-intro"><title>Assessment, CBAs and Examinations</title>
+    <p>Assessment takes many forms: questioning, classwork, homework, quizzes, investigations, discussion, feedback and examinations. These provide evidence of what has been understood and what needs further work.</p>
+    <p>Classroom-Based Assessments develop investigation, reasoning and communication. The specification describes mathematical and statistical investigations. The requirements for particular examination cohorts may differ, so consult the <url href="https://www.curriculumonline.ie/junior-cycle/junior-cycle-subjects/mathematics/assessment-and-reporting/" visual="current official assessment arrangements"/> before planning a CBA.</p>
+    <p>Exam-style practice appears throughout the book, including questions that require complete independent working. We prepare for assessment by learning mathematics thoroughly, not by treating the examination as the only purpose of learning.</p>
+  </section>
+  <section xml:id="jc-strands-intro"><title>Junior Cycle Mathematics Strands</title>
+    <p>The <xref ref="jc-outcomes-unifying" text="title"/> runs through all four contextual strands. The curriculum's official learning outcomes are the reference point for the teaching chapters and their learning intentions.</p>
+    <ul>
+      <li><p><xref ref="jc-outcomes-unifying" text="title"/> — thirteen outcomes, U.1–U.13, grouped into six elements.</p></li>
+      <li><p><xref ref="jc-outcomes-number" text="title"/> — number systems, operations, patterns and sets.</p></li>
+      <li><p><xref ref="jc-outcomes-geometry" text="title"/> — measurement, geometry, proof and trigonometry.</p></li>
+      <li><p><xref ref="jc-outcomes-algebra" text="title"/> — expressions, equations, relationships and functions.</p></li>
+      <li><p><xref ref="jc-outcomes-statistics" text="title"/> — probability, data and statistical investigation.</p></li>
+    </ul>
+    <p>These links lead to the official learning-outcome displays; they are not independent rewritten versions of the curriculum.</p>
+    <p><url href="https://www.curriculumonline.ie/getmedia/6a7f1ff5-9b9e-4d71-8e1f-6d4f932191db/JC_Mathematics_Specification.pdf" visual="Read the original NCCA Junior Cycle Mathematics Specification"/> to check the authoritative published wording, notation and level distinctions.</p>
+  </section>
+  <section xml:id="jc-using-resources"><title>Using This Book</title>
+    <p>Read the learning outcome and learning intention, check any prerequisites, study the examples and then try the questions. Use diagrams and applications to explore ideas; return to earlier material when a connection is unclear. Revisit questions later without looking at the solution.</p>
+    <p>The contents panel lets you open the parts, chapters and sections you need. Follow the curriculum links for an overview, then return to a teaching chapter for explanations and practice.</p>
+  </section>
+</appendix>
+
+<appendix xml:id="chapter-mathematical-structure">
+  <title>How Mathematics Is Built</title>
+  <introduction>
+    <p>Mathematics is more than a collection of methods. It is a connected system of concepts, precise language, assumptions and logical deductions. When we study a result, we should know what it depends on, what it proves, and what we may deduce from it.</p>
+    <p>The official geometry reference makes this structure especially clear. Its <xref ref="geometry-appendix-b" text="title"/> is part of this book, not a separate website. The same habits of careful definition, reasoning and proof apply to Number, Algebra, Functions, Statistics and Probability.</p>
+  </introduction>
+  <section xml:id="math-structure-vocabulary">
+    <title>The Vocabulary of Mathematical Reasoning</title>
+    <p>These are explanations of mathematical roles, not replacements for the formal numbered definitions in Appendix B.</p>
+    <table xml:id="math-structure-roles">
+      <title>What kind of statement are we reading?</title>
+      <tabular>
+        <row><cell><em>Type</em></cell><cell><em>Role in mathematics</em></cell><cell><em>What to ask</em></cell></row>
+        <row><cell>Undefined or primitive term</cell><cell>A starting concept which the chosen formal system does not define using earlier terms.</cell><cell>What properties are assumed?</cell></row>
+        <row><cell>Definition</cell><cell>Fixes the precise meaning of a term using accepted concepts.</cell><cell>Does the object satisfy the definition?</cell></row>
+        <row><cell>Axiom or postulate</cell><cell>A statement accepted without proof within the chosen mathematical system.</cell><cell>Which consequences follow from it?</cell></row>
+        <row><cell>Conjecture</cell><cell>A claim proposed for investigation, but not yet proved.</cell><cell>Can we prove it or find a counterexample?</cell></row>
+        <row><cell>Proposition or theorem</cell><cell>A statement established by a valid proof from accepted premises.</cell><cell>What earlier results does the proof use?</cell></row>
+        <row><cell>Lemma</cell><cell>A proved result especially useful in proving another result.</cell><cell>What larger proof does it support?</cell></row>
+        <row><cell>Corollary</cell><cell>A result following readily from an established theorem.</cell><cell>What theorem gives it?</cell></row>
+        <row><cell>Converse</cell><cell>Reverses the implication in another statement; it needs its own justification.</cell><cell>Does the reversed claim actually hold?</cell></row>
+        <row><cell>Counterexample</cell><cell>A single valid instance disproving a universally quantified claim.</cell><cell>Which assumption or conclusion fails?</cell></row>
+        <row><cell>Proof</cell><cell>A logically valid argument establishing a claimed result.</cell><cell>Why is every step justified?</cell></row>
+      </tabular>
+    </table>
+  </section>
+  <section xml:id="math-structure-dependencies">
+    <title>From Starting Terms to New Results</title>
+    <p>The basic dependency pattern is:</p>
+    <md>\text{primitive terms and axioms}\longrightarrow\text{definitions and proved results}\longrightarrow\text{new theorems and applications}.</md>
+    <p>The arrows describe logical dependence, not an inflexible teaching order. Investigations, diagrams, experimentation and technology may help us discover a claim; a formal proof is what establishes it as a theorem.</p>
+    <p>As an example, the formal geometry reference begins with <xref ref="geometry-app-b-axiom-1" text="title"/> and introduces collinear points in <xref ref="geometry-app-b-definition-2" text="title"/>. Later results use these foundations rather than redefining them.</p>
+  </section>
+  <section xml:id="math-structure-implication">
+    <title>A Theorem Is Not Automatically Its Converse</title>
+    <p>Suppose a statement has the form <m>P\Rightarrow Q</m>. Its converse is <m>Q\Rightarrow P</m>. Proving the first does not establish the second.</p>
+    <example xml:id="math-structure-converse-example">
+      <title>A Simple Counterexample</title>
+      <statement><p>If an integer is divisible by <m>4</m>, then it is even. Its converse claims: if an integer is even, it is divisible by <m>4</m>. The converse is false, because <m>6</m> is even but is not divisible by <m>4</m>.</p></statement>
+    </example>
+    <p>A mathematical assertion must be read with its precise assumptions. When the converse is valid, it deserves its own proof or an equivalent argument.</p>
+  </section>
+  <section xml:id="math-structure-pretext-environments">
+    <title>How This Book Displays Mathematical Ideas</title>
+    <p>The book uses distinct semantic environments for <term>definition</term>, <term>axiom</term>, <term>theorem</term>, <term>proposition</term>, <term>lemma</term>, <term>corollary</term>, <term>proof</term>, <term>example</term>, and <term>exercise</term> where appropriate. A proof is not merely a blue box, nor is a theorem simply a bold paragraph: their roles must remain visible in navigation, cross-references and accessible text.</p>
+    <p>Each official geometry statement has one canonical home in <xref ref="geometry-appendix-b" text="title"/>. A lesson may refer to it or explain it with a diagram or app, but should not create a competing official wording. Consult <xref ref="chapter-glossary" text="title"/> for the book's general mathematical vocabulary.</p>
+  </section>
+  <section xml:id="math-structure-source-levels">
+    <title>Levels of Rigour</title>
+    <p>The geometry reference distinguishes three levels: a fully rigorous account for advanced readers, a semiformal level suitable for many secondary students, and an informal level suited to younger learners. Different levels of explanation are legitimate, but we must not confuse illustrative evidence with deductive proof.</p>
+    <p>See the opening sections of <xref ref="geometry-appendix-b" text="title"/> as its transcription is completed and verified.</p>
+  </section>
+</appendix>
+
+<appendix xml:id="jc-outcomes-unifying">
+  <title>Unifying Strand</title>
+  <p>The Unifying Strand runs through all four mathematical strands. It is not a separate sequence of lessons. Its six elements are building blocks, representation, connections, problem solving, generalisation and proof, and communication.</p>
+  <p>See the <url href="https://www.curriculumonline.ie/junior-cycle/junior-cycle-subjects/mathematics/expectations-for-students/" visual="official complete U.1–U.13 learning outcomes"/>. Use these outcomes while working through Number, Geometry and Trigonometry, Algebra and Functions, and Statistics and Probability.</p>
+</appendix>
+
+<appendix xml:id="jc-cba-assessment">
+  <title>Assessment and Feedback</title>
+  <introduction>
+    <p>Assessment in Junior Cycle Mathematics is not limited to finding the correct answer. Investigating, justifying, communicating and reflecting on mathematical ideas are all important. The two Classroom-Based Assessments are explained in their own chapters; here we consider assessment and feedback across the strands.</p>
+    <p>The official <url href="https://www.curriculumonline.ie/junior-cycle/junior-cycle-subjects/mathematics/assessment-and-reporting/" visual="NCCA assessment and reporting guidance"/> is the reference for current CBA requirements and arrangements.</p>
+  <p xml:id="part-jc-assessment">See <xref ref="jc-cba1-mathematical-investigation" text="title"/> and <xref ref="jc-cba2-statistical-investigation" text="title"/>.</p>
+  </introduction>
+  
+  
+  <section xml:id="jc-assessment-feedback">
+    <title>Assessment, Feedback and Reflection</title>
+    <p>Assessment for learning can take place through questioning, discussion, observation, short written tasks, worked examples, investigations and student explanations. Feedback should help students identify what they understand, what needs attention and what useful action to take next.</p>
+    <p>Return to the Unifying Strand when reviewing work: accuracy and fluency matter, but so do representations, connections, problem solving, proof and communication.</p>
+  </section>
+</appendix>
+
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="lc-ol-introduction">
+  <title>Leaving Cert OL Guide</title>
+  <section xml:id="lc-ol-learning-outcomes">
+    <title>Learning Outcomes</title>
+    <p>Learning outcomes describe the knowledge, understanding, skills and values students should be able to demonstrate.</p>
+    <p>The Ordinary Level learning outcomes are presented in five course Parts, in syllabus order. Each Part starts with the complete learning outcomes.</p>
+    <p>Across the five strands, students should be able to explore patterns, explain findings, justify conclusions, communicate mathematics clearly and apply suitable methods in familiar and unfamiliar situations.</p>
+    <p><em>Source:</em> <url href="https://www.curriculumonline.ie/getmedia/f6f2e822-2b0c-461e-bcd4-dfcde6decc0c/SCSEC25_Maths_syllabus_examination-2015_English.pdf" visual="Leaving Certificate Mathematics Syllabus (for examination from 2015)"/>. The published syllabus remains the authority for mathematical notation and scope.</p>
+  </section>
+
+  <section xml:id="lc-examinations-external-candidates">
+    <title>Examinations, Evidence and External Candidates</title>
+    <p>Examination questions are one way of putting mathematical understanding and fluency to the test. They also demand careful reading, selecting an appropriate method, showing reasoning and managing time. Regular practice under realistic conditions can provide useful evidence of progress, but an examination grade is not the whole of mathematical proficiency.</p>
+    <p>As of October 2026, an adult or another person who is not enrolled as a pupil of a recognised post-primary school may still seek entry to Leaving Certificate examinations as an <em>external candidate</em>, subject to the State Examinations Commission's conditions. Candidates must arrange the required permission from the relevant school principal and comply with the examination entry procedures. <url href="https://www.gov.ie/en/department-of-education/publications/state-examinations-2026/" visual="Department of Education: State Examinations information"/>.</p>
+    <p>Under Senior Cycle Redevelopment, revised subjects are introducing Additional Assessment Components (AACs) alongside written examinations. Where coursework is required, teacher authentication and principal verification are important: privately completed coursework cannot automatically be accepted. External candidates should consult the <url href="https://www.examinations.ie/" visual="State Examinations Commission"/> for the arrangements applying to their subject and examination year. The rules can change as revised specifications are introduced.</p>
+  </section>
+
+  <section xml:id="lc-ol-how-marking-works">
+    <title>Make Your Reasoning Count: Partial Credit and Mistakes</title>
+    <p><em>Give yourself the best chance of earning partial credit.</em> An answer is more than its last line. Write down relevant information, set out a sensible method, label diagrams, show substitutions and make the steps in your reasoning clear. That way, if an arithmetic slip or an unexpected result occurs, the examiner can see the valid mathematics you have done. No particular mark is guaranteed: the published marking scheme for the question controls the award.</p>
+    <p>Mathematics marking schemes distinguish levels of credit and describe acceptable work and errors. Some questions permit follow-through from an earlier error, and some provide for an error to be penalised in a particular way; neither is a universal rule. Never assume that every mistake costs marks only once. Consult the <url href="https://www.examinations.ie/" visual="State Examinations Commission marking schemes"/> for the relevant year, paper and level.</p>
+    <p>Develop a habit of checking your answer against the question. If the problem calls for a rational number but your calculation seems to produce an irrational one, return to your assumptions, substitutions and arithmetic. An unexpected result is evidence to investigate, not a reason to conceal the work or force the answer to match an expectation.</p>
+  </section>
+
+  <section xml:id="lc-ol-marking-schemes">
+    <title>Official Marking Schemes (2015–2025)</title>
+    <p>These links open the State Examinations Commission PDFs for Leaving Certificate Mathematics at Ordinary Level in English.</p>
+    <ul>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2025/LC003GLP000EV.pdf" visual="2025 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2024/LC003GLP000EV.pdf" visual="2024 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2023/LC003GLP000EV.pdf" visual="2023 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2022/LC003GLP000EV.pdf" visual="2022 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2021/LC003GLP000EV.pdf" visual="2021 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2020/LC003GLP000EV.pdf" visual="2020 marking scheme (November written exams) (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2019/LC003GLP000EV.pdf" visual="2019 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2018/LC003GLP000EV.pdf" visual="2018 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2017/LC003GLP000EV.pdf" visual="2017 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2016/LC003GLP000EV.pdf" visual="2016 marking scheme (PDF)"/></p></li>
+      <li><p><url href="https://www.examinations.ie/archive/markingschemes/2015/LC003GLP000EV.pdf" visual="2015 marking scheme (PDF)"/></p></li>
+    </ul>
+    <p>The 2020 scheme is for the written examinations held in November 2020. The 2021 scheme is listed separately.</p>
+  </section>
+
+  <section xml:id="lc-ol-opening-and-saving-pdfs">
+    <title>Opening and Saving PDFs in Chrome</title>
+    <p>If the scheme opens in Chrome, you can read it in the PDF viewer. To keep a copy on your device, select the Download button in the viewer.</p>
+    <p>To change the default for the Chrome profile you are using, paste <c>chrome://settings/content/pdfDocuments</c> into the address bar. Select <em>Open PDFs in Chrome</em> to read them in the browser or <em>Download PDFs</em> to save them automatically. This setting applies to PDF links across websites.</p>
+    <p>To see or change the save location, go to Chrome Settings and select <em>Downloads</em>. You can also turn on <em>Ask where to save each file before downloading</em>.</p>
+  </section>
+</appendix>
+
+<appendix xml:id="lc-hl-introduction"><title>Leaving Cert HL Guide</title>
+        <p>Higher Level builds upon Ordinary Level. Return to the earlier chapters whenever you need to revise a concept or practise a technique. Higher Level students are expected to achieve the Ordinary Level outcomes as well as the additional Higher Level outcomes.</p>
+        <p>Explore the <url href="https://www.curriculumonline.ie/senior-cycle/senior-cycle-subjects/mathematics/" visual="official Leaving Certificate Mathematics syllabus"/>. The Higher Level teaching material in this part of the book is being developed strand by strand.</p>
+        <p>Begin with <xref ref="lc-hl-calculus"/> or choose a strand from the contents.</p>
+      </appendix>
+
       <xi:include href="./shared-glossary.ptx"/>
       <xi:include href="./appendix-b-geometry.ptx"/>
       <references xml:id="book-bibliography">
