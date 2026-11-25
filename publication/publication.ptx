@@ -15,5 +15,6 @@
     <banner subtitle="no" byline="no"/>
     <!-- Native PreTeXt textbook layout; colours align with Maths Apps. -->
     <css theme="default-modern" palette="blue-green" provide-dark-mode="no"/>
+    <knowl example="no" example-solution="no" exercise-inline="no" definition="no" objectives="no" outcomes="no"/>
   </html>
 </publication>
