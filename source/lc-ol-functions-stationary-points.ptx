@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="lc-ol-stationary-points">
+<title>Stationary Points and Turning Points</title>
+<introduction><p>In F2 (Calculus), we connect differentiation with the shape of a graph. Recognise the shape first; use a systematic test when necessary.</p></introduction>
+<section xml:id="lc-ol-stationary-quadratics"><title>Recognise the Shape</title>
+<p>A quadratic <m>f(x)=ax^2+bx+c</m>, with <m>a\ne0</m>, has one turning point. If <m>a&gt;0</m>, the parabola opens upwards and its turning point is a minimum. If <m>a&lt;0</m>, it opens downwards and its turning point is a maximum.</p>
+<example><title>Recognise Before Calculating</title><p>For <m>f(x)=-x^2+6x-4</m>, the negative coefficient of <m>x^2</m> tells us the turning point is a maximum. To find its coordinates, solve <m>f'(x)=-2x+6=0</m>, giving <m>x=3</m>. Since <m>f(3)=5</m>, the maximum occurs at <m>(3,5)</m>.</p></example>
+<exercise><statement><p>Without differentiating, decide whether the turning point of <m>g(x)=2x^2-8x+1</m> is a maximum or minimum. Explain.</p></statement><answer><p>A minimum: the coefficient of <m>x^2</m> is positive.</p></answer></exercise>
+</section>
+<section xml:id="lc-ol-stationary-slopes"><title>Read the Slope</title>
+<p>At a stationary point the derivative is zero. If the slope changes from positive to negative, the point is a local maximum. If it changes from negative to positive, it is a local minimum. If the sign does not change, it is neither.</p>
+<example><title>A Cubic</title><p>Let <m>f(x)=x^3-3x</m>. Then <m>f'(x)=3x^2-3=3(x-1)(x+1)</m>. The stationary points occur at <m>x=-1</m> and <m>x=1</m>. The derivative is positive to the left of <m>-1</m>, negative between the roots, and positive to the right of <m>1</m>. Thus <m>(-1,2)</m> is a local maximum and <m>(1,-2)</m> is a local minimum.</p></example>
+<exercise><statement><p>A curve rises, becomes horizontal at P, and then falls. What is <m>f'(x)</m> at P and what kind of point is P?</p></statement><answer><p>The derivative is zero; P is a local maximum.</p></answer></exercise>
+</section>
+<section xml:id="lc-ol-stationary-second"><title>The Second Derivative Shortcut</title>
+<p>At a stationary point <m>x=a</m>, if <m>f''(a)&gt;0</m> there is a local minimum; if <m>f''(a)&lt;0</m> there is a local maximum. If <m>f''(a)=0</m>, the test is inconclusive. Examine the sign of the first derivative on both sides instead.</p>
+<example><p>For <m>f(x)=x^3-3x</m>, <m>f''(x)=6x</m>. At <m>x=-1</m> the second derivative is negative, confirming a maximum; at <m>x=1</m> it is positive, confirming a minimum.</p></example>
+</section>
+<section xml:id="lc-ol-stationary-quiz"><title>Check Your Understanding</title>
+<exercise><statement><p>Find and classify the turning point of <m>f(x)=x^2-4x+7</m>.</p></statement><answer><p><m>(2,3)</m>, minimum.</p></answer></exercise>
+<exercise><statement><p>Find and classify the stationary points of <m>f(x)=x^3-3x^2</m>.</p></statement><answer><p><m>(0,0)</m> is a local maximum; <m>(2,-4)</m> is a local minimum.</p></answer></exercise>
+<exercise><statement><p>Explain why the stationary point of <m>f(x)=x^3</m> at the origin is not a turning point.</p></statement><answer><p>The derivative <m>3x^2</m> is positive on both sides of zero. The function continues increasing.</p></answer></exercise>
+</section>
+</chapter>
