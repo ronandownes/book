@@ -20,5 +20,6 @@
 <exercise><statement><p>Find and classify the turning point of <m>f(x)=x^2-4x+7</m>.</p></statement><answer><p><m>(2,3)</m>, minimum.</p></answer></exercise>
 <exercise><statement><p>Find and classify the stationary points of <m>f(x)=x^3-3x^2</m>.</p></statement><answer><p><m>(0,0)</m> is a local maximum; <m>(2,-4)</m> is a local minimum.</p></answer></exercise>
 <exercise><statement><p>Explain why the stationary point of <m>f(x)=x^3</m> at the origin is not a turning point.</p></statement><answer><p>The derivative <m>3x^2</m> is positive on both sides of zero. The function continues increasing.</p></answer></exercise>
+<aside xml:id="explore-further-stationary-second-zero"><title>Explore Further — When the Second Derivative Vanishes (Optional)</title><p>This enrichment is not required for the examination or compulsory assessment.</p><p>At zero, the functions <m>x^4</m>, <m>-x^4</m> and <m>x^3</m> all have zero first and second derivatives. Yet the first has a minimum, the second a maximum and the third neither. The second derivative test is inconclusive in all three cases.</p><p>Investigate the signs of their first derivatives on either side of zero.</p></aside>
 </section>
 </chapter>
