@@ -57,3 +57,28 @@
   .objectives > h2::before,
   .objectives > h3::before { flex-basis: 0.6rem; }
 }
+
+
+/* Leaving Certificate course colours */
+:root {
+  --full-cycle-lc-ol: #765189;
+  --full-cycle-lc-hl: #4d245e;
+}
+/* Scope to part links in the native PreTeXt contents panel only. */
+:is(#ptx-toc, .ptx-toc) a[href*="part-lc-ol-"] {
+  background-color: var(--full-cycle-lc-ol);
+  color: white;
+}
+:is(#ptx-toc, .ptx-toc) a[href*="part-lc-hl-"] {
+  background-color: var(--full-cycle-lc-hl);
+  color: white;
+}
+:is(#ptx-toc, .ptx-toc) a[href*="part-lc-ol-"]:hover,
+:is(#ptx-toc, .ptx-toc) a[href*="part-lc-hl-"]:hover {
+  text-decoration: underline;
+}
+:is(#ptx-toc, .ptx-toc) a[href*="part-lc-ol-"]:focus-visible,
+:is(#ptx-toc, .ptx-toc) a[href*="part-lc-hl-"]:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -3px;
+}
