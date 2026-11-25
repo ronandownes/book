@@ -6,7 +6,35 @@
     <introduction><p>Algebra expresses general relationships rather than only particular numerical cases. Visual, numeric and geometric patterns can be represented with tables, words, expressions and graphs.</p></introduction>
     <p>A formula should explain the rule for any term, not merely continue the next few examples.</p>
   </section>
-  <section xml:id="algebra-patterns-practice">
+  <section xml:id="algebra-patterns-graphs-from-start">
+<title>From patterns to expressions, tables and graphs</title>
+<objectives><title>Learning Intentions</title><ol><li><p>Represent a relationship in words, symbols, a table and a graph.</p></li><li><p>Distinguish discrete inputs from continuous inputs.</p></li><li><p>Recognise that different equivalent expressions describe the same relationship.</p></li></ol></objectives>
+<paragraphs xml:id="af1-af2-af7-early-signposts"><title>Curriculum signposts — AF1, AF2 and AF7</title><p>AF1 connects patterns with tables, graphs and general expressions. AF2 develops the interpretation and evaluation of expressions and the meaning of equality. AF7 develops the representations and interpretation of functions. We will work with these ideas together from the beginning, rather than postponing graphs until a separate chapter.</p><p><url href="https://curriculumonline.ie/junior-cycle/junior-cycle-subjects/mathematics/expectations-for-students/" visual="Official Junior Cycle learning outcomes"/></p></paragraphs>
+<example xml:id="af1-four-representations"><title>One relationship, four representations</title><statement><p>A pattern starts with five objects at stage one and gains three objects at each new stage. Describe the pattern, write its rule, make a table and plot its graph.</p></statement><solution><p>In words: three times the stage number, plus two. In symbols: <m>f(n)=3n+2</m>, for positive integer stage numbers.</p><me>\begin{array}{c|rrrr}n&amp;1&amp;2&amp;3&amp;4\\\hline f(n)&amp;5&amp;8&amp;11&amp;14\end{array}</me>
+<figure xml:id="af1-discrete-continuous-graph"><caption>The stage counts are individual points. The corresponding real-valued function is a continuous straight line.</caption><image width="95%"><description>Two coordinate graphs on matching scales. The first shows four isolated points at (1,5), (2,8), (3,11), (4,14). The second shows the continuous line y=3x+2.</description><latex-image-code><![CDATA[
+\begin{tikzpicture}[x=0.85cm,y=0.23cm,font=\small]
+\foreach \shift in {0,6.6} {
+  \begin{scope}[shift={(\shift,0)}]
+  \draw[step=1cm,gray!20,very thin] (0,0) grid (4.6,16);
+  \draw[->] (0,0)--(5,0) node[right] {$x$};
+  \draw[->] (0,0)--(0,17) node[above] {$y$};
+  \foreach \x in {1,2,3,4} \draw (\x,0)--(\x,-0.3) node[below] {\x};
+  \foreach \y in {4,8,12,16} \draw (0,\y)--(-0.1,\y) node[left] {\y};
+  \end{scope}
+}
+\foreach \x/\y in {1/5,2/8,3/11,4/14} \fill[blue!65!black] (\x,\y) circle[radius=2pt];
+\node at (2.3,-3.5) {Discrete stage counts};
+\begin{scope}[shift={(6.6,0)}]
+\draw[blue!65!black,very thick,domain=0:4.6] plot (\x,{3*\x+2});
+\node at (2.3,-3.5) {Continuous function};
+\end{scope}
+\end{tikzpicture}
+]]></latex-image-code></image></figure>
+<p>A stage number is a positive integer, so we do not join the stage-count points. When the input is allowed to take real values, the algebraic rule describes a continuous straight line. The context determines the permitted inputs.</p></solution></example>
+<example xml:id="af2-af3-equivalence-early"><title>Two expressions, one graph</title><statement><p>Compare <m>2(x+3)</m> and <m>2x+6</m>. Substitute <m>x=-2,0,3</m>. What do you expect to see if you graph both expressions?</p></statement><solution><p>Both expressions give <m>2,6,12</m> at the three inputs. The distributive law proves <m>2(x+3)=2x+6</m> for every real <m>x</m>, not just those three values. Their graphs therefore coincide.</p><p>Try both expressions in <url href="https://www.desmos.com/calculator" visual="Desmos"/>. Toggle each graph on and off. Later, we will use this same idea to compare expanded and factorised quadratics in <xref ref="af3-01-positive-factors-unit-factor"/>.</p></solution></example>
+<exercise xml:id="af1-early-quadratic-pattern"><statement><p>Make a table for <m>y=x^2</m> using integer inputs from <m>-3</m> to <m>3</m>. Plot the points. Then explore the graph with real inputs using a graphing tool. How does it differ from a straight line?</p></statement><answer><p>The outputs are <m>9,4,1,0,1,4,9</m>. The continuous graph is curved, symmetric about the vertical axis, and has its minimum at the origin.</p></answer></exercise>
+</section>
+<section xml:id="algebra-patterns-practice">
     <title>Worked Example and Practice</title>
     <example xml:id="example-algebra-patterns">
       <title>Worked example</title>
