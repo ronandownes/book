@@ -8,6 +8,43 @@
   <p>We begin with one term multiplying a bracket, then move to two brackets. Understand the principle first; choose an accurate and efficient method as you become confident.</p>
   <p>Before you start, revise signed numbers, coefficients, powers and like terms in <xref ref="algebra-vocabulary"/> if needed.</p>
 </introduction>
+<section xml:id="algebra-spiral-practice">
+<title>Revisit, Connect, Extend</title>
+<objectives><title>Learning Intentions</title><ol><li><p>Recognise the same algebraic structure when its coefficients or signs change.</p></li><li><p>Retrieve a familiar method, practise it and decide when to extend it.</p></li></ol></objectives>
+<p>Learning mathematics is more like climbing a spiral than walking around a circle. We return to familiar ideas, practise them again and gradually build a more connected and flexible schema. See <xref ref="teaching-approach" text="title"/>.</p>
+<figure xml:id="algebra-learning-helix">
+<caption>Repeated returns to a perfect square: each turn develops the same structure. The changing colours distinguish the turns, not separate mathematical rules.</caption>
+<image width="88%"><description>A rising helix has four coloured turns, from positive coefficients to varied positive coefficients, then subtraction, then retrieval and transfer. Revisiting an earlier turn is always possible.</description>
+<latex-image-code><![CDATA[
+\begin{tikzpicture}[x=0.9cm,y=0.9cm,font=\small]
+\definecolor{numbergrey}{HTML}{475569}
+\definecolor{geometryblue}{HTML}{285E8A}
+\definecolor{algebrapink}{HTML}{963F60}
+\definecolor{statisticsgreen}{HTML}{326B49}
+\draw[gray!50,dashed,->] (0,-0.5)--(0,5.2);
+\foreach \start/\finish/\shade in {0/360/numbergrey,360/720/geometryblue,720/1080/algebrapink,1080/1440/statisticsgreen}{
+\draw[very thick,\shade,domain=\start:\finish,samples=100,smooth,variable=\t] plot ({1.5*cos(\t)},{0.33*sin(\t)+\t/360*1.1});
+}
+\foreach \level/\shade/\label in {0/numbergrey/{Positive coefficients},1.1/geometryblue/{Varied positive coefficients},2.2/algebrapink/{Introduce subtraction},3.3/statisticsgreen/{Retrieve and transfer}}{
+\fill[\shade] (1.5,\level) circle (2pt);
+\draw[\shade] (1.5,\level)--(1.85,\level);
+\node[anchor=west,text=\shade] at (1.9,\level) {\label};
+}
+\node[anchor=west] at (0.2,5) {Growing proficiency};
+\end{tikzpicture}
+]]></latex-image-code></image>
+</figure>
+<p>For example, the structure of a perfect square remains the same throughout the following visits. We do not introduce signs until the positive case is understood, and we can return to earlier cases whenever necessary.</p>
+<ol>
+<li><p><em>First visit.</em> Expand and reverse <m>(x+3)^2=x^2+6x+9</m>. Explain why the middle product appears twice.</p></li>
+<li><p><em>Return with varied positive coefficients.</em> Expand and reverse <m>(2x+5)^2=4x^2+20x+25</m>. Recognise the structure without relying on unit leading coefficients.</p></li>
+<li><p><em>Extend to a negative constant.</em> Compare <m>(2x+5)^2</m> with <m>(2x-5)^2=4x^2-20x+25</m>. Which coefficient changes sign, and why?</p></li>
+<li><p><em>Retrieve and transfer.</em> On a later day, try <m>9x^2-42x+49</m> without first looking at a worked solution. Decide whether it is a perfect square, factorise it and expand to check.</p></li>
+</ol>
+<p>These are illustrative visits, not a compulsory timetable. Some learners need several returns to the positive case. Revisit a question later in the lesson, in the next lesson or a week later; practise without a model first, then use feedback to decide whether to consolidate or extend.</p>
+<paragraphs xml:id="algebra-spiral-metacognition"><title>Learning to Learn — Metacognition</title><p>What can you now recognise without help? Which part still requires deliberate attention? Can you explain why the method works, reverse it, and choose it when a question does not tell you which method to use?</p></paragraphs>
+</section>
+
 <section xml:id="expanding-principle">
 <title>The mathematics: the distributive law</title>
 <p>Brackets indicate <term>grouping</term>. Grouping occurs elsewhere in mathematics too: the numerator and denominator of a fraction are each groups, and the expression beneath a square-root sign is a group.</p>
