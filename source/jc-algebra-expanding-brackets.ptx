@@ -91,6 +91,29 @@
 <p><url href="https://ronandownes.github.io/maths/algebra/expansions/" visual="Compare the interactive expansion methods"/>. Use them to understand and check calculations, then work towards the quickest reliable method for you.</p>
 </section>
 
+
+<section xml:id="af3-01-positive-factors-unit-factor">
+<title>AF3-01: Trinomial — Positive Factors, Unit Factor</title>
+<objectives><title>Learning Intentions</title><ol>
+<li><p>Identify the unit coefficients in a factor of the form <m>x+1</m>.</p></li>
+<li><p>Expand and factorise using the same mathematical structure.</p></li>
+<li><p>Explain a shortcut using the multiplicative identity and the distributive law.</p></li>
+</ol></objectives>
+<p>Begin with a numerical example. What do you notice when one of the factors is <m>x+1</m>?</p>
+<example xml:id="af3-01-numerical"><title>Friends of ten</title><statement><p>Expand <m>(7x+3)(x+1)</m>.</p></statement><solution><me>(7x+3)(x+1)=7x^2+7x+3x+3=7x^2+10x+3.</me><p>The two middle contributions are <m>7x</m> and <m>3x</m>. The leading coefficient is <m>7</m>, the constant term is <m>3</m>, and the middle coefficient is their sum.</p></solution></example>
+<figure xml:id="af3-01-three-representations"><caption>Choose inline arcs, display (stacked multiplication), or the area model. Predict the next step, then reveal it.</caption><interactive xml:id="af3-01-interactive" iframe="https://ronandownes.github.io/apps/apps/algebra/af3-01-unit-factor/index.html" width="100%" aspect="1:1"/></figure>
+<p><url href="https://ronandownes.github.io/apps/apps/algebra/af3-01-unit-factor/index.html" visual="Open the investigation full screen"/>. Change the coefficients, swap the factors, switch to letters, or reverse the direction to factorisation.</p>
+<definition xml:id="af3-multiplicative-identity"><title>Multiplicative identity</title><statement><p>The number <m>1</m> is the <term>multiplicative identity</term>: multiplying any number by <m>1</m> leaves it unchanged. <m>k\cdot1=k</m>.</p></statement></definition>
+<p><idx>unit factor</idx><idx>cross-products</idx>In this investigation, we call <m>x+1</m> the unit factor because both its coefficients are <m>1</m>. This is a descriptive name for this case, not a claim that <m>x+1</m> is a unit in the polynomial ring.</p>
+<example xml:id="af3-01-symbolic"><title>From numbers to letters</title><statement><p>Expand <m>(ax+b)(x+1)</m>, where <m>a,b</m> are positive integers.</p></statement><solution><me>\begin{aligned}(ax+b)(x+1)&amp;=ax^2+ax+bx+b\\&amp;=ax^2+(a+b)x+b.\end{aligned}</me><p>The cross-products have unit coefficient multipliers: <m>a\cdot1=a</m> and <m>b\cdot1=b</m>. One middle contribution comes from the leading term, the other from the constant term. Both contribute to the coefficient of <m>x</m>.</p></solution></example>
+<paragraphs xml:id="af3-01-shortcut"><title>Insight: the shortcut</title><p>Keep the first coefficient and the constant. Add them to obtain the middle coefficient. For example, <m>(11x+89)(x+1)=11x^2+100x+89</m>. Swapping the factors does not change the product.</p></paragraphs>
+<paragraphs xml:id="af3-01-geometric"><title>Geometrical interpretation</title><p>For positive <m>x</m>, consider a rectangle with sides <m>ax+b</m> and <m>x+1</m>. Its four component areas are <m>ax^2,ax,bx,b</m>. Combining the two middle areas gives <m>(a+b)x</m>. The area model illustrates the identity for positive lengths; the algebraic identity itself is valid for every real <m>x</m>.</p></paragraphs>
+<example xml:id="af3-01-reverse"><title>Reverse the process</title><statement><p>Factorise <m>6x^2+10x+4</m>.</p></statement><solution><p>Since <m>6+4=10</m>, recognise the unit-factor pattern.</p><me>6x^2+10x+4=(6x+4)(x+1).</me><p>Check by expanding. If asked to factorise fully, also extract the common factor: <m>2(3x+2)(x+1)</m>.</p></solution></example>
+<exercise xml:id="af3-01-expand"><title>Expand — six variations</title><statement><ol><li><p><m>(7x+3)(x+1)</m></p></li><li><p><m>(ax+b)(x+1)</m></p></li><li><p><m>(11x+89)(x+1)</m></p></li><li><p><m>(x+1)(7x+3)</m></p></li><li><p><m>(x+1)(cx+d)</m></p></li><li><p><m>(x+1)(13x+17)</m></p></li></ol></statement><answer><ol><li><p><m>7x^2+10x+3</m></p></li><li><p><m>ax^2+(a+b)x+b</m></p></li><li><p><m>11x^2+100x+89</m></p></li><li><p><m>7x^2+10x+3</m></p></li><li><p><m>cx^2+(c+d)x+d</m></p></li><li><p><m>13x^2+30x+17</m></p></li></ol></answer></exercise>
+<exercise xml:id="af3-01-factor"><title>Factorise — the same six variations in reverse</title><statement><p>Write each expression as a product of two linear factors. Check by expanding.</p><ol><li><p><m>6x^2+10x+4</m></p></li><li><p><m>px^2+(p+q)x+q</m></p></li><li><p><m>23x^2+100x+77</m></p></li><li><p><m>8x^2+20x+12</m></p></li><li><p><m>rx^2+(r+s)x+s</m></p></li><li><p><m>14x^2+30x+16</m></p></li></ol></statement><answer><ol><li><p><m>(6x+4)(x+1)</m></p></li><li><p><m>(px+q)(x+1)</m></p></li><li><p><m>(23x+77)(x+1)</m></p></li><li><p><m>(x+1)(8x+12)</m></p></li><li><p><m>(x+1)(rx+s)</m></p></li><li><p><m>(x+1)(14x+16)</m></p></li></ol></answer></exercise>
+<paragraphs xml:id="af3-01-learning-to-learn"><title>Learning to Learn — Learning to Teach</title><p>We begin with a numerical example, then use letters to explain why the pattern works. Once we see the structure, we can shorten the calculation. We immediately reverse it through factorisation, rather than waiting until another chapter. Try explaining the shortcut to a classmate, including why it does not apply to every pair of linear factors.</p><p>Use the method that helps you see the mathematics. The aim is to understand the relationship, not to repeat every representation on every question.</p></paragraphs>
+</section>
+
 <section xml:id="expanding-distribution">
 <title>Recognising every partial product</title>
 <p>The partial-product view below reinforces the distributive law. It is a useful explanation, but it need not become your permanent written procedure.</p>
