@@ -4,9 +4,40 @@
                 <p>We define <m>i</m> by <m>i^2=-1</m>. A complex number has the form <m>a+bi</m>, where <m>a</m> and <m>b</m> are real.</p>
                 <p>On the Argand diagram, <m>a+bi</m> is represented by the point <m>(a,b)</m>. The horizontal axis shows the real part and the vertical axis shows the imaginary part.</p>
                 <p>Multiplication by <m>i</m> sends <m>a+bi</m> to <m>-b+ai</m>: a quarter-turn anticlockwise about the origin. Division by <m>i</m> produces a quarter-turn clockwise.</p>
-                <p>For classroom exploration and step-by-step calculations, <url href="https://ronandownes.github.io/maths/apps/complex-numbers/index.html" visual="open the standalone Complex Number Calculations app full screen"/>.</p>
+                <p>For classroom exploration and step-by-step calculations, <url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html" visual="open the standalone Complex Number Calculations app full screen"/>.</p>
               </section>
-              <section xml:id="complex-reading"><title>Further reading on complex numbers</title>
+              
+<section xml:id="complex-add-subtract"><title>Addition and subtraction</title>
+<p>Combine the real parts and the imaginary parts separately.</p>
+<example><title>Adding and subtracting</title><p><me>(2+5i)+(2+3i)=4+8i</me><me>(2+5i)-(2+3i)=2i</me></p></example>
+<p><url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#add" visual="Addition app"/> · <url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#subtract" visual="Subtraction app"/> · <url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#scalar" visual="Multiplication by a real number app"/>.</p>
+</section>
+<section xml:id="complex-multiply"><title>Multiplication</title>
+<p>Expand the brackets using the distributive law, substitute <m>i^2=-1</m>, then collect like terms.</p>
+<example><title>Multiply two complex numbers</title><p><md><mrow>(2+5i)(2+3i)&amp;=4+6i+10i+15i^2</mrow><mrow>&amp;=4-15+16i</mrow><mrow>&amp;=-11+16i</mrow></md></p></example>
+<p><url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#multiply" visual="Multiplication app"/>.</p>
+<exercise><statement><p>Calculate <m>(3+2i)(4-i)</m>.</p></statement><answer><p><m>14+5i</m>.</p></answer></exercise>
+</section>
+<section xml:id="complex-conjugate-modulus"><title>Conjugate and modulus</title>
+<definition><statement><p>If <m>z=a+bi</m>, its complex conjugate is <m>\overline z=a-bi</m>. Its modulus is <m>|z|=\sqrt{a^2+b^2}</m>, the distance from the origin on an Argand diagram.</p></statement></definition>
+<p>Multiplying a complex number by its conjugate eliminates the imaginary terms:</p>
+<p><md><mrow>z\overline z&amp;=(a+bi)(a-bi)</mrow><mrow>&amp;=a^2-b^2i^2</mrow><mrow>&amp;=a^2+b^2=|z|^2.</mrow></md></p>
+<example><title>Conjugate and modulus of <m>2+3i</m></title><p><me>\overline z=2-3i,\qquad |z|=\sqrt{13},\qquad z\overline z=13.</me></p></example>
+<p><url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#conjugate" visual="Conjugate app"/> · <url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#modulus" visual="Modulus app"/> · <url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#plot" visual="Argand diagram app"/>.</p>
+</section>
+<section xml:id="complex-divide"><title>Division</title>
+<p>How do we divide by a complex number? Multiply the numerator and denominator by the conjugate of the denominator. This is multiplication by one, and it makes the denominator real.</p>
+<p>For <m>z_1=a+bi</m> and <m>z_2=c+di\ne0</m>,</p>
+<p><md><mrow>\dfrac{z_1}{z_2}&amp;=\dfrac{z_1}{z_2}\dfrac{\overline{z_2}}{\overline{z_2}}</mrow><mrow>&amp;=\dfrac{z_1\overline{z_2}}{|z_2|^2}</mrow><mrow>&amp;=\dfrac{(a+bi)(c-di)}{c^2+d^2}.</mrow></md></p>
+<p>The denominator is the <em>square</em> of the modulus, not the modulus. Do not memorise a long formula: conjugate, multiply and simplify.</p>
+<example xml:id="complex-divide-worked"><title>Divide <m>2+5i</m> by <m>2+3i</m></title>
+<p><md><mrow>\dfrac{2+5i}{2+3i}&amp;=\dfrac{(2+5i)(2-3i)}{(2+3i)(2-3i)}</mrow><mrow>&amp;=\dfrac{(2+5i)(2-3i)}{2^2+3^2}</mrow><mrow>&amp;=\dfrac{4-6i+10i-15i^2}{13}</mrow><mrow>&amp;=\dfrac{19+4i}{13}</mrow><mrow>&amp;=\dfrac{19}{13}+\dfrac{4}{13}i.</mrow></md></p>
+<p>Check by multiplying the answer by <m>2+3i</m>. The result must be <m>2+5i</m>.</p></example>
+<p><url href="https://ronandownes.github.io/apps/apps/complex-numbers/operations.html#divide" visual="Open the dedicated division app"/>. Change the coefficients and reveal one step at a time.</p>
+<exercise xml:id="complex-divide-checkpoint"><statement><p>Express <m>\dfrac{3+4i}{1-2i}</m> in the form <m>a+bi</m>.</p></statement><answer><p><m>-1+2i</m>.</p></answer></exercise>
+<p>For further practice, complete the class worksheet before checking the answers.</p>
+</section>
+<section xml:id="complex-reading"><title>Further reading on complex numbers</title>
                 <p>These are external references for further explanation and study. The IB course notes are independent of the Irish Leaving Certificate syllabus; the PreTeXt books range from introductory material to undergraduate complex analysis.</p>
                 <p><url href="https://aa.selfsg.com/units/u19-complex-numbers/" visual="IB Mathematics AA: Complex Numbers"/> covers Cartesian form, conjugates, the Argand diagram, modulus, argument, powers and geometric interpretation.</p>
                 <p><url href="https://complexanalysis.org/web/ch_Complex_Numbers.html" visual="Howell and Mathews: Complex Analysis, Chapter 1"/> develops the algebra and geometry of complex numbers.</p>
