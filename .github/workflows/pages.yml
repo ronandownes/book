@@ -135,6 +135,9 @@ jobs:
           grep -q 'fertility-literacy.html' output/web/functions-intro.html
           test -s output/web/interactives/fertility-literacy.html
           cp assets/interactives/similar-triangles.html output/web/interactives/similar-triangles.html
+          cp assets/interactives/prime-factor-lab.html output/web/interactives/prime-factor-lab.html
+          test -s output/web/interactives/prime-factor-lab.html
+          grep -q 'prime-factor-lab.html' output/web/number-square-free-almost-primes.html
           test -s output/web/interactives/similar-triangles.html
           grep -q 'similar-triangles.html' output/web/trig-proportion-and-limits.html
       - name: Add A B C PP shortcuts to PreTeXt toolbar
