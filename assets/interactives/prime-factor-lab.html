@@ -2,6 +2,31 @@
 <html lang="en-IE"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prime Factor Lab | Full Cycle Maths</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#fafafa;color:#222;font:17px system-ui,sans-serif}main{max-width:1040px;margin:auto;padding:14px 20px}h1{font-size:1.65rem;margin:4px 0}p{margin:8px 0}header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}a{color:#234e86}fieldset{border:1px solid #ccc;border-radius:9px;padding:10px;margin:12px 0;display:flex;flex-wrap:wrap;gap:12px;align-items:end}legend{font-weight:600}label{display:grid;gap:4px;font-size:.85rem}select,input,button{font:inherit;padding:8px 10px;border:1px solid #aaa;border-radius:6px;background:white;color:inherit}button{cursor:pointer;font-weight:600}button.primary{background:#264d77;color:white;border-color:#264d77}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #87b6f2;outline-offset:2px}.panel{background:white;border:1px solid #ccc;border-radius:9px;padding:12px;margin:10px 0}.numbers{display:flex;gap:12px;flex-wrap:wrap}.num{font-size:2rem;font-weight:650;padding:5px 16px;border:1px solid #ddd;border-radius:8px;min-width:80px;text-align:center}.inputs{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.inputs input{width:130px}.buttons{display:flex;gap:8px;flex-wrap:wrap}.muted{color:#555;font-size:.9rem}.good{color:#17643b}.bad{color:#96342c}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;text-align:center}th,td{padding:7px;border-bottom:1px solid #ddd}th:first-child,td:first-child{text-align:left}.formula{font-size:1.15rem;line-height:1.65}.common{background:#e8e8e8}.max{background:#e5edf6}.hidden,[hidden]{display:none!important}sup{font-size:.66em}.score{font-size:.9rem;color:#555}#feedback{min-height:1.4em}details{margin-top:10px}summary{cursor:pointer} @media(max-width:600px){main{padding:10px}fieldset{gap:8px}.num{font-size:1.6rem;padding:4px 12px}} 
+
+/* Stacked factorisation: each base has a fixed horizontal position. */
+.stack-scroll{overflow-x:auto;margin:10px 0 5px}
+.factor-stack{width:auto;min-width:0;margin:0 auto;border-collapse:collapse;white-space:nowrap;font-size:clamp(1.2rem,2.7vw,1.85rem);font-variant-numeric:tabular-nums}
+.factor-stack th,.factor-stack td{border:0;padding:7px 0;text-align:center;background:transparent}
+.factor-stack .lhs{text-align:right;font-weight:650;padding-right:.45em;min-width:3.1em}
+.factor-stack .eq{padding:0 .15em}
+.factor-stack .times{width:.85em;min-width:.85em;font-size:.8em;font-weight:400}
+.factor-stack .power{min-width:1.65em;padding:4px .12em}
+.factor-stack .power-body{display:inline-grid;grid-template-columns:1.15em .45em;align-items:start;text-align:right;line-height:1.3;vertical-align:middle}
+.factor-stack .exponent{font-size:.61em;line-height:1.05;text-align:left}
+.factor-stack .zero{color:#858585}
+.factor-stack .zero.is-hidden{visibility:hidden}
+.factor-stack .result{padding-left:.6em;text-align:left;font-weight:650}
+.factor-stack .rule-top>*{border-top:2px solid #444;padding-top:10px}
+.factor-stack .hcf-row .power:not(.absent){background:#e5eee6}
+.factor-stack .lcm-row .power:not(.absent){background:#e6edf5}
+.factor-stack .result-label{font-size:.72em}
+.stack-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.stack-toolbar label{display:flex;align-items:center;gap:6px;font-size:.9rem}
+.stack-toolbar input{accent-color:#264d77;width:1em;height:1em}
+.stack-note{display:flex;flex-wrap:wrap;gap:8px 18px;margin:8px 0;font-size:.88rem;color:#444}
+.swatch{display:inline-block;width:.75em;height:.75em;border:1px solid #aaa;margin-right:5px}
+@media(max-width:600px){.factor-stack .power{min-width:1.45em}.factor-stack .times{min-width:.55em;width:.55em}.factor-stack th,.factor-stack td{padding-top:5px;padding-bottom:5px}}
+
 </style>
 <main><header><div><h1>Prime Factor Lab</h1><p class="muted">Full Cycle Maths · Junior Cycle Number</p></div><a href="../number-hcf-lcm.html">Book: HCF and LCM</a></header>
 <fieldset><legend>Choose your practice</legend>
@@ -29,8 +54,45 @@ function sync(){let mode=$('mode').value;let opts=$('k').options;opts[0].text=mo
 function fresh(){sync();const mode=$('mode').value,task=$('task').value,count=task==='factor'?1:Number($('count').value),k=$('k').value,shared=pick([2,3,5]);nums=[];for(let i=0;i<count;i++){let n;for(let tries=0;tries<100;tries++){n=generate(mode,k==='mix'?pick([2,3,4]):Number(k),shared);if(!nums.includes(n))break;}if(nums.includes(n)){return fresh();}nums.push(n);}fs=nums.map(factor);g=nums.reduce(gcd);l=nums.reduce(lcm);graded=false;$('numbers').innerHTML=nums.map(n=>'<span class="num">'+n+'</span>').join('');$('instructions').textContent=task==='factor'?'Express the number as a product of primes. Enter the factors with repetitions, e.g. 2, 2, 3.':'Find the HCF and LCM of these numbers. Work out the prime factorisations on paper first.';$('inputs').innerHTML=task==='factor'?'<label>Prime factors<input id="fac" style="width:220px" autocomplete="off" placeholder="e.g. 2, 2, 3"></label>':'<label>HCF<input id="h" type="number" min="1" step="1" inputmode="numeric"></label><label>LCM<input id="l" type="number" min="1" step="1" inputmode="numeric"></label>';$('solution').hidden=true;$('feedback').textContent='';$('feedback').className='';$('score').textContent='Correct on first attempt: '+correct+' / '+attempted;}
 function check(){let ok,task=$('task').value;if(task==='factor'){let s=$('fac').value.trim();if(!s){$('feedback').textContent='Enter your prime factors first.';return;}let a=s.split(/[\s,×*]+/).map(Number).sort((a,b)=>a-b),b=Object.entries(fs[0]).flatMap(([p,e])=>Array(e).fill(Number(p))).sort((a,b)=>a-b);ok=a.length===b.length&&a.every((x,i)=>x===b[i]);}else{if(!$('h').value||!$('l').value){$('feedback').textContent='Enter both answers first.';return;}ok=Number($('h').value)===g&&Number($('l').value)===l;}
 if(!graded){attempted++;if(ok)correct++;graded=true;}$('feedback').className=ok?'good':'bad';$('feedback').textContent=ok?'Correct. Well done.':'Not quite. Check your prime factors and try again.';$('score').textContent='Correct on first attempt: '+correct+' / '+attempted;}
-function reveal(){if(!graded){graded=true;attempted++;$('score').textContent='Correct on first attempt: '+correct+' / '+attempted;}let ps=[...new Set(fs.flatMap(f=>Object.keys(f).map(Number)))].sort((a,b)=>a-b),lo={},hi={};for(let p of ps){let a=fs.map(f=>f[p]||0);lo[p]=Math.min(...a);hi[p]=Math.max(...a);}let html=nums.map((n,i)=>'<div class="formula">'+n+' = '+fmt(fs[i])+' <span class="muted">('+familyLabel(fs[i])+')</span></div>').join('');
-if(nums.length>1){let row=(name,f,cl='')=>'<tr class="'+cl+'"><td>'+name+'</td>'+ps.map(p=>'<td>'+(f[p]||0)+'</td>').join('')+'</tr>';html+='<div class="tablewrap"><table><caption class="muted">Exponents of each prime</caption><thead><tr><th>Number</th>'+ps.map(p=>'<th>'+p+'</th>').join('')+'</tr></thead><tbody>'+nums.map((n,i)=>row(n,fs[i])).join('')+row('HCF — minimum',lo,'common')+row('LCM — maximum',hi,'max')+'</tbody></table></div><p class="formula"><b>HCF</b> = '+fmt(lo)+' = '+g+'<br><b>LCM</b> = '+fmt(hi)+' = '+l+'</p>';if(nums.length===2){let [a,b]=nums,u=a/g,v=b/g;html+='<p><b>Fraction method:</b> '+a+'/'+b+' = '+u+'/'+v+'<br>HCF: '+a+' ÷ '+u+' = '+b+' ÷ '+v+' = '+g+'<br>LCM: '+a+' × '+v+' = '+b+' × '+u+' = '+l+'<br>Check: '+g+' × '+l+' = '+a+' × '+b+' = '+(a*b)+'</p>';}}
-$('work').innerHTML=html;$('solution').hidden=false;}
+let showZeros=false,showOnes=false;
+function stackedFactors(ps,lo,hi){
+  function powerCell(p,e){
+    const zero=e===0, exponent=e===1&&!showOnes?'':e;
+    return '<td class="power'+(zero?' absent':'')+'"><span class="power-body'+(zero?' zero'+(showZeros?'':' is-hidden'):'')+'"><span>'+p+'</span><span class="exponent">'+exponent+'</span></span></td>';
+  }
+  function row(name,f,cl='',result=''){
+    let prev=false,cells='';
+    for(let i=0;i<ps.length;i++){
+      const p=ps[i],e=f[p]||0,visible=e>0||showZeros;
+      if(i>0)cells+='<td class="times">'+(visible&&prev?'×':'')+'</td>';
+      cells+=(!showZeros&&i===0&&Object.values(f).every(x=>x===0))?'<td class="power">1</td>':powerCell(p,e);
+      if(visible)prev=true;
+    }
+    return '<tr class="'+cl+'"><th scope="row" class="lhs">'+name+'</th><td class="eq">=</td>'+cells+'<td class="result">'+(result!==''?'= '+result:'')+'</td></tr>';
+  }
+  let head='<tr><th colspan="2"></th>';
+  for(let i=0;i<ps.length;i++){if(i>0)head+='<th></th>';head+='<th class="power" scope="col" style="font-size:.62em;color:#666;font-weight:500">'+ps[i]+'</th>';}
+  head+='<th></th></tr>';
+  return '<div class="stack-scroll"><table class="factor-stack" aria-label="Vertically aligned prime factorisations, HCF and LCM"><thead>'+head+'</thead><tbody>'+nums.map((n,i)=>row(n,fs[i])).join('')+row('<span class="result-label">HCF</span>',lo,'rule-top hcf-row',g)+row('<span class="result-label">LCM</span>',hi,'lcm-row',l)+'</tbody></table></div>';
+}
+function reveal(){
+  if(!graded){graded=true;attempted++;$('score').textContent='Correct on first attempt: '+correct+' / '+attempted;}
+  const ps=[...new Set(fs.flatMap(f=>Object.keys(f).map(Number)))].sort((a,b)=>a-b),lo={},hi={};
+  for(const p of ps){const a=fs.map(f=>f[p]||0);lo[p]=Math.min(...a);hi[p]=Math.max(...a);}
+  let html='';
+  if(nums.length>1){
+    html='<div class="stack-toolbar"><b>Stack like prime bases directly above one another</b><div style="display:flex;gap:12px;flex-wrap:wrap"><label><input id="showZeros" type="checkbox" '+(showZeros?'checked':'')+'> Show zero powers</label><label><input id="showOnes" type="checkbox" '+(showOnes?'checked':'')+'> Show powers of one</label></div></div>';
+    html+=stackedFactors(ps,lo,hi);
+    html+='<div class="stack-note"><span><span class="swatch" style="background:#e5eee6"></span><b>HCF:</b> smallest exponent in each column</span><span><span class="swatch" style="background:#e6edf5"></span><b>LCM:</b> largest exponent in each column</span></div><p class="muted">An empty position means exponent zero. A missing exponent on a displayed prime means one. If no prime is common, the HCF is 1.</p>';
+    if(nums.length===2){const [a,b]=nums,u=a/g,v=b/g;html+='<p><b>Fraction method:</b> '+a+'/'+b+' = '+u+'/'+v+'<br>HCF: '+a+' ÷ '+u+' = '+b+' ÷ '+v+' = '+g+'<br>LCM: '+a+' × '+v+' = '+b+' × '+u+' = '+l+'<br>Check: '+g+' × '+l+' = '+a+' × '+b+' = '+(a*b)+'</p>';}
+  }else{
+    html=nums.map((n,i)=>'<div class="formula">'+n+' = '+fmt(fs[i])+' <span class="muted">('+familyLabel(fs[i])+')</span></div>').join('');
+  }
+  $('work').innerHTML=html;$('solution').hidden=false;
+  if(nums.length>1){
+    $('showZeros').onchange=()=>{showZeros=$('showZeros').checked;reveal();$('showZeros').focus();};
+    $('showOnes').onchange=()=>{showOnes=$('showOnes').checked;reveal();$('showOnes').focus();};
+  }
+}
 ['mode','task','count','k'].forEach(id=>$(id).addEventListener('change',fresh));$('new').onclick=fresh;$('next').onclick=fresh;$('check').onclick=check;$('reveal').onclick=reveal;document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT')check();});fresh();
 </script></html>
