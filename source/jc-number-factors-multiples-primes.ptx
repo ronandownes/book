@@ -77,5 +77,29 @@
     </exercise>
   <aside xml:id="explore-further-divisor-functions"><title>Explore Further — Counting Prime Factors and Divisors (Optional)</title><p>This enrichment is not required for the examination or compulsory assessment.</p><p>For <m>n=p_1^{a_1}\cdots p_r^{a_r}</m>, the function <m>\Omega(n)=a_1+\cdots+a_r</m> counts prime factors with multiplicity, while <m>\omega(n)=r</m> counts distinct primes. The divisor function is <m>\tau(n)=(a_1+1)\cdots(a_r+1)</m>, because each exponent in a divisor can be chosen independently from zero to its maximum value.</p><p>For example, <m>72=2^3\cdot3^2</m> gives <m>\Omega(72)=5</m>, <m>\omega(72)=2</m> and <m>\tau(72)=12</m>. A sphenic number is the product of three distinct primes, such as <m>30=2\cdot3\cdot5</m>. It has eight positive divisors.</p></aside>
 </section>
+<section xml:id="number-hcf-lcm"><title>Highest Common Factor and Lowest Common Multiple</title>
+<objectives><title>Learning Intentions</title><ol><li><p>Calculate the HCF and LCM of two positive whole numbers by reducing a fraction.</p></li><li><p>Verify the product relationship for two numbers.</p></li><li><p>Calculate the HCF and LCM of three numbers using prime factorisation.</p></li></ol></objectives>
+<example xml:id="example-hcf-lcm-fraction"><title>Two Numbers — The Fraction Method</title>
+<statement><p>Find the HCF and LCM of 12 and 18.</p></statement>
+<solution><p>Reduce the fraction to its simplest form.</p><me>\frac{12}{18}=\frac{2}{3}</me>
+<p><em>HCF:</em> Divide the numerators or divide the denominators. Both give the same result.</p><me>12\div2=18\div3=6</me>
+<p><em>LCM:</em> Multiply along either diagonal. Both give the same result.</p><me>12\times3=18\times2=36</me>
+<p><em>Check:</em> Multiply the HCF by the LCM and compare with the product of the original numbers.</p><me>6\times36=12\times18=216</me></solution></example>
+<insight xml:id="insight-hcf-lcm-fraction"><title>Why the Fraction Method Works</title>
+<p>Suppose <m>a</m> and <m>b</m> are positive whole numbers. If <m>\frac{a}{b}=\frac{u}{v}</m> in simplest form, then <m>u</m> and <m>v</m> have no common factor other than 1. The original numbers are <m>a=hu</m> and <m>b=hv</m>, where <m>h</m> is their HCF. Their LCM is <m>huv</m>.</p>
+<me>\operatorname{HCF}(a,b)=\frac{a}{u}=\frac{b}{v}</me>
+<me>\operatorname{LCM}(a,b)=av=bu</me>
+<p>Multiplying the two results gives the product of the original numbers.</p>
+<me>\operatorname{HCF}(a,b)\times\operatorname{LCM}(a,b)=ab</me>
+<p>This explains why either horizontal division and either diagonal multiplication gives the same answer.</p></insight>
+<exercise xml:id="practice-hcf-lcm-two"><title>Independent Practice — Two Numbers</title><statement><p>Reduce each fraction. Find the HCF using both divisions and the LCM using both diagonal products. Check that the product of your answers equals the product of the original numbers.</p><ol>
+<li><p><m>\frac{14}{35}</m></p></li><li><p><m>\frac{24}{40}</m></p></li><li><p><m>\frac{27}{36}</m></p></li><li><p><m>\frac{45}{63}</m></p></li><li><p><m>\frac{56}{72}</m></p></li><li><p><m>\frac{42}{66}</m></p></li></ol></statement>
+<answer><ol><li><p><m>\frac25</m>; HCF 7, LCM 70; product 490.</p></li><li><p><m>\frac35</m>; HCF 8, LCM 120; product 960.</p></li><li><p><m>\frac34</m>; HCF 9, LCM 108; product 972.</p></li><li><p><m>\frac57</m>; HCF 9, LCM 315; product 2835.</p></li><li><p><m>\frac79</m>; HCF 8, LCM 504; product 4032.</p></li><li><p><m>\frac7{11}</m>; HCF 6, LCM 462; product 2772.</p></li></ol></answer></exercise>
+<example xml:id="example-hcf-lcm-three"><title>Three Numbers — Prime Factorisation</title><statement><p>Find the HCF and LCM of 8, 12 and 20.</p></statement><solution><p>Express each number as a product of prime powers.</p><md><mrow>8&amp;=2^3</mrow><mrow>12&amp;=2^2\times3</mrow><mrow>20&amp;=2^2\times5</mrow></md>
+<p><em>HCF:</em> Use the lowest power of each prime common to all three numbers.</p><me>\operatorname{HCF}(8,12,20)=2^2=4</me>
+<p><em>LCM:</em> Use the highest power of every prime present.</p><me>\operatorname{LCM}(8,12,20)=2^3\times3\times5=120</me></solution></example>
+<exercise xml:id="practice-hcf-lcm-three"><title>Independent Practice — Three Numbers</title><statement><p>Find the HCF and LCM of each set using prime factorisation.</p><ol><li><p>12, 18 and 30</p></li><li><p>15, 25 and 35</p></li><li><p>16, 24 and 36</p></li><li><p>18, 27 and 45</p></li><li><p>24, 40 and 56</p></li><li><p>12, 20 and 30</p></li></ol></statement><answer><ol><li><p>HCF 6, LCM 180.</p></li><li><p>HCF 5, LCM 525.</p></li><li><p>HCF 4, LCM 144.</p></li><li><p>HCF 9, LCM 270.</p></li><li><p>HCF 8, LCM 840.</p></li><li><p>HCF 2, LCM 60.</p></li></ol></answer></exercise>
+<warning><title>Make This Mistake for the Last Time</title><p>The product check for two numbers does not generally extend to three numbers. For example, for 8, 12 and 20 the HCF is 4 and the LCM is 120, but <m>4\times120\ne8\times12\times20</m>.</p></warning>
+</section>
 <outcomes><title>Review Your Learning</title><introduction><p>Can you now do each of the following independently?</p></introduction><ol><li><p>Recognise multiples, factors and prime numbers.</p></li><li><p>Test divisibility by 2, 3, 4, 5, 9 and 10.</p></li><li><p>Express a positive integer as a product of prime factors.</p></li><li><p>Calculate the HCF and LCM.</p></li></ol></outcomes>
 </chapter>
