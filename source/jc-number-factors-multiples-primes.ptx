@@ -26,8 +26,11 @@
 <row><cell>3</cell><cell>Sum of digits is divisible by 3.</cell><cell>123: 1+2+3=6.</cell></row>
 <row><cell>4</cell><cell>Number formed by the last two digits is divisible by 4.</cell><cell>316: 16 is divisible by 4.</cell></row>
 <row><cell>5</cell><cell>Last digit is 0 or 5.</cell><cell>145</cell></row>
+<row><cell>6</cell><cell>Divisible by both 2 and 3.</cell><cell>138</cell></row>
+<row><cell>8</cell><cell>Number formed by the last three digits is divisible by 8.</cell><cell>1328: 328 is divisible by 8.</cell></row>
 <row><cell>9</cell><cell>Sum of digits is divisible by 9.</cell><cell>729: 7+2+9=18.</cell></row>
 <row><cell>10</cell><cell>Last digit is 0.</cell><cell>270</cell></row>
+<row><cell>11</cell><cell>Alternating digit sum is a multiple of 11, including zero.</cell><cell>1001: 1−0+0−1=0.</cell></row>
 </tabular></table>
 </section>
 <section xml:id="number-divisibility-by-two-five-ten"><title>Divisibility by 2, 5 and 10</title>
@@ -56,7 +59,16 @@
 <aside xml:id="explore-further-divisibility-four"><title>Explore Further (Optional): Why Check the Last Two Digits?</title><p>Every whole number can be written as <m>100q+r</m>, where <m>r</m> is the number formed by its last two digits. Since 100 is divisible by four, only the remainder <m>r</m> matters. This explains the divisibility rule for four.</p></aside>
 </section>
 
-  <section xml:id="number-divisibility-by-nine"><title>Divisibility by 9</title><p>A number is divisible by nine if its digit sum is divisible by nine. Cross out zero, nine and groups summing to nine or another multiple of nine. Unlike the test for three, do not discard a single three or six.</p><example><p>For 7245, both pairs sum to nine, so the number is divisible by nine. For 72453, three remains, so it is divisible by three but not by nine.</p></example><exercise><statement><p>Which of 918, 936, 732 and 72 453 are divisible by nine?</p></statement><answer><p>918 and 936.</p></answer></exercise></section>
+  <section xml:id="number-divisibility-by-nine"><title>Divisibility by 9</title><p>A number is divisible by nine if its digit sum is divisible by nine. Cross out zero, nine and groups summing to nine or another multiple of nine. Unlike the test for three, do not discard a single three or six.</p><example><p>For 7245, both pairs sum to nine, so the number is divisible by nine. For 72453, three remains, so it is divisible by three but not by nine.</p></example><exercise><statement><p>Which of 918, 936, 732 and 72 453 are divisible by nine?</p></statement><answer><p>918 and 936.</p></answer></exercise><example><title>Divisibility by 3 Does Not Imply Divisibility by 9</title><p>For 246, the digit sum is <m>2+4+6=12</m>. Since 12 is divisible by 3 but not by 9, so is 246.</p><p>For 729, the digit sum is <m>7+2+9=18</m>, so 729 is divisible by both 3 and 9.</p></example>
+<aside xml:id="why-digit-sum-tests-work"><title>Explore Further: Why Both Digit-Sum Tests Work</title><p>Every power of ten differs from 1 by a multiple of 9, and therefore also by a multiple of 3. For example, <m>100=99+1</m> and <m>10=9+1</m>.</p><me>729=7(99+1)+2(9+1)+9</me><me>729=7\times99+2\times9+(7+2+9)</me><p>The first two terms are divisible by 9 and by 3. Thus the original number and its digit sum have the same remainder upon division by 9 or by 3. This also explains why crossing out groups whose sum is a multiple of the divisor is valid.</p></aside>
+<exercise><title>Compare the Two Tests</title><statement><p>Classify 123, 234, 345, 729, 1001 and 72453 as divisible by 3 only, divisible by both 3 and 9, or divisible by neither.</p></statement><answer><p>3 only: 123, 345, 72453. Both: 234, 729. Neither: 1001.</p></answer></exercise></section>
+<section xml:id="number-divisibility-by-six-eight-eleven"><title>Divisibility by 6, 8 and 11</title>
+<p>A number is divisible by 6 exactly when it is divisible by both 2 and 3. To test for 8, check the last three digits (or the whole number if it has fewer than three digits).</p>
+<example><title>Testing 1328 and 138</title><p>Since <m>328=8\times41</m>, 1328 is divisible by 8. The number 138 is even and its digit sum is 12, so it is divisible by 6.</p></example>
+<p>For 11, alternately add and subtract the digits. The result must be a multiple of 11, including zero.</p>
+<example><title>Testing 1001 and 121</title><me>1-0+0-1=0\qquad 1-2+1=0</me><p>Both numbers are divisible by 11.</p></example>
+<exercise><statement><p>For each of 132, 216, 1001 and 1456, determine which of 6, 8 and 11 divide it exactly.</p></statement><answer><p>132: 6 and 11. 216: 6 and 8. 1001: 11. 1456: 8.</p></answer></exercise>
+</section>
 <section xml:id="number-divisibility-optional"><title>Further Divisibility Rules (Optional)</title><aside xml:id="explore-further-divisibility-seven"><title>Explore Further (Optional): Divisibility by Seven</title><p>Double the last digit and subtract it from the remaining number. Repeat if necessary. The original number is divisible by seven exactly when the result is divisible by seven.</p><p>For 91, calculate <m>9-2(1)=7</m>. For 1729, calculate <m>172-18=154</m>, then <m>15-8=7</m>. Both numbers are divisible by seven.</p><p>Try 203, 245, 319 and 1001. Predict first, then check using your calculator. The answers are yes, yes, no and yes respectively.</p><p><em>Why does it work?</em> Write the original number as <m>N=10a+b</m>. Then <m>N=10(a-2b)+21b</m>. Since 21 is divisible by seven and 10 has no common factor with seven other than 1, <m>N</m> is divisible by seven exactly when <m>a-2b</m> is divisible by seven.</p></aside></section>
 <section xml:id="factors-intro">
     <title>Introduction</title>
