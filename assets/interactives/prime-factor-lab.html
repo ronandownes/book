@@ -27,6 +27,10 @@
 .swatch{display:inline-block;width:.75em;height:.75em;border:1px solid #aaa;margin-right:5px}
 @media(max-width:600px){.factor-stack .power{min-width:1.45em}.factor-stack .times{min-width:.55em;width:.55em}.factor-stack th,.factor-stack td{padding-top:5px;padding-bottom:5px}}
 
+
+/* Use actual superscript markup and a raised baseline, not an adjacent digit. */
+.factor-stack .power-body{display:inline-grid;grid-template-columns:1.15em .55em;align-items:baseline;text-align:right;line-height:1.35;padding-top:.28em;vertical-align:middle}
+.factor-stack sup.exponent{display:inline-block;position:relative;top:-.52em;font-size:.63em;line-height:1;vertical-align:super;text-align:left;font-weight:500}
 </style>
 <main><header><div><h1>Prime Factor Lab</h1><p class="muted">Full Cycle Maths · Junior Cycle Number</p></div><a href="../number-hcf-lcm.html">Book: HCF and LCM</a></header>
 <fieldset><legend>Choose your practice</legend>
@@ -58,7 +62,7 @@ let showZeros=false,showOnes=false;
 function stackedFactors(ps,lo,hi){
   function powerCell(p,e){
     const zero=e===0, exponent=e===1&&!showOnes?'':e;
-    return '<td class="power'+(zero?' absent':'')+'"><span class="power-body'+(zero?' zero'+(showZeros?'':' is-hidden'):'')+'"><span>'+p+'</span><span class="exponent">'+exponent+'</span></span></td>';
+    return '<td class="power'+(zero?' absent':'')+'"><span class="power-body'+(zero?' zero'+(showZeros?'':' is-hidden'):'')+'"><span>'+p+'</span><sup class="exponent">'+exponent+'</sup></span></td>';
   }
   function row(name,f,cl='',result=''){
     let prev=false,cells='';
