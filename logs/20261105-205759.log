@@ -1,0 +1,39 @@
+WARNING : Project's CLI version could not be detected from `requirements.txt`.
+WARNING : Try `pretext update-project` to produce a compatible file.
+INFO    : Building target web
+INFO    : XSL conversion of /workspaces/book/source/main.ptx by /home/codespace/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/codespace/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : discovering source file's directory name: /workspaces/book/source
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /workspaces/book/output/web.
+INFO    : discovering source file's directory name: /workspaces/book/source
+INFO    : discovering source file's directory name: /workspaces/book/source
+INFO    : XSL conversion of /workspaces/book/source/main.ptx by /home/codespace/.ptx/2.56.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/codespace/.ptx/2.56.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.3.6
+INFO    : Downloading Runestone Services, version 8.3.6
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-default-modern
+INFO    : converting /workspaces/book/source/main.ptx to HTML in /tmp/ptx-yvo5c691
+INFO    : XSL conversion of /workspaces/book/source/main.ptx by /home/codespace/.ptx/2.56.1/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+INFO    : * PTX:INFO:   checking all deprecated elements.
+WARNING : * PTX:DEPRECATE: (2026-05-11) the "me" and "men" elements have been deprecated.  The replacement is an "md" with no "mrow" children, and numbering is controlled by the "@number" attribute, or a global setting in "docinfo". (2 times)
+INFO    : *              located at: pretext/book/part/chapter/section/example/p/me
+INFO    : *              located within: "example-two-brackets" (xml:id), "Two binomials" (title)
+INFO    : *              located at: pretext/book/part/chapter/section/p/me
+INFO    : *              located within: "trig-cosine-rule" (xml:id), "The Cosine Rule" (title)
+INFO    : * --------------
+INFO    : successful application of /home/codespace/.ptx/2.56.1/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /tmp/ptx-yvo5c691
+INFO    : Removing temporary directory /tmp/ptx-5f3jxiix
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

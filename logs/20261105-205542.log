@@ -1,0 +1,19 @@
+WARNING : Project's CLI version could not be detected from `requirements.txt`.
+WARNING : Try `pretext update-project` to produce a compatible file.
+INFO    : Building target web
+INFO    : XSL conversion of /workspaces/book/source/main.ptx by /home/codespace/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : successful application of /home/codespace/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : discovering source file's directory name: /workspaces/book/source
+WARNING : (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo". The publisher file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : verifying and expanding input directory: /workspaces/book/source/../assets
+FATAL   : the directory "/workspaces/book/source/../assets" implied by the value "../assets" in the "source/directories/@external" entry of the publisher file does not exist. Check the spelling, create the necessary directory, or entirely remove the whole "source/directories" element of the publisher file.
+INFO    : ------------------------
+exit    : Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------
