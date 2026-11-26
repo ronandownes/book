@@ -28,15 +28,92 @@
   </section>
   <section xml:id="af3-factorisation-revisit">
 <title>AF3-01: Revisit, Recognise, Reverse</title>
-<objectives><title>Learning Intentions</title><ol><li><p>Revisit expansion to recognise a useful factorisation pattern.</p></li><li><p>Distinguish a sum middle coefficient from a product-plus-one middle coefficient.</p></li><li><p>Check a factorisation by expanding.</p></li></ol></objectives>
+<objectives><title>Learning Intentions</title><ol>
+<li><p>Recognise and use the sum-centre pattern.</p></li>
+<li><p>Recognise and use the product-plus-one centre pattern.</p></li>
+<li><p>Write a factorisation as an identity and check it by expanding.</p></li>
+</ol></objectives>
 <paragraphs xml:id="af2-factorisation-signpost"><title>Curriculum signpost — AF2: Algebraic expressions</title><p><em>Interpret, substitute, understand equality.</em> Return to familiar expressions with a new purpose. Recognise the coefficients, check selected numerical values and explain why the factorised expression is equal to the original for every permitted input. AF3 concerns the transformation itself; AF7 provides a graphical connection.</p><p>Revisit the <xref ref="af2-expansion-signpost" text="title"/> for the original curriculum connection.</p></paragraphs>
-<p>We have already studied expansion. Now we revisit it with fresh examples and a different purpose: to recognise how a trinomial may have been formed. Refer to <xref ref="af3-01-positive-factors-unit-factor"/> for the original investigation and its three representations.</p>
-<example xml:id="af3-revisit-friends-twenty"><title>Revisit expansion — friends of twenty</title><statement><p>Expand <m>(9x+11)(x+1)</m>.</p></statement><solution><me>(9x+11)(x+1)=9x^2+9x+11x+11=9x^2+20x+11.</me><p>Notice the sum <m>9+11=20</m>. Both cross-products have a unit coefficient multiplier.</p></solution></example>
-<example xml:id="af3-revisit-reverse-thirty"><title>Recognise and reverse — friends of thirty</title><statement><p>Factorise <m>13x^2+30x+17</m>.</p></statement><solution><p>Since <m>13+17=30</m>, recognise the sum-middle case.</p><me>13x^2+30x+17=(13x+17)(x+1).</me><p>Expand to check all three coefficients.</p></solution></example>
-<example xml:id="af3-revisit-two-arrangements"><title>Same exterior coefficients, different middles</title><statement><p>Expand <m>(5x+7)(x+1)</m> and <m>(5x+1)(x+7)</m>. Then use your observations to factorise <m>3x^2+11x+8</m> and <m>3x^2+25x+8</m>.</p></statement><solution><me>\begin{aligned}(5x+7)(x+1)&amp;=5x^2+12x+7,\\(5x+1)(x+7)&amp;=5x^2+36x+7.\end{aligned}</me><p>The middle coefficients are <m>5+7=12</m> and <m>5\cdot7+1=36</m>.</p><me>\begin{aligned}3x^2+11x+8&amp;=(3x+8)(x+1),\\3x^2+25x+8&amp;=(3x+1)(x+8).\end{aligned}</me><p>In the first, <m>3+8=11</m>. In the second, <m>3\cdot8+1=25</m>. Both are recognition strategies, not universal rules for factorising every trinomial.</p></solution></example>
+<paragraphs xml:id="af3-revisit-learning-to-learn"><title>Learning to Learn — Working Backwards</title>
+<p>Factorisation is the inverse operation of expanding brackets. If we recognise a pattern when expanding brackets, we can use that pattern to reverse the operation. We begin with two special cases involving positive coefficients. Revisit <xref ref="af3-01-positive-factors-unit-factor"/> to see the original expansion using the inline, display and area-model representations.</p>
+</paragraphs>
+<definition xml:id="af3-positive-unit-factor"><title>Positive unit factor</title>
+<statement><p>We call <m>x+1</m> a <term>positive unit factor</term><idx>positive unit factor</idx><idx>unit factor</idx> because both the coefficient of <m>x</m> and the constant term are positive units:</p>
+<me>\underbrace{(1x+1)}_{\text{positive unit factor}}.</me></statement>
+</definition>
+<p>In the trinomial <m>Ax^2+Bx+C</m>, we call <m>A</m> and <m>C</m> the <term>end coefficients</term><idx>end coefficients</idx> and <m>B</m> the <term>centre coefficient</term><idx>centre coefficient</idx>. The formal names are the leading coefficient, linear coefficient and constant term, respectively for <m>A</m>, <m>B</m> and <m>C</m>.</p>
+<paragraphs xml:id="af3-sum-centre-pattern"><title>1. Sum-centre pattern</title>
+<p>Both units belong to the same factor, <m>x+1</m>.</p>
+<p><em>In words.</em> The sum of the end coefficients equals the centre coefficient.</p>
+<me>\underbrace{A}_{\text{first}}+\underbrace{C}_{\text{last}}=\underbrace{B}_{\text{centre}}.</me>
+<p><em>Symbolically.</em><idx>sum-centre pattern</idx></p>
+<me>\boxed{Ax^2+(A+C)x+C\equiv(Ax+C)(x+1)}</me>
+</paragraphs>
+<example xml:id="af3-revisit-friends-twenty"><title>Revisit — expansion</title>
+<statement><p>Expand <m>(9x+11)(x+1)</m>.</p></statement>
+<solution><me>\begin{aligned}(9x+11)(x+1)&amp;\equiv9x^2+9x+11x+11\\&amp;\equiv9x^2+20x+11.\end{aligned}</me>
+<p>Notice that <m>9+11=20</m>.</p></solution></example>
+<example xml:id="af3-revisit-reverse-thirty"><title>Recognise and reverse — factorisation</title>
+<statement><p>Factorise <m>13x^2+30x+17</m>.</p></statement>
+<solution><p><em>Recognise.</em> The end coefficients add to the centre coefficient: <m>13+17=30</m>.</p>
+<p><em>Reverse.</em></p><me>\boxed{13x^2+30x+17\equiv(13x+17)(x+1)}</me>
+<p>Expand to check all three coefficients.</p></solution></example>
+<exercise xml:id="af3-revisit-paired-practice"><title>Sum-centre practice</title>
+  <statement><p>Factorise each expression by recognising the pattern. Write your answer as an identity.</p><ol>
+    <li><p><m>3x^2+11x+8</m></p></li>
+    <li><p><m>7x^2+12x+5</m></p></li>
+    <li><p><m>19x^2+30x+11</m></p></li>
+    <li><p><m>17x^2+100x+83</m></p></li>
+    <li><p><m>ax^2+(a+b)x+b</m></p></li>
+    <li><p><m>a^2x^2+(a^2+b)x+b</m></p></li>
+  </ol></statement>
+  <answer><ol>
+    <li><p><m>3x^2+11x+8\equiv(3x+8)(x+1)</m></p></li>
+    <li><p><m>7x^2+12x+5\equiv(7x+5)(x+1)</m></p></li>
+    <li><p><m>19x^2+30x+11\equiv(19x+11)(x+1)</m></p></li>
+    <li><p><m>17x^2+100x+83\equiv(17x+83)(x+1)</m></p></li>
+    <li><p><m>ax^2+(a+b)x+b\equiv(ax+b)(x+1)</m></p></li>
+    <li><p><m>a^2x^2+(a^2+b)x+b\equiv(a^2x+b)(x+1)</m></p></li>
+  </ol></answer>
+</exercise>
+<paragraphs xml:id="af3-product-plus-one-centre-pattern"><title>2. Product-plus-one centre pattern</title>
+<p>We now place one positive unit in each factor, rather than both in the same factor.</p>
+<p><em>In words.</em> The product of the end coefficients, increased by one, equals the centre coefficient.</p>
+<me>\underbrace{A\cdot C}_{\text{product of ends}}+1=\underbrace{B}_{\text{centre}}.</me>
+<p><em>Symbolically.</em><idx>product-plus-one centre pattern</idx></p>
+<me>\boxed{Ax^2+(AC+1)x+C\equiv(Ax+1)(x+C)}</me>
+</paragraphs>
+<example xml:id="af3-revisit-product-expansion"><title>Revisit — expansion</title>
+<statement><p>Expand <m>(5x+1)(x+7)</m>.</p></statement>
+<solution><me>\begin{aligned}(5x+1)(x+7)&amp;\equiv5x^2+35x+x+7\\&amp;\equiv5x^2+36x+7.\end{aligned}</me><p>Notice that <m>5\cdot7+1=36</m>.</p></solution></example>
+<example xml:id="af3-revisit-product-reverse"><title>Recognise and reverse — factorisation</title>
+<statement><p>Factorise <m>6x^2+43x+7</m>.</p></statement>
+<solution><p><em>Recognise.</em> The product of the end coefficients, increased by one, is <m>6\cdot7+1=43</m>.</p>
+<p><em>Reverse.</em></p><me>\boxed{6x^2+43x+7\equiv(6x+1)(x+7)}</me><p>Expand to check.</p></solution></example>
+<exercise xml:id="af3-revisit-product-practice"><title>Product-plus-one centre practice</title>
+  <statement><p>Factorise each expression by recognising the pattern. Write your answer as an identity.</p><ol>
+    <li><p><m>3x^2+25x+8</m></p></li>
+    <li><p><m>7x^2+36x+5</m></p></li>
+    <li><p><m>19x^2+210x+11</m></p></li>
+    <li><p><m>17x^2+1412x+83</m></p></li>
+    <li><p><m>ax^2+(ab+1)x+b</m></p></li>
+    <li><p><m>a^2x^2+(a^2b+1)x+b</m></p></li>
+  </ol></statement>
+  <answer><ol>
+    <li><p><m>3x^2+25x+8\equiv(3x+1)(x+8)</m></p></li>
+    <li><p><m>7x^2+36x+5\equiv(7x+1)(x+5)</m></p></li>
+    <li><p><m>19x^2+210x+11\equiv(19x+1)(x+11)</m></p></li>
+    <li><p><m>17x^2+1412x+83\equiv(17x+1)(x+83)</m></p></li>
+    <li><p><m>ax^2+(ab+1)x+b\equiv(ax+1)(x+b)</m></p></li>
+    <li><p><m>a^2x^2+(a^2b+1)x+b\equiv(a^2x+1)(x+b)</m></p></li>
+  </ol></answer>
+</exercise>
+<example xml:id="af3-revisit-two-arrangements"><title>3. Compare — same ends, different centres</title>
+<statement><p>Factorise <m>5x^2+12x+7</m> and <m>5x^2+36x+7</m>. Identify the pattern in each case.</p></statement>
+<solution><p>Sum-centre: <m>5+7=12</m>.</p><me>5x^2+12x+7\equiv(5x+7)(x+1).</me>
+<p>Product-plus-one centre: <m>5\cdot7+1=36</m>.</p><me>5x^2+36x+7\equiv(5x+1)(x+7).</me></solution></example>
+<p>These are special cases of quadratic factorisation, not universal rules. Sometimes the patterns coincide, for example when an end coefficient is 1. Check for a common factor first, and always verify your factorisation by expanding.</p>
 <p>Use the <xref ref="af3-yardsticks-interactive-figure"/> to investigate the same relationship with your own numbers. The <url href="https://ronandownes.github.io/apps/apps/algebra/af3-01-unit-factor/index.html" visual="inline, display and area-model app"/> lets you revisit the original unit-factor case and then switch to factorisation.</p>
-<exercise xml:id="af3-revisit-paired-practice"><title>Practise in both directions</title><statement><p>Expand the first three expressions and factorise the last three. Identify which pattern applies before calculating.</p><ol><li><p><m>(19x+11)(x+1)</m></p></li><li><p><m>(x+1)(cx+d)</m></p></li><li><p><m>(4x+1)(x+9)</m></p></li><li><p><m>17x^2+100x+83</m></p></li><li><p><m>px^2+(p+q)x+q</m></p></li><li><p><m>6x^2+43x+7</m></p></li></ol></statement><answer><ol><li><p><m>19x^2+30x+11</m></p></li><li><p><m>cx^2+(c+d)x+d</m></p></li><li><p><m>4x^2+37x+9</m></p></li><li><p><m>(17x+83)(x+1)</m></p></li><li><p><m>(px+q)(x+1)</m></p></li><li><p><m>(6x+1)(x+7)</m></p></li></ol></answer></exercise>
-<paragraphs xml:id="af3-revisit-learning-to-learn"><title>Learning to Learn — Learning to Teach</title><p>Revisiting a familiar operation is valuable when we have a new purpose. Here, expansion helps us see how a factorisation might be reconstructed. New numbers and letters test whether we recognise the structure rather than remember an answer. Explain your recognition strategy to someone else, and check it by reversing the operation.</p></paragraphs>
 </section>
 <section xml:id="algebra-factorisation-practice">
     <title>Worked Example and Practice</title>
