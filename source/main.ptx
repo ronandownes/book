@@ -99,7 +99,7 @@
       <xi:include href="./jc-algebra-equations-inequalities.ptx" />
       <xi:include href="./jc-algebra-changing-subject.ptx" />
 
-      <chapter xml:id="chapter-functions"><title>Functions and Graphs</title><objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Define a function using an input-output rule.</p></li><li><p>Distinguish data points from a mathematical model.</p></li></ol></objectives><introduction><p>Functions describe relationships between quantities and help us investigate real data.</p></introduction>
+      <chapter xml:id="chapter-functions"><title>Functions and Graphs</title><objectives><title>Learning Intentions</title><introduction><p>After completing this chapter, you should be able to:</p></introduction><ol><li><p>Define a function using an input-output rule.</p></li><li><p>Distinguish data points from a mathematical model.</p></li><li><p>Recognise linear and quadratic functions and connect their algebraic and graphical representations.</p></li><li><p>Use roots, intercepts and turning points to solve and interpret problems.</p></li></ol></objectives><introduction><p>Functions describe relationships between quantities and help us investigate real data.</p></introduction>
               <section xml:id="functions-intro"><title>Introduction</title>
                 <p>Do countries with higher female literacy rates tend to have fewer births per woman? We can explore this question using real data.</p>
                 <p>Each point on the graph represents a country. Select a point to see its name, its measurements and the year. The blue line models the general trend.</p>
@@ -120,7 +120,69 @@
                   <idx>Descartes, René</idx><idx>Cartesian coordinates</idx><idx>analytic geometry</idx>
                 </paragraphs>
               </section>
-            </chapter>
+            
+              <section xml:id="jc-function-notation">
+                <title>Function Notation and Linear Functions</title>
+                <objectives><title>Learning Intentions</title><ol><li><p>Use function notation to find outputs.</p></li><li><p>Connect a linear rule to its table and graph.</p></li></ol></objectives>
+                <p>For a function <m>f</m>, we write <m>f(x)</m> for the output associated with input <m>x</m>. For instance, <m>f(x)=2x+1</m> gives <m>f(3)=7</m>. The graph consists of points <m>(x,f(x))</m>.</p>
+                <p>A linear function of the form <m>f(x)=mx+c</m> has a straight-line graph over the real numbers. Its slope is <m>m</m> and its vertical intercept is <m>(0,c)</m>.</p>
+                <exercise xml:id="jc-function-notation-practice"><statement><p>For <m>f(x)=3x-2</m>, calculate <m>f(0)</m>, <m>f(2)</m> and <m>f(-1)</m>. Plot the three points.</p></statement><answer><p><m>(0,-2),(2,4),(-1,-5)</m>.</p></answer></exercise>
+              </section>
+              <section xml:id="jc-quadratic-functions">
+                <title>Quadratic Functions</title>
+                <objectives><title>Learning Intentions</title><ol><li><p>Recognise a quadratic function and identify its coefficients.</p></li><li><p>Explain why the leading coefficient cannot be zero.</p></li><li><p>Recognise the shape of a quadratic graph.</p></li></ol></objectives>
+                <definition xml:id="def-jc-quadratic-function"><title>Quadratic Function</title><statement>
+                  <p>A <term>quadratic function</term><idx>quadratic function</idx> is a function that can be written in the form
+                  <me>f(x)=Ax^2+Bx+C,</me>
+                  where <m>A,B,C\in\mathbb{R}</m> and <m>A\ne0</m>.</p>
+                </statement></definition>
+                <note xml:id="note-jc-quadratic-leading-coefficient"><title>Why must the leading coefficient be non-zero?</title>
+                  <p>If <m>A=0</m>, the quadratic term disappears. The function is then linear or constant, not quadratic. Either or both of <m>B</m> and <m>C</m> may be zero.</p>
+                </note>
+                <p>The graph of a quadratic function over the real numbers is a <term>parabola</term><idx>parabola</idx>. It opens upwards when <m>A&gt;0</m> and downwards when <m>A&lt;0</m>.</p>
+                <p>We use capital letters for the coefficients of the expanded quadratic, as in <xref ref="algebra-factorisation-intro" text="title"/>. This helps distinguish them from the coefficients of its linear factors.</p>
+                <example xml:id="example-jc-quadratic-recognition"><title>Recognising quadratics</title><statement><p>Which functions are quadratic: <m>f(x)=3x^2-2</m>, <m>g(x)=5x+1</m>, <m>h(x)=(x+2)(x-3)</m>?</p></statement><solution><p><m>f</m> and <m>h</m> are quadratic. Expanding gives <m>h(x)=x^2-x-6</m>. The function <m>g</m> has no quadratic term.</p></solution></example>
+                <p><em>Curriculum connections:</em> AF.1 (quadratic patterns), AF.2 (expressions) and AF.7(a,b) (functions and their representations).</p>
+              </section>
+              <section xml:id="jc-quadratic-factors-roots-intercepts">
+                <title>Factors, Roots and x-Intercepts</title>
+                <objectives><title>Learning Intentions</title><ol><li><p>Connect the expanded and factorised forms of a quadratic.</p></li><li><p>Find roots by factorising and identify their corresponding intercepts.</p></li><li><p>Generate a quadratic equation from two integer roots.</p></li></ol></objectives>
+                <definition xml:id="def-jc-root"><title>Root</title><statement><p>A <term>root</term><idx>root</idx><idx>zero of a function</idx> of a function <m>f</m> is an input <m>r</m> for which <m>f(r)=0</m>.</p></statement></definition>
+                <definition xml:id="def-jc-x-intercept"><title>x-Intercept</title><statement><p>An <term><m>x</m>-intercept</term><idx>x-intercept</idx> of a graph is a point where the graph meets the horizontal axis. For the graph of <m>y=f(x)</m>, every real root <m>r</m> corresponds to the intercept <m>(r,0)</m>.</p></statement></definition>
+                <proposition xml:id="prop-jc-quadratic-factor-root"><title>Factors and Roots</title><statement><p>If <m>f(x)=A(x-r)(x-s)</m> with <m>A\ne0</m>, then the roots are <m>r</m> and <m>s</m>. They may be equal.</p></statement><proof><p>A product of real numbers is zero precisely when at least one factor is zero. Since <m>A\ne0</m>, <m>f(x)=0</m> if and only if <m>x-r=0</m> or <m>x-s=0</m>.</p></proof></proposition>
+                <example xml:id="example-jc-quadratic-roots"><title>From factorisation to a graph</title><statement><p>Find the roots and intercepts of <m>f(x)=x^2-5x+6</m>.</p></statement><solution>
+                  <p>Factorise using the methods developed in <xref ref="chapter-algebra-factorisation" text="title"/>:</p>
+                  <me>f(x)=x^2-5x+6=(x-2)(x-3).</me>
+                  <p>To find the roots, solve</p><me>(x-2)(x-3)=0.</me>
+                  <p>Therefore <m>x=2</m> or <m>x=3</m>. The horizontal intercepts are <m>(2,0)</m> and <m>(3,0)</m>. The vertical intercept is <m>(0,6)</m> because <m>f(0)=6</m>.</p>
+                  <figure xml:id="figure-jc-quadratic-roots"><caption>The expanded expression, its factorisation and the graph describe the same function.</caption><image source="jc-quadratic-roots.svg" width="90%"><description>An upward-opening parabola meeting the horizontal axis at 2 and 3, the vertical axis at 6, with minimum at (2.5, -0.25).</description></image></figure>
+                </solution></example>
+                <note xml:id="note-jc-quadratic-real-roots"><title>Not every quadratic has two distinct real roots</title><p>A parabola may meet the horizontal axis twice, touch it once, or never meet it. For example, <m>x^2-1</m>, <m>x^2</m> and <m>x^2+1</m> illustrate these three possibilities.</p></note>
+                <example xml:id="example-jc-generate-quadratic"><title>Working backwards: from roots to an equation</title><statement><p>Generate a quadratic equation with roots <m>-2</m> and <m>5</m>.</p></statement><solution><p>Choose the factors <m>x+2</m> and <m>x-5</m>. The equation is</p><me>(x+2)(x-5)=0.</me><p>In expanded form, this is <m>x^2-3x-10=0</m>. Multiplying the equation by any non-zero constant gives another equation with the same roots.</p></solution></example>
+                <exercise xml:id="exercise-jc-quadratic-roots"><statement><p>Find the roots and horizontal intercepts of <m>f(x)=x^2+x-12</m>.</p></statement><answer><p><m>f(x)=(x+4)(x-3)</m>; roots <m>-4</m> and <m>3</m>; intercepts <m>(-4,0)</m> and <m>(3,0)</m>.</p></answer></exercise>
+                <exercise xml:id="exercise-jc-generate-quadratic"><statement><p>Generate an expanded quadratic equation with roots <m>4</m> and <m>-3</m>.</p></statement><answer><p><m>x^2-x-12=0</m> is one possible answer.</p></answer></exercise>
+                <p><em>Curriculum connections:</em> AF.3(d), AF.4(b), AF.5, AF.7(b), U.4 (representation) and U.5 (connections).</p>
+              </section>
+              <section xml:id="jc-graphing-parabolas">
+                <title>Graphing Parabolas</title>
+                <objectives><title>Learning Intentions</title><ol><li><p>Construct a table of values and draw a quadratic graph.</p></li><li><p>Identify symmetry, intercepts and the turning point.</p></li></ol></objectives>
+                <p>For <m>f(x)=x^2-5x+6</m>, use these values to sketch the parabola:</p>
+                <tabular><row><cell><m>x</m></cell><cell>0</cell><cell>1</cell><cell>2</cell><cell>2.5</cell><cell>3</cell><cell>4</cell><cell>5</cell></row><row><cell><m>f(x)</m></cell><cell>6</cell><cell>2</cell><cell>0</cell><cell>-0.25</cell><cell>0</cell><cell>2</cell><cell>6</cell></row></tabular>
+                <p>Plot the points and join them with a smooth curve. Compare your graph with <xref ref="figure-jc-quadratic-roots"/>. The pairs of points on either side of <m>x=2.5</m> have equal heights.</p>
+                <definition xml:id="def-jc-parabola-vertex"><title>Vertex</title><statement><p>The <term>vertex</term><idx>vertex of a parabola</idx> of a parabola is its turning point, where the function reaches its minimum or maximum over the real numbers.</p></statement></definition>
+                <p>The axis of symmetry is <m>x=2.5</m> and the vertex is <m>(2.5,-0.25)</m>. The function opens upwards and has minimum value <m>-0.25</m>.</p>
+                <p>Use the <url href="https://www.desmos.com/calculator" visual="Desmos graphing calculator"/> to compare <m>y=x^2</m>, <m>y=-x^2</m> and <m>y=x^2-5x+6</m>.</p>
+                <p><em>Curriculum connections:</em> AF.7(b,d), U.4.</p>
+              </section>
+              <section xml:id="jc-quadratic-graphical-solutions">
+                <title>Graphical Solutions and Modelling</title>
+                <objectives><title>Learning Intentions</title><ol><li><p>Interpret intersections as solutions of equations.</p></li><li><p>Interpret the maximum or minimum of a quadratic in context.</p></li></ol></objectives>
+                <p>To solve <m>f(x)=g(x)</m> graphically, draw both graphs and read the horizontal co-ordinates of their intersections. To investigate <m>f(x)&lt;g(x)</m>, identify the inputs where the graph of <m>f</m> lies below the graph of <m>g</m>.</p>
+                <example xml:id="example-jc-quadratic-area-model"><title>Maximum area</title><statement><p>A rectangle has perimeter 20 metres and width <m>x</m> metres. Express its area as a function of <m>x</m> and find the maximum possible area.</p></statement><solution><p>The length is <m>10-x</m> metres, so the area is <m>f(x)=x(10-x)=10x-x^2</m>, for <m>0&lt;x&lt;10</m>. The parabola opens downwards and is symmetric about <m>x=5</m>. Plotting the graph gives its maximum at <m>(5,25)</m>. The rectangle of greatest area is a square with side 5 metres and area 25 square metres.</p></solution></example>
+                <exercise xml:id="exercise-jc-quadratic-graphical"><statement><p>Plot <m>y=x^2-5x+6</m> and <m>y=2</m>. Read the solutions of <m>x^2-5x+6=2</m> from the graph. For what real values of <m>x</m> is <m>x^2-5x+6&lt;2</m>?</p></statement><answer><p><m>x=1</m> or <m>x=4</m>; the inequality holds for <m>1&lt;x&lt;4</m>.</p></answer></exercise>
+                <p><em>Curriculum connections:</em> AF.4, AF.7(c,d), U.4, U.5 and U.6.</p>
+              </section>
+</chapter>
 
     
       <chapter xml:id="jc-cba1-mathematical-investigation">
