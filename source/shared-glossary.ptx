@@ -7,14 +7,16 @@
   <gi xml:id="glossary-algebraic-expression"><title>algebraic expression</title><p>A combination of numbers, variables and operations that represents a value without making a statement of equality.</p></gi>
   <gi xml:id="glossary-algorithm"><title>algorithm</title><p>A precise sequence of steps which, when followed under the stated conditions, completes a calculation or task.</p></gi>
   <gi xml:id="glossary-area"><title>area</title><p>The measure of a two-dimensional region, expressed in square units.</p></gi>
+  <gi xml:id="glossary-associative"><title>associative</title><p>An operation is associative if changing the grouping (moving the brackets), without changing the order of the numbers, always gives the same answer.</p></gi>
   <gi xml:id="glossary-bracket"><title>bracket</title><p>A symbol used to group quantities or operations and make the structure of a mathematical expression clear.</p></gi>
   <gi xml:id="glossary-coefficient"><title>coefficient</title><p>A factor multiplying a variable term, often a number or a parameter. In <m>5x</m>, the coefficient of <m>x</m> is <m>5</m>.</p></gi>
+  <gi xml:id="glossary-commutative"><title>commutative</title><p>An operation is commutative if swapping the two numbers always gives the same answer.</p></gi>
   <gi xml:id="glossary-conceptual-understanding"><title>conceptual understanding</title><p>Understanding mathematical ideas, operations and relationships, and why procedures work.</p></gi>
   <gi xml:id="glossary-constant"><title>constant</title><p>A fixed value that does not vary in the situation under discussion.</p></gi>
   <gi xml:id="glossary-counterexample"><title>counterexample</title><p>A single example that shows a general claim is false.</p></gi>
   <gi xml:id="glossary-degree"><title>degree of a polynomial</title><p>For a non-zero polynomial, the largest total degree among its terms. The total degree of a term is the sum of the exponents of all its variables.</p></gi>
   <gi xml:id="glossary-denominator"><title>denominator</title><p>The expression written below the fraction bar; it is the divisor and must not equal zero.</p></gi>
-  <gi xml:id="glossary-distributive-law"><title>distributive law</title><p>The principle that multiplication distributes over addition and subtraction: <m>a(b+c)=ab+ac</m>.</p></gi>
+  <gi xml:id="glossary-distributive-law"><title>distributive law</title><p>Multiply each term inside the brackets. For example, <m>3(4+5)=3\times4+3\times5</m>. In general, <m>a(b+c)=ab+ac</m> and <m>a(b-c)=ab-ac</m>.</p></gi>
   <gi xml:id="glossary-equation"><title>equation</title><p>A mathematical statement that two expressions have equal value, written using an equals sign.</p></gi>
   <gi xml:id="glossary-equivalence"><title>equivalent expressions</title><p>Expressions that have the same value for every value of the variables for which both are defined.</p></gi>
   <gi xml:id="glossary-estimate"><title>estimate</title><p>An approximate value obtained by reasoning, measurement or calculation.</p></gi>

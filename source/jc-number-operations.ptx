@@ -12,12 +12,15 @@
     <title>Operations and Their Properties</title>
     <p>Four operations. Four familiar ideas.</p>
     <table><title>The four operations</title><tabular><row header="yes"><cell>Operation</cell><cell>Think of</cell><cell>Example</cell></row><row><cell>Addition</cell><cell>Putting together</cell><cell><m>3+5=8</m></cell></row><row><cell>Subtraction</cell><cell>Taking away</cell><cell><m>8-3=5</m></cell></row><row><cell>Multiplication</cell><cell>Equal groups</cell><cell><m>3\times5=15</m></cell></row><row><cell>Division</cell><cell>Sharing equally</cell><cell><m>15\div3=5</m></cell></row></tabular></table>
-    <p>Try swapping the numbers. Does the answer change?</p>
-    <table xml:id="frayer-commutative"><title>Commutative — swap the numbers</title><tabular top="minor" bottom="minor" left="minor" right="minor"><col width="50%" right="minor"/><col width="50%"/><row bottom="minor"><cell><line><em>Definition</em></line><line>Swap the numbers.</line><line>The answer always stays the same.</line></cell><cell><line><em>Key features</em></line><line>Order changes.</line><line><m>a+b=b+a</m></line><line><m>a\times b=b\times a</m></line></cell></row><row><cell><line><em>Examples</em></line><line><m>3+5=5+3</m></line><line><m>4\times7=7\times4</m></line></cell><cell><line><em>Non-examples</em></line><line><m>8-3\ne3-8</m></line><line><m>12\div4\ne4\div12</m></line></cell></row></tabular></table>
-    <p>Keep the numbers in the same order. Move the brackets instead.</p>
-    <table xml:id="frayer-associative"><title>Associative — move the brackets</title><tabular top="minor" bottom="minor" left="minor" right="minor"><col width="50%" right="minor"/><col width="50%"/><row bottom="minor"><cell><line><em>Definition</em></line><line>Change which numbers are grouped.</line><line>The answer always stays the same.</line></cell><cell><line><em>Key features</em></line><line>Order stays the same.</line><line>Only the grouping changes.</line><line><m>(a+b)+c=a+(b+c)</m></line></cell></row><row><cell><line><em>Examples</em></line><line><m>(2+3)+4=2+(3+4)</m></line><line><m>(2\times3)\times4</m></line><line><m>=2\times(3\times4)</m></line></cell><cell><line><em>Non-examples</em></line><line><m>(12-6)-2\ne12-(6-2)</m></line><line><m>(24\div6)\div2</m></line><line><m>\ne24\div(6\div2)</m></line></cell></row></tabular></table>
-    <p>Multiply everything inside the brackets.</p>
-    <table xml:id="frayer-distributive"><title>Distributive law — multiply each term</title><tabular top="minor" bottom="minor" left="minor" right="minor"><col width="50%" right="minor"/><col width="50%"/><row bottom="minor"><cell><line><em>Definition</em></line><line>Multiply each term inside the brackets.</line></cell><cell><line><em>Key features</em></line><line>Two operations work together.</line><line><m>a(b+c)=ab+ac</m></line><line><m>a(b-c)=ab-ac</m></line></cell></row><row><cell><line><em>Examples</em></line><line><m>3(4+5)=3\times4+3\times5</m></line><line><m>2(7-3)=2\times7-2\times3</m></line></cell><cell><line><em>Non-examples</em></line><line><m>3(4+5)\ne3\times4+5</m></line><line><m>2(7-3)\ne2\times7-3</m></line></cell></row></tabular></table>
+    <p>Select a mathematical term below to see its definition, key features, examples and non-examples.</p>
+    <p xml:id="frayer-commutative"><xref ref="glossary-commutative" text="title"/> — swap the numbers. Same answer?</p>
+    <me>3+5=5+3</me>
+    <me>8-3\ne3-8</me>
+    <p xml:id="frayer-associative"><xref ref="glossary-associative" text="title"/> — move the brackets. Same answer?</p>
+    <me>(2+3)+4=2+(3+4)</me>
+    <me>(12-6)-2\ne12-(6-2)</me>
+    <p xml:id="frayer-distributive"><xref ref="glossary-distributive-law" text="title"/> — multiply each term.</p>
+    <me>3(4+5)=3\times4+3\times5</me>
     <p><em>Connect across:</em> <m>3(4+5)=12+15=27</m>. The same idea lets us expand <m>3(x+5)=3x+15</m> in algebra.</p>
     <p><em>Division:</em> split the top of a fraction, not the bottom.</p>
     <me>\frac{12+6}{3}=\frac{12}{3}+\frac{6}{3}=6</me>
