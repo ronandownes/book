@@ -99,7 +99,7 @@
       <task><p>For each number, choose the smallest of <m>\mathbb{N}</m>, <m>\mathbb{Z}</m>, <m>\mathbb{Q}</m> and <m>\mathbb{R}</m> that contains it: <m>4</m>, <m>0</m>, <m>-3</m>, <m>\frac{2}{5}</m> and <m>\sqrt{2}</m>.</p><answer><p><m>4\in\mathbb{N}</m>; <m>0</m> and <m>-3</m> are integers; <m>\frac{2}{5}</m> is rational; and <m>\sqrt{2}</m> is real but not rational.</p></answer></task>
       <task><p>Explain why “there are zero chickens in the empty coop” does not make zero one of the objects in the natural-number list.</p><answer><p>The chickens are the objects being counted. If there are none, the collection has cardinality zero, <m>\#\varnothing=0</m>. Zero records the count; it is not an additional chicken. In the log-table convention used here, <m>\mathbb{N}</m> starts at 1 and zero belongs to <m>\mathbb{Z}</m>.</p></answer></task>
     </activity>
-    <p><url href="https://ronandownes.github.io/maths/apps/sets/number-sets.html">Explore the four number sets and practise choosing the smallest set that contains a number.</url></p>
+    <p><url href="https://ronandownes.github.io/apps/apps/sets/number-sets.html">Explore the four number sets and practise choosing the smallest set that contains a number.</url></p>
   </subsection>
 </section>
 
@@ -123,10 +123,10 @@
       <li><p><m>M\setminus F</m>: in <m>M</m> but not in <m>F</m>, 7 students.</p></li>
     </ul>
     <p>With technology, we mark a region using clear digital shading. When drawing by hand, leave the other regions blank and use only three or four short hatch strokes in the chosen region. On paper, do not shade the region or fill it with many hatch strokes.</p>
-    <p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html#explore">Open App 3: Explore and shade the two-set regions.</url></p>
+    <p><url href="https://ronandownes.github.io/apps/apps/sets/venn-problem-solving.html#explore">Open App 3: Explore and shade the two-set regions.</url></p>
     <figure xml:id="figure-venn-app">
       <caption>Explore the two-set regions in the Venn app.</caption>
-      <interactive xml:id="interactive-venn-explore" iframe="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html?embed=1#explore" width="100%" aspect="16:10"/>
+      <interactive xml:id="interactive-venn-explore" iframe="https://ronandownes.github.io/apps/apps/sets/venn-problem-solving.html?embed=1#explore" width="100%" aspect="16:10"/>
     </figure>
     <exercise xml:id="exercise-intersection-union">
       <statement><p>Let <m>A=\{1,2,3\}</m> and <m>B=\{3,4\}</m>. Write <m>A\cap B</m> and <m>A\cup B</m> as lists.</p></statement>
@@ -156,7 +156,7 @@
       <title>Translate between representations</title>
       <task><p>Using <m>D=\{1,2,3,4,5,6,7,8\}</m>, write a rule in words for <m>O=\{1,3,5,7\}</m>. Then write the set-builder rule using “such that”.</p><answer><p><m>O</m> is the odd numbers in <m>D</m>; <m>O=\{x\in D:x\text{ is odd}\}</m>.</p></answer></task>
     </activity>
-    <p><url href="https://ronandownes.github.io/maths/apps/sets/list-and-notation.html">Open App 1: Set list and notation.</url> Then <url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">open App 2: Build a set from a rule.</url></p>
+    <p><url href="https://ronandownes.github.io/apps/apps/sets/list-and-notation.html">Open App 1: Set list and notation.</url> Then <url href="https://ronandownes.github.io/apps/apps/sets/rule-builder.html">open App 2: Build a set from a rule.</url></p>
   </section>
 
 <section xml:id="sets-rule-notation"><title>Rule Notation</title>
@@ -165,7 +165,7 @@
  <m>E=\{x\in\mathbb{N}:x\text{ is even and }x&lt;10\}</m>, so
  <m>E=\{2,4,6,8\}</m>.</p>
  <p>The colon is read <q>such that</q>. The order of a list does not change the set.</p>
- <p><url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">Explore rule notation in the app.</url></p>
+ <p><url href="https://ronandownes.github.io/apps/apps/sets/rule-builder.html">Explore rule notation in the app.</url></p>
  </section>
 
 
@@ -261,7 +261,7 @@
       <title>Think before naming</title>
       <task><p>What would “not red” mean if <m>U</m> were a collection of traffic lights?</p><answer><p>It would mean the non-red lights in the agreed collection of traffic lights. The answer depends on the universal set.</p></answer></task>
     </activity>
-    <p><url href="https://ronandownes.github.io/maths/apps/sets/universal-complement.html">Open App 4: Agree a universal set and explore what lies outside <m>A</m>.</url></p>
+    <p><url href="https://ronandownes.github.io/apps/apps/sets/universal-complement.html">Open App 4: Agree a universal set and explore what lies outside <m>A</m>.</url></p>
   </section>
 
 <section xml:id="sets-complement">
@@ -293,10 +293,10 @@
         <choice><statement><p>13</p></statement><feedback><p>The complement is the rest within <m>U</m>, not an extra set beyond it.</p></feedback></choice>
       </choices>
     </exercise>
-    <p>Choose how to use this activity: <url href="https://ronandownes.github.io/maths/apps/sets/universal-complement.html#explore">Open the full Universal Set and Complement app</url> for more space, or use the embedded version below without leaving the book.</p>
+    <p>Choose how to use this activity: <url href="https://ronandownes.github.io/apps/apps/sets/universal-complement.html#explore">Open the full Universal Set and Complement app</url> for more space, or use the embedded version below without leaving the book.</p>
     <figure xml:id="figure-universal-complement-app">
       <caption>Explore a universal set and complement.</caption>
-      <interactive xml:id="interactive-universal-complement" iframe="https://ronandownes.github.io/maths/apps/sets/universal-complement.html?embed=1#watch" width="100%" aspect="16:10"/>
+      <interactive xml:id="interactive-universal-complement" iframe="https://ronandownes.github.io/apps/apps/sets/universal-complement.html?embed=1#watch" width="100%" aspect="16:10"/>
     </figure>
   </section>
 
@@ -371,7 +371,7 @@
       <task><p>In an activity survey, 20 students play basketball, 18 play music and 8 do both. How many play only basketball, only music, and at least one of the two activities?</p><answer><p>Basketball only: <m>20-8=12</m>. Music only: <m>18-8=10</m>. At least one: <m>12+8+10=30</m>.</p></answer></task>
       <task><p>Explain why <m>20+18</m> is not the number who play basketball or music.</p><answer><p>The 8 students who do both appear in both totals, so they would be counted twice. Subtract the overlap once.</p></answer></task>
     </activity>
-    <p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html#practice">Practise two-set problems with hints and worked reasoning.</url></p>
+    <p><url href="https://ronandownes.github.io/apps/apps/sets/venn-problem-solving.html#practice">Practise two-set problems with hints and worked reasoning.</url></p>
   <subsection xml:id="sets-three-set-extension">
     <title>Three Sets</title>
     <p><em>Learning intentions:</em> By the end of this section, you should be able to interpret the regions of three overlapping sets and avoid counting an element more than once.</p>
@@ -391,7 +391,7 @@
       <task><p>How many elements are in exactly two sets? How many are in at least two sets?</p><answer><p>Exactly two: <m>5+4+3=12</m>. At least two: include the centre, giving <m>12+2=14</m>.</p></answer></task>
       <task><p>A student adds <m>20+18+15</m> to find the number in the union. What has been counted more than once?</p><answer><p>Elements in more than one set are counted multiple times. The labelled regions help us count each element exactly once.</p></answer></task>
     </activity>
-    <p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html#pair-work">Open the three-set pair challenge and compare explanations.</url></p>
+    <p><url href="https://ronandownes.github.io/apps/apps/sets/venn-problem-solving.html#pair-work">Open the three-set pair challenge and compare explanations.</url></p>
   </subsection>
 
 <subsection xml:id="sets-lab">
@@ -399,13 +399,13 @@
     <p><em>Learning intentions:</em> By the end of this section, you should be able to explain set relationships verbally, visually and symbolically and check solutions independently.</p>
     <p>The first examples are demonstrations: students can watch and discuss before choosing, dragging or creating anything. The focused apps then provide guided exploration, many online exercises, quizzes, a region game, tests and challenge levels. The Venn app begins with two sets and adds three-set pair work at Challenge level. All five apps live together in the Sets menu within Maths Apps. The links below open those same apps, so students can move between them without hunting across the site.</p>
     <ul>
-      <li><p><url href="https://ronandownes.github.io/maths/apps/sets/list-and-notation.html">App 1: Set list and notation</url> — elements, braces, equality, membership and cardinality.</p></li>
-      <li><p><url href="https://ronandownes.github.io/maths/apps/sets/rule-builder.html">App 2: Build a set from a rule</url> — rule notation, “such that”, list and diagram.</p></li>
-      <li><p><url href="https://ronandownes.github.io/maths/apps/sets/venn-problem-solving.html">App 3: Venn operations and problem solving</url> — two-set regions, cardinality, practice, quiz, game, test and pair work.</p></li>
-      <li><p><url href="https://ronandownes.github.io/maths/apps/sets/universal-complement.html">App 4: Universal set and complement</url> — the boundary <m>U</m>, <m>A^c</m> and complementary cardinalities.</p></li>
-      <li><p><url href="https://ronandownes.github.io/maths/apps/sets/number-sets.html">App 5: Four number sets</url> — natural numbers, integers, rational numbers, real numbers, and the log-table convention for zero.</p></li>
+      <li><p><url href="https://ronandownes.github.io/apps/apps/sets/list-and-notation.html">App 1: Set list and notation</url> — elements, braces, equality, membership and cardinality.</p></li>
+      <li><p><url href="https://ronandownes.github.io/apps/apps/sets/rule-builder.html">App 2: Build a set from a rule</url> — rule notation, “such that”, list and diagram.</p></li>
+      <li><p><url href="https://ronandownes.github.io/apps/apps/sets/venn-problem-solving.html">App 3: Venn operations and problem solving</url> — two-set regions, cardinality, practice, quiz, game, test and pair work.</p></li>
+      <li><p><url href="https://ronandownes.github.io/apps/apps/sets/universal-complement.html">App 4: Universal set and complement</url> — the boundary <m>U</m>, <m>A^c</m> and complementary cardinalities.</p></li>
+      <li><p><url href="https://ronandownes.github.io/apps/apps/sets/number-sets.html">App 5: Four number sets</url> — natural numbers, integers, rational numbers, real numbers, and the log-table convention for zero.</p></li>
     </ul>
-    <p><url href="https://ronandownes.github.io/maths/apps/sets/index.html">Open the Sets app menu.</url></p>
+    <p><url href="https://ronandownes.github.io/apps/apps/sets/index.html">Open the Sets app menu.</url></p>
     <p><strong>Check your learning.</strong> Can you describe a set using a rule, a list and an oval? Can you explain intersection, union, difference and cardinality? Can you place the shared region first, find the “only” regions and justify the union? Can you describe the relationships among <m>\mathbb{N}</m>, <m>\mathbb{Z}</m>, <m>\mathbb{Q}</m> and <m>\mathbb{R}</m>? After that, can you explain why a complement depends on <m>U</m>?</p>
   </subsection>
 </section>
