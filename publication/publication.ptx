@@ -12,8 +12,8 @@
     <tableofcontents focused="yes" preexpanded-levels="1"/>
     <baseurl href="https://ronandownes.github.io/book/"/>
     <brandlogo source="four-dots.svg" url="https://ronandownes.github.io/book/"/>
-    <!-- Display the book title, subtitle and author byline. -->
-    <banner subtitle="yes" byline="yes"/>
+    <!-- Keep the persistent banner concise; retain the subtitle on the title page. -->
+    <banner subtitle="no" byline="yes"/>
     <!-- Native PreTeXt textbook layout; colours align with Maths Apps. -->
     <css theme="default-modern" palette="blue-green" provide-dark-mode="no"/>
     <knowl example="no" example-solution="no" exercise-inline="no" definition="no" objectives="no" outcomes="no"/>
