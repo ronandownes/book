@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-GB">
   <book xml:id="mathematics-book">
-    <title>Full Cycle Maths</title>
+    <title>Well Connected Maths</title>
     <subtitle>Revisit. Connect. Extend.</subtitle>
     <frontmatter>
       <bibinfo>
@@ -16,12 +16,13 @@
       <preface xml:id="welcome">
         <title>Preface</title>
         <p>This book is written with you in mind. Teaching has made me increasingly aware of the barriers that can stand between a learner and an understanding of mathematics. I believe mathematics is for everyone, and I want to make it as accessible as possible.</p>
-        <p><em>Full Cycle Maths</em> takes advantage of being digital. You can read, listen, watch, visualise, experiment and explore. Sometimes you can discover a mathematical idea before encountering a single symbol.</p>
+        <p><em>Well Connected Maths</em> takes advantage of being digital. You can read, listen, watch, visualise, experiment and explore. Sometimes you can discover a mathematical idea before encountering a single symbol.</p>
         <p>Where language, numeracy or other difficulties present barriers, we can adapt how we approach the mathematics. We can build understanding first and gradually introduce the challenges of mathematical notation, examination language and working under time constraints.</p>
+        <p>Mathematics is not a collection of disconnected rules, procedures and formulas. It is a network of interconnected ideas. The more connections we make, the more meaningful, memorable and useful mathematics becomes. This book is designed to help you build those connections.</p>
         <p>Mathematics is dynamic, visual, creative and interconnected. The patterns, reasoning and problem-solving skills you develop extend far beyond the classroom, into science, technology, sport, recreation and everyday life.</p>
         <p>Keep a pen and paper beside you. Experiment, make mistakes, revisit ideas and follow your curiosity.</p>
         <p>This book will continue to evolve, and I welcome suggestions that improve your experience of learning mathematics.</p>
-        <p><em>Come full circle with me. Enjoy the journey.</em></p>
+        <p><em>Revisit earlier ideas. Make connections. Extend your understanding.</em></p>
         <p><em>Ronan Downes</em></p>
       </preface>
 
@@ -33,6 +34,15 @@
         <p>Worked examples, scaffolded exercises and independent practice provide progressively less guidance as understanding develops. Retrieval practice and spaced practice support retention (<xref ref="ref-dunlosky"/>). Pólya's work on problem-solving (<xref ref="ref-polya"/>) informs our emphasis on heuristics, reasoning and choosing suitable methods. The five strands of mathematical proficiency described in <xref ref="ref-adding-it-up"/> remind us that conceptual understanding, procedural fluency, strategic competence, adaptive reasoning and productive disposition develop together.</p>
         <p>Learning mathematics is not a journey around a single circle. We return to fundamental ideas repeatedly, each time consolidating previous learning and extending our understanding. This is consistent with Bruner's spiral curriculum (<xref ref="ref-bruner"/>). Retrieval practice asks us to recover knowledge from memory; spaced practice distributes that effort over time; a spiral curriculum also revisits ideas at progressively greater levels of sophistication.</p>
         <p>Learning involves building and refining schemas: organised structures of knowledge in long-term memory. As related ideas become connected, a previously demanding collection of steps can become a familiar mathematical structure, reducing the demands on working memory. Revisit earlier knowledge, connect it to related ideas, and extend it to new situations. This is the purpose of our spiral approach (<xref ref="ref-sweller-2019"/>).</p>
+        <p>Connecting mathematics to itself is a central purpose of this book. Five recurring prompts guide the development of its resources:</p>
+        <ul>
+          <li><p><em>Connect Back:</em> retrieve and strengthen the knowledge on which a new idea depends.</p></li>
+          <li><p><em>Connect Across:</em> recognise common structures and relationships between mathematical topics.</p></li>
+          <li><p><em>Connect Forward:</em> see how a concept prepares us for more advanced mathematics.</p></li>
+          <li><p><em>Connect Representations:</em> move between numerical, algebraic, graphical, geometric and verbal forms.</p></li>
+          <li><p><em>Connect to the World:</em> use mathematics to model, interpret and solve meaningful problems.</p></li>
+        </ul>
+        <p>These connections should be made where they illuminate the mathematics, rather than added mechanically to every section. The aim is to develop a connected body of knowledge that learners can retrieve, reason with and apply independently.</p>
         <p>Each return has a purpose. In algebra, for example, a first investigation of expansion and factorisation may use positive natural number coefficients. Later investigations revisit the same general structure, introducing carefully selected sign patterns, further factor distributions and rational coefficients. We do not assume that success in one restricted case automatically transfers to every other case. We retrieve earlier knowledge, connect it to new ideas and practise choosing methods independently.</p>
         <p>Digital support is a separate dimension of instructional design, not simply another stage between worked examples and independent practice. Interactive visualisations, optional hints and immediate feedback can support exploration at different levels of guidance. Learners also need opportunities to retrieve and apply their knowledge independently, without relying on the technology to perform the reasoning for them.</p>
         <p><em>Precision in mathematical presentation.</em> The alignment of terms, placement of partial products, curvature of arcs and allocation of writing space are deliberate design decisions. They aim to expose mathematical structure, minimise unnecessary transcription and support learners who find the organisation of written work difficult. Carefully refined visual heuristics are preserved across worksheets, the book and interactive applications. Handwritten video demonstrations reinforce the same conventions while showing how the mathematics develops in real time.</p>

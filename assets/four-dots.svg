@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="title desc">
- <title id="title">Irish School Maths logo</title>
- <desc id="desc">Four dots in a square: red and green above blue and black.</desc>
+ <title id="title">Well Connected Maths logo</title>
+ <desc id="desc">Four connected nodes: red and green above blue and black.</desc>
+ <path d="M10 10H22V22H10Z M10 10L22 22 M22 10L10 22" fill="none" stroke="#8294a6" stroke-width="1.6"/>
  <circle cx="10" cy="10" r="5.5" fill="#E63329"/>
  <circle cx="22" cy="10" r="5.5" fill="#3FAE49"/>
  <circle cx="10" cy="22" r="5.5" fill="#2D7DD2"/>

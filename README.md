@@ -1,4 +1,6 @@
-# Book — Mathematics
+# Well Connected Maths
+
+*Revisit. Connect. Extend.*
 
 An open, student-centred Mathematics textbook authored in [PreTeXt](https://pretextbook.org/).
 
