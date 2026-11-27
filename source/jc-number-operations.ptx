@@ -10,23 +10,31 @@
 
   <section xml:id="arithmetic-intro">
     <title>Operations and Their Properties</title>
-    <p>The four arithmetic operations are <term>addition</term>, <term>subtraction</term>, <term>multiplication</term> and <term>division</term>. They model combining, comparing, grouping, scaling and sharing. A group is a single mathematical object for the purpose of an operation; brackets, a fraction bar and a square-root bar can all indicate grouping.</p>
-    <p>An operation is <term>commutative</term> when swapping the operands does not change the result. It is <term>associative</term> when regrouping repeated uses of that operation does not change the result. These are separate properties.</p>
+    <p>Four operations. Four familiar ideas.</p>
+    <table><title>The four operations</title><tabular><row header="yes"><cell>Operation</cell><cell>Think of</cell><cell>Example</cell></row><row><cell>Addition</cell><cell>Putting together</cell><cell><m>3+5=8</m></cell></row><row><cell>Subtraction</cell><cell>Taking away</cell><cell><m>8-3=5</m></cell></row><row><cell>Multiplication</cell><cell>Equal groups</cell><cell><m>3\times5=15</m></cell></row><row><cell>Division</cell><cell>Sharing equally</cell><cell><m>15\div3=5</m></cell></row></tabular></table>
+    <p>Try swapping the numbers. Does the answer change?</p>
+    <table xml:id="frayer-commutative"><title>Commutative — swap the numbers</title><tabular top="minor" bottom="minor" left="minor" right="minor"><col width="50%" right="minor"/><col width="50%"/><row bottom="minor"><cell><line><em>Definition</em></line><line>Swap the numbers.</line><line>The answer always stays the same.</line></cell><cell><line><em>Key features</em></line><line>Order changes.</line><line><m>a+b=b+a</m></line><line><m>a\times b=b\times a</m></line></cell></row><row><cell><line><em>Examples</em></line><line><m>3+5=5+3</m></line><line><m>4\times7=7\times4</m></line></cell><cell><line><em>Non-examples</em></line><line><m>8-3\ne3-8</m></line><line><m>12\div4\ne4\div12</m></line></cell></row></tabular></table>
+    <p>Keep the numbers in the same order. Move the brackets instead.</p>
+    <table xml:id="frayer-associative"><title>Associative — move the brackets</title><tabular top="minor" bottom="minor" left="minor" right="minor"><col width="50%" right="minor"/><col width="50%"/><row bottom="minor"><cell><line><em>Definition</em></line><line>Change which numbers are grouped.</line><line>The answer always stays the same.</line></cell><cell><line><em>Key features</em></line><line>Order stays the same.</line><line>Only the grouping changes.</line><line><m>(a+b)+c=a+(b+c)</m></line></cell></row><row><cell><line><em>Examples</em></line><line><m>(2+3)+4=2+(3+4)</m></line><line><m>(2\times3)\times4</m></line><line><m>=2\times(3\times4)</m></line></cell><cell><line><em>Non-examples</em></line><line><m>(12-6)-2\ne12-(6-2)</m></line><line><m>(24\div6)\div2</m></line><line><m>\ne24\div(6\div2)</m></line></cell></row></tabular></table>
+    <p>Multiply everything inside the brackets.</p>
+    <table xml:id="frayer-distributive"><title>Distributive law — multiply each term</title><tabular top="minor" bottom="minor" left="minor" right="minor"><col width="50%" right="minor"/><col width="50%"/><row bottom="minor"><cell><line><em>Definition</em></line><line>Multiply each term inside the brackets.</line></cell><cell><line><em>Key features</em></line><line>Two operations work together.</line><line><m>a(b+c)=ab+ac</m></line><line><m>a(b-c)=ab-ac</m></line></cell></row><row><cell><line><em>Examples</em></line><line><m>3(4+5)=3\times4+3\times5</m></line><line><m>2(7-3)=2\times7-2\times3</m></line></cell><cell><line><em>Non-examples</em></line><line><m>3(4+5)\ne3\times4+5</m></line><line><m>2(7-3)\ne2\times7-3</m></line></cell></row></tabular></table>
+    <p><em>Connect across:</em> <m>3(4+5)=12+15=27</m>. The same idea lets us expand <m>3(x+5)=3x+15</m> in algebra.</p>
+    <p><em>Division:</em> split the top of a fraction, not the bottom.</p>
+    <me>\frac{12+6}{3}=\frac{12}{3}+\frac{6}{3}=6</me>
+    <me>\frac{12}{2+4}=2\ne\frac{12}{2}+\frac{12}{4}=9</me>
+    <p>The divisor must not be zero.</p>
+    <p><em>Quick summary:</em> swapping is not regrouping.</p>
     <table xml:id="operation-properties">
       <title>Properties of the four operations</title>
       <tabular>
         <col width="23%"/><col width="23%"/><col width="23%"/><col width="31%"/>
         <row header="yes"><cell>Operation</cell><cell>Commutative?</cell><cell>Associative?</cell><cell>Distributive relationship</cell></row>
-        <row><cell>Addition</cell><cell>Yes</cell><cell>Yes</cell><cell>Not the standard distribution law</cell></row>
-        <row><cell>Subtraction</cell><cell>No</cell><cell>No</cell><cell>Not in general</cell></row>
+        <row><cell>Addition</cell><cell>Yes</cell><cell>Yes</cell><cell>—</cell></row>
+        <row><cell>Subtraction</cell><cell>No</cell><cell>No</cell><cell>—</cell></row>
         <row><cell>Multiplication</cell><cell>Yes</cell><cell>Yes</cell><cell>Over addition and subtraction</cell></row>
-        <row><cell>Division</cell><cell>No</cell><cell>No</cell><cell>Across a sum or difference in the numerator only</cell></row>
+        <row><cell>Division</cell><cell>No</cell><cell>No</cell><cell>Over sums or differences in the numerator</cell></row>
       </tabular>
     </table>
-    <p>For example, <m>3+5=5+3</m> and <m>(2+3)+4=2+(3+4)</m>. By contrast, <m>8-3\ne3-8</m> and <m>(12-6)-2\ne12-(6-2)</m>. Division also fails both commutativity and associativity in general.</p>
-    <p><term>Distribution</term> relates two operations. Multiplication distributes over a grouped sum: <m>a(b+c)=ab+ac</m>. It also distributes over a grouped difference: <m>a(b-c)=ab-ac</m>. For example, <m>3(4+5)=3\cdot4+3\cdot5</m>.</p>
-    <p>Division distributes over a grouped numerator when the same non-zero divisor is applied to every term: <m>\frac{a+b}{c}=\frac{a}{c}+\frac{b}{c}</m>, for <m>c\ne0</m>. This does <em>not</em> mean that division distributes over a denominator: <m>\frac{12}{2+4}=2</m>, whereas <m>\frac{12}{2}+\frac{12}{4}=9</m>.</p>
-    <p>Adding a number to a group, such as <m>3+(4+5)</m>, does not multiply it into every term. Here the brackets may be removed because addition is associative. It is therefore essential to name the principle used, not just the visible method.</p>
   </section>
   <section xml:id="arithmetic-practice">
     <title>Worked Example and Practice</title>
