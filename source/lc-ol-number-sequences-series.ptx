@@ -104,7 +104,16 @@
 </figure>
 <p>The difference between successive terms is always <m>2</m>, so this is a <term>linear</term>, or <term>arithmetic</term>, sequence. Working backwards reverses the forward operation: <m>7-2=5</m>. Place <m>5</m> in a box as <m>T_0</m>, the term immediately before <m>T_1</m>.</p>
 <p>This backwards step is a teaching method, not a change to the standard numbering of the sequence: the first listed term remains <m>T_1=7</m>.</p>
+<p><em>Formulae and Tables, page 22.</em> In the arithmetic term formula, <m>a</m> is the first term and <m>d</m> is the common difference. Expand and collect:</p>
+<me>\begin{aligned}T_n&amp;=a+(n-1)d\\&amp;=a+nd-d\\&amp;=dn+(a-d).\end{aligned}</me>
+<me>\boxed{T_0=a-d}\qquad\boxed{T_n=dn+T_0}.</me>
+<p>Compare <m>y=mx+c</m> with <m>T_n=dn+T_0</m>. The common difference is the slope of the associated line; term zero is its vertical intercept. The sequence consists of discrete points, not the continuous line.</p>
+<p><em>Heuristic:</em> Find the common difference. Step backwards. Box term zero. Write the general term.</p>
 <me>T_n=2n+5.</me>
+<figure xml:id="sequences-term-zero-graph-app"><caption>Change the common difference and term zero to connect the sequence with its associated straight line.</caption><interactive xml:id="sequences-term-zero-graph-interactive" iframe="https://ronandownes.github.io/apps/apps/linear-sequences/term-zero.html" width="100%" aspect="4:5"/></figure>
+<p><url href="https://ronandownes.github.io/apps/apps/linear-sequences/term-zero.html" visual="Open term zero and slope"/> in a separate tab. Continue to <xref ref="sequences-three-terms" text="title"/>, <xref ref="sequences-sum" text="title"/> or <xref ref="sequences-exam-practice" text="title"/>.</p>
+<example xml:id="seq-first-negative-crossing"><title>Find the first negative term</title><p>The sequence <m>31,24,17,10,\ldots</m> has <m>d=-7</m> and <m>T_0=38</m>. Hence <m>T_n=38-7n</m>. When is it first negative?</p><me>38-7n&lt;0\implies n&gt;\frac{38}{7}.</me><p>The smallest positive integer satisfying the inequality is <m>6</m>. Check both sides: <m>T_5=3</m> and <m>T_6=-4</m>. The sequence jumps across zero; zero is not a term.</p></example>
+<exercise xml:id="seq-first-negative-exercise"><statement><p>For <m>43,35,27,\ldots</m>, find the term rule, first negative term and its predecessor. Is zero a term?</p></statement><answer><p><m>T_n=51-8n</m>; <m>T_6=3</m>, <m>T_7=-5</m>. Zero is not a term.</p></answer></exercise>
 <example xml:id="sequences-linear-distant-term">
 <title>Find a distant term</title>
 <p>For <m>T_n=2n+5</m>, substitute <m>n=50</m>:</p>
@@ -118,9 +127,9 @@
 </example>
 <figure xml:id="sequences-linear-app">
 <caption>Linear Sequences: reveal under-arcs, work backwards to term zero, practise and assess with sound.</caption>
-<interactive xml:id="sequences-linear-interactive" iframe="https://ronandownes.github.io/maths/apps/linear-sequences/index.html" width="100%" aspect="4:5"/>
+<interactive xml:id="sequences-linear-interactive" iframe="https://ronandownes.github.io/apps/apps/linear-sequences/index.html" width="100%" aspect="4:5"/>
 </figure>
-<p><url href="https://ronandownes.github.io/maths/apps/linear-sequences/index.html">Open the Linear Sequences app in a separate tab.</url> On a phone, the settings can be collapsed to keep the working area large.</p>
+<p><url href="https://ronandownes.github.io/apps/apps/linear-sequences/index.html">Open the Linear Sequences app in a separate tab.</url> On a phone, the settings can be collapsed to keep the working area large.</p>
 <exercise xml:id="exercise-sequences-next">
 <statement><p>Write the next two terms of <m>7,9,11,13,\ldots</m>, then find <m>T_0</m> and <m>T_n</m>.</p></statement>
 <answer><p>The next terms are <m>15</m> and <m>17</m>. We have <m>T_0=5</m> and <m>T_n=2n+5</m>.</p></answer>
@@ -135,6 +144,9 @@
 <p>Suppose three consecutive terms of an arithmetic sequence are <m>9,x,19</m>. You are not told their positions in the sequence, and you do not need to be. Because the common difference is equal on either side of <m>x</m>, we have</p>
 <me>x-9=19-x\implies 2x=28\implies x=14.</me>
 <p>The middle term is the arithmetic mean of its two neighbours. This is useful when the term number is not supplied.</p>
+<paragraphs xml:id="seq-symmetric-neighbours"><title>Equal distances on either side</title><p>For an arithmetic sequence, two terms equally far from the middle differ from it by opposite amounts. If the distance is <m>k</m> positions, their values are <m>T_n-kd</m> and <m>T_n+kd</m>. Their sum is <m>2T_n</m>.</p><me>\boxed{T_n=\frac{T_{n-k}+T_{n+k}}2}.</me><p>This works for adjacent neighbours and for equally distant neighbours. It does not generally work for unequally spaced positions or for non-arithmetic sequences.</p></paragraphs>
+<exercise xml:id="seq-symmetry-gap"><statement><p>In an arithmetic sequence, <m>T_4=13</m> and <m>T_{10}=37</m>. Find <m>T_7</m> without first finding the general term.</p></statement><answer><p><m>T_7=(13+37)/2=25</m>.</p></answer></exercise>
+<p>Return to <xref ref="sequences-intro" text="title"/> or practise with the <url href="https://ronandownes.github.io/apps/apps/linear-sequences/index.html" visual="linear-sequences quiz"/>.</p>
 <exercise xml:id="sequences-middle-exercise"><statement><p>Find the missing middle term in <m>-7,x,17</m> if the three numbers are consecutive terms of an arithmetic sequence.</p></statement><answer><p><m>2x=-7+17=10</m>, so <m>x=5</m>.</p></answer></exercise>
 </section>
 <section xml:id="sequences-sum">
@@ -249,9 +261,9 @@ d&amp;=3.
 <me>T_n=n^2+6n+4.</me>
 <figure xml:id="sequences-quadratic-app">
 <caption>Quadratic Sequences: first and second under-arcs, halving, backtracking, and two-attempt quizzes.</caption>
-<interactive xml:id="sequences-quadratic-interactive" iframe="https://ronandownes.github.io/maths/apps/quadratic-sequences/index.html" width="100%" aspect="4:5"/>
+<interactive xml:id="sequences-quadratic-interactive" iframe="https://ronandownes.github.io/apps/apps/quadratic-sequences/index.html" width="100%" aspect="4:5"/>
 </figure>
-<p><url href="https://ronandownes.github.io/maths/apps/quadratic-sequences/index.html">Open the Quadratic Sequences app.</url></p>
+<p><url href="https://ronandownes.github.io/apps/apps/quadratic-sequences/index.html">Open the Quadratic Sequences app.</url></p>
 <exercise xml:id="sequences-quadratic-exercise">
 <statement><p>Use two layers of under-arcs to find the general term of <m>3,8,15,24,\ldots</m>.</p></statement>
 <answer><p>First differences <m>5,7,9</m>; second differences <m>2,2</m>; <m>a=1</m>. The previous first difference is <m>3</m>, so <m>c=T_0=3-3=0</m>. Then <m>3=1+b+0</m>, giving <m>b=2</m>. Thus <m>T_n=n^2+2n</m>.</p></answer>
@@ -266,9 +278,9 @@ d&amp;=3.
 <p>A decreasing example is <m>81,27,9,3,\ldots</m>. Students can describe each step as <em>divide by three</em>. Later we name the ratio <m>r=\frac13</m>.</p>
 <figure xml:id="sequences-geometric-app">
 <caption>Geometric Sequences: visible under-arc multipliers and divisors, practice, quiz and test.</caption>
-<interactive xml:id="sequences-geometric-interactive" iframe="https://ronandownes.github.io/maths/apps/geometric-sequences/index.html" width="100%" aspect="4:5"/>
+<interactive xml:id="sequences-geometric-interactive" iframe="https://ronandownes.github.io/apps/apps/geometric-sequences/index.html" width="100%" aspect="4:5"/>
 </figure>
-<p><url href="https://ronandownes.github.io/maths/apps/geometric-sequences/index.html">Open the Geometric Sequences app.</url></p>
+<p><url href="https://ronandownes.github.io/apps/apps/geometric-sequences/index.html">Open the Geometric Sequences app.</url></p>
 <example xml:id="sequences-geometric-depreciation">
 <title>Depreciation as repeated multiplication</title>
 <p>A car worth <m>€20\,000</m> depreciates by <m>20\%</m> each year. It retains <m>80\%</m> of its current value, so each under-arc can be labelled <m>\times0.8</m>:</p>
