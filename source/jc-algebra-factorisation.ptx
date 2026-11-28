@@ -61,6 +61,21 @@
       \end{aligned}</me>
       <p>These are the two productive groupings of the four labelled products. The remaining pairing is generally unproductive, although particular values or expressions can introduce additional common factors. The order of the terms does not change the expanded expression.</p>
     </paragraphs>
+    <example xml:id="algebra-grouping-deceptive-pairs"><title>When both unfriendly pairs have common factors</title>
+      <statement><p>Factorise <m>12xy+15+18y+10x</m>. Try the first two and last two terms before rearranging anything.</p></statement>
+      <solution><me>12xy+15+18y+10x=3(4xy+5)+2(9y+5x).</me>
+      <p>Both pairs have a common factor. The extraction is correct, but the binomials are different. This grouping does not expose the intended factorisation. Go back and swap the middle terms, retaining their signs.</p>
+      <me>\begin{aligned}
+      12xy+18y+15+10x&amp;=6y(2x+3)+5(3+2x)\\
+      &amp;=6y(2x+3)+5(2x+3)\\
+      &amp;=(2x+3)(6y+5).
+      \end{aligned}</me>
+      <p>Finding common factors within both pairs is not enough. Look for a common binomial after extraction.</p></solution>
+    </example>
+    <exercise xml:id="algebra-grouping-create-pairs"><title>Create your own grouping questions</title>
+      <statement><p>Expand <m>(a+2)(ab+2)</m>. Write the four partial products in a friendly grouping and in an unfriendly grouping. Exchange your questions with a partner and factorise. Can an unfriendly pair still have a common factor?</p></statement>
+      <answer><p>The partial products are <m>a^2b,2ab,2a,4</m>. One friendly grouping is <m>(a^2b+2ab)+(2a+4)</m>, which gives <m>ab(a+2)+2(a+2)</m>. The unfriendly grouping <m>(a^2b+4)+(2ab+2a)</m> includes a pair with common factor <m>2a</m>, despite the original products sharing no labelled source term.</p></answer>
+    </exercise>
     <example xml:id="algebra-grouping-friendly-example"><title>Choose friendly pairs</title>
       <statement><p>Factorise <m>12y+10x+8xy+15</m>.</p></statement>
       <solution>
@@ -72,6 +87,38 @@
         \end{aligned}</me>
         <p>Expand to check. Can you find the other productive grouping?</p>
       </solution>
+    </example>
+  </section>
+  <section xml:id="algebra-special-cases-overview">
+    <title>Special Cases at a Glance</title>
+    <objectives><title>Learning Intentions</title><ol><li><p>Recognise special cases of the general expansion.</p></li><li><p>Distinguish same-sign and mixed-sign patterns and reverse identities.</p></li></ol></objectives>
+    <p>Start with the general identity <m>(ax+b)(cx+d)\equiv acx^2+(ad+bc)x+bd</m>. In <m>Ax^2+Bx+C</m>, <m>A</m> is the quadratic coefficient, <m>B</m> is the linear coefficient and <m>C</m> is the constant term. In the special cases below, <m>a,b</m> are positive integers. Primes can be convenient examples, but primality is not required. The quadratic coefficient is <m>a</m> in every row.</p>
+    <p><em>Same signs.</em></p>
+    <me>\begin{array}{c|c|c}
+    \text{Factors}&amp;B&amp;C\\\hline
+    (ax+b)(x+1)&amp;a+b&amp;b\\
+    (ax-b)(x-1)&amp;-(a+b)&amp;b\\
+    (ax+1)(x+b)&amp;ab+1&amp;b\\
+    (ax-1)(x-b)&amp;-(ab+1)&amp;b
+    \end{array}</me>
+    <p><em>Mixed signs.</em></p>
+    <me>\begin{array}{c|c|c}
+    \text{Factors}&amp;B&amp;C\\\hline
+    (ax+b)(x-1)&amp;b-a&amp;-b\\
+    (ax-b)(x+1)&amp;a-b&amp;-b\\
+    (ax+1)(x-b)&amp;1-ab&amp;-b\\
+    (ax-1)(x+b)&amp;ab-1&amp;-b
+    \end{array}</me>
+    <p>Expand, observe, identify a pattern, establish the identity, then reverse it to factorise. Use the inner and outer arcs to identify the two contributions to the linear coefficient. These recognition rules apply to the stated special cases, not to arbitrary trinomials.</p>
+    <example xml:id="algebra-special-cases-deterministic-placement"><title>When a shortcut does not apply</title>
+      <statement><p>Factorise <m>2x^2+7x+6</m>, given that the constants in the two brackets are 2 and 3.</p></statement>
+      <solution><p>Neither the sum-centre nor product-plus-one pattern applies: <m>2+6\ne7</m> and <m>2\cdot6+1\ne7</m>. The HCF of the coefficients is 1. Placing the constant 2 with <m>2x</m> would produce a factor of 2 throughout the resulting polynomial, so the constant 2 must instead be placed with <m>x</m>.</p>
+      <me>\begin{aligned}
+      2x^2+7x+6&amp;=2x^2+4x+3x+6\\
+      &amp;=2x(x+2)+3(x+2)\\
+      &amp;=(2x+3)(x+2).
+      \end{aligned}</me>
+      <p>With these constants supplied, their placement is determined, not guessed. Later, use the guide number and juggle numbers to find the split independently. Check by expanding.</p></solution>
     </example>
   </section>
   <section xml:id="af3-factorisation-revisit">
