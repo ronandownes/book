@@ -438,6 +438,8 @@
   </section>
 </appendix>
 
+<xi:include href="./appendix-b-geometry.ptx"/>
+
 <appendix xml:id="chapter-mathematical-structure">
   <title>How Mathematics Is Built</title>
   <introduction>
@@ -568,7 +570,6 @@
       </appendix>
 
       <xi:include href="./shared-glossary.ptx"/>
-      <xi:include href="./appendix-b-geometry.ptx"/>
       <references xml:id="book-bibliography">
         <title>Bibliography</title>
         <biblio type="raw" xml:id="ref-tao-genius">Tao, T. (2024). <title>Does One Have to be a Genius to Do Maths?</title> Notices of the American Mathematical Society, 71(1), 30–32. <url href="https://terrytao.wordpress.com/career-advice/does-one-have-to-be-a-genius-to-do-maths/" visual="Read the original online essay"/>.</biblio>
