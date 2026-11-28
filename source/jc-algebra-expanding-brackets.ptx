@@ -123,11 +123,16 @@
 <title>Four products, one principle</title>
 <statement><p>Expand <m>(2x+3)(4x+5)</m>.</p></statement>
 <solution>
-<me>\begin{aligned}(2x+3)(4x+5)&amp;=8x^2+10x+12x+15\\&amp;=8x^2+22x+15.\end{aligned}</me>
+<p><em>Split the brackets.</em></p><me>(2x+3)(4x+5)=2x(4x+5)+3(4x+5).</me>
+<p><em>Distribute.</em> Write the four monomial products without simplifying them yet.</p>
+<me>(2x)(4x)+(2x)(5)+(3)(4x)+(3)(5).</me>
+<p><em>Simplify each product.</em></p><me>8x^2+10x+12x+15.</me>
+<p><em>Collect like terms.</em></p><me>8x^2+22x+15.</me>
+<p>Each individual multiplication contributes one <term>partial product</term>. A partial product is part of the complete product. The same four multiplications can be organised with inline rainbow arcs or the display cross-product margin. These are visual heuristics for the same distributive law.</p>
 <p>Four partial products give three unlike terms after the like <m>x</m> terms are collected.</p>
 </solution>
 </example>
-<p><url href="https://ronandownes.github.io/maths/algebra/expansions/" visual="Compare the interactive expansion methods"/>. Use them to understand and check calculations, then work towards the quickest reliable method for you.</p>
+<p><url href="https://ronandownes.github.io/apps/algebra/expansions/" visual="Compare the interactive expansion methods"/>. Use them to understand and check calculations, then work towards the quickest reliable method for you.</p>
 </section>
 
 
@@ -255,13 +260,39 @@
 &amp;=8x^3+10x^2+12x+12x^2+15x+18\\
 &amp;=8x^3+22x^2+27x+18.
 \end{aligned}</me>
-<p>Try calculating the bottom constant's full row before moving to the bottom <m>x</m> term. The place-value columns organise terms with the same power of <m>x</m>.</p>
+<p>Use column multiplication, not a multiplication grid. Set up the place-value headings first. Write only the numerical coefficients in the corresponding columns, aligning the constants under the number column, marked <m>\#</m>. Multiply by the constant in the lower polynomial, then by its linear term. Record a separate partial-product row for each multiplier term. A multiplication by <m>x</m> shifts the row one column towards the higher powers.</p>
+<me>\begin{array}{r|rrrr}
+&amp;x^3&amp;x^2&amp;x&amp;\#\\\hline
+&amp;&amp;4&amp;5&amp;6\\
+\times&amp;&amp;&amp;2&amp;3\\\hline
+3:&amp;&amp;12&amp;15&amp;18\\
+2x:&amp;8&amp;10&amp;12&amp;0\\\hline
+&amp;8&amp;22&amp;27&amp;18
+\end{array}</me>
+<p>Add the coefficients within each column and restore the powers of <m>x</m>. Unlike decimal long multiplication, polynomial coefficient columns do not carry into neighbouring powers. The zero at the end of the second partial-product row is a placeholder.</p>
 </example>
-<p><url href="https://ronandownes.github.io/maths/apps/polynomial-place-value/" visual="Expanding Brackets interactive app"/> lets you work through partial products one by one, group like terms, and reflect on your result.</p>
+<p><url href="https://ronandownes.github.io/apps/apps/polynomial-place-value/index.html" visual="Expanding Brackets interactive app"/> lets you work through partial products one by one, group like terms, and reflect on your result.</p>
 <exercise xml:id="expanding-leading-constant">
 <statement><p>For <m>(3x+5)(2x^2+4x+7)</m>, predict the leading coefficient and constant term first. Then calculate the middle coefficients using aligned partial products.</p></statement>
 <answer><p>The leading coefficient is <m>6</m> and the constant term is <m>35</m>. The expansion is <m>6x^3+22x^2+41x+35</m>.</p></answer>
 </exercise>
+<example xml:id="expanding-place-value-quadratic-pair">
+<title>Three by three: nine partial products</title>
+<statement><p>Expand <m>(x^2+x+2)(x^2+2x+3)</m>.</p></statement>
+<solution><p>Use the same coefficient-alignment method. Multiply the upper polynomial by 3, then by <m>2x</m>, then by <m>x^2</m>.</p>
+<me>\begin{array}{r|rrrrr}
+&amp;x^4&amp;x^3&amp;x^2&amp;x&amp;\#\\\hline
+&amp;&amp;&amp;1&amp;1&amp;2\\
+\times&amp;&amp;&amp;1&amp;2&amp;3\\\hline
+3:&amp;&amp;&amp;3&amp;3&amp;6\\
+2x:&amp;&amp;2&amp;2&amp;4&amp;0\\
+x^2:&amp;1&amp;1&amp;2&amp;0&amp;0\\\hline
+&amp;1&amp;3&amp;7&amp;7&amp;6
+\end{array}</me>
+<me>(x^2+x+2)(x^2+2x+3)\equiv x^4+3x^3+7x^2+7x+6.</me>
+</solution></example>
+<p>For two linear factors, inline arcs or the display cross-product margin are usually more economical. Place-value multiplication becomes especially useful for linear-by-quadratic, quadratic-by-quadratic and larger products.</p>
+<p>Step-by-step digital demonstrations can pair each mathematical action with optional spoken narration, using precise mathematical vocabulary while keeping the written instructions brief. The learner controls the pace and may replay or mute narration.</p>
 </section>
 
 <section xml:id="expanding-homework">
