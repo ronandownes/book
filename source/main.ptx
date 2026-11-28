@@ -15,6 +15,8 @@
 
       <preface xml:id="welcome">
         <title>Preface</title>
+        <p xml:id="preface-mathematical-exposition"><em>Exposition — making mathematics visible.</em> The purpose of <em>Well Connected Maths</em> is to present mathematics clearly and systematically, revealing structures and connections that might otherwise go unnoticed. We investigate how mathematical expressions, objects and relationships behave, identify patterns, move between general principles and special cases, and explain why our methods work.</p>
+        <p>Along the way, you will develop a repertoire of powerful heuristics: practical strategies that help you recognise structure, choose a method and solve unfamiliar problems. Carefully designed visual aids make mathematical thinking visible. They show you not only what to do, but what to look for and why it matters. As your understanding develops, you can adapt these strategies and learn to work independently.</p>
         <p>Junior Cycle, Leaving Certificate Ordinary Level and Leaving Certificate Higher Level: one connected mathematics resource. Revisit earlier ideas whenever you need them, and see how the same mathematics develops from one level to the next.</p>
         <p>This book is written with you in mind. Teaching has made me increasingly aware of the barriers that can stand between a learner and an understanding of mathematics. I believe mathematics is for everyone, and I want to make it as accessible as possible.</p>
         <p><em>Well Connected Maths</em> takes advantage of being digital. You can read, listen, watch, visualise, experiment and explore. Sometimes you can discover a mathematical idea before encountering a single symbol.</p>
