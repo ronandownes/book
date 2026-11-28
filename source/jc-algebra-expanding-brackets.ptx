@@ -250,6 +250,37 @@
 </paragraphs>
 </section>
 
+<section xml:id="expanding-square-discoveries">
+<title>Discovering Perfect Squares and Conjugates</title>
+<objectives><title>Learning Intentions</title><ol><li><p>Recognise equal or opposite cross-products.</p></li><li><p>Expand and factorise squares and differences of squares.</p></li><li><p>Identify the conjugate of a binomial.</p></li></ol></objectives>
+<p>Throughout these examples, lowercase <m>a,b,c,d</m> denote fixed coefficients and uppercase <m>A,B</m> denote algebraic terms in identities; <m>x,y,z,n</m> are variables. In the general trinomial <m>Ax^2+Bx+C</m>, the capital letters instead denote fixed coefficients. Their meaning depends on the stated context.</p>
+<p>We could begin with the monic case or the general case. Here we choose the general case because the underlying structure is simple, and the monic case follows immediately by setting the leading coefficient equal to one.</p>
+<example xml:id="square-discover-general"><title>Equal cross-products</title>
+<statement><p>Expand <m>(ax+b)^2</m> using the ordinary distributive law, first writing two identical brackets.</p></statement>
+<solution><me>\begin{aligned}
+(ax+b)^2&amp;\equiv(ax+b)(ax+b)\\
+&amp;\equiv a^2x^2+abx+abx+b^2\\
+&amp;\equiv a^2x^2+2abx+b^2.
+\end{aligned}</me>
+<p>The inner and outer partial products are identical expressions: both are <m>abx</m>. This holds for every permitted value of the variables, not merely at a particular numerical substitution. The same observation is visible in the inline rainbow and display cross-product methods.</p>
+<p>For example, <m>(3x+4)^2\equiv9x^2+24x+16</m>. Setting <m>a=1</m> gives the monic case <m>(x+8)^2\equiv x^2+16x+64</m>.</p></solution></example>
+<p>A <term>perfect algebraic square</term> is an expression that can be written as the square of an algebraic expression in the stated coefficient domain. For the square of a linear binomial with integer coefficients, the first and last terms must themselves be squares. But this is not sufficient: the middle term must be twice the product of the square roots, with the appropriate sign. For example, <m>9x^2+10x+16</m> is not a binomial square over the integers.</p>
+<me>(A+B)^2\equiv A^2+2AB+B^2,\qquad (A-B)^2\equiv A^2-2AB+B^2.</me>
+<p>Squaring does not distribute over addition: <m>(A+B)^2</m> is not generally <m>A^2+B^2</m>. The missing terms are the two cross-products.</p>
+<p><em>Look back.</em> Ordinary distribution already solves every perfect-square expansion. The single-binomial shortcut is optional until you recognise why the two cross-products are identical. Ask whether your method can now be made more efficient. Mathematics is a conversation: calculate, observe, explain, generalise, reverse and verify.</p>
+<example xml:id="conjugate-discover"><title>Opposite cross-products</title>
+<statement><p>Write the conjugate of <m>x+11</m>, <m>a-3</m> and <m>a-b</m>. Multiply a binomial by its conjugate.</p></statement>
+<solution><p>In the sum-and-difference convention, the conjugate of <m>A+B</m> is <m>A-B</m>, and conversely. The answers are <m>x-11</m>, <m>a+3</m> and <m>a+b</m>.</p>
+<me>\begin{aligned}
+(A+B)(A-B)&amp;\equiv A^2-AB+AB-B^2\\
+&amp;\equiv A^2-B^2.
+\end{aligned}</me>
+<p>The inner and outer products are additive inverses, so they cancel. This identity reverses to give the factorisation of a difference of squares. There is no separate rule of multiplication.</p></solution></example>
+<p>Expand and reverse: <m>(3x+5)(3x-5)\equiv9x^2-25</m>. Check each factorisation by expansion.</p>
+<paragraphs xml:id="square-discover-extension"><title>Explore further: rational coefficients and surd conjugates</title>
+<p>The identities are not restricted to integer coefficients. For example, <m>(x/3+2)^2\equiv x^2/9+4x/3+4</m>. A surd conjugate uses the same sum-and-difference structure: <m>(3+\sqrt{2})(3-\sqrt{2})=7</m>. Later, this identity can help rationalise denominators. These are extensions rather than prerequisites for the current revision.</p></paragraphs>
+</section>
+
 <section xml:id="expanding-place-value">
 <title>Place-value multiplication: when a quadratic is involved</title>
 <p>For a linear factor multiplied by a quadratic, each term of the linear factor must multiply all three terms of the quadratic. Align partial products under their powers of <m>x</m> and then add coefficients in the same column.</p>
