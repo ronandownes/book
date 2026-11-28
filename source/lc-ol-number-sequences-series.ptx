@@ -175,7 +175,46 @@ S_n &amp;=[a+(n-1)d]+\cdots+(a+d)+a.
 <me>S_n=\dfrac{n}{2}[2a+(n-1)d].</me>
 <p>Since the last term is <m>T_n=a+(n-1)d</m>, the same result can be written more intuitively as</p>
 <me>S_n=\dfrac{n}{2}(T_1+T_n).</me>
-<p><m>a</m> denotes the <em>first</em> term <m>T_1</m> here, not the backwards term <m>T_0</m>. The distinction matters when changing between the general-term form <m>T_n=dn+c</m> and the sum formula.</p>
+<assemblage xml:id="arithmetic-sum-literacy">
+<title>Literacy</title>
+<p><m>d</m>: common difference. <m>T_0</m>: term zero. <m>a=T_1</m>: first term. <m>T_n</m>: general term. <m>S_n</m>: sum of the first <m>n</m> terms.</p>
+<me>T_n=dn+T_0,\qquad T_1=d+T_0.</me>
+<p>Term zero is not included in <m>S_n</m>.</p>
+</assemblage>
+<assemblage xml:id="arithmetic-sum-parallel-concept">
+<title>Concept: from the general term to the sum</title>
+<p>Given the arithmetic term rule <m>T_n</m>, how do we find <m>S_n</m>?</p>
+<p>Add the first term to the general term. Multiply by <m>\dfrac n2</m>.</p>
+<me>\boxed{S_n=\frac n2(T_n+T_1)}</me>
+<me>\begin{aligned}
+T_n&amp;=3n+2\\
+T_1&amp;=3+2=5\\
+T_n+T_1&amp;=3n+7\\
+S_n&amp;=\frac n2(3n+7).
+\end{aligned}</me>
+<p><m>3n+2</m> and <m>3n+7</m> describe parallel lines: same slope, different intercepts. Adding <m>5</m> shifts the line upwards by <m>5</m>.</p>
+</assemblage>
+<figure xml:id="arithmetic-sum-parallel-lines">
+<caption>Add the first term to the general term. Then multiply the adapted expression by <m>n/2</m>.</caption>
+<image width="85%">
+<description>Two parallel lines of slope 3, with intercepts 2 and 7. A vertical arrow shows the upward shift of 5 at n equals 2. Points on the lower line represent sequence terms.</description>
+<latex-image-code><![CDATA[
+\begin{tikzpicture}[x=0.95cm,y=0.22cm,>=stealth]
+\draw[step=1cm,gray!15] (0,0) grid (5,25);
+\draw[->] (0,0)--(6,0) node[right] {$n$};
+\draw[->] (0,0)--(0,26);
+\foreach \x in {1,2,3,4,5}{\draw (\x,0)--(\x,-0.5) node[below] {$\x$};}
+\foreach \y in {2,7,12,17,22}{\draw (0,\y)--(-0.12,\y) node[left] {$\y$};}
+\draw[blue!70!black,thick,dashed] (0,2)--(5,17) node[right] {$3n+2$};
+\draw[green!45!black,thick] (0,7)--(5,22) node[right] {$3n+7$};
+\foreach \n in {1,2,3,4,5}{\fill[blue!70!black] (\n,{3*\n+2}) circle[radius=2pt];}
+\draw[->,very thick] (2,8)--(2,13) node[midway,right] {$+5$};
+\end{tikzpicture}
+]]></latex-image-code>
+</image>
+</figure>
+<p>The sum is quadratic: <m>S_n=\frac32 n^2+\frac72 n</m>. In general, <m>S_n=\frac n2(dn+T_0+T_1)</m>. The sum is quadratic when <m>d\ne0</m>.</p>
+<exercise xml:id="arithmetic-sum-from-term-rule-concept"><statement><p>Given <m>T_n=4n-1</m>, find <m>T_1</m>, the adapted linear expression and <m>S_n</m>.</p></statement><answer><p><m>T_1=3</m>, <m>T_n+T_1=4n+2</m>, <m>S_n=\frac n2(4n+2)</m>.</p></answer></exercise>
 <p><em>Exam skill:</em> this is printed in the <term>Formulae and Tables</term> booklet under <em>Sequences and Series</em> on <em>printed page 22</em>. Find the heading and trace each symbol with your finger before substituting. Your job is to decide which information the question supplies: <m>a</m>, <m>d</m>, <m>n</m>, <m>T_n</m> or <m>S_n</m>. The formula is provided; interpreting and rearranging it is the skill.</p>
 <example xml:id="sequences-sum-unknown-n">
 <title>Given the sum: solve for the number of terms</title>
