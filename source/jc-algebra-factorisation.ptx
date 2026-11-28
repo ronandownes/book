@@ -26,6 +26,54 @@
     </paragraphs>
     <p>For a paired expansion and factorisation investigation, begin with <xref ref="af3-01-positive-factors-unit-factor"/>. Recognise the same structure in both directions before moving to more general trinomials.</p>
   </section>
+  <section xml:id="algebra-grouping-friendly-pairs">
+    <title>Factorisation by Grouping — Friendly Pairs</title>
+    <objectives><title>Learning Intentions</title><ol>
+      <li><p>Recognise which partial products share a factor.</p></li>
+      <li><p>Choose friendly pairs when factorising by grouping.</p></li>
+    </ol></objectives>
+    <p>Start with two factors, <m>(a+b)(c+d)</m>. Recall the firsts, inners, outers and lasts from expansion. Look at the two original terms used to make each product.</p>
+    <me>\begin{array}{c|c|c|c}
+    \text{Firsts}&amp;\text{Inners}&amp;\text{Outers}&amp;\text{Lasts}\\
+    ac&amp;bc&amp;ad&amp;bd
+    \end{array}</me>
+    <paragraphs xml:id="algebra-grouping-avoid-opposites"><title>Which pair should I avoid?</title>
+      <p><em>If you have the inners, do not pair them with the outers. If you have the firsts, do not pair them with the lasts. The same applies in reverse. Choose either of the other products.</em></p>
+      <me>\begin{array}{ccccc}
+      \text{Inners}&amp;bc&amp;\quad\not\leftrightarrow\quad&amp;ad&amp;\text{Outers}\\[4pt]
+      \text{Firsts}&amp;ac&amp;\quad\not\leftrightarrow\quad&amp;bd&amp;\text{Lasts}
+      \end{array}</me>
+      <p>The inner and outer arcs have no endpoints in common. The first and last products likewise use different pairs of original terms. Neither pairing is guaranteed to have a common original factor.</p>
+      <p>Every other pairing shares one of the original terms. We call these <term>friendly pairs</term><idx>friendly pairs</idx>. Pair either extreme (firsts or lasts) with either arc (inners or outers).</p>
+      <me>\begin{array}{c|cc}
+      &amp;\text{Inners }bc&amp;\text{Outers }ad\\ \hline
+      \text{Firsts }ac&amp;c&amp;a\\
+      \text{Lasts }bd&amp;b&amp;d
+      \end{array}</me>
+      <p>Each entry in the table is the shared original factor. Once one friendly pair is chosen, the remaining two products form the other friendly pair. Factoring the two pairs exposes a common binomial.</p>
+      <me>\begin{aligned}
+      (ac+bc)+(ad+bd)&amp;=c(a+b)+d(a+b)\\
+      &amp;=(a+b)(c+d).
+      \end{aligned}</me>
+      <me>\begin{aligned}
+      (ac+ad)+(bc+bd)&amp;=a(c+d)+b(c+d)\\
+      &amp;=(a+b)(c+d).
+      \end{aligned}</me>
+      <p>These are the two productive groupings of the four labelled products. The remaining pairing is generally unproductive, although particular values or expressions can introduce additional common factors. The order of the terms does not change the expanded expression.</p>
+    </paragraphs>
+    <example xml:id="algebra-grouping-friendly-example"><title>Choose friendly pairs</title>
+      <statement><p>Factorise <m>12y+10x+8xy+15</m>.</p></statement>
+      <solution>
+        <p>In this example the first two terms are the inner and outer products. Rearrange to form friendly pairs:</p>
+        <me>\begin{aligned}
+        12y+10x+8xy+15&amp;=(8xy+12y)+(10x+15)\\
+        &amp;=4y(2x+3)+5(2x+3)\\
+        &amp;=(2x+3)(4y+5).
+        \end{aligned}</me>
+        <p>Expand to check. Can you find the other productive grouping?</p>
+      </solution>
+    </example>
+  </section>
   <section xml:id="af3-factorisation-revisit">
 <title>AF3-01: Revisit, Recognise, Reverse</title>
 <objectives><title>Learning Intentions</title><ol>
